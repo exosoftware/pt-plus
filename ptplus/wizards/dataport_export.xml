@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="dataport_export_form" model="ir.ui.view">
+        <field name="name">dataport.export.form</field>
+        <field name="model">dataport.export</field>
+        <field name="type">form</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <form string="Export">
+                <field name="state" invisible="1" />
+                <field name="filename" invisible="1" />
+                <field name="format" invisible="1" />
+                <field name="error" invisible="1" />
+                <group states="select">
+                    <group>
+                        <field
+                            name="company_id"
+                            options="{'no_create': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="period" />
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field
+                            name="validate"
+                            attrs="{'invisible':[('format','!=','xml')]}"
+                        />
+                    </group>
+                </group>
+                <notebook tabpos="up" attrs="{'invisible': True}">
+                    <page
+                        string="Journals"
+                        name="journal_ids"
+                        attrs="{'invisible': True}"
+                    >
+                        <field name="journal_ids" />
+                    </page>
+                </notebook>
+                <div states="done">
+                    <h2>Export Complete</h2>
+                    <p>
+                        Generated file: <field
+                            name="data"
+                            readonly="1"
+                            filename="filename"
+                        />
+                    </p>
+                </div>
+                <group name="error_info" string="Errors" states="done">
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" />
+                </group>
+                <group name="log_info" string="Log info" states="done">
+                    <field name="log_on_close" />
+                    <field name="log_as_reported" />
+                </group>
+                <footer states="select">
+                    <field name="export_xml_button" invisible="1" />
+                    <field name="export_pdf_button" invisible="1" />
+                    <field name="export_txt_button" invisible="1" />
+                    <button
+                        name="export_xml"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export XML"
+                        attrs="{'invisible':[('export_xml_button','=', False)]}"
+                    />
+                    <button
+                        name="export_pdf"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export PDF"
+                        attrs="{'invisible':[('export_pdf_button','=', False)]}"
+                    />
+                    <button
+                        name="export_txt"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export TXT"
+                        attrs="{'invisible':[('export_txt_button','=', False)]}"
+                    />
+                    <button special="cancel" string="Cancel" />
+                </footer>
+                <footer states="done">
+                    <button name="close" type="object" string="Close" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
