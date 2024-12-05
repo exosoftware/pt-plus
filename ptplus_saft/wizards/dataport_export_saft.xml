@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="dataport_export_form_saft" model="ir.ui.view">
+        <field name="name">dataport.export.form.saft</field>
+        <field name="model">dataport.export.saft</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus.dataport_export_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="is_installed_accounting" invisible="1" />
+                <field
+                    name="type"
+                    attrs="{'invisible': [('is_installed_accounting', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="action_wizard_dataport_export_saft" model="ir.actions.act_window">
+        <field name="name">Export SAF-T</field>
+        <field name="res_model">dataport.export.saft</field>
+        <field name="view_mode">form</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_id" ref="dataport_export_form_saft" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_pt_dataport_export_saft"
+        parent="ptplus.account_reports_pt_statements_menu"
+        sequence="1"
+        groups="account.group_account_user"
+        action="action_wizard_dataport_export_saft"
+    />
+
+</odoo>

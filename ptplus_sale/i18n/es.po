@@ -1,0 +1,373 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 19:49+0000\n"
+"PO-Revision-Date: 2023-06-10 04:45+0000\n"
+"Last-Translator: Laia Tarruella <laiatarruella@exo.pt>\n"
+"Language-Team: Spanish <https://translation.exosoftware.pt/projects/"
+"portugal-plus-14-0/ptplus_sale/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Multi-way Reports</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" aria-label=\"Values set here are "
+"company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Informes Multi-vía</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title="
+"\"Los valores establecidos aquí son específicos de la empresa.\" aria-label="
+"\"Los valores establecidos aquí son específicos de la empresa.\" groups="
+"\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Request Date:</strong>"
+msgstr "<strong>Fecha de Solicitud:</strong>"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Source Doc:</strong>"
+msgstr "<strong>Doc. Origen:</strong>"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Are you sure you want to cancel the document?"
+msgstr "¿Está seguro de que quier cancelar el documento?"
+
+#. module: ptplus_sale
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Cannot confirm %s. An order fiscal document type is required."
+msgstr "No puede confirmar %s. Se requiere un documento fiscal de tipo orden."
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_res_company
+msgid "Companies"
+msgstr "Compañias"
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Config"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_cc
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__cc
+msgid "Consignment Credit"
+msgstr "Crédito de Consignación"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_fc
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fc
+msgid "Consignment Invoice"
+msgstr "Factura de Consignación"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__date_issued
+msgid "Date Issued"
+msgstr "Fecha de Emisión"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__system_entry_date
+msgid "Date/Time of document validation"
+msgstr "Fecha/Hora de validación del documento"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_update
+msgid "Date/Time of last state change"
+msgstr "Fecha/Hora del último cambio de estado"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash
+msgid "Digital signature"
+msgstr "Firma digital"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ptplus_sale
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Document %s cannot be set back to quotation"
+msgstr "El documento %s no puede volver a cita"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Document Type"
+msgstr "Tipo de Documento"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr "Tipo de Doc. Fiscal"
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_fiscal_document_type
+msgid "Fiscal Document Type"
+msgstr "Tipo de Documento Fiscal"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__id
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr "Serie de Documentos Integrados"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type____last_update
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company____last_update
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_uid
+msgid "Last state changed by"
+msgstr "Último cambio de estado por"
+
+#. module: ptplus_sale
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_ne
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__order
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__ne
+msgid "Order"
+msgstr "Orden"
+
+#. module: ptplus_sale
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Order - %s"
+msgstr "Orden - %s"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__quotation_id
+msgid "Origin Quotation"
+msgstr "Cita de Origen"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__multiway_tag_sale__orig_copy
+msgid "Original and Copy"
+msgstr "Original y Copia"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__multiway_tag_sale__orig_dup
+msgid "Original and Duplicate"
+msgstr "Original y Duplicado"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__multiway_tag_sale__orig_dup_trip
+msgid "Original, Duplicate and Triplicate"
+msgstr "Original, Duplicado y Triplicado"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form
+msgid "Portugal"
+msgstr "Portugal"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash_control
+msgid "Private key version"
+msgstr "Versión de la clave privada"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_pf
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__pf
+msgid "Proforma Invoice"
+msgstr "Factura Proforma"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__or
+msgid "Quotation"
+msgstr "Presupuesto"
+
+#. module: ptplus_sale
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Quotation - %s"
+msgstr "Cotización - %s"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_or
+msgid "Quote"
+msgstr "Cita"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__order_id
+msgid "Related Order"
+msgstr "Ofertas Relacionados"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__section
+msgid "SAF/T Section"
+msgstr "Sección SAF/T"
+
+#. module: ptplus_sale
+#: model:ir.actions.report,name:ptplus_sale.action_report_saleorder_multiway
+msgid "Sale Document (multi-way)"
+msgstr "Documento de venta (multi-vía)"
+
+#. module: ptplus_sale
+#: model:ir.actions.report,name:ptplus_sale.action_report_saleorder_preview
+msgid "Sale Document (preview)"
+msgstr "Documento de venta (vista previa)"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__multiway_tag_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__multiway_tag_sale
+msgid "Sale Report Multi-way Tags"
+msgstr "Etiquetas Multi-vía de Informes de Ventas"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form
+msgid "Sales Doc."
+msgstr "Doc. de Ventas"
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Ventas"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+"Número de serie del documento que se está integrando. Insertar sólo la parte "
+"numérica incremental (incluyendo los ceros del lado izquierdo)"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__source_billing
+msgid "Source Method"
+msgstr "Método de Origen"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_cm
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__cm
+msgid "Table Info"
+msgstr "Consulta de mesa"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form
+msgid "Tags to differentiate document copies"
+msgstr "Etiquetas para diferenciar las copias de los documentos"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__date_issued
+msgid ""
+"The date on which the document has been issued. This date is only relevant "
+"for legal purposes. The next similar document must be issued as of this date "
+"or later."
+msgstr ""
+"La fecha en que se ha emitido el documento. Esta fecha sólo es relevante a "
+"efectos legales. El próximo documento similar debe ser emitido a partir de "
+"esta fecha o más tarde."
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+"El método (o la fuente) utilizado para insertar el documento. Si usted\n"
+"no entiende los conceptos subyacentes, debe mantener\n"
+"el valor por defecto (Aplicación). Los valores posibles son:\n"
+"* Aplicación: El documento fue creado en este sistema.\n"
+"* Integración: El documento se emitió en otra aplicación\n"
+"e importó a este sistema.\n"
+"* Manual/Restaurar: El documento fue creado en este sistema\n"
+"pero se perdió de alguna manera y ha sido restaurado ya sea de\n"
+"fuentes de papel o digitales.\n"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__order_id
+msgid "The order created from this quotation"
+msgstr "El orden creado a partir de esta cita"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__quotation_id
+msgid "The reference of the quotation that originated the order"
+msgstr "La referencia de la cita que originó el pedido"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+"El tipo de documento fiscal asociado a un registro. Como principio general, "
+"un documento fiscal es un documento que se incluirá en el archivo SAF-T de "
+"la empresa"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form
+msgid ""
+"These tags will be printed on every multi-way document report copy. The "
+"choice also sets the number of desired copies."
+msgstr ""
+"Estas etiquetas se imprimirán en cada copia de informe de documentos multi-"
+"vía. La elección también establece el número de copias deseadas."
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__section__work
+msgid "Working Documents"
+msgstr "Documentos de Trabajo"
+
+#. module: ptplus_sale
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_fo
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fo
+msgid "Worksheet"
+msgstr "Hoja de trabajo"
+
+#. module: ptplus_sale
+#: model:ir.actions.report,print_report_name:ptplus_sale.action_report_saleorder_multiway
+msgid "object.pt_get_fullname(lang=object.partner_id.lang)"
+msgstr "object.pt_get_fullname(lang=object.partner_id.lang)"
