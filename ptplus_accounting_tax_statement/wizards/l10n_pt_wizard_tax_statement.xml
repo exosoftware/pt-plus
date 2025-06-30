@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="wizard_tax_statement_form" model="ir.ui.view">
+        <field name="name">l10n_pt.wizard.tax.statement.form</field>
+        <field name="model">l10n_pt.wizard.tax.statement</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus.dataport_export_form" />
+        <field name="arch" type="xml">
+            <field name="period" position="before">
+                <field name="statement_type" invisible="1" />
+                <field
+                    name="statement_id"
+                    string="Statement"
+                    options="{'no_create_edit': True}"
+                />
+            </field>
+            <xpath expr="//group[@states='select']" position="after">
+                <group states="select">
+                    <group
+                        attrs="{'invisible': [('statement_type', 'not in', ('vat.periodic', 'any.internal'))]}"
+                    >
+                        <field
+                            name="hq_location"
+                            attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')], 'required': [('statement_type', 'not in', ['withholding.annual', 'withholding.monthly'])] }"
+                        />
+                    </group>
+                    <group
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')]}"
+                    >
+                        <field name="overdue" />
+                        <field name="request_refund" />
+                    </group>
+                    <group
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic.annexr')]}"
+                    >
+                        <field name="oper_location"
+                               attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')], 'required': [('statement_type', '=', 'vat.periodic')]}"
+                        />
+                    </group>
+                </group>
+
+                <notebook
+                    tabpos="up"
+                    attrs="{'invisible': [('state', '!=', 'select')]}"
+                >
+                    <page
+                        string="Previous Period"
+                        name="previous_period_stmt"
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')]}"
+                    >
+                        <group>
+                            <group>
+                                <field name="previous_stmt_log_id" string="Statement" />
+                                <field name="previous_excess" string="[61] Excess" />
+                            </group>
+                        </group>
+                    </page>
+                    <page
+                        string="Recap. Statement"
+                        name="recap_stmt"
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')]}"
+                    >
+                        <group>
+                            <group>
+                                <field name="recap_stmt_log_id" string="Statement" />
+                                <field name="recap_total" string="[7] Total" />
+                            </group>
+                        </group>
+                    </page>
+                    <page
+                        string="Annex R - Region #1"
+                        name="annex_r1_stmt"
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')]}"
+                    >
+                        <group>
+                            <group>
+                                <field name="annex_r1_stmt_log_id" string="Statement" />
+                                <field
+                                    name="annex_r1_favourable_tax"
+                                    string="[63] Favourable Tax"
+                                />
+                                <field
+                                    name="annex_r1_unfavourable_tax"
+                                    string="[64] Unfavourable Tax"
+                                />
+                            </group>
+                        </group>
+                    </page>
+                    <page
+                        string="Annex R - Region #2"
+                        name="annex_r2_stmt"
+                        attrs="{'invisible': [('statement_type', '!=', 'vat.periodic')]}"
+                    >
+                        <group>
+                            <group>
+                                <field name="annex_r2_stmt_log_id" string="Statement" />
+                                <field
+                                    name="annex_r2_favourable_tax"
+                                    string="[63] Favourable Tax"
+                                />
+                                <field
+                                    name="annex_r2_unfavourable_tax"
+                                    string="[64] Unfavourable Tax"
+                                />
+                            </group>
+                        </group>
+                    </page>
+                    <page
+                        string="Other"
+                        name="other"
+                        attrs="{'invisible': [('statement_type', 'not in', ('vat.periodic','vat.periodic.annexr', 'ies.annexl'))]}"
+                    >
+
+                        <group attrs="{'invisible': [('statement_type', 'not in', ('vat.periodic', 'vat.periodic.annexr'))]}">
+                            <group string="Extra Deductible Taxes">
+                                <field name="deduct_tax_asset" string="[20] Assets" />
+                                <field
+                                    name="deduct_tax_invent_red"
+                                    string="[21] Red. Rate Invent."
+                                />
+                                <field
+                                    name="deduct_tax_invent_std"
+                                    string="[22] Std. Rate Invent."
+                                />
+                                <field
+                                    name="deduct_tax_invent_interm"
+                                    string="[23] Intrm. Rate Invent."
+                                />
+                                <field
+                                    name="deduct_tax_ogs"
+                                    string="[24] Other Goods/Serv."
+                                />
+                            </group>
+                        </group>
+                        <group string="Paid Tax Imports">
+                            <field
+                                name="paid_tax_import_base"
+                                string="[18] Tax Base"
+                            />
+                            <field
+                                name="paid_tax_import_amount"
+                                string="[19] Tax Amount"
+                            />
+                        </group>
+
+                        <group attrs="{'invisible': [('statement_type', 'not in', ('ies.annexl'))]}">
+                            <group string="[07] Anticipated Receipts">
+                                <field name="anticipated_receipts_state" widget="boolean_toggle"/>
+                                <field name="tax_base_not_converted" attrs="{'invisible': [('anticipated_receipts_state', '=', False)]}" />
+                                <field name="tax_amt_on_l57_base" attrs="{'invisible': [('anticipated_receipts_state', '=', False)]}" />
+                                <field name="prepaid_income_tax_settled" attrs="{'invisible': [('anticipated_receipts_state', '=', False)]}" />
+                            </group>
+                            <group string="[08] Operations Located in Portugal When the Supplier Does Not Have Representation Here">
+                                <field name="tax_amt_in_same_conditions" />
+                            </group>
+                            <group string="[09] Operations Outside the Tax Field">
+                                <field name="civa_operations_4_6_and_4" />
+                                <field name="other_operations" />
+                                <field name="civa_operation_4" />
+                            </group>
+                        </group>
+
+                    </page>
+                </notebook>
+            </xpath>
+            <!-- Show the info HTML field to display extra annex information -->
+            <xpath expr="//group[@name='error_info']" position="before">
+                <group name="outcome_info" string="Info" states="done">
+                    <field name="info" readonly="1" widget="html" nolabel="1" colspan="2"/>
+                </group>
+            </xpath>
+            <xpath expr="//button[@name='export_pdf']" position="after">
+                <button string="View" name="action_view" type="object"
+                        attrs="{'invisible': [('statement_type', 'in', ['asset.value.adjustment'])]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_view']" position="attributes">
+                <attribute name="attrs">{'invisible': [('statement_type', 'in', ['asset.value.adjustment'])]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_wizard_tax_statement" model="ir.actions.act_window">
+        <field name="name">Tax Statements</field>
+        <field name="res_model">l10n_pt.wizard.tax.statement</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wizard_tax_statement_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="wizard_tax_statement_menu"
+        parent="ptplus.account_reports_pt_statements_menu"
+        sequence="130"
+        groups="account.group_account_user,account.group_account_user"
+        action="action_wizard_tax_statement"
+    />
+
+</odoo>

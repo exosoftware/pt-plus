@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="cius_pt_211_InvoiceLineType"
+        inherit_id="ptplus_edi.cius_pt_211_InvoiceLineType"
+    >
+        <xpath expr="//*[local-name()='SellersItemIdentification']" position="before">
+            <cac:BuyersItemIdentification t-if="item_vals.get('buyers_item_identification_vals', None)"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            >
+                <cbc:ID t-esc="item_vals.get('buyers_item_identification_vals', {}).get('id')"/>
+            </cac:BuyersItemIdentification>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,345 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pdf_sign
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 17:36+0000\n"
+"PO-Revision-Date: 2023-11-20 17:39+0000\n"
+"Last-Translator: João Costa <joao.costa@exo.pt>\n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.horizontal_digital_signature_stamp
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.vertical_digital_signature_stamp
+msgid "<strong>Assinatura Eletrônica Avançada</strong>"
+msgstr "<strong>Assinatura Eletrônica Avançada</strong>"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,help:ptplus_pdf_sign.field_l10n_pt_report_signature__domain
+msgid "A filter to determine if the document will be signed"
+msgstr "Um filtro para determinar se o documento será assinado"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_access_token
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_access_token
+msgid "Access Token"
+msgstr "Access Token"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__active
+msgid "Active"
+msgstr "Ativo"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_authorizer_id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_authorizer_id
+msgid "Authorizer ID"
+msgstr "ID Autorizador"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_authorizer_secret
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_authorizer_secret
+msgid "Authorizer Secret"
+msgstr "Segredo do Autorizador"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_client_id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_client_id
+msgid "Client ID"
+msgstr "ID Cliente"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_client_secret
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_client_secret
+msgid "Client Secret"
+msgstr "Segredo do Cliente"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_res_config_settings
+msgid "Config Settings"
+msgstr "Definições"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not complete signature process. Please retry later, if this error "
+"persists, please contact your system administrator."
+msgstr ""
+"Não foi possível completar o processo de assinatura. Por favor tente "
+"novamente mais tarde, se o erro persistir contacte o seu Administrador de "
+"sistema."
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid ""
+"DigitalSign API Error on service %s:\n"
+"\n"
+"%s"
+msgstr ""
+"Erro API DigitalSign no serviço %s:\n"
+"\n"
+"%s"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__display_name
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nome de exibição"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__domain
+msgid "Domain"
+msgstr "Domínio"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_get_access_token_url
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_get_access_token_url
+msgid "Get Access Token URL"
+msgstr "URL para obter Access Token"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields.selection,name:ptplus_pdf_sign.selection__res_company__l10n_pt_pdf_sign_signature_position__horizontal
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,help:ptplus_pdf_sign.field_l10n_pt_report_signature__active
+msgid "If the active field is set to False, the report will NOT be signed"
+msgstr "Se o campo estiver definido como Falso, o relatório NÃO será assinado"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature____last_update
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company____last_update
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Última modificação"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__multirec
+msgid "Multi-record Sign"
+msgstr "Assinatura Multi-registo"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"No Access Token available. Make sure you request one, before you sign a "
+"document."
+msgstr ""
+"Nenhum Access Token disponível. Certifique-se de pedir um, antes de tentar "
+"assinar um documento."
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/controllers/main.py:0
+#, python-format
+msgid "No authorization code could be found"
+msgstr "Nenhum código de autorização pode ser encontrado"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Please fill the specific authorizer information, in order to sign a document."
+msgstr ""
+"Por favor preencha as informações específicas do autorizador, para assinar "
+"um documento."
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/controllers/main.py:0
+#, python-format
+msgid ""
+"Please make sure you fill the required credentials to request an access "
+"token: Client ID, Client Secret and Redirect URI"
+msgstr ""
+"Por favor certifique-se que preenche as credenciais necessárias para pedir "
+"um access token: ID Cliente, Segredo do Cliente e URI de redirecionamento"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_redirect_uri
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_redirect_uri
+msgid "Redirect URI"
+msgstr "URI de redirecionamento"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__report_id
+msgid "Report"
+msgstr "Relatório"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_ir_actions_report
+msgid "Report Action"
+msgstr "Ação do relatório"
+
+#. module: ptplus_pdf_sign
+#: model:ir.actions.act_window,name:ptplus_pdf_sign.action_l10n_pt_report_signature
+msgid "Report Signatures"
+msgstr "Assinaturas de relatório"
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.l10n_pt_report_signature_search
+msgid "Reports"
+msgstr "Relatórios"
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.res_config_settings_view_form
+msgid "Reports to Sign"
+msgstr "Relatórios a assinar"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_pdf_sign_signature_position
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_pdf_sign_signature_position
+msgid "Signature Position"
+msgstr "Posição da assinatura"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_l10n_pt_report_signature
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_report_signature_ids
+msgid "Signed PDF Reports"
+msgstr "Relatórios PDF assinados"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_pdf_sign_stamp_image
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_pdf_sign_stamp_image
+msgid "Stamp Image"
+msgstr "Imagem de Carimbo"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid "Timeout"
+msgstr "Timeout"
+
+#. module: ptplus_pdf_sign
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid "Too many redirects"
+msgstr "Too many redirects"
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields.selection,name:ptplus_pdf_sign.selection__res_company__l10n_pt_pdf_sign_signature_position__vertical
+msgid "Vertical"
+msgstr "Vertical"
+
+#~ msgid ""
+#~ "<span class=\"o_form_label\">Digital Signature Stamp Image</span>\n"
+#~ "                        <span class=\"fa fa-lg fa-building-o\" title="
+#~ "\"Values set here are company-specific.\" aria-label=\"Values set here "
+#~ "are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+#~ msgstr ""
+#~ "<span class=\"o_form_label\">Carimbo de Assinatura Digital</span>\n"
+#~ "                            <span class=\"fa fa-lg fa-building-o\" title="
+#~ "\"Values set here are company-specific.\" aria-label=\"Values set here "
+#~ "are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#~ msgid "<span class=\"o_form_label\">Digital Signature Stamp Position</span>"
+#~ msgstr ""
+#~ "<span class=\"o_form_label\">Posição do Carimbo da Assinatura Digital</"
+#~ "span>"
+
+#~ msgid "<span class=\"o_form_label\">DigitalSign Credentials</span>"
+#~ msgstr "<span class=\"o_form_label\">Credenciais DigitalSign</span>"
+
+#~ msgid "<span class=\"o_form_label\">Get DigitalSign Access Token</span>"
+#~ msgstr ""
+#~ "<span class=\"o_form_label\">Obter Access-Token da DigitalSign</span>"
+
+#~ msgid "Add a digital signature to the output PDF"
+#~ msgstr "Adicionar uma assinatura digital aos PDFs de saída"
+
+#~ msgid "Authorizer Identifier"
+#~ msgstr "ID do Autorizador"
+
+#~ msgid "Obtain DigitalSign Access Token"
+#~ msgstr "Obter Access Token DigitalSign"
+
+#~ msgid "Place your DigitalSign credentials here"
+#~ msgstr "Insira as suas credenciais DigitalSign aqui"
+
+#~ msgid "Position of the signature stamp"
+#~ msgstr "Posição do carimbo de assinatura"
+
+#~ msgid "Request an Access Token to sign documents"
+#~ msgstr "Pedir um Access Token para assinar documentos"
+
+#~ msgid "Set the image to be used on the stamp"
+#~ msgstr "Defina a imagem a ser usada no carimbo"
+
+#~ msgid "Certificate"
+#~ msgstr "Certificado"
+
+#~ msgid "Certificate file"
+#~ msgstr "Ficheiro do certificado"
+
+#~ msgid "Certificate password"
+#~ msgstr "Password do certificado"
+
+#~ msgid "External Document Signature"
+#~ msgstr "Assinatura de documentos externos"
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Password not set for certificate"
+#~ msgstr "Password não definida para o certificado"

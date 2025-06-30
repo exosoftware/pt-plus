@@ -1,0 +1,403 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_saft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-31 12:44+0000\n"
+"PO-Revision-Date: 2024-01-31 12:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_saft
+#: model:mail.template,body_html:ptplus_saft.email_template_partner_saft
+msgid ""
+"<div>\n"
+"                    <p>Hello Dear <t t-out=\"object.name\"></t>,</p>\n"
+"                    <p>Please find attached your SAF-T pertaining to the company <t t-out=\"object.company_id.name\"></t>.</p>\n"
+"\n"
+"                    <p>Thank you.</p>\n"
+"                    <p><t t-out=\"object.company_id.name\"></t></p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__c
+msgid "Accounting"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Code"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Column"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/account_payment.py:0
+#, python-format
+msgid ""
+"Document %s isn't associated with any account moves. Please fix the "
+"situation before proceeding."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__error
+msgid "Error"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_pdf_button
+msgid "Export Pdf Button"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.actions.act_window,name:ptplus_saft.action_wizard_dataport_export_saft
+#: model:ir.ui.menu,name:ptplus_saft.menu_pt_dataport_export_saft
+msgid "Export SAF-T"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_txt_button
+msgid "Export Txt Button"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_xml_button
+msgid "Export Xml Button"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__data
+msgid "File"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__filename
+msgid "Filename"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_fiscal_document
+msgid "Fiscal Document"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__format
+msgid "Format"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.cron_l10n_pt_get_saft_action_ir_actions_server
+#: model:ir.cron,cron_name:ptplus_saft.cron_l10n_pt_get_saft_action
+msgid "Get SAF-T PT Action"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__type
+msgid ""
+"Indicate the data scope to export. Select 'Accounting' if you just want "
+"accounting data (invoicing is exported through another software package). "
+"Select 'Invoicing' to exclusively generate invoicing data (your bookkeeping "
+"is outsourced). Select 'Integrated' if this Odoo instance is helding both "
+"your invoicing and accounting functions)."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__info
+msgid "Info"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Insufficient number of columns on validator output"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__i
+msgid "Integrated"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__f
+msgid "Invoicing"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_accounting
+msgid "Is Installed Accounting"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_sale
+msgid "Is Installed Sale"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_stock
+msgid "Is Installed Stock"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__journal_ids
+msgid "Journals"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Line"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__log_as_reported
+msgid "Log As Reported"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__log_on_close
+msgid "Log On Close"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__month_curr
+msgid "Month - Current"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__month_last
+msgid "Month - Last"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__period
+msgid "Period"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_curr
+msgid "Quarter - Current"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_last
+msgid "Quarter - Last"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__statement_type__saf-t
+msgid "SAF-T"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:mail.template,name:ptplus_saft.email_template_partner_saft
+msgid "Send Partner SAF-T"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as "
+"Reported."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__state
+msgid "State"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__statement_type
+msgid "Statement Type"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_tax
+msgid "Tax"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The SAF-T file has been successfully generated but it couldn't be validated."
+" Please contact your Odoo service provider or try an alternative validation "
+"process. Error: %s"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "The file has been validated!"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The selected type can only be used when the Accounting module is installed. "
+"Choose Invoicing instead."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__type
+msgid "Type"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__validate
+msgid "Validate"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__values
+msgid "Values"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__warnings
+msgid "Warnings"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) before being delivered to the user. As it's a very time consuming task, you may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__year_curr
+msgid "Year - Current"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__year_last
+msgid "Year - Last"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:mail.template,subject:ptplus_saft.email_template_partner_saft
+msgid "Your SAF-T file"
+msgstr ""
