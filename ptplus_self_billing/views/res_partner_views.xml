@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Partners -->
+    <record id="view_partner_form_pt_self_billing" model="ir.ui.view">
+        <field name="name">res.partner.form.pt.self_billing</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='purchase']" position="inside">
+                <field
+                    name="self_billing"
+                    attrs="{'invisible': [('is_company','=',False),('parent_id','!=',False)]}"
+                />
+                <field
+                    name="tax_auth_username"
+                    attrs="{'invisible': [('self_billing', '=', False)]}"
+                />
+                <field
+                    name="tax_auth_password"
+                    attrs="{'invisible': [('self_billing', '=', False)]}"
+                    password="True"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

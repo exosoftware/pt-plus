@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_move_form_efatura" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='header_right_group']" position="inside">
+                <field name="l10n_pt_efatura_mismatch" invisible="1"/>
+                <field
+                    name="l10n_pt_efatura_total"
+                    style="color: red;"
+                    attrs="{'invisible': [
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        '|',
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('l10n_pt_efatura_mismatch', '=', True),
+                    ]}"
+                />
+                <field
+                    name="l10n_pt_efatura_total"
+                    attrs="{'invisible': [
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        '|',
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('l10n_pt_efatura_mismatch', '=', False),
+                    ]}"
+                />
+            </xpath>
+            <page name="other_info" position="inside">
+                <group>
+                    <group>
+                        <field
+                            name="l10n_pt_efatura_id"
+                            attrs="{'invisible': [('move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                        />
+                    </group>
+                </group>
+            </page>
+        </field>
+    </record>
+</odoo>

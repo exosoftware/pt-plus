@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="open_digital_sign_get_access_token" model="ir.actions.server">
+        <field name="name">Get Digital Sign Access Token</field>
+        <field name="model_id" ref="base_setup.model_res_config_settings" />
+        <field name="binding_model_id" ref="base_setup.model_res_config_settings" />
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records._redirect_to_get_ds_token()
+        </field>
+    </record>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@id='l10n_pt_pdf_signatures']/div[hasclass('o_setting_right_pane')]"
+                position="inside"
+            >
+                <div>
+                    <div class="content-group mt8">
+                        <button
+                            name="%(ptplus_pdf_sign.action_l10n_pt_report_signature)d"
+                            icon="fa-arrow-right"
+                            type="action"
+                            string="Reports to Sign"
+                            class="btn-link"
+                        />
+                    </div>
+                    <div class="content-group mt16">
+                        <label
+                            for="l10n_pt_use_own_credentials"
+                            string="Use My Own Credentials"
+                            class="col-4 o_light_label"
+                        />
+                        <field name="l10n_pt_use_own_credentials" />
+                    </div>
+                    <div class="content-group mt16">
+                        <div
+                            attrs="{'invisible': [('l10n_pt_use_own_credentials', '=', False)]}"
+                        >
+                            <label
+                                for="l10n_pt_digitalsign_client_id"
+                                string="Client ID"
+                                class="col-4 o_light_label"
+                            />
+                            <field
+                                name="l10n_pt_digitalsign_client_id"
+                                attrs="{'required': [('l10n_pt_use_own_credentials', '=', True)]}"
+                            />
+
+                            <label
+                                for="l10n_pt_digitalsign_client_secret"
+                                class="col-4 o_light_label"
+                            />
+                            <field
+                                name="l10n_pt_digitalsign_client_secret"
+                                attrs="{'required': [('l10n_pt_use_own_credentials', '=', True)]}"
+                            />
+
+                            <label
+                                for="l10n_pt_digitalsign_redirect_uri"
+                                class="col-4 o_light_label"
+                            />
+                            <field
+                                name="l10n_pt_digitalsign_redirect_uri"
+                                attrs="{'required': [('l10n_pt_use_own_credentials', '=', True)]}"
+                            />
+                        </div>
+                        <label
+                            for="l10n_pt_digitalsign_authorizer_id"
+                            class="col-4 o_light_label"
+                        />
+                        <field
+                            name="l10n_pt_digitalsign_authorizer_id"
+                            attrs="{'required': [('module_ptplus_pdf_sign', '=', True)]}"
+                        />
+
+                        <label
+                            for="l10n_pt_digitalsign_authorizer_secret"
+                            class="col-4 o_light_label"
+                        />
+                        <field
+                            name="l10n_pt_digitalsign_authorizer_secret"
+                            attrs="{'required': [('module_ptplus_pdf_sign', '=', True)]}"
+                        />
+
+                        <label
+                            for="l10n_pt_digitalsign_access_token"
+                            class="col-4 o_light_label"
+                        />
+                        <field
+                            name="l10n_pt_digitalsign_access_token"
+                            attrs="{'required': [('module_ptplus_pdf_sign', '=', True)]}"
+                        />
+                    </div>
+                    <div class="mt8">
+                        <button
+                            name="%(open_digital_sign_get_access_token)d"
+                            icon="fa-arrow-right"
+                            type="action"
+                            string="Get Access Token"
+                            class="btn-link"
+                        />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
