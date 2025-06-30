@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_account_credit_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-05 16:12+0000\n"
+"PO-Revision-Date: 2021-09-05 16:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model,name:ptplus_account_credit_note.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Correction document date can't be before the origin invoice date"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid ""
+"Credit note line '%s' contains a value that exceeds the remaining threshold "
+"of %s."
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Credit note line '%s' is not related to the original invoice"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_move__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_payment__l10n_pt_rappel_credit_note
+msgid ""
+"Credit notes are always linked to an original invoice. Allowed exceptions to"
+" this rule are refunds originating in rappel related discounts or when the "
+"original invoice can no longer be inserted in the system. Set True if this "
+"credit note is compatible with one of these 2 exceptional cases."
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_reversal__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Field Reference/Description exceeds a maximum length of 50 characters"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_line__id
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_reversal__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model,name:ptplus_account_credit_note.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model,name:ptplus_account_credit_note.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move____last_update
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move_reversal____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Please define an Expense Refund Account for product %s"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Please define an Invoice Refund Account for product %s"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Please setup an account for  line '%s' that matches the document type"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_payment__l10n_pt_rappel_credit_note
+msgid "Rappel Cred. Note"
+msgstr ""
+
+#. module: ptplus_account_credit_note
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid ""
+"The unit of measure on credit note line '%s' is different from the one in "
+"the original invoice"
+msgstr ""
