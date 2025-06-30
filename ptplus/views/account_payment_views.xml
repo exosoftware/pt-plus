@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_account_payment_form_pt" model="ir.ui.view">
+        <field name="name">account.payment.form.pt</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_post']" position="after">
+                <button
+                    name="action_print"
+                    string="Print"
+                    type="object"
+                    states="posted,sent,reconciled"
+                />
+                <button
+                    name="action_cancel_posted"
+                    string="Cancel"
+                    type="object"
+                    attrs="{'invisible': ['|', ('state','!=', 'posted'),
+                                            ('source_billing','not in', ('P', 'I', 'M'))]}"
+                />
+            </xpath>
+            <field name="journal_id" position="after">
+                <field name="source_billing" invisible="1" />
+                <field
+                    name="fiscal_document_type_id"
+                    string="Document Type"
+                    options="{'no_create_edit': True}"
+                    attrs="{'invisible': [('payment_type','!=', 'inbound')]}"
+                    domain="[('source_billing', '=', source_billing),
+                        ('company_id', '=', company_id),
+                        ('section', '=', 'pay'),
+                        ('type', '=', 'RG')
+                        ]"
+                />
+                <field
+                    name="receipt_number"
+                    attrs="{'invisible': [('receipt_number', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment_register_form_pt" model="ir.ui.view">
+        <field name="name">account.payment.register.form.pt</field>
+        <field name="model">account.payment.register</field>
+        <field name="inherit_id" ref="account.view_account_payment_register_form" />
+        <field name="arch" type="xml">
+            <field name="payment_date" position="after">
+                <field name="source_billing" invisible="1" />
+                <field
+                    name="fiscal_document_type_id"
+                    string="Document Type"
+                    options="{'no_create_edit': True}"
+                    attrs="{'invisible': [('source_billing','not in', ('P', 'I', 'M'))]}"
+                    domain="[('source_billing', '=', source_billing), ('section', '=', 'pay'),
+                                ('type', '=', 'RG'), ('company_id', '=', company_id)]"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment_tree_pt" model="ir.ui.view">
+        <field name="name">account.payment.tree.pt</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="receipt_number" string="Receipt No." optional="hide" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

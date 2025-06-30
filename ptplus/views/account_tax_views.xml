@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_tax_form_pt" model="ir.ui.view">
+        <field name="name">account.tax.form.pt</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <!--
+                <field name="tag_ids"
+                       domain="[('applicability', '!=', 'accounts')]"
+                       widget="many2many_tags"
+                       context="{'default_applicability': 'taxes'}"
+                       attrs="{'invisible': [('country_code', '!=', 'PT')]}" />
+                -->
+                <field
+                    name="l10n_pt_genre"
+                    attrs="{'invisible': [('country_code', '!=', 'PT')],
+                'required': [('country_code', '=', 'PT')]}"
+                />
+                <field
+                    name="pt_vat_country_region" string="Country/Region"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', 'not in', ['IVA', 'RF'])],
+                               'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', 'in', ['IVA', 'RF'])]}"
+                />
+                <field
+                    name="pt_vat_tax_type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA')]}"
+                />
+                <field
+                    name="pt_vat_subject"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA')]}"
+                />
+                <field
+                    name="pt_vat_special_regime"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')]}"
+                />
+                <field
+                    name="pt_vat_exemption_reason"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'),
+                       '|', ('l10n_pt_genre', '!=', 'IVA'), ('amount', '!=', 0)],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA'), ('amount_type', '=', 'percent'), ('amount', '=', 0), ('type_tax_use', '=', 'sale')]}"
+                />
+                <field
+                    name="l10n_pt_wh_tax_type" string="Withholding Type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'RF')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'RF')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>
