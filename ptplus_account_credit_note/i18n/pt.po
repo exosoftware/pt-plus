@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_account_credit_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-19 17:24+0000\n"
+"PO-Revision-Date: 2024-04-19 18:26+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-16-0/ptplus_account_credit_note/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: ptplus_account_credit_note
+#. odoo-python
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Correction document date can't be before the origin invoice date"
+msgstr ""
+"A data do documento retificativo não pode ser inferior à da fatura de origem"
+
+#. module: ptplus_account_credit_note
+#. odoo-python
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid ""
+"Credit note line '%s' contains a value that exceeds the remaining threshold "
+"of %s."
+msgstr ""
+"A linha da nota de crédito '%s' contém um valor que excede o valor "
+"remanescente da fatura de origem de %s."
+
+#. module: ptplus_account_credit_note
+#. odoo-python
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Credit note line '%s' is not related to the original invoice"
+msgstr ""
+"A linha da nota de crédito '%s' não está relacionada com a fatura original"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_move__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_payment__l10n_pt_rappel_credit_note
+msgid ""
+"Credit notes are always linked to an original invoice. Allowed exceptions to "
+"this rule are refunds originating in rappel related discounts or when the "
+"original invoice can no longer be inserted in the system. Set True if this "
+"credit note is compatible with one of these 2 exceptional cases."
+msgstr ""
+"As notas de crédito estão sempre vinculadas a uma fatura original. As "
+"exceções permitidas a esta regra são reembolsos com origem em descontos "
+"relacionados com um rappel ou quando a fatura original não pode mais ser "
+"inserida no sistema. Defina como Verdadeiro se esta nota de crédito for "
+"compatível com um destes 2 casos excepcionais."
+
+#. module: ptplus_account_credit_note
+#. odoo-python
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid "Field Reference/Description exceeds a maximum length of 50 characters"
+msgstr ""
+"O campo Referência/Descrição excede o comprimento máximo de 50 caracteres"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model,name:ptplus_account_credit_note.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model,name:ptplus_account_credit_note.model_account_move_line
+msgid "Journal Item"
+msgstr "Item do Diário"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_origin_move_date
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move__l10n_pt_origin_move_date
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_payment__l10n_pt_origin_move_date
+msgid "Origin Move Date"
+msgstr "Data Lançam. da Fatura"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_move__l10n_pt_rappel_credit_note
+#: model:ir.model.fields,field_description:ptplus_account_credit_note.field_account_payment__l10n_pt_rappel_credit_note
+msgid "Rappel Cred. Note"
+msgstr "Nota de Crédito de Rappel"
+
+#. module: ptplus_account_credit_note
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_bank_statement_line__l10n_pt_origin_move_date
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_move__l10n_pt_origin_move_date
+#: model:ir.model.fields,help:ptplus_account_credit_note.field_account_payment__l10n_pt_origin_move_date
+msgid ""
+"The date the debit/credit note's origin document accounting move was posted."
+msgstr ""
+"A data de contabilização do documento que deu origem à nota de débito/"
+"crédito."
+
+#. module: ptplus_account_credit_note
+#. odoo-python
+#: code:addons/ptplus_account_credit_note/models/account_move.py:0
+#, python-format
+msgid ""
+"The unit of measure on credit note line '%s' is different from the one in "
+"the original invoice"
+msgstr ""
+"A unidade de medida na linha de nota de crédito '%s' é diferente da que "
+"consta na fatura original"
+
+#~ msgid "Account Move Reversal"
+#~ msgstr "Reversão de Movimento Contabilístico"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificação em"
+
+#~ msgid "Please define an Expense Refund Account for product %s"
+#~ msgstr "Por favor, defina uma Conta de Crédito de Compras para o produto %s"
+
+#~ msgid "Please define an Invoice Refund Account for product %s"
+#~ msgstr "Por favor, defina uma Conta de Crédito de Vendas para o produto %s"
+
+#~ msgid ""
+#~ "Please setup an account for  line '%s' that matches the document type"
+#~ msgstr ""
+#~ "Por favor, defina uma conta para a linha %s que corresponda ao tipo de "
+#~ "documento"

@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-07 23:00+0000\n"
+"PO-Revision-Date: 2023-08-07 23:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "Att. "
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_bank
+msgid "Bank"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__code
+msgid "Code"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__country_id
+msgid "Country"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__country_code
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__display_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner_bank__country_id
+msgid ""
+"If the bank account is Portuguese, the account number will be validated and "
+"formatted accordingly."
+msgstr ""
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "Invalid zip code %s"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank____last_update
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner____last_update
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__l10n_pt_legal_name
+msgid "Legal Name"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,help:ptplus_partner.field_res_users__l10n_pt_legal_name
+msgid ""
+"Legal name or any other form of business name. When filled, will be used on "
+"legal documents (invoices, credit notes, etc.) instead of the regular name"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__lname
+msgid "Long name"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__vat
+msgid "TIN"
+msgstr ""
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_bank.py:0
+#, python-format
+msgid "The IBAN must have 25 digits"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner__country_code
+#: model:ir.model.fields,help:ptplus_partner.field_res_users__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.constraint,message:ptplus_partner.constraint_res_partner_ref_uniq
+msgid "The internal reference already exists!"
+msgstr ""
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "VAT number %s is already associated with a different partner"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__website
+msgid "Website"
+msgstr ""
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "You can't change the TIN of customer %s because it has posted invoices"
+msgstr ""
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "You can't delete the 'End Consumer' partner"
+msgstr ""

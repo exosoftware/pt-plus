@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="wizard_webservice_series_comm_form" model="ir.ui.view">
+        <field name="name">wizard.webservice.series.comm.form</field>
+        <field name="model">wizard.webservice.series.comm</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Communicate">
+                <field name="state" invisible="1" />
+                <field name="service_name" invisible="1" />
+                <field name="fiscal_document_type_id" invisible="1" />
+                <field name="error" invisible="1" />
+                <group attrs="{'invisible':['|', ('service_name','!=','registarSerie'), ('state', '!=', 'select')]}">
+                    <p>
+                        You're about to electronically register this series on the Tax
+                        Authority system. Once registered, you will not be able to modify
+                        it. If you later find out it contains some type of error, you'll
+                        be able to cancel it, provided no related fiscal documents were
+                        produced. Otherwise, you can finalize it and end the series lifecycle.
+                    </p>
+                </group>
+                <group attrs="{'invisible':['|', ('service_name','!=','consultarSeries'), ('state', '!=', 'select')]}">
+                    <p> You're about to import to Odoo a series that you have previously
+                        registered on the Tax Authority system. You have 2 options:<br/><br/>
+                        Online - Make sure the series matches all the below filters and
+                        press the Communicate button. The series identifier will be obtained
+                        from the Tax Authority portal, together with other data that will be
+                        used for validation.<br/>
+                        Offline - Enter the pre-registered series identifier and press Validate.
+                        No validation will be performed.<br/><br/>
+                        Either way, if the process succeeds, a new Odoo
+                        sequence will be created and associated with this fiscal document
+                        type. A default value of 5 will be used for padding. You can tune it
+                        after the sequence creation. Also make sure you check and eventually
+                        <strong>adjust the sequence's next number</strong> as the number
+                        returned by the Tax authority may be out of date.
+                    </p>
+                </group>
+                <group attrs="{'invisible':['|', ('service_name','!=','anularSerie'), ('state', '!=', 'select')]}">
+                    <p>
+                        Use this process if the series has become useless or contains some
+                        kind of error and there are no related fiscal documents. If there
+                        are, finalize it instead.
+                    </p>
+                </group>
+                <group attrs="{'invisible':['|', ('service_name','!=','finalizarSerie'), ('state', '!=', 'select')]}">
+                    <p>
+                        Finalizing a series means it has reached the end of its lifecycle and
+                        no more fiscal documents will be created from it. If it has no related
+                        fiscal documents, you should cancel it instead.
+                    </p>
+                </group>
+                <group states="select">
+                    <group>
+                        <field
+                            name="company_id"
+                            options="{'no_create': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field
+                            name="register_start_date"
+                            attrs="{'invisible':[('service_name','!=','registarSerie')],'required':[('service_name','=','registarSerie')]}"
+                        />
+                        <field
+                            name="register_initial_number"
+                            attrs="{'invisible':[('service_name','!=','registarSerie')],'required':[('service_name','=','registarSerie')]}"
+                        />
+                        <field
+                            name="cancel_reason"
+                            attrs="{'invisible':[('service_name','!=','anularSerie')],'required':[('service_name','=','anularSerie')]}"
+                        />
+                        <field
+                            name="cancel_non_use_declaration"
+                            attrs="{'invisible':[('service_name','!=','anularSerie')],'required':[('service_name','=','anularSerie')]}"
+                        />
+                        <field
+                            name="finalize_last_number" string="Last Doc. No."
+                            attrs="{'invisible':[('service_name','!=','finalizarSerie')],'required':[('service_name','=','finalizarSerie')]}"
+                        />
+                        <field
+                            name="finalize_justification"
+                            attrs="{'invisible':[('service_name','!=','finalizarSerie')]}"
+                        />
+                        <field
+                            name="sync_method"
+                            attrs="{'invisible':[('service_name','!=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_doc_type"
+                            attrs="{'invisible':['|', ('sync_method', '!=', 'online'), ('service_name','!=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_series_type"
+                            attrs="{'invisible':['|', ('sync_method', '!=', 'online'), ('service_name','!=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_series_state"
+                            attrs="{'invisible':['|', ('sync_method', '!=', 'online'), ('service_name','!=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_proc_means"
+                            attrs="{'invisible':['|', ('sync_method', '!=', 'online'), ('service_name','!=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_validation_code"
+                            attrs="{'invisible':['|', ('sync_method', '!=', 'online'), ('service_name','!=','consultarSeries')],
+                                    'required':[('service_name','=','consultarSeries')]}"
+                        />
+                        <field
+                            name="sync_series_identifier"
+                            attrs="{'invisible':['|', ('sync_method', '=', 'online'), ('service_name','!=','consultarSeries')],
+                                    'required':[('sync_method', '=', 'offline'), ('service_name','=','consultarSeries')]}"
+                        />
+                    </group>
+                </group>
+                <div states="done">
+                    <field name="outcome" nolabel="1" />
+                </div>
+                <group name="error_info" string="Error" attrs="{'invisible': ['|', ('state', '!=', 'done'), ('error', '=', False)]}">
+                    <field name="error_code" string="Code"/>
+                    <field name="error_message" string="Message"/>
+                    <field name="error_detail" string="Detail"/>
+                </group>
+                <footer states="select">
+                    <button
+                        name="action_communicate"
+                        type="object"
+                        class="oe_highlight"
+                        string="Communicate"
+                        attrs="{'invisible': [('sync_method', '!=', 'online')]}"
+                    />
+                    <button
+                        name="action_communicate"
+                        type="object"
+                        class="oe_highlight"
+                        string="Validate"
+                        attrs="{'invisible': [('sync_method', '=', 'online')]}"
+                    />
+                    <button special="cancel" string="Cancel" />
+                </footer>
+                <footer states="done">
+                    <button name="close" string="Close" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,1255 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_accounting_tax_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-26 23:03+0000\n"
+"PO-Revision-Date: 2021-09-27 00:14+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_recap_statement_form
+msgid ""
+"<span class=\"o_form_label\">The recapitulative statement will consider the "
+"VAT base for all the invoice lines\n"
+"                    containing tag PT-IVA DP [7] that also relate to a "
+"partner that belongs to the Europe\n"
+"                    country group (except Portugal).</span>"
+msgstr ""
+"<span class=\"o_form_label\">La déclaration récapitulatif prendra en compte "
+"l'assiette de la TVA pour toutes les lignes de factures\n"
+"                    contenant l'étiquette PT-IVA DP [7] qui se rapportent "
+"également à un partenaire appartenant au groupe de pays\n"
+"                    (à l'exception du Portugal).</span>"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__recap_stmt_log_id
+msgid ""
+"A valid and reported statement found in the dataport logs. The system will "
+"try to fill this field with the most recent one."
+msgstr ""
+"Une déclaration valide et rapportée trouvée dans les journaux du dataport. "
+"Le système essaiera de remplir ce champ avec le relevé le plus récent."
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Account Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_tax_statement_search
+msgid "Account Tax Statement"
+msgstr "Déclaration d'Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Amount"
+msgstr "Montant"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_asset
+msgid ""
+"Amount to add to field 20 regarding deductible taxes on asset operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_red
+msgid ""
+"Amount to add to field 21 regarding deductible reduced rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_std
+msgid ""
+"Amount to add to field 22 regarding deductible standard rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_interm
+msgid ""
+"Amount to add to field 23 regarding deductible intermediate rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_ogs
+msgid ""
+"Amount to add to field 24 regarding deductible taxes on operations with "
+"other goods and services."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r1_stmt_log_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Annex R - Region #1"
+msgstr "Annexe R - Région #1"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r2_stmt_log_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Annex R - Region #2"
+msgstr "Annexe R - Région #2"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_form
+msgid "Aux"
+msgstr "Aux"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__auxiliary
+msgid "Auxiliary"
+msgstr "Auxilliaire"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_tax_statement_search
+msgid "Auxiliary Fields"
+msgstr "Champs Auxiliaires"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_account_tax_statement_line__auxiliary
+msgid ""
+"Auxiliary elements are helper elements used for other fields computation. "
+"They are usually not shown on the statement"
+msgstr ""
+"Les éléments auxiliaires sont des éléments d'aide utilisés pour le calcul "
+"d'autres champs. Ils n'apparaissent généralement pas sur la déclaration"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__hq_location__azo
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__oper_location__azo
+msgid "Azores"
+msgstr "Açores"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__base_bal_total
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Base"
+msgstr "Base"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__base_bal_total
+msgid "Base Balance"
+msgstr "Solde de la Base"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__base_bal_normal
+msgid "Base Balance [Normal]"
+msgstr "Solde de la Base [Normal]"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__base_bal_regularization
+msgid "Base Balance [Regularization]"
+msgstr "Solde de la Base [Régularisation]"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__base_bal_normal
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Base [Normal]"
+msgstr "Base [Normal]"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__base_bal_regularization
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Base [Regularization]"
+msgstr "Base [Régularisation]"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "CONSIGNMENT"
+msgstr "CONSIGNATION"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_res_company
+msgid "Companies"
+msgstr "Entreprises"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Consignment Invoices"
+msgstr "Factures de consignation"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Consignment Returns"
+msgstr "Retours de Consignation"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__hq_location__cnt
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__oper_location__cnt
+msgid "Continent"
+msgstr "Continent"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Country"
+msgstr "Pays"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__custom
+msgid "Custom"
+msgstr "Personnalisé"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_account_tax_statement__custom
+msgid ""
+"Custom statements are created and maintained by users. Can be copied from "
+"non-custom (system) statements or created from scratch. System statements "
+"can't be edited."
+msgstr ""
+"Les relevés personnalisés sont créés et gérés par les utilisateurs. Ils "
+"peuvent être copiés à partir de relevés non personnalisés (système) ou créés "
+"de toutes pièces. Les déclarations système ne peuvent pas être modifiées."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_dataport_log
+msgid "Dataport Log"
+msgstr "Journal du Dataport"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__date_from
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__date_from
+msgid "Date From"
+msgstr "Date de Debut"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__date_to
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__date_to
+msgid "Date To"
+msgstr "Date de Fin"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_asset
+msgid "Deductible Tax - Assets"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_interm
+msgid "Deductible Tax - Interm. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_ogs
+msgid "Deductible Tax - OGS"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_red
+msgid "Deductible Tax - Red. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__deduct_tax_invent_std
+msgid "Deductible Tax - Std. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__description
+msgid "Description"
+msgstr "Description"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__display_name
+msgid "Display Name"
+msgstr "Nom à Afficher"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.constraint,message:ptplus_accounting_tax_statement.constraint_account_tax_statement_line_tax_stmt_line_uniq
+msgid "Element names must be unique !"
+msgstr "Les noms des éléments doivent être uniques!"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_form
+msgid "Elements"
+msgstr "Éléments"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/models/account_tax_statement.py:0
+#, python-format
+msgid "Empty Value Type field on element: %s"
+msgstr "Champ de type de valeur vide sur l'élément : %s"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__error
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__error
+msgid "Error"
+msgstr "Erreur"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Bouton d'exportation Pdf"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__export_xml_button
+msgid "Export Xml Button"
+msgstr "Bouton d'exportation Xml"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__source_type__expr
+msgid "Expression"
+msgstr "Expression"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Extra Deductible Taxes"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__data
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__data
+msgid "File"
+msgstr "Fichier"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__filename
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__filename
+msgid "Filename"
+msgstr "Nom du Fichier"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__source_type__domain
+msgid "Filter"
+msgstr "Filtre"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__format
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__format
+msgid "Format"
+msgstr "Format"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__exclusion_tag_ids
+msgid "Global Exclusion Tags"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__inclusion_tag_ids
+msgid "Global Inclusion Tags"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Goods"
+msgstr "Marchandises"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__hq_location
+msgid "HQ Location"
+msgstr "Emplacement du Siège"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__has_move_lines
+msgid "Has Move Lines"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_search_view
+msgid "Has move lines"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "INVOICING"
+msgstr "FACTURATION"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_account_tax_statement__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the tax "
+"statement without removing it."
+msgstr ""
+"Si le champ actif est réglé sur Faux, il vous permettra de masquer la "
+"déclaration d'impôt sans la supprimer."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__paid_tax_import_amount
+msgid "Import. w/ paid tax - Amount"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__paid_tax_import_base
+msgid "Import. w/ paid tax - Base"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__info
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__info
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_recap_statement_form
+msgid "Info"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_recap_statement__log_on_close
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+"Insérer un enregistrement dans le journal du port de données avec une copie "
+"du fichier importé ou exporté. "
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement__type__any_internal
+msgid "Internal Use"
+msgstr "Usage Interne"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/models/account_tax_statement.py:0
+#, python-format
+msgid "Invalid Source field on element: %s"
+msgstr "Le champ d'Origine est invalide pour l'élément: %s"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_form
+msgid "Invert"
+msgstr "Inverser"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__value_invert
+msgid "Invert value"
+msgstr "Inverser Valeur"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_account_move
+msgid "Journal Entry"
+msgstr "Entrée de Journal"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__journal_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__journal_ids
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_company____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modif. le"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__write_uid
+msgid "Last Updated by"
+msgstr "Dernière MAJ par"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__write_date
+msgid "Last Updated on"
+msgstr "Dernière MAJ le"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__log_as_reported
+msgid "Log As Reported"
+msgstr "Enregistrer comme Rapporté"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__log_on_close
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__log_on_close
+msgid "Log On Close"
+msgstr "Enregistré quand on Ferme"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__hq_location__mad
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_tax_statement__oper_location__mad
+msgid "Madeira"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__oper_location
+msgid "Operations Location"
+msgstr "Lieu des Opérations"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Other"
+msgstr "Autres"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__overdue
+msgid "Overdue"
+msgstr "En Retard"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__pdf_form_path
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__pdf_form_path
+msgid "PDF Form Path"
+msgstr "Chemin du Formulaire PDF"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Paid Tax Imports"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__period
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__period
+msgid "Period"
+msgstr "Période"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Please insert a VAT No. on customer %s and try again."
+msgstr "Veuillez insérer un numéro de TVA sur le client %s et réessayer."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__previous_excess
+msgid "Previous Excess"
+msgstr "Excédent Précédent"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Previous Period"
+msgstr "Période Précédente"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__previous_stmt_log_id
+msgid "Previous Statement"
+msgstr "Déclaration Précédente"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Recap. Statement"
+msgstr "Déclaration Récap."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_recap
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__wizard_recap_statement__statement_type__vat_recap
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_dataport_log_filter
+msgid "Recapitulative Declaration"
+msgstr "Déclaration Récapitulative"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.action_wizard_recap_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__recap_stmt_log_id
+#: model:ir.ui.menu,name:ptplus_accounting_tax_statement.wizard_recap_statement_menu
+msgid "Recapitulative Statement"
+msgstr "Déclaration Recapitulatif"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__recap_total
+msgid "Recapitulative Statement Total"
+msgstr "Total de la Déclaration Recapitulatif"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r1_favourable_tax
+msgid "Region #1 Favourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r1_unfavourable_tax
+msgid "Region #1 Unfavourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r2_favourable_tax
+msgid "Region #2 Favourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r2_unfavourable_tax
+msgid "Region #2 Unfavourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_tax_statement_search
+msgid "Regular Fields"
+msgstr "Champs Régulier"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_bank_statement_line__is_regularization
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move__is_regularization
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_payment__is_regularization
+msgid "Regularization"
+msgstr "Régularisation"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__request_refund
+msgid "Request Refund"
+msgstr "Demander un Remboursement"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "Services"
+msgstr "Services"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_recap_statement__log_as_reported
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
+msgstr ""
+"Sélectionnez Vrai si le fichier a été soumis avec succès à la destination "
+"prévue. Dans ce cas, l'enregistrement du journal du dataport sera marqué "
+"comme étant Rapporté."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_recap_statement__substitution
+msgid ""
+"Set True if you have previously reported a recapitulative statement for the "
+"same period and wish to substitute that statement for this one. The "
+"configuration of the substitution details are out of the scope of this "
+"report and must be performed in the Tax Authorities website."
+msgstr ""
+"Mettez Vrai si vous avez déjà déclaré un état récapitulatif pour la même "
+"période et que vous souhaitez substituer cet état à celui-là. La "
+"configuration des détails de la substitution n'entre pas dans le cadre de "
+"cette déclaration et doit être effectuée sur le site web de l'administration "
+"fiscale."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__request_refund
+msgid "Set True if you wish to request a VAT refund (if any)"
+msgstr ""
+"Mettez Vrai si vous souhaitez demander un remboursement de la TVA (le cas "
+"échéant)"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__source
+msgid "Source"
+msgstr "Source"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__source_type
+msgid "Source Type"
+msgstr "Type Source"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/models/account_tax_statement.py:0
+#, python-format
+msgid "Source field is mandatory when Source Type is Expression. Element: %s"
+msgstr ""
+"Le champ Source est obligatoire lorsque le type de source est Expression. "
+"Élément : %s"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__state
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__state
+msgid "State"
+msgstr "État"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__statement_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Statement"
+msgstr "Déclaration"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__statement_id
+msgid "Statement Reference"
+msgstr "Référence de la Déclaration"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__statement_type
+msgid "Statement Type"
+msgstr "Type de Déclaration"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__substitution
+msgid "Substitution"
+msgstr "Substitution"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_account_tax
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__tax_bal_total
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_tax_statement.py:0
+#, python-format
+msgid "Tax <b>%s</b> has no periodic statement tag.<br>"
+msgstr "Fiscalité <b>%s</b> n'a pas d'étiquette de relevé périodique<br>"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__tax_bal_total
+msgid "Tax Balance"
+msgstr "Solde d'Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__tax_bal_normal
+msgid "Tax Balance [Normal]"
+msgstr "Solde d'Impôts [Normal]"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__tax_bal_regularization
+msgid "Tax Balance [Regularization]"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.tax_balance_tree_action
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_search_view
+msgid "Tax Balances"
+msgstr "Soldes d'Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_account_tax_statement
+msgid "Tax Statement"
+msgstr "Déclaration d'Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_account_tax_statement_line
+msgid "Tax Statement Line"
+msgstr "Ligne de Déclaration des Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__line_ids
+msgid "Tax Statement Lines"
+msgstr "Lignes de Déclaration Discale"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.action_account_tax_statement_template_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_search
+msgid "Tax Statement Template"
+msgstr "Modèle de Déclaration des Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_line_view_form
+msgid "Tax Statement Template Line"
+msgstr "Ligne de Modèle de Déclaration des Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.action_account_tax_statement_template_list
+#: model:ir.ui.menu,name:ptplus_accounting_tax_statement.menu_account_report_tax_statement_template
+msgid "Tax Statement Templates"
+msgstr "Modèles de Décla. des Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.action_tax_statement_line_tree
+#: model:ir.actions.act_window,name:ptplus_accounting_tax_statement.action_wizard_tax_statement
+#: model:ir.ui.menu,name:ptplus_accounting_tax_statement.wizard_tax_statement_menu
+msgid "Tax Statements"
+msgstr "Déclarations des Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__tax_tag_ids
+msgid "Tax Tags"
+msgstr "Tags fiscaux"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__tax_bal_normal
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Tax [Normal]"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement_line__value_type__tax_bal_regularization
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.tax_balance_tree_view
+msgid "Tax [Regularization]"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_tax_statement_template_view_form
+msgid "Taxes"
+msgstr "Impôts"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid ""
+"The Europe country group cannot be found. Please update the base module."
+msgstr ""
+"Le groupe de pays Europe est introuvable. Veuillez mettre à jour le module "
+"de base."
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid ""
+"The VAT No. is missing on a customer belonging to the country with code %s. "
+"Please insert it and try again."
+msgstr ""
+"Le numéro de TVA est manquant sur un client appartenant au pays dont le code "
+"est %s. Veuillez l'insérer et réessayer."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__exclusion_tag_ids
+msgid ""
+"These tags will be implicitly added to the filter on every Filter type "
+"statement line so that no tax containing one of them is ever selected."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__inclusion_tag_ids
+msgid ""
+"These tags will be implicitly added to the filter on every Filter type "
+"statement line so that only taxes containing one of them are selected."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__recap_total
+msgid ""
+"Total of the tax base as declared in the recapitulative statement regarding "
+"the same period. The system will try to get this value from the log entry."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_recap_statement__error
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr ""
+"Vrai s'il y a une erreur ou un avertissement dans l'opération du dataport"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement__type
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log__type
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__statement_type
+#, python-format
+msgid "Type"
+msgstr "Type"
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/models/account_tax.py:0
+#, python-format
+msgid "Unsupported search operator"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_recap_statement.py:0
+#, python-format
+msgid "VAT No."
+msgstr "Numéro de TVA"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement__type__vat_periodic
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_periodic
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_dataport_log_filter
+msgid "VAT Periodic Declaration"
+msgstr "Déclaration Périodique de TVA"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement__type__vat_periodic_annexr
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_dataport_log_filter
+msgid "VAT Periodic Declaration - Annex R"
+msgstr "Déclaration Périodique de TVA - Annexe R"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_periodic_r_azo
+msgid "VAT Periodic Declaration - Annex R Azores"
+msgstr "Déclaration Périodique de TVA - Annexe R Azores"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_periodic_r_cnt
+msgid "VAT Periodic Declaration - Annex R Continent"
+msgstr "Déclaration Périodique de TVA - Annexe R Continent"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_periodic_r_mad
+msgid "VAT Periodic Declaration - Annex R Madeira"
+msgstr "Déclaration Périodique de TVA - Annexe R Madeira"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_tax_statement__type__vat_yearly
+#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_yearly
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_dataport_log_filter
+msgid "VAT Yearly Declaration"
+msgstr "Déclaration Annuelle de TVA"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__validate
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__validate
+msgid "Validate"
+msgstr "Valider"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__value
+msgid "Value"
+msgstr "Valeur"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax_statement_line__value_type
+msgid "Value Type"
+msgstr "Type de Valeur"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__paid_tax_import_base
+msgid ""
+"Value of field 18: total tax base regarding import operations of goods for "
+"which the VAT is already paid for."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__paid_tax_import_amount
+msgid ""
+"Value of field 19: total tax amount regarding import operations of goods for "
+"which the VAT is already paid for."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r1_favourable_tax
+msgid ""
+"Value of field 63 of the annex R related to the #1 location of external "
+"operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r2_favourable_tax
+msgid ""
+"Value of field 63 of the annex R related to the #2 location of external "
+"operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r1_unfavourable_tax
+msgid ""
+"Value of field 64 of the annex R related to the #1 location of external "
+"operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__annex_r2_unfavourable_tax
+msgid ""
+"Value of field 64 of the annex R related to the #2 location of external "
+"operations."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__previous_excess
+msgid "Value of field 96 of the previous periodic VAT statement"
+msgstr "Valeur de la rubrique 96 du précédent relevé périodique de TVA"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__values
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__values
+msgid "Values"
+msgstr "Valeurs"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "View"
+msgstr "Vue"
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_tax_statement_line_tree
+msgid "View field taxes"
+msgstr "Voir taxes du champ"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__warnings
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__warnings
+msgid "Warnings"
+msgstr "Avertissements"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_recap_statement__validate
+#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_wizard_tax_statement__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) "
+"before being delivered to the user. As it's a very time consuming task, you "
+"may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Lorsqu'il est activé, le fichier est soumis à un contrôle technique (schéma "
+"XSD) avant d'être livré à l'utilisateur. Comme il s'agit d'une tâche très "
+"longue, vous pouvez la désactiver lorsqu'un fichier volumineux est attendu.\n"
+"Décochez la case lorsque vous préférez utiliser un validateur externe."
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__xml_default_urn
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_recap_statement__xml_schema_path
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__xml_default_urn
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_wizard_tax_statement__xml_schema_path
+msgid "XML Default URN"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[18] Tax Base"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[19] Tax Amount"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[20] Assets"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[21] Red. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[22] Std. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[23] Intrm. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[24] Other Goods/Serv."
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[61] Excess"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[63] Favourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[64] Unfavourable Tax"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "[7] Total"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: code:addons/ptplus_accounting_tax_statement/wizards/wizard_tax_statement.py:0
+#, python-format
+msgid "to"
+msgstr "à"
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_wizard_recap_statement
+msgid "wizard.recap_statement"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model:ir.model,name:ptplus_accounting_tax_statement.model_wizard_tax_statement
+msgid "wizard.tax_statement"
+msgstr ""
+
+#~ msgid "Balance"
+#~ msgstr "Solde"
+
+#~ msgid "Balance Refund"
+#~ msgstr "Solde de Crédits"
+
+#~ msgid "Dates must belong to the same year"
+#~ msgstr "Les dates doivent appartenir à la même année"
+
+#~ msgid "Excel File"
+#~ msgstr "Fichier Excel"
+
+#~ msgid "Export"
+#~ msgstr "Exporter"
+
+#~ msgid "List"
+#~ msgstr "Liste"
+
+#~ msgid "Month - Current"
+#~ msgstr "Mois - En cours"
+
+#~ msgid "Month - Last"
+#~ msgstr "Mois - Dernière"
+
+#~ msgid "PDF File"
+#~ msgstr "Fichier PDF"
+
+#~ msgid "Quarter - Current"
+#~ msgstr "Trimestre - En cours"
+
+#~ msgid "Quarter - Last"
+#~ msgstr "Trimestre - Dernier"
+
+#~ msgid "Tax <b>%s</b> has more than one periodic statement tag.<br>"
+#~ msgstr "Fiscalité <b>%s</b> a plus d'une étiquette de relevé périodique<br>"
+
+#~ msgid "Text File"
+#~ msgstr "Fichier Texte"
+
+#~ msgid "Total Base Balance"
+#~ msgstr "Solde Totale de la Base"
+
+#~ msgid "View Taxes"
+#~ msgstr "Voir les impôts"
+
+#~ msgid "XML File"
+#~ msgstr "Fichier XML"
+
+#~ msgid "Year - Current"
+#~ msgstr "Année - En cours"
+
+#~ msgid "Year - Last"
+#~ msgstr "Année - Dernière"
+
+#~ msgid ""
+#~ "You must indicate a filter. To do that, make sure to mark the checkbox "
+#~ "that selects all the filtered taxes"
+#~ msgstr ""
+#~ "Il est nécessaire indiquer un filtre. Pour cela, assurez-vous de cocher "
+#~ "la checkbox qui sélectionne tous les impôts filtrés"
+
+#~ msgid "download"
+#~ msgstr "télécharger"
+
+#~ msgid "select"
+#~ msgstr "sélectionner"
+
+#~ msgid "VAT - Recap. Declaration"
+#~ msgstr "TVA - Déclaration Récap."
+
+#~ msgid "None."
+#~ msgstr "Aucune."
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
+
+#~ msgid "Label"
+#~ msgstr "Étiquette"
+
+#~ msgid "Type of validation to apply on the output file."
+#~ msgstr "Type de validation à appliquer sur le fichier de sortie."
+
+#~ msgid "Update"
+#~ msgstr "Actualiser"
+
+#~ msgid "Update Statement Template"
+#~ msgstr "Actualiser Modèle de Déclaration"
+
+#~ msgid "Validation Type"
+#~ msgstr "Type de Validation"
+
+#~ msgid "from"
+#~ msgstr "de"
+
+#~ msgid "All Entries"
+#~ msgstr "Tous les Lancements"
+
+#~ msgid "All Posted Entries"
+#~ msgstr "Tous les mouvements confirmés"
+
+#~ msgid "Domain Wizard"
+#~ msgstr "Assistant de Domaine"
+
+#~ msgid "From date"
+#~ msgstr "Depuis"
+
+#~ msgid "Genre"
+#~ msgstr "Genre"
+
+#~ msgid "Incl."
+#~ msgstr "Incl."
+
+#~ msgid "Perc."
+#~ msgstr "Pourc."
+
+#~ msgid "Rate"
+#~ msgstr "Taxe"
+
+#~ msgid "Scope"
+#~ msgstr "Domaine"
+
+#~ msgid "Statement Fields"
+#~ msgstr "Champs de Déclaration"
+
+#~ msgid "Target Moves"
+#~ msgstr "Cible Mouvements"
+
+#~ msgid "To date"
+#~ msgstr "Jusqu'à"
+
+#~ msgid "You selected 'List' but no list of taxes has been provided"
+#~ msgstr ""
+#~ "Vous avez sélectionné  'Liste' mais sans spécifier une liste d'impôts"

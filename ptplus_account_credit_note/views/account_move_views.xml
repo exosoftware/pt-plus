@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Sales invoice form -->
+    <record id="view_move_form_pt_nc" model="ir.ui.view">
+        <field name="name">account.move.form.pt.nc</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <field name="to_check" position="after">
+                <field
+                    name="l10n_pt_rappel_credit_note"
+                    attrs="{'invisible': [('move_type', 'not in', ('out_refund', 'in_refund'))]}"
+                />
+                <field
+                    name="l10n_pt_origin_move_date"
+                    attrs="{'invisible': ['|', ('correction', '=', False), ('state', '=', 'draft')],
+                            'readonly': [('reversed_entry_id', '!=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>
