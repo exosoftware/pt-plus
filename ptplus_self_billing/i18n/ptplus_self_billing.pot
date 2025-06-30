@@ -1,0 +1,228 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_self_billing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-20 21:21+0000\n"
+"PO-Revision-Date: 2022-11-20 21:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid "%s - Self-billing"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "<span style=\"font-size: 14pt;\">SELF-BILLING</span>"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid ""
+"A Self-billing invoice requires a Self-billing partner (a supplier with the "
+"Self-billing value checked."
+msgstr ""
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid "An invoice date is required"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_dataport_export_saft__self_billing_partner_id
+msgid ""
+"Choose a self-billing partner to extract its SAF-T file. Leave blank to "
+"export your company's regular file"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_fiscal_document_type__self_billing_partner_id
+msgid ""
+"Choose the partner that will use this fiscal document type when issuing "
+"self-billing invoices"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_fiscal_document_type
+msgid "Fiscal Document Type"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_move__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_users__self_billing
+msgid "Indicate if the partner is under any kind of self-billing agreement"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_dataport_export_saft__type
+msgid ""
+"Indicate the data scope to export. Select 'Accounting' if you just want "
+"accounting data (invoicing is exported through another software package). "
+"Select 'Invoicing' to exclusively generate invoicing data (your bookkeeping "
+"is outsourced). Select 'Integrated' if this Odoo instance is helding both "
+"your invoicing and accounting functions)."
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Logo"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Mail:"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.view_move_form_pt_self_billing
+msgid "Print Self-bill"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_users__self_billing
+msgid "Self Billing"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__self_billing
+#: model:ir.model.fields.selection,name:ptplus_self_billing.selection__dataport_export_saft__type__s
+msgid "Self-billing"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:fiscal.document.type,name:ptplus_self_billing.fiscal_document_type_ft
+msgid "Self-billing Invoice"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__self_billing_partner_id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__self_billing_partner_id
+msgid "Self-billing Partner"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/fiscal_document.py:0
+#, python-format
+msgid ""
+"Sequence '%s' is a duplicate of sequence '%s'. Please change the prefix (or "
+"code) and try again."
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_fiscal_document_type__self_billing
+msgid "Set True if this document type is related to self-billing"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_move__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__self_billing
+msgid "Set True if this is a self-billing invoice"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__tax_auth_password
+msgid "Tax Authority Password"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__tax_auth_username
+msgid "Tax Authority Username"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Tel:"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/res_partner.py:0
+#, python-format
+msgid ""
+"The self-billing value on partner %s can only be True if the partner has no "
+"parent"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__tax_auth_password
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__tax_auth_username
+msgid ""
+"The supplier must supply this field so that the self-billing invoices can be"
+" transmitted via Tax Authority webservices."
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__type
+msgid "Type"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Web:"
+msgstr ""
