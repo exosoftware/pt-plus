@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Company -->
+    <record id="view_company_form_eac" model="ir.ui.view">
+        <field name="name">res.company.form.eac</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="ptplus.view_company_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="EAC" name="company_eac">
+                        <group name="cae"
+                               attrs="{'invisible': [('country_code', '!=', 'PT')]}">
+                            <field
+                                name="l10n_pt_eac_ids"
+                                string="EAC"
+                                nolabel="1"
+                            >
+                                <tree editable="bottom">
+                                    <!--<field name="partner_id" invisible="1"/>-->
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="eac_id" colspan="2"/>
+                                    <field name="activity_percent"/>
+                                </tree>
+                            </field>
+                        </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Account Move -->
+    <record id="view_move_line_tree" model="ir.ui.view">
+        <field name="name">account.move.line.tree</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree" />
+        <field name="arch" type="xml">
+            <field name="date_maturity" position="after">
+                <field name="cashflow_id" options="{'no_create': True}" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <field name="date_maturity" position="after">
+                <field name="cashflow_id" options="{'no_create': True}" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_line_form" model="ir.ui.view">
+        <field name="name">account.move.line.form</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_form" />
+        <field name="arch" type="xml">
+            <field name="quantity" position="after">
+                <field name="cashflow_id" options="{'no_create': True}" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Account -->
+    <record id="view_account_form" model="ir.ui.view">
+        <field name="name">account.account.form</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form" />
+        <field name="arch" type="xml">
+            <field name="currency_id" position="after">
+                <field
+                    name="cashflow_required"
+                    attrs="{'invisible': [('internal_type', '=', 'view')]}"
+                />
+                                <field
+                    name="default_debit_cashflow_id"
+                    options="{'no_create': True}"
+                    attrs="{'invisible': ['|', ('cashflow_required', '=', True), ('internal_type', '=', 'view')]}"
+                />
+                <field
+                    name="default_credit_cashflow_id"
+                    options="{'no_create': True}"
+                    attrs="{'invisible': ['|', ('cashflow_required', '=', True), ('internal_type', '=', 'view')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

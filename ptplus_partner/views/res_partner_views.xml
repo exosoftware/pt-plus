@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">view.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='street']" position="before">
+                <field name="legal_name" attrs="{'invisible': [('parent_id', '!=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+    -->
+
+    <!-- Partner -->
+    <record id="view_partner_form_pt" model="ir.ui.view">
+        <field name="name">res.partner.form.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field
+                    name="legal_name"
+                    context="{'default_is_company': False}"
+                    attrs="{'invisible': [('is_company','=', False)]}"
+                />
+                <field name="country_code" invisible="1" />
+            </field>
+        </field>
+    </record>
+    <record id="view_partner_simple_form_pt" model="ir.ui.view">
+        <field name="name">res.partner.simple.form.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field
+                    name="legal_name"
+                    context="{'default_is_company': False}"
+                    attrs="{'invisible': [('is_company','=', False)]}"
+                />
+                <field name="country_code" invisible="1" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Banks -->
+    <record id="view_res_bank_form_pt" model="ir.ui.view">
+        <field name="name">view.res.bank.form.pt</field>
+        <field name="model">res.bank</field>
+        <field name="inherit_id" ref="base.view_res_bank_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="code" />
+                <field name="lname" select="2" colspan="4" />
+            </field>
+            <field name="bic" position="after">
+                <field name="vat" select="1" />
+            </field>
+            <field name="email" position="after">
+                <field name="website" select="2" widget="url" />
+            </field>
+        </field>
+    </record>
+    <record id="view_res_bank_tree_pt" model="ir.ui.view">
+        <field name="name">view.res.bank.tree.pt</field>
+        <field name="model">res.bank</field>
+        <field name="inherit_id" ref="base.view_res_bank_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="code" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
