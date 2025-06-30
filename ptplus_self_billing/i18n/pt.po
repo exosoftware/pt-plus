@@ -1,0 +1,328 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_self_billing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-20 21:21+0000\n"
+"PO-Revision-Date: 2023-04-21 23:39+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-14-0/ptplus_self_billing/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid "%s - Self-billing"
+msgstr "%s - Autofaturação"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "<span style=\"font-size: 14pt;\">SELF-BILLING</span>"
+msgstr "<span style=\"font-size: 14pt;\">AUTOFATURAÇÃO</span>"
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid ""
+"A Self-billing invoice requires a Self-billing partner (a supplier with the "
+"Self-billing value checked."
+msgstr ""
+"Uma Autofatura requer um parceiro de Autofaturação (um fornecedor com o "
+"campo Autofaturação verdadeiro)."
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+#, python-format
+msgid "An invoice date is required"
+msgstr "É requerida uma data para a fatura"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_dataport_export_saft__self_billing_partner_id
+msgid ""
+"Choose a self-billing partner to extract its SAF-T file. Leave blank to "
+"export your company's regular file"
+msgstr ""
+"Escolha um parceiro de autofaturação para extrair o respetivo arquivo SAF-T"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_fiscal_document_type__self_billing_partner_id
+msgid ""
+"Choose the partner that will use this fiscal document type when issuing self-"
+"billing invoices"
+msgstr ""
+"Escolha o parceiro que utilizará este tipo de documento fiscal ao emitir "
+"autofaturas"
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome a Exibir"
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr "Dataport de Exportação do SAF-T PT"
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_fiscal_document_type
+msgid "Fiscal Document Type"
+msgstr "Tipo de Documento Fiscal"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_move__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__self_billing_partner
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_users__self_billing
+msgid "Indicate if the partner is under any kind of self-billing agreement"
+msgstr "Indica se há qualquer tipo de acordo de autofaturação com o parceiro"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_dataport_export_saft__type
+msgid ""
+"Indicate the data scope to export. Select 'Accounting' if you just want "
+"accounting data (invoicing is exported through another software package). "
+"Select 'Invoicing' to exclusively generate invoicing data (your bookkeeping "
+"is outsourced). Select 'Integrated' if this Odoo instance is helding both "
+"your invoicing and accounting functions)."
+msgstr ""
+"Indique o âmbito dos dados a exportar. Selecione 'Contabilidade' se apenas "
+"quiser dados contabilísticos (a faturação é exportada noutra aplicação). "
+"Selecione 'Faturação' para gerar exclusivamente dados de faturação (a sua "
+"contabilidade é processada externamente). Selecione 'Integrado' se este "
+"instância do Odoo é usada simultaneamente para as funções de faturação e "
+"contabilística."
+
+#. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_account_move
+msgid "Journal Entry"
+msgstr "Movimento de Diário"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type____last_update
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Logo"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Mail:"
+msgstr "E-mail:"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "Pág.: <span class=\"page\"/> / <span class=\"topage\"/>"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.view_move_form_pt_self_billing
+msgid "Print Self-bill"
+msgstr "Imprimir Autofatura"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_users__self_billing
+msgid "Self Billing"
+msgstr "Autofaturação"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__self_billing
+#: model:ir.model.fields.selection,name:ptplus_self_billing.selection__dataport_export_saft__type__s
+msgid "Self-billing"
+msgstr "Autofaturação"
+
+#. module: ptplus_self_billing
+#: model:fiscal.document.type,name:ptplus_self_billing.fiscal_document_type_ft
+msgid "Self-billing Invoice"
+msgstr "Fatura de Autofaturação"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__self_billing_partner
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__self_billing_partner_id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__self_billing_partner_id
+msgid "Self-billing Partner"
+msgstr "Parceiro de Autofaturação"
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/fiscal_document.py:0
+#, python-format
+msgid ""
+"Sequence '%s' is a duplicate of sequence '%s'. Please change the prefix (or "
+"code) and try again."
+msgstr ""
+"A sequência '%s' é um duplicado da '%s'. Por favor, altere o prefixo (ou "
+"código) e tente novamente."
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_fiscal_document_type__self_billing
+msgid "Set True if this document type is related to self-billing"
+msgstr ""
+"Defina como Verdadeiro se este tipo de documento estiver relacionado com "
+"autofaturação"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_move__self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__self_billing
+msgid "Set True if this is a self-billing invoice"
+msgstr "Escolha verdadeiro se esta for uma fatura de autofaturação"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__tax_auth_password
+msgid "Tax Authority Password"
+msgstr "Senha na AT"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__tax_auth_username
+msgid "Tax Authority Username"
+msgstr "Utilizadodor na AT"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Tel:"
+msgstr ""
+
+#. module: ptplus_self_billing
+#: code:addons/ptplus_self_billing/models/res_partner.py:0
+#, python-format
+msgid ""
+"The self-billing value on partner %s can only be True if the partner has no "
+"parent"
+msgstr ""
+"O valor do campo Autofaturação no parceiro %s só pode ser Verdadeiro se este "
+"não tiver ascendente"
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__tax_auth_password
+#: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__tax_auth_username
+msgid ""
+"The supplier must supply this field so that the self-billing invoices can be "
+"transmitted via Tax Authority webservices."
+msgstr ""
+"O fornecedor deve fornecer este campo para que as faturas de autofaturação "
+"possam ser transmitidas através de webservices à Autoridade Tributária."
+
+#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_self_billing
+msgid "Web:"
+msgstr ""
+
+#~ msgid "&amp;nbsp;<span>on</span>"
+#~ msgstr "&amp;nbsp;<span>em</span>"
+
+#~ msgid ""
+#~ "<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</"
+#~ "span>\n"
+#~ "                                <span groups=\"account."
+#~ "group_show_line_subtotals_tax_included\">Total Price</span>"
+#~ msgstr ""
+#~ "<span groups=\"account.group_show_line_subtotals_tax_excluded\">Valor</"
+#~ "span>\n"
+#~ "                                <span groups=\"account."
+#~ "group_show_line_subtotals_tax_included\">Total</span>"
+
+#~ msgid "<span>Description</span>"
+#~ msgstr "<span>Descrição </span>"
+
+#~ msgid "<span>Disc.(%)</span>"
+#~ msgstr "<span>Desc.(%)</span>"
+
+#~ msgid "<span>Quantity</span>"
+#~ msgstr "<span>Quantidade</span>"
+
+#~ msgid "<span>Source Document</span>"
+#~ msgstr "<span>Documento de Origem</span>"
+
+#~ msgid "<span>Taxes</span>"
+#~ msgstr "<span>Impostos </span>"
+
+#~ msgid "<span>Unit Price</span>"
+#~ msgstr "<span>Preço Unitário </span>"
+
+#~ msgid "<strong class=\"mr16\">Subtotal</strong>"
+#~ msgstr "<strong class=\"mr16\">Subtotal </strong>"
+
+#~ msgid "<strong>Description:</strong>"
+#~ msgstr "<strong>Descrição:</strong>"
+
+#~ msgid "<strong>Due Date:</strong>"
+#~ msgstr "<strong>Vencimento:</strong>"
+
+#~ msgid "<strong>Invoice Date:</strong>"
+#~ msgstr "<strong>Data da Fatura:</strong>"
+
+#~ msgid "<strong>Source:</strong>"
+#~ msgstr "<strong>Origem:</strong>"
+
+#~ msgid "<strong>Subtotal</strong>"
+#~ msgstr "<strong>Subtotal</strong>"
+
+#~ msgid "<strong>Total</strong>"
+#~ msgstr "<strong>Total</strong>"
+
+#~ msgid "Accounting"
+#~ msgstr "Contabilidade"
+
+#~ msgid "Document Type"
+#~ msgstr "Tipo de Documento"
+
+#~ msgid "Integrated"
+#~ msgstr "Integrado"
+
+#~ msgid "Invoice"
+#~ msgstr "Fatura"
+
+#~ msgid "Invoicing"
+#~ msgstr "Faturação"
+
+#~ msgid ""
+#~ "The self-billing value on partner %s can only be True if the partner is a "
+#~ "supplier"
+#~ msgstr ""
+#~ "O valor do campo Autofaturação no parceiro %s só pode ser Verdadeiro se "
+#~ "este for um fornecedor"
+
+#~ msgid "Please use the following communication for your payment :"
+#~ msgstr "Por favor, utilize a seguinte referência no seu pagamento:"

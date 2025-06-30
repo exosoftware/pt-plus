@@ -1,0 +1,619 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_account_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-05 17:07+0000\n"
+"PO-Revision-Date: 2023-04-21 23:39+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-14-0/ptplus_account_reports/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_account_reports
+#: model:mail.template,body_html:ptplus_account_reports.email_template_partner_balance
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; "
+"\">\n"
+"\n"
+"    <p>Dear ${object.name},</p>\n"
+"\n"
+"    <p>Please find attached a balance statement,\n"
+"    dated between ${format_date(ctx['report_data']['date_start'], "
+"context={'lang': object.lang})} and ${format_date(ctx['report_data']"
+"['date_end'], context={'lang': object.lang})}.</p>\n"
+"\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"\n"
+"    <p>Regards,</p>\n"
+"\n"
+"    <p>\n"
+"    % if user.signature:\n"
+"        ${user.signature | safe}\n"
+"    % endif\n"
+"    </p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; "
+"\">\n"
+"\n"
+"    <p>Caro(a) ${object.name},</p>\n"
+"\n"
+"    <p>Junto enviamos em anexo um extrato de movimentos\n"
+"    entre ${format_date(ctx['report_data']['date_start'], context={'lang': "
+"object.lang})} e ${format_date(ctx['report_data']['date_end'], "
+"context={'lang': object.lang})}.</p>\n"
+"\n"
+"\n"
+"\n"
+"    <p>Caso haja alguma questão, não hesitem em contactar-nos.</p>\n"
+"\n"
+"    <p>Cumprimentos,</p>\n"
+"\n"
+"    <p>\n"
+"    % if user.signature:\n"
+"        ${user.signature | safe}\n"
+"    % endif\n"
+"    </p>\n"
+"\n"
+"</div>\n"
+"            "
+
+#. module: ptplus_account_reports
+#: model:mail.template,body_html:ptplus_account_reports.email_template_partner_outstanding
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; "
+"\">\n"
+"\n"
+"    <p>Dear ${object.name},</p>\n"
+"\n"
+"    <p>Please find attached an ${('overdue' if ctx['report_data']"
+"['overdue_only'] else '')}outstanding documents statement,\n"
+"    dated ${format_date(ctx['report_data']['date_end'], context={'lang': "
+"object.lang})}.</p>\n"
+"\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"\n"
+"    <p>Regards,</p>\n"
+"\n"
+"    <p>\n"
+"    % if user.signature:\n"
+"        ${user.signature | safe}\n"
+"    % endif\n"
+"    </p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; "
+"\">\n"
+"\n"
+"    <p>Caro(a) ${object.name},</p>\n"
+"\n"
+"    <p>Junto enviamos em anexo um extrato de documentos pendentes "
+"${('vencidos' if ctx['report_data']['overdue_only'] else '')}\n"
+"    no dia ${format_date(ctx['report_data']['date_end'], context={'lang': "
+"object.lang})}.</p>\n"
+"\n"
+"    <p>Caso haja alguma questão, não hesitem em contactar-nos.</p>\n"
+"\n"
+"    <p>Cumprimentos,</p>\n"
+"\n"
+"    <p>\n"
+"    % if user.signature:\n"
+"        ${user.signature | safe}\n"
+"    % endif\n"
+"    </p>\n"
+"\n"
+"</div>\n"
+"            "
+
+#. module: ptplus_account_reports
+#: model:mail.template,subject:ptplus_account_reports.email_template_partner_outstanding
+msgid ""
+"${('Overdue outstanding documents' if ctx['report_data']['overdue_only'] "
+"else 'Outstanding documents')}"
+msgstr ""
+"${('Documentos pendentes vencidos' if ctx['report_data']['overdue_only'] "
+"else 'Documentos pendentes')}"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "+120 Days Due"
+msgstr "Vencid. +120 dias"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "1-30 Days Due"
+msgstr "Vencid. 1-30 dias"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "30-60 Days Due"
+msgstr "Vencid. 30-60 dias"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "60-90 Days Due"
+msgstr "Vencid. 60-90 dias"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "90-120 Days Due"
+msgstr "Vencid. 90-120 dias"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Data:</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "<strong>End Date:</strong>"
+msgstr "<strong>Data Final:</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "<strong>No movements.</strong>"
+msgstr "<strong>Sem movimentos.</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "<strong>No outstanding documents.</strong>"
+msgstr "<strong>Sem documentos pendentes.</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "<strong>Ref:</strong>"
+msgstr "<strong>Refª:</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "<strong>Start Date:</strong>"
+msgstr "<strong>Data Inicial:</strong>"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "<strong>Statement Date:</strong>"
+msgstr "<strong>Data Extrato:</strong>"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__account_ids
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__account_ids
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__account_ids
+msgid "Account Filter"
+msgstr "Filtro de Contas"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Aging Summary"
+msgstr "Resumo de Antiguidades"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Amount"
+msgstr "Valor"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Balance Due"
+msgstr "Total a Liquidar"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Balance Forward"
+msgstr "Saldo à Data"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Balance Overdue"
+msgstr "Total de Venc."
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Balance Statement"
+msgstr "Extrato de Movimentos"
+
+#. module: ptplus_account_reports
+#: model:mail.template,report_name:ptplus_account_reports.email_template_partner_balance
+#: model:mail.template,subject:ptplus_account_reports.email_template_partner_balance
+msgid "Balance statement"
+msgstr "Extrato de Movimentos"
+
+#. module: ptplus_account_reports
+#: selection:partner.balance.report.wizard,type:0
+#: selection:partner.common.report.wizard,type:0
+#: selection:partner.outstanding.report.wizard,type:0
+msgid "Both"
+msgstr "Ambos"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_balance_report_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_outstanding_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/wizards/report_partner_balance_wizard.py:71
+#: code:addons/ptplus_account_reports/wizards/report_partner_outstanding_wizard.py:66
+#, python-format
+msgid "Compose Email"
+msgstr "Compor Email"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/report/account_partner_common_report.py:57
+#, python-format
+msgid "Credit Note"
+msgstr "Nota de Crédito"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Current Due"
+msgstr "A Vencer"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Date"
+msgstr "Data"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__date_end
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__date_end
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__date_end
+msgid "Date End"
+msgstr "Data Final"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__date_start
+msgid "Date Start"
+msgstr "Data Inicial"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/report/account_partner_common_report.py:59
+#, python-format
+msgid "Debit Note"
+msgstr "Nota de Débito"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Description"
+msgstr "Descrição"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_balance__display_name
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_common__display_name
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_outstanding__display_name
+msgid "Display Name"
+msgstr "Nome a Exibir"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Dly. Days"
+msgstr "Dias Atr."
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Documents in"
+msgstr "Documentos em"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Due Date"
+msgstr "Data Venc."
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Ending Balance"
+msgstr "Saldo Final"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__excl_partners_without_docs
+msgid "Exclude Partners Without Documents"
+msgstr "Excluir Parceiros Sem Documentos"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__excl_partners_without_moves
+msgid "Exclude Partners Without Moves"
+msgstr "Excluir Parceiros Sem Movimentos"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__hide_account_names
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__hide_account_names
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__hide_account_names
+msgid "Hide Account Names"
+msgstr "Ocultar Nomes de Contas"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_balance__id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_common__id
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_outstanding__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__incl_aging
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__incl_aging
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__incl_aging
+msgid "Include Aging Summary"
+msgstr "Incluir Resumo de Antiguidades"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/report/account_partner_common_report.py:55
+#, python-format
+msgid "Invoice"
+msgstr "Fatura"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard____last_update
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard____last_update
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard____last_update
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_balance____last_update
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_common____last_update
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_report_ptplus_account_reports_report_partner_outstanding____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização em"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+msgid "Moves in"
+msgstr "Movimentos em"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__multi_partner
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__multi_partner
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__multi_partner
+msgid "Multi Partner"
+msgstr "Parceiros Múltiplos"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Open Amount"
+msgstr "Valor a Liq."
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Original Amount"
+msgstr "Valor Doc."
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Outstanding Documents Statement"
+msgstr "Extrato de Documentos Pendentes"
+
+#. module: ptplus_account_reports
+#: model:mail.template,report_name:ptplus_account_reports.email_template_partner_outstanding
+msgid "Outstanding documents statement"
+msgstr "Extrato de documentos pendentes"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Overdue Balance"
+msgstr "Saldo Venc."
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__overdue_only
+msgid "Overdue Only"
+msgstr "Apenas Vencidos"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Overdue Outstanding Documents Statement"
+msgstr "Extrato de Documentos Pendentes Vencidos"
+
+#. module: ptplus_account_reports
+#: model:ir.actions.act_window,name:ptplus_account_reports.action_partner_balance_wizard
+msgid "Partner Balance Report"
+msgstr "Extrato de Movimentos de Parceiros"
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_partner_balance_report_wizard
+msgid "Partner Balance Report Wizard"
+msgstr "Assistente de Extrato de Movimentos de Parceiros"
+
+#. module: ptplus_account_reports
+#: model:ir.actions.report,name:ptplus_account_reports.action_print_partner_balance_statement
+msgid "Partner Balance Statement"
+msgstr "Extrato de Movimentos de Parceiros"
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_partner_common_report_wizard
+msgid "Partner Common Report Wizard"
+msgstr "Assistente de Extrato Comuns de Parceiros"
+
+#. module: ptplus_account_reports
+#: model:ir.actions.act_window,name:ptplus_account_reports.action_partner_outstanding_wizard
+msgid "Partner Outstanding Report"
+msgstr "Extrato de Documentos Pendentes"
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_partner_outstanding_report_wizard
+msgid "Partner Outstanding Report Wizard"
+msgstr "Assistente de Extrato de Documentos Pendentes"
+
+#. module: ptplus_account_reports
+#: model:ir.actions.report,name:ptplus_account_reports.action_print_partner_outstanding_statement
+msgid "Partner Outstanding Statement"
+msgstr "Extrato de Documentos Pendentes"
+
+#. module: ptplus_account_reports
+#: selection:partner.balance.report.wizard,type:0
+#: selection:partner.common.report.wizard,type:0
+#: selection:partner.outstanding.report.wizard,type:0
+msgid "Payable"
+msgstr "A Pagar"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/report/account_partner_common_report.py:69
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#, python-format
+msgid "Payment"
+msgstr "Pagamento"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_balance_report_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_outstanding_report_wizard
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: ptplus_account_reports
+#: code:addons/ptplus_account_reports/report/account_partner_common_report.py:67
+#, python-format
+msgid "Receipt"
+msgstr "Recebimento"
+
+#. module: ptplus_account_reports
+#: selection:partner.balance.report.wizard,type:0
+#: selection:partner.common.report.wizard,type:0
+#: selection:partner.outstanding.report.wizard,type:0
+msgid "Receivable"
+msgstr "A Receber"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_balance_document
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.report_partner_outstanding_document
+msgid "Reference"
+msgstr "Referência"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_balance_report_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_outstanding_report_wizard
+msgid "Send E-mail"
+msgstr "Enviar E-mail"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_balance_report_wizard__type
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_common_report_wizard__type
+#: model:ir.model.fields,field_description:ptplus_account_reports.field_partner_outstanding_report_wizard__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_account_reports
+#: model:ir.model.fields,help:ptplus_account_reports.field_partner_balance_report_wizard__hide_account_names
+#: model:ir.model.fields,help:ptplus_account_reports.field_partner_common_report_wizard__hide_account_names
+#: model:ir.model.fields,help:ptplus_account_reports.field_partner_outstanding_report_wizard__hide_account_names
+msgid ""
+"When there are multiple payable/receivable accounts, the account separation "
+"is performed but the account names are not displayed"
+msgstr ""
+"Quando há múltiplas contas a receber/pagar, a separação por contas é "
+"efetuada mas os nomes das contas não são exibidos"
+
+#. module: ptplus_account_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_balance_report_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_account_reports.partner_outstanding_report_wizard
+msgid "or"
+msgstr "ou"
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_report_ptplus_account_reports_report_partner_balance
+msgid "report.ptplus_account_reports.report_partner_balance"
+msgstr ""
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_report_ptplus_account_reports_report_partner_common
+msgid "report.ptplus_account_reports.report_partner_common"
+msgstr ""
+
+#. module: ptplus_account_reports
+#: model:ir.model,name:ptplus_account_reports.model_report_ptplus_account_reports_report_partner_outstanding
+msgid "report.ptplus_account_reports.report_partner_outstanding"
+msgstr ""
+
+#~ msgid "Cannot print report due to missing content"
+#~ msgstr "Não foi possível imprimir devido à falta de conteúdos"
+
+#~ msgid "Partner Balance Statement on"
+#~ msgstr "Extrato de Movimentos em"
+
+#~ msgid "Ref:"
+#~ msgstr "Refª:"
+
+#~ msgid "TIN:"
+#~ msgstr "NIF:"
+
+#~ msgid "Export PDF"
+#~ msgstr "Exportar PDF"
+
+#~ msgid "Partner ref:"
+#~ msgstr "Refª Parceiro:"
+
+#~ msgid "Outstanding documents"
+#~ msgstr "Documentos pendentes"
+
+#~ msgid "Partner Base Report Wizard"
+#~ msgstr "Assistente de Extrato Comuns de Parceiros"

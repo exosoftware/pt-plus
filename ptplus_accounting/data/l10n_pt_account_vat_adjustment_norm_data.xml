@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- VAT Adjustment Norms -->
+    <record id="vat_adjustment_norm_a23a26" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 23º a 26º</field>
+        <field name="note">Regularizações abrangidas pelos artigos 23º A 26º</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n2" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 2</field>
+        <field
+            name="note"
+        >Se, depois de efectuado o registo referido no artigo 45.º, for anulada a operação ou reduzido o seu valor tributável em consequência de invalidade, resolução, rescisão ou redução do contrato, pela devolução de mercadorias ou pela concessão de abatimentos ou descontos, o fornecedor do bem ou prestador do serviço pode efectuar a dedução do correspondente imposto até ao final do período de imposto seguinte àquele em que se verificarem as circunstâncias que determinaram a anulação da liquidação ou a redução do seu valor tributável.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n3" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 3</field>
+        <field
+            name="note"
+        >Nos casos de facturas inexactas que já tenham dado lugar ao registo referido no artigo 45.º, a rectificação é obrigatória quando houver imposto liquidado a menos, podendo ser efectuada sem qualquer penalidade até ao final do período seguinte àquele a que respeita a factura a rectificar, e é facultativa, quando houver imposto liquidado a mais, mas apenas pode ser efectuada no prazo de dois anos.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n4" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 4</field>
+        <field
+            name="note"
+        >O adquirente do bem ou destinatário do serviço que seja um sujeito passivo do imposto, se tiver efectuado já o registo de uma operação relativamente à qual o seu fornecedor ou prestador de serviço procedeu a anulação, redução do seu valor tributável ou rectificação para menos do valor facturado, corrige, até ao fim do período de imposto seguinte ao da recepção do documento rectificativo, a dedução efectuada.</field>
+        <field name="vat_receivable">False</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n6" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 6</field>
+        <field
+            name="note"
+        >A correcção de erros materiais ou de cálculo no registo a que se referem os artigos 44.º a 51.º e 65.º, nas declarações mencionadas no artigo 41.º e nas guias ou declarações mencionadas nas alíneas b) e c) do n.º 1 do artigo 67.º é facultativa quando resultar imposto a favor do sujeito passivo, mas só pode ser efectuada no prazo de dois anos, que, no caso do exercício do direito à dedução, é contado a partir do nascimento do respectivo direito nos termos do n.º 1 do artigo 22.º, sendo obrigatória quando resulte imposto a favor do Estado.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n7a" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 7 alínea a)</field>
+        <field
+            name="note"
+        >Em processo de execução, após o registo a que se refere a alínea b) do n.º 2 do artigo 717.º do Código do Processo Civil;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n7b" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 7 alínea b)</field>
+        <field
+            name="note"
+        >Em processo de insolvência, quando a mesma for decretada de caráter limitado, após o trânsito em julgado da sentença de verificação e graduação de créditos prevista no Código da Insolvência e da Recuperação de Empresas ou, quando exista, a homologação do plano objeto da deliberação prevista no artigo 156.º do mesmo Código;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n7c" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 7 alínea c)</field>
+        <field
+            name="note"
+        >Em processo especial de revitalização, após homologação do plano de recuperação pelo juiz, previsto no artigo 17.º-F do Código da Insolvência e da Recuperação de Empresas;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n7d" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 7 alínea d)</field>
+        <field
+            name="note"
+        >Nos termos previstos no Sistema de Recuperação de Empresas por Via Extrajudicial (SIREVE), após celebração do acordo previsto no artigo 12.º do Decreto-Lei n.º 178/2012, de 3 de agosto.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+
+    <record id="vat_adjustment_norm_a78n8a" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 8 alínea a)</field>
+        <field
+            name="note"
+        >O valor do crédito não seja superior a (euro) 750, IVA incluído, a mora do pagamento se prolongue para além de seis meses e o devedor seja particular ou sujeito passivo que realize exclusivamente operações isentas que não confiram direito a dedução;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n8b" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 8 alínea b)</field>
+        <field
+            name="note"
+        >Os créditos sejam superiores a (euro) 750 e inferiores a (euro) 8000, IVA incluído, quando o devedor, sendo um particular ou um sujeito passivo que realize exclusivamente operações isentas que não conferem o direito à dedução, conste no registo informático de execuções como executado contra quem foi movido processo de execução anterior entretanto suspenso ou extinto por não terem sido encontrados bens penhoráveis;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n8c" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 8 alínea c)</field>
+        <field
+            name="note"
+        >Os créditos sejam superiores a (euro) 750 e inferiores a (euro) 8000, IVA incluído, tenha havido aposição de fórmula executória em processo de injunção ou reconhecimento em acção de condenação e o devedor seja particular ou sujeito passivo que realize exclusivamente operações isentas que não confiram direito a dedução;</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n8d" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 8 alínea d)</field>
+        <field
+            name="note"
+        >Os créditos sejam inferiores a (euro) 6000, IVA incluído, deles sendo devedor sujeito passivo com direito à dedução e tenham sido reconhecidos em acção de condenação ou reclamados em processo de execução e o devedor tenha sido citado editalmente.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n8e" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 8 alínea e)</field>
+        <field
+            name="note"
+        >Os créditos sejam superiores a (euro) 750 e inferiores a (euro) 8000, IVA incluído, quando o devedor, sendo um particular ou um sujeito passivo que realize exclusivamente operações isentas que não conferem direito a dedução, conste da lista de acesso público de execuções extintas com pagamento parcial ou por não terem sido encontrados bens penhoráveis no momento da dedução.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78n12" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º n.º 12</field>
+        <field
+            name="note"
+        >Nos casos em que se verificar a recuperação dos créditos, total ou parcialmente, os sujeitos passivos são obrigados a proceder à entrega do imposto, no período em que se verificar o seu recebimento, sem observância, neste caso, do prazo previsto no n.º 1 do artigo 94.º</field>
+        <field name="vat_receivable">False</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78an2a" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 2 alínea a)</field>
+        <field
+            name="note"
+        >O crédito esteja em mora há mais de 24 meses desde a data do respetivo vencimento e existam provas objetivas de imparidade e de terem sido efetuadas diligências para o seu recebimento</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy">mandatory</field>
+    </record>
+    <record id="vat_adjustment_norm_a78an2b" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 2 alínea b)</field>
+        <field
+            name="note"
+        >O crédito esteja em mora há mais de seis meses desde a data do respetivo vencimento, o valor do mesmo não seja superior a (euro) 750, IVA incluído, e o devedor seja particular ou sujeito passivo que realize exclusivamente operações isentas que não confiram direito à dedução.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78an4a" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 4 alínea a)</field>
+        <field
+            name="note"
+        >Em processo de execução, após o registo a que se refere a alínea b) do n.º 2 do artigo 717.º do Código do Processo Civil</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78an4b" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 4 alínea b)</field>
+        <field
+            name="note"
+        >Em processo de insolvência, quando a mesma for decretada de caráter limitado, após o trânsito em julgado da sentença de verificação e graduação de créditos prevista no Código da Insolvência e da Recuperação de Empresas ou, quando exista, a homologação do plano objeto da deliberação prevista no artigo 156.º do mesmo Código</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78an4c" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 4 alínea c)</field>
+        <field
+            name="note"
+        >Em processo especial de revitalização, após homologação do plano de recuperação pelo juiz, previsto no artigo 17.º-F do Código da Insolvência e da Recuperação de Empresas</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78an4d" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - A n.º 4 alínea d)</field>
+        <field
+            name="note"
+        >Nos termos previstos no Sistema de Recuperação de Empresas por Via Extrajudicial (SIREVE), após celebração do acordo previsto no artigo 12.º do Decreto-Lei n.º 178/2012, de 3 de agosto</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy" />
+    </record>
+    <record id="vat_adjustment_norm_a78bn4" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - B n.º 4</field>
+        <field
+            name="note"
+        >No caso de créditos não abrangidos pelo número anterior que sejam inferiores a (euro) 150 000, IVA incluído, por fatura, decorrido o prazo previsto no n.º 2, o pedido de autorização prévia é considerado deferido, reservando-se a Autoridade Tributária e Aduaneira a faculdade de controlar posteriormente a legalidade da pretensão do sujeito passivo.</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">False</field>
+        <field name="requests_policy">mandatory</field>
+    </record>
+    <record id="vat_adjustment_norm_a78cn1" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - C n.º 1</field>
+        <field
+            name="note"
+        >Nos casos em que haja lugar à retificação pelo adquirente da dedução prevista no n.º 5 do artigo anterior, esta deverá ser efetuada na declaração periódica relativa ao período de imposto em que ocorreu a respetiva notificação, identificando, em anexo, as correspondentes faturas, incluindo a identificação do emitente o valor da fatura e o imposto nela liquidado.</field>
+        <field name="vat_receivable">False</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy">mandatory</field>
+    </record>
+    <record id="vat_adjustment_norm_a78cn3" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Artigo 78º - C n.º 3</field>
+        <field
+            name="note"
+        >Em caso de recuperação, total ou parcial, dos créditos, os sujeitos passivos que hajam procedido anteriormente à dedução do imposto associado a créditos de cobrança duvidosa ou incobráveis devem entregar o imposto correspondente ao montante recuperado com a declaração periódica a apresentar no período do recebimento, sem observância do prazo previsto no n.º 1 do artigo 94.º, ficando a dedução do imposto pelo adquirente dependente da apresentação de pedido de autorização prévia, aplicando-se, com as necessárias adaptações, o disposto no artigo anterior.</field>
+        <field name="vat_receivable">False</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy">optional</field>
+    </record>
+    <record id="vat_adjustment_norm_other" model="l10n_pt.account.vat.adjustment_norm">
+        <field name="name">Outras regularizações</field>
+        <field name="note">Outras regularizações</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
+
+</odoo>
