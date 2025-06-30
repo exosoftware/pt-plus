@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_wizard_webservice_failure" model="ir.ui.view">
+        <field name="name">wizard_webservice_failure</field>
+        <field name="model">wizard.webservice.failure</field>
+        <field name="inherit_id" ref="ptplus.view_wizard_webservice_failure" />
+        <field name="arch" type="xml">
+            <xpath expr="//p[hasclass('text-muted')]" position="inside">
+                <span>You can try again later by using the Retry Communication button.
+                    If that doesn't work, you can manually submit the transport data on
+                    the tax authorities website. You'll receive a numeric code to insert
+                    on the Delivery Code field.</span>
+            </xpath>
+        </field>
+    </record>
+</odoo>

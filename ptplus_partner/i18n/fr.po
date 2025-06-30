@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-25 09:15+0000\n"
+"PO-Revision-Date: 2021-08-25 10:16+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "Att. "
+msgstr "Att."
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_bank
+msgid "Bank"
+msgstr "Banque"
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Comptes Bancaires"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__code
+msgid "Code"
+msgstr "Code"
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__country_id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__country_id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__country_id
+msgid "Country"
+msgstr "Pays"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__display_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__display_name
+msgid "Display Name"
+msgstr "Nom à Présenter"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner_bank__country_id
+msgid ""
+"If the bank account is Portuguese, the account number will be validated and "
+"formatted accordingly."
+msgstr ""
+"Si le compte bancaire est portugais, le numéro de compte sera validé et "
+"formaté en conséquence."
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "Invalid zip code %s"
+msgstr "Code postal invalide %s"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank____last_update
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner____last_update
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__l10n_pt_legal_name
+msgid "Legal Name"
+msgstr "Raison Sociale"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,help:ptplus_partner.field_res_users__l10n_pt_legal_name
+msgid ""
+"Legal name or any other form of business name. When filled, will be used on "
+"legal documents (invoices, credit notes, etc.) instead of the regular name"
+msgstr ""
+"Dénomination sociale ou toute autre forme de nom commercial. Une fois "
+"rempli, sera utilisé sur les documents juridiques (factures, notes de "
+"crédit, etc.) au lieu du nom habituel"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__lname
+msgid "Long name"
+msgstr "Nom Complet"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__vat
+msgid "TIN"
+msgstr "NIF"
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_bank.py:0
+#, python-format
+msgid "The IBAN must have 25 digits"
+msgstr "O IBAN tem que ter 25 dígitosLe IBAN doit avoir 25 chiffres"
+
+#. module: ptplus_partner
+#: model:ir.model.constraint,message:ptplus_partner.constraint_res_partner_ref_uniq
+msgid "The internal reference already exists!"
+msgstr "La référence interne existe déjà !"
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "VAT number %s is already associated with a different partner"
+msgstr ""
+"O nº d'identification fiscale %s est déjà associé à un autre partenaire"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__website
+msgid "Website"
+msgstr "Site Web"
+
+#. module: ptplus_partner
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "You can't change the TIN of customer %s because it has posted invoices"
+msgstr ""
+"Vous ne pouvez pas changer le NIF du partenaire %s une fois que celui ci a "
+"déjà des factures enregistrées"

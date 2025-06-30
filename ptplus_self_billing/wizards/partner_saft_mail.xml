@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="partner_saft_mail_preview" model="ir.ui.view">
+        <field name="name">self_billing.partner.saft.mail.preview</field>
+        <field name="model">partner.saft.mail</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <h1><field name="information" readonly="1"/></h1>
+                <group string="SAF-T Report">
+                    <field name="dataport_log_ids" readonly="1" nolabel="1" colspan="2">
+                        <tree default_order="error desc">
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="error"/>
+                            <field name="info"/>
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button
+                        string="Close"
+                        name="close"
+                        class="btn-secondary"
+                        type="object"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="partner_saft_mail" model="ir.ui.view">
+        <field name="name">self_billing.partner.saft.mail</field>
+        <field name="model">partner.saft.mail</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="exclude_success"/>
+                        <field name="send_invoices" />
+                    </group>
+                    <group colspan="2">
+                        <label for="partner_ids"/>
+                        <div class="o_row">
+                            <field name="partner_ids" domain="[('l10n_pt_self_billing', '=', True)]">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                            <button
+                                title=""
+                                name="clear_partners"
+                                class="btn-secondary"
+                                type="object"
+                                icon="fa-trash"
+                            />
+                        </div>
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        string="Send SAF-T"
+                        name="process_saft"
+                        class="btn-primary"
+                        type="object"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_partner_saft_mail" model="ir.actions.act_window">
+        <field name="name">Send Self-Billing SAF-T</field>
+        <field name="res_model">partner.saft.mail</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="partner_saft_mail" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_pt_partner_saft_mail"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="5"
+        groups="account.group_account_invoice"
+        action="action_wizard_partner_saft_mail"
+    />
+</odoo>
