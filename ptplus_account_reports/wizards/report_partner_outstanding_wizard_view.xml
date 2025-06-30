@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_outstanding_report_wizard" model="ir.ui.view">
+        <field name="name">Partner Outstanding Report Wizard</field>
+        <field name="model">partner.outstanding.report.wizard</field>
+        <field name="arch" type="xml">
+            <form name="Options">
+                <group name="company">
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                </group>
+                <group name="options">
+                    <field name="date_end"/>
+                    <field name="type"/>
+                    <field name="overdue_only"/>
+                    <field name="incl_aging"/>
+                    <field name="multi_partner" readonly="1" invisible="1"/>
+                    <field name="excl_partners_without_docs" attrs="{'invisible': [('multi_partner', '=', False)]}"/>
+                    <field name="hide_account_names"/>
+                </group>
+                <label for="account_ids"/>
+                <field name="account_ids"
+                       nolabel="1"
+                       widget="many2many_tags"
+                       options="{'no_create': True}"
+                       colspan="3"/>
+                <footer>
+                    <button name="action_send_mail" type="object" string="Send E-mail" class="oe_highlight" default_focus="1" attrs="{'invisible': [('multi_partner', '=', True)]}"/>
+                    <button name="action_print" type="object" string="Print" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_partner_outstanding_wizard"
+        name="Partner Outstanding Report"
+        src_model="res.partner"
+        res_model="partner.outstanding.report.wizard"
+        view_type="form" view_mode="form"
+        key2="client_action_multi" target="new"
+        groups="account.group_account_invoice"/>
+
+</odoo>

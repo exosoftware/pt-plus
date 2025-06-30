@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Cashflow Master Table -->
+    <record id="account_cashflow_view_search" model="ir.ui.view">
+        <field name="name">account.cashflow.search</field>
+        <field name="model">account.cashflow</field>
+        <field name="arch" type="xml">
+            <search string="Cash Flow">
+                <field name="code" />
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="account_cashflow_view_tree" model="ir.ui.view">
+        <field name="name">account.cashflow.tree</field>
+        <field name="model">account.cashflow</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="account_cashflow_view_form" model="ir.ui.view">
+        <field name="name">account.cashflow.form</field>
+        <field name="model">account.cashflow</field>
+        <field name="arch" type="xml">
+            <form string="Cash Flow">
+                <group>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_cashflow_action_list" model="ir.actions.act_window">
+        <field name="name">Cash Flows</field>
+        <field name="res_model">account.cashflow</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="account_cashflow_view_tree" />
+        <field name="search_view_id" ref="account_cashflow_view_search" />
+    </record>
+    <menuitem
+        id="menu_action_account_cashflow_list"
+        parent="account.account_management_menu"
+        action="account_cashflow_action_list"
+        sequence="150"
+        groups="account.group_account_user"
+    />
+
+</odoo>

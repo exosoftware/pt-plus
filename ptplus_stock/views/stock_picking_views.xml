@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.pt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:0;"
+                     attrs="{'invisible': ['|', '|', ('system_entry_date', '=', False), ('l10n_pt_delivery_code', '!=', False), ('l10n_pt_is_national', '=', False)]}">
+                    <div class="o_row">
+                        This document was NOT reported to the Tax Authority, as legally required. You may be fined if you proceed with the transportation.
+                        <button name="pt_webservice" type="object" class="oe_link oe_inline fw-bold"
+                                string="TRY AGAIN"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//button[@name='do_print_picking']" position="before">
+                <button
+                    name="pt_issue"
+                    string="Issue Delivery Doc."
+                    groups="stock.group_stock_user"
+                    type="object"
+                    class="oe_highlight"
+                    attrs="{'invisible': ['|', '|', ('state', '!=', 'done'), ('system_entry_date', '!=', False), ('source_billing', '=', False)]}"
+                />
+                <button
+                    name="action_send_deliveryslip"
+                    string="Send Deliveryslip"
+                    groups="stock.group_stock_user"
+                    type="object"
+                    attrs="{'invisible': [('system_entry_date', '=', False)]}"
+                />
+            </xpath>
+            <!--
+            <xpath expr="//button[@name='action_cancel']" position="before">
+                <button name="action_cancel_done" string="Cancel"
+                        states="done" type="object" icon="fa-ban"
+                        confirm="Are you sure you want to cancel this picking?"/>
+            </xpath>
+            -->
+
+            <!-- Source Billing and Fiscal Document Type-->
+            <field name="origin" position="after">
+                <field name="source_billing" invisible="1" />
+                <field name="system_entry_date" invisible="1" />
+                <field name="l10n_pt_is_national" invisible="1" />
+                <field
+                    name="fiscal_document_type_id"
+                    string="Document Type"
+                    options="{'no_create_edit': True}"
+                    attrs="{'invisible': [('source_billing', '=', False)], 'readonly': [('state', 'in', ('done', 'cancel'))]}"
+                    domain="[('source_billing', '=', source_billing),
+                            ('company_id', '=', company_id),
+                            ('section', '=', 'stock'),
+                            ('picking_type_ids', 'in', picking_type_id)
+                            ]"
+                />
+            </field>
+
+            <xpath expr="//page[@name='extra']" position="after">
+                <page
+                    string="Delivery Slip"
+                    name="delivery_slip"
+                    attrs="{'invisible': [('source_billing', '=', False)]}"
+                >
+                    <group>
+                        <group>
+                            <field
+                                name="l10n_pt_date_issued"
+                                attrs="{'readonly': [('system_entry_date', '!=', False)]}"
+                            />
+                            <field
+                                name="l10n_pt_delivery_code"
+                                attrs="{'readonly': [('system_entry_date', '!=', False)]}"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="l10n_pt_delivery_start"
+                                attrs="{'readonly': [('system_entry_date', '!=', False)]}"
+                            />
+                            <field
+                                name="l10n_pt_delivery_end"
+                                attrs="{'readonly': [('system_entry_date', '!=', False)]}"
+                            />
+                            <field
+                                name="l10n_pt_license_plate"
+                                attrs="{'readonly': [('system_entry_date', '!=', False)]}"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_picking_internal_search" model="ir.ui.view">
+        <field name="name">stock.picking.internal.search.pt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='activities_upcoming_all']" position="after">
+                <separator />
+                <filter
+                    name="pt_unreported"
+                    string="Unreported to Tax Authorities"
+                    domain="[('system_entry_date','!=', False), ('l10n_pt_delivery_code', '=', False),
+                             ('l10n_pt_is_national', '=', True)]"
+                    help="The transport document has been issued but it is yet to be reported to the tax authorities"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="vpicktree" model="ir.ui.view">
+        <field name="name">stock.picking.tree.pt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="scheduled_date" position="before">
+                <field name="date_done" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Stock Picking Type -->
+    <record id="view_picking_type_form" model="ir.ui.view">
+        <field name="name">stock.picking.type.forms.pt</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form" />
+        <field name="arch" type="xml">
+            <field name="show_reserved" position="after">
+                <field
+                    name="l10n_pt_disable_fiscal_document"
+                    attrs="{'invisible': [('code', '!=', 'internal')]}"
+                />
+                <field
+                    name="l10n_pt_disable_auto_issuance"
+                    attrs="{'invisible': ['|', ('l10n_pt_disable_fiscal_document', '=', True), ('code', 'not in', ('outgoing', 'internal'))]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>
