@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="email_template_stock_deliveryslip" model="mail.template">
+        <field name="name">Deliveryslip - Send by Email</field>
+        <field
+            name="email_from"
+        >${(object.user_id.email_formatted or user.email_formatted or '') | safe}</field>
+        <field name="subject">${object.pt_get_fullname() or 'n/a' }</field>
+        <field name="partner_to">${object.pt_get_partner('to', 'nominal').id}</field>
+        <field name="model_id" ref="stock.model_stock_picking" />
+        <field name="auto_delete" eval="True" />
+        <field name="report_template" ref="stock.action_report_delivery" />
+        <field name="report_name">${(object.name or '').replace('/','_')}</field>
+        <field name="lang">${object.pt_get_partner('to', 'nominal').lang}</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        Dear ${object.pt_get_partner('to', 'nominal').name},
+        <br /><br />
+        Please find attached document <strong
+                    >${object.pt_get_fullname() or 'n/a' }</strong>,
+        dated ${format_date(object.l10n_pt_date_issued)}.
+        <br /><br />
+        Do not hesitate to contact us if you have any question.
+        <br /><br />
+        Regards,
+    </p>
+</div>
+            </field>
+    </record>
+</odoo>

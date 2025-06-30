@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_edi_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-28 10:57+0000\n"
+"PO-Revision-Date: 2023-03-11 12:14+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: ptplus_edi_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_sale.report_saleorder_document_pt_edi
+msgid "<strong>Commitment No.:</strong>"
+msgstr "<strong>Nº do Compromisso:</strong>"
+
+#. module: ptplus_edi_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_sale.report_saleorder_document_pt_edi
+msgid "<strong>Fitting No.:</strong>"
+msgstr "<strong>Nº do Cabimento:</strong>"
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,help:ptplus_edi_sale.field_sale_order__l10n_pt_commitment_number
+#: model:ir.model.fields,help:ptplus_edi_sale.field_sale_order__l10n_pt_fitting_number
+msgid "A number that is supplied by your B2G customer"
+msgstr "Um número fornecido pelo seu cliente B2G"
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,field_description:ptplus_edi_sale.field_sale_order__l10n_pt_commitment_number
+msgid "Commitment No."
+msgstr "Nº do Compromisso"
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,field_description:ptplus_edi_sale.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,field_description:ptplus_edi_sale.field_sale_order__l10n_pt_fitting_number
+msgid "Fitting No."
+msgstr "Nº do Cabimento"
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,field_description:ptplus_edi_sale.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_edi_sale
+#: model:ir.model.fields,field_description:ptplus_edi_sale.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_edi_sale
+#: model:ir.model,name:ptplus_edi_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Encomenda de Vendas"

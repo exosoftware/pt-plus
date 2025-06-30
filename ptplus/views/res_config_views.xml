@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_pt" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='analytic']" position="after">
+                <h2>Portugal</h2>
+                <div class="row mt16 o_settings_container" id="account_settings_pt">
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        title="If this checkbox is ticked, all the features and rules associated with Portuguese Invoicing will be active. You won't be able to revert to False once a fiscal document is validated."
+                    >
+                        <div class="o_setting_left_pane">
+                            <field name="pt_invoicing" attrs="{'readonly': [('has_accounting_entries', '=', True), ('pt_invoicing', '=', True)]}"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pt_invoicing" />
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                                role="img"
+                            />
+                            <div class="text-muted">
+                               Issue legally accepted Portuguese invoices
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        title=""
+                        attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                    >
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <label for="l10n_pt_cert_service_backend" />
+                            <div class="text-muted">
+                                Backend plug-in needed for fiscal document validation
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16 ml4">
+                                    <field name="l10n_pt_cert_service_backend" attrs="{'readonly': [('has_accounting_entries', '=', True), ('pt_invoicing', '=', True), ('l10n_pt_cert_service_backend', '=', 'exo')]}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        title="These tags will be printed on every multi-way document report copy. The choice also sets the number of desired copies."
+                        attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                    >
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Multi-way Reports</span>
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                                role="img"
+                            />
+                            <div class="text-muted">
+                                Tags to differentiate document copies
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label
+                                        string="Invoice"
+                                        for="multiway_tag_invoice"
+                                        class="col-lg-3 o_light_label"
+                                    />
+                                    <field name="multiway_tag_invoice" />
+                                </div>
+                                <div class="row">
+                                    <label
+                                        string="Receipt"
+                                        for="multiway_tag_payment"
+                                        class="col-lg-3 o_light_label"
+                                    />
+                                    <field name="multiway_tag_payment" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        title=""
+                        attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                    >
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <label for="pt_qrcode_pos" />
+                            <div class="text-muted">
+                                Choose where do you want the QR code to be printed on fiscal document reports.
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16 ml4">
+                                    <field name="pt_qrcode_pos" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                    >
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Invoice Details</span>
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                                role="img"
+                            />
+                            <div class="text-muted">
+                                Fine tune your invoice statements, texts and options.
+                            </div>
+                            <div class="mt16">
+                                <div class="content-group">
+                                    <div class="row">
+                                        <field name="l10n_pt_invoice_show_goods_provision" class="col-lg-1 ml16"/>
+                                        <label for="l10n_pt_invoice_show_goods_provision" class="o_light_label"/>
+                                    </div>
+                                    <div class="row">
+                                        <field name="l10n_pt_invoice_as_delivery" class="col-lg-1 ml16"/>
+                                        <label for="l10n_pt_invoice_as_delivery" class="o_light_label"/>
+                                    </div>
+                                    <div class="row ml8"
+                                         attrs="{'invisible': [('l10n_pt_invoice_as_delivery', '=', False)]}">
+                                        <label
+                                            string="Load. Addr."
+                                            for="l10n_pt_loading_partner_id"
+                                            class="col-lg-3 o_light_label"
+                                        />
+                                        <field name="l10n_pt_loading_partner_id"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                         id="l10n_pt_einvoicing">
+                        <div class="o_setting_left_pane">
+                            <field name="module_ptplus_edi"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="module_ptplus_edi" string="Electronic Invoicing"/>
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                                role="img"
+                            />
+                            <div class="text-muted">
+                                Generate and submit CIUS-PT electronic invoices
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                         id="l10n_pt_pdf_signatures">
+                        <div class="o_setting_left_pane">
+                            <field name="module_ptplus_pdf_sign"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="module_ptplus_pdf_sign" string="Electronic PDF Signatures"/>
+                            <span
+                                class="fa fa-lg fa-building-o"
+                                title="Values set here are company-specific."
+                                aria-label="Values set here are company-specific."
+                                groups="base.group_multi_company"
+                                role="img"
+                            />
+                            <div class="text-muted">
+                                Sign your PDF reports using qualified digital certificates and cryptography
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('pt_invoicing', '=', False)]}">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane row mt16">
+                            <label for="l10n_pt_ptplus_subscription_code"/>
+                            <button
+                                title="Key"
+                                icon="fa-key"
+                                class="col-lg-1"
+                            />
+                            <field
+                                name="l10n_pt_ptplus_subscription_code"
+                                attrs="{'required': [('pt_invoicing', '=', True)]}"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
