@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.nif_pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@id='account_settings_pt']" position="inside">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="ctt_zip_setting"
+                    attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="l10n_pt_partner_zip_ctt" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="l10n_pt_partner_zip_ctt" />
+                        <span
+                            class="fa fa-lg fa-building-o"
+                            title="Values set here are company-specific."
+                            aria-label="Values set here are company-specific."
+                            groups="base.group_multi_company"
+                            role="img"
+                        />
+                        <div class="text-muted">
+                           Autocomplete address details from the ZIP Code
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

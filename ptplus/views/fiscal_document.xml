@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Fiscal Document Types -->
+    <record id="fiscal_document_type_view_search" model="ir.ui.view">
+        <field name="name">fiscal.document.type.search</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="arch" type="xml">
+            <search string="Fiscal Doc. Types">
+                <field name="type" />
+                <field name="name" />
+                <separator />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active','=',True)]"
+                    help="Show active document types"
+                />
+                <filter
+                    name="inactive"
+                    string="Inactive"
+                    domain="[('active','=',False)]"
+                    help="Show inactive document types"
+                />
+                <group string="Group By">
+                    <filter
+                        string="Company"
+                        name="company"
+                        domain="[]"
+                        context="{'group_by':'company_id'}"
+                        groups="base.group_multi_company"
+                    />
+                    <filter
+                        string="Section"
+                        name="section"
+                        domain="[]"
+                        context="{'group_by':'section'}"
+                    />
+                    <filter
+                        string="Type"
+                        name="type"
+                        domain="[]"
+                        context="{'group_by':'type'}"
+                    />
+                    <filter
+                        string="Status"
+                        name="state"
+                        domain="[]"
+                        context="{'group_by':'state'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="fiscal_document_type_view_tree" model="ir.ui.view">
+        <field name="name">fiscal.document.type.tree</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="not active">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="type" />
+                <field name="section" />
+                <!--
+                <field name="correction" />
+                <field name="reversion" /> -->
+                <field
+                    name="company_id"
+                    options="{'no_create': True}"
+                    groups="base.group_multi_company"
+                />
+                <field name="source_billing" />
+                <field name="sequence_id" />
+                <field name="used" />
+                <field name="state" />
+                <field name="active" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+    <record id="fiscal_document_type_view_form" model="ir.ui.view">
+        <field name="name">fiscal.document.type.form</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="arch" type="xml">
+            <form string="Fiscal Doc. Types">
+                <header>
+                    <!-- Post -->
+                    <button
+                        name="action_series_register"
+                        string="Register"
+                        class="oe_highlight"
+                        type="object"
+                        groups="account.group_account_manager"
+                        help="Start a wizard to electronically transmit this series to the Tax Authority"
+                        attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('validation_code', 'not in', (False, ''))]}"
+                    />
+                    <button
+                        name="action_series_sync"
+                        string="Synchronize (Online or Offline)"
+                        class="oe_highlight"
+                        type="object"
+                        groups="account.group_account_manager"
+                        help="Start a wizard to import to import to Odoo a previously registered series"
+                        attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('validation_code', 'in', (False, ''))]}"
+                    />
+                    <button
+                        name="action_series_cancel"
+                        string="Cancel"
+                        type="object"
+                        groups="account.group_account_manager"
+                        help="Start a wizard to electronically cancel this series on the Tax Authority system"
+                        attrs="{'invisible': [('state', '!=', 'running')]}"
+                    />
+                    <button
+                        name="action_series_finalize"
+                        string="Finalize"
+                        type="object"
+                        groups="account.group_account_manager"
+                        help="Start a wizard to communicate that this series has reached the end of its lifecycle"
+                        states="running"
+                        attrs="{'invisible': [('state', '!=', 'running')]}"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,running"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            name="action_view_fiscal_documents"
+                            type="object"
+                            icon="fa-pencil-square-o"
+                            attrs="{'invisible': [('document_count', '=', 0)]}"
+                        >
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field
+                                        name="document_count"
+                                        widget="statinfo"
+                                        nolabel="1"
+                                        class="mr4"
+                                    />
+                                </span>
+                                <span class="o_stat_text">Documents</span>
+                            </div>
+                        </button>
+                    </div>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field name="name" />
+                            <field name="type" />
+                            <field name="section" />
+                        </group>
+                        <group>
+                            <field name="company_id" options="{'no_create': True}" />
+                            <field name="source_billing" />
+                            <field name="sequence_code" invisible="1" />
+                            <field
+                                name="sequence_id"
+                                domain="[('company_id','=', company_id), ('code','=', sequence_code)]"
+                                context="{'default_code': sequence_code, 'default_implementation': 'no_gap',
+                                          'default_name': name, 'default_prefix': 'A/', 'default_padding': 5}"
+                            />
+                            <field name="used" />
+                        </group>
+                    </group>
+                    <group name="tax_authority" string="Tax Authority">
+                        <group>
+                            <field name="series_identifier" />
+                            <field name="validation_code" />
+                        </group>
+                        <group>
+                            <field name="registration_date" />
+                            <field name="last_state_update" />
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="fiscal_document_type_action_list" model="ir.actions.act_window">
+        <field name="name">Fiscal Doc. Types</field>
+        <field name="res_model">fiscal.document.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="fiscal_document_type_view_tree" />
+        <field name="search_view_id" ref="fiscal_document_type_view_search" />
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+    <menuitem
+        id="menu_action_fiscal_document_type_list"
+        parent="account.account_invoicing_menu"
+        action="fiscal_document_type_action_list"
+        sequence="85"
+        groups="account.group_account_invoice"
+    />
+
+</odoo>

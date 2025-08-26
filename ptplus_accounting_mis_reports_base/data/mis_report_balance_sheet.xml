@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- MIS Report Base: Profit and Loss -->
+    <record id="mis_balance_sheet_pt_base" model="mis.report">
+        <field name="name">Balanço (Base)</field>
+        <field name="description">Balanço IES Q03 - SNC Base</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account-all"
+        />
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit1" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT1</field>
+        <field name="description">ATIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit2" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT2</field>
+        <field name="description">ATIVO NÃO CORRENTE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00101" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00101</field>
+        <field name="description">Ativos fixos tangíveis</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >bale[372%,3932%,42%,43%,452%,453%,4552%,4553%,456%,457%,458%,4592%,4593%,45952%,45953%]</field>
+        <field name="sequence">30</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00104" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00104</field>
+        <field name="description">Ativos intangíveis</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >bale[41111%,41212%,41312%,416%,417%,418%,419112%,419212%,419312%,44%,454%,4554%,4594%,45954%]</field>
+        <field name="sequence">40</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00110" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00110</field>
+        <field name="description">Investimentos ﬁnanceiros</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >bale[411%,412%,413%,414%,415%,419%,451%,4551%,4591%,45951%] - bale[41112%,41212%,41312%,419112%,419212%,419312%]</field>
+        <field name="sequence">50</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00111" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00111</field>
+        <field name="description">Créditos e outros ativos não correntes</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbale[23812%,23822%,2682%,27112%,27122%,2782%] + bale[239212%,239222%,2662%,26962%,26982%,27132%,2741%,279132%,27931%,27982%]</field>
+        <field name="sequence">60</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00112" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00112</field>
+        <field name="description">SOMA</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_4"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00101+A00104+A00110+A00111</field>
+        <field name="sequence">70</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit3" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT3</field>
+        <field name="description">ATIVO CORRENTE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">80</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00113" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00113</field>
+        <field name="description">Inventários</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >bale[32%,33%,34%,35%,36%,371%,38%,39%]-bale[3932%]</field>
+        <field name="sequence">90</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00115" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00115</field>
+        <field name="description">Clientes</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbale[211%,212%,213%,214%,215%,216%,217%] + bale[219%]</field>
+        <field name="sequence">100</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00116" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00116</field>
+        <field name="description">Estado e outros entes públicos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbale[241%,2434%,2435%,2439%,244%,245%,246%,248%] + bale[2431%,2432%,2437%,2438%]</field>
+        <field name="sequence">110</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00117" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00117</field>
+        <field name="description">Capital subscrito e não realizado</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bale[261%,262%,2691%,2692%]</field>
+        <field name="sequence">120</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00118" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00118</field>
+        <field name="description">Outros créditos a receber</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbale[221%,222%,223%,224%,225%,226%,227%,23811%,23821%,264%,265%,2681%,27111%,27121%,2781%] + bale[228%,229%,232%,2391%,239211%,239221%,263%,2661%,2693%,2694%,2695%,26961%,26981%,27131%,2721%,279131%,27921%,27981%]</field>
+        <field name="sequence">130</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00119" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00119</field>
+        <field name="description">Diferimentos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bale[281%]</field>
+        <field name="sequence">140</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00123" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00123</field>
+        <field name="description">Outros ativos correntes</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bale[1411%,1421%,1431%,461%,469%]</field>
+        <field name="sequence">150</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00124" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00124</field>
+        <field name="description">Caixa e depósitos bancários</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bale[11%] + pbale[12%,13%]</field>
+        <field name="sequence">160</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00125" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00125</field>
+        <field name="description">SOMA</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_4"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >+A00113+A00115+A00116+A00117+A00118+A00119+A00123+A00124</field>
+        <field name="sequence">170</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00126" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00126</field>
+        <field name="description">TOTAL DO ATIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00112 +A00125</field>
+        <field name="sequence">180</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit4" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT4</field>
+        <field name="description">CAPITAL PRÓPRIO E PASSIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">190</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit5" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT5</field>
+        <field name="description">CAPITAL PRÓPRIO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">200</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00127" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00127</field>
+        <field name="description">Capital subscrito</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[51%]</field>
+        <field name="sequence">210</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00128" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00128</field>
+        <field name="description">Ações (quotas) próprias</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[52%]</field>
+        <field name="sequence">220</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00129" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00129</field>
+        <field name="description">Outros instrumentos de capital próprio</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[53%]</field>
+        <field name="sequence">230</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00130" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00130</field>
+        <field name="description">Prémios de emissão</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[54%]</field>
+        <field name="sequence">240</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00131" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00131</field>
+        <field name="description">Reservas legais</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">- bale[551%]</field>
+        <field name="sequence">250</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00132" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00132</field>
+        <field name="description">Outras reservas</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">- bale[552%]</field>
+        <field name="sequence">260</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00133" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00133</field>
+        <field name="description">Resultados transitados</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">- bale[56%,818%]</field>
+        <field name="sequence">270</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00134" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00134</field>
+        <field name="description">Excedentes de revalorização</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[58%]</field>
+        <field name="sequence">280</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00135" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00135</field>
+        <field
+            name="description"
+        >Ajustamentos / outras variações no capital próprio</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[57%,59%]</field>
+        <field name="sequence">290</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00136" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00136</field>
+        <field name="description">SOMA</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_4"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >+A00127+A00128+A00129+A00130+A00131+A00132+A00133+A00134+A00135</field>
+        <field name="sequence">300</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00137" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00137</field>
+        <field name="description">Resultado líquido do período</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-balp[7%][('journal_id.code', '!=', 'APR')]-balp[31%,6%,812%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">310</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00138" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00138</field>
+        <field name="description">Dividendos antecipados</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[89%]</field>
+        <field name="sequence">320</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00139" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00139</field>
+        <field name="description">TOTAL DO CAPITAL PRÓPRIO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00136+A00137+A00138</field>
+        <field name="sequence">330</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit6" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT6</field>
+        <field name="description">PASSIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">340</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit7" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT7</field>
+        <field name="description">PASSIVO NÃO CORRENTE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">350</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00140" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00140</field>
+        <field name="description">Provisões</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[29%]</field>
+        <field name="sequence">360</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00141" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00141</field>
+        <field name="description">Financiamentos obtidos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bale[25112%,25122%,25132%,25212%,25312%,25322%,2542%,2582%]</field>
+        <field name="sequence">370</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00144" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00144</field>
+        <field name="description">Outras dívidas a pagar</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >- nbale[23812%,23822%,2682%,27112%,27122%,2782%] - bale[23712%,23722%,273%,2742%,2752%]</field>
+        <field name="sequence">380</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00145" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00145</field>
+        <field name="description">SOMA</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_4"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00140+A00141+A00144</field>
+        <field name="sequence">390</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_tit8" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">TIT8</field>
+        <field name="description">PASSIVO CORRENTE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">400</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00146" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00146</field>
+        <field name="description">Fornecedores</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-nbale[221%,222%,223%,224%,225%,226%,227%]</field>
+        <field name="sequence">410</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00148" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00148</field>
+        <field name="description">Estado e outros entes públicos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >- nbale[241%,2434%,2435%,2439%,244%,245%,246%,248%] - bale[242%,2433%,2436%]</field>
+        <field name="sequence">420</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00149" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00149</field>
+        <field name="description">Financiamentos obtidos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bale[25111%,25121%,25131%,25211%,25311%,25321%,2541%,2581%] - nbale[12%,13%]</field>
+        <field name="sequence">430</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00151" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00151</field>
+        <field name="description">Diferimentos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bale[282%]</field>
+        <field name="sequence">440</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00155" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00155</field>
+        <field name="description">Outros passivos correntes</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bale[1412%,1422%,1432%,218%,231%,23711%,23721%,2722%,2751%,276%,462%] - nbale[211%,212%,213%,214%,215%,216%,217%,23811%,23821%,264%,265%,2681%,27111%,27121%,2781%]</field>
+        <field name="sequence">450</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00156" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00156</field>
+        <field name="description">SOMA</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_4"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00146+A00148+A00149+A00151+A00155</field>
+        <field name="sequence">460</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00157" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00157</field>
+        <field name="description">TOTAL DO PASSIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00145+A00156</field>
+        <field name="sequence">470</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_a00158" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">A00158</field>
+        <field name="description">TOTAL DO CAPITAL PRÓPRIO E DO PASSIVO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">+A00139+A00157</field>
+        <field name="sequence">480</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_controlo" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">controlo</field>
+        <field name="description">controlo</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00126-A00158</field>
+        <field name="sequence">490</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_indic_gest" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">indic_gest</field>
+        <field name="description">INDICADORES DE GESTÃO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">500</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_Art_35_csc" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">Art_35_csc</field>
+        <field name="description">Art. 35º do CSC</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00139 / A00127</field>
+        <field name="sequence">510</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_rentabilidade" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">rentabilidade</field>
+        <field name="description">RENTABILIDADE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">520</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_rentabilidade_capitais_prop"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">rentabilidade_capitais_prop</field>
+        <field name="description">Rentabilidade dos Capitais Próprios</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00137 / A00139</field>
+        <field name="sequence">530</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_estrutura_financ_endivid"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">estrutura_financ_endivid</field>
+        <field name="description">ESTRUTURA FINANCEIRA E ENDIVIDAMENTO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">540</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_fundo_maneio" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">fundo_maneio</field>
+        <field name="description">Fundo de Maneio</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00139 + A00145 - A00112</field>
+        <field name="sequence">550</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_necessidades_fundo_maneio"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">necessidades_fundo_maneio</field>
+        <field name="description">Necessidades em Fundo de Maneio</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00113 + A00115 + A00116 - A00146 - A00148</field>
+        <field name="sequence">560</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_autonomia_financeira"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">autonomia_financeira</field>
+        <field name="description">Autonomia Financeira</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00139 / A00126</field>
+        <field name="sequence">570</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_solvabilidade" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">solvabilidade</field>
+        <field name="description">Solvabilidade</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00139 / A00157</field>
+        <field name="sequence">580</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_cobertura_ativos_nao_corr"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">cobertura_ativos_nao_corr</field>
+        <field name="description">Cobertura dos Ativos Não Correntes</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">(A00139 + A00145) / A00112</field>
+        <field name="sequence">590</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_endividamento" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">endividamento</field>
+        <field name="description">Endividamento</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00157 / A00126</field>
+        <field name="sequence">600</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_estrutura_endivid" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">estrutura_endivid</field>
+        <field name="description">Estrutura de Endividamento</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00156 / A00157</field>
+        <field name="sequence">610</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_liquidez" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">liquidez</field>
+        <field name="description">LIQUIDEZ</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">620</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_liquidez_geral" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">liquidez_geral</field>
+        <field name="description">Liquidez Geral</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00125 / A00156</field>
+        <field name="sequence">630</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_liquidez_reduzida" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">liquidez_reduzida</field>
+        <field name="description">Liquidez Reduzida</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">(A00125-A00113) / A00156</field>
+        <field name="sequence">640</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_funcionamento" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">funcionamento</field>
+        <field name="description">FUNCIONAMENTO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">650</field>
+    </record>
+    <record id="mis_balance_sheet_pt_base_kpi_rotacao_ativo" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">rotacao_ativo</field>
+        <field name="description">Rotação do Ativo</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field
+            name="expression"
+        >-bal[71%,72%][('journal_id.type', '!=', 'pl_calculation')] / A00126</field>
+        <field name="sequence">660</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_rotacao_inventarios"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">rotacao_inventarios</field>
+        <field name="description">Rotação de Inventários (dias)</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bal[71%,72%][('journal_id.type', '!=', 'pl_calculation')] / A00113 * 365</field>
+        <field name="sequence">670</field>
+    </record>
+    <record
+        id="mis_balance_sheet_pt_base_kpi_prazo_medio_recebim"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="name">prazo_medio_recebim</field>
+        <field name="description">Prazo Médio de Recebimentos (dias)</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >A00115 / -bal[71%,72%][('journal_id.type', '!=', 'pl_calculation')] * 365</field>
+        <field name="sequence">680</field>
+    </record>
+
+    <!-- MIS Report Instance: Balance Sheet -->
+    <record id="mis_instance_balance_sheet_pt_base" model="mis.report.instance">
+        <field name="name">Balanço (Base)</field>
+        <field name="description" />
+        <field name="report_id" ref="mis_balance_sheet_pt_base" />
+        <field name="comparison_mode">False</field>
+        <field name="date_from" eval="'2022-01-01'" />
+        <field name="date_to" eval="'2022-12-31'" />
+    </record>
+
+</odoo>
