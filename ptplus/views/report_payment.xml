@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="report_payment_receipt_document"
+        inherit_id="account.report_payment_receipt_document"
+    >
+
+        <xpath expr="//t[@t-set='o']" position="after">
+            <!-- Certification Text-->
+            <t
+                t-if="o.source_billing"
+                t-set="pt_certification_text"
+                t-value="o.pt_get_certification_text()"
+            />
+            <!-- Partner Address -->
+            <t t-set="address">
+                <address
+                    t-field="o.partner_id"
+                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                />
+            </t>
+        </xpath>
+
+        <!-- Document Name -->
+        <xpath expr="//h3" position="attributes">
+            <attribute name="t-if">not o.source_billing</attribute>
+        </xpath>
+        <xpath expr="//h3" position="after">
+            <div t-if="o.source_billing" class="row pt_doc_name">
+                <div class="col-10">
+                    <h3>
+                        <span t-out="o.pt_get_fullname()" />
+                        <span
+                            t-if="o.state == 'cancel'"
+                            t-field="o.state"
+                            class="pt_cancelled"
+                        />
+                    </h3>
+                </div>
+                <div class="col-2 text-right" style="padding-top: 3mm">
+                    <span
+                        t-if="multiway_tag"
+                        class="pt_multiway_tag"
+                        t-out="multiway_tag"
+                    />
+                </div>
+            </div>
+        </xpath>
+
+        <!-- No row containing customer/vendor name and payment method -->
+        <xpath expr="//div[@t-if='o.partner_type']/.." position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+
+        <!-- Vat No. -->
+        <xpath expr="//div[@t-if='o.date']" position="after">
+            <div class="col-6">
+                TIN:
+                <t t-if="o.partner_id.vat">
+                    <span t-field="o.partner_id.vat" />
+                </t>
+                <t t-if="not o.partner_id.vat">
+                    <span>-----</span>
+                </t>
+            </div>
+        </xpath>
+
+        <!-- Write-off -->
+        <xpath expr="//div[hasclass('mb-4')]" position="inside">
+            <t
+                t-if="o.source_billing"
+                t-set="writeoff"
+                t-value="o._pt_get_payment_writeoff()"
+            />
+            <div class="row" t-if="o.source_billing and writeoff">
+                <div class="col-6" t-if="o.date">
+                    Write-off: <span
+                        t-field="o.date"
+                        t-out="writeoff"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
+                </div>
+            </div>
+        </xpath>
+        <!--
+        <xpath expr="//div[hasclass('row')][last()]" position="before">
+            <t t-set="writeoff" t-value="o._pt_get_payment_writeoff()" />
+        </xpath>
+        <xpath expr="//div[hasclass('row')][last()]" position="attributes">
+            <attribute
+                name="t-att-class"
+            >'row' if writeoff != 0.0 else 'row mb64'</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('row')][last()]" position="after">
+            <div t-if="writeoff != 0.0" class="row mb64">
+                <div class="col-6">
+                    <strong>Write-off: </strong><span
+                        t-out="writeoff"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
+                </div>
+            </div>
+        </xpath>
+        -->
+
+        <!-- Include inv.name (Reference/Description) to handle legacy imported invoices -->
+        <xpath expr="//table/tbody//span[@t-field='inv.name']" position="after">
+            <span
+                t-if="inv.name and inv.move_type in ('out_invoice', 'in_invoice')"
+                t-out="'(%s)' % inv.name"
+            />
+        </xpath>
+
+        <!-- A place for PT extras -->
+        <xpath expr="//table[hasclass('table')]" position="after">
+            <t t-call="ptplus.pt_features_bottom" />
+        </xpath>
+    </template>
+
+</odoo>
