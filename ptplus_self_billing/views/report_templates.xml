@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="external_layout_pt_self_billing">
+        <div class="header">
+            <t t-set="company" t-value="o.company_id" />
+            <div class="o_self_billing_header">
+                <div class="row mb8">
+                    <div class="col-6 mb4">
+                        <img
+                            t-if="o.partner_id.image_512"
+                            t-att-src="image_data_uri(o.partner_id.image_512)"
+                            alt="Logo"
+                            style="max-height: 15mm;"
+                        />
+                        <t t-call="ptplus.pt_features_top" />
+                        <div name="company_address" class="mb4" style="font-size: 8pt;">
+                            <span
+                                t-field="o.partner_id"
+                                t-options='{"widget": "contact", "fields": ["name", "address"], "no_marker": true}'
+                            />
+                        </div>
+                    </div>
+                    <div class="col-6 text-end">
+                        <img
+                            t-if="False"
+                            t-att-src="image_data_uri(o.partner_id.image_512)"
+                            alt="Logo"
+                        />
+                        <span style="font-size: 14pt;">SELF-BILLING</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="article o_report_layout_self_billing"
+            t-att-data-oe-model="o and o._name"
+            t-att-data-oe-id="o and o.id"
+            t-att-data-oe-lang="o and o.env.context.get('lang')"
+        >
+            <t t-call="web.address_layout" />
+            <t t-out="0" />
+        </div>
+
+        <div class="footer o_self_billing_footer">
+            <t t-call="ptplus.certification_text" />
+            <div class="text-center">
+                <ul class="list-inline">
+                    <li t-if="o.partner_id.phone" class="list-inline-item">Tel: <span
+                            t-field="o.partner_id.phone"
+                        /></li>
+                    <li t-if="o.partner_id.email" class="list-inline-item">Mail: <span
+                            t-field="o.partner_id.email"
+                        /></li>
+                    <li t-if="o.partner_id.website" class="list-inline-item">Web: <span
+                            t-field="o.partner_id.website"
+                        /></li>
+                    <li t-if="o.partner_id.vat" class="list-inline-item"><t
+                            t-out="(o.partner_id.country_id.vat_label or 'Tax ID')"
+                        />: <span t-out="o.partner_id.vat" /></li>
+                </ul>
+                <!--<div t-field="company.report_footer"/>-->
+                <div t-if="report_type == 'pdf'">
+                    Page: <span class="page" /> / <span class="topage" />
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="external_layout" inherit_id="web.external_layout">
+        <!-- oca-hooks:disable=xml-dangerous-qweb-replace-low-priority -->
+        <xpath expr="//t[@t-if='company.external_report_layout_id']" position="replace">
+            <t
+                t-set="is_pt_self_billing"
+                t-value="o and (o._name == 'account.move' and o.l10n_pt_self_billing)"
+            />
+            <t
+                t-if="is_pt_self_billing"
+                t-call="ptplus_self_billing.external_layout_pt_self_billing"
+            >
+                <t t-out="0" />
+            </t>
+            <t
+                t-elif="not is_pt_self_billing and company.external_report_layout_id"
+                t-call="{{company.external_report_layout_id.sudo().key}}"
+            >
+                <t t-out="0" />
+            </t>
+            <t
+                t-elif="not is_pt_self_billing and not company.external_report_layout_id"
+                t-call="web.external_layout_standard"
+            >
+                <t t-out="0" />
+            </t>
+            <!--<t t-else="" t-call="web.external_layout_standard"><t t-raw="0"/></t>-->
+        </xpath>
+    </template>
+</odoo>

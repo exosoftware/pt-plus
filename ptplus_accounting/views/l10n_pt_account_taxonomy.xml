@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Account Taxonomies -->
+    <record id="account_taxonomy_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.taxonomy.search</field>
+        <field name="model">l10n_pt.account.taxonomy</field>
+        <field name="arch" type="xml">
+            <search string="Account Taxonomy">
+                <field name="name" />
+                <field name="account_prefix" />
+                <separator />
+                <filter
+                    name="reference_micro"
+                    string="SNC Microentities"
+                    domain="[('reference','=', 'M')]"
+                />
+                <filter
+                    name="reference_base"
+                    string="SNC Base"
+                    domain="[('reference','=', 'S')]"
+                />
+                <filter
+                    name="reference_other"
+                    string="Other References"
+                    domain="[('reference','=', 'O')]"
+                />
+                <separator />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active','=',True)]"
+                    help="Show active taxonomy lines"
+                />
+                <filter
+                    name="inactive"
+                    string="Inactive"
+                    domain="[('active','=',False)]"
+                    help="Show inactive document lines"
+                />
+                <group string="Group By">
+                    <filter
+                        string="Taxonomy Reference"
+                        name="reference"
+                        domain="[]"
+                        context="{'group_by':'reference'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="account_taxonomy_view_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.taxonomy.tree</field>
+        <field name="model">l10n_pt.account.taxonomy</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="not active">
+                <field name="reference" />
+                <field name="code" />
+                <field name="account_prefix" />
+                <field name="svat_class" />
+                <field name="expected_balance" />
+                <field name="name" />
+                <field name="active" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+    <!--
+    <record id="account_taxonomy_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.taxonomy.form</field>
+        <field name="model">l10n_pt.account.taxonomy</field>
+        <field name="arch" type="xml">
+            <form string="Account Taxonomies">
+                <group>
+                    <group>
+                        <field name="code" />
+                        <field name="account_prefix" />
+                    </group>
+                    <group>
+                        <field name="reference" />
+                    </group>
+                </group>
+                <group>
+                    <field name="name" placeholder="Legal Text (ex: Cash)) ..."/>
+                </group>
+            </form>
+        </field>
+    </record>
+    -->
+    <record id="account_taxonomy_action_list" model="ir.actions.act_window">
+        <field name="name">Account Taxonomies</field>
+        <field name="res_model">l10n_pt.account.taxonomy</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="account_taxonomy_view_tree" />
+        <field name="search_view_id" ref="account_taxonomy_view_search" />
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+    <menuitem
+        id="menu_action_account_taxonomy_list"
+        parent="account.account_account_menu"
+        action="account_taxonomy_action_list"
+        groups="account.group_account_user"
+    />
+
+</odoo>

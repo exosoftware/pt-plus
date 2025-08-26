@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Account Asset Legal Rate -->
+    <record id="l10n_pt_report_signature_search" model="ir.ui.view">
+        <field name="name">l10n_pt.report.signature.search</field>
+        <field name="model">l10n_pt.report.signature</field>
+        <field name="arch" type="xml">
+            <search string="Reports">
+                <field name="report_id" />
+                <field name="model_id" />
+            </search>
+        </field>
+    </record>
+    <record id="l10n_pt_report_signature_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.report.signature.tree</field>
+        <field name="model">l10n_pt.report.signature</field>
+        <field name="arch" type="xml">
+            <tree
+                editable="bottom"
+                default_order="sequence"
+                decoration-muted="not active"
+            >
+                <field name="sequence" widget="handle" />
+                <field name="report_id" options="{'no_create': True}" />
+                <field name="model_id" />
+                <field name="domain" />
+                <field name="multirec" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    options="{'no_create': True}"
+                />
+                <field name="active" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_l10n_pt_report_signature" model="ir.actions.act_window">
+        <field name="name">Report Signatures</field>
+        <field name="res_model">l10n_pt.report.signature</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="l10n_pt_report_signature_tree" />
+        <field name="search_view_id" ref="l10n_pt_report_signature_search" />
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+</odoo>
