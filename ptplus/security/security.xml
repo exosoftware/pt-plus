@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="fiscal_doc_comp_rule" model="ir.rule">
+        <field name="name">Fiscal Document Type multi-company</field>
+        <field name="model_id" ref="model_fiscal_document_type" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+    </record>
+
+    <record id="dataport_log_accounting_rule" model="ir.rule">
+        <field name="name">Dataport Log Accounting Reports</field>
+        <field name="model_id" ref="model_dataport_log" />
+        <field name="groups" eval="[(4, ref('account.group_account_invoice'))]" />
+        <field name="domain_force">
+            [('type', 'not ilike', 'payroll%')]
+        </field>
+        <field name="perm_create" eval="False" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="group_experimental_features_pt" model="res.groups">
+        <field name="name">PT Experimental Features</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+</odoo>

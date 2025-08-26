@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Sales invoice form -->
+    <record id="view_move_form_pt" model="ir.ui.view">
+        <field name="name">account.move.form.pt</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <!-- Add a cancel button for pt invoices -->
+            <xpath expr="//button[@name='button_cancel']" position="after">
+                <button
+                    name="action_cancel_pt"
+                    id="action_cancel_pt"
+                    string="Cancel"
+                    confirm="Are you sure you want to cancel the document?"
+                    type="object"
+                    invisible="move_type not in ['out_invoice', 'out_refund'] or state in ['draft', 'cancel'] or not source_billing"
+                />
+            </xpath>
+            <!-- Source Billing and Fiscal Document Type-->
+            <field name="invoice_date" position="after">
+                <field name="l10n_pt_show_source_billing" invisible="1" />
+                <field
+                    name="source_billing"
+                    invisible="not l10n_pt_show_source_billing"
+                />
+                <field name="l10n_pt_company_show_goods_provision" invisible="1" />
+                <field name="l10n_pt_company_invoice_as_delivery" invisible="1" />
+                <field
+                    name="fiscal_document_type_id"
+                    options="{'no_create_edit': True}"
+                    invisible="not source_billing"
+                    readonly="state != 'draft'"
+                    domain="[('source_billing', '=', source_billing),
+                            ('company_id', '=', company_id),
+                            ('section', '=', 'invoice'),
+                            ('correction', '=', correction),
+                            ('reversion', '=', (move_type == 'out_refund')),
+                            ('point_of_sale', '=', False)
+                            ]"
+                />
+                <field name="correction" invisible="1" />
+            </field>
+
+            <field name="fiscal_position_id" position="after">
+                <field
+                    name="export_number"
+                    string="Export Statement Number"
+                    invisible="move_type not in ['out_invoice', 'out_refund']"
+                />
+                <field
+                    name="export_number"
+                    string="Payment Number"
+                    invisible="move_type not in ['in_invoice', 'in_refund']"
+                />
+            </field>
+
+            <xpath expr="//group[@name='sale_info_group']" position="inside">
+                <field
+                    name="l10n_pt_goods_provision_date"
+                    string="Provision Date"
+                    invisible="move_type != 'out_invoice' or not source_billing or not l10n_pt_company_show_goods_provision"
+                />
+            </xpath>
+
+            <xpath expr="//group[@id='other_tab_group']" position="inside">
+                <group
+                    string="Delivery Information"
+                    name="delivery_info"
+                    invisible="move_type != 'out_invoice' or not source_billing or not l10n_pt_company_show_goods_provision"
+                >
+                    <field
+                        name="l10n_pt_loading_partner_id"
+                        readonly="state != 'draft'"
+                    />
+                    <field name="l10n_pt_loading_time" readonly="state != 'draft'" />
+                    <field
+                        name="l10n_pt_unloading_partner_id"
+                        readonly="state != 'draft'"
+                    />
+                    <field name="l10n_pt_unloading_time" readonly="state != 'draft'" />
+                </group>
+            </xpath>
+
+            <xpath expr="//page[@id='other_tab_entry']" position="after">
+                <page
+                    id="integration_source_billing"
+                    string="Integration Info"
+                    name="integration_info"
+                    invisible="source_billing != 'I'"
+                >
+                    <group>
+                        <group>
+                            <field
+                                name="hash"
+                                required="source_billing == 'I' and hash_control"
+                            />
+                            <field name="hash_control" />
+                            <field
+                                name="system_entry_date"
+                                required="source_billing == 'I'"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
