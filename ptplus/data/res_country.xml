@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="non_eu" model="res.country.group">
+        <field name="name">Non-EU Countries</field>
+        <field
+            name="country_ids"
+            eval="[(6,0,[
+            ref('base.af'), ref('base.za'), ref('base.al'), ref('base.ad'),
+            ref('base.ao'), ref('base.ai'), ref('base.aq'), ref('base.ag'),
+            ref('base.sa'), ref('base.dz'), ref('base.ar'),
+            ref('base.am'), ref('base.aw'), ref('base.au'), ref('base.az'),
+            ref('base.bs'), ref('base.bh'), ref('base.bd'), ref('base.bb'),
+            ref('base.bz'), ref('base.bj'), ref('base.bm'), ref('base.by'),
+            ref('base.mm'), ref('base.bo'), ref('base.bq'), ref('base.ba'),
+            ref('base.bw'), ref('base.br'), ref('base.bn'), ref('base.bf'),
+            ref('base.bi'), ref('base.bt'), ref('base.cv'), ref('base.cm'),
+            ref('base.kh'), ref('base.ca'), ref('base.kz'), ref('base.td'),
+            ref('base.cl'), ref('base.cn'), ref('base.co'), ref('base.km'),
+            ref('base.cg'), ref('base.cd'), ref('base.kp'), ref('base.kr'),
+            ref('base.ci'), ref('base.cr'), ref('base.cu'), ref('base.cw'),
+            ref('base.dj'), ref('base.dm'), ref('base.eg'), ref('base.sv'),
+            ref('base.ae'), ref('base.ec'), ref('base.er'), ref('base.us'),
+            ref('base.et'), ref('base.fj'), ref('base.ph'), ref('base.ga'),
+            ref('base.gm'), ref('base.gh'), ref('base.ge'), ref('base.gs'),
+            ref('base.gi'), ref('base.gd'), ref('base.gl'), ref('base.gp'),
+            ref('base.gu'), ref('base.gt'), ref('base.gg'), ref('base.gy'),
+            ref('base.gf'), ref('base.gn'), ref('base.gw'), ref('base.gq'),
+            ref('base.ht'), ref('base.hn'), ref('base.hk'), ref('base.ye'),
+            ref('base.bv'), ref('base.im'), ref('base.nf'), ref('base.pn'),
+            ref('base.ax'), ref('base.ky'), ref('base.cc'), ref('base.ck'),
+            ref('base.cx'), ref('base.fk'), ref('base.fo'), ref('base.hm'),
+            ref('base.mp'), ref('base.mh'), ref('base.um'), ref('base.sb'),
+            ref('base.sj'), ref('base.tc'), ref('base.vg'), ref('base.vi'),
+            ref('base.wf'), ref('base.in'), ref('base.id'), ref('base.ir'),
+            ref('base.iq'), ref('base.is'), ref('base.il'), ref('base.jm'),
+            ref('base.jp'), ref('base.je'), ref('base.jo'),
+            ref('base.ki'), ref('base.kw'), ref('base.la'), ref('base.ls'),
+            ref('base.lb'), ref('base.lr'), ref('base.ly'), ref('base.li'),
+            ref('base.mo'), ref('base.mk'), ref('base.mg'), ref('base.my'),
+            ref('base.mw'), ref('base.mv'), ref('base.ml'), ref('base.ma'),
+            ref('base.mq'), ref('base.mu'), ref('base.mr'), ref('base.yt'),
+            ref('base.mx'), ref('base.fm'), ref('base.mz'), ref('base.md'),
+            ref('base.mc'), ref('base.mn'), ref('base.me'), ref('base.ms'),
+            ref('base.na'), ref('base.nr'), ref('base.np'), ref('base.ni'),
+            ref('base.ne'), ref('base.ng'), ref('base.nu'), ref('base.no'),
+            ref('base.nc'), ref('base.nz'), ref('base.om'), ref('base.pw'),
+            ref('base.ps'), ref('base.pa'), ref('base.pg'), ref('base.pk'),
+            ref('base.py'), ref('base.pe'), ref('base.pf'), ref('base.pr'),
+            ref('base.qa'), ref('base.ke'), ref('base.kg'), ref('base.cf'),
+            ref('base.do'), ref('base.re'), ref('base.rw'), ref('base.ru'),
+            ref('base.eh'), ref('base.bl'), ref('base.kn'), ref('base.mf'),
+            ref('base.sx'), ref('base.ws'), ref('base.as'), ref('base.sh'),
+            ref('base.lc'), ref('base.sm'), ref('base.st'), ref('base.vc'),
+            ref('base.sn'), ref('base.sl'), ref('base.rs'), ref('base.sc'),
+            ref('base.sg'), ref('base.sy'), ref('base.so'), ref('base.pm'),
+            ref('base.lk'), ref('base.sz'), ref('base.sd'), ref('base.ss'),
+            ref('base.ch'), ref('base.sr'), ref('base.th'), ref('base.tw'),
+            ref('base.tj'), ref('base.tz'), ref('base.tf'), ref('base.io'),
+            ref('base.tg'), ref('base.to'), ref('base.tk'), ref('base.tl'),
+            ref('base.tt'), ref('base.tn'), ref('base.tm'), ref('base.tr'),
+            ref('base.tv'), ref('base.ua'), ref('base.ug'), ref('base.uy'),
+            ref('base.uz'), ref('base.vu'), ref('base.va'), ref('base.ve'),
+            ref('base.vn'), ref('base.zm'), ref('base.zw'), ref('base.uk')
+
+            ])]"
+        />
+    </record>
+
+</odoo>

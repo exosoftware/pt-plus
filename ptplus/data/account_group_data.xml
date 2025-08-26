@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- # pylint: disable=xml-duplicate-record-id -->
+<odoo>
+
+    <!-- Common -->
+    <record id="account_group_1" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">1</field>
+        <field name="name">MEIOS FINANCEIROS LÍQUIDOS</field>
+    </record>
+    <record id="account_group_11" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">11</field>
+        <field name="name">Caixa</field>
+    </record>
+    <record id="account_group_12" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">12</field>
+        <field name="name">Depósitos à ordem</field>
+    </record>
+    <record id="account_group_13" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">13</field>
+        <field name="name">Outros depósitos bancários</field>
+    </record>
+    <record id="account_group_141" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">141</field>
+        <field name="name">Derivados</field>
+    </record>
+    <record id="account_group_142" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">142</field>
+        <field name="name">Instrumentos financeiros detidos para negociação</field>
+    </record>
+    <record id="account_group_143" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">143</field>
+        <field name="name">Outros ativos e passivos financeiros</field>
+    </record>
+    <record id="account_group_2" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2</field>
+        <field name="name">CONTAS A RECEBER E A PAGAR</field>
+    </record>
+    <record id="account_group_21" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">21</field>
+        <field name="name">Clientes</field>
+    </record>
+    <record id="account_group_219" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">219</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_22" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">22</field>
+        <field name="name">Fornecedores</field>
+    </record>
+    <record id="account_group_23" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">23</field>
+        <field name="name">Pessoal</field>
+    </record>
+    <record id="account_group_231" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">231</field>
+        <field name="name">Remunerações a pagar</field>
+    </record>
+    <record id="account_group_232" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">232</field>
+        <field name="name">Adiantamentos</field>
+    </record>
+    <record id="account_group_238" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">238</field>
+        <field name="name">Outras operações</field>
+    </record>
+    <record id="account_group_2381" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2381</field>
+        <field name="name">Com os órgãos sociais</field>
+    </record>
+    <record id="account_group_2382" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2382</field>
+        <field name="name">Com o pessoal</field>
+    </record>
+    <record id="account_group_239" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">239</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_2391" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2391</field>
+        <field name="name">Adiantamentos</field>
+    </record>
+    <record id="account_group_2392" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2392</field>
+        <field name="name">Outras operações</field>
+    </record>
+    <record id="account_group_23921" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">23921</field>
+        <field name="name">Com os órgãos sociais</field>
+    </record>
+    <record id="account_group_23922" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">23922</field>
+        <field name="name">Com o pessoal</field>
+    </record>
+    <record id="account_group_24" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">24</field>
+        <field name="name">Estado e outros entes públicos</field>
+    </record>
+    <record id="account_group_241" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">241</field>
+        <field name="name">Imposto sobre o rendimento</field>
+    </record>
+    <record id="account_group_243" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">243</field>
+        <field name="name">Imposto sobre o valor acrescentado (IVA)</field>
+    </record>
+    <record id="account_group_248" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">248</field>
+        <field name="name">Outras tributações</field>
+    </record>
+    <record id="account_group_25" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">25</field>
+        <field name="name">Financiamentos obtidos</field>
+    </record>
+    <record id="account_group_251" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">251</field>
+        <field name="name">Instituições de crédito e sociedades financeiras</field>
+    </record>
+    <record id="account_group_2511" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2511</field>
+        <field name="name">Empréstimos bancários</field>
+    </record>
+    <record id="account_group_2512" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2512</field>
+        <field name="name">Descobertos bancários</field>
+    </record>
+    <record id="account_group_2513" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2513</field>
+        <field name="name">Locações financeiras</field>
+    </record>
+    <record id="account_group_26" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">26</field>
+        <field name="name">Acionistas/sócios</field>
+    </record>
+    <record id="account_group_269" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">269</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_2698" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2698</field>
+        <field name="name">Outras operações</field>
+    </record>
+    <record id="account_group_27" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">27</field>
+        <field name="name">Outras contas a receber e a pagar</field>
+    </record>
+    <record id="account_group_271" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">271</field>
+        <field name="name">Fornecedores de investimentos</field>
+    </record>
+    <record id="account_group_2711" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2711</field>
+        <field name="name">Fornecedores de investimentos - contas gerais</field>
+    </record>
+    <record id="account_group_2712" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2712</field>
+        <field name="name">Facturas em receção e conferência</field>
+    </record>
+    <record id="account_group_2713" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2713</field>
+        <field name="name">Adiantamentos a fornecedores de investimentos</field>
+    </record>
+    <record id="account_group_272" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">272</field>
+        <field
+            name="name"
+        >Devedores e credores por acréscimos (periodização económica)</field>
+    </record>
+    <record id="account_group_278" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">278</field>
+        <field name="name">Outros devedores e credores</field>
+    </record>
+    <record id="account_group_279" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">279</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_2791" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2791</field>
+        <field name="name">Fornecedores de investimentos</field>
+    </record>
+    <record id="account_group_27913" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">27913</field>
+        <field name="name">Adiantamentos a fornecedores de investimentos</field>
+    </record>
+    <record id="account_group_2792" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">2792</field>
+        <field
+            name="name"
+        >Devedores e credores por acréscimos (periodização económica)</field>
+    </record>
+    <record id="account_group_28" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">28</field>
+        <field name="name">Diferimentos</field>
+    </record>
+    <record id="account_group_29" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">29</field>
+        <field name="name">Provisões</field>
+    </record>
+    <record id="account_group_31" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">31</field>
+        <field name="name">Compras</field>
+    </record>
+    <record id="account_group_312" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">312</field>
+        <field name="name">Matérias-primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_317" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">317</field>
+        <field name="name">Devoluções de compras</field>
+    </record>
+    <record id="account_group_3172" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">3172</field>
+        <field name="name">Matérias-primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_318" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">318</field>
+        <field name="name">Descontos e abatimentos em compras</field>
+    </record>
+    <record id="account_group_3182" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">3182</field>
+        <field name="name">Matérias-primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_32" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">32</field>
+        <field name="name">Mercadorias</field>
+    </record>
+    <record id="account_group_33" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">33</field>
+        <field name="name">Matérias-primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_339" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">339</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_34" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">34</field>
+        <field name="name">Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_346" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">346</field>
+        <field name="name">Produtos em poder de terceiros</field>
+    </record>
+    <record id="account_group_349" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">349</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_35" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">35</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+    </record>
+    <record id="account_group_359" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">359</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_36" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">36</field>
+        <field name="name">Produtos e trabalhos em curso</field>
+    </record>
+    <record id="account_group_382" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">382</field>
+        <field name="name">Mercadorias</field>
+    </record>
+    <record id="account_group_384" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">384</field>
+        <field name="name">Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_385" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">385</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+    </record>
+    <record id="account_group_39" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">39</field>
+        <field name="name">Adiantamentos por conta de compras</field>
+    </record>
+    <record id="account_group_4" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">4</field>
+        <field name="name">INVESTIMENTOS</field>
+    </record>
+    <record id="account_group_41" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">41</field>
+        <field name="name">Investimentos financeiros</field>
+    </record>
+    <record id="account_group_414" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">414</field>
+        <field name="name">Investimentos noutras empresas</field>
+    </record>
+    <record id="account_group_419" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">419</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_43" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">43</field>
+        <field name="name">Ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_438" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">438</field>
+        <field name="name">Depreciações acumuladas</field>
+    </record>
+    <record id="account_group_44" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">44</field>
+        <field name="name">Ativos intangíveis</field>
+    </record>
+    <record id="account_group_448" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">448</field>
+        <field name="name">Amortizações acumuladas</field>
+    </record>
+    <record id="account_group_45" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">45</field>
+        <field name="name">Investimentos em curso</field>
+    </record>
+    <record id="account_group_455" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">455</field>
+        <field name="name">Adiantamentos por conta de investimentos</field>
+    </record>
+    <record id="account_group_5" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">5</field>
+        <field name="name">CAPITAL, RESERVAS E RESULTADOS</field>
+    </record>
+    <record id="account_group_51" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">51</field>
+        <field name="name">Capital subscrito</field>
+    </record>
+    <record id="account_group_52" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">52</field>
+        <field name="name">Ações (quotas) próprias</field>
+    </record>
+    <record id="account_group_53" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">53</field>
+        <field name="name">Outros instrumentos de capital próprio</field>
+    </record>
+    <record id="account_group_55" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">55</field>
+        <field name="name">Reservas</field>
+    </record>
+    <record id="account_group_56" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">56</field>
+        <field name="name">Resultados transitados</field>
+    </record>
+    <record id="account_group_59" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">59</field>
+        <field name="name">Outras variações no capital próprio</field>
+    </record>
+    <record id="account_group_593" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">593</field>
+        <field name="name">Subsídios</field>
+    </record>
+    <record id="account_group_6" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">6</field>
+        <field name="name">GASTOS</field>
+    </record>
+    <record id="account_group_61" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">61</field>
+        <field
+            name="name"
+        >Custo dos inventários vendidos e das matérias consumidas</field>
+    </record>
+    <record id="account_group_612" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">612</field>
+        <field name="name">Matérias-primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_62" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">62</field>
+        <field name="name">Fornecimentos e serviços externos</field>
+    </record>
+    <record id="account_group_622" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">622</field>
+        <field name="name">Serviços especializados</field>
+    </record>
+    <record id="account_group_6221" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">6221</field>
+        <field name="name">Trabalhos especializados</field>
+    </record>
+    <record id="account_group_623" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">623</field>
+        <field name="name">Materiais</field>
+    </record>
+    <record id="account_group_624" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">624</field>
+        <field name="name">Energia e fluidos</field>
+    </record>
+    <record id="account_group_625" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">625</field>
+        <field name="name">Deslocações, estadas e transportes</field>
+    </record>
+    <record id="account_group_626" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">626</field>
+        <field name="name">Serviços diversos</field>
+    </record>
+    <record id="account_group_6261" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">6261</field>
+        <field name="name">Rendas e alugueres</field>
+    </record>
+    <record id="account_group_62612" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">62612</field>
+        <field name="name">Rendas de Terrenos</field>
+    </record>
+    <record id="account_group_63" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">63</field>
+        <field name="name">Gastos com o pessoal</field>
+    </record>
+    <record id="account_group_64" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">64</field>
+        <field name="name">Gastos de depreciação e de amortização</field>
+    </record>
+    <record id="account_group_642" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">642</field>
+        <field name="name">Ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_643" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">643</field>
+        <field name="name">Ativos intangíveis.</field>
+    </record>
+    <record id="account_group_65" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">65</field>
+        <field name="name">Perdas por imparidade</field>
+    </record>
+    <record id="account_group_651" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">651</field>
+        <field name="name">Em dívidas a receber</field>
+    </record>
+    <record id="account_group_652" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">652</field>
+        <field name="name">Em inventários</field>
+    </record>
+    <record id="account_group_653" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">653</field>
+        <field name="name">Em investimentos financeiros</field>
+    </record>
+    <record id="account_group_67" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">67</field>
+        <field name="name">Provisões do período</field>
+    </record>
+    <record id="account_group_68" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">68</field>
+        <field name="name">Outros gastos</field>
+    </record>
+    <record id="account_group_681" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">681</field>
+        <field name="name">Impostos</field>
+    </record>
+    <record id="account_group_684" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">684</field>
+        <field name="name">Perdas em inventários</field>
+    </record>
+    <record id="account_group_686" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">686</field>
+        <field name="name">Gastos nos restantes investimentos financeiros</field>
+    </record>
+    <record id="account_group_687" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">687</field>
+        <field name="name">Gastos em investimentos não financeiros</field>
+    </record>
+    <record id="account_group_688" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">688</field>
+        <field name="name">Outros</field>
+    </record>
+    <record id="account_group_6888" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">6888</field>
+        <field name="name">Outros não especificados</field>
+    </record>
+    <record id="account_group_69" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">69</field>
+        <field name="name">Gastos de financiamento</field>
+    </record>
+    <record id="account_group_691" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">691</field>
+        <field name="name">Juros suportados</field>
+    </record>
+    <record id="account_group_692" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">692</field>
+        <field name="name">Diferenças de câmbio desfavoráveis</field>
+    </record>
+    <record id="account_group_698" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">698</field>
+        <field name="name">Outros gastos de financiamento</field>
+    </record>
+    <record id="account_group_7" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">7</field>
+        <field name="name">RENDIMENTOS</field>
+    </record>
+    <record id="account_group_71" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">71</field>
+        <field name="name">Vendas</field>
+    </record>
+    <record id="account_group_712" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">712</field>
+        <field name="name">Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_717" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">717</field>
+        <field name="name">Devoluções de vendas</field>
+    </record>
+    <record id="account_group_7172" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">7172</field>
+        <field name="name">Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_718" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">718</field>
+        <field name="name">Descontos e abatimentos em vendas</field>
+    </record>
+    <record id="account_group_7182" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">7182</field>
+        <field name="name">Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_72" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">72</field>
+        <field name="name">Prestações de serviços</field>
+    </record>
+    <record id="account_group_73" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">73</field>
+        <field name="name">Variações nos inventários da produção</field>
+    </record>
+    <record id="account_group_74" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">74</field>
+        <field name="name">Trabalhos para a própria entidade</field>
+    </record>
+    <record id="account_group_75" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">75</field>
+        <field name="name">Subsídios à exploração</field>
+    </record>
+    <record id="account_group_76" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">76</field>
+        <field name="name">Reversões</field>
+    </record>
+    <record id="account_group_761" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">761</field>
+        <field name="name">De depreciações e de amortizações</field>
+    </record>
+    <record id="account_group_762" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">762</field>
+        <field name="name">De perdas por imparidade</field>
+    </record>
+    <record id="account_group_7621" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">7621</field>
+        <field name="name">Em dívidas a receber</field>
+    </record>
+    <record id="account_group_763" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">763</field>
+        <field name="name">De provisões</field>
+    </record>
+    <record id="account_group_78" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">78</field>
+        <field name="name">Outros rendimentos</field>
+    </record>
+    <record id="account_group_784" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">784</field>
+        <field name="name">Ganhos em inventários</field>
+    </record>
+    <record id="account_group_786" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">786</field>
+        <field name="name">Rendimentos nos restantes ativos financeiros</field>
+    </record>
+    <record id="account_group_787" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">787</field>
+        <field name="name">Rendimentos em investimentos não financeiros</field>
+    </record>
+    <record id="account_group_788" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">788</field>
+        <field name="name">Outros</field>
+    </record>
+    <record id="account_group_79" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">79</field>
+        <field name="name">Juros, dividendos e outros rendimentos similares</field>
+    </record>
+    <record id="account_group_791" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">791</field>
+        <field name="name">Juros obtidos</field>
+    </record>
+    <record id="account_group_8" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">8</field>
+        <field name="name">RESULTADOS</field>
+    </record>
+    <record id="account_group_81" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">81</field>
+        <field name="name">Resultado líquido do período</field>
+    </record>
+    <record id="account_group_812" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="code_prefix_start">812</field>
+        <field name="name">Imposto sobre o rendimento do período</field>
+    </record>
+
+    <!-- Base -->
+    <record id="account_group_14" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">14</field>
+        <field name="name">Outros instrumentos financeiros</field>
+    </record>
+    <record id="account_group_211" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">211</field>
+        <field name="name">Clientes c/c</field>
+    </record>
+    <record id="account_group_212" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">212</field>
+        <field name="name">Clientes - títulos a receber</field>
+    </record>
+    <record id="account_group_2191" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2191</field>
+        <field name="name">Clientes c/c</field>
+    </record>
+    <record id="account_group_2192" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2192</field>
+        <field name="name">Clientes - títulos a receber</field>
+    </record>
+    <record id="account_group_221" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">221</field>
+        <field name="name">Fornecedores c/c</field>
+    </record>
+    <record id="account_group_222" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">222</field>
+        <field name="name">Fornecedores - títulos a pagar</field>
+    </record>
+    <record id="account_group_237" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">237</field>
+        <field name="name">Cauções</field>
+    </record>
+    <record id="account_group_2371" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2371</field>
+        <field name="name">Dos órgãos sociais</field>
+    </record>
+    <record id="account_group_2372" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2372</field>
+        <field name="name">Do pessoal</field>
+    </record>
+    <record id="account_group_2514" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2514</field>
+        <field name="name">Outros financiamentos</field>
+    </record>
+    <record id="account_group_25141" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">25141</field>
+        <field name="name">Outros financiamentos - (CORRENTE)</field>
+    </record>
+    <record id="account_group_2517" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2517</field>
+        <field
+            name="name"
+        >Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Outros
+            financiamentos
+        </field>
+    </record>
+    <record id="account_group_25171" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">25171</field>
+        <field name="name">Outros financiamentos - (CORRENTE)</field>
+    </record>
+    <record id="account_group_252" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">252</field>
+        <field name="name">Mercado de valores mobiliários</field>
+    </record>
+    <record id="account_group_2521" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2521</field>
+        <field name="name">Empréstimos por obrigações</field>
+    </record>
+    <record id="account_group_253" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">253</field>
+        <field name="name">Participantes de capital</field>
+    </record>
+    <record id="account_group_2531" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2531</field>
+        <field
+            name="name"
+        >Participantes de capital - Empresa-mãe - Suprimentos e outros mútuos</field>
+    </record>
+    <record id="account_group_2532" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2532</field>
+        <field
+            name="name"
+        >Participantes de capital - Outros participantes - Suprimentos e outros mútuos</field>
+    </record>
+    <record id="account_group_254" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">254</field>
+        <field name="name">Subsidiárias, associadas e empreendimentos conjuntos</field>
+    </record>
+    <record id="account_group_258" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">258</field>
+        <field name="name">Financiamentos obtidos - Outros financiadores</field>
+    </record>
+    <record id="account_group_266" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">266</field>
+        <field name="name">Empréstimos concedidos - empresa-mãe</field>
+    </record>
+    <record id="account_group_268" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">268</field>
+        <field name="name">Acionistas/sócios - Outras operações</field>
+    </record>
+    <record id="account_group_2696" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2696</field>
+        <field name="name">Empréstimos concedidos - empresa-mãe</field>
+    </record>
+    <record id="account_group_274" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">274</field>
+        <field name="name">Impostos diferidos</field>
+    </record>
+    <record id="account_group_275" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">275</field>
+        <field
+            name="name"
+        >Outras contas a receber e a pagar - Credores por subscrições não liberadas</field>
+    </record>
+    <record id="account_group_2781" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2781</field>
+        <field name="name">Outros devedores e credores - Corrente</field>
+    </record>
+    <record id="account_group_2782" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2782</field>
+        <field name="name">Outros devedores e credores - Não Corrente</field>
+    </record>
+    <record id="account_group_2793" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">2793</field>
+        <field name="name">Impostos diferidos</field>
+    </record>
+    <record id="account_group_27981" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">27981</field>
+        <field name="name">Outros devedores e credores - Corrente</field>
+    </record>
+    <record id="account_group_27982" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">27982</field>
+        <field name="name">Outros devedores e credores - Não Corrente</field>
+    </record>
+    <record id="account_group_3" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3</field>
+        <field name="name">INVENTÁRIOS E ATIVOS BIOLÓGICOS</field>
+    </record>
+    <record id="account_group_313" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">313</field>
+        <field name="name">Ativos biológicos</field>
+    </record>
+    <record id="account_group_3173" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3173</field>
+        <field name="name">Ativos biológicos</field>
+    </record>
+    <record id="account_group_3183" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3183</field>
+        <field name="name">Ativos biológicos</field>
+    </record>
+    <record id="account_group_329" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">329</field>
+        <field name="name">Mercadorias - Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_3491" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3491</field>
+        <field
+            name="name"
+        >Perdas por imparidade acumuladas - Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_3496" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3496</field>
+        <field
+            name="name"
+        >Perdas por imparidade acumuladas - Produtos em poder de terceiros</field>
+    </record>
+    <record id="account_group_3591" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3591</field>
+        <field name="name">Subprodutos, desperdícios e refugo</field>
+    </record>
+    <record id="account_group_369" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">369</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_371" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">371</field>
+        <field name="name">Ativos biológicos - Consumíveis</field>
+    </record>
+    <record id="account_group_372" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">372</field>
+        <field name="name">Ativos biológicos - De produção</field>
+    </record>
+    <record id="account_group_378" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">378</field>
+        <field name="name">Ativos biológicos - Depreciações acumuladas</field>
+    </record>
+    <record id="account_group_379" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">379</field>
+        <field name="name">Ativos biológicos - Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_38" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">38</field>
+        <field
+            name="name"
+        >Reclassificação e regularização de inventários e ativos biológicos</field>
+    </record>
+    <record id="account_group_383" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">383</field>
+        <field name="name">Matérias -primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_3871" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3871</field>
+        <field
+            name="name"
+        >Reclassificação e regularização de inventários e ativos biológicos - Ativos biológicos -
+            Consumíveis
+        </field>
+    </record>
+    <record id="account_group_3872" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">3872</field>
+        <field
+            name="name"
+        >Reclassificação e regularização de inventários e ativos biológicos - Ativos biológicos -
+            Produção
+        </field>
+    </record>
+    <record id="account_group_392" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">392</field>
+        <field name="name">Matérias -primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_411" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">411</field>
+        <field name="name">Investimentos em subsidiárias</field>
+    </record>
+    <record id="account_group_4111" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4111</field>
+        <field
+            name="name"
+        >Investimentos em subsidiárias - Participações de capital - método da equivalência
+            patrimonial
+        </field>
+    </record>
+    <record id="account_group_412" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">412</field>
+        <field name="name">Investimentos em associadas</field>
+    </record>
+    <record id="account_group_4121" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4121</field>
+        <field
+            name="name"
+        >Participações de capital - método da equivalência patrimonial</field>
+    </record>
+    <record id="account_group_413" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">413</field>
+        <field name="name">Investimentos em entidades conjuntamente controladas</field>
+    </record>
+    <record id="account_group_4131" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4131</field>
+        <field
+            name="name"
+        >Participações de capital - método da equivalência patrimonial</field>
+    </record>
+    <record id="account_group_415" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">415</field>
+        <field name="name">Outros investimentos financeiros</field>
+    </record>
+    <record id="account_group_4158" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4158</field>
+        <field name="name">Outros</field>
+    </record>
+    <record id="account_group_418" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">418</field>
+        <field name="name">Amortizações acumuladas</field>
+    </record>
+    <record id="account_group_4181" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4181</field>
+        <field
+            name="name"
+        >Investimentos em subsidiárias - Participações de capital — método da equivalência
+            patrimonial
+        </field>
+    </record>
+    <record id="account_group_4182" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4182</field>
+        <field
+            name="name"
+        >Investimentos em associadas - Participações de capital — método da equivalência patrimonial
+        </field>
+    </record>
+    <record id="account_group_4183" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4183</field>
+        <field
+            name="name"
+        >Investimentos em entidades conjuntamente controladas - Participações de capital — método da
+            equivalência patrimonial
+        </field>
+    </record>
+    <record id="account_group_4191" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4191</field>
+        <field name="name">Investimentos em subsidiárias</field>
+    </record>
+    <record id="account_group_41911" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">41911</field>
+        <field
+            name="name"
+        >Investimentos em subsidiárias - Participações de capital - método da equivalência
+            patrimonial
+        </field>
+    </record>
+    <record id="account_group_4192" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4192</field>
+        <field name="name">Investimentos em associadas</field>
+    </record>
+    <record id="account_group_41921" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">41921</field>
+        <field
+            name="name"
+        >Investimentos em associadas - Participações de capital - método da equivalência patrimonial
+        </field>
+    </record>
+    <record id="account_group_4193" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4193</field>
+        <field name="name">Investimentos em entidades conjuntamente controladas</field>
+    </record>
+    <record id="account_group_41931" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">41931</field>
+        <field
+            name="name"
+        >Investimentos em entidades conjuntamente controladas - Participações de capital - método da
+            equivalência patrimonial
+        </field>
+    </record>
+    <record id="account_group_4194" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4194</field>
+        <field name="name">Investimentos noutras empresas</field>
+    </record>
+    <record id="account_group_4195" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4195</field>
+        <field name="name">Outros investimentos financeiros</field>
+    </record>
+    <record id="account_group_42" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">42</field>
+        <field name="name">Propriedades de investimento</field>
+    </record>
+    <record id="account_group_428" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">428</field>
+        <field name="name">Depreciações acumuladas</field>
+    </record>
+    <record id="account_group_429" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">429</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_439" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">439</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_445" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">445</field>
+        <field name="name">Despesas de instalação</field>
+    </record>
+    <record id="account_group_449" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">449</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_459" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">459</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_4595" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">4595</field>
+        <field name="name">Adiantamentos por conta de investimentos</field>
+    </record>
+    <record id="account_group_46" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">46</field>
+        <field name="name">Ativos não correntes detidos para venda</field>
+    </record>
+    <record id="account_group_461" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">461</field>
+        <field name="name">Ativos não correntes detidos para venda</field>
+    </record>
+    <record id="account_group_469" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">469</field>
+        <field name="name">Perdas por imparidade acumuladas</field>
+    </record>
+    <record id="account_group_57" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">57</field>
+        <field name="name">Ajustamentos em ativos financeiros</field>
+    </record>
+    <record id="account_group_571" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">571</field>
+        <field name="name">Relacionados com o método da equivalência patrimonial</field>
+    </record>
+    <record id="account_group_58" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">58</field>
+        <field
+            name="name"
+        >Excedentes de revalorização de ativos fixos tangíveis e intangíveis</field>
+    </record>
+    <record id="account_group_581" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">581</field>
+        <field name="name">Reavaliações decorrentes de diplomas legais</field>
+    </record>
+    <record id="account_group_589" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">589</field>
+        <field name="name">Outros excedentes</field>
+    </record>
+    <record id="account_group_633" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">633</field>
+        <field name="name">Benefícios pós-emprego</field>
+    </record>
+    <record id="account_group_641" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">641</field>
+        <field name="name">Propriedades de investimento</field>
+    </record>
+    <record id="account_group_644" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">644</field>
+        <field name="name">Ativos biológicos</field>
+    </record>
+    <record id="account_group_645" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">645</field>
+        <field name="name">Investimentos Financeiros</field>
+    </record>
+    <record id="account_group_654" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">654</field>
+        <field name="name">Em propriedades de investimento</field>
+    </record>
+    <record id="account_group_655" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">655</field>
+        <field name="name">Em ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_656" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">656</field>
+        <field name="name">Em ativos intangíveis</field>
+    </record>
+    <record id="account_group_657" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">657</field>
+        <field name="name">Em investimentos em curso</field>
+    </record>
+    <record id="account_group_6575" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">6575</field>
+        <field name="name">Adiantamentos por conta de investimentos</field>
+    </record>
+    <record id="account_group_658" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">658</field>
+        <field name="name">Em ativos não correntes detidos para venda</field>
+    </record>
+    <record id="account_group_66" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">66</field>
+        <field name="name">Perdas por reduções de justo valor</field>
+    </record>
+    <record id="account_group_662" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">662</field>
+        <field name="name">Em investimentos financeiros</field>
+    </record>
+    <record id="account_group_663" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">663</field>
+        <field name="name">Em propriedades de investimento</field>
+    </record>
+    <record id="account_group_664" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">664</field>
+        <field name="name">Em ativos biológicos</field>
+    </record>
+    <record id="account_group_685" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">685</field>
+        <field
+            name="name"
+        >Gastos em subsidiárias, associadas e empreendimentos conjuntos</field>
+    </record>
+    <record id="account_group_6852" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">6852</field>
+        <field
+            name="name"
+        >Outros gastos - Gastos em subsidiárias, associadas e empreendimentos conjuntos - Aplicação do
+            método da equivalência patrimonial
+        </field>
+    </record>
+    <record id="account_group_713" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">713</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+    </record>
+    <record id="account_group_731" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">731</field>
+        <field
+            name="name"
+        >Variações nos inventários da produção - Produtos acabados e intermédios</field>
+    </record>
+    <record id="account_group_732" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">732</field>
+        <field
+            name="name"
+        >Variações nos inventários da produção - Subprodutos, desperdícios, resíduos e refugos</field>
+    </record>
+    <record id="account_group_7611" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7611</field>
+        <field
+            name="name"
+        >Reversões - De depreciações e de amortizações - Propriedades de investimento</field>
+    </record>
+    <record id="account_group_7612" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7612</field>
+        <field
+            name="name"
+        >Reversões - De depreciações e de amortizações - Ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_7613" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7613</field>
+        <field
+            name="name"
+        >Reversões - De depreciações e de amortizações - Ativos intangíveis</field>
+    </record>
+    <record id="account_group_7614" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7614</field>
+        <field
+            name="name"
+        >Reversões - De depreciações e de amortizações - Ativos biológicos</field>
+    </record>
+    <record id="account_group_7615" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7615</field>
+        <field
+            name="name"
+        >Reversões - De depreciações e de amortizações - Investimentos financeiros</field>
+    </record>
+    <record id="account_group_7622" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7622</field>
+        <field name="name">Reversões - De perdas por imparidade - Em inventários</field>
+    </record>
+    <record id="account_group_7623" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7623</field>
+        <field
+            name="name"
+        >Reversões - De perdas por imparidade - Em investimentos financeiros</field>
+    </record>
+    <record id="account_group_7624" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7624</field>
+        <field
+            name="name"
+        >Reversões - De perdas por imparidade - Em propriedades de investimento</field>
+    </record>
+    <record id="account_group_7625" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7625</field>
+        <field
+            name="name"
+        >Reversões - De perdas por imparidade - Em ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_7626" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7626</field>
+        <field
+            name="name"
+        >Reversões - De perdas por imparidade - Em ativos intangíveis</field>
+    </record>
+    <record id="account_group_7627" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7627</field>
+        <field name="name">Em investimentos em curso</field>
+    </record>
+    <record id="account_group_76275" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">76275</field>
+        <field name="name">Adiantamentos por conta de investimentos</field>
+    </record>
+    <record id="account_group_7628" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7628</field>
+        <field
+            name="name"
+        >Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda</field>
+    </record>
+    <record id="account_group_77" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">77</field>
+        <field name="name">Ganhos por aumentos de justo valor</field>
+    </record>
+    <record id="account_group_772" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">772</field>
+        <field name="name">Em investimentos financeiros</field>
+    </record>
+    <record id="account_group_773" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">773</field>
+        <field
+            name="name"
+        >Ganhos por aumentos de justo valor - Em propriedades de investimento</field>
+    </record>
+    <record id="account_group_774" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">774</field>
+        <field name="name">Em ativos biológicos</field>
+    </record>
+    <record id="account_group_781" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">781</field>
+        <field name="name">Rendimentos suplementares</field>
+    </record>
+    <record id="account_group_785" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">785</field>
+        <field
+            name="name"
+        >Rendimentos em subsidiárias, associadas e empreendimentos conjuntos</field>
+    </record>
+    <record id="account_group_7851" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7851</field>
+        <field
+            name="name"
+        >Outros rendimentos - Rendimentos em subsidiárias, associadas e empreendimentos conjuntos
+        </field>
+    </record>
+    <record id="account_group_7873" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">7873</field>
+        <field
+            name="name"
+        >Outros rendimentos - Rendimentos em investimentos não financeiros</field>
+    </record>
+    <record id="account_group_78732" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">78732</field>
+        <field
+            name="name"
+        >Rendas e outros rendimentos em propriedades de investimento - Terrenos</field>
+    </record>
+    <record id="account_group_792" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_base" />
+        <field name="code_prefix_start">792</field>
+        <field name="name">Dividendos obtidos</field>
+    </record>
+
+    <!-- Micro -->
+    <record id="account_group_242" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">242</field>
+        <field name="name">Retenção de impostos sobre rendimentos</field>
+    </record>
+    <record id="account_group_25111" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">25111</field>
+        <field name="name">Empréstimos bancários (CORRENTE)</field>
+    </record>
+    <record id="account_group_25112" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">25112</field>
+        <field name="name">Empréstimos bancários (NÃO CORRENTE)</field>
+    </record>
+    <record id="account_group_258" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">258</field>
+        <field name="name">Outros financiadores</field>
+    </record>
+    <record id="account_group_2581" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">2581</field>
+        <field name="name">Corrente</field>
+    </record>
+    <record id="account_group_2582" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">2582</field>
+        <field name="name">Não Corrente</field>
+    </record>
+    <record id="account_group_2781" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">2781</field>
+        <field name="name">Corrente</field>
+    </record>
+    <record id="account_group_2782" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">2782</field>
+        <field name="name">Não Corrente</field>
+    </record>
+    <record id="account_group_2798" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">2798</field>
+        <field name="name">Outros devedores e credores</field>
+    </record>
+    <record id="account_group_27981" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">27981</field>
+        <field name="name">Corrente</field>
+    </record>
+    <record id="account_group_27982" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">27982</field>
+        <field name="name">Não Corrente</field>
+    </record>
+    <record id="account_group_281" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">281</field>
+        <field name="name">Gastos a reconhecer</field>
+    </record>
+    <record id="account_group_282" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">282</field>
+        <field name="name">Rendimentos a reconhecer</field>
+    </record>
+    <record id="account_group_3" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">3</field>
+        <field name="name">INVENTÁRIOS</field>
+    </record>
+    <record id="account_group_38" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">38</field>
+        <field name="name">Reclassificação e regularização de inventários</field>
+    </record>
+    <record id="account_group_392" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">392</field>
+        <field name="name">Matérias primas, subsidiárias e de consumo</field>
+    </record>
+    <record id="account_group_54" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">54</field>
+        <field name="name">Prémios de emissão</field>
+    </record>
+    <record id="account_group_58" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">58</field>
+        <field name="name">Excedentes de revalorização de ativos fixos tangíveis</field>
+    </record>
+    <record id="account_group_89" model="account.group.template">
+        <field name="chart_template_id" ref="account_chart_template_snc_micro" />
+        <field name="code_prefix_start">89</field>
+        <field name="name">Dividendos antecipados</field>
+    </record>
+
+</odoo>

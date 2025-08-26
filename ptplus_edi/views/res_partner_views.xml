@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_partner_form_edi_pt" model="ir.ui.view">
+        <field name="name">res.partner.form.edi.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="ptplus_partner.view_partner_form_pt" />
+        <field name="arch" type="xml">
+            <group name="accounting_entries" position="after">
+                <group
+                    string="Electronic Invoicing (PT)"
+                    attrs="{'invisible': [('country_code', '!=', 'PT')]}"
+                    name="l10n_pt_edi_cius"
+                >
+                    <field name="l10n_pt_edi_cius_format_id" />
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

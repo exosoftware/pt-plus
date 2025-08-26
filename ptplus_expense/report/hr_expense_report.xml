@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_vehicle_expense">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="h2 mb-2">Travel by own car</div>
+                        <div class="row mt32 mb32">
+                            <div class="col-2">
+                                <strong>Employee:</strong>
+                                <p t-field="o.employee_id.name" />
+                            </div>
+                            <div class="col-2">
+                                <strong>Date:</strong>
+                                <p t-field="o.accounting_date" />
+                            </div>
+                            <div class="col-3">
+                                <strong>Description:</strong>
+                                <p t-field="o.name" />
+                            </div>
+                            <div class="col-2">
+                                <strong>Validated By:</strong>
+                                <p t-field="o.user_id" />
+                            </div>
+                            <div class="col-3">
+                                <strong>Payment By:</strong>
+                                <p t-field="o.payment_mode" />
+                            </div>
+                        </div>
+
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Destination/Date</th>
+                                    <th class="text-start">Description</th>
+                                    <th class="text-start">License Plate</th>
+                                    <th class="text-end">Unit Price</th>
+                                    <th class="text-end">Qty</th>
+                                    <th class="text-end">Price</th>
+                                    <th
+                                        t-if="o.is_multiple_currency"
+                                        class="text-end"
+                                    >Price in Company Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t
+                                    t-foreach="o.get_vehicle_expenses_by_client().items()"
+                                    t-as="client_expenses"
+                                >
+                                    <tr>
+                                        <td colspan="8" style="font-weight:bold;">
+                                            <t t-if="client_expenses[0]">
+                                                <t t-esc="client_expenses[0].name" />
+                                                <t t-if="client_expenses[0].city">
+                                                    <t
+                                                        t-esc="' (' + str(client_expenses[0].city) + ')'"
+                                                    />
+                                                </t>
+                                            </t>
+                                            <t t-else="">
+                                                N/A
+                                            </t>
+                                        </td>
+                                    </tr>
+
+                                    <t t-foreach="client_expenses[1]" t-as="expense">
+                                        <tr>
+                                            <td><span t-esc="expense.date" /></td>
+                                            <td><span t-esc="expense.name" /></td>
+                                            <td><span
+                                                    t-esc="expense.l10n_pt_license_plate"
+                                                /></td>
+                                            <td class="text-end"><span
+                                                    t-esc="expense.unit_amount"
+                                                /></td>
+                                            <td class="text-end"><span
+                                                    t-esc="expense.quantity"
+                                                /></td>
+                                            <td class="text-end"><span
+                                                    t-esc="expense.total_amount"
+                                                /></td>
+                                            <td
+                                                t-if="o.is_multiple_currency"
+                                                class="text-end"
+                                            ><span
+                                                    t-esc="expense.total_amount_company"
+                                                /></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <div class="row justify-content-end">
+                            <div class="col-4">
+                                <table class="table table-sm">
+                                    <tr class="border-black">
+                                        <td><strong>Total</strong></td>
+                                        <td class="text-end">
+                                           <span
+                                                t-esc="o.get_total_vehicle_expenses()"
+                                                t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                            />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <br />
+                        <span class="text-muted fst-italic text-truncate">
+                            Note: unless expressly stated otherwise, the origin of the trips will be the company's headquarters.
+                        </span>
+                        <br /><br />
+                        <p>Certified honest and conform,<br />(Date and signature).<br
+                            /><br /></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_vehicle_expense" model="ir.actions.report">
+        <field name="name">Travel by own car Report</field>
+        <field name="model">hr.expense.sheet</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus_expense.report_vehicle_expense</field>
+        <field name="report_file">ptplus_expense.report_vehicle_expense</field>
+        <field name="binding_model_id" ref="model_hr_expense_sheet" />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
