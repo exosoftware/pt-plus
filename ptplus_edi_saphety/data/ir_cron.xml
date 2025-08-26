@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <record id="ir_cron_get_outbound_document_status" model="ir.cron">
+        <field name="name">Saphety: check outbound financial documents status</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="model_account_move" />
+        <field name="code">model.ir_cron_get_outbound_document_status()</field>
+        <field name="active" eval="True" />
+    </record>
+
+</odoo>

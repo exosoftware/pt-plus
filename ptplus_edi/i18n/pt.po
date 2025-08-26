@@ -1,0 +1,328 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-11 12:14+0000\n"
+"PO-Revision-Date: 2025-02-20 22:24+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-17-0/ptplus_edi/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.cius_pt_211_InvoiceLineType
+msgid "#TAXEXEMPTIONREASON@CLASSIFIEDTAXCATEGORY#"
+msgstr ""
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.cius_pt_211_InvoiceLineType
+msgid "#TAXEXEMPTIONREASONCODE@CLASSIFIEDTAXCATEGORY#"
+msgstr ""
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_format.py:0
+#, python-format
+msgid ""
+"%s\n"
+"CODE: %s\n"
+"FIELD: %s\n"
+"VALUES: %s"
+msgstr ""
+"%s\n"
+"CÓDIGO: %s\n"
+"CAMPO: %s\n"
+"VALORES: %s"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.report_invoice_document
+msgid "<strong>Commitment No.:</strong>"
+msgstr "<strong>Nº do Compromisso:</strong>"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.report_invoice_document
+msgid "<strong>Fitting No.:</strong>"
+msgstr "<strong>Nº do Cabimento:</strong>"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_account_bank_statement_line__l10n_pt_commitment_number
+#: model:ir.model.fields,help:ptplus_edi.field_account_bank_statement_line__l10n_pt_fitting_number
+#: model:ir.model.fields,help:ptplus_edi.field_account_move__l10n_pt_commitment_number
+#: model:ir.model.fields,help:ptplus_edi.field_account_move__l10n_pt_fitting_number
+#: model:ir.model.fields,help:ptplus_edi.field_account_payment__l10n_pt_commitment_number
+#: model:ir.model.fields,help:ptplus_edi.field_account_payment__l10n_pt_fitting_number
+msgid "A number that is supplied by your B2G customer"
+msgstr "Um número fornecido pelo seu cliente B2G"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.view_move_form_edi_pt
+msgid "Broker"
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_edi_xml_cius_pt_211
+msgid "CIUS-PT 2.1.1"
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_commitment_number
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_commitment_number
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_payment__l10n_pt_commitment_number
+msgid "Commitment No."
+msgstr "Nº do Compromisso"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "Definições"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_document.py:0
+#, python-format
+msgid ""
+"Couldn't create the CIUS-PT XML file for document {} (id {}). Please check "
+"the list of detected errors, fix them and try again. If the error persists, "
+"contact your technical support team.\n"
+"\n"
+"{}"
+msgstr ""
+"Não foi possível criar o arquivo XML CIUS-PT para o documento {} (id {}). "
+"Verifique a lista de erros detetados, corrija-os e tente novamente. Se o "
+"erro persistir, por favor, entre em contato com a equipe de suporte "
+"técnico.\n"
+"\n"
+"{}"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_partner__l10n_pt_edi_cius_format_id
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_users__l10n_pt_edi_cius_format_id
+msgid "Default EDI Format"
+msgstr "Formato EDI Padrão"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings__l10n_pt_edi_cius_disable_validation
+msgid "Disable Schema Validation"
+msgstr "Desativar Validação de Esquema"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company__l10n_pt_edi_cius_disable_validation
+msgid "Disable Validation"
+msgstr "Desativar Validação"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_document__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_format__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_xml_cius_pt_211__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_journal__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_cius_broker_id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_edi_cius_broker_id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_payment__l10n_pt_edi_cius_broker_id
+msgid "EDI Broker"
+msgstr "Broker EDI"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_edi_format
+msgid "EDI format"
+msgstr "Formato EDI"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_edi_document
+msgid "Electronic Document for an account.move"
+msgstr "Documento Eletrónico para uma account.move"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.view_partner_form_edi_pt
+msgid "Electronic Invoicing (PT)"
+msgstr "Facturação Electrónica (PT)"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_fitting_number
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_fitting_number
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_payment__l10n_pt_fitting_number
+msgid "Fitting No."
+msgstr "Nº do Cabimento"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_document__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_format__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_xml_cius_pt_211__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_journal__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_journal
+msgid "Journal"
+msgstr "Diário"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_journal.py:0
+#, python-format
+msgid "Journal %s has more than one CIUS-PT EDI options enabled."
+msgstr "O diário %s tem mais de uma opção EDI CIUS-PT habilitada."
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_document____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_format____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_edi_xml_cius_pt_211____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_journal____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.cius_pt_211_InvoiceType
+msgid "QR_CODE"
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_ir_actions_report
+msgid "Report Action"
+msgstr "Ação de Relatório"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "The %s VAT number must be preceded by the %s country code"
+msgstr "O NIF do %s deve ser precedido pelo código do país %s"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_format.py:0
+#, python-format
+msgid ""
+"The CIUS-PT XML file created for document {} (id {}) is INVALID. Please "
+"check the list of errors, fix them and try again. If the error persists, "
+"contact your technical support team.\n"
+"\n"
+"{}"
+msgstr ""
+"O arquivo XML CIUS-PT criado para o documento {} (id {}) é INVÁLIDO. "
+"Verifique a lista de erros, corrija-os e tente novamente. Se o erro "
+"persistir, por favor, entre em contato com a equipe de suporte técnico.\n"
+"\n"
+"{}"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_format.py:0
+#, python-format
+msgid ""
+"The CIUS-PT XML file for document {} (id {}) was successfully created but "
+"Odoo was unable to validate it to ensure its compliance. Please check your "
+"Internet connection and try again. If the error persists, contact your "
+"technical support team.\n"
+"\n"
+"Error: {}"
+msgstr ""
+"O arquivo CIUS-PT XML para o documento {} (id {}) foi criado com sucesso, "
+"mas o Odoo não o conseguiu validar para garantir a sua conformidade. Por "
+"favor, verifique a sua ligação à Internet e tente novamente. Se o erro "
+"persistir, por favor, entre em contato com a equipe de suporte técnico.\n"
+"\n"
+"Erro: {}"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_cius_broker_id
+#: model:ir.model.fields,help:ptplus_edi.field_account_move__l10n_pt_edi_cius_broker_id
+#: model:ir.model.fields,help:ptplus_edi.field_account_payment__l10n_pt_edi_cius_broker_id
+msgid "The Portuguese electronic invoicing broker associated with the document"
+msgstr "O broker de faturação eletrónica portuguesa associado ao documento"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_res_partner__l10n_pt_edi_cius_format_id
+#: model:ir.model.fields,help:ptplus_edi.field_res_users__l10n_pt_edi_cius_format_id
+msgid ""
+"The default electronic invoicing format/broker associated with the partner. "
+"If set, invoices created for this partner will have the journal field set "
+"with the first sales journal configured with the selected format/broker."
+msgstr ""
+"O formato/broker de faturação eletrónica predefinido associado ao parceiro. "
+"Se definido, as faturas criadas para este parceiro terão o campo diário "
+"definido com o primeiro diário de vendas configurado com o formato/broker "
+"selecionado."
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "The delivery address should be included."
+msgstr "O endereço de entrega deve ser incluído."
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "The field 'City' is required on the delivery address."
+msgstr "O campo \"Cidade\" é obrigatório no endereço de entrega."
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "The field 'Street' is required on the delivery address."
+msgstr "O campo \"Rua\" é obrigatório no endereço de entrega."
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "The field 'Zip Code' is required on the delivery address."
+msgstr "O campo 'Código Postal' é obrigatório no endereço de entrega."
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "customer"
+msgstr "cliente"
+
+#. module: ptplus_edi
+#: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
+#, python-format
+msgid "supplier"
+msgstr "fornecedor"
+
+#~ msgid ""
+#~ "The broker to which the document will be transmitted to or Manual if you "
+#~ "just want to create the XML file (to upload manually). If left empty, no "
+#~ "file will be created which will ease up the invoicing process."
+#~ msgstr ""
+#~ "O broker para o qual o documento será transmitido ou Manual se você "
+#~ "quiser apenas criar o arquivo XML (para carregar manualmente). Se ficar "
+#~ "em branco, não será criado nenhum ficheiro que facilite o processo de "
+#~ "faturação."

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- MIS Report: Trial Balance -->
+    <record id="mis_trial_balance_pt" model="mis.report">
+        <field name="name">Trial Balance</field>
+        <field name="description">Analytic Trial Balance</field>
+        <field name="style_id" eval="ref('mis_style_account_used')" />
+        <field name="l10n_pt_autogen">True</field>
+        <field
+            name="l10n_pt_autogen_expression"
+            eval="'Saldo Inicial=bali[$conta%];Débito=debp[$conta%];Crédito=crdp[$conta%];Saldo Final=bale[$conta%]'"
+        />
+        <field name="l10n_pt_autogen_totals">True</field>
+        <field name="l10n_pt_autogen_visibility">used</field>
+        <field name="l10n_pt_autogen_tainted">True</field>
+    </record>
+
+    <!-- MIS Report Instance: Trial Balance -->
+    <record id="mis_trial_balance_instance_pt" model="mis.report.instance">
+        <field name="name">Trial Balance</field>
+        <field name="description" />
+        <field name="report_id" ref="mis_trial_balance_pt" />
+        <field name="comparison_mode">False</field>
+        <field name="date_from" eval="'2021-01-01'" />
+        <field name="date_to" eval="'2021-12-31'" />
+    </record>
+
+</odoo>

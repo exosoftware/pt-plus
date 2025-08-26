@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Tax Statements-->
+    <record id="view_tax_statement_line_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.line.tree</field>
+        <field name="model">l10n_pt.account.statement.line</field>
+        <field eval="100" name="priority" />
+        <field name="arch" type="xml">
+            <tree create="0" edit="0">
+                <field name="source_type" invisible="1" />
+                <field name="name" />
+                <field name="description" />
+                <field name="value" class="text-end" />
+                <button
+                    type="object"
+                    name="action_move_lines"
+                    string="Journal Items"
+                    icon="fa-search"
+                    invisible="source_type == 'expr'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_tax_statement_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.line.search</field>
+        <field name="model">l10n_pt.account.statement.line</field>
+        <field eval="100" name="priority" />
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+                <filter
+                    name="regular"
+                    string="Regular Fields"
+                    domain="[('auxiliary','=', False)]"
+                />
+                <filter
+                    name="aux"
+                    string="Auxiliary Fields"
+                    domain="[('auxiliary','=', True)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tax_statement_line_tree" model="ir.actions.act_window">
+        <field name="name">Tax Statements</field>
+        <field name="res_model">l10n_pt.account.statement.line</field>
+        <field name="view_mode">tree</field>
+        <field
+            name="domain"
+        >[('statement_id', '=', context.get('statement_id',False))]</field>
+        <field name="context">{'search_default_regular': True}</field>
+        <field name="view_id" ref="view_tax_statement_line_tree" />
+        <field name="search_view_id" ref="view_tax_statement_search" />
+    </record>
+
+    <!--Accounting Statements-->
+    <record id="view_accounting_statement_line_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.accounting.statement.line.tree</field>
+        <field name="model">l10n_pt.account.statement.line</field>
+        <field eval="100" name="priority" />
+        <field name="arch" type="xml">
+            <tree create="0" edit="0">
+                <field name="source_type" invisible="1" />
+                <field name="name" />
+                <field name="description" />
+                <field name="value" class="text-end" />
+                <button
+                    type="object"
+                    name="action_move_lines"
+                    string="Journal Items"
+                    icon="fa-search"
+                    invisible="source_type == 'expr'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_accounting_statement_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.accounting.statement.line.search</field>
+        <field name="model">l10n_pt.account.statement.line</field>
+        <field eval="100" name="priority" />
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+                <filter
+                    name="regular"
+                    string="Regular Fields"
+                    domain="[('auxiliary','=', False)]"
+                />
+                <filter
+                    name="aux"
+                    string="Auxiliary Fields"
+                    domain="[('auxiliary','=', True)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_accounting_statement_line_tree" model="ir.actions.act_window">
+        <field name="name">Accounting Statements</field>
+        <field name="res_model">l10n_pt.account.statement.line</field>
+        <field name="view_mode">tree</field>
+        <field
+            name="domain"
+        >[('statement_id', '=', context.get('statement_id',False))]</field>
+        <field name="context">{'search_default_regular': True}</field>
+        <field name="view_id" ref="view_accounting_statement_line_tree" />
+        <field name="search_view_id" ref="view_accounting_statement_search" />
+    </record>
+</odoo>
