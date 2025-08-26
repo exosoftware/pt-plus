@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_pt_sale" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt.sale</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='connectors_setting_container']" position="after">
+                <block title="Portugal" id="sale_settings_pt">
+                    <setting
+                        company_dependent="1"
+                        help="Tags to differentiate document copies"
+                        title="These tags will be printed on every multi-way document report copy. The choice also sets the number of desired copies."
+                        string="Multi-way Report"
+                    >
+                        <div class="row mt16">
+                            <label
+                                string="Sales Doc."
+                                for="l10n_pt_multiway_tag_sale"
+                                class="col-lg-3 o_light_label"
+                            />
+                            <field name="l10n_pt_multiway_tag_sale" />
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

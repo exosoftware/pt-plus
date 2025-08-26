@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pdf_sign
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-05 17:16+0000\n"
+"PO-Revision-Date: 2024-02-05 17:16+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.vertical_digital_signature_stamp
+msgid "<span> | </span>"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.horizontal_digital_signature_stamp
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.vertical_digital_signature_stamp
+msgid "<strong>Assinatura Eletrônica Avançada</strong>"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,help:ptplus_pdf_sign.field_l10n_pt_report_signature__domain
+msgid "A filter to determine if the document will be signed"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_access_token
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_access_token
+msgid "Access Token"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__active
+msgid "Active"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_authorizer_id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_authorizer_id
+msgid "Authorizer ID"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_authorizer_secret
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_authorizer_secret
+msgid "Authorizer Secret"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.res_config_settings_view_form
+msgid "Client ID"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_client_secret
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_client_secret
+msgid "Client Secret"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not complete signature process. Please retry later, if this error "
+"persists, please contact your system administrator."
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid ""
+"DigitalSign API Error on service %s:\n"
+"\n"
+"%s"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_client_id
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_client_id
+msgid "DigitalSign Client ID"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__domain
+msgid "Domain"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.res_config_settings_view_form
+msgid "Get Access Token"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_get_access_token_url
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_get_access_token_url
+msgid "Get Access Token URL"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields.selection,name:ptplus_pdf_sign.selection__res_company__l10n_pt_pdf_sign_signature_position__horizontal
+msgid "Horizontal"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,help:ptplus_pdf_sign.field_l10n_pt_report_signature__active
+msgid "If the active field is set to False, the report will NOT be signed"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__model_id
+msgid "Model"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__multirec
+msgid "Multi-record Sign"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"No Access Token available. Make sure you request one, before you sign a "
+"document."
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/controllers/main.py:0
+#, python-format
+msgid "No authorization code could be found"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Please fill the specific authorizer information, in order to sign a "
+"document."
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/controllers/main.py:0
+#, python-format
+msgid ""
+"Please make sure you fill the required credentials to request an access "
+"token: Client ID, Client Secret and Redirect URI"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_digitalsign_redirect_uri
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_digitalsign_redirect_uri
+msgid "Redirect URI"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__report_id
+msgid "Report"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_ir_actions_report
+msgid "Report Action"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.actions.act_window,name:ptplus_pdf_sign.action_l10n_pt_report_signature
+msgid "Report Signatures"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.l10n_pt_report_signature_search
+msgid "Reports"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model_terms:ir.ui.view,arch_db:ptplus_pdf_sign.res_config_settings_view_form
+msgid "Reports to Sign"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_l10n_pt_report_signature__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_pdf_sign_signature_position
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_pdf_sign_signature_position
+msgid "Signature Position"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model,name:ptplus_pdf_sign.model_l10n_pt_report_signature
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_report_signature_ids
+msgid "Signed PDF Reports"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_company__l10n_pt_pdf_sign_stamp_image
+#: model:ir.model.fields,field_description:ptplus_pdf_sign.field_res_config_settings__l10n_pt_pdf_sign_stamp_image
+msgid "Stamp Image"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid "Timeout"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#. odoo-python
+#: code:addons/ptplus_pdf_sign/webservice.py:0
+#, python-format
+msgid "Too many redirects"
+msgstr ""
+
+#. module: ptplus_pdf_sign
+#: model:ir.model.fields.selection,name:ptplus_pdf_sign.selection__res_company__l10n_pt_pdf_sign_signature_position__vertical
+msgid "Vertical"
+msgstr ""

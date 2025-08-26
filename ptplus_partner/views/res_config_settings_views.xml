@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.nif_pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_settings_pt']" position="inside">
+                <setting
+                    id="ctt_zip_setting"
+                    string="CTT API"
+                    help="Autocomplete address details from the ZIP Code"
+                    invisible="not pt_invoicing"
+                    company_dependent="1"
+                >
+                    <field name="l10n_pt_partner_zip_ctt" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
