@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Sales order form  -->
+    <record id="view_order_form_pt_edi" model="ir.ui.view">
+        <field name="name">view.order.form.pt.edi</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+
+            <!-- B2G fields -->
+            <field name="fiscal_position_id" position="after">
+                <field
+                    name="l10n_pt_commitment_number"
+                    invisible="not source_billing"
+                />
+                <field name="l10n_pt_fitting_number" invisible="not source_billing" />
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

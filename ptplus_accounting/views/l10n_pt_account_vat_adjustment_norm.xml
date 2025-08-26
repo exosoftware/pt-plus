@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- VAT Adjustment Norm -->
+    <!-- Relates to fields 40/41 of the VAT statement -->
+    <record id="vat_adjustment_norm_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.vat.adjustment_norm.search</field>
+        <field name="model">l10n_pt.account.vat.adjustment_norm</field>
+        <field name="arch" type="xml">
+            <search string="VAT Adjustment Norm">
+                <field name="name" />
+                <field name="note" />
+            </search>
+        </field>
+    </record>
+    <record id="vat_adjustment_norm_view_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.vat.adjustment_norm.tree</field>
+        <field name="model">l10n_pt.account.vat.adjustment_norm</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="note" />
+                <field name="vat_payable" />
+                <field name="vat_receivable" />
+                <field name="requests_policy" />
+            </tree>
+        </field>
+    </record>
+    <record id="vat_adjustment_norm_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.vat.adjustment_norm.form</field>
+        <field name="model">l10n_pt.account.vat.adjustment_norm</field>
+        <field name="arch" type="xml">
+            <form string="VAT Adjustment Norm">
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        invisible="active"
+                    />
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field
+                                name="name"
+                                placeholder="Legal Norm (ex: Art. 78º, nº 8, alínea b)) ..."
+                            />
+                            <field name="requests_policy" />
+                        </group>
+                        <group>
+                            <field name="vat_receivable" />
+                            <field name="vat_payable" />
+                        </group>
+                    </group>
+                    <label for="note" />
+                    <field name="note" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="vat_adjustment_norm_action_list" model="ir.actions.act_window">
+        <field name="name">VAT Adjustment Norms</field>
+        <field name="res_model">l10n_pt.account.vat.adjustment_norm</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="vat_adjustment_norm_view_tree" />
+        <field name="search_view_id" ref="vat_adjustment_norm_view_search" />
+    </record>
+
+    <menuitem
+        id="menu_action_vat_adjustment_norm_list"
+        parent="account.account_account_menu"
+        action="vat_adjustment_norm_action_list"
+        sequence="110"
+        groups="account.group_account_user"
+    />
+
+</odoo>

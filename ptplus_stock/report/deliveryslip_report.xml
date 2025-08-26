@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Delivery slip Report: change attachment and print names -->
+    <record id="stock.action_report_delivery" model="ir.actions.report">
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field
+            name="attachment"
+        >'{}.pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
+    </record>
+
+    <!-- Delivery slip Preview Report -->
+    <record id="action_report_delivery_preview" model="ir.actions.report">
+        <field name="name">Delivery Slip (preview)</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">ptplus_stock.report_deliveryslip_preview</field>
+        <field name="report_file">ptplus_stock.report_deliveryslip_preview</field>
+        <field name="binding_model_id" ref="model_stock_picking" />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_deliveryslip_preview">
+        <t t-foreach="docs" t-as="o">
+            <t
+                t-set="lang"
+                t-value="o.company_id.sudo().partner_id.lang if o.picking_type_id.code != 'outgoing' or not o.partner_id else o.partner_id.lang"
+            />
+            <t t-call="stock.report_delivery_document" t-lang="lang" />
+        </t>
+    </template>
+
+    <!-- Delivery slip Multi-way Report -->
+    <record id="action_report_delivery_multiway" model="ir.actions.report">
+        <field name="name">Delivery Slip (multi-way)</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus_stock.report_deliveryslip_multiway</field>
+        <field name="report_file">ptplus_stock.report_deliveryslip_multiway</field>
+        <field name="binding_model_id" ref="model_stock_picking" />
+        <field name="binding_type">report</field>
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_deliveryslip_multiway">
+        <t t-foreach="docs.filtered(lambda rec: rec.system_entry_date)" t-as="o">
+            <t
+                t-foreach="o.pt_multiway_tag_list(o.company_id.l10n_pt_multiway_tag_deliveryslip)"
+                t-as="multiway_tag"
+            >
+                <t
+                    t-set="lang"
+                    t-value="o.company_id.sudo().partner_id.lang if o.picking_type_id.code != 'outgoing' or not o.partner_id else o.partner_id.lang"
+                />
+                <t t-call="stock.report_delivery_document" t-lang="lang" />
+            </t>
+        </t>
+    </template>
+
+</odoo>

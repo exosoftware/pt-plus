@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Invoice Report: change attachment and print names -->
+    <record id="account.account_invoices" model="ir.actions.report">
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field
+            name="attachment"
+        >'{}.pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
+    </record>
+    <record id="account.account_invoices_without_payment" model="ir.actions.report">
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field
+            name="attachment"
+        >'{}.pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
+    </record>
+
+
+    <!-- Invoice Preview Report (with payments) -->
+    <record id="action_report_invoice_preview" model="ir.actions.report">
+        <field name="name">Invoices (preview)</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">ptplus.report_invoice_preview</field>
+        <field name="report_file">ptplus.report_invoice_preview</field>
+        <field name="binding_model_id" ref="model_account_move" />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_invoice_preview">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t
+                    t-set="lang"
+                    t-value="o.user_id.sudo().lang if o.move_type in ('in_invoice', 'in_refund') else o.partner_id.lang"
+                />
+                <t t-call="account.report_invoice_document" t-lang="lang" />
+            </t>
+        </t>
+    </template>
+
+    <!-- Invoice Multi-way Report -->
+    <record id="action_report_invoice_multiway" model="ir.actions.report">
+        <field name="name">Invoices (multi-way)</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus.report_invoice_multiway</field>
+        <field name="report_file">ptplus.report_invoice_multiway</field>
+        <field name="binding_model_id" ref="model_account_move" />
+        <field name="binding_type">report</field>
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_invoice_multiway">
+        <t t-call="web.html_container">
+            <t t-foreach="docs.filtered(lambda rec: (rec.system_entry_date))" t-as="o">
+                <t
+                    t-set="lang"
+                    t-value="o.user_id.sudo().lang if o.move_type in ('in_invoice', 'in_refund') else o.partner_id.lang"
+                />
+                <t
+                    t-foreach="o.pt_multiway_tag_list(o.company_id.multiway_tag_invoice)"
+                    t-as="multiway_tag"
+                >
+                    <t t-call="account.report_invoice_document" t-lang="lang" />
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_invoice" inherit_id="account.report_invoice">
+        <xpath expr='//t[@t-call="account.report_invoice_document"]' position="after">
+            <t
+                t-if="o._get_name_invoice_report() == 'ptplus.report_invoice_document'"
+                t-call="ptplus.report_invoice_document"
+                t-lang="lang"
+            />
+        </xpath>
+    </template>
+
+</odoo>

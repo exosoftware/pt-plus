@@ -1,0 +1,934 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-20 20:07+0000\n"
+"PO-Revision-Date: 2023-07-29 18:08+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+#, python-format
+msgid "%s (manual)"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+#, python-format
+msgid "'%s' is not a valid value for field Source Accounts Prefixes!"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.report,print_report_name:ptplus_accounting.action_report_account_move
+msgid "'Journal Entry ' + (object.name or '').replace('/','_') + '.pdf'"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "<strong>Journal:</strong>"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "<strong>Reference:</strong>"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template_line__source_account_prefix
+msgid ""
+"A comma separated list of account prefixes to be used as a filter for the "
+"origin accounts. Ex.: 6,7"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_account
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Account"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_balance_transfer
+msgid "Account Balance Transfer"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_template_form
+msgid "Account Balance Transfer Template"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.action_account_balance_transfer_template_form
+#: model:ir.ui.menu,name:ptplus_accounting.menu_action_account_balance_transfer_template_form
+msgid "Account Balance Transfer Templates"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.action_view_abt_tree
+#: model:ir.ui.menu,name:ptplus_accounting.menu_abt_list
+msgid "Account Balance Transfers"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_chart_template
+msgid "Account Chart Template"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_group
+msgid "Account Group"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__account_prefix
+msgid "Account Prefix"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.account_taxonomy_action_list
+#: model:ir.ui.menu,name:ptplus_accounting.menu_action_account_taxonomy_list
+msgid "Account Taxonomies"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_l10n_pt_account_taxonomy
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Account Taxonomy"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.action_account_taxonomy_setup_wizard
+#: model:ir.model,name:ptplus_accounting.model_l10n_pt_account_taxonomy_setup_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid "Account Taxonomy Setup Wizard"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Account balance transfer"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__active
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__active
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__active
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Active"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_debit_note
+msgid "Add Debit Note wizard"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__j
+msgid "Adjustment"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
+msgid "Archived"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_l10n_pt_account_asset_legal_rate
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_asset_legal_rate_view_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_asset_legal_rate_view_search
+msgid "Asset Legal Rate"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.account_asset_legal_rate_action_list
+#: model:ir.actions.act_window,name:ptplus_accounting.action_asset_legal_rate_form
+msgid "Asset Legal Rates"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_balance_transfer_template
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__template_id
+msgid "Balance Transfer Template"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_balance_transfer_template_line
+msgid "Balance Transfer Template Line"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__line_ids
+msgid "Balance Transfer Template Lines"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__ac
+msgid "Balanço - Ativo Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__anc
+msgid "Balanço - Ativo Não Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__apc
+msgid "Balanço - Ativo ou Passivo Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__apnc
+msgid "Balanço - Ativo ou Passivo Não Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__c
+msgid "Balanço - Capital"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__pc
+msgid "Balanço - Passivo Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__pnc
+msgid "Balanço - Passivo Não Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+#, python-format
+msgid ""
+"Can't validate document %s: a VAT adjustment request number is mandatory "
+"when norm '%s' is used."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__chained
+msgid "Chained"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_svat_class
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__svat_class
+msgid "Class"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid "Close"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__code
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__code
+msgid "Code"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Confirm"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__manual_move
+msgid "Create Manual Move"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__manual_move
+msgid "Create an empty move so that manual lines can be inserted"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Credit"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__credit_account_id
+msgid "Credit Destination"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__c
+msgid "Credor"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__ca
+msgid "Credor antes de apuramento de resultados"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__cc
+msgid "Credor antes de transferência para inventários"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__move_date
+msgid "Date to be set on the account balance transfer move"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Debit"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__debit_account_id
+msgid "Debit Destination"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__gr
+msgid "Demonstração Resultados - Gastos menos Rendimentos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__rg
+msgid "Demonstração Resultados - Rendimentos menos Gastos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__depreciation_rate
+msgid "Depreciation rate (%)"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__note
+msgid "Description"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__d
+msgid "Devedor"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__da
+msgid "Devedor antes de apuramento de resultados"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__dc
+msgid "Devedor antes de transferência para inventários"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__done
+msgid "Done"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__date_to
+msgid "End Date"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Execute"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_expected_balance
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__expected_balance
+msgid "Expected Balance"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Filters"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__r
+msgid "Fiscal Year Regularization"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__vat_payable
+msgid ""
+"If True, it will allow you to apply the adjustment norm on transactions "
+"generating payable VAT, i.e. your debit notes to your customers or your "
+"supplier's refunds"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__vat_receivable
+msgid ""
+"If True, it will allow you to apply the adjustment norm on transactions "
+"generating receivable VAT, i.e. your refunds to your customers or your "
+"supplier's debit notes"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the account "
+"balance transfer template without removing it."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the "
+"adjustment norm without removing it."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_taxonomy__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the taxonomy "
+"line without removing it."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__vat_receivable
+msgid "In favor of the Company"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__vat_payable
+msgid "In favor of the State"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__in_progress
+msgid "In progress"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Inactive"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/l10n_pt_account_asset_legal_rate.py:0
+#, python-format
+msgid "Invalid depreciation rate percentage on legal rate %s"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+#, python-format
+msgid ""
+"It is mandatory to indicate a VAT Adjustment Norm on invoice correction "
+"documents"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_journal
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__journal_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_journal.py:0
+#, python-format
+msgid "Journal %s: Transaction Type cannot be empty."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.report,name:ptplus_accounting.action_report_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_move
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_taxonomy_domain
+msgid "L10N Pt Taxonomy Domain"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Label"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
+msgid "Legal Norm (ex: Art. 78º, nº 8, alínea b)) ..."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_group__level
+msgid "Level"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_vat_adjustment_norm__requests_policy__mandatory
+msgid "Mandatory"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__manual_move_id
+msgid "Manual Move"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__move_date
+msgid "Move Date"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Moves created by the operation"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__name
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__name
+msgid "Name"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_vat_adjustment_norm__requests_policy__optional
+msgid "Optional"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__reference__o
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Other References"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__a
+msgid "P/L Calculation"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Partner"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+#, python-format
+msgid "Please define an Expense Refund Account for product %s"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+#, python-format
+msgid "Please define an Invoice Refund Account for product %s"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_bank_statement_line__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_reversal__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_payment__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__requests_policy
+msgid "Previous Requests Policy"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__n
+msgid "Regular"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__reference__s
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "SNC Base"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__reference__m
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "SNC Microentities"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__s1c
+msgid "Saldo Devedor ou Credor a representar NUM campo"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__s2c
+msgid "Saldo Devedor ou Credor a representar em DOIS campos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__sc
+msgid ""
+"Saldo Devedor ou Credor antes de transferência para inventários|rendimentos|"
+"gastos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__expected_balance__sa1c
+msgid ""
+"Saldo Devedor ou Credor, antes de apuramento de resultados, a representar "
+"NUM campo"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid "Setup"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Show active taxonomy lines"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Show inactive document lines"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__source_account_prefix
+msgid "Source Accounts Prefixes"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__date_from
+msgid "Start Date"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__state
+msgid "State"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__state
+msgid "Status"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_taxonomy_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_form_pt
+msgid "Taxonomy"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_res_company__l10n_pt_taxonomy_ref
+msgid "Taxonomy Ref."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__reference
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
+msgid "Taxonomy Reference"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/wizards/l10n_pt_account_taxonomy_setup_wizard.py:0
+#, python-format
+msgid "Taxonomy changed from %s to %s on account %s"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__template_id
+msgid "Template"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_account__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+#, python-format
+msgid "The balance transfer move is required"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_taxonomy__reference
+msgid ""
+"The chart of accounts used as a template on the company. Please consult "
+"field 2.1.1 of the SAF-T PT specs for more details."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.constraint,message:ptplus_accounting.constraint_account_group_code_prefix_company_uniq
+msgid "The groups's code prefixes must be unique per company !"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__journal_id
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template__journal_id
+msgid "The journal that will hold the account balance transfer moves."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid ""
+"This wizard will try to find a taxonomy code for each selected\n"
+"                    account. If there's only one possible code, it will be "
+"assigned to the\n"
+"                    account. A warning will be given in case the new "
+"taxonomy code is different\n"
+"                    from the previous one"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.report_account_move_document
+msgid "Total"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_journal__l10n_pt_transaction_type
+msgid "Transaction Type"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_template_form
+msgid "Transfer Mapping"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__move_id
+msgid "Transfer Move"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_template_form
+msgid "Transfer Rules"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_bank_statement_line__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,help:ptplus_accounting.field_account_move__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,help:ptplus_accounting.field_account_move_reversal__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,help:ptplus_accounting.field_account_payment__l10n_pt_vat_adjustment_requests_policy
+#: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__requests_policy
+msgid ""
+"Use 'optional' to allow a tax authorities request number to be inserted in "
+"the refund form. Use 'mandatory' to make sure the document will only "
+"validate if the number is inserted. Leave empty if the request number "
+"doesn't apply to the specific norm"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model,name:ptplus_accounting.model_l10n_pt_account_vat_adjustment_norm
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_bank_statement_line__l10n_pt_vat_adjustment_norm_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_debit_note__l10n_pt_vat_adjustment_norm_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move__l10n_pt_vat_adjustment_norm_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_reversal__l10n_pt_vat_adjustment_norm_id
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_payment__l10n_pt_vat_adjustment_norm_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_search
+msgid "VAT Adjustment Norm"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.actions.act_window,name:ptplus_accounting.vat_adjustment_norm_action_list
+#: model:ir.ui.menu,name:ptplus_accounting.menu_action_vat_adjustment_norm_list
+msgid "VAT Adjustment Norms"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_bank_statement_line__l10n_pt_vat_adjustment_request_number
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move__l10n_pt_vat_adjustment_request_number
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_reversal__l10n_pt_vat_adjustment_request_number
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_payment__l10n_pt_vat_adjustment_request_number
+msgid "VAT Adjustment Request Number"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_is_virtual
+msgid "Virtual"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_account__l10n_pt_is_virtual
+msgid ""
+"Virtual accounts are accounts whose code doesn't start with an 1, 2, 3, 4, "
+"5, 6, 7 or 8"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__warnings
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_account_taxonomy_setup_wizard
+msgid "Warnings"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template_line__chained
+msgid ""
+"When set to True, the transfer operation line will get the balance from "
+"values obtained in previous lines instead of regular G/L accounts."
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+#, python-format
+msgid ""
+"You cannot delete transfer operations which have 'in progress' or 'done' "
+"states. Please cancel them first."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy_setup_wizard__state__done
+msgid "done"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy_setup_wizard__state__select
+msgid "select"
+msgstr ""

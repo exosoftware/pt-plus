@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- MIS Report form ! -->
+    <record id="mis_report_view_form" model="ir.ui.view">
+        <!-- <field name="name">account.invoice.form</field>  -->
+        <field name="model">mis.report</field>
+        <field name="inherit_id" ref="mis_builder.mis_report_view_form" />
+        <field name="arch" type="xml">
+            <field name="style_id" position="after">
+                <field name="l10n_pt_autogen" />
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page string="Auto Generation" invisible="not l10n_pt_autogen">
+                    <group col="4">
+                        <field name="l10n_pt_autogen_expression" />
+                        <field name="l10n_pt_autogen_visibility" />
+                        <field name="l10n_pt_autogen_totals" />
+                        <field name="l10n_pt_autogen_tainted" />
+                    </group>
+                    <button
+                        string="Generate Report"
+                        type="object"
+                        name="generate_report"
+                        class="btn btn-link p-0"
+                        icon="fa-gears"
+                        colspan="2"
+                    />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
