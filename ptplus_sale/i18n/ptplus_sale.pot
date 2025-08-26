@@ -1,0 +1,323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Exo PT+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-08 11:16+0000\n"
+"PO-Revision-Date: 2024-11-08 11:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid ""
+"<span class=\"o_form_label\">Multi-way Reports</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Request Date:</strong>"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Source Doc:</strong>"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__atcud
+msgid ""
+"A unique code that identifies a particular fiscal document in the Tax "
+"Authority database."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__atcud
+msgid "ATCUD"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Are you sure you want to cancel the document?"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__cc
+msgid "Consignment Credit"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fc
+msgid "Consignment Invoice"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash
+msgid "Digital signature"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Document Type"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__system_entry_date
+msgid "Document Validation Timestamp"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_status
+msgid "Fiscal Doc. Status"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_fiscal_document_type
+msgid "Fiscal Document Type"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_date_issued
+msgid "Issue Date"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Issue Doc."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_update
+msgid "Last State Change"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_uid
+msgid "Last state changed by"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid ""
+"Lock and issue the document so that it can be printed or sent to the "
+"partner."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__order
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__ne
+msgid "Order"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_quotation_id
+msgid "Origin Quotation"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__l10n_pt_multiway_tag_sale__orig_copy
+msgid "Original and Copy"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__l10n_pt_multiway_tag_sale__orig_dup
+msgid "Original and Duplicate"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__l10n_pt_multiway_tag_sale__orig_dup_trip
+msgid "Original, Duplicate and Triplicate"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Portugal"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash_control
+msgid "Private key version"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__pf
+msgid "Proforma Invoice"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__or
+msgid "Quotation"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_order_id
+msgid "Related Order"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__section
+msgid "SAF/T Section"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.actions.report,name:ptplus_sale.action_report_saleorder_multiway
+msgid "Sale Document (multi-way)"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.actions.report,name:ptplus_sale.action_report_saleorder_preview
+msgid "Sale Document (preview)"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_multiway_tag_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_multiway_tag_sale
+msgid "Sale Report Multi-way Tags"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Sales Doc."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__source_billing
+msgid "Source Method"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__cm
+msgid "Table Info"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Tags to differentiate document copies"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_date_issued
+msgid ""
+"The date on which the document has been issued. This date is only relevant "
+"for legal purposes. The next similar document must be issued as of this date"
+" or later."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_order_id
+msgid "The order created from this quotation"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_quotation_id
+msgid "The reference of the quotation that originated the order"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid ""
+"These tags will be printed on every multi-way document report copy. The "
+"choice also sets the number of desired copies."
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__type
+msgid "Type"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__section__work
+msgid "Working Documents"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fo
+msgid "Worksheet"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.actions.report,print_report_name:ptplus_sale.action_report_saleorder_multiway
+msgid "object.pt_get_fullname(lang=object.partner_id.lang)"
+msgstr ""

@@ -1,0 +1,4307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.at.gov.pt/schemas/dpiva" targetNamespace="http://www.at.gov.pt/schemas/dpiva"
+           elementFormDefault="qualified">
+    <xs:element name="dpiva" type="dpivaType"/>
+    <xs:complexType name="dpivaType">
+        <xs:sequence>
+            <xs:element name="rosto" type="rostoFormType" minOccurs="1" maxOccurs="1">
+            </xs:element>
+            <xs:element name="anexoCampo40R" type="anexoCampo40RFormType" minOccurs="0" maxOccurs="1">
+            </xs:element>
+            <xs:element name="anexoCampo41R" type="anexoCampo41RFormType" minOccurs="0" maxOccurs="1">
+            </xs:element>
+            <xs:element name="anexoI" type="anexoIFormType" minOccurs="0" maxOccurs="1">
+            </xs:element>
+            <xs:element name="anexoR" type="anexoRFormType" minOccurs="0" maxOccurs="unbounded">
+                <xs:unique name="anexoRUniqueId">
+                    <xs:selector xpath="."/>
+                    <xs:field xpath="@id"/>
+                </xs:unique>
+            </xs:element>
+            <xs:element name="clientes" type="clientesFormType" minOccurs="0" maxOccurs="unbounded">
+                <xs:unique name="clientesUniqueId">
+                    <xs:selector xpath="."/>
+                    <xs:field xpath="@id"/>
+                </xs:unique>
+            </xs:element>
+            <xs:element name="fornecedores" type="fornecedoresFormType" minOccurs="0" maxOccurs="unbounded">
+                <xs:unique name="fornecedoresUniqueId">
+                    <xs:selector xpath="."/>
+                    <xs:field xpath="@id"/>
+                </xs:unique>
+            </xs:element>
+            <xs:element name="regularizacoes" type="regularizacoesFormType" minOccurs="0" maxOccurs="unbounded">
+                <xs:unique name="regularizacoesUniqueId">
+                    <xs:selector xpath="."/>
+                    <xs:field xpath="@id"/>
+                </xs:unique>
+            </xs:element>
+
+        </xs:sequence>
+        <xs:attribute name="version" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="rostoFormType">
+        <xs:sequence>
+            <xs:element name="apuramento" type="rostoApuramentoSectionType"/>
+            <xs:element name="desenvolvimento" type="rostoDesenvolvimentoSectionType"/>
+            <xs:element name="inicio" type="rostoInicioSectionType"/>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RFormType">
+        <xs:sequence>
+            <xs:element name="regularizacoes" type="anexoCampo40RRegularizacoesSectionType"/>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RFormType">
+        <xs:sequence>
+            <xs:element name="regularizacoes" type="anexoCampo41RRegularizacoesSectionType"/>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoIFormType">
+        <xs:sequence>
+            <xs:element name="transIntracomun" type="anexoITransIntracomunSectionType"/>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoRFormType">
+        <xs:sequence>
+            <xs:element name="apuramento" type="anexoRApuramentoSectionType"/>
+            <xs:element name="desenvolvimento" type="anexoRDesenvolvimentoSectionType"/>
+
+        </xs:sequence>
+        <xs:attribute name="id" type="formIdType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="clientesFormType">
+        <xs:sequence>
+            <xs:element name="relacao" type="clientesRelacaoSectionType"/>
+
+        </xs:sequence>
+        <xs:attribute name="id" type="formIdType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresFormType">
+        <xs:sequence>
+            <xs:element name="relacao" type="fornecedoresRelacaoSectionType"/>
+
+        </xs:sequence>
+        <xs:attribute name="id" type="formIdType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="regularizacoesFormType">
+        <xs:sequence>
+            <xs:element name="relacao" type="regularizacoesRelacaoSectionType"/>
+
+        </xs:sequence>
+        <xs:attribute name="id" type="formIdType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="rostoApuramentoSectionType">
+        <xs:sequence>
+            <xs:element name="btBensUEArtigo15" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 14.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUEArtigo22" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 15.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUELiquidadoDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 12.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 10.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btImportDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 18.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btOperacoesIsentasComDeducao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 8.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btOperacoesIsentasSemDeducao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 9.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btServicosUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 16.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 5.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 1.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 90.
+
+                            Total da base tributável
+
+                            1 + 5 + 3 + ... + 10 + 16
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTransmissoesUEIsentas" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 7.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="excessoAReportar" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 96.
+
+                            Excesso a reportar
+
+                            Valor a inscrever no campo 61 da declaração do período seguinte, se apresentada dentro do prazo legal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="excessoAReportarPeriodoAnterior" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 61.
+
+                            A favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAEntregar" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 93.
+
+                            Imposto a entregar ao Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaARecuperar" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 94.
+
+                            Crédito de imposto a recuperar
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaBensUELiquidadoDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 13.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaBensUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 11.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelAnexoR1" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 65.
+
+                            Imposto dedutível
+
+                            Neste campo deve inscrever o imposto dedutível, correspondente ao valor inscrito no campo 63 do Anexo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelAnexoR2" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 67.
+
+                            Imposto dedutível
+
+                            Neste campo deve inscrever o imposto dedutível, correspondente ao valor inscrito no campo 63 do Anexo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelAnexosRTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Total dos campos 65 e 67
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 23.
+
+                            A favor do sujeito passivo à taxa intermédia
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 22.
+
+                            A favor do sujeito passivo à taxa normal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 21.
+
+                            A favor do sujeito passivo à taxa reduzida
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelImobilizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 20.
+
+                            A favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelOutros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 24.
+
+                            A favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Total dos campos 20 a 24
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaFavorEstadoTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 92.
+
+                            Total imposto a favor do Estado
+
+                            2 + 6 + 4 + 11 + 17 + ... + 68
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaFavorSujPassivoTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 91.
+
+                            Total imposto a favor do sujeito passivo
+
+                            20 + 21 + ... + 81
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaImportDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 19.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaLiquidadoAnexoR1" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 66.
+
+                            Imposto liquidado
+
+                            Neste campo deve inscrever o imposto liquidado correspondente ao valor inscrito no campo 64 do Anexo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaLiquidadoAnexoR2" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 68.
+
+                            Imposto liquidado
+
+                            Neste campo deve inscrever o imposto liquidado correspondente ao valor inscrito no campo 64 do Anexo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaServicosUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 17.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 6.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="reembolso" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 95.
+
+                            Solicito o reembolso
+
+                            A opção 'Solicito o reembolso' veda a possibilidade de utilizar em declarações seguintes o respetivo valor como 'Excesso a reportar', salvo comunicação em contrário da DSR (situações de indeferimento de reembolsos)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="regularizacoesFavorEstado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 41.
+
+                            A favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="regularizacoesFavorSujPassivoComunicadasCobranca" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 81.
+
+                            A favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="regularizacoesFavorSujPassivoNaoComunicadasCobranca" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 40.
+
+                            A favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="temOperacoesAdquirenteComLiqImposto" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="temOperacoesComLiqImposto" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Tem operações em que liquidou e/ou autoliquidou imposto?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temOperacoesDedutiveis" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Tem imposto dedutível e/ou regularizações?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temOperacoesSemLiqImposto" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Tem operações em que não liquidou imposto?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoDesenvolvimentoSectionType">
+        <xs:sequence>
+            <xs:element name="aquisicaoSujPassivoCorticaProdutosSivicola" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 107.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="bensServicosParaPessoalEmpresa" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 103.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="impostoLiquidado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 264.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoConstrucaoCivil" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 102.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoEmissaoGasesEfEstufa" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 105.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoImoveisRenunciaIsencao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 100.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoOuro" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 99.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoSucatas" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 101.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesArtigo42" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 104.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesPTFeitasPorContribuintesForaUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 98.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesPTFeitasPorContribuintesUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 97.
+
+                            Base tributável
+
+                            (não inclui operações mencionadas no campo 16)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="totalQuadro06A" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 106.
+
+                            Total Quadro 06-A
+
+                            97+...+105
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="valorOperacoesAcessoriasBancariasFinanceirasSeguros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 262.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="valorOperacoesIsentasEAcessoriasSujIMT" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 263.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoInicioSectionType">
+        <xs:sequence>
+            <xs:element name="anoDeclaracao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apresentouDeclRecapitulativa" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Assinale, se, no período de referência, apresentou alguma declaração recapitulativa
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="atividadesImobiliarias" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Actividades Imobiliárias (modelo não aprovado)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataCessacaoAtividade" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Data de cessação da actividade
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataInicioAtividade" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Data de início de actividade
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataOcorrenciaImpedimento" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Data da ocorrência do facto
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataCessacaoImpedimento" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Data da cessação do facto
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="factoImpedimento" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Facto que determinou o justo impedimento
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="localizacaoSede" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Localização da Sede
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nifCC" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF do Contabilista Certificado
+
+                            Preenchimento obrigatório caso disponha ou seja obrigado a dispor de contabilista certificado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="periodoDeclaracao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Período declarativo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prazo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prazo da declaração
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="primeiraDeclaracao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            É a primeira declaração periódica que apresenta?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="semOperacoes" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Se no período a que respeita a declaração, não realizou operações passivas nem ativas que devam constar do quadro 06, assinale neste quadro e passe já ao quadro 20
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temAnexoRAcores" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Açores
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temAnexoRContinente" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Continente
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temAnexoRMadeira" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Madeira
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ultimaDeclaracao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            É a última declaração periódica que apresenta?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesSectionType">
+        <xs:sequence>
+            <xs:element name="btOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3B.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesArt23A26" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3A.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesCreditoNaoSuperior750Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="campo40Total" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="certificacoesROC" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="certificacoesROCItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesCertificacoesRocItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ivaOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4B.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizadoArt23A26" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4A.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizadoCreditoNaoSuperior750Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="lista78ANum2A" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lista78ANum2AItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesLista78ANum2AItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="lista78ANum4" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lista78ANum4Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesLista78ANum4ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="lista78BNum4" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lista78BNum4Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesLista78BNum4ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum2E3E6" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum2E3E6Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesListaNum2E3E6ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum7Antes2013" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum7Antes2013Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesListaNum7Antes2013ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum7Em2013EDepois" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum7Em2013EDepoisItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesListaNum7Em2013EDepoisItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum8BCDE" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum8BCDEItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo40RRegularizacoesListaNum8BcdeItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesCertificacoesRocItemType">
+        <xs:sequence>
+            <xs:element name="nifROC" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal do ROC
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nifCCI" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal do CCI
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesLista78ANum2AItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="numeroPedidoPrevio" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número do pedido prévio
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesLista78ANum4ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesLista78BNum4ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="numeroPedidoPrevio" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número do pedido prévio
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesListaNum2E3E6ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesListaNum7Antes2013ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesListaNum7Em2013EDepoisItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo40RRegularizacoesListaNum8BcdeItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesSectionType">
+        <xs:sequence>
+            <xs:element name="btOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3B.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesArt23A26" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3A.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesArt6Decreto198" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3C.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesDecreto192017" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3D.
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="campo41Total" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4B.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizadoArt23A26" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4A.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizadoArt6Decreto198" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4C.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizadoDecreto192017" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4D.
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="lista78CNum1" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lista78CNum1Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesLista78CNum1ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="lista78CNum3" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="lista78CNum3Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesLista78CNum3ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum12" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum12Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesListaNum12ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum3E4E6" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum3E4E6Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesListaNum3E4E6ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum7" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum7Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesListaNum7ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaNum8D" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaNum8DItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoCampo41RRegularizacoesListaNum8DItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesLista78CNum1ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroPedidoPrevio" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número do pedido prévio
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesLista78CNum3ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroPedidoPrevio" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número do pedido prévio
+
+                            (caso exista)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesListaNum12ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesListaNum3E4E6ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesListaNum7ItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoCampo41RRegularizacoesListaNum8DItemType">
+        <xs:sequence>
+            <xs:element name="artigo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Artigo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoITransIntracomunSectionType">
+        <xs:sequence>
+            <xs:element name="btIsentasUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 19.
+
+                            Soma dos valores inscritos no campo 7 da declaração periódica e dos anexos R eventualmente apresentados
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="linhasNaoCompreendidasNoTipo4Total" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 10.
+
+                            Soma (apenas dos valores que respeitam às operações tipificadas na coluna 5 com 1)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="linhasTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 9.
+
+                            Subtotais
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="transmissoesUE" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="transmissoesUEItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="anexoITransIntracomunTransmissoesUeItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vendasMeiosTransporteAParticularesUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 11.
+
+                            Total das vendas de meios de transporte novos a particulares e equiparados de outros estados membros
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoITransIntracomunTransmissoesUeItemType">
+        <xs:sequence>
+            <xs:element name="nifAdquirente" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF do Adquirente
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="paisDestino" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            País de destino
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tipoOperacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Tipo de Operação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="valorEuros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor em Euro
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="anexoRApuramentoSectionType">
+        <xs:sequence>
+            <xs:element name="btBensUEArtigo15" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 14.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUEArtigo22" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 15.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUELiquidadoDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 12.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btBensUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 10.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btImportDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 18.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btOperacoesIsentasComDeducao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 8.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btOperacoesIsentasSemDeducao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 9.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btServicosUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 16.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 5.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 1.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 62.
+
+                            Total da base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btTransmissoesUEIsentas" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 7.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaBensUELiquidadoDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 13.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaBensUETotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 11.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 23.
+
+                            Imposto a favor do Suj. Passivo à taxa intermédia
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 22.
+
+                            Imposto a favor do Suj. Passivo à taxa normal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelExistenciasTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 21.
+
+                            Imposto a favor do Suj. Passivo à taxa reduzida
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelImobilizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 20.
+
+                            Imposto a favor do Suj. Passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaDedutivelOutros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 24.
+
+                            Imposto a favor do Suj. Passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaFavorEstadoTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 64.
+
+                            Total do imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaFavorSujPassivoTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 63.
+
+                            Total do imposto a favor do sujeito passivo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaImportDeclarante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 19.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaServicosUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 17.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaIntermedia" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 6.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaNormal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaTaxaReduzida" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.
+
+                            Imposto a favor do Estado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="temOperacoesAdquirenteComLiqImposto" type="xs:token" minOccurs="0">
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="anexoRDesenvolvimentoSectionType">
+        <xs:sequence>
+            <xs:element name="aquisicaoSujPassivoCorticaProdutosSivicola" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 75.
+
+                            Base tributável
+
+                            [Alínea m) do n.º 1 do art.º 2.º do CIVA]
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="bensServicosParaPessoalEmpresa" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 71.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="impostoLiquidado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 264.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoConstrucaoCivil" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 70.
+
+                            Base tributável
+
+                            [Alínea j) do n.º 1 do art.º 2.º do CIVA]
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoEmissaoGasesEfEstufa" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 73.
+
+                            Base tributável
+
+                            [Alínea l) do n.º 1 do art.º 2.º do CIVA]
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoImoveisRenunciaIsencao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 68.
+
+                            Base tributável
+
+                            (Decreto-Lei 21/2007)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoOuro" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 67.
+
+                            Base tributável
+
+                            (Decreto-Lei 362/99)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="inversaoSujPassivoSucatas" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 69.
+
+                            Base tributável
+
+                            [Alínea l) do n.º 1 do art.º 2.º do CIVA]
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesArtigo42" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 72.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesPTFeitasPorContribuintesForaUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 66.
+
+                            Base tributável
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesPTFeitasPorContribuintesUE" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 65.
+
+                            Base tributável
+
+                            (não inclui operações mencionadas no campo 16)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="totalQuadro06A" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 74.
+
+                            Soma do quadro 06-A
+
+                            65+...+73
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="clientesRelacaoSectionType">
+        <xs:sequence>
+            <xs:element name="anoDeducao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="exportacaoBens" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="exportacaoBensItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="clientesRelacaoExportacaoBensItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="operacoesClientesNacionais" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="operacoesClientesNacionaisItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="clientesRelacaoOperacoesClientesNacionaisItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="operacoesClientesNacionaisMenores5000Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesNoEstrangeiro" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="outrasOperacoesIsentasComDireitoDeducao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 5.
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="periodoDeducao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="total" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 6.
+
+                            Valor Total
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="clientesRelacaoExportacaoBensItemType">
+        <xs:sequence>
+            <xs:element name="numeroDeclaracaoExportacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Nº de Identificação da Declaração de Exportação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="valorEuros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="clientesRelacaoOperacoesClientesNacionaisItemType">
+        <xs:sequence>
+            <xs:element name="nifCliente" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="valorEuros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoSectionType">
+        <xs:sequence>
+            <xs:element name="anoDeducao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoesMenores5000Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições
+
+                            (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btAquisicoesTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Total Valor das Aquisições
+
+                            (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="campo20" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="campo20Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="fornecedoresRelacaoCampo20ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="campo21" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="campo21Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="fornecedoresRelacaoCampo21ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="campo22" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="campo22Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="fornecedoresRelacaoCampo22ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="campo23" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="campo23Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="fornecedoresRelacaoCampo23ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="campo24" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="campo24Item" minOccurs="0" maxOccurs="unbounded"
+                                    type="fornecedoresRelacaoCampo24ItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ivaAquisicoesMenores5000Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoesTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Total IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="periodoDeducao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoCampo20ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroLiquidacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número da Liquidação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prefixoNIF" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prefixo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoCampo21ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroLiquidacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número da Liquidação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prefixoNIF" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prefixo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoCampo22ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroLiquidacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número da Liquidação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prefixoNIF" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prefixo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoCampo23ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroLiquidacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número da Liquidação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prefixoNIF" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prefixo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="fornecedoresRelacaoCampo24ItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Valor das Aquisições (IVA excluído)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaAquisicoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Deduzido
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numeroLiquidacao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número da Liquidação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="prefixoNIF" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Prefixo
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="regularizacoesRelacaoSectionType">
+        <xs:sequence>
+            <xs:element name="anoRegularizacoes" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 6.
+
+                            Base de Incidência
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesAlteracaoProRata" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Base de Incidência
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesMenores100Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.
+
+                            Base de Incidência
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="btRegularizacoesTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 8.
+
+                            Total da base de Incidência
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaOutrasRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 7.
+
+                            IVA Regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizacoesAlteracaoProRata" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 5.
+
+                            IVA Regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizacoesMenores100Euros" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3.
+
+                            IVA Regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizacoesTotal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 9.
+
+                            Total do IVA Regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="operacoesSujPassivosNacionais" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="operacoesSujPassivosNacionaisItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="regularizacoesRelacaoOperacoesSujPassivosNacionaisItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="periodoRegularizacoes" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="regularizacoesRelacaoOperacoesSujPassivosNacionaisItemType">
+        <xs:sequence>
+            <xs:element name="anoEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacao" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA Regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mesEmissao" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Mês
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nif" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
+    </xs:complexType>
+
+    <xs:simpleType name="nifType">
+        <xs:restriction base="xs:long">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ibanType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[A-Z]{2}[0-9]{2}[a-zA-Z0-9]{1,30}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ibanPTType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="PT50[0-9]{21}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="formIdType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[^\\/]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

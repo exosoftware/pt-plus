@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_account_move_document">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
+            <div class="page">
+                <h3>Journal Entry <span t-field="o.name" /></h3>
+                <div id="informations" class="row mt32 mb32">
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.date">
+                        <strong>Date:</strong>
+                        <p class="m-0" t-field="o.date" />
+                    </div>
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.journal_id">
+                        <strong>Journal:</strong>
+                        <p class="m-0 text-nowrap" t-field="o.journal_id" />
+                    </div>
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref">
+                        <strong>Reference:</strong>
+                        <p class="m-0 text-nowrap" t-field="o.ref" />
+                    </div>
+                </div>
+
+                <table class="table table-sm o_main_table" style="font-size: 10pt;">
+                    <thead>
+                        <tr>
+                            <th>Account</th>
+                            <th>Partner</th>
+                            <th>Label</th>
+                            <!--<th>Due Date</th>-->
+                            <th class="text-right">Debit</th>
+                            <th class="text-right">Credit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.line_ids" t-as="l">
+                            <td><span t-field="l.account_id" /></td>
+                            <td><span t-field="l.partner_id" /></td>
+                            <td><span t-field="l.name" /></td>
+                            <!--<td><span t-field="l.date_maturity"/></td>-->
+                            <td class="text-right"><span t-field="l.debit" /></td>
+                            <td class="text-right"><span t-field="l.credit" /></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="border-top">Total</td>
+                            <td class="text-right bg-black-50"><span
+                                    t-field="o.amount_total"
+                                /></td>
+                            <td class="text-right"><span
+                                    t-field="o.amount_total"
+                                /></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_account_move">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t
+                    t-call="ptplus_accounting.report_account_move_document"
+                    t-lang="o.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+
+</odoo>
