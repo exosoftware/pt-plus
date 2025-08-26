@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_eac_every_partner" model="res.groups">
+        <field name="name">Show EAC info on every partner</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+
+    <record model="ir.model.access" id="company_eac_user">
+        <field name="name">l10n_pt.company.eac user</field>
+        <field name="model_id" ref="model_l10n_pt_company_eac" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    <record model="ir.model.access" id="company_eac_manager">
+        <field name="name">l10n_pt.company.eac manager</field>
+        <field name="model_id" ref="model_l10n_pt_company_eac" />
+        <field name="group_id" ref="base.group_partner_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record model="ir.model.access" id="res_partner_eac_user">
+        <field name="name">l10n_pt.res.partner.eac user</field>
+        <field name="model_id" ref="model_l10n_pt_res_partner_eac" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+</odoo>

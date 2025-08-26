@@ -1,0 +1,134 @@
+from openupgradelib import openupgrade
+
+from odoo import SUPERUSER_ID, api
+
+set_to_update = [
+    "mis_profit_loss_pt_base_kpi_TIT1",
+    "mis_profit_loss_pt_base_kpi_A00001",
+    "mis_profit_loss_pt_base_kpi_A00002",
+    "mis_profit_loss_pt_base_kpi_A00004",
+    "mis_profit_loss_pt_base_kpi_A00005",
+    "mis_profit_loss_pt_base_kpi_A00006",
+    "mis_profit_loss_pt_base_kpi_A00007",
+    "mis_profit_loss_pt_base_kpi_A00008",
+    "mis_profit_loss_pt_base_kpi_A00010",
+    "mis_profit_loss_pt_base_kpi_A00011",
+    "mis_profit_loss_pt_base_kpi_A00012",
+    "mis_profit_loss_pt_base_kpi_A00014",
+    "mis_profit_loss_pt_base_kpi_A00015",
+    "mis_profit_loss_pt_base_kpi_A00016",
+    "mis_profit_loss_pt_base_kpi_A00017",
+    "mis_profit_loss_pt_base_kpi_A00018",
+    "mis_profit_loss_pt_base_kpi_A00019",
+    "mis_profit_loss_pt_base_kpi_A00021",
+    "mis_profit_loss_pt_base_kpi_A00022",
+    "mis_profit_loss_pt_base_kpi_A00023",
+    "mis_profit_loss_pt_base_kpi_A00024",
+    "mis_profit_loss_pt_base_kpi_A00025",
+    "mis_profit_loss_pt_base_kpi_A00026",
+]
+
+xmlids = [
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_TIT1",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_tit1",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00001",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00001",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00002",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00002",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00004",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00004",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00005",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00005",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00006",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00006",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00007",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00007",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00008",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00008",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00010",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00010",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00011",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00011",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00012",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00012",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00014",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00014",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00015",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00015",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00016",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00016",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00017",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00017",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00018",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00018",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00019",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00019",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00021",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00021",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00022",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00022",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00023",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00023",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00024",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00024",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00025",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00025",
+    ),
+    (
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_A00026",
+        "ptplus_accounting_mis_reports_base.mis_profit_loss_pt_base_kpi_a00026",
+    ),
+]
+
+
+@openupgrade.migrate()
+def migrate(cr, version):
+    env = api.Environment(cr, SUPERUSER_ID, {})
+    if "mis_profit_loss_pt_base_kpi_TIT1" in env["mis.report.kpi"]._fields:
+        openupgrade.set_xml_ids_noupdate_value(
+            env, "ptplus_accounting_mis_reports_base", set_to_update, False
+        )
+        openupgrade.rename_xmlids(cr, xmlids)

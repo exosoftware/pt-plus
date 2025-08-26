@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fiscal_document_type,fiscal.document.type,model_fiscal_document_type,base.group_user,1,0,0,0
+access_fiscal_document_type_manager,fiscal.document.type,model_fiscal_document_type,account.group_account_manager,1,1,1,1
+access_dataport_log,dataport.log user,model_dataport_log,account.group_account_invoice,1,0,0,0
+access_dataport_log_manager,dataport.log manager,model_dataport_log,account.group_account_manager,1,1,1,1
+access_dataport_export,dataport.export user,model_dataport_export,account.group_account_invoice,1,0,0,0
+access_dataport_import,dataport.import user,model_dataport_import,account.group_account_invoice,1,0,0,0
+access_wizard_webservice_failure,wizard.webservice.failure user,model_wizard_webservice_failure,base.group_user,1,1,1,1
+access_wizard_webservice_series_comm,wizard.webservice.series.comm user,model_wizard_webservice_series_comm,base.group_user,1,1,1,1

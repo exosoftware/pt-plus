@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0"> <!-- TODO: change this flag -->
+
+    <!-- MIS Report: Cashflow IES 04C -->
+    <record id="mis_cashflow_ies04c" model="mis.report">
+        <field name="name">Cashflow Statement</field>
+        <field name="description">Cashflow Statement (IES 04-C)</field>
+    </record>
+
+    <!-- MIS Report Lines -->
+    <record id="mis_cashflow_ies04c_operational" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">operational</field>
+        <field name="description">FLUXOS DE CAIXA DAS ATIVIDADES OPERACIONAIS</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_2" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5301" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5301</field>
+        <field name="description">[A5301] Recebimentos de clientes</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rcli')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="mis_cashflow_ies04c_a5302" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5302</field>
+        <field name="description">[A5302] Pagamentos a fornecedores</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pfor')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">30</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5303" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5303</field>
+        <field name="description">[A5303] Pagamentos ao pessoal</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'ppes')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">40</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5304" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5304</field>
+        <field name="description">[A5304] Caixa gerada pelas operações</field>
+        <field name="expression">+A5301 +A5302 +A5303</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">50</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5305" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5305</field>
+        <field
+            name="description"
+        >[A5305] Pagamento/recebimento do imposto sobre o rendimento</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'mird')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">60</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5306" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5306</field>
+        <field name="description">[A5306] Outros recebimentos/pagamentos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'mout')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">70</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5307" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5307</field>
+        <field
+            name="description"
+        >[A5307] Fluxos de caixa das atividades operacionais (A)</field>
+        <field name="expression">+A5304 +A5305 +A5306</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">80</field>
+    </record>
+    <record id="mis_cashflow_ies04c_investment" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">investment</field>
+        <field name="description">FLUXOS DE CAIXA DAS ATIVIDADES DE INVESTIMENTO</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_2" />
+        <field name="sequence">90</field>
+    </record>
+    <record id="mis_cashflow_ies04c_inv_pay" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">inv_pay</field>
+        <field name="description">Pagamentos respeitantes a:</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">100</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5308" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5308</field>
+        <field name="description">[A5308] Ativos fixos tangíveis</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'paft')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">110</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5309" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5309</field>
+        <field name="description">[A5309] Ativos intangíveis</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pati')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">120</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5310" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5310</field>
+        <field name="description">[A5310] Investimentos financeiros</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pifi')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">130</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5311" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5311</field>
+        <field name="description">[A5311] Outros ativos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'poat')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">140</field>
+    </record>
+    <record id="mis_cashflow_ies04c_inv_recv" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">inv_rcv</field>
+        <field name="description">Recebimentos provenientes de:</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">150</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5312" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5312</field>
+        <field name="description">[A5312] Ativos fixos tangíveis</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'raft')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">160</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5313" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5313</field>
+        <field name="description">[A5313] Ativos intangíveis</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rati')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">170</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5314" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5314</field>
+        <field name="description">[A5314] Investimentos financeiros</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rifi')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">180</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5315" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5315</field>
+        <field name="description">[A5315] Outros ativos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'roat')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">190</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5316" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5316</field>
+        <field name="description">[A5316] Subsídio ao investimento</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rsui')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">200</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5317" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5317</field>
+        <field name="description">[A5317] Juros e rendimentos similares</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rjrs')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">210</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5318" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5318</field>
+        <field name="description">[A5318] Dividendos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rdiv')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">220</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5319" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5319</field>
+        <field
+            name="description"
+        >[A5319] Fluxos de caixa das atividades de investimento (B)</field>
+        <field
+            name="expression"
+        >+A5308 +A5309 +A5310 +A5311 +A5312 +A5313 +A5314 +A5315 +A5316 +A5317 +A5318</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">230</field>
+    </record>
+
+    <record id="mis_cashflow_ies04c_finance" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">finance</field>
+        <field
+            name="description"
+        >FLUXOS DE CAIXA DAS ATIVIDADES DE FINANCIAMENTO</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_2" />
+        <field name="sequence">240</field>
+    </record>
+    <record id="mis_cashflow_ies04c_fin_recv" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">fin_recv</field>
+        <field name="description">Recebimentos provenientes de:</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">250</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5320" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5320</field>
+        <field name="description">[A5320] Financiamentos obtidos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rfio')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">260</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5321" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5321</field>
+        <field
+            name="description"
+        >[A5321] Realizações de capital e de outros instrumentos de capital próprio</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rcap')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">270</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5322" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5322</field>
+        <field name="description">[A5322] Cobertura de prejuízos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rprj')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">280</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5323" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5323</field>
+        <field name="description">[A5323] Doações</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'rdoa')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">290</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5324" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5324</field>
+        <field name="description">[A5324] Outras operações de financiamento</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'roof')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">300</field>
+    </record>
+    <record id="mis_cashflow_ies04c_fin_pay" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">fin_pay</field>
+        <field name="description">Pagamentos respeitantes a:</field>
+        <field name="expression">''</field>
+        <field name="type">str</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">310</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5325" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5325</field>
+        <field name="description">[A5325] Financiamentos obtidos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pfio')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">320</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5326" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5326</field>
+        <field name="description">[A5326] Juros e gastos similares</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pjgs')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">330</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5327" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5327</field>
+        <field name="description">[A5327] Dividendos</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pdiv')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">340</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5328" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5328</field>
+        <field
+            name="description"
+        >[A5328] Reduções de capital e de outros instrumentos de capital próprio</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pcap')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">350</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5329" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5329</field>
+        <field name="description">[A5329] Outras operações de financiamento</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'poof')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">360</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5330" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5330</field>
+        <field
+            name="description"
+        >[A5330] Fluxos de caixa das atividades de financiamento (C)</field>
+        <field
+            name="expression"
+        >+A5320 +A5321 +A5322 +A5323 +A5324 +A5325 +A5326 +A5327 +A5328 +A5329</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">370</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5331" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5331</field>
+        <field
+            name="description"
+        >[A5331] Variação de caixa e seus equivalentes (A+B+C)</field>
+        <field name="expression">+A5307 +A5319 +A5330</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">380</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5332" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5332</field>
+        <field name="description">[A5332] Efeito das diferenças de câmbio</field>
+        <field name="expression">bal[][('cashflow_id', '=', 'pdcb')]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_3" />
+        <field name="sequence">390</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5333" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5333</field>
+        <field
+            name="description"
+        >[A5333] Caixa e seus equivalentes no início do período</field>
+        <field name="expression">bali[11%,12%]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">400</field>
+    </record>
+    <record id="mis_cashflow_ies04c_a5334" model="mis.report.kpi">
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="name">A5334</field>
+        <field
+            name="description"
+        >[A5334] Caixa e seus equivalentes no fim do período</field>
+        <field name="expression">bale[11%,12%]</field>
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="style_id" ref="mis_report_style_ptplus_4" />
+        <field name="sequence">410</field>
+    </record>
+
+    <!-- MIS Report Instance: Cashflow IES 04C -->
+    <record id="mis_cashflow_instance_ies_04c" model="mis.report.instance">
+        <field name="name">Cashflow Statement</field>
+        <field name="description">Cashflow Statement (IES 04-C)</field>
+        <field name="report_id" ref="mis_cashflow_ies04c" />
+        <field name="comparison_mode">False</field>
+        <field name="date_from" eval="'2019-01-01'" />
+        <field name="date_to" eval="'2019-12-31'" />
+    </record>
+
+</odoo>
