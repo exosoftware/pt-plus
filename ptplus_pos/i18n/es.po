@@ -1,0 +1,308 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-02 16:31+0000\n"
+"PO-Revision-Date: 2024-07-02 16:31+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__atcud
+msgid ""
+"A unique code that identifies a particular fiscal document in the Tax "
+"Authority database."
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__atcud
+msgid "ATCUD"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/order_receipt/order_receipt.xml:0
+#, python-format
+msgid "ATCUD:"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid "Can't change a fiscal document type while there's an open session"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_cred_fiscal_doc_type_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_cred_fiscal_doc_type_id
+msgid "Credit Note Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Credit Notes"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/order_receipt/order_receipt.xml:0
+#, python-format
+msgid "Customer:"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_default_partner_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_default_partner_id
+msgid "Default Customer"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "Default customer to use if none is set"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash
+msgid "Digital signature"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__system_entry_date
+msgid "Document Validation Timestamp"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_atcud
+msgid "Fiscal Doc. ATCUD"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_certification_text
+msgid "Fiscal Doc. Certi. Text"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_doc_name
+msgid "Fiscal Doc. Document Name"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_unique_id
+#, python-format
+msgid "Fiscal Doc. No."
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_qr_code
+msgid "Fiscal Doc. QR Code"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_status
+msgid "Fiscal Doc. Status"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Invalid Lines"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_inv_fiscal_doc_type_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_inv_fiscal_doc_type_id
+msgid "Invoice Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Invoices"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order_line__l10n_pt_origin_move_line_id
+msgid "L10N Pt Origin Move Line"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_update
+msgid "Last State Change"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_uid
+msgid "Last state changed by"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search_pt_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_tree_pt_pos
+msgid "POS"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_invoicing
+msgid "Portuguese Invoicing"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash_control
+msgid "Private key version"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Product must have one VAT type tax: "
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search_pt_pos
+msgid "Show document types that are available in the POS"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__source_billing
+msgid "Source Method"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "The portuguese fiscal document to apply on this POS credit notes"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "The portuguese fiscal document to apply on this POS invoices"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order_line__l10n_pt_origin_move_line_id
+msgid ""
+"This field is only filled out when we are processing a refund and it "
+"references the original invoice line."
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "VAT Error"
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"When PT Invoicing is active, you must define the document type for both "
+"Invoices and Credit Notes."
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid "When the company is Portuguese, you must have activate PT Invoicing."
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"When the company is Portuguese, you need to define the company's VAT number "
+"to continue."
+msgstr ""
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"You can have positive lines (invoice) and negative lines (credit note) but "
+"not both"
+msgstr ""

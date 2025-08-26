@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Payment Report: change attachment and print names -->
+    <record id="account.action_report_payment_receipt" model="ir.actions.report">
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field
+            name="attachment"
+        >(object.source_billing) and ('{}.pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang)))</field>
+    </record>
+
+    <!-- Payment Preview Report -->
+    <record id="action_report_payment_receipt_preview" model="ir.actions.report">
+        <field name="name">Payment Receipt (preview)</field>
+        <field name="model">account.payment</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">ptplus.report_payment_receipt_preview</field>
+        <field name="report_file">ptplus.report_payment_receipt_preview</field>
+        <field name="binding_model_id" ref="model_account_payment" />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_payment_receipt_preview">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="lang" t-value="o.partner_id.lang" />
+                <t t-call="account.report_payment_receipt_document" t-lang="lang" />
+            </t>
+        </t>
+    </template>
+
+    <!-- Payment Multi-way Report -->
+    <record id="action_report_payment_receipt_multiway" model="ir.actions.report">
+        <field name="name">Payment Receipt (multi-way)</field>
+        <field name="model">account.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus.report_payment_receipt_multiway</field>
+        <field name="report_file">ptplus.report_payment_receipt_multiway</field>
+        <field name="binding_model_id" ref="model_account_payment" />
+        <field name="binding_type">report</field>
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_payment_receipt_multiway">
+        <t t-call="web.html_container">
+            <t t-foreach="docs.filtered(lambda rec: (rec.system_entry_date))" t-as="o">
+                <t t-set="lang" t-value="o.partner_id.lang" />
+                <t
+                    t-foreach="o.pt_multiway_tag_list(o.company_id.multiway_tag_payment)"
+                    t-as="multiway_tag"
+                >
+                    <t t-call="account.report_payment_receipt_document" t-lang="lang" />
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

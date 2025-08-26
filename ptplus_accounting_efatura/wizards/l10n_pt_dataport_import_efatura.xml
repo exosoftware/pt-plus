@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="dataport_import_form_efatura" model="ir.ui.view">
+        <field name="name">l10n_pt.dataport.import.efatura.form</field>
+        <field name="model">l10n_pt.dataport.import.efatura</field>
+        <field name="inherit_id" ref="ptplus.dataport_import_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="journal_id" />
+            </field>
+            <field name="date_to" position="after">
+                <field name="data" position="move" />
+                <field name="create_invoices" />
+            </field>
+
+            <button name="action_import" position="before">
+                <button
+                    name="action_sync"
+                    type="object"
+                    class="oe_highlight"
+                    string="Synchronize"
+                    help="Obtain e-fatura data online. If you prefer to import a csv file, just load it above"
+                    invisible="data"
+                />
+            </button>
+            <button name="action_import" position="attributes">
+                <attribute name="invisible">not data</attribute>
+            </button>
+        </field>
+    </record>
+
+    <record id="dataport_import_efatura_action" model="ir.actions.act_window">
+        <field name="name">Import E-Fatura</field>
+        <field name="res_model">l10n_pt.dataport.import.efatura</field>
+        <field name="view_id" ref="dataport_import_form_efatura" />
+        <field name="target">new</field>
+        <field name="context">{'type': 'in_invoice'}</field>
+    </record>
+</odoo>
