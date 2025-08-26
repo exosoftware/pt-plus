@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_pt_stock" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt.stock</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='production_lot_info']/.." position="inside">
+                <block title="Portugal" id="stock_settings_pt">
+                    <setting
+                        company_dependent="1"
+                        help="Tags to differentiate document copies"
+                        title="These tags will be printed on every multi-way document report copy. The choice also sets the number of desired copies."
+                        string="Multi-way Report"
+                    >
+                        <div class="row mt16">
+                            <label
+                                string="Transport Doc."
+                                for="l10n_pt_multiway_tag_deliveryslip"
+                                class="col-lg-3 o_light_label"
+                            />
+                            <field name="l10n_pt_multiway_tag_deliveryslip" />
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

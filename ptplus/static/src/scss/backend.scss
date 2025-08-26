@@ -1,0 +1,35 @@
+.table-dataport {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead {
+        border-bottom: 1px solid LightGray;
+        background-color: WhiteSmoke;
+        th td {
+            padding: 2px 4px;
+        }
+        th {
+            font-weight: bold;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid LightGray;
+        th td {
+            padding: 2px 4px;
+        }
+        th {
+            font-weight: bold;
+        }
+    }
+    tfoot {
+        border-bottom: 1px solid LightGray;
+        th td {
+            padding: 2px 4px;
+        }
+        th {
+            font-weight: bold;
+        }
+    }
+}

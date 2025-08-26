@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Account Journal Form ! -->
+    <record id="view_account_journal_form_pt" model="ir.ui.view">
+        <field name="name">account.journal.form.pt</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form" />
+        <field name="arch" type="xml">
+            <field name="loss_account_id" position="after">
+                <field name="l10n_pt_transaction_type" invisible="type != 'general'" />
+            </field>
+        </field>
+    </record>
+</odoo>
