@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_tax_form_pt" model="ir.ui.view">
+        <field name="name">account.tax.form.pt</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <!--
+                <field name="tag_ids"
+                       domain="[('applicability', '!=', 'accounts')]"
+                       widget="many2many_tags"
+                       context="{'default_applicability': 'taxes'}"
+                       attrs="{'invisible': [('country_code', '!=', 'PT')]}" />
+                -->
+                <field
+                    name="l10n_pt_genre"
+                    attrs="{'invisible': [('country_code', '!=', 'PT')],
+                'required': [('country_code', '=', 'PT')]}"
+                />
+                <field
+                    name="pt_vat_country_region"
+                    string="Country/Region"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', 'not in', ['IVA', 'RF', 'IS'])],
+                               'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', 'in', ['IVA', 'RF', 'IS'])]}"
+                />
+                <field
+                    name="pt_vat_tax_type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA')]}"
+                />
+                <field
+                    name="pt_vat_subject"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA')]}"
+                />
+                <field
+                    name="pt_vat_special_regime"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA')]}"
+                />
+                <field
+                    name="l10n_pt_periodic_stat_features"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IVA'),
+                        ('pt_vat_country_region', '!=', 'EXTRA')]}"
+                />
+                <field
+                    name="pt_vat_exemption_reason"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'),
+                       '|', ('l10n_pt_genre', '!=', 'IVA'), ('amount', '!=', 0)],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IVA'), ('amount_type', '=', 'percent'), ('amount', '=', 0), ('type_tax_use', '=', 'sale')]}"
+                />
+                <field
+                    name="l10n_pt_wh_tax_type"
+                    string="Withholding Type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'RF')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'RF')]}"
+                />
+                <field
+                    name="l10n_pt_sd_tax_type"
+                    string="Stamp Duty Type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IS')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IS')]}"
+                />
+                <field
+                    name="l10n_pt_sd_exemption_reason"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'),
+                       '|', ('l10n_pt_genre', '!=', 'IS'), ('amount', '!=', 0)],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IS'), ('amount', '=', 0), ('type_tax_use', '=', 'sale')]}"
+                />
+                <field
+                    name="l10n_pt_eco_tax_type"
+                    string="Ecovalue Type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'ECO')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'ECO')]}"
+                />
+                <field
+                    name="l10n_pt_ed_tax_type"
+                    string="Excise Duty Type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_genre', '!=', 'IEC')],
+                       'required': [('country_code', '=', 'PT'), ('l10n_pt_genre', '=', 'IEC')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

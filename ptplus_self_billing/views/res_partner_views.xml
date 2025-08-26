@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Partners -->
+    <record id="view_partner_form_pt_self_billing" model="ir.ui.view">
+        <field name="name">res.partner.form.pt.self_billing</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='purchase']" position="after">
+                <group
+                    string="Self Billing"
+                    id="self_billing"
+                    attrs="{'invisible': [('is_company','=',False),('parent_id','!=',False)]}"
+                >
+                    <label for="l10n_pt_self_billing" />
+                    <div class="o_row ">
+                        <field name="l10n_pt_self_billing" />
+                        <button
+                            name="create_self_billing_fiscal_doc"
+                            string="Invoice FDT"
+                            icon="fa-plus"
+                            class="oe_link"
+                            type="object"
+                            groups="account.group_account_manager"
+                            help="Automatically create self billing invoice Fiscal Document Type and Sequence."
+                            attrs="{'invisible': [('l10n_pt_self_billing', '=', False)]}"
+                        />
+                        <button
+                            name="create_self_billing_fiscal_doc_refund"
+                            string="Refund FDT"
+                            type="object"
+                            groups="account.group_account_manager"
+                            help="Automatically create self billing refund Fiscal Document Type and sequence."
+                            attrs="{'invisible': [('l10n_pt_self_billing', '=', False)]}"
+                            icon="fa-plus"
+                            class="oe_link"
+                        />
+                    </div>
+                    <field
+                        name="l10n_pt_entity_type"
+                        attrs="{'invisible': ['|', ('l10n_pt_self_billing', '=', False), ('country_code', '=', 'PT')], 'required': ['|', ('l10n_pt_self_billing', '=', True), ('country_code', '=', 'PT')]}"
+                    />
+                </group>
+                <!--<field
+                    name="l10n_pt_tax_auth_username"
+                    attrs="{'invisible': [('l10n_pt_self_billing', '=', False)]}"
+                />
+                <field
+                    name="l10n_pt_tax_auth_password"
+                    attrs="{'invisible': [('l10n_pt_self_billing', '=', False)]}"
+                    password="True"
+                />-->
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

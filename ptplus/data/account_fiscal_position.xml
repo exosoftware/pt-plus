@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <!-- Fiscal Position Templates -->
+    <record id="fp_azores" model="account.fiscal.position.template">
+        <field name="sequence">10</field>
+        <field name="name">Açores</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_id" ref="base.pt" />
+        <field name="state_ids" eval="[(6, 0, [ref('base.state_pt_pt-20')])]" />
+        <field name="auto_apply" eval="True" />
+    </record>
+
+    <record id="fp_madeira" model="account.fiscal.position.template">
+        <field name="sequence">20</field>
+        <field name="name">Madeira</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_id" ref="base.pt" />
+        <field name="state_ids" eval="[(6, 0, [ref('base.state_pt_pt-30')])]" />
+        <field name="auto_apply" eval="True" />
+    </record>
+
+    <record id="fp_national" model="account.fiscal.position.template">
+        <field name="sequence">30</field>
+        <field name="name">Continente</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_id" ref="base.pt" />
+        <field name="auto_apply" eval="True" />
+        <field name="vat_required" eval="True" />
+    </record>
+
+    <record id="fp_intra_b2c" model="account.fiscal.position.template">
+        <field name="sequence">35</field>
+        <field name="name">Continente/Intracom. B2C</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_group_id" ref="base.europe" />
+        <field name="auto_apply" eval="True" />
+        <field name="vat_required" eval="False" />
+    </record>
+
+    <record id="fp_intra" model="account.fiscal.position.template">
+        <field name="sequence">40</field>
+        <field name="name">Intracomunitário B2B</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_group_id" ref="base.europe" />
+        <field name="auto_apply" eval="True" />
+        <field name="vat_required" eval="True" />
+    </record>
+
+    <record id="fp_extra" model="account.fiscal.position.template">
+        <field name="sequence">60</field>
+        <field name="name">Extracomunitário</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="country_group_id" ref="ptplus.non_eu" />
+        <field name="auto_apply" eval="True" />
+    </record>
+
+    <record id="fp_ispn" model="account.fiscal.position.template">
+        <field name="sequence">100</field>
+        <field name="name">Inversão do Sujeito Passivo Nacional</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+    </record>
+
+    <record id="fp_northern_ireland" model="account.fiscal.position.template">
+        <field name="sequence">120</field>
+        <field name="name">Irlanda do Norte (RU)</field>
+        <field name="chart_template_id" ref="account_chart_template_snc_common" />
+        <field name="auto_apply" eval="True" />
+        <field name="vat_required" eval="True" />
+    </record>
+
+    <!-- EU Countries B2B - Sales -->
+    <record id="fp_intra_ivav_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivav_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_obs" />
+    </record>
+    <record id="fp_intra_ivav_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_imob" />
+    </record>
+    <record id="fp_intra_ivav_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivav_13_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_obs" />
+    </record>
+    <record id="fp_intra_ivav_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_imob" />
+    </record>
+    <record id="fp_intra_ivav_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivav_06_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_obs" />
+    </record>
+    <record id="fp_intra_ivav_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_imob" />
+    </record>
+
+    <!-- AZORES - Purchases only -->
+    <record id="fp_azores_ivac_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_exist" />
+    </record>
+    <record id="fp_azores_ivac_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_obs" />
+    </record>
+    <record id="fp_azores_ivac_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_imob" />
+    </record>
+    <record id="fp_azores_ivac_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_9_aq_exist" />
+    </record>
+    <record id="fp_azores_ivac_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_9_aq_imob" />
+    </record>
+    <record id="fp_azores_ivac_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_4_aq_exist" />
+    </record>
+    <record id="fp_azores_ivac_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_4_aq_imob" />
+    </record>
+    <record id="fp_azores_ivac_23_exi_vta" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_exist_vta" />
+    </record>
+    <record id="fp_azores_ivac_23_obs_vta" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_obs_vta" />
+    </record>
+    <record id="fp_azores_ivac_23_imo_vta" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_imob_vta" />
+    </record>
+    <record id="fp_azores_ivac_23_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_ob_az" />
+    </record>
+    <record id="fp_azores_ivac_13_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_9_aq_ob_az" />
+    </record>
+    <record id="fp_azores_ivac_6_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_4_aq_ob_az" />
+    </record>
+    <record
+        id="fp_azores_ivac_23_pd50_gasoleo"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field
+            name="tax_src_id"
+            ref="account_tax_template_iva_23_pd50_aq_gasoleo_incl"
+        />
+        <field
+            name="tax_dest_id"
+            ref="account_tax_template_iva_16_pd50_aq_gasoleo_incl"
+        />
+    </record>
+    <record
+        id="fp_azores_ivac_23_exist_drs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_exist_drs_az" />
+    </record>
+    <record
+        id="fp_azores_ivac_23_imob_drs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_imob_drs_az" />
+    </record>
+    <record id="fp_azores_ivac_23_obs_drs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_obs_drs_az" />
+    </record>
+    <record
+        id="fp_azores_ivac_23_imob_ccv"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_ccv" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_imob_ccv_az" />
+    </record>
+    <record id="fp_azores_ivac_23_obs_ccv" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_ccv" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_obs_ccv_az" />
+    </record>
+    <record
+        id="fp_azores_ivac_23_imob_ege"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_ege" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_imob_ege_az" />
+    </record>
+    <record id="fp_azores_ivac_23_obs_ege" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_ege" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_16_aq_obs_ege_az" />
+    </record>
+    <record
+        id="fp_azores_ivac_23_pd50_imob_viatura_turismo"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_azores" />
+        <field
+            name="tax_src_id"
+            ref="account_tax_template_iva_23_pd50_aq_viatura_turismo_imob"
+        />
+        <field
+            name="tax_dest_id"
+            ref="account_tax_template_iva_16_pd50_aq_viatura_turismo_imob_az"
+        />
+    </record>
+    <record id="fp_azores_ivac_23_nd_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_azores" />
+        <field name="tax_src_id" ref="account_tax_template_iva_nd_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_nd_16_aq_obs_az" />
+    </record>
+
+
+    <!-- MADEIRA - Purchases only -->
+    <record id="fp_madeira_ivac_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_exist" />
+    </record>
+    <record id="fp_madeira_ivac_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_obs" />
+    </record>
+    <record id="fp_madeira_ivac_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_imob" />
+    </record>
+    <record id="fp_madeira_ivac_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_12_aq_exist" />
+    </record>
+    <record id="fp_madeira_ivac_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_12_aq_imob" />
+    </record>
+    <record id="fp_madeira_ivac_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_5_aq_exist" />
+    </record>
+    <record id="fp_madeira_ivac_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_5_aq_imob" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_exi_vta"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_exist_vta" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_obs_vta"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_obs_vta" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_imo_vta"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_vta" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_imob_vta" />
+    </record>
+    <record id="fp_madeira_ivac_23_aq_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_ob_md" />
+    </record>
+    <record id="fp_madeira_ivac_13_aq_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_12_aq_ob_md" />
+    </record>
+    <record id="fp_madeira_ivac_6_aq_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_5_aq_ob_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_pd50_gasoleo"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field
+            name="tax_src_id"
+            ref="account_tax_template_iva_23_pd50_aq_gasoleo_incl"
+        />
+        <field
+            name="tax_dest_id"
+            ref="account_tax_template_iva_22_pd50_aq_gasoleo_incl"
+        />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_exist_drs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_exist_drs_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_imob_drs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_imob_drs_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_obs_drs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_drs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_obs_drs_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_imob_ccv"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_ccv" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_imob_ccv_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_obs_ccv"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_ccv" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_obs_ccv_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_imob_ege"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob_ege" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_imob_ege_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_obs_ege"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs_ege" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_22_aq_obs_ege_md" />
+    </record>
+    <record
+        id="fp_madeira_ivac_23_pd50_viatura_turismo"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_madeira" />
+        <field
+            name="tax_src_id"
+            ref="account_tax_template_iva_23_pd50_aq_viatura_turismo_imob"
+        />
+        <field
+            name="tax_dest_id"
+            ref="account_tax_template_iva_22_pd50_aq_viatura_turismo_imob_md"
+        />
+    </record>
+    <record id="fp_madeira_ivac_23_nd_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_madeira" />
+        <field name="tax_src_id" ref="account_tax_template_iva_nd_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_nd_22_aq_obs_md" />
+    </record>
+
+    <!-- EU Countries B2B - Purchases -->
+    <record id="fp_intra_ivac_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_23_aq_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivac_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_23_aq_intrac_obs" />
+    </record>
+    <record id="fp_intra_ivac_23_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_23_aq_intrac_ob" />
+    </record>
+    <record id="fp_intra_ivac_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_23_aq_intrac_imob" />
+    </record>
+    <record id="fp_intra_ivac_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_13_aq_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivac_13_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_13_aq_intrac_ob" />
+    </record>
+    <record id="fp_intra_ivac_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_13_aq_intrac_imob" />
+    </record>
+    <record id="fp_intra_ivac_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_6_aq_intrac_exist" />
+    </record>
+    <record id="fp_intra_ivac_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_6_aq_intrac_imob" />
+    </record>
+    <record id="fp_intra_ivac_06_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_intra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_6_aq_intrac_ob" />
+    </record>
+
+    <!-- Non-EU Countries - Sales -->
+    <record id="fp_extra_ivav_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivav_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivav_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_imob" />
+    </record>
+    <record id="fp_extra_ivav_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivav_13_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivav_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_imob" />
+    </record>
+    <record id="fp_extra_ivav_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivav_06_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivav_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_imob" />
+    </record>
+
+    <!-- Non-EU Countries - Purchases -->
+    <record id="fp_extra_ivac_23_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivac_23_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivac_23_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_imob" />
+    </record>
+    <record id="fp_extra_ivac_13_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivac_13_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivac_13_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_13_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_imob" />
+    </record>
+    <record id="fp_extra_ivac_06_exi" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_exist" />
+    </record>
+    <record id="fp_extra_ivac_06_obs" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_obs" />
+    </record>
+    <record id="fp_extra_ivac_06_imo" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_6_aq_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_imob" />
+    </record>
+    <record id="fp_extra_ivac_23_ob" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fp_extra" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_aq_ob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_aq_extrac_obs" />
+    </record>
+
+    <!--    Northern Ireland - Sales      -->
+    <record
+        id="fp_northern_ireland_ivav_23_obs"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_northern_ireland" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_obs" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_extrac_obs" />
+    </record>
+    <record
+        id="fp_northern_ireland_ivav_23_imob"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_northern_ireland" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_imob" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_imob" />
+    </record>
+    <record
+        id="fp_northern_ireland_ivav_23_exist"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="fp_northern_ireland" />
+        <field name="tax_src_id" ref="account_tax_template_iva_23_exist" />
+        <field name="tax_dest_id" ref="account_tax_template_iva_0_intrac_exist" />
+    </record>
+
+</odoo>

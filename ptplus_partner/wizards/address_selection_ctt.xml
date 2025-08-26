@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="address_selection_ctt_tree" model="ir.ui.view">
+        <field name="name">address.selection.ctt.tree</field>
+        <field name="model">address.selection.ctt</field>
+        <field name="arch" type="xml">
+            <tree limit="999">
+                <field name="zip" optional="hide" />
+                <field name="street" optional="show" />
+                <field name="street2" optional="hide" />
+                <field name="state_id" optional="show" />
+                <field name="city" optional="show" />
+                <button
+                    name="action_confirm_selection"
+                    type="object"
+                    icon="fa-arrow-right"
+                    class="btn-primary"
+                    string="Insert"
+                />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

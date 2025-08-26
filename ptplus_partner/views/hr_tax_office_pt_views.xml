@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_tax_office_pt_view_search" model="ir.ui.view">
+        <field name="name">hr.tax.office.pt.search</field>
+        <field name="model">hr.tax.office.pt</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code" />
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_tax_office_pt_view_tree" model="ir.ui.view">
+        <field name="name">hr.tax.office.pt.tree</field>
+        <field name="model">hr.tax.office.pt</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_tax_office_pt_view_form" model="ir.ui.view">
+        <field name="name">hr.tax.office.pt.form</field>
+        <field name="model">hr.tax.office.pt</field>
+        <field name="arch" type="xml">
+            <form string="Tax Office">
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

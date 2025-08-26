@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Sales invoice form -->
+    <record id="view_move_form_edi_saphety" model="ir.ui.view">
+        <field name="name">account.move.form.edi.saphety</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="ptplus_edi.view_move_form_edi_pt" />
+        <field name="arch" type="xml">
+            <field name="edi_format_name" position="after">
+                <field name="l10n_pt_edi_cius_saphety_request_id" optional="hide" />
+                <field name="l10n_pt_edi_cius_saphety_request_status" optional="hide" />
+                <field name="l10n_pt_edi_cius_saphety_document_id" optional="hide" />
+                <field
+                    name="l10n_pt_edi_cius_saphety_integration_status"
+                    optional="hide"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
