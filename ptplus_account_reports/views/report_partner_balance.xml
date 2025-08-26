@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ptplus_account_reports.report_partner_balance_document">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="o.with_context({'lang': lang})" />
+            <t t-set="address">
+                <address
+                    t-out="o.self"
+                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                />
+            </t>
+            <div class="page">
+                    <h4><br /></h4>
+                    <h4>Balance Statement</h4>
+                    <div class="row mt32 mb32" id="informations">
+                        <div class="col-auto col-3 mw-100 mb-2">
+                            <strong>Statement Date:</strong>
+                            <p class="m-0" t-out="Date[o.id]" />
+                        </div>
+                        <div class="col-auto col-3 mw-100 mb-2">
+                            <strong>Start Date:</strong>
+                            <p class="m-0" t-out="Date_start[o.id]" />
+                        </div>
+                        <div class="col-auto col-3 mw-100 mb-2">
+                            <strong>End Date:</strong>
+                            <p class="m-0" t-out="Date_end[o.id]" />
+                        </div>
+                        <div t-if="o.vat" class="col-auto col-3 mw-100 mb-2">
+                            <strong><t
+                                t-out="company.country_id.vat_label or 'Tax ID'"
+                            />:</strong>
+                            <p class="m-0" t-out="o.pt_get_vat()" />
+                        </div>
+                        <div t-if="o.ref" class="col-auto col-3 mw-100 mb-2">
+                            <strong>Ref:</strong>
+                            <p class="m-0" t-field="o.ref" />
+                        </div>
+                    </div>
+
+                    <t t-if="Lines[o.id]">
+                        <t t-foreach="Lines[o.id]" t-as="currency">
+                            <br t-if="not currency_first" />
+                            <p class="currency-label"><span>Moves in <span
+                                    t-out="Currencies[o.id][currency].name"
+                                />:</span></p>
+                            <table
+                            class="table table-sm o_main_table pt-table-statement"
+                        >
+                                <thead>
+                                    <tr>
+                                        <th class="col-reference">Reference</th>
+                                        <th class="col-date">Date</th>
+                                        <th class="col-description">Description</th>
+                                        <th class="col-amount">Amount</th>
+                                        <th class="col-amount">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Balance Forward</td>
+                                    <td><span t-out="Date_start[o.id]" /></td>
+                                    <td />
+                                    <td />
+                                    <td
+                                        class="col-amount"
+                                        t-if="currency in Balance_forward[o.id]"
+                                    >
+                                        <span
+                                            t-out="Balance_forward[o.id][currency]"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td
+                                        class="col-amount"
+                                        t-if="currency not in Balance_forward[o.id]"
+                                    >
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                </tr>
+                                <tr t-foreach="Lines[o.id][currency]" t-as="line">
+                                    <t t-if="not line['blocked']">
+                                        <td class="col-reference">
+                                            <t t-if="line['move_id']">
+                                                <span t-out="line['move_id']" />
+                                            </t>
+                                        </td>
+                                        <td class="col-date">
+                                            <span t-out="line['date']" />
+                                        </td>
+                                        <td class="col-description">
+                                            <span t-out="line['description']" />
+                                        </td>
+                                        <td class="col-amount">
+                                            <span
+                                                t-out="line['amount']"
+                                                t-options='{"widget": "monetary", "display_currency": currency}'
+                                            />
+                                        </td>
+                                        <td class="col-amount">
+                                            <span
+                                                t-out="line['balance']"
+                                                t-options='{"widget": "monetary", "display_currency": currency}'
+                                            />
+                                        </td>
+                                    </t>
+                                    <t t-if="line['blocked']">
+                                        <td class="col-reference">
+                                            <span t-out="line['move_id']" />
+                                        </td>
+                                        <td class="col-date">
+                                            <span t-out="line['date']" />
+                                        </td>
+                                        <td class="col-description">
+                                            <t t-if="line['name'] != '/'">
+                                                <t t-if="not line['ref']">
+                                                    <span t-out="line['name']" />
+                                                </t>
+                                                <t t-if="line['ref'] and line['name']">
+                                                    <t
+                                                        t-if="line['name'] not in line['ref']"
+                                                    >
+                                                        <span t-out="line['name']" />
+                                                    </t>
+                                                    <t
+                                                        t-if="line['ref'] not in line['name']"
+                                                    >
+                                                        <span t-out="line['ref']" />
+                                                    </t>
+                                                </t>
+                                            </t>
+                                            <t t-if="line['name'] == '/'">
+                                                <span
+                                                    t-if="line['ref'] == 'Payment'"
+                                                >Payment</span>
+                                                <span t-else="" t-out="line['ref']" />
+                                            </t>
+                                        </td>
+                                        <td class="col-amount">
+                                            <span
+                                                t-out="line['amount']"
+                                                t-options='{"widget": "monetary", "display_currency": currency}'
+                                            />
+                                        </td>
+                                        <td class="col-amount">
+                                            <span
+                                                t-out="line['balance']"
+                                                t-options='{"widget": "monetary", "display_currency": currency}'
+                                            />
+                                        </td>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <td>Ending Balance</td>
+                                    <td>
+                                        <span t-out="Date_end[o.id]" />
+                                    </td>
+                                    <td />
+                                    <td />
+                                    <td class="col-amount">
+                                        <span
+                                            t-out="Amount_Due[o.id][currency]"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table
+                            class="table table-sm pt-table-aging"
+                            t-if="Incl_aging"
+                        >
+                                <thead>
+                                    <tr>
+                                        <th colspan="7">Aging Summary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Current Due</td>
+                                        <td>1-30 Days Due</td>
+                                        <td>30-60 Days Due</td>
+                                        <td>60-90 Days Due</td>
+                                        <td>90-120 Days Due</td>
+                                        <td>+120 Days Due</td>
+                                        <td>Balance Due</td>
+                                    </tr>
+                                <tr t-if="currency in Buckets[o.id]">
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['current']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['b_1_30']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['b_30_60']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['b_60_90']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['b_90_120']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['b_over_120']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="Buckets[o.id][currency]['balance']"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                </tr>
+                                <tr t-if="currency not in Buckets[o.id]">
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-out="0.0"
+                                            t-options='{"widget": "monetary", "display_currency": currency}'
+                                        />
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </t>
+                    </t>
+                    <p t-if="not Lines[o.id]">
+                        <strong>No movements.</strong>
+                    </p>
+                <!--</div>-->
+            </div>
+        </t>
+    </template>
+
+    <template id="report_partner_balance">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t
+                    t-if="not (Excl_partners_without_moves and (not Lines[o.id]) and (len(doc_ids) > 1))"
+                >
+                    <t
+                        t-call="ptplus_account_reports.report_partner_balance_document"
+                        t-lang="o.lang"
+                    />
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="action_print_partner_balance_statement"
+        model="res.partner"
+        report_type="qweb-pdf"
+        menu="False"
+        attachment_use="False"
+        string="Partner Balance Statement"
+        name="ptplus_account_reports.report_partner_balance"
+        file="ptplus_account_reports.report_partner_balance"
+    />
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_account_taxonomy_setup_wizard" model="ir.ui.view">
+        <field name="name">l10n_pt.account.taxonomy.setup.wizard.form</field>
+        <field name="model">l10n_pt.account.taxonomy.setup.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Account Taxonomy Setup Wizard">
+                <field name="state" invisible="1" />
+
+                <div name="info" states="select">
+                    <p>
+                    This wizard will try to find a taxonomy code for each selected
+                    account. If there's only one possible code, it will be assigned to the
+                    account. A warning will be given in case the new taxonomy code is different
+                    from the previous one
+                    </p>
+                </div>
+
+                <group string="Warnings" states="done">
+                    <field
+                        name="warnings"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+                <footer states="select">
+                    <button
+                        string="Setup"
+                        class="btn-primary"
+                        name="setup"
+                        type="object"
+                    />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+                <footer states="done">
+                    <button string="Close" special="cancel" />
+                </footer>
+           </form>
+        </field>
+    </record>
+
+    <!-- Add action entry in the Action Menu for Account Accounts -->
+    <record id="action_account_taxonomy_setup_wizard" model="ir.actions.act_window">
+        <field name="name">Account Taxonomy Setup Wizard</field>
+        <field name="res_model">l10n_pt.account.taxonomy.setup.wizard</field>
+        <field name="binding_model_id" ref="account.model_account_account" />
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

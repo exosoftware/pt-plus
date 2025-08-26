@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_edi_pt_saphety" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.edi.pt.saphety</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='l10n_pt_einvoicing']" position="after">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    attrs="{'invisible': ['|', ('pt_invoicing', '=', False), ('module_ptplus_edi', '=', False)]}"
+                    id="l10n_pt_einvoicing_saphety"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="module_ptplus_edi_saphety" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label
+                            for="module_ptplus_edi_saphety"
+                            string="Saphety EDI broker"
+                        />
+                        <span
+                            class="fa fa-lg fa-building-o"
+                            title="Values set here are company-specific."
+                            aria-label="Values set here are company-specific."
+                            groups="base.group_multi_company"
+                            role="img"
+                        />
+                        <div class="text-muted">
+                            Have your CIUS-PT invoices delivered to your customers by Saphety.
+                        </div>
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label
+                                    string="Username"
+                                    for="l10n_pt_edi_cius_saphety_username"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_edi_cius_saphety_username" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Password"
+                                    for="l10n_pt_edi_cius_saphety_password"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    name="l10n_pt_edi_cius_saphety_password"
+                                    password="True"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+
+            <!--
+            <xpath expr="//div[@id='account_settings_pt']" position="inside">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    title="These configurations will allow you to set up a Saphety account to submit legal format electronic invoices."
+                    attrs="{'invisible': [('pt_invoicing', '=', False)]}"
+                >
+                    <div class="o_setting_left_pane" />
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Saphety EDI</span>
+                        <span
+                            class="fa fa-lg fa-building-o"
+                            title="Values set here are company-specific."
+                            aria-label="Values set here are company-specific."
+                            groups="base.group_multi_company"
+                            role="img"
+                        />
+                        <div class="text-muted">
+                            Submit your CIUS-PT e-invoices to the Saphety broker.
+                        </div>
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label
+                                    string="Username"
+                                    for="l10n_pt_edi_cius_saphety_username"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_edi_cius_saphety_username" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Password"
+                                    for="l10n_pt_edi_cius_saphety_password"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_edi_cius_saphety_password" password="True" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            -->
+        </field>
+    </record>
+</odoo>

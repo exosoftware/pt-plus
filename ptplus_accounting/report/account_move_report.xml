@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Account Move Report -->
+    <record id="action_report_account_move" model="ir.actions.report">
+        <field name="name">Journal Entries</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus_accounting.report_account_move</field>
+        <field name="report_file">ptplus_accounting.report_account_move</field>
+        <field name="binding_model_id" ref="model_account_move" />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+        <field
+            name="print_report_name"
+        >'Journal Entry ' + (object.name or '').replace('/','_') + '.pdf'</field>
+    </record>
+
+</odoo>
