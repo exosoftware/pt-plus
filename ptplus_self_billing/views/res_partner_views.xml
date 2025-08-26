@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Partners -->
+    <record id="view_partner_form_pt_self_billing" model="ir.ui.view">
+        <field name="name">res.partner.form.pt.self_billing</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='purchase']" position="after">
+                <group
+                    string="Self Billing"
+                    id="self_billing"
+                    invisible="not is_company and parent_id"
+                >
+                    <label for="l10n_pt_self_billing" />
+                    <div class="o_row ">
+                        <field
+                            name="l10n_pt_self_billing"
+                            invisible="not is_company and parent_id"
+                        />
+                        <button
+                            name="create_self_billing_fiscal_doc"
+                            string="Invoice FDT"
+                            icon="fa-plus"
+                            class="oe_link"
+                            type="object"
+                            groups="account.group_account_manager"
+                            help="Automatically create self billing invoice Fiscal Document Type and Sequence."
+                            invisible="not l10n_pt_self_billing"
+                        />
+                        <button
+                            name="create_self_billing_fiscal_doc_refund"
+                            string="Refund FDT"
+                            type="object"
+                            groups="account.group_account_manager"
+                            help="Automatically create self billing refund Fiscal Document Type and sequence."
+                            invisible="not l10n_pt_self_billing"
+                            icon="fa-plus"
+                            class="oe_link"
+                        />
+                    </div>
+                    <field
+                        name="l10n_pt_entity_type"
+                        invisible="not l10n_pt_self_billing or country_code == 'PT'"
+                        required="l10n_pt_self_billing or country_code == 'PT'"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
