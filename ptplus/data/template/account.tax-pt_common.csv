@@ -1,0 +1,837 @@
+id,active,description,invoice_label,invoice_label@pt,sequence,name,type_tax_use,amount,cash_basis_transition_account_id,l10n_pt_periodic_stat_features,amount_type,tax_group_id,tax_exigibility,pt_vat_country_region,pt_vat_exemption_reason,pt_vat_tax_type,pt_vat_subject,pt_vat_special_regime,l10n_pt_wh_tax_type,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/tag_ids,repartition_line_ids/account_id,repartition_line_ids/factor_percent
+account_tax_template_iva_6_aq_extrac_imob_ddp,False,,VAT 6%,IVA 6%,20,IVA 6% AQ. EXTRAC. (Imob.) DDP,purchase,6,,D,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,asset,,,base,invoice,IVA AL [Q05-L39],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_6_imob,False,,VAT 6%,IVA 6%,10110,IVA 6% (Imob.),sale,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,asset,,,base,invoice,IVA DP [Q06-C1] VND||IVA DP [Q06A-C104] R72||IVA AL [Q03-L14],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C2],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_6_obs,False,,VAT 6%,IVA 6%,10120,IVA 6% (OBS),sale,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,base,invoice,IVA DP [Q06-C1] VND||IVA AL [Q03-L07],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C2],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_6_exist,False,,VAT 6%,IVA 6%,10130,IVA 6% (Exist.),sale,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,stock,,,base,invoice,IVA DP [Q06-C1] VND||IVA AL [Q03-L01],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C2],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_23_aq_extrac_imob_ecom,False,,VAT 23%,IVA 23%,10130,IVA 23% AQ. EXTRAC. (Imob.) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,asset,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C98] R66,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_imob,,,VAT 13%,IVA 13%,10210,IVA 13% (Imob.),sale,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,asset,,,base,invoice,IVA DP [Q06-C5] VND||IVA DP [Q06A-C104] R72||IVA AL [Q03-L15],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C6],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_13_obs,False,,VAT 13%,IVA 13%,10220,IVA 13% (OBS),sale,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,ogs,,,base,invoice,IVA DP [Q06-C5] VND||IVA AL [Q03-L08],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C6],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_13_exist,False,,VAT 13%,IVA 13%,10230,IVA 13% (Exist.),sale,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,stock,,,base,invoice,IVA DP [Q06-C5] VND||IVA AL [Q03-L02],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C6],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_23_imob,True,,VAT 23%,IVA 23%,10310,IVA 23% (Imob.),sale,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,,,base,invoice,IVA DP [Q06-C3] VND||IVA DP [Q06A-C104] R72||IVA AL [Q03-L16],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_23_obs,True,,VAT 23%,IVA 23%,10320,IVA 23% (OBS),sale,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,,,base,invoice,IVA DP [Q06-C3] VND||IVA AL [Q03-L09],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_23_exist,True,,VAT 23%,IVA 23%,10330,IVA 23% (Exist.),sale,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,stock,,,base,invoice,IVA DP [Q06-C3] VND||IVA AL [Q03-L03],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,100
+account_tax_template_iva_0_intrac_imob,True,,VAT 0%,IVA 0%,11010,IVA 0% INTRAC. (Imob.) (M41),sale,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M41,ISE,asset,,,base,invoice,IVA DP [Q06-C7]||IVA AL [Q05-L37],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C7]||IVA AL [Q05-L37],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_intrac_obs,True,,VAT 0%,IVA 0%,11020,IVA 0% INTRAC. (OBS) (M40),sale,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M40,ISE,ogs,,,base,invoice,IVA DP [Q06-C7]||IVA AL [Q05-L41],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C7]||IVA AL [Q05-L41],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_intrac_exist,True,,VAT 0%,IVA 0%,11030,IVA 0% INTRAC. (Exist.) (M16),sale,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M16,ISE,stock,,,base,invoice,IVA DP [Q06-C7]||IVA AL [Q05-L41],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C7]||IVA AL [Q05-L41],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_extrac_imob,True,,VAT 0%,IVA 0%,12010,IVA 0% EXTRAC. (Imob.) (M05),sale,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M05,ISE,asset,,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q05-L40],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L40],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_extrac_obs,True,,VAT 0%,IVA 0%,12020,IVA 0% EXTRAC. (OBS) (M05),sale,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M05,ISE,ogs,,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_extrac_exist,True,,VAT 0%,IVA 0%,12030,IVA 0% EXTRAC. (Exist.) (M05),sale,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M05,ISE,stock,,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_ns,True,,VAT N/A,IVA N/S,14000,IVA N/S,sale,0,,,percent,tax_group_iva_0,on_invoice,,M99,NS,,,,base,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_imob_vtt,False,,VAT 0%,IVA 0%,17010,IVA 0% (Imob.) VTT (M13),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M13,ISE,asset,vtt,,base,invoice,IVA DP [Q06-C9]||IVA DP [Q06A-C104] R72||IVA AL [Q03-L17],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C9]||IVA DP [Q06A-C104] R72||IVA AL [Q03-L17],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_imob_drs,False,,VAT 0%,IVA 0%,17010,IVA 0% (Imob.) DRS (M30),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M30,ISE,asset,bssdrsr,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L68],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L68],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_imob_aaa,False,,VAT 0%,IVA 0%,17010,IVA 0% (Imob.) AAA (M07),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M07,ISE,asset,n30art9,,base,invoice,IVA DP [Q06-C9]||IVA DP [Q06A-C104] R72||IVA AL [Q03-L18],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C9]||IVA DP [Q06A-C104] R72||IVA AL [Q03-L18],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_obs_sdd,False,,VAT 0%,IVA 0%,17020,IVA 0% (OBS) SDD (M99),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,ogs,sdd,,base,invoice,IVA DP [Q06-C9]||IVA AL [Q03-L11],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C9]||IVA AL [Q03-L11],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_obs_ege,False,,VAT 0%,IVA 0%,17020,IVA 0% (OBS) EGE (M32),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M32,ISE,ogs,egee,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L67],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L67],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_obs_drs,False,,VAT 0%,IVA 0%,17020,IVA 0% (OBS) DRS (M30),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M30,ISE,ogs,bssdrsr,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L66],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L66],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_obs_cdd,False,,VAT 0%,IVA 0%,17020,IVA 0% (OBS) CDD (M99),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,ogs,cdd,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L10],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L10],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_obs_ccv,False,,VAT 0%,IVA 0%,17020,IVA 0% (OBS) CCV (M31),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M31,ISE,ogs,scc,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L67],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L67],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_exist_sdd,False,,VAT 0%,IVA 0%,17030,IVA 0% (Exist.) SDD (M99),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,stock,sdd,,base,invoice,IVA DP [Q06-C9]||IVA AL [Q03-L05],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C9]||IVA AL [Q03-L05],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_exist_drs,False,,VAT 0%,IVA 0%,17030,IVA 0% (Exist.) DRS (M30),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M30,ISE,stock,bssdrsr,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L64],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L64],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_exist_cdd,False,,VAT 0%,IVA 0%,17030,IVA 0% (Exist.) CDD (M99),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,stock,cdd,,base,invoice,IVA DP [Q06-C8]||IVA AL [Q03-L04],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q03-L04],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_exist_aaa,False,,VAT 0%,IVA 0%,17030,IVA 0% (Exist.) AAA (M07),sale,0,,,percent,tax_group_iva_0,on_invoice,PT,M07,ISE,stock,n30art9,,base,invoice,IVA DP [Q06-C9]||IVA AL [Q03-L65],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C9]||IVA AL [Q03-L65],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_obs,True,,VAT 0%,IVA 0%,20020,IVA 0% AQ. (OBS),purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,ogs,,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_exist_prt,False,,VAT 0%,IVA 0%,20030,IVA 0% AQ. (Exist.) PRT,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,stock,peq_ret,,base,invoice,IVA AL [Q04-L22],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_exist,True,,VAT 0%,IVA 0%,20030,IVA 0% AQ. (Exist.),purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,stock,,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_6_aq_imob,False,,VAT 6%,IVA 6%,20110,IVA 6% AQ. (Imob.),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_6_aq_ob,False,,VAT 6%,IVA 6%,20120,IVA 6% AQ. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_6_aq_exist,False,,VAT 6%,IVA 6%,20130,IVA 6% AQ. (Exist.),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C21]||IVA AL [Q06-L45],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_13_aq_imob,False,,VAT 13%,IVA 13%,20210,IVA 13% AQ. (Imob.),purchase,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L49],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_13_aq_obs,True,,VAT 13%,IVA 13%,20220,IVA 13% AQ. (OB),purchase,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_13_aq_exist,False,,VAT 13%,IVA 13%,20230,IVA 13% AQ. (Exist.),purchase,13,,,percent,tax_group_iva_13,on_invoice,PT,,INT,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C23]||IVA AL [Q06-L46],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_nd_aq_imob,False,,VAT N/A,IVA N/S,20310,IVA ND AQ. (Imob.),purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,asset,,,base,invoice,IVA AL [Q04-L34],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_23_aq_imob,True,,VAT 23%,IVA 23%,20310,IVA 23% AQ. (Imob.),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_23_pd50_aq_viatura_turismo_imob,False,,VAT 23%,IVA 23%,20310,IVA 23% PD50% AQ. Viatura Turismo (Imob.),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,gasol,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L32],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_nd_aq_obs,True,,VAT N/A,IVA N/S,20320,IVA ND AQ. (OBS),purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,ogs,,,base,invoice,IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_23_aq_obs,True,,VAT 23%,IVA 23%,20320,IVA 23% AQ. (OS),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_nd_23_aq_obs,False,,VAT N/A,IVA N/S,20320,IVA ND 23% AQ. (OBS),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,,,base,invoice,IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [N/A]||IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_23_aq_ob,True,,VAT 23%,IVA 23%,20325,IVA 23% AQ. (OB),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_23_aq_exist,True,,VAT 23%,IVA 23%,20330,IVA 23% AQ. (Exist.),purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_6_aq_intrac_imob,False,,VAT 6%,IVA 6%,21110,IVA 6% AQ. INTRAC. (Imob.),purchase,6,,,percent,tax_group_iva_6,on_invoice,INTRA,,RED,asset,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L38],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C20],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_6_aq_intrac_obs,True,,VAT 6%,IVA 6%,21115,IVA 6% AQ. INTRAC. (OS),purchase,6,,,percent,tax_group_iva_6,on_invoice,INTRA,,RED,ogs,,,base,invoice,IVA DP [Q06-C16]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C17],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C16],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C17],account_snc_common_2433,-100
+account_tax_template_iva_6_aq_intrac_ob,False,,VAT 6%,IVA 6%,21120,IVA 6% AQ. INTRAC. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,INTRA,,RED,ogs,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_6_aq_intrac_exist,False,,VAT 6%,IVA 6%,21130,IVA 6% AQ. INTRAC. (Exist.),purchase,6,,,percent,tax_group_iva_6,on_invoice,INTRA,,RED,stock,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C21]||IVA AL [Q06-L45],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C21],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_13_aq_intrac_imob,False,,VAT 13%,IVA 13%,21210,IVA 13% AQ. INTRAC. (Imob.),purchase,13,,,percent,tax_group_iva_13,on_invoice,INTRA,,INT,asset,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L38],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L49],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C20],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_13_aq_intrac_obs,True,,VAT 13%,IVA 13%,21321,IVA 13% AQ. INTRAC. (OS),purchase,13,,,percent,tax_group_iva_13,on_invoice,INTRA,,INT,ogs,,,base,invoice,IVA DP [Q06-C16]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C17],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C16],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C17],account_snc_common_2433,-100
+account_tax_template_iva_13_aq_intrac_ob,False,,VAT 13%,IVA 13%,21220,IVA 13% AQ. INTRAC. (OB),purchase,13,,,percent,tax_group_iva_13,on_invoice,INTRA,,INT,ogs,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_13_aq_intrac_exist,,,VAT 13%,IVA 13%,21230,IVA 13% AQ. INTRAC. (Exist.),purchase,13,,,percent,tax_group_iva_13,on_invoice,INTRA,,INT,stock,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C23]||IVA AL [Q06-L46],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C23],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_imob_ecom,False,,VAT 23%,IVA 23%,21310,IVA 23% AQ. INTRAC. (Imob.) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,asset,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C97] R65,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C3] CMP,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C20],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C4],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_imob,True,,VAT 23%,IVA 23%,21311,IVA 23% AQ. INTRAC. (Imob.),purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,asset,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L38],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C20],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_obs_ecom,False,,VAT 23%,IVA 23%,21320,IVA 23% AQ. INTRAC. (OBS) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C97] R65,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C3] CMP,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C4],account_snc_common_2433,-100
+account_tax_template_iva_nd_22_aq_obs_md,False,,VAT N/A,IVA N/S,21320,IVA ND 22% AQ. (OBS) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,,,base,invoice,IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [N/A]||IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_23_aq_intrac_obs,True,,VAT 23%,IVA 23%,21321,IVA 23% AQ. INTRAC. (OS),purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C16]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C17],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C17],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_ob,True,,VAT 23%,IVA 23%,21322,IVA 23% AQ. INTRAC. (OB),purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_exist_ecom,False,,VAT 23%,IVA 23%,21330,IVA 23% AQ. INTRAC. (Exist.) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,stock,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C97] R65,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C3] CMP,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C22],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C4],account_snc_common_2433,-100
+account_tax_template_iva_23_aq_intrac_exist,True,,VAT 23%,IVA 23%,21331,IVA 23% AQ. INTRAC. (Exist.),purchase,23,,,percent,tax_group_iva_23,on_invoice,INTRA,,NOR,stock,,,base,invoice,IVA DP [Q06-C12]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C13],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C12],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C22],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C13],account_snc_common_2433,-100
+account_tax_template_iva_0_aq_extrac_imob,True,,VAT 0%,IVA 0%,22010,IVA 0% AQ. EXTRAC. (Imob.),purchase,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M99,ISE,asset,,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_extrac_obs,True,,VAT 0%,IVA 0%,22020,IVA 0% AQ. EXTRAC. (OBS),purchase,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M99,ISE,ogs,,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_extrac_exist,True,,VAT 0%,IVA 0%,22030,IVA 0% AQ. EXTRAC. (Exist.),purchase,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M99,ISE,stock,,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_6_aq_extrac_imob_aldp,False,,VAT 6%,IVA 6%,22110,IVA 6% AQ. EXTRAC. (Imob.) ALDP,purchase,6,,AL,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,asset,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L39],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_6_aq_extrac_ob,False,,VAT 6%,IVA 6%,22120,IVA 6% AQ. EXTRAC. (OB) ALDP,purchase,6,,AL,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,ogs,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_6_aq_extrac_obs_ddp,False,,VAT 6%,IVA 6%,22120,IVA 6% AQ. EXTRAC. (OB) DDP,purchase,6,,D,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,ogs,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_6_aq_extrac_exist_ddp,False,,VAT 6%,IVA 6%,22130,IVA 6% AQ. EXTRAC. (Exist.) DDP,purchase,6,,D,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,stock,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_6_aq_extrac_exist_aldp,False,,VAT 6%,IVA 6%,22130,IVA 6% AQ. EXTRAC. (Exist.) ALDP,purchase,6,,AL,percent,tax_group_iva_6,on_invoice,EXTRA,,RED,stock,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C21]||IVA AL [Q06-L45],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_imob_aldp,False,,VAT 13%,IVA 13%,22210,IVA 13% AQ. EXTRAC. (Imob.) ALDP,purchase,13,,AL,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,asset,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L39],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L49],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_imob_ddp,False,,VAT 13%,IVA 13%,22210,IVA 13% AQ. EXTRAC. (Imob.) DDP,purchase,13,,D,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,asset,,,base,invoice,IVA AL [Q05-L39],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_obs_ddp,False,,VAT 13%,IVA 13%,22220,IVA 13% AQ. EXTRAC. (OB) DDP,purchase,13,,D,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,ogs,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_ob_aldp,False,,VAT 13%,IVA 13%,22220,IVA 13% AQ. EXTRAC. (OB) ALDP,purchase,13,,AL,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,ogs,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_exist_aldp,False,,VAT 13%,IVA 13%,22230,IVA 13% AQ. EXTRAC. (Exist.) ALDP,purchase,13,,AL,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,stock,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C23]||IVA AL [Q06-L46],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_13_aq_extrac_exist_ddp,False,,VAT 13%,IVA 13%,22230,IVA 13% AQ. EXTRAC. (Exist.) DDP,purchase,13,,D,percent,tax_group_iva_13,on_invoice,EXTRA,,INT,stock,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_imob,False,,VAT 23%,IVA 23%,22310,IVA 23% AQ. EXTRAC. (Imob.) ALDP,purchase,23,,AL,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,asset,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_imob_ddp,False,,VAT 23%,IVA 23%,22310,IVA 23% AQ. EXTRAC. (Imob.) DDP,purchase,23,,D,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,asset,,,base,invoice,IVA AL [Q05-L39],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_ob,False,,VAT 23%,IVA 23%,22320,IVA 23% AQ. EXTRAC. (OB) ALDP,purchase,23,,AL,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_obs_ddp,False,,VAT 23%,IVA 23%,22320,IVA 23% AQ. EXTRAC. (OB) DDP,purchase,23,,D,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,ogs,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_obs_ecom,False,,VAT 23%,IVA 23%,22320,IVA 23% AQ. EXTRAC. (OBS) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C98] R66,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_os_aldp,False,,VAT 23%,IVA 23%,22320,IVA 23% AQ. EXTRAC. (OS) ALDP,purchase,23,,RC,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,ogs,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C98] R66,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_exist,False,,VAT 23%,IVA 23%,22330,IVA 23% AQ. EXTRAC. (Exist.) ALDP,purchase,23,,AL,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,stock,,,base,invoice,IVA DP [Q06-C18]||IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C19],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_exist_ddp,False,,VAT 23%,IVA 23%,22330,IVA 23% AQ. EXTRAC. (Exist.) DDP,purchase,23,,D,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,stock,,,base,invoice,IVA AL [Q05-L43],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,account_snc_common_2431,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_23_aq_extrac_exist_ecom,False,,VAT 23%,IVA 23%,22330,IVA 23% AQ. EXTRAC. (Exist.) E-COM,purchase,23,,,percent,tax_group_iva_23,on_invoice,EXTRA,,NOR,stock,,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C98] R66,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,-100
+account_tax_template_iva_ns_aq,False,,VAT N/A,IVA N/S,24000,IVA N/S AQ.,purchase,0,,,percent,tax_group_iva_0,on_invoice,,,NS,,,,base,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_5_aq_imob,False,,VAT 5%,IVA 5%,25110,IVA 5% AQ. (Imob.) [MD],purchase,5,,,percent,tax_group_iva_5,on_invoice,PT-MA,,RED,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_5_aq_ob_md,False,,VAT 5%,IVA 5%,25120,IVA 5% AQ. (OB) [MD],purchase,5,,,percent,tax_group_iva_5,on_invoice,PT-MA,,RED,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_5_aq_exist,False,,VAT 5%,IVA 5%,25130,IVA 5% AQ. (Exist.) [MD],purchase,5,,,percent,tax_group_iva_5,on_invoice,PT-MA,,RED,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C21]||IVA AL [Q06-L45],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_12_aq_imob,False,,VAT 12%,IVA 12%,25210,IVA 12% AQ. (Imob.) [MD],purchase,12,,,percent,tax_group_iva_12,on_invoice,PT-MA,,INT,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L49],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_12_aq_ob_md,False,,VAT 12%,IVA 12%,25220,IVA 12% AQ. (OB) [MD],purchase,12,,,percent,tax_group_iva_12,on_invoice,PT-MA,,INT,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_12_aq_exist,False,,VAT 12%,IVA 12%,25230,IVA 12% AQ. (Exist.) [MD],purchase,12,,,percent,tax_group_iva_12,on_invoice,PT-MA,,INT,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C23]||IVA AL [Q06-L46],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_imob,False,,VAT 22%,IVA 22%,25310,IVA 22% AQ. (Imob.) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_imob_ege_md,False,,VAT 22%,IVA 22%,25310,IVA 22% AQ. (Imob.) EGE [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_aq_imob_ccv_md,False,,VAT 22%,IVA 22%,25310,IVA 22% AQ. (Imob.) CCV [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_aq_imob_drs_md,False,,VAT 22%,IVA 22%,25310,IVA 22% AQ. (Imob.) DRS [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_pd50_aq_viatura_turismo_imob_md,False,,VAT 22%,IVA 22%,25310,IVA 22% PD50% AQ. Viatura Turismo (Imob.) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,gasol,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L32],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_22_aq_obs,False,,VAT 22%,IVA 22%,25320,IVA 22% AQ. (OS) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_ob_md,False,,VAT 22%,IVA 22%,25320,IVA 22% AQ. (OB) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_obs_ege_md,False,,VAT 22%,IVA 22%,25320,IVA 22% AQ. (OBS) EGE [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_aq_obs_drs_md,False,,VAT 22%,IVA 22%,25320,IVA 22% AQ. (OBS) DRS [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_aq_obs_ccv_md,False,,VAT 22%,IVA 22%,25320,IVA 22% AQ. (OBS) CCV [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_aq_exist,False,,VAT 22%,IVA 22%,25330,IVA 22% AQ. (Exist.) [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_exist_drs_md,False,,VAT 22%,IVA 22%,25330,IVA 22% AQ. (Exist.) DRS [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,stock,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_4_aq_imob,False,,VAT 4%,IVA 4%,26110,IVA 4% AQ. (Imob.) [AZ],purchase,4,,,percent,tax_group_iva_4,on_invoice,PT-AC,,RED,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_4_aq_ob_az,False,,VAT 4%,IVA 4%,26120,IVA 4% AQ. (OB) [AZ],purchase,4,,,percent,tax_group_iva_4,on_invoice,PT-AC,,RED,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_4_aq_exist,False,,VAT 4%,IVA 4%,26130,IVA 4% AQ. (Exist.) [AZ],purchase,4,,,percent,tax_group_iva_4,on_invoice,PT-AC,,RED,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C21]||IVA AL [Q06-L45],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_9_aq_imob,False,,VAT 9%,IVA 9%,26210,IVA 9% AQ. (Imob.) [AZ],purchase,9,,,percent,tax_group_iva_9,on_invoice,PT-AC,,INT,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L49],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_9_aq_ob_az,False,,VAT 9%,IVA 9%,26220,IVA 9% AQ. (OB) [AZ],purchase,9,,,percent,tax_group_iva_9,on_invoice,PT-AC,,INT,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L52],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_9_aq_exist,False,,VAT 9%,IVA 9%,26230,IVA 9% AQ. (Exist.) [AZ],purchase,9,,,percent,tax_group_iva_9,on_invoice,PT-AC,,INT,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C23]||IVA AL [Q06-L46],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_imob,False,,VAT 16%,IVA 16%,26310,IVA 16% AQ. (Imob.) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,,,base,invoice,IVA AL [Q04-L77],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_imob_drs_az,False,,VAT 16%,IVA 16%,26310,IVA 16% AQ. (Imob.) DRS [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_aq_imob_ccv_az,False,,VAT 16%,IVA 16%,26310,IVA 16% AQ. (Imob.) CCV [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_aq_imob_ege_az,False,,VAT 16%,IVA 16%,26310,IVA 16% AQ. (Imob.) EGE [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_pd50_aq_viatura_turismo_imob_az,False,,VAT 16%,IVA 16%,26310,IVA 16% PD50% AQ. Viatura Turismo (Imob.) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,gasol,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L32],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_16_aq_obs,False,,VAT 16%,IVA 16%,26320,IVA 16% AQ. (OS) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_nd_16_aq_obs_az,False,,VAT N/A,IVA N/S,26320,IVA ND 16% AQ. (OBS) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,,,base,invoice,IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [N/A]||IVA AL [Q04-L28],,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_16_aq_ob_az,False,,VAT 16%,IVA 16%,26320,IVA 16% AQ. (OB) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,,,base,invoice,IVA AL [Q04-L73],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_obs_drs_az,False,,VAT 16%,IVA 16%,26320,IVA 16% AQ. (OBS) DRS [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_aq_obs_ccv_az,False,,VAT 16%,IVA 16%,26320,IVA 16% AQ. (OBS) CCV [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_aq_obs_ege_az,False,,VAT 16%,IVA 16%,26320,IVA 16% AQ. (OBS) EGE [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_16_aq_exist,False,,VAT 16%,IVA 16%,26330,IVA 16% AQ. (Exist.) [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,stock,,,base,invoice,IVA AL [Q04-L69],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_exist_drs_az,False,,VAT 16%,IVA 16%,26330,IVA 16% AQ. (Exist.) DRS [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,stock,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_0_aq_imob_art_22,False,,VAT 0%,IVA 0%,27010,IVA 0% AQ. INTRAC. (Imob.) Artº 22,purchase,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M99,ISE,asset,22reti,,base,invoice,IVA DP [Q06-C15]||IVA AL [Q05-L38],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_imob_art_15,False,,VAT 0%,IVA 0%,27010,IVA 0% AQ. INTRAC. (Imob.) Artº 15,purchase,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M99,ISE,asset,15reti,,base,invoice,IVA DP [Q06-C14]||IVA AL [Q05-L38],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_imob_aaa,False,,VAT 0%,IVA 0%,27010,IVA 0% AQ. (Imob.) AAA,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,asset,n30art9,,base,invoice,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_nd_aq_imob_vta,False,,VAT N/A,IVA N/S,27010,IVA ND AQ. (Imob.) VTA,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,asset,vtt,,base,invoice,IVA AL [Q04-L33],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_obs_prt,False,,VAT 0%,IVA 0%,27020,IVA 0% AQ. (OBS) PRT,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,ogs,peq_ret,,base,invoice,IVA AL [Q04-L30],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_nd_aq_gasolina,False,,VAT N/A,IVA N/S,27020,IVA ND AQ. GASOLINA,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,ogs,gslina,,base,invoice,IVA AL [Q04-L26],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_nd_aq_obs_vtl,False,,VAT N/A,IVA N/S,27020,IVA ND AQ. (OBS) VTL,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,ogs,vtl,,base,invoice,IVA AL [Q04-L74],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_nd_aq_obs_vta,False,,VAT N/A,IVA N/S,27020,IVA ND AQ. (OBS) VTA,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,ogs,vta,,base,invoice,IVA AL [Q04-L27],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_exist_art_22,False,,VAT 0%,IVA 0%,27030,IVA 0% AQ. INTRAC. (Exist.) Artº 22,purchase,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M99,ISE,stock,22reti,,base,invoice,IVA DP [Q06-C15]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_exist_art_15,False,,VAT 0%,IVA 0%,27030,IVA 0% AQ. INTRAC. (Exist.) Artº 15,purchase,0,,,percent,tax_group_iva_0,on_invoice,INTRA,M99,ISE,stock,15reti,,base,invoice,IVA DP [Q06-C14]||IVA AL [Q05-L42],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_aq_exist_aaa,False,,VAT 0%,IVA 0%,27030,IVA 0% AQ. (Exist.) AAA,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,M99,ISE,stock,n30art9,,base,invoice,IVA AL [Q04-L71],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [N/A],,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_nd_aq_exist_vtl,False,,VAT N/A,IVA N/S,27030,IVA ND AQ. (Exist.) VTL,purchase,0,,,percent,tax_group_iva_0,on_invoice,PT,,NOR,stock,vtl,,base,invoice,IVA AL [Q04-L70],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_23_aq_imob_vta,False,,VAT 23%,IVA 23%,27310,IVA 23% AQ. (Imob.) VTA,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,vta,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_imob_vta,False,,VAT 22%,IVA 22%,27310,IVA 22% AQ. (Imob.) VTA [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,asset,vta,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_imob_vta,False,,VAT 16%,IVA 16%,27310,IVA 16% AQ. (Imob.) VTA [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,asset,vta,,base,invoice,IVA AL [Q04-L32],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_23_aq_imob_ege,False,,VAT 23%,IVA 23%,27310,IVA 23% AQ. (Imob.) EGE,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_23_aq_imob_drs,False,,VAT 23%,IVA 23%,27310,IVA 23% AQ. (Imob.) DRS,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_23_aq_imob_ccv,False,,VAT 23%,IVA 23%,27310,IVA 23% AQ. (Imob.) CCV,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,asset,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L50],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_23_aq_obs_vta,False,,VAT 23%,IVA 23%,27320,IVA 23% AQ. (OBS) VTA,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,vta,,base,invoice,IVA AL [Q04-L24],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_obs_vta,False,,VAT 22%,IVA 22%,27320,IVA 22% AQ. (OBS) VTA [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,vta,,base,invoice,IVA AL [Q04-L24],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_obs_vta,False,,VAT 16%,IVA 16%,27320,IVA 16% AQ. (OBS) VTA [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,vta,,base,invoice,IVA AL [Q04-L24],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_23_aq_obs_ege,False,,VAT 23%,IVA 23%,27320,IVA 23% AQ. (OBS) EGE,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,egee,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C105] R73,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_23_aq_obs_drs,False,,VAT 23%,IVA 23%,27320,IVA 23% AQ. (OBS) DRS,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_23_aq_obs_ccv,False,,VAT 23%,IVA 23%,27320,IVA 23% AQ. (OBS) CCV,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,scc,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C102] R70,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_iva_22_pd50_aq_gasoleo_incl,False,,VAT 22%,IVA 22%,27320,IVA 22% PD50% AQ. GASÓLEO/GNV [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,ogs,gasol,,base,invoice,IVA AL [Q04-L25],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L25],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_23_pd50_aq_gasoleo_incl,True,,VAT 23%,IVA 23%,27321,IVA 23% PD50% AQ. GASÓLEO/GNV,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,ogs,gasol,,base,invoice,IVA AL [Q04-L25],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L25],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_16_pd50_aq_gasoleo_incl,False,,VAT 16%,IVA 16%,27321,IVA 16% PD50% AQ. GASÓLEO/GNV [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,ogs,gasol,,base,invoice,IVA AL [Q04-L25],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L53],account_snc_common_2432,50
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA AL [Q04-L25],,50
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,50
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,50
+account_tax_template_iva_23_aq_exist_vta,False,,VAT 23%,IVA 23%,27330,IVA 23% AQ. (Exist.) VTA,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,stock,vta,,base,invoice,IVA AL [Q04-L20],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_22_aq_exist_vta,False,,VAT 22%,IVA 22%,27330,IVA 22% AQ. (Exist.) VTA [MD],purchase,22,,,percent,tax_group_iva_22,on_invoice,PT-MA,,NOR,stock,vta,,base,invoice,IVA AL [Q04-L20],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_16_aq_exist_vta,False,,VAT 16%,IVA 16%,27330,IVA 16% AQ. (Exist.) VTA [AZ],purchase,16,,,percent,tax_group_iva_16,on_invoice,PT-AC,,NOR,stock,vta,,base,invoice,IVA AL [Q04-L20],,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+account_tax_template_iva_23_aq_exist_drs,False,,VAT 23%,IVA 23%,27330,IVA 23% AQ. (Exist.) DRS,purchase,23,,,percent,tax_group_iva_23,on_invoice,PT,,NOR,stock,bssdrsr,,base,invoice,IVA DP [Q06-C3] CMP||IVA DP [Q06A-C101] R69,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C22]||IVA AL [Q06-L47],account_snc_common_2432,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C4],account_snc_common_2433,-100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C40],account_snc_common_2434,-100
+account_tax_template_rfirs_25000_terc,False,,WHT 25%,RF 25%,30000,RF IRS 25% (Terceiros),sale,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRS,base,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_rfirs_ns,True,,WHT N/A,RF N/S,31000,RF IRS N/S (Trab. Ind.),purchase,0,account_snc_common_278129,,percent,tax_group_rf_ns,on_invoice,PT,,,,,IRS,base,invoice,RF DM [ ] 102,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF DM [ ] 102,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_rfirs_0_ti,True,,WHT 0%,RF 0%,31001,RF IRS 0% (Trab.Ind.),purchase,0,,,percent,tax_group_rf_0,on_invoice,PT,,,,,IRS,base,invoice,RF DM [ ] 102,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF DM [ ] 102,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_rfirs_11500_ti,True,,"WHT 11,5%","RF 11,5%",31001,RF IRS 11.5% (Trab. Ind.),purchase,-11.5,account_snc_common_278129,,percent,tax_group_rf_11500,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+account_tax_template_rfirs_16500_ti,False,,"WHT 16,5%","RF 16,5%",31002,RF IRS 16.5% (Trab. Ind.),purchase,-16.5,account_snc_common_278129,,percent,tax_group_rf_16500,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+account_tax_template_rfirs_20000_ti,False,,WHT 20%,RF 20%,31003,RF IRS 20% (Trab. Ind.),purchase,-20,account_snc_common_278129,,percent,tax_group_rf_20000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+account_tax_template_rfirs_23000_ti,False,,WHT 20%,RF 23%,31003,RF IRS 23% (Trab. Ind.),purchase,-23,account_snc_common_278129,,percent,tax_group_rf_23000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+account_tax_template_rfirs_25000_ti,True,,WHT 25%,RF 25%,31004,RF IRS 25% (Trab. Ind.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 14||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 102||RF M30 [Q08-C35|C37] 14,account_snc_common_242,100
+account_tax_template_rfirs_25000_pred,True,,WHT 25%,RF 25%,31013,RF IRS 25% (Prediais),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 06||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 104||RF M30 [Q08-C35|C37] 06,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 06||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 104||RF M30 [Q08-C35|C37] 06,account_snc_common_242,100
+account_tax_template_rfirs_16500_indemn,False,,"WHT 16,5%","RF 16,5%",31014,RF IRS 16.5% (Indemniz. e outros increm.),purchase,-16.5,account_snc_common_278129,,percent,tax_group_rf_16500,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 110||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 110||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+account_tax_template_rfirs_28000_art71,False,,WHT 28%,RF 28%,31015,RF IRS 28% (Rend. Capitais - Artº 71 CIRS),purchase,-28,account_snc_common_278129,,percent,tax_group_rf_28000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+account_tax_template_rfirs_25000_art72,False,,WHT 25%,RF 25%,31016,RF IRS 25% (Rend. Capitais – Artº 71 CIRS),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+account_tax_template_rfirs_35000_art73,False,,WHT 35%,RF 35%,31017,RF IRS 35% (Rend. Capitais – Artº 71 CIRS),purchase,-35,account_snc_common_278129,,percent,tax_group_rf_35000,on_invoice,PT,,,,,IRS,base,invoice,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 10||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 115||RF M30 [Q08-C35|C37] 10,account_snc_common_242,100
+account_tax_template_rfirc_25000_pred,True,,WHT 25%,RF 25%,31018,RF IRC 25% (Prediais),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 06||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 104||RF M30 [Q08-C35|C37] 06,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 06||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 104||RF M30 [Q08-C35|C37] 06,account_snc_common_242,100
+account_tax_template_rfirc_25000_comiss,True,,WHT 25%,RF 25%,31019,RF IRC 25% (Comissões Interm.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 08||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 202||RF M30 [Q08-C35|C37] 08,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 08||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 202||RF M30 [Q08-C35|C37] 08,account_snc_common_242,100
+account_tax_template_rfirc_25000_cap_juros,False,,WHT 25%,RF 25%,31020,RF IRC 25% (Capitais – Juros Depósitos),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 205||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 205||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+account_tax_template_rfirc_10000_cap_outros,False,,WHT 10%,RF 10%,31021,RF IRC 10% (Capitais – Outros Rend.),purchase,-10,account_snc_common_278129,,percent,tax_group_rf_10000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+account_tax_template_rfirc_25000_cap_outros,False,,WHT 25%,RF 25%,31022,RF IRC 25% (Capitais - Outros Rend.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+account_tax_template_rfirc_35000_cap_outros,False,,WHT 35%,RF 35%,31023,RF IRC 35% (Capitais - Outros Rend.),purchase,-35,account_snc_common_278129,,percent,tax_group_rf_35000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 11||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 206||RF M30 [Q08-C35|C37] 11,account_snc_common_242,100
+account_tax_template_rfirc_35000_jogo,False,,WHT 35%,RF 35%,31024,"RF IRC 35% (Jogo, Sorteios, etc.)",purchase,-35,account_snc_common_278129,,percent,tax_group_rf_35000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 207||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 207||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+account_tax_template_rfirc_21500_org_est_res,False,,"WHT 21,5%","RF 21,5%",31025,RF IRC 21.5% (Rem. Orgãos Estat. Resid.),purchase,-21.5,account_snc_common_278129,,percent,tax_group_rf_21500,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 208||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 208||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+account_tax_template_rfirc_25000_org_est_nres,False,,WHT 25%,RF 25%,31026,RF IRC 25% (Rem. Orgãos Estat. Não Resid.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,base,invoice,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM [ ] 208||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35|C37] 21||RF M30 [Q08-C36] 01,,100
+,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM [ ] 208||RF M30 [Q08-C35|C37] 21,account_snc_common_242,100

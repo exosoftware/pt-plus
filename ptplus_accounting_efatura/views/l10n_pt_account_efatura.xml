@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="account_efatura_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.tree</field>
+        <field name="model">l10n_pt.account.efatura</field>
+        <field name="arch" type="xml">
+            <tree
+                js_class="l10n_pt_efatura_list"
+                create="0"
+                decoration-success="not status_mismatch"
+                decoration-danger="status_mismatch"
+            >
+                <field name="status_mismatch" column_invisible="True" />
+                <field name="date" />
+                <field name="reference" />
+                <field name="vendor_id" />
+                <!--<field name="vendor_name" />-->
+                <field name="vat" />
+                <field name="type" />
+                <field name="status" />
+                <field name="vat_amount" />
+                <field name="total_amount" />
+                <field name="tax_base" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="invoice_id" />
+                <field
+                    name="tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                    optional="show"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="account_efatura_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.form</field>
+        <field name="model">l10n_pt.account.efatura</field>
+        <field name="arch" type="xml">
+            <form>
+                <div
+                    class="alert alert-danger text-center"
+                    invisible="not status_mismatch"
+                    role="alert"
+                >
+                    <field name="status_mismatch_text" />
+                </div>
+                <header />
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date" />
+                            <field name="reference" />
+                            <field name="vendor_id" />
+                            <field name="vendor_name" />
+                            <field name="vat" />
+                            <field name="type" />
+                            <field name="tax_auth_doc_id" string="AT ID" />
+                            <field
+                                name="tag_ids"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                            />
+                        </group>
+                        <group>
+                            <field name="status" />
+                            <field name="status_mismatch" invisible="1" />
+                            <field name='vat_amount' />
+                            <field name='total_amount' />
+                            <field name="tax_base" />
+                            <field
+                                name='company_id'
+                                groups="base.group_multi_company"
+                            />
+                            <field
+                                name="invoice_id"
+                                string="Document"
+                                domain="[('move_type', 'in', ('in_invoice', 'in_refund')), ('l10n_pt_efatura_id', '=', False)]"
+                                options="{'no_create': True, 'no_edit': True}"
+                            />
+                            <field name="status_mismatch_disable" />
+                        </group>
+                        <group string="Lines" name="efaturas_lines">
+                            <field name="line_ids" mode="tree" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="amount_base" string="Tax Base" />
+                                    <field name="tax_percentage" string="Tax %" />
+                                    <field name="amount_tax" string="VAT" />
+                                    <field name="amount_total" string="Total" />
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field
+                        name="message_follower_ids"
+                        help="Follow this database to automatically track the events associated to users of this database."
+                    />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_efatura_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.search</field>
+        <field name="model">l10n_pt.account.efatura</field>
+        <field name="arch" type="xml">
+            <search string="Search E-Fatura">
+                <field name="reference" />
+                <field name="vat" />
+                <filter
+                    string="Unlinked"
+                    name="unlinked"
+                    domain="[('invoice_id','=',False)]"
+                />
+                <filter
+                    string="Status Mismatch"
+                    name="status_mismatch_filter"
+                    domain="[('status_mismatch','=',True)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter string="Date" name="date" context="{'group_by': 'date'}" />
+                    <filter
+                        string="Vendor"
+                        name="vendor"
+                        context="{'group_by': 'vendor_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_account_efatura_view" model="ir.actions.act_window">
+        <field name="name">E-Fatura</field>
+        <field name="res_model">l10n_pt.account.efatura</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="account_efatura_tree" />
+    </record>
+
+    <menuitem
+        id="menu_account_efatura_list"
+        parent="account.menu_finance_entries_management"
+        action="action_account_efatura_view"
+    />
+
+</odoo>

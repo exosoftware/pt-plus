@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+    <t t-name="button_efatura.ListView.Buttons" t-inherit="web.ListView.Buttons">
+    <xpath expr="//div[hasclass('o_list_buttons')]" position="inside">
+        <button
+                t-if="nbSelected == 0"
+                type="button"
+                class="btn btn-primary"
+                t-on-click="importEfatura"
+            >
+           Import
+        </button>
+    </xpath>
+    </t>
+</templates>
