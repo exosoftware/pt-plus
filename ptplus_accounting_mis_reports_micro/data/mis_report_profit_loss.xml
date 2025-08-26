@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- MIS Report Microentities: Profit and Loss -->
+    <record id="mis_profit_loss_pt_me" model="mis.report">
+        <field name="name">Demonstração dos Resultados por Naturezas (Micro)</field>
+        <field
+            name="description"
+        >Mapa de Demonstração de Resultados por Naturezas IES Q04 - SNC Microentidades</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account-all"
+        />
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_tit1" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">TIT1</field>
+        <field name="description">RENDIMENTOS E GASTOS</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00001" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00001</field>
+        <field name="description">Vendas e serviços prestados</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bal[71%,72%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00002" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00002</field>
+        <field name="description">Subsídios à exploração</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bal[75%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">30</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00004" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00004</field>
+        <field name="description">Variação nos inventários da produção</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bal[73%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">40</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00005" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00005</field>
+        <field name="description">Trabalhos para a própria entidade</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">-bal[74%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">50</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00006" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00006</field>
+        <field
+            name="description"
+        >Custos das mercadorias vendidas e das matérias consumidas</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[31%,61%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">60</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00007" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00007</field>
+        <field name="description">Fornecimentos e serviços externos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[62%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">70</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00008" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00008</field>
+        <field name="description">Gastos com o pessoal</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[63%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">80</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00009" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00009</field>
+        <field name="description">Imparidade (perdas / reversões)</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[65%,762%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">90</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00012" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00012</field>
+        <field name="description">Provisões (aumentos/reduções)</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[67%,763%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">100</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00016" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00016</field>
+        <field name="description">Outros rendimentos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bal[78%,79%][('journal_id.code', '!=', 'APR')]+bal[7915%,793%][('journal_id.code','!=', 'APR')]</field>
+        <field name="sequence">110</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00017" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00017</field>
+        <field name="description">Outros gastos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[68%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">120</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00018" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00018</field>
+        <field
+            name="description"
+        >Resultado antes de depreciações, gastos de financiamentos e impostos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >A00001+A00002+A00004+A00005-A00006-A00007-A00008-A00009-A00012+A00016-A00017</field>
+        <field name="sequence">130</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00019" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00019</field>
+        <field
+            name="description"
+        >Gastos / reversões de depreciação e de amortização</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[64%,761%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">140</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00021" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00021</field>
+        <field
+            name="description"
+        >Resultado operacional (antes de gastos de financiamento e impostos)</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00018-A00019</field>
+        <field name="sequence">150</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00022" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00022</field>
+        <field name="description">Juros e rendimentos similares obtidos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >-bal[7915%,793%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">160</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00023" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00023</field>
+        <field name="description">Juros e gastos similares suportados</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[69%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">170</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00024" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00024</field>
+        <field name="description">Resultado antes de impostos</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00021+A00022-A00023</field>
+        <field name="sequence">180</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00025" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00025</field>
+        <field name="description">Imposto sobre o rendimento do período</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">bal[812%][('journal_id.code', '!=', 'APR')]</field>
+        <field name="sequence">190</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_a00026" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">A00026</field>
+        <field name="description">Resultado líquido do período</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00024-A00025</field>
+        <field name="sequence">200</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_controlo" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">controlo</field>
+        <field name="description">controlo</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00026 + bale[818%]</field>
+        <field name="sequence">210</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_indic_gestao" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">indic_gestao</field>
+        <field name="description">INDICADORES DE GESTÃO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">220</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_margem_bruta" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">margem_bruta</field>
+        <field name="description">Margem Bruta</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">1 - (A00006/(A00001+A00004))</field>
+        <field name="sequence">230</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_vab" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">vab</field>
+        <field name="description">VAB</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >A00001 + A00002 + A00004 + A00005 - A00006 - A00007 - balp[6812%][('journal_id.code','!=', 'APR')]</field>
+        <field name="sequence">240</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_rentabilidade" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">rentabilidade</field>
+        <field name="description">RENTABILIDADE</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">250</field>
+    </record>
+    <record
+        id="mis_profit_loss_pt_me_kpi_rentabilidade_oper_vnd"
+        model="mis.report.kpi"
+    >
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">rentabilidade_oper_vnd</field>
+        <field name="description">Rentabilidade Operacional das Vendas</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00021 / A00001</field>
+        <field name="sequence">260</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_rentabilidade_liq_vnd" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">rentabilidade_liq_vnd</field>
+        <field name="description">Rentabilidade Líquida das Vendas</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00026 / A00001</field>
+        <field name="sequence">270</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_ebitda_vol_negocio" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">ebitda_vol_negocio</field>
+        <field name="description">EBITDA em % do Volume de Negócios</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">pct</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">avg</field>
+        <field name="expression">A00018 / A00001</field>
+        <field name="sequence">280</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_risco" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">risco</field>
+        <field name="description">RISCO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_1"
+        />
+        <field name="type">str</field>
+        <field name="compare_method">none</field>
+        <field name="accumulation_method">none</field>
+        <field name="expression">AccountingNone</field>
+        <field name="sequence">290</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_grau_alavanc_explor" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">grau_alavanc_explor</field>
+        <field name="description">Grau de Alavancagem da Atividade de Exploração</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">(A00001 - A00006 - A00007) / A00021</field>
+        <field name="sequence">300</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_grau_alavanc_financ" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">grau_alavanc_financ</field>
+        <field
+            name="description"
+        >Grau de Alavancagem da Atividade de Financiamento</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">A00021 / A00024</field>
+        <field name="sequence">310</field>
+    </record>
+    <record id="mis_profit_loss_pt_me_kpi_grau_alavanc_combin" model="mis.report.kpi">
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="name">grau_alavanc_combin</field>
+        <field name="description">Grau de Alavancagem Combinada</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_2"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">(A00001 - A00006 - A00007) / A00024</field>
+        <field name="sequence">320</field>
+    </record>
+
+    <!-- MIS Report Instance: Profit and Loss -->
+    <record id="mis_instance_profit_loss_pt_me" model="mis.report.instance">
+        <field name="name">Demonstração dos Resultados por Naturezas (Micro)</field>
+        <field name="description" />
+        <field name="report_id" ref="mis_profit_loss_pt_me" />
+        <field name="comparison_mode">False</field>
+        <field name="date_from" eval="'2023-01-01'" />
+        <field name="date_to" eval="'2023-12-31'" />
+    </record>
+</odoo>

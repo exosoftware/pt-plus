@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_custom_form" model="ir.ui.view">
+        <field name="name">res.partner.custom.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <group name="accounting_entries" position="after">
+                <group string="Model 32 Information" name="model_32" invisible="country_code == 'PT'">
+                    <field name="l10n_pt_vat_pt"/>
+                    <label for="l10n_pt_model_30_share_company"/>
+                    <div class="o_row">
+                        <field name="l10n_pt_model_30_share_company"/>
+                        <span>%</span>
+                    </div>
+                    <label for="l10n_pt_model_30_share_partner"/>
+                    <div class="o_row">
+                        <field name="l10n_pt_model_30_share_partner"/>
+                        <span>%</span>
+                    </div>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
