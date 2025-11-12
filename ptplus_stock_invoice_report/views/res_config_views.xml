@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- General Configuration -->
+    <record id="view_general_configuration" model="ir.ui.view">
+        <field name="name">base.config.settings.pt</field>
+        <field name="model">base.config.settings</field>
+        <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+        <field name="arch" type="xml">
+
+            <!-- Delivery document information on invoices -->
+            <group name="report" position="inside">
+                <field name="invoice_delivery_info" widget="radio"/>
+            </group>
+
+        </field>
+    </record>
+
+</odoo>

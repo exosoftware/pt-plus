@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_import_saft_configuration_form" model="ir.ui.view">
+        <field name="name">l10n_pt.import.saft.configuration.form</field>
+        <field name="model">l10n_pt.import.saft.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="process_saft_file"
+                        string="Process File"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state == 'done'"
+                    />
+                    <button
+                        name="action_write_records"
+                        string="Create/Update Records"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state not in ['processed', 'error']"
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_partner_imports"
+                            icon="fa-user"
+                            help="Partners &#10;&#10;C: Create &#10;U: Update &#10;I: Ignore"
+                        >
+                            <field
+                                name="partners_to_create"
+                                string="C:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="partners_to_update"
+                                string="U:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="partners_to_ignore"
+                                string="I:"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_product_imports"
+                            icon="fa-cubes"
+                            help="Products &#10;&#10;C: Create &#10;U: Update &#10;I: Ignore"
+                        >
+                            <field
+                                name="products_to_create"
+                                string="C:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="products_to_update"
+                                string="U:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="products_to_ignore"
+                                string="I:"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_account_imports"
+                            icon="fa-sort-numeric-asc"
+                            help="Accounts &#10;&#10;C: Create &#10;U: Update &#10;I: Ignore"
+                        >
+                            <field
+                                name="accounts_to_create"
+                                string="C:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="accounts_to_update"
+                                string="U:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="accounts_to_ignore"
+                                string="I:"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_journal_imports"
+                            icon="fa-book"
+                            help="Journals &#10;&#10;C: Create &#10;U: Update &#10;I: Ignore"
+                        >
+                            <field
+                                name="journals_to_create"
+                                string="C:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="journals_to_update"
+                                string="U:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="journals_to_ignore"
+                                string="I:"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_move_imports"
+                            icon="fa-pencil-square-o"
+                            help="Moves &#10;&#10;C: Create &#10;I: Ignore"
+                        >
+                            <field
+                                name="moves_to_create"
+                                string="C:"
+                                widget="statinfo"
+                                style="margin-right:8px;"
+                            />
+                            <field
+                                name="moves_to_ignore"
+                                string="I:"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group id="header_group_left">
+                            <field name="company_id" />
+                            <field name="disable_accounts" />
+                            <field
+                                name="default_ignore"
+                                string="Ignore Default Value"
+                            />
+                            <label for="date_start" string="Date Range" />
+                            <div>
+                                <field
+                                    name="date_start"
+                                    widget="daterange"
+                                    options="{'start_date_field': 'date_end'}"
+                                    readonly="True"
+                                />
+                            </div>
+                        </group>
+                        <group>
+                            <field name="saft_filename" invisible="1" />
+                            <field
+                                name="saft_file"
+                                widget="binary"
+                                string="File"
+                                filename="saft_filename"
+                            />
+
+                            <separator string="Records to Import" />
+
+                            <div name="records_to_create">
+                                <span class="d-inline-flex">
+                                    <field name="update_partners" string="Partners" />
+                                    <label for="update_partners" />
+
+                                    <field name="update_accounts" string="Accounts" />
+                                    <label for="update_accounts" />
+
+                                    <field name="update_products" string="Products" />
+                                    <label for="update_products" />
+
+                                    <field
+                                        name="update_journal_entries"
+                                        string="Journal Entries"
+                                    />
+                                    <label for="update_journal_entries" />
+                                </span>
+                            </div>
+                        </group>
+                    </group>
+                    <group
+                        name="error_message"
+                        string="Error Description"
+                        invisible="not errors"
+                    >
+                        <field name="errors" readonly="1" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="import_saft_configuration_kanban_view">
+        <field name="name">import.saft.configuration.kanban</field>
+        <field name="model">l10n_pt.import.saft.configuration</field>
+        <field name="arch" type="xml">
+            <kanban sample="1" default_group_by="state" class="o_kanban_small_column">
+                <templates>
+                    <t t-name="card" class="flex-row">
+                        <main class="ps-2 ps-md-0">
+                            <div class="mb-1 text-center">
+                                <div name="name_field">
+                                    <field name="name" class="mb-0 fw-bold fs-5" />
+                                </div>
+                                <div>
+                                    <field name="company_id" />
+                                </div>
+                                <div>
+                                    <field name="date_start" />
+                                    <span>
+                                        <i
+                                            class="fa fa-long-arrow-right"
+                                            title="Arrow"
+                                        />
+                                    </span>
+                                    <field name="date_end" />
+                                </div>
+
+                                <a
+                                    class="btn btn-sm btn-link smaller"
+                                    name="action_view_partner_imports"
+                                    role="button"
+                                    type="object"
+                                >
+                                    <i
+                                        class="fa fa-user me-1"
+                                        role="img"
+                                        aria-label="Partner Imports"
+                                        title="Partner Imports"
+                                    />
+                                    <field name="total_partners" />
+                                </a>
+                                <a
+                                    class="btn btn-sm btn-link smaller"
+                                    name="action_view_product_imports"
+                                    role="button"
+                                    type="object"
+                                >
+                                    <i
+                                        class="fa fa-cubes me-1"
+                                        role="img"
+                                        aria-label="Products Imports"
+                                        title="Products Imports"
+                                    />
+                                    <field name="total_products" />
+                                </a>
+                                <a
+                                    class="btn btn-sm btn-link smaller"
+                                    name="action_view_account_imports"
+                                    role="button"
+                                    type="object"
+                                >
+                                    <i
+                                        class="fa fa-sort-numeric-asc me-1"
+                                        role="img"
+                                        aria-label="Account Imports"
+                                        title="Account Imports"
+                                    />
+                                    <field name="total_accounts" />
+                                </a>
+                                <a
+                                    class="btn btn-sm btn-link smaller"
+                                    name="action_view_journal_imports"
+                                    role="button"
+                                    type="object"
+                                >
+                                    <i
+                                        class="fa fa-book me-1"
+                                        role="img"
+                                        aria-label="Journal Imports"
+                                        title="Journal Imports"
+                                    />
+                                    <field name="total_journals" />
+                                </a>
+                                <a
+                                    class="btn btn-sm btn-link smaller"
+                                    name="action_view_move_imports"
+                                    role="button"
+                                    type="object"
+                                >
+                                    <i
+                                        class="fa fa-pencil-square-o me-1"
+                                        role="img"
+                                        aria-label="Move Imports"
+                                        title="Move Imports"
+                                    />
+                                    <field name="total_moves" />
+                                </a>
+                            </div>
+                            <footer />
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_import_saft_configuration_view" model="ir.actions.act_window">
+        <field name="name">Import SAFT-T</field>
+        <field name="res_model">l10n_pt.import.saft.configuration</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No data yet!
+            </p>
+            <p>
+                First create a configuration for the SAF-T import.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_account_saft_import_list"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="2"
+        action="action_import_saft_configuration_view"
+        groups="base.group_no_one"
+    />
+</odoo>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Invoices -->
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+
+        <xpath expr="//t[@t-set='o']" position="after">
+            <t t-set="pickings" t-value="o.picking_ids.filtered(lambda rec: rec.signed is True)"/>
+        </xpath>
+
+        <xpath expr="//div[@t-if='o.partner_id.ref']" position="after">
+            <div class="col-xs-3" t-if="pickings and o.company_id.invoice_delivery_info == 'first'">
+                <strong>Transp. Doc.:</strong>
+                <p>
+                    <t t-foreach="pickings" t-as="pick">
+                        <span t-field="pick.delivery_number"/>
+                    </t>
+                </p>
+            </div>
+        </xpath>
+
+        <!--
+        <xpath expr="//th[@class='hidden']" position="after">
+            <th t-if="o.picking_ids.filtered(lambda rec: (rec.signed))" class="text-right invoice_picking_column">Transp. Doc.</th>
+        </xpath>
+        <xpath expr="//td[@class='hidden']" position="after">
+            <td t-if="o.picking_ids.filtered(lambda rec: (rec.signed))" class="text-right invoice_picking_column">
+                <t t-foreach="l.move_line_ids" t-as="stock_move">
+                    <span t-if="stock_move.picking_id.signed" t-field="stock_move.picking_id.delivery_number" />
+                </t>
+            </td>
+        </xpath>
+        -->
+
+        <!-- Invoice/Picking relation -->
+        <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
+
+            <div class="row" t-if="pickings and o.company_id.invoice_delivery_info in ('last', 'break')">
+                <div t-att-class="'invoice-picking-' + o.company_id.invoice_delivery_info">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Related Delivery Documents</th>
+                                <th class="text-right">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="pickings" t-as="pick">
+                                <tr class="invoice-picking-line-delivery">
+                                    <td colspan="99">
+                                        <span t-out="pick.get_fullname()"/>
+                                        (<span t-field="pick.delivery_date"/>)
+                                    </td>
+                                </tr>
+
+                                <tr t-foreach="pick.move_lines.filtered(lambda rec: (rec.invoice_line_id in o.invoice_line_ids))" t-as="move" class="invoice-picking-line-invoice">
+                                    <t t-set="l" t-value="move.invoice_line_id"/>
+                                    <td><span t-field="l.name"/></td>
+                                    <td class="text-right">
+                                        <span t-field="move.product_qty"/>
+                                        <span t-field="l.uom_id" groups="product.group_uom"/>
+                                    </td>
+                                </tr>
+                            </t>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </xpath>
+
+    </template>
+
+    <!-- Layouted invoice: Add a column for delivery documents on both header and rows -->
+    <!--
+    <template id="report_invoice_layouted" inherit_id="sale.report_invoice_layouted">
+        <xpath expr="//table[@class='table table-condensed']/thead/tr/th" position="after">
+            <th t-if="o.picking_ids.filtered(lambda rec: (rec.signed))" class="text-right">Transp. Doc.</th>
+        </xpath>
+        <xpath expr="//t[@t-as='l']/tr/td" position="after">
+            <td t-if="o.picking_ids.filtered(lambda rec: (rec.signed))" class="text-right">
+                <t t-foreach="l.move_line_ids" t-as="stock_move">
+                    <span t-if="stock_move.picking_id.signed" t-field="stock_move.picking_id.delivery_number" />
+                </t>
+            </td>
+        </xpath>
+    </template>
+    -->
+
+</odoo>

@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_sale_version
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-25 09:11+0000\n"
+"PO-Revision-Date: 2021-08-25 10:13+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ptplus_sale_version
+#: model_terms:ir.ui.view,arch_db:ptplus_sale_version.report_saleorder_document
+msgid "<strong>Internal Ref.:</strong>"
+msgstr "<strong>Ref. Interna:</strong>"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__current_version_id
+msgid "Current Version"
+msgstr "Versión actual"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__current_version_internal_name
+msgid "Current Version's Internal Ref."
+msgstr "Ref. Interna de la Versión Actual."
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__has_old_versions
+msgid "Has Old Versions"
+msgstr "Tiene Versiones Antiguas"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_sale_version
+#: model:ir.model.constraint,message:ptplus_sale_version.constraint_sale_order_internal_name_unique
+msgid "Internal Name must be unique per Company."
+msgstr "El Número Interno debe ser único para cada compañía."
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__internal_name
+#: model_terms:ir.ui.view,arch_db:ptplus_sale_version.view_order_form
+msgid "Internal Ref."
+msgstr "Ref. Interna"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__unversioned_name
+msgid "Internal Ref. (w/o version)"
+msgstr "Ref. Interna (sin versión)"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: ptplus_sale_version
+#: code:addons/ptplus_sale_version/models/sale_order.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: ptplus_sale_version
+#: code:addons/ptplus_sale_version/models/sale_order.py:0
+#, python-format
+msgid "New Sales Order Versions"
+msgstr "Nuevas Versiones de Pedidos de Venta"
+
+#. module: ptplus_sale_version
+#: model_terms:ir.ui.view,arch_db:ptplus_sale_version.view_order_form
+msgid "New Version"
+msgstr "Nueva versión"
+
+#. module: ptplus_sale_version
+#: code:addons/ptplus_sale_version/models/sale_order.py:0
+#, python-format
+msgid "New version created: %s"
+msgstr "Nueva versión creada: %s"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__old_version_ids
+msgid "Old Versions"
+msgstr "Versiones Antiguas"
+
+#. module: ptplus_sale_version
+#: model:ir.model,name:ptplus_sale_version.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Ventas"
+
+#. module: ptplus_sale_version
+#: model:ir.model.fields,field_description:ptplus_sale_version.field_sale_order__version_number
+msgid "Version"
+msgstr "Versión"
+
+#. module: ptplus_sale_version
+#: model_terms:ir.ui.view,arch_db:ptplus_sale_version.view_order_form
+msgid "Versions"
+msgstr "Versiones"

@@ -1,0 +1,697 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-03 11:03+0000\n"
+"PO-Revision-Date: 2025-11-03 11:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "1st Quarter"
+msgstr "1º Trim."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "2nd Quarter"
+msgstr "2º Trim."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "3rd Quarter"
+msgstr "3º Trim."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "4th Quarter"
+msgstr "4º Trim."
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__amount
+msgid "Amount"
+msgstr "Valor"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__state__analyze
+msgid "Analyze"
+msgstr "Analisar"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "April"
+msgstr "Abril"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Are you sure you want to send emails to the selected records?"
+msgstr ""
+"Tem certeza de que deseja enviar e-mails para os registros selecionados?"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Close"
+msgstr "Fechar"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__code
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__code
+msgid "Code"
+msgstr "Código"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__company_eac
+msgid "Company EAC"
+msgstr "CAE da Empresa"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Compute"
+msgstr "Calcular"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__currency_id
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Custom"
+msgstr "Personalizado"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__date_from
+msgid "Date From"
+msgstr "Data Desde"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__date_to
+msgid "Date To"
+msgstr "Data Até"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "December"
+msgstr "Dezembro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__declaration_type
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__declaration_type
+msgid "Declaration Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nome"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__error
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Errors"
+msgstr "Erros"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export CSV"
+msgstr "Exportar CSV"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export Complete"
+msgstr "Exportação Completada"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export PDF"
+msgstr "Exportar PDF"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Botão Exportar PDF"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export TXT"
+msgstr "Exportar TXT"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__export_txt_button
+msgid "Export Txt Button"
+msgstr "Botão Exportar TXT"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export Webservice"
+msgstr "Exportar por Webservice"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export XLSX"
+msgstr "Exportar XLSX"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Export XML"
+msgstr "Exportar XML"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__export_xml_button
+msgid "Export Xml Button"
+msgstr "Botão Exportar XML"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "February"
+msgstr "Fevereiro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__data
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__data
+msgid "File"
+msgstr "Ficheiro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__filename
+msgid "Filename"
+msgstr "Nome do Ficheiro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__declaration_type__first
+msgid "First Declaration"
+msgstr "Primeira Declaração"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__format
+msgid "Format"
+msgstr "Formato"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "From"
+msgstr "De"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Generated file:"
+msgstr "Ficheiro gerado:"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__info
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__info
+msgid "Info"
+msgstr "Info"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+"Inserir uma entrada no registo de dataports juntamente com uma cópia do "
+"ficheiro importado ou exportado."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "January"
+msgstr "Janeiro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__journal_ids
+msgid "Journals"
+msgstr "Diários"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "July"
+msgstr "Julho"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "June"
+msgstr "Junho"
+
+#. module: ptplus_reports
+#: model:ir.model,name:ptplus_reports.model_l10n_pt_statement_wizard
+msgid "L10nPt Statement Wizard"
+msgstr "Assistente de Declarações L10nPt"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultima Atualização por"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__line_ids
+msgid "Lines"
+msgstr "Linhas"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__log_as_reported
+msgid "Log As Reported"
+msgstr "Registar como Reportado"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__log_on_close
+msgid "Log On Close"
+msgstr "Registar ao Fechar"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Log info"
+msgstr "Registar Info"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "March"
+msgstr "Março"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "May"
+msgstr "Maio"
+
+#. module: ptplus_reports
+#: model:ir.model,name:ptplus_reports.model_l10n_pt_multi_statement_wizard
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__statement_id
+msgid "Multi-statement Wizard"
+msgstr "Assistente Multi-declarações"
+
+#. module: ptplus_reports
+#: model:ir.model,name:ptplus_reports.model_l10n_pt_multi_statement_wizard_line
+msgid "Multi-statement Wizard Lines"
+msgstr "Linhas do Assistente Multi-declarações"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "None."
+msgstr "Nenhum."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "November"
+msgstr "Novembro"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Object"
+msgstr "Objeto"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "October"
+msgstr "Outubro"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.view_partner_custom_form
+msgid "PT Reports"
+msgstr "Relatórios PT"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Path"
+msgstr "Caminho"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__period
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__period
+msgid "Period"
+msgstr "Período"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Previous"
+msgstr "Anterior"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__declaration_type__second
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__declaration_type__second
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__declaration_type__second
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__declaration_type__second
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__declaration_type__second
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__declaration_type__second
+msgid "Second Declaration"
+msgstr "Segunda Declaração"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_multi_statement_wizard_form
+msgid "Select All"
+msgstr "Selecionar Todos"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_multi_statement_wizard_form
+msgid "Select None"
+msgstr "Selecionar Nenhum"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__declaration_type
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__declaration_type
+msgid "Select whether this is the first or second declaration."
+msgstr "Indique se se trata da primeira ou segunda declaração."
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__selected
+msgid "Selected"
+msgstr "Selecionados"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Send by E-mail"
+msgstr "Enviar por E-mail"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "September"
+msgstr "Setembro"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
+msgstr ""
+"Defina como Verdadeiro se o ficheiro tiver sido enviado com sucesso para o "
+"destino pretendido. Nesse caso, o registo de dataports será marcado como "
+"Reportado."
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_compute
+msgid "Show Button Compute"
+msgstr "Mostrar Botão Calcular"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_csv
+msgid "Show Button Export Csv"
+msgstr "Mostrar Botão Exportar CSV"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_pdf
+msgid "Show Button Export Pdf"
+msgstr "Mostrar Botão Exportar PDF"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_txt
+msgid "Show Button Export Txt"
+msgstr "Mostrar Botão Exportar TXT"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_webservice
+msgid "Show Button Export Webservice"
+msgstr "Mostrar Botão Exportar Webservice"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_xlsx
+msgid "Show Button Export Xlsx"
+msgstr "Mostrar Botão Exportar XLSX"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_export_xml
+msgid "Show Button Export Xml"
+msgstr "Mostrar Botão Exportar XML"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_mail
+msgid "Show Button Mail"
+msgstr "Mostrar Botão Correio"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_print
+msgid "Show Button Print"
+msgstr "Mostrar Botão Imprimir"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_select_all
+msgid "Show Button Select All"
+msgstr "Mostrar Botão Selecionar Todos"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__show_button_select_none
+msgid "Show Button Select None"
+msgstr "Mostrar Botão Selecionar Nenhum"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__state
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__state
+msgid "State"
+msgstr "Estado"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__statement_type
+msgid "Statement Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__statement_id
+msgid "Statement Wizard"
+msgstr "Assistente de Declarações"
+
+#. module: ptplus_reports
+#: model:ir.model,name:ptplus_reports.model_l10n_pt_statement_wizard_line
+msgid "Statement Wizard Lines"
+msgstr "Linhas do Assistente de Declarações"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "This feature is under development and will soon be available."
+msgstr ""
+"Esta funcionalidade está em desenvolvimento e estará disponível em breve."
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "To"
+msgstr "Até"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__error
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr "Verdadeiro se houver um erro ou aviso na operação do dataport"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Undefined period type"
+msgstr "Tipo de período indefinido"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__values
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__values
+msgid "Values"
+msgstr "Valores"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__vat_legal_representative
+msgid "Vat Legal Representative"
+msgstr "NIF do Representante Legal"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__warnings
+msgid "Warnings"
+msgstr "Avisos"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__validate
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) "
+"before being delivered to the user. As it's a very time consuming task, you "
+"may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Quando ativo, o arquivo passará por uma inspeção técnica (esquema XSD) antes "
+"de ser entregue ao utilizador. Como é uma tarefa que consome muito tempo, "
+"pode querer desabilitá-la quando estiver à espera de um arquivo grande.\n"
+"Desmarque se preferir usar um validador externo."
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "You must be operating a Portuguese company to use this feature"
+msgstr ""
+"Tem que estar a operar uma empresa portuguesa para usar esta funcionalidade"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "to"
+msgstr "a"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificação em"
+
+#~ msgid "Tab 1"
+#~ msgstr "Separador 1"
+
+#~ msgid "View"
+#~ msgstr "Ver"
+
+#~ msgid "done"
+#~ msgstr "concluído "
+
+#~ msgid "select"
+#~ msgstr "selecionar"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"

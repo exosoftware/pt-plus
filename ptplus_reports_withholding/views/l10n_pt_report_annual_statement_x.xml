@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="l10n_pt_report_annual_statement_document">
+        <t
+            t-call="web.external_layout"
+            t-foreach="o.mapped('line_ids.partner_id')"
+            t-as="partner"
+        >
+            <t t-set="o" t-value="o.with_context(lang=partner.lang)" />
+            <div class="row">
+                <div class="offset-col-6 col-6" name="no_shipping">
+                    <t t-set="address">
+                        <address
+                            class="mb-0"
+                            t-out="partner"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                        <div t-if="partner.vat" id="partner_vat_no_shipping">
+                            Tax ID: <span t-out="partner.vat" />
+                        </div>
+                    </t>
+                </div>
+            </div>
+            <div class="page">
+                <br />
+                <br />
+                <h3>Income Statement for <span t-out="o.get_period_text()" /></h3>
+                <br />
+                <br />
+                <br />
+                <br />
+                <p>
+                    We hereby declare, for IRS/IRC purposes and in accordance with
+                    Article 119(1)(b) of the Personal Income Tax Code, that the income
+                    received by you, as well as the respective withholdings, were as
+                    follows:
+                </p>
+                <br />
+                <br />
+                <!--                <div id="informations" class="row mt32 mb32">
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.date">
+                        <strong>Date:</strong>
+                        <p class="m-0" t-field="o.date" />
+                    </div>
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.journal_id">
+                        <strong>Journal:</strong>
+                        <p class="m-0 text-nowrap" t-field="o.journal_id" />
+                    </div>
+                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref">
+                        <strong>Reference:</strong>
+                        <p class="m-0 text-nowrap" t-field="o.ref" />
+                    </div>
+                </div>-->
+
+                <table class="table table-sm o_main_table" style="font-size: 10pt;">
+                    <thead>
+                        <tr>
+                            <th class="text-start">Income Category</th>
+                            <th class="text-end">Income</th>
+                            <th class="text-end">Withhold Tax</th>
+                            <th class="text-end">Stamp Duty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            t-foreach="o.line_ids.filtered(lambda r: r.partner_id == partner)"
+                            t-as="l"
+                        >
+                            <td class="text-start">
+                                <span t-field="l.income_category" />
+                            </td>
+                            <td class="text-end">
+                                <span t-field="l.income_amount" />
+                            </td>
+                            <td class="text-end">
+                                <span t-field="l.withhold_amount" />
+                            </td>
+                            <td class="text-end">
+                                <span t-field="l.stamp_duty_amount" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <template id="l10n_pt_report_annual_statement">
+        <t t-call="web.html_container">
+            <!--            <t t-foreach="docs" t-as="o">
+                <t
+                    t-call="ptplus_reports_withholding.l10n_pt_report_annual_statement_document"
+                />
+            </t>-->
+            <t
+                t-call="ptplus_reports_withholding.l10n_pt_report_annual_statement_document"
+            />
+        </t>
+    </template>
+</odoo>

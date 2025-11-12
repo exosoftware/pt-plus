@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--Email template -->
+    <record id="email_template_partner_saft" model="mail.template">
+        <field name="name">Send Partner SAF-T</field>
+        <field name="subject">Your SAF-T file</field>
+        <field name="email_from">{{object.company_id.email}}</field>
+        <field name="email_to">{{object.email}}</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="auto_delete" eval="False" />
+        <field name="lang">${object.lang}</field>
+        <field name="body_html" type="html">
+            <div>
+                <p>Hello Dear <t t-out="object.name" />,</p>
+                <p>Please find attached your SAF-T pertaining to the company <t
+                    t-out="object.company_id.name"
+                />.</p>
+
+                <p>Thank you.</p>
+                <p>
+                    <t t-out="object.company_id.name" />
+                </p>
+            </div>
+        </field>
+    </record>
+</odoo>
