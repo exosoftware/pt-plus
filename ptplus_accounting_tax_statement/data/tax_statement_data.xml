@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Statement Templates -->
+    <record id="tax_stmt_periodic" model="l10n_pt.account.statement">
+        <field name="name">IVA - Decl. Periódica</field>
+        <field name="type">vat.periodic</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_periodic_annex_r" model="l10n_pt.account.statement">
+        <field name="name">IVA - Decl. Periódica - Anexo R</field>
+        <field name="type">vat.periodic.annexr</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_ies_annex_l" model="l10n_pt.account.statement">
+        <field name="name">IES - Anexo L</field>
+        <field name="type">ies.annexl</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_periodic_paid_tax_import" model="l10n_pt.account.statement">
+        <field
+            name="name"
+        >IVA - Decl. Periódica - Import. de bens c/ liq. imposto</field>
+        <field name="type">any.internal</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_vat_exploded_view_1" model="l10n_pt.account.statement">
+        <field name="name">IVA - Objeto e Região</field>
+        <field name="type">any.internal</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_withholding_annual" model="l10n_pt.account.statement">
+        <field name="name">Retenções na Fonte - Decl. Anual</field>
+        <field name="type">withholding.annual</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="tax_stmt_withholding_monthly" model="l10n_pt.account.statement">
+        <field name="name">Retenções na Fonte - Decl. Mensal</field>
+        <field name="type">withholding.monthly</field>
+        <field name="custom">False</field>
+        <field name="statement">tax</field>
+    </record>
+
+    <record id="accounting_stmt_asset_value_adjustment" model="l10n_pt.account.statement">
+        <field name="name">Mapa de Depreciações e Amortizações</field>
+        <field name="type">asset.value.adjustment</field>
+        <field name="custom">False</field>
+        <field name="statement">accounting</field>
+    </record>
+
+    <record id="accounting_stmt_cash_flow" model="l10n_pt.account.statement">
+        <field name="name">Fluxo de Caixa</field>
+        <field name="type">cash.flow</field>
+        <field name="custom">False</field>
+        <field name="statement">accounting</field>
+    </record>
+
+</odoo>

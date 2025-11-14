@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="dataport_import_form_saft" model="ir.ui.view">
+        <field name="name">dataport.import.form.saft</field>
+        <field name="model">dataport.import.saft</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field
+                        name="state_import_saft"
+                        select="2"
+                        widget="statusbar"
+                    />
+                </header>
+                 <group
+                    string="SAF-T"
+                    attrs="{'invisible':[('state_import_saft','!=','init')]}"
+                >
+                    <field name="data" filename="filename" />
+                    <field
+                        name="company_id"
+                        options="{'no_create': True}"
+                        groups="base.group_multi_company"
+                        readonly="0"
+                    />
+                </group>
+                <group
+                    string="Update Records"
+                    attrs="{'invisible':[('state_import_saft','!=','init')]}"
+                >
+                    <field name="update_partners"/>
+                    <field name="update_products"/>
+                </group>
+                <group name="error_info" string="Errors"
+                    attrs="{'invisible':['|', ('state_import_saft','!=','init'), ('warnings', '=', False)]}"
+                >
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" colspan="2"/>
+                </group>
+                <div attrs="{'invisible':[('state_import_saft','!=','ready')]}">
+                    <h3>Records to create/update</h3>
+                    <notebook>
+                        <page
+                            string="Partners"
+                        >
+                            <field name="partner_ids" nolabel="1">
+                                <tree decoration-danger="type=='updated'">
+                                    <field name="type"/>
+                                    <field name="notes"/>
+                                    <field name="partner_id"/>
+                                </tree>
+                                <form>
+                                    <group col="2">
+                                        <group>
+                                            <field name="partner_id" />
+                                        </group>
+                                        <group>
+                                            <field name="notes" />
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </div>
+                <group
+                    col="4"
+                    colspan="4"
+                    attrs="{'invisible':[('state_import_saft','!=','done'),]}"
+                >
+                    <group colspan="4">
+                        <separator colspan="4" string="Summary of created objects" />
+                        <field name="new_partners"/>
+                    </group>
+                    <group colspan="4">
+                        <separator colspan="4" string="Summary of updated objects" />
+                        <field name="updated_partners"/>
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        name="import_saft"
+                        string="Import"
+                        type="object"
+                        class="btn-primary"
+                        attrs="{'invisible':[('state_import_saft','!=','init')]}"
+                    />
+                    <button
+                        name="action_init"
+                        string="Previous"
+                        type="object"
+                        class="btn-secondary"
+                        attrs="{'invisible':[('state_import_saft','!=','ready')]}"
+                    />
+                    <button
+                        name="action_update_records"
+                        string="Create/Update"
+                        type="object"
+                        class="btn-primary"
+                        attrs="{'invisible':[('state_import_saft','!=','ready')]}"
+                    />
+                    <button special="cancel" string="Close" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_dataport_import_saft" model="ir.actions.act_window">
+        <field name="name">Import SAF-T</field>
+        <field name="res_model">dataport.import.saft</field>
+        <field name="view_id" ref="dataport_import_form_saft" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_pt_dataport_import_saft"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="60"
+        action="action_wizard_dataport_import_saft"
+        groups="ptplus.group_experimental_features_pt"
+    />
+</odoo>

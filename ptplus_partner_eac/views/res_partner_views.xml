@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Partner -->
+    <record id="view_partner_form_eac" model="ir.ui.view">
+        <field name="name">res.partner.form.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <group name="container_row_2" position="inside">
+                <group string="CAE" name="cae" attrs="{'invisible': ['|', ('is_company', '=', False), ('country_code', '!=', 'PT')]}"
+                        groups="ptplus_partner_eac.group_eac_every_partner">
+                    <field
+                        name="l10n_pt_eac_ids"
+                        string="EAC"
+                        nolabel="1"
+                    >
+                    <tree editable="bottom">
+                        <field name="partner_id" invisible="1" />
+                        <field name="sequence" widget="handle" />
+                        <field name="eac_id" colspan="2" />
+                        <field name="activity_percent" />
+                    </tree>
+                </field>
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

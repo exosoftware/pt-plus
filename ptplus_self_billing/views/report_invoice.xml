@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Invoice document mods -->
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <!-- Company Address -->
+        <xpath expr="//t[@t-set='address']" position="after">
+            <t t-set="address" t-if="o.self_billing">
+                <address t-field="o.company_id.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+            </t>
+        </xpath>
+
+        <!-- Company Vat No. -->
+        <xpath expr="//div[@id='informations']/div[@t-if='o.partner_id.vat']" position="after">
+            <div t-if="o.company_id.partner_id.vat and o.self_billing" class="col-auto mw-100 mb-2">
+                <strong><t
+                        t-esc="o.company_id.country_id.vat_label or 'Tax ID'"
+                    />:</strong>
+                <p class="m-0" t-esc="o.company_id.partner_id.pt_get_vat()" />
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='informations']/div[@t-if='o.partner_id.vat']" position="attributes">
+            <attribute name="t-if">o.partner_id.vat and not o.self_billing</attribute>
+        </xpath>
+
+    </template>
+
+</odoo>
+
+

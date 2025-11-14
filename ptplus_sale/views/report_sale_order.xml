@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Sale Report is redefined: - use 'VAT %' instead of 'VAT id' in lines - AT mandatory text on
+        customer docs -->
+    <template
+        id="report_saleorder_document"
+        inherit_id="sale.report_saleorder_document"
+    >
+        <xpath expr="//t[@t-set='address']" position="after">
+            <t
+                t-if="doc.source_billing"
+                t-set="pt_certification_text"
+                t-value="doc.pt_get_certification_text()"
+            />
+        </xpath>
+
+        <!-- Remove VAT from address -->
+        <xpath expr="//t[@t-set='address']/p" position="replace">
+        </xpath>
+
+        <!-- Information zone fields -->
+        <xpath expr="//div[@t-if='doc.client_order_ref']" position="before">
+            <div t-if="doc.l10n_pt_date_issued" class="col-auto mw-100 mb-2">
+                <strong>Date:</strong>
+                <p class="m-0" t-field="doc.l10n_pt_date_issued" />
+            </div>
+        </xpath>
+        <!-- Change text Date Ordered - Confirmation Date -->
+        <!--
+        <xpath
+            expr="//div[@id='informations']//p[@t-field='doc.confirmation_date']/.."
+            position="replace"
+        >
+            <div
+                t-if="doc.confirmation_date and doc.state not in ['draft','sent']"
+                class="col-auto mw-100 mb-2"
+            >
+                <strong>Confirmation Date:</strong>
+                <p
+                    class="m-0"
+                    t-field="doc.confirmation_date"
+                    t-options="{'widget': 'date'}"
+                />
+            </div>
+        </xpath>
+        -->
+        <!-- Change text Quotation Date - Request Date -->
+        <!-- Add partner VAT No. -->
+        <xpath
+            expr="//div[@id='informations']//p[@t-field='doc.date_order']/.."
+            position="replace"
+        >
+            <div
+                t-if="doc.date_order and doc.state in ['draft','sent']"
+                class="col-auto mw-100 mb-2"
+            >
+                <strong>Request Date:</strong>
+                <p
+                    class="m-0"
+                    t-field="doc.date_order"
+                    t-options="{'widget': 'date'}"
+                />
+            </div>
+            <div t-if="doc.partner_id.vat" class="col-auto mw-100 mb-2">
+                <strong><t
+                        t-out="doc.company_id.country_id.vat_label or 'Tax ID'"
+                    />:</strong>
+                <p class="m-0" t-out="doc.partner_id.pt_get_vat()" />
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div
+                t-if="doc.source_billing and doc.l10n_pt_quotation_id"
+                class="col-auto mw-100 mb-2"
+            >
+                <strong>Source Doc:</strong>
+                <p class="m-0" t-out="doc.l10n_pt_quotation_id.pt_get_no()" />
+            </div>
+        </xpath>
+
+        <!-- Document Name -->
+        <xpath expr="//h2" position="attributes">
+            <attribute name="t-if">not doc.source_billing</attribute>
+        </xpath>
+        <xpath expr="//h2" position="after">
+            <div t-if="doc.source_billing" class="row pt_doc_name">
+                <div class="col-10">
+                    <h2>
+                        <span t-out="doc.pt_get_fullname()" />
+                        <span
+                            t-if="doc.state == 'cancel'"
+                            t-field="doc.state"
+                            class="pt_cancelled"
+                        />
+                    </h2>
+                </div>
+                <div class="col-2 text-right" style="padding-top: 3mm">
+                    <span
+                        t-if="multiway_tag"
+                        class="pt_multiway_tag"
+                        t-out="multiway_tag"
+                    />
+                </div>
+            </div>
+        </xpath>
+
+        <!-- A place for PT extras -->
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <t t-call="ptplus.pt_features_bottom" />
+        </xpath>
+
+    </template>
+
+</odoo>

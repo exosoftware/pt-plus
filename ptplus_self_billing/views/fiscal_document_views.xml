@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Fiscal Document Types -->
+    <record id="fiscal_document_type_view_tree_self_billing" model="ir.ui.view">
+        <field
+            name="name"
+        >fiscal.document.type.tree.self_billing</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_tree" />
+        <field name="arch" type="xml">
+            <field name="used" position="before">
+                <field name="self_billing" />
+                <field name="self_billing_partner_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="fiscal_document_type_view_form_self_billing" model="ir.ui.view">
+        <field
+            name="name"
+        >fiscal.document.type.form.self_billing</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_form" />
+        <field name="arch" type="xml">
+            <field name="used" position="before">
+                <field name="self_billing" />
+                <field name="self_billing_partner_id" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

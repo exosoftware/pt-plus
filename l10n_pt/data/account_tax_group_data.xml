@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="tax_group_iva_0" model="account.tax.group">
+            <field name="name">IVA 0% [N/A]</field>
+            <field name="sequence">500</field>
+            <field name="country_id" ref="base.pt"/>
+        </record>
+        <record id="tax_group_iva_4" model="account.tax.group">
+            <field name="name">IVA 4% [N/A]</field>
+            <field name="sequence">501</field>
+        </record>
+        <record id="tax_group_iva_5" model="account.tax.group">
+            <field name="name">IVA 5% [N/A]</field>
+            <field name="sequence">502</field>
+        </record>
+        <record id="tax_group_iva_6" model="account.tax.group">
+            <field name="name">IVA 6% [N/A]</field>
+            <field name="sequence">503</field>
+            <field name="country_id" ref="base.pt"/>
+        </record>
+        <record id="tax_group_iva_9" model="account.tax.group">
+            <field name="name">IVA 9% [N/A]</field>
+            <field name="sequence">504</field>
+        </record>
+        <record id="tax_group_iva_12" model="account.tax.group">
+            <field name="name">IVA 12% [N/A]</field>
+            <field name="sequence">505</field>
+        </record>
+        <record id="tax_group_iva_13" model="account.tax.group">
+            <field name="name">IVA 13% [N/A]</field>
+            <field name="sequence">506</field>
+            <field name="country_id" ref="base.pt"/>
+        </record>
+        <record id="tax_group_iva_16" model="account.tax.group">
+            <field name="name">IVA 16% [N/A]</field>
+            <field name="sequence">507</field>
+        </record>
+        <record id="tax_group_iva_22" model="account.tax.group">
+            <field name="name">IVA 22% [N/A]</field>
+            <field name="sequence">508</field>
+        </record>
+        <record id="tax_group_iva_23" model="account.tax.group">
+            <field name="name">IVA 23% [N/A]</field>
+            <field name="sequence">509</field>
+            <field name="country_id" ref="base.pt"/>
+        </record>
+    </data>
+</odoo>

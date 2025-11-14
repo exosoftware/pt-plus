@@ -1,0 +1,114 @@
+$self-billing-text-color: #111111;
+
+.o_self_billing_footer,
+.o_self_billing_header,
+.o_report_layout_self_billing {
+    font-family: "Lato", "Noto";
+    color: $self_billing-text-color; /* gray('700'); */
+    font-size: 11pt;
+}
+.o_self_billing_header {
+    /*border-bottom: 1px solid gray('200');*/
+    padding-top: 5mm;
+    img {
+        max-height: 100px;
+    }
+    h4 {
+        color: $self_billing-text-color; /*$o-we-color-text-normal;*/
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+.o_self_billing_footer {
+    margin-top: 1cm;
+    white-space: nowrap;
+    font-size: 10pt;
+    border-top: 3px solid gray("700");
+    ul {
+        margin: 4px 0;
+    }
+}
+
+.o_report_layout_self_billing {
+    font-size: 10pt;
+    > h2 {
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+    table {
+        border: 1px solid gray("700");
+        thead {
+            border-bottom: 2px solid gray("700");
+            tr th {
+                text-transform: uppercase;
+                border: 1px solid gray("700");
+            }
+        }
+        tbody {
+            color: $self_billing-text-color; /*gray('700');*/
+            tr {
+                td {
+                    // remove border-top from standard layout
+                    border-top: none;
+                    border-right: 1px solid gray("700");
+                }
+                &.o_line_section td,
+                &.o_line_note td,
+                &.is-subtotal td {
+                    border-top: 1px solid gray("700");
+                    border-bottom: 1px solid gray("700");
+                }
+                &.o_line_section td {
+                    background-color: gray("200");
+                    color: $self_billing-text-color;
+                }
+                &.is-subtotal {
+                    background-color: white;
+                }
+                td.o_price_total {
+                    /*background-color: gray('200');*/
+                }
+            }
+        }
+    }
+    /* compat 12.0 */
+    .page > table:not(.o_main_table) tr td:last-child {
+        background-color: gray("200");
+    }
+    /* compat 12.0 */
+    .row:not(#total) > div > table tr:not(:first-child):not(:last-child) td:last-child {
+        background-color: gray("200");
+    }
+    /*Total table*/
+    /* row div rule compat 12.0 */
+    .row > div > table,
+    div#total table {
+        tr {
+            &:first-child,
+            &.o_subtotal {
+                border-bottom: 1px solid gray("700");
+
+                td:first-child {
+                    border-right: none;
+                }
+            }
+            &:last-child td,
+            &.o_total td {
+                /*background-color: gray('700');
+                color: #fff;*/
+                font-weight: bold;
+
+                &:first-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+/* OTHER CONTENTS */
+
+.pt_multiway_tag {
+    background-color: transparent !important;
+    color: gray("700") !important;
+}

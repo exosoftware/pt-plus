@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="dataport_import_form_efatura" model="ir.ui.view">
+        <field name="name">l10n_pt.dataport.import.efatura.form</field>
+        <field name="model">l10n_pt.dataport.import.efatura</field>
+        <field name="inherit_id" ref="ptplus.dataport_import_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="journal_id" />
+            </field>
+            <field name="date_to" position="after">
+                <field name="data" position="move" />
+                <field name="create_invoices" />
+            </field>
+
+            <button name="action_import" position="before">
+                <button
+                    name="action_sync"
+                    type="object"
+                    class="oe_highlight"
+                    string="Synchronize"
+                    help="Obtain e-fatura data online. If you prefer to import a csv file, just load it above"
+                    attrs="{'invisible': [('data', '!=', False)]}"
+                />
+            </button>
+            <button name="action_import" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('data', '=', False)]}</attribute>
+            </button>
+
+        </field>
+    </record>
+
+    <record id="dataport_import_efatura_action" model="ir.actions.act_window">
+        <field name="name">Import E-Fatura</field>
+        <field name="res_model">l10n_pt.dataport.import.efatura</field>
+        <field name="view_id" ref="dataport_import_form_efatura" />
+        <field name="target">new</field>
+        <field name="context">{'type': 'in_invoice'}</field>
+    </record>
+
+    <!-- Add import e-fatura button in purchase cards in Accounting Dashboard -->
+    <!--
+    <record id="account_journal_dashboard_kanban_view" model="ir.ui.view">
+        <field name="name">account.journal.dashboard.kanban.efatura</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//t[@id='account.JournalBodySalePurchase']//div[hasclass('o_kanban_primary_right')]"
+                position="inside"
+            >
+                <t t-if="journal_type == 'purchase'" position="inside">
+                    <button
+                        type="action"
+                        name="%(dataport_import_efatura_action)d"
+                        class="btn btn-primary"
+                    >
+                        <span>Import E-Fatura</span>
+                    </button>
+                </t>
+            </xpath>
+        </field>
+    </record>
+    -->
+
+    <menuitem
+        id="menu_account_efatura_sync"
+        parent="account.menu_finance_entries_actions"
+        action="dataport_import_efatura_action"
+        sequence="55"
+    />
+
+</odoo>

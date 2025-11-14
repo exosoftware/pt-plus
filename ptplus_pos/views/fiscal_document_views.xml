@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Add point of sale availability to Fiscal Document Types -->
+
+    <record id="fiscal_document_type_view_search_pt_pos" model="ir.ui.view">
+        <field name="name">fiscal.document.type.search.pt.pos</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <filter
+                    name="point_of_sale"
+                    string="POS"
+                    domain="[('point_of_sale','=',True)]"
+                    help="Show document types that are available in the POS"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fiscal_document_type_view_tree_pt_pos" model="ir.ui.view">
+        <field name="name">fiscal.document.type.tree.pt.pos</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_tree" />
+        <field name="arch" type="xml">
+            <field name="section" position="after">
+                <field name="point_of_sale" string="POS"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="fiscal_document_type_view_form_pt_pos" model="ir.ui.view">
+        <field name="name">fiscal.document.type.form.pt.pos</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_form" />
+        <field name="arch" type="xml">
+            <field name="section" position="after">
+                <field name="point_of_sale" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

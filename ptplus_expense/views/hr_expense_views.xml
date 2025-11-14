@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Expense Form -->
+    <record id="hr_expense_view_form" model="ir.ui.view">
+        <field name="name">hr.expense.form</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']/.." position="after">
+                <field name="l10n_pt_is_travel_expense" invisible="1"/>
+                <field
+                    name="l10n_pt_partner_id"
+                    attrs="{'invisible': [('l10n_pt_is_travel_expense','=',False)], 'readonly': [('sheet_is_editable', '=', False)]}"
+                />
+                <field
+                    name="l10n_pt_license_plate"
+                    attrs="{'invisible': [('l10n_pt_is_travel_expense','=',False)], 'readonly': [('sheet_is_editable', '=', False)], 'required': [('l10n_pt_is_travel_expense','=',True)]}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Expense Tree -->
+    <record id="hr_expense_view_expenses_analysis_tree" model="ir.ui.view">
+        <field name="name">hr.expense.analysis.tree</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_expenses_analysis_tree" />
+        <field name="arch" type="xml">
+            <field name="employee_id"  position="after" >
+                <field name="l10n_pt_partner_id" optional="show"/>
+                <field name="l10n_pt_license_plate" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hr_expense_sheet_form" model="ir.ui.view">
+        <field name="name">hr.expense.sheet.form</field>
+        <field name="model">hr.expense.sheet</field>
+        <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='employee_id']" position="before">
+                <field name="l10n_pt_partner_id" optional="show"/>
+                <field name="l10n_pt_license_plate" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

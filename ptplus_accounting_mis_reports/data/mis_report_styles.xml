@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Tree: foundation styles -->
+    <record id="mis_style_account-all" model="mis.report.style">
+        <field name="name">tree-all</field>
+        <field name="dp_inherit" eval="0" />
+        <field name="dp">2</field>
+        <field name="font_size_inherit" eval="0" />
+        <field name="font_size">small</field>
+        <field name="hide_empty_inherit" eval="0" />
+        <field name="hide_empty" eval="False" />
+    </record>
+
+    <record id="mis_style_account_used" model="mis.report.style">
+        <field name="name">tree-hide-empty</field>
+        <field name="dp_inherit" eval="0" />
+        <field name="dp">2</field>
+        <field name="font_size_inherit" eval="0" />
+        <field name="font_size">small</field>
+        <field name="hide_empty_inherit" eval="0" />
+        <field name="hide_empty" eval="True" />
+    </record>
+
+    <!-- Branch lines -->
+    <record id="mis_style_account_view_indent_0" model="mis.report.style">
+        <field name="name">tree.branch.ind0</field>
+        <field name="background_color_inherit" eval="0" />
+        <field name="background_color">#C9C9C9</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+    </record>
+
+    <record id="mis_style_account_view_indent_1" model="mis.report.style">
+        <field name="name">tree.branch.ind1</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">1</field>
+    </record>
+
+    <record id="mis_style_account_view_indent_2" model="mis.report.style">
+        <field name="name">tree.branch.ind2</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">2</field>
+    </record>
+
+    <record id="mis_style_account_view_indent_3" model="mis.report.style">
+        <field name="name">tree.branch.ind3</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">3</field>
+    </record>
+
+    <record id="mis_style_account_view_indent_4" model="mis.report.style">
+        <field name="name">tree.branch.ind4</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">4</field>
+    </record>
+
+    <record id="mis_style_account_view_indent_5" model="mis.report.style">
+        <field name="name">tree.branch.ind5</field>
+        <field name="font_weight_inherit" eval="0" />
+        <field name="font_weight">bold</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">5</field>
+    </record>
+
+    <!-- Leaf lines -->
+    <record id="mis_style_account_mov_indent_1" model="mis.report.style">
+        <field name="name">tree.leaf.ind1</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">1</field>
+    </record>
+
+    <record id="mis_style_account_mov_indent_2" model="mis.report.style">
+        <field name="name">tree.leaf.ind2</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">2</field>
+    </record>
+
+    <record id="mis_style_account_mov_indent_3" model="mis.report.style">
+        <field name="name">tree.leaf.ind3</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">3</field>
+    </record>
+
+    <record id="mis_style_account_mov_indent_4" model="mis.report.style">
+        <field name="name">tree.leaf.ind4</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">4</field>
+    </record>
+
+    <record id="mis_style_account_mov_indent_5" model="mis.report.style">
+        <field name="name">tree.leaf.ind5</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">5</field>
+    </record>
+
+    <record id="mis_style_account_mov_indent_6" model="mis.report.style">
+        <field name="name">tree.leaf.ind6</field>
+        <field name="indent_level_inherit" eval="0" />
+        <field name="indent_level">6</field>
+    </record>
+
+</odoo>

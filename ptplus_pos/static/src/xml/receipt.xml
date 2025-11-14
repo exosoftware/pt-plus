@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//t[@t-if='receipt.company.contact_address']" position="before">
+            <t
+                t-if="receipt.pt_fiscal_doc_type_id and !receipt.is_to_invoice"
+            >
+                <div><t t-esc='receipt.date.localestring' /></div>
+                <div>
+                    <span><t t-esc="receipt.doc_name + ' '" /></span>
+                    <span><t t-esc="receipt.ptplus_unique_id" /></span>
+                </div>
+                <br />
+                <t t-log="receipt" />
+            </t>
+        </xpath>
+        <xpath expr='//t[@t-if="receipt.company.vat"]' position="after">
+            <div t-if="receipt.company.street"><t
+                    t-esc="receipt.company.street"
+                /></div>
+            <div>
+                <t t-if="receipt.company.zip"><t t-esc="receipt.company.zip" /> </t>
+                <t t-if="receipt.company.city"><t t-esc="receipt.company.city" /> </t>
+                <t t-if="receipt.company.state_id">(<t
+                        t-esc="receipt.company.state_id[1]"
+                    />)</t>
+            </div>
+        </xpath>
+        <xpath expr='//t[@t-if="receipt.cashier"]' position="after">
+            <br />
+            <t t-if="env.pos.get_client()">
+                <div>Customer: <t t-esc="env.pos.get_client().name" /></div>
+                <t t-if="env.pos.get_client().vat">
+                    <div><t t-esc="receipt.company.vat_label" />:<t
+                            t-esc="env.pos.get_client().vat"
+                        /></div>
+                </t>
+                <t t-if="env.pos.get_client().address != ',  , '">
+                    <div><t t-esc="env.pos.get_client().address" /></div>
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-esc='tax.name']" position="after">
+            <span> on <t t-esc="env.pos.format_currency(tax.base)" /></span>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-order-data')]" position="attributes">
+            <attribute
+                name="t-if"
+            >!receipt.pt_fiscal_doc_type_id or receipt.is_to_invoice</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('before-footer')]" position="before">
+            <t
+                t-if="receipt.pt_fiscal_doc_type_id and !receipt.is_to_invoice"
+            >
+                <div id="pt_qrbox" t-if="receipt.pt_qrcode">
+                    <div id="atcud">
+                        <span>ATCUD:</span>
+                        <span t-esc="receipt.pt_atcud" />
+                    </div>
+                    <img id="pt_qrcode" t-att-src="receipt.pt_qrcode" class="pt_qrcode"/>
+                    <!--
+                    <div id="qr_text_debugger" style="font-size: 8pt;">
+                        <span><t t-esc="receipt.pt_qrcode_text" /></span>
+                    </div>
+                    -->
+                </div>
+
+                <br />
+                <div class="pos-receipt-contact"><t t-esc="receipt.pt_certification_text" /></div>
+                <br />
+
+            </t>
+        </xpath>
+
+    </t>
+</templates>

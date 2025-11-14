@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_account_asset_form_pt" model="ir.ui.view">
+        <field name="name">account.asset.form.pt</field>
+        <field name="model">account.asset</field>
+        <field
+            name="inherit_id"
+            ref="account_asset.view_account_asset_form"
+        />
+        <field name="arch" type="xml">
+            <field name="prorata_date" position="after">
+                <field name="country_code" invisible="1"/>
+                <field
+                    name="l10n_pt_acquisition_production_value"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('asset_type', '!=', 'purchase')], 'readonly': [('state', '!=', 'draft')]}"
+                />
+
+            </field>
+            <field name="first_depreciation_date" position="before">
+                <field
+                    name="l10n_pt_legal_rate_id"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('asset_type', '!=', 'purchase')], 'readonly': [('state', '!=', 'draft')]}"
+                />
+                <field
+                    name="l10n_pt_asset_type"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('asset_type', '!=', 'purchase')], 'readonly': [('state', '!=', 'draft')], 'required': [('country_code', '=', 'PT')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

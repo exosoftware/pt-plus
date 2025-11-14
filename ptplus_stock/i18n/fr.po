@@ -1,0 +1,919 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 19:13+0000\n"
+"PO-Revision-Date: 2021-08-24 20:25+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ptplus_stock
+#: model:mail.template,report_name:ptplus_stock.email_template_stock_deliveryslip
+msgid "${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: ptplus_stock
+#: model:mail.template,subject:ptplus_stock.email_template_stock_deliveryslip
+msgid "${object.pt_get_fullname() or 'n/a' }"
+msgstr ""
+
+#. module: ptplus_stock
+#: model:mail.template,body_html:ptplus_stock.email_template_stock_deliveryslip
+msgid ""
+"<div style=\"font-size:13px;font-family:&quot;Lucida Grande&quot;, "
+"Helvetica, Verdana, Arial, sans-serif;margin:0px;padding: 0px;\">\n"
+"    <p style=\"margin:0px;font-size:13px;font-family:&quot;Lucida "
+"Grande&quot;, Helvetica, Verdana, Arial, sans-serif;padding: 0px; font-size: "
+"13px;\">\n"
+"        Caro(a) ${object.pt_get_partner('to', 'nominal').name},\n"
+"        <br><br>\n"
+"        Junto enviamos o documento <strong style=\"font-weight:bolder;\">"
+"${object.pt_get_fullname() or 'n/a' }</strong>, de ${format_date(object."
+"date_issued)}. <br><br>\n"
+"        Caso haja alguma questão, não hesite em contactar-nos.\n"
+"        <br><br>\n"
+"        Cumprimentos,\n"
+"    </p>\n"
+"</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Cher ${objet.pt_get_partner('to', 'nominal').name},\n"
+"       <br/><br/> \n"
+"        Veuillez trouver ci-joint le document <strong>${object."
+"pt_get_fullname() ou 'n/a' }</strong>,\n"
+"        daté ${format_date(object.date_issued)}.\n"
+"       <br/><br/> \n"
+"        N'hésitez pas à nous contacter si vous avez des questions.\n"
+"       <br/><br/> \n"
+"        Salutations,\n"
+"    </p>\n"
+"</div>\n"
+"            "
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid ""
+"<i class=\"fa fa-clock-o mr-1\" role=\"img\" aria-label=\"Date\" title=\"Date"
+"\"/>"
+msgstr ""
+"<i class=\"fa fa-clock-o mr-1\" role=\"img\" aria-label=\"Date\" title=\"Date"
+"\"/>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Multi-way Reports</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" aria-label=\"Values set here are "
+"company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Rapports Multi-Voies</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title="
+"\"Les valeurs définies ici sont propres à l'entreprise.\" aria-label=\"Les "
+"valeurs définies ici sont propres à l'entreprise.\" groups=\"base."
+"group_multi_company\" role=\"img\"/>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_wizard_webservice_failure
+msgid ""
+"<span>You can try again later by using the Retry Communication button.\n"
+"                    If that doesn't work, you can manually submit the "
+"transport data on\n"
+"                    the tax authorities website. You'll receive a numeric "
+"code to insert\n"
+"                    on the Delivery Code field.</span>"
+msgstr ""
+"<span>Vous pouvez réessayer plus tard en utilisant le bouton Réessayer "
+"Communication.\n"
+"                    Si cela ne fonctionne pas, vous pouvez soumettre "
+"manuellement les données de transport sur\n"
+"                    le site web de l'administration fiscale. Vous recevrez "
+"un code numérique à insérer\n"
+"                    dans le champ Code de Livraison.</span>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Date:</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Lic. Plate:</strong>"
+msgstr "<strong>Plaque d'Immatriculation:</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Loading:</strong>"
+msgstr "<strong>Chargement:</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Tax Authority Code:</strong>"
+msgstr "<strong>Code des Autorités Fiscales :</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Unloading:</strong>"
+msgstr "<strong>Déchargement:</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.report_delivery_document
+msgid "<strong>Your Ref:</strong>"
+msgstr "<strong>Votre Réf :</strong>"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_category_property_form
+msgid "Accounting Inventory"
+msgstr "Inventaire Comptable"
+
+#. module: ptplus_stock
+#: model:fiscal.document.type,name:ptplus_stock.fiscal_document_type_ga
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__type__ga
+msgid "Asset Transport Note"
+msgstr "Note de Transport d'Actifs"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__date
+msgid "At Date"
+msgstr "Date au"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_category__categ_legal__s
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_template__categ_legal__s
+msgid "By-products and waste"
+msgstr "Sous-produits et déchets"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_res_company
+msgid "Companies"
+msgstr "Entreprises"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de Configuration"
+
+#. module: ptplus_stock
+#: model:fiscal.document.type,name:ptplus_stock.fiscal_document_type_gc
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__type__gc
+msgid "Consignment Note"
+msgstr "Note de Consignation"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__create_uid
+msgid "Created by"
+msgstr "Créée par"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__create_date
+msgid "Created on"
+msgstr "Créée le"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_dataport_log
+msgid "Dataport Log"
+msgstr "Journal du Dataport"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__date_from
+msgid "Date From"
+msgstr "Date de Debut"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__date_issued
+msgid "Date Issued"
+msgstr "Date d'émission"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__date_to
+msgid "Date To"
+msgstr "Date de Fin"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__system_entry_date
+msgid "Date/Time of document validation"
+msgstr "Date/Heure de la validation du document"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__last_state_update
+msgid "Date/Time of last state change"
+msgstr "Date/heure du dernier changement d'état"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid "Delivery"
+msgstr "Livraison"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__delivery_code
+msgid "Delivery Code"
+msgstr "Code de Livraison"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__delivery_end
+msgid "Delivery End"
+msgstr "Fin de la Livraison"
+
+#. module: ptplus_stock
+#: model:fiscal.document.type,name:ptplus_stock.fiscal_document_type_gr
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__type__gr
+msgid "Delivery Note"
+msgstr "Bon de Livraison"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_form
+msgid "Delivery Slip"
+msgstr "Bon de Livraison"
+
+#. module: ptplus_stock
+#: model:ir.actions.report,name:ptplus_stock.action_report_delivery_preview
+msgid "Delivery Slip (preview)"
+msgstr "Bon de Livraison (aperçu)"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_company__multiway_tag_deliveryslip
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_config_settings__multiway_tag_deliveryslip
+msgid "Delivery Slip Report Multi-way Tags"
+msgstr "Étiquettes Multi-voies du Rapport de Bons de Livraison"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__delivery_start
+msgid "Delivery Start"
+msgstr "Début de la Livraison"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Delivery end cannot be prior to delivery start. Keep in mind that the "
+"delivery start is blank, it'll be assumed as being now"
+msgstr ""
+"La fin de la livraison ne peut être antérieure au début de la livraison. "
+"Gardez à l'esprit que le début de la livraison est vide, il sera supposé "
+"être maintenant"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Delivery start cannot be prior to delivery date. Keep in mind that if any of "
+"these dates is blank, it'll be assumed as being today"
+msgstr ""
+"Le début de la livraison ne peut être antérieur à la date de livraison. "
+"N'oubliez pas que si l'une de ces dates est vide, elle sera considérée comme "
+"étant aujourd'hui"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__hash
+msgid "Digital signature"
+msgstr "Signature digitale"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking_type__disable_auto_issuance
+msgid "Disable Auto Issuance"
+msgstr "Désactiver l'auto-émission de doc. livraison"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_category__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_template__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_return_picking__display_name
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__display_name
+msgid "Display Name"
+msgstr "Nom à présenter"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_form
+msgid "Document Type"
+msgstr "Type de Document"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__error
+msgid "Error"
+msgstr "Erreur"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Bouton d'Exportation Pdf"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__export_xml_button
+msgid "Export Xml Button"
+msgstr "Bouton d'Exportation Xml"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__data
+msgid "File"
+msgstr "Fichier"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__filename
+msgid "Filename"
+msgstr "Nom du Fichier"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_category__categ_legal__a
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_template__categ_legal__a
+msgid "Finished and intermediate products"
+msgstr "Produits finis et intermédiaires"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr "Type de Doc. Fiscale"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_fiscal_document_type
+msgid "Fiscal Document Type"
+msgstr "Type de Document Fiscale"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__format
+msgid "Format"
+msgstr "Format"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_category__categ_legal__m
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_template__categ_legal__m
+msgid "Goods"
+msgstr "Marchandises"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_category__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_template__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_return_picking__id
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__inventory_id
+msgid ""
+"If you select an inventory, the date of the last movement on that inventory "
+"will be copied to the At Date field."
+msgstr ""
+"Si vous sélectionnez un inventaire, la date du dernier mouvement sur cet "
+"inventaire sera copiée dans le champ At Date."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__info
+msgid "Info"
+msgstr ""
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__date
+msgid "Insert a date to get the inventory at that date"
+msgstr "Insérez une date pour obtenir l'inventaire à cette date"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+"Insérer un enregistrement dans le journal du port de données avec une copie "
+"du fichier importé ou exporté. "
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr ""
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid "Internal Transfer"
+msgstr "Transfert Interne"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__dataport_log__type__stock_inventory
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__wizard_inventory_statement__statement_type__stock_inventory
+msgid "Inventory Report"
+msgstr "Rapport d'Inventaire"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_wizard_inventory_statement
+msgid "Inventory Statement Wizard"
+msgstr "Assistant de Relevé d'Inventaire"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_form
+msgid "Issue Delivery Doc."
+msgstr "Émettre Doc. Livr."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__journal_ids
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__inventory_id
+msgid "Last Inventory"
+msgstr "Dernier Inventaire"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_dataport_log____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_category____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_template____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_company____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking_type____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_return_picking____last_update
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Actualisation par"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__write_date
+msgid "Last Updated on"
+msgstr "Dernière Actualisation le"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__last_state_uid
+msgid "Last state changed by"
+msgstr "Dernière modification de l'état par"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_category__categ_legal
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_product__categ_legal
+#: model:ir.model.fields,field_description:ptplus_stock.field_product_template__categ_legal
+msgid "Legal Category"
+msgstr "Catégorie Juridique"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__license_plate
+msgid "License Plate"
+msgstr "Plaque d'Immatriculation"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking__license_plate
+msgid ""
+"License plate number of the transport vehicle (ie: plate number for a car or "
+"truck)"
+msgstr ""
+"Numéro de la plaque d'immatriculation du véhicule de transport (c'est-à-dire "
+"le numéro d'immatriculation d'une voiture ou d'un camion)"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__log_as_reported
+msgid "Log As Reported"
+msgstr "Enregistrer comme Rapporté"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__log_on_close
+msgid "Log On Close"
+msgstr "Enregistré quand on Ferme"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid "Manufacturing Operation"
+msgstr "Opération de Fabrication"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__section__stock
+msgid "Movement of Goods"
+msgstr "Circulation de Marchandises"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/wizards/wizard_inventory_statement.py:0
+#, python-format
+msgid "None."
+msgstr "Aucune."
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__res_company__multiway_tag_deliveryslip__orig_copy
+msgid "Original and Copy"
+msgstr "Original et Copie"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__res_company__multiway_tag_deliveryslip__orig_dup
+msgid "Original and Duplicate"
+msgstr "Original et Duplicat"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__res_company__multiway_tag_deliveryslip__orig_dup_trip
+msgid "Original, Duplicate and Triplicate"
+msgstr "Original, Duplicata et Triplicata"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__period
+msgid "Period"
+msgstr "Période"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Type de Prélèvement"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type__picking_type_ids
+msgid "Picking Type Filter"
+msgstr "Filtre du Type de Prélèvement"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.res_config_settings_view_form
+msgid "Portugal"
+msgstr "Portugal"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__hash_control
+msgid "Private key version"
+msgstr "Version de la clé privée"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_product_category
+msgid "Product Category"
+msgstr "Catégorie du Produit"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_product_template
+msgid "Product Template"
+msgstr "Modèle du Produit"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__products_with_negative_qty
+msgid "Products with Negative Qty"
+msgstr "Produits avec une quantité négative"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_category__categ_legal__p
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_template__categ_legal__p
+msgid "Raw materials and consumables"
+msgstr "Matières premières et consommables"
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/stock_picking.py:0
+#, python-format
+msgid "Reception"
+msgstr "Reception"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_form
+msgid "Retry Communication"
+msgstr "Réessayer Communication"
+
+#. module: ptplus_stock
+#: model:fiscal.document.type,name:ptplus_stock.fiscal_document_type_gd
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__type__gd
+msgid "Return Note"
+msgstr "Bon de retour"
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Cueillette de Retour"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type__section
+msgid "SAF/T Section"
+msgstr "Section SAF/T"
+
+#. module: ptplus_stock
+#: model:ir.actions.report,name:ptplus_stock.action_report_delivery_multiway
+msgid "Delivery Slip (multi-way)"
+msgstr "Bon de Livraison (multi-voie)"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_form
+msgid "Send Deliveryslip"
+msgstr "Envoyer Bon de Livraison"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+"Nº de série du document en cour d'intégration. Introduire uniquement la "
+"partie numérique (incluant les zéros à gauche)"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
+msgstr ""
+"Sélectionnez Vrai si le fichier a été soumis avec succès à la destination "
+"prévue. Dans ce cas, l'enregistrement du journal du dataport sera marqué "
+"comme étant Rapporté."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_stock_picking__source_billing
+msgid "Source Method"
+msgstr "Méthode de Source"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__state
+msgid "State"
+msgstr "État"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__statement_type
+msgid "Statement Type"
+msgstr "Type de Déclaration"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__dataport_log__type__stock_movement
+msgid "Stock Movement"
+msgstr "Mouvement des Stocks"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.res_config_settings_view_form
+msgid "Tags to differentiate document copies"
+msgstr "Tags pour différencier les copies de documents"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_product_product__categ_legal
+#: model:ir.model.fields,help:ptplus_stock.field_product_template__categ_legal
+msgid ""
+"Tax Authorities defined product category used in mandatory inventory reports."
+msgstr ""
+"Les Autorités Fiscales ont défini la catégorie de produits utilisée dans les "
+"rapports d'inventaire obligatoires."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_product_category__categ_legal
+msgid ""
+"Tax Authorities defined product category used in mandatory inventory "
+"reports. This settings will affect all related products unless a different "
+"value is set on the product form."
+msgstr ""
+"Les Autorités Fiscales ont défini la catégorie de produits utilisée dans les "
+"rapports d'inventaire obligatoires. Ce paramétrage affectera tous les "
+"produits connexes, à moins qu'une valeur différente ne soit définie sur le "
+"formulaire du produit."
+
+#. module: ptplus_stock
+#: code:addons/ptplus_stock/models/fiscal_document.py:0
+#, python-format
+msgid "The '%s' picking type is incompatible with the fiscal document type."
+msgstr ""
+"Le type de transfert '%s' est incompatible avec le type de document fiscal."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking__date_issued
+msgid ""
+"The date on which the document has been issued. This date is only relevant "
+"for legal purposes. The next similar document must be issued as of this date "
+"or later."
+msgstr ""
+"La date à laquelle le document a été délivré. Cette date n'est pertinente "
+"qu'à des fins juridiques. Le prochain document similaire doit être délivré à "
+"partir de cette date ou plus tard."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+"La méthode (ou la source) utilisée pour insérer le document. Si vous\n"
+"ne comprennent pas les concepts sous-jacents, vous devez mantenir\n"
+"la valeur par défaut (Application). Les valeurs possibles sont :\n"
+"* Application : Le document a été créé dans ce système.\n"
+"* Intégration : Le document a été émis dans une autre application\n"
+"et importés dans ce système.\n"
+"* Manuel/Restauration : Le document a été créé dans ce système\n"
+"mais a été perdu d'une manière ou d'une autre et a été restauré soit à "
+"partir\n"
+"les sources papier ou numériques.\n"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_internal_search
+msgid ""
+"The transport document has been issued but it is yet to be reported to the "
+"tax authorities"
+msgstr ""
+"Le document de transport a été délivré, mais il doit encore être signalé aux "
+"autorités fiscales"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+"Le type de document fiscal associé à un enregistrement. En règle générale, "
+"un document fiscal est un document qui sera inclus dans le dossier SAF-T de "
+"la société"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.res_config_settings_view_form
+msgid ""
+"These tags will be printed on every multi-way document report copy. The "
+"choice also sets the number of desired copies."
+msgstr ""
+"Ces étiquettes seront imprimées sur chaque copie de rapport de document "
+"multi-voies. Le choix détermine également le nombre de copies souhaitées."
+
+#. module: ptplus_stock
+#: model:ir.model,name:ptplus_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.res_config_settings_view_form
+msgid "Transport Doc."
+msgstr "Doc. de Transport"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr ""
+"Vrai s'il y a une erreur ou un avertissement dans l'opération du dataport"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_dataport_log__type
+#: model:ir.model.fields,field_description:ptplus_stock.field_fiscal_document_type__type
+msgid "Type"
+msgstr "Type"
+
+#. module: ptplus_stock
+#: model_terms:ir.ui.view,arch_db:ptplus_stock.view_picking_internal_search
+msgid "Unreported to Tax Authorities"
+msgstr "Non déclaré aux Autorités Fiscales"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__validate
+msgid "Validate"
+msgstr "Valider"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__values
+msgid "Values"
+msgstr "Valeurs"
+
+#. module: ptplus_stock
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_category__categ_legal__t
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__product_template__categ_legal__t
+msgid "WIP"
+msgstr "En cours"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__warnings
+msgid "Warnings"
+msgstr "Avertissements"
+
+#. module: ptplus_stock
+#: model:fiscal.document.type,name:ptplus_stock.fiscal_document_type_gt
+#: model:ir.model.fields.selection,name:ptplus_stock.selection__fiscal_document_type__type__gt
+msgid "Waybill"
+msgstr "Lettre de Voiture"
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_stock_picking_type__disable_auto_issuance
+msgid ""
+"When active, the validation of an outgoing stock operation will not trigger "
+"the automatic delivery document issuance. You'll still be able to issue the "
+"document by using the Issue Delivery Doc. button on the picking form after "
+"the operation is validated."
+msgstr ""
+"Lorsqu'elle est active, la validation d'une opération de sortie de stock ne "
+"déclenche pas l'émission automatique du document de livraison. Vous pourrez "
+"toujours émettre le document en utilisant le bouton \"Émettre Doc. Livr.\" "
+"sur le formulaire de prélèvement après la validation de l'opération."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,help:ptplus_stock.field_wizard_inventory_statement__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) "
+"before being delivered to the user. As it's a very time consuming task, you "
+"may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Lorsqu'il est activé, le fichier est soumis à un contrôle technique (schéma "
+"XSD) avant d'être livré à l'utilisateur. Comme il s'agit d'une tâche très "
+"longue, vous pouvez la désactiver lorsqu'un fichier volumineux est attendu.\n"
+"Décochez la case lorsque vous préférez utiliser un validateur externe."
+
+#. module: ptplus_stock
+#: model:ir.model.fields,field_description:ptplus_stock.field_wizard_inventory_statement__year
+msgid "Year"
+msgstr "Année"
+
+#. module: ptplus_stock
+#: model:ir.actions.report,print_report_name:ptplus_stock.action_report_delivery_multiway
+msgid "object.pt_get_fullname(lang=object.partner_id.lang)"
+msgstr ""
+
+#~ msgid "${object.pt_get_fullname() or 'Deliveryslip.pdf'}"
+#~ msgstr "${object.pt_get_fullname() or 'Bon de livraison.pdf'}"
+
+#~ msgid "At a Specific Date"
+#~ msgstr "À une Date Précise"
+
+#~ msgid "Cash Basis Receipt"
+#~ msgstr "Reçu de Base de Casse"
+
+#~ msgid ""
+#~ "Choose to analyze the current inventory or from a specific date in the "
+#~ "past."
+#~ msgstr ""
+#~ "Choisissez d'analyser l'inventaire actuel ou à partir d'une date précise "
+#~ "dans le passé."
+
+#~ msgid "Compute"
+#~ msgstr "Calculer"
+
+#~ msgid "Credit Note"
+#~ msgstr "Note de Crédit"
+
+#~ msgid "Debit Note"
+#~ msgstr "Note de Débit"
+
+#~ msgid "Invoice"
+#~ msgstr "Facture"
+
+#~ msgid "Invoice-receipt"
+#~ msgstr "Facture-reçu"
+
+#~ msgid "Invoices"
+#~ msgstr "Factures"
+
+#~ msgid "Payments"
+#~ msgstr "Payements"
+
+#~ msgid "Product Legal Category"
+#~ msgstr "Catégorie Juridique du Produit"
+
+#~ msgid "Receipt"
+#~ msgstr "Reçu"
+
+#~ msgid "Simplified Invoice"
+#~ msgstr "Facture Simplifiée"
+
+#~ msgid "Stock - Inventory"
+#~ msgstr "Stock - Inventaire"
+
+#~ msgid "Consignment Credit"
+#~ msgstr "Crédit de Consignation"
+
+#~ msgid "Consignment Invoice"
+#~ msgstr "Facture de Consignation"
+
+#~ msgid "Order"
+#~ msgstr "Commande"
+
+#~ msgid "Proforma Invoice"
+#~ msgstr "Facture Proforma"
+
+#~ msgid "Quotation"
+#~ msgstr "Devis"
+
+#~ msgid "Table Info"
+#~ msgstr "Information de Table"
+
+#~ msgid "Working Documents"
+#~ msgstr "Documents de Travail"
+
+#~ msgid "Worksheet"
+#~ msgstr "Fiche de travail"
+
+#~ msgid "New"
+#~ msgstr "Nouveau"
