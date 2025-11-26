@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_invoice_document" inherit_id="account_invoice_report_grouped_by_picking.report_invoice_document">
+        <xpath expr="//td[@colspan='10']" position="attributes">
+            <attribute name="style">font-size: 8pt; font-style: italic;</attribute>
+        </xpath>
+
+        <xpath
+            expr="//tr[@t-if='picking and picking != next_picking[0]']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+
+        <!-- Moved quantity column -->
+        <xpath expr="//t[@t-set='display_discount']" position="after">
+            <t t-set="lines_grouped" t-value="o.lines_grouped_by_picking()" />
+            <t
+                t-set="has_returns"
+                t-value="o.lines_grouped_contains_returns(lines_grouped)"
+            />
+        </xpath>
+        <xpath expr="//th[@name='th_quantity']" position="before">
+            <th
+                t-if="has_returns"
+                name="th_quantity_moved"
+                class="text-right text-muted"
+            ><span>Moved Qty.</span></th>
+        </xpath>
+        <xpath
+            expr='//span[@t-esc="lines_group[&apos;quantity&apos;]"]'
+            position="attributes"
+        >
+            <attribute name="t-esc">lines_group['quantity_invoiced']</attribute>
+        </xpath>
+        <xpath
+            expr='//span[@t-esc="lines_group[&apos;quantity_invoiced&apos;]"]/..'
+            position="before"
+        >
+            <td t-if="has_returns" class="text-right text-muted">
+                <span
+                    t-esc="lines_group['quantity']"
+                    t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                />
+                <span t-field="line.uom_id" groups="uom.group_uom" />
+            </td>
+        </xpath>
+
+        <!-- Remove excess of lines_grouped t-sets -->
+        <xpath expr="//tbody//t[@t-set='lines_grouped']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+    </template>
+
+</odoo>

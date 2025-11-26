@@ -1,0 +1,277 @@
+id,statement_id/id,sequence,name,description,source_type,source,tax_tag_ids/id,value_type,value_invert,auxiliary
+tax_stmt_periodic_c001,tax_stmt_periodic,10,C001,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],expr,C001_VND+C001_CMP,,,0,0
+tax_stmt_periodic_c001_vnd,tax_stmt_periodic,15,C001_VND,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],domain,,ptplus.tax_tag_iva_dp_1_v,base_bal_normal,0,1
+tax_stmt_periodic_c001_cmp,tax_stmt_periodic,20,C001_CMP,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],domain,,ptplus.tax_tag_iva_dp_1_c,base_bal_normal,1,1
+tax_stmt_periodic_c002,tax_stmt_periodic,40,C002,Transm. bens/serv. c/ liquid. imp. à tx. red. [Imp.],domain,,ptplus.tax_tag_iva_dp_2,tax_bal_normal,0,0
+tax_stmt_periodic_c003,tax_stmt_periodic,70,C003,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],expr,C003_VND+C003_CMP,,,0,0
+tax_stmt_periodic_c003_vnd,tax_stmt_periodic,75,C003_VND,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],domain,,ptplus.tax_tag_iva_dp_3_v,base_bal_normal,0,1
+tax_stmt_periodic_c003_cmp,tax_stmt_periodic,80,C003_CMP,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],domain,,ptplus.tax_tag_iva_dp_3_c,base_bal_normal,1,1
+tax_stmt_periodic_c004,tax_stmt_periodic,100,C004,Transm. bens/serv. c/ liquid. imp. à tx. normal [Imp.],domain,,ptplus.tax_tag_iva_dp_4,tax_bal_normal,0,0
+tax_stmt_periodic_c005,tax_stmt_periodic,130,C005,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],expr,C005_VND+C005_CMP,,,0,0
+tax_stmt_periodic_c005_vnd,tax_stmt_periodic,135,C005_VND,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],domain,,ptplus.tax_tag_iva_dp_5_v,base_bal_normal,0,1
+tax_stmt_periodic_c005_cmp,tax_stmt_periodic,140,C005_CMP,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],domain,,ptplus.tax_tag_iva_dp_5_c,base_bal_normal,1,1
+tax_stmt_periodic_c006,tax_stmt_periodic,160,C006,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Imp.],domain,,ptplus.tax_tag_iva_dp_6,tax_bal_normal,0,0
+tax_stmt_periodic_c007,tax_stmt_periodic,190,C007,Transm. bens/serv. isentas ou não trib. intracomunitárias (decl. recap.),expr,recapitulative_total,,,0,0
+tax_stmt_periodic_c007_check,tax_stmt_periodic,195,C007-VRF,Recálculo do campo 7 para verificação e controlo,domain,,ptplus.tax_tag_iva_dp_7,base_bal_normal,0,1
+tax_stmt_periodic_c008,tax_stmt_periodic,200,C008,Transm. bens/serv. isentas ou não trib. c/ direito dedução,domain,,ptplus.tax_tag_iva_dp_8,base_bal_normal,0,0
+tax_stmt_periodic_c009,tax_stmt_periodic,210,C009,Transm. bens/serv. isentas ou não trib. s/ direito dedução,domain,,ptplus.tax_tag_iva_dp_9,base_bal_normal,0,0
+tax_stmt_periodic_c010,tax_stmt_periodic,220,C010,Aquis. intracom. bens/oper. assim. - Total [Base],expr,C012+C014+C015,,,0,0
+tax_stmt_periodic_c011,tax_stmt_periodic,230,C011,Aquis. intracom. bens/oper. assim. - Total [Imp.],expr,C013,,,0,0
+tax_stmt_periodic_c012,tax_stmt_periodic,240,C012,Aquis. intracom. bens/oper. assim. - imp. liquid. p/ declarante [Base],domain,,ptplus.tax_tag_iva_dp_12,base_bal_normal,1,0
+tax_stmt_periodic_c013,tax_stmt_periodic,250,C013,Aquis. intracom. bens/oper. assim. - imp. liquid. p/ declarante [Imp.],domain,,ptplus.tax_tag_iva_dp_13,tax_bal_normal,0,0
+tax_stmt_periodic_c014,tax_stmt_periodic,260,C014,Aquis. intracom. bens/oper. assim. -  art. 15º CIVA ou RITI,domain,,ptplus.tax_tag_iva_dp_14,base_bal_normal,1,0
+tax_stmt_periodic_c015,tax_stmt_periodic,270,C015,"Aquis. intracom. bens/oper. assim. - nºs 3, 4 e 5. art. 22º RITI",domain,,ptplus.tax_tag_iva_dp_15,base_bal_normal,1,0
+tax_stmt_periodic_c016,tax_stmt_periodic,280,C016,Prest. serv. suj. passiv. intracom. c/ imp. liquid. declarante [Base],domain,,ptplus.tax_tag_iva_dp_16,base_bal_normal,1,0
+tax_stmt_periodic_c017,tax_stmt_periodic,290,C017,Prest. serv. suj. passiv. intracom. c/ imp. liquid. declarante [Imp.],domain,,ptplus.tax_tag_iva_dp_17,tax_bal_normal,0,0
+tax_stmt_periodic_c018,tax_stmt_periodic,300,C018,Importação de bens c/imposto liquidado pelo declarante [Base],expr,C018_AUTO+paid_tax_import_base,,,0,0,,,
+tax_stmt_periodic_c018_auto,tax_stmt_periodic,301,C018_AUTO,Importação de bens c/imposto liquidado pelo declarante [Calcul.],domain,,ptplus.tax_tag_iva_dp_18,base_bal_normal,1,1,,,
+tax_stmt_periodic_c018_adic,tax_stmt_periodic,302,C018_ADIC,Importação de bens c/imposto liquidado pelo declarante [Adicion.],expr,paid_tax_import_base,,,0,1,,,
+tax_stmt_periodic_c019,tax_stmt_periodic,310,C019,Importação de bens c/imposto liquidado pelo declarante [Imp.],expr,C019_AUTO+paid_tax_import_amount,,,0,0,,,
+tax_stmt_periodic_c019_auto,tax_stmt_periodic,311,C019_AUTO,Importação de bens c/imposto liquidado pelo declarante [Calcul.],domain,,ptplus.tax_tag_iva_dp_19,tax_bal_normal,0,1,,,
+tax_stmt_periodic_c019_adic,tax_stmt_periodic,312,C019_ADIC,Importação de bens c/imposto liquidado pelo declarante [Adicion.],expr,paid_tax_import_amount,,,0,1,,,
+tax_stmt_periodic_c020,tax_stmt_periodic,320,C020,Imp. dedut. - Imobilizado,expr,C020_AUTO+deduct_tax_asset,,,0,0
+tax_stmt_periodic_c020_auto,tax_stmt_periodic,325,C020_AUTO,Imp. dedut. - Imobilizado [Calcul.],domain,,ptplus.tax_tag_iva_dp_20,tax_bal_normal,1,1
+tax_stmt_periodic_c020_adic,tax_stmt_periodic,327,C020_ADIC,Imp. dedut. - Imobilizado [Adicion.],expr,deduct_tax_asset,,,0,1
+tax_stmt_periodic_c021,tax_stmt_periodic,330,C021,Imp. dedut. - Existências à tx. reduzida,expr,C021_AUTO+deduct_tax_invent_red,,,0,0
+tax_stmt_periodic_c021_auto,tax_stmt_periodic,335,C021_AUTO,Imp. dedut. - Existências à tx. reduzida [Calcul.],domain,,ptplus.tax_tag_iva_dp_21,tax_bal_normal,1,1
+tax_stmt_periodic_c021_adic,tax_stmt_periodic,337,C021_ADIC,Imp. dedut. - Existências à tx. reduzida [Adicion.],expr,deduct_tax_invent_red,,,0,1
+tax_stmt_periodic_c022,tax_stmt_periodic,340,C022,Imp. dedut. - Existências à tx. normal,expr,C022_AUTO+deduct_tax_invent_std,,,0,0
+tax_stmt_periodic_c022_auto,tax_stmt_periodic,345,C022_AUTO,Imp. dedut. - Existências à tx. normal [Calcul.],domain,,ptplus.tax_tag_iva_dp_22,tax_bal_normal,1,1
+tax_stmt_periodic_c022_adic,tax_stmt_periodic,347,C022_ADIC,Imp. dedut. - Existências à tx. normal [Adicion.],expr,deduct_tax_invent_std,,,0,1
+tax_stmt_periodic_c023,tax_stmt_periodic,350,C023,Imp. dedut. - Existências à tx. intermédia,expr,C023_AUTO+deduct_tax_invent_interm,,,0,0
+tax_stmt_periodic_c023_auto,tax_stmt_periodic,355,C023_AUTO,Imp. dedut. - Existências à tx. intermédia [Calcul.],domain,,ptplus.tax_tag_iva_dp_23,tax_bal_normal,1,1
+tax_stmt_periodic_c023_adic,tax_stmt_periodic,357,C023_ADIC,Imp. dedut. - Existências à tx. intermédia [Adicion.],expr,deduct_tax_invent_interm,,,0,1
+tax_stmt_periodic_c024,tax_stmt_periodic,360,C024,Imp. dedut. - Outros bens e serviços,expr,C024_AUTO+deduct_tax_ogs,,,0,0
+tax_stmt_periodic_c024_auto,tax_stmt_periodic,365,C024_AUTO,Imp. dedut. - Outros bens e serviços [Calcul.],domain,,ptplus.tax_tag_iva_dp_24,tax_bal_normal,1,1
+tax_stmt_periodic_c024_adic,tax_stmt_periodic,367,C024_ADIC,Imp. dedut. - Outros bens e serviços [Adicion.],expr,deduct_tax_ogs,,,0,1
+tax_stmt_periodic_c040,tax_stmt_periodic,370,C040,Regularizações [Imp. a favor suj. pass.],domain,,ptplus.tax_tag_iva_dp_40,tax_bal_regularization,1,0
+tax_stmt_periodic_c041,tax_stmt_periodic,380,C041,Regularizações [Imp. a favor Estado],domain,,ptplus.tax_tag_iva_dp_41,tax_bal_regularization,0,0
+tax_stmt_periodic_c061,tax_stmt_periodic,420,C061,Excesso a reportar do período anterior,expr,previous_period_excess,,,0,0
+tax_stmt_periodic_c065,tax_stmt_periodic,430,C065,Anexo (ver quadro 3) [Imp.dedutível],expr,annex_r1_favourable_tax,,,0,0
+tax_stmt_periodic_c066,tax_stmt_periodic,440,C066,Anexo (ver quadro 3) [Imp.liquidado],expr,annex_r1_unfavourable_tax,,,0,0
+tax_stmt_periodic_c067,tax_stmt_periodic,450,C067,Anexo (ver quadro 3) [Imp.dedutível],expr,annex_r2_favourable_tax,,,0,0
+tax_stmt_periodic_c068,tax_stmt_periodic,460,C068,Anexo (ver quadro 3) [Imp.liquidado],expr,annex_r2_unfavourable_tax,,,0,0
+tax_stmt_periodic_c090,tax_stmt_periodic,470,C090,Total da base tributável,expr,C001+C003+C005+C007+C008+C009+C010+C016+C018,,,0,0
+tax_stmt_periodic_c091,tax_stmt_periodic,480,C091,Total do imposto a favor do sujeito passivo,expr,C020+C021+C022+C023+C024+C040+C061+C065+C067,,,0,0
+tax_stmt_periodic_c092,tax_stmt_periodic,490,C092,Total do imposto a favor do Estado,expr,C002+C004+C006+C011+C017+C019+C041+C066+C068,,,0,0
+tax_stmt_periodic_c093,tax_stmt_periodic,500,C093,Imposto a entregar ao Estado,expr,C092-C091 if C092 > C091 else 0.00,,,0,0
+tax_stmt_periodic_c094,tax_stmt_periodic,510,C094,Crédito de imposto a recuperar,expr,C091-C092 if C091 > C092 else 0.00,,,0,0
+tax_stmt_periodic_c095,tax_stmt_periodic,520,C095,Solicito Reeembolso,expr,C094 if C094 and request_refund else '',,,0,0
+tax_stmt_periodic_c096,tax_stmt_periodic,530,C096,Excesso a reportar,expr,C094 if C094 and not request_refund else '',,,0,0
+tax_stmt_periodic_c097,tax_stmt_periodic,540,C097,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países comunitários (não inclui as operações mencionadas no campo 16)",domain,,ptplus.tax_tag_iva_dp_97_r65,base_bal_normal,1,0
+tax_stmt_periodic_c098,tax_stmt_periodic,550,C098,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países ou territórios terceiros",domain,,ptplus.tax_tag_iva_dp_98_r66,base_bal_normal,1,0
+tax_stmt_periodic_c099,tax_stmt_periodic,560,C099,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Ouro (Decreto-Lei 362/99)",domain,,ptplus.tax_tag_iva_dp_99_r67,base_bal_normal,1,0
+tax_stmt_periodic_c100,tax_stmt_periodic,570,C100,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Aquisição de imóveis com renúncia à isenção (Decreto-Lei 21/2007)",domain,,ptplus.tax_tag_iva_dp_100_r68,base_bal_normal,1,0
+tax_stmt_periodic_c101,tax_stmt_periodic,580,C101,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Sucata [Alínea i) do n.º 1]",domain,,ptplus.tax_tag_iva_dp_101_r69,base_bal_normal,1,0
+tax_stmt_periodic_c102,tax_stmt_periodic,590,C102,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Serviços de construção civil [Alínea j) do n.º 1 do art.º 2 do CIVA]",domain,,ptplus.tax_tag_iva_dp_102_r70,base_bal_normal,1,0
+tax_stmt_periodic_c103,tax_stmt_periodic,600,C103,"C - Operações referidas nas alíneas f) e g) do n.º 3 do artigo 3.º e alíneas a) e b) do n.º 2 do artigo 4.º do CIVA (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Se efetuou operações desta natureza, indique o seu valor",domain,,ptplus.tax_tag_iva_dp_103_r71,base_bal_normal,1,0
+tax_stmt_periodic_c104,tax_stmt_periodic,610,C104,"D - Operações referidas nas alíneas a) , b) e c) do artigo 42.º do CIVA (Valores das bases tributáveis, incluídos nos campos 1, 5 , 3 e 9) - Se efetuou operações desta natureza, indique o seu valor",domain,,ptplus.tax_tag_iva_dp_104_r72,base_bal_normal,1,0
+tax_stmt_periodic_c105,tax_stmt_periodic,620,C105,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Emissão de gases com efeito de estufa [Alínea l) do n.º 1 do art.º 2.º do CIVA]",domain,,ptplus.tax_tag_iva_dp_105_r73,base_bal_normal,1,0
+tax_stmt_periodic_c106,tax_stmt_periodic,630,C106,SOMA DO QUADRO 06-A (97 + .... + 105),expr,C097+C098+C099+C100+C101+C102+C105+C103+C104,,,0,0
+tax_stmt_periodic_annex_r_c001,tax_stmt_periodic_annex_r,10,C001,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],expr,C001_VND+C001_CMP,,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c001_vnd,tax_stmt_periodic_annex_r,15,C001_VND,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],domain,,ptplus.tax_tag_iva_dp_1_v,base_bal_normal,0,1
+tax_stmt_periodic_annex_r_c001_cmp,tax_stmt_periodic_annex_r,20,C001_CMP,Transm. bens/serv. c/ liquid. imp. à tx. red. [Base],domain,,ptplus.tax_tag_iva_dp_1_c,base_bal_normal,1,1
+tax_stmt_periodic_annex_r_c002,tax_stmt_periodic_annex_r,40,C002,Transm. bens/serv. c/ liquid. imp. à tx. red. [Imp.],domain,,ptplus.tax_tag_iva_dp_2,tax_bal_normal,0,0
+tax_stmt_periodic_annex_r_c003,tax_stmt_periodic_annex_r,70,C003,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],expr,C003_VND+C003_CMP,,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c003_vnd,tax_stmt_periodic_annex_r,75,C003_VND,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],domain,,ptplus.tax_tag_iva_dp_3_v,base_bal_normal,0,1
+tax_stmt_periodic_annex_r_c003_cmp,tax_stmt_periodic_annex_r,80,C003_CMP,Transm. bens/serv. c/ liquid. imp. à tx. normal [Base],domain,,ptplus.tax_tag_iva_dp_3_c,base_bal_normal,1,1
+tax_stmt_periodic_annex_r_c004,tax_stmt_periodic_annex_r,100,C004,Transm. bens/serv. c/ liquid. imp. à tx. normal [Imp.],domain,,ptplus.tax_tag_iva_dp_4,tax_bal_normal,0,0
+tax_stmt_periodic_annex_r_c005,tax_stmt_periodic_annex_r,130,C005,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],expr,C005_VND+C005_CMP,,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c005_vnd,tax_stmt_periodic_annex_r,135,C005_VND,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],domain,,ptplus.tax_tag_iva_dp_5_v,base_bal_normal,0,1
+tax_stmt_periodic_annex_r_c005_cmp,tax_stmt_periodic_annex_r,140,C005_CMP,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Base],domain,,ptplus.tax_tag_iva_dp_5_c,base_bal_normal,1,1
+tax_stmt_periodic_annex_r_c006,tax_stmt_periodic_annex_r,160,C006,Transm. bens/serv. c/ liquid. imp. à tx. interm. [Imp.],domain,,ptplus.tax_tag_iva_dp_6,tax_bal_normal,0,0
+tax_stmt_periodic_annex_r_c007,tax_stmt_periodic_annex_r,190,C007,Transm. bens/serv. isentas ou não trib. intracomunitárias (decl. recap.),domain,,ptplus.tax_tag_iva_dp_7,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c008,tax_stmt_periodic_annex_r,200,C008,Transm. bens/serv. isentas ou não trib. c/ direito dedução,domain,,ptplus.tax_tag_iva_dp_8,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c009,tax_stmt_periodic_annex_r,210,C009,Transm. bens/serv. isentas ou não trib. s/ direito dedução,domain,,ptplus.tax_tag_iva_dp_9,base_bal_normal,0,0
+tax_stmt_periodic_annex_r_c010,tax_stmt_periodic_annex_r,220,C010,Aquis. intracom. bens/oper. assim. - Total [Base],expr,C012+C014+C015,,,0,0
+tax_stmt_periodic_annex_r_c011,tax_stmt_periodic_annex_r,230,C011,Aquis. intracom. bens/oper. assim. - Total [Imp.],expr,C013,,,0,0
+tax_stmt_periodic_annex_r_c012,tax_stmt_periodic_annex_r,240,C012,Aquis. intracom. bens/oper. assim. - imp. liquid. p/ declarante [Base],domain,,ptplus.tax_tag_iva_dp_12,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c013,tax_stmt_periodic_annex_r,250,C013,Aquis. intracom. bens/oper. assim. - imp. liquid. p/ declarante [Imp.],domain,,ptplus.tax_tag_iva_dp_13,tax_bal_normal,0,0
+tax_stmt_periodic_annex_r_c014,tax_stmt_periodic_annex_r,260,C014,Aquis. intracom. bens/oper. assim. -  art. 15º CIVA ou RITI,domain,,ptplus.tax_tag_iva_dp_14,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c015,tax_stmt_periodic_annex_r,270,C015,"Aquis. intracom. bens/oper. assim. - nºs 3, 4 e 5. art. 22º RITI",domain,,ptplus.tax_tag_iva_dp_15,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c016,tax_stmt_periodic_annex_r,280,C016,Prest. serv. suj. passiv. intracom. c/ imp. liquid. declarante [Base],domain,,ptplus.tax_tag_iva_dp_16,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c017,tax_stmt_periodic_annex_r,290,C017,Prest. serv. suj. passiv. intracom. c/ imp. liquid. declarante [Imp.],domain,,ptplus.tax_tag_iva_dp_17,tax_bal_normal,0,0
+tax_stmt_periodic_annex_r_c018,tax_stmt_periodic_annex_r,300,C018,Importação de bens c/imposto liquidado pelo declarante [Base],expr,paid_tax_import_base,,,0,0
+tax_stmt_periodic_annex_r_c019,tax_stmt_periodic_annex_r,310,C019,Importação de bens c/imposto liquidado pelo declarante [Imp.],expr,paid_tax_import_amount,,,0,0
+tax_stmt_periodic_annex_r_c020,tax_stmt_periodic_annex_r,320,C020,Imp. dedut. - Imobilizado,expr,C020_AUTO+deduct_tax_asset,,,0,0
+tax_stmt_periodic_annex_r_c020_auto,tax_stmt_periodic_annex_r,325,C020_AUTO,Imp. dedut. - Imobilizado [Calcul.],domain,,ptplus.tax_tag_iva_dp_20,tax_bal_normal,1,1
+tax_stmt_periodic_annex_r_c020_adic,tax_stmt_periodic_annex_r,327,C020_ADIC,Imp. dedut. - Imobilizado [Adicion.],expr,deduct_tax_asset,,,0,1
+tax_stmt_periodic_annex_r_c021,tax_stmt_periodic_annex_r,330,C021,Imp. dedut. - Existências à tx. reduzida,expr,C021_AUTO+deduct_tax_invent_red,,,0,0
+tax_stmt_periodic_annex_r_c021_auto,tax_stmt_periodic_annex_r,335,C021_AUTO,Imp. dedut. - Existências à tx. reduzida [Calcul.],domain,,ptplus.tax_tag_iva_dp_21,tax_bal_normal,1,1
+tax_stmt_periodic_annex_r_c021_adic,tax_stmt_periodic_annex_r,337,C021_ADIC,Imp. dedut. - Existências à tx. reduzida [Adicion.],expr,deduct_tax_invent_red,,,0,1
+tax_stmt_periodic_annex_r_c022,tax_stmt_periodic_annex_r,340,C022,Imp. dedut. - Existências à tx. normal,expr,C022_AUTO+deduct_tax_invent_std,,,0,0
+tax_stmt_periodic_annex_r_c022_auto,tax_stmt_periodic_annex_r,345,C022_AUTO,Imp. dedut. - Existências à tx. normal [Calcul.],domain,,ptplus.tax_tag_iva_dp_22,tax_bal_normal,1,1
+tax_stmt_periodic_annex_r_c022_adic,tax_stmt_periodic_annex_r,347,C022_ADIC,Imp. dedut. - Existências à tx. normal [Adicion.],expr,deduct_tax_invent_std,,,0,1
+tax_stmt_periodic_annex_r_c023,tax_stmt_periodic_annex_r,350,C023,Imp. dedut. - Existências à tx. intermédia,expr,C023_AUTO+deduct_tax_invent_interm,,,0,0
+tax_stmt_periodic_annex_r_c023_auto,tax_stmt_periodic_annex_r,355,C023_AUTO,Imp. dedut. - Existências à tx. intermédia [Calcul.],domain,,ptplus.tax_tag_iva_dp_23,tax_bal_normal,1,1
+tax_stmt_periodic_annex_r_c023_adic,tax_stmt_periodic_annex_r,357,C023_ADIC,Imp. dedut. - Existências à tx. intermédia [Adicion.],expr,deduct_tax_invent_interm,,,0,1
+tax_stmt_periodic_annex_r_c024,tax_stmt_periodic_annex_r,360,C024,Imp. dedut. - Outros bens e serviços,expr,C024_AUTO+deduct_tax_ogs,,,0,0
+tax_stmt_periodic_annex_r_c024_auto,tax_stmt_periodic_annex_r,365,C024_AUTO,Imp. dedut. - Outros bens e serviços [Calcul.],domain,,ptplus.tax_tag_iva_dp_24,tax_bal_normal,1,1
+tax_stmt_periodic_annex_r_c024_adic,tax_stmt_periodic_annex_r,367,C024_ADIC,Imp. dedut. - Outros bens e serviços [Adicion.],expr,deduct_tax_ogs,,,0,1
+tax_stmt_periodic_annex_r_c062,tax_stmt_periodic_annex_r,370,C062,Total da base tributável,expr,C001+C003+C005+C007+C008+C009+C010+C016+C018,,,0,0
+tax_stmt_periodic_annex_r_c063,tax_stmt_periodic_annex_r,380,C063,Total do imposto a favor do sujeito passivo,expr,C020+C021+C022+C023+C024,,,0,0
+tax_stmt_periodic_annex_r_c064,tax_stmt_periodic_annex_r,390,C064,Total do imposto a favor do Estado,expr,C002+C004+C006+C011+C017+C019,,,0,0
+tax_stmt_periodic_annex_r_c065,tax_stmt_periodic_annex_r,400,C065,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países comunitários (não inclui as operações mencionadas no campo 16)",domain,,ptplus.tax_tag_iva_dp_97_r65,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c066,tax_stmt_periodic_annex_r,410,C066,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países ou territórios terceiros",domain,,ptplus.tax_tag_iva_dp_98_r66,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c067,tax_stmt_periodic_annex_r,420,C067,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Ouro (Decreto-Lei 362/99)",domain,,ptplus.tax_tag_iva_dp_99_r67,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c068,tax_stmt_periodic_annex_r,430,C068,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Aquisição de imóveis com renúncia à isenção (Decreto-Lei 21/2007)",domain,,ptplus.tax_tag_iva_dp_100_r68,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c069,tax_stmt_periodic_annex_r,440,C069,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Sucata [Alínea i) do n.º 1]",domain,,ptplus.tax_tag_iva_dp_101_r69,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c070,tax_stmt_periodic_annex_r,450,C070,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Serviços de construção civil [Alínea j) do n.º 1 do art.º 2 do CIVA]",domain,,ptplus.tax_tag_iva_dp_102_r70,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c071,tax_stmt_periodic_annex_r,460,C071,"C - Operações referidas nas alíneas f) e g) do n.º 3 do artigo 3.º e alíneas a) e b) do n.º 2 do artigo 4.º do CIVA (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Se efetuou operações desta natureza, indique o seu valor",domain,,ptplus.tax_tag_iva_dp_103_r71,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c072,tax_stmt_periodic_annex_r,470,C072,"D - Operações referidas nas alíneas a) , b) e c) do artigo 42.º do CIVA (Valores das bases tributáveis, incluídos nos campos 1, 5 , 3 e 9) - Se efetuou operações desta natureza, indique o seu valor",domain,,ptplus.tax_tag_iva_dp_104_r72,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c073,tax_stmt_periodic_annex_r,480,C073,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Emissão de gases com efeito de estufa [Alínea l) do n.º 1 do art.º 2.º do CIVA]",domain,,ptplus.tax_tag_iva_dp_105_r73,base_bal_normal,1,0
+tax_stmt_periodic_annex_r_c074,tax_stmt_periodic_annex_r,900,C074,SOMA DO QUADRO 06-A (65+ .... + 73),expr,C065+C066+C067+C068+C069+C070+C071+C072+C073,,,0,0
+tax_stmt_ies_annex_l_q03_l01,tax_stmt_ies_annex_l,10,Q03_L01,,domain,,ptplus.tax_tag_iva_al_q03_l01,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l02,tax_stmt_ies_annex_l,40,Q03_L02,,domain,,ptplus.tax_tag_iva_al_q03_l02,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l03,tax_stmt_ies_annex_l,70,Q03_L03,,domain,,ptplus.tax_tag_iva_al_q03_l02,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l04,tax_stmt_ies_annex_l,100,Q03_L04,,domain,,ptplus.tax_tag_iva_al_q03_l04,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l05,tax_stmt_ies_annex_l,130,Q03_L05,,domain,,ptplus.tax_tag_iva_al_q03_l05,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l06,tax_stmt_ies_annex_l,160,Q03_L06,,expr,Q03_L01+Q03_L02+Q03_L03+Q03_L04+Q03_L05+Q03_L64+Q03_L65,,,0,0
+tax_stmt_ies_annex_l_q03_l07,tax_stmt_ies_annex_l,190,Q03_L07,,domain,,ptplus.tax_tag_iva_al_q03_l07,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l08,tax_stmt_ies_annex_l,220,Q03_L08,,domain,,ptplus.tax_tag_iva_al_q03_l08,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l09,tax_stmt_ies_annex_l,250,Q03_L09,,domain,,ptplus.tax_tag_iva_al_q03_l09,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l10,tax_stmt_ies_annex_l,280,Q03_L10,,domain,,ptplus.tax_tag_iva_al_q03_l10,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l11,tax_stmt_ies_annex_l,310,Q03_L11,,domain,,ptplus.tax_tag_iva_al_q03_l11,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l12,tax_stmt_ies_annex_l,340,Q03_L12,,domain,,ptplus.tax_tag_iva_al_q03_l12,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l13,tax_stmt_ies_annex_l,370,Q03_L13,,expr,Q03_L07+Q03_L02+Q03_L08+Q03_L09+Q03_L10+Q03_L11+Q03_L66+Q03_L67+Q03_L12,,,0,0
+tax_stmt_ies_annex_l_q03_l14,tax_stmt_ies_annex_l,400,Q03_L14,,domain,,ptplus.tax_tag_iva_al_q03_l14,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l15,tax_stmt_ies_annex_l,430,Q03_L15,,domain,,ptplus.tax_tag_iva_al_q03_l15,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l16,tax_stmt_ies_annex_l,460,Q03_L16,,domain,,ptplus.tax_tag_iva_al_q03_l16,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l17,tax_stmt_ies_annex_l,490,Q03_L17,,domain,,ptplus.tax_tag_iva_al_q03_l17,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l18,tax_stmt_ies_annex_l,520,Q03_L18,,domain,,ptplus.tax_tag_iva_al_q03_l18,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l19,tax_stmt_ies_annex_l,550,Q03_L19,,expr,Q03_L14+Q03_L15+Q03_L16+Q03_L68+Q03_L17+Q03_L18,,,0,0
+tax_stmt_ies_annex_l_q03_l64,tax_stmt_ies_annex_l,580,Q03_L64,,domain,,ptplus.tax_tag_iva_al_q03_l64,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l65,tax_stmt_ies_annex_l,610,Q03_L65,,domain,,ptplus.tax_tag_iva_al_q03_l65,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l66,tax_stmt_ies_annex_l,640,Q03_L66,,domain,,ptplus.tax_tag_iva_al_q03_l66,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l67,tax_stmt_ies_annex_l,670,Q03_L67,,domain,,ptplus.tax_tag_iva_al_q03_l67,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q03_l68,tax_stmt_ies_annex_l,700,Q03_L68,,domain,,ptplus.tax_tag_iva_al_q03_l68,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l20,tax_stmt_ies_annex_l,730,Q04_L20,,domain,,ptplus.tax_tag_iva_al_q04_l20,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l21,tax_stmt_ies_annex_l,760,Q04_L21,,domain,,ptplus.tax_tag_iva_al_q04_l21,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l22,tax_stmt_ies_annex_l,790,Q04_L22,,domain,,ptplus.tax_tag_iva_al_q04_l22,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l23,tax_stmt_ies_annex_l,820,Q04_L23,,expr,Q04_L20+Q04_L69+Q04_L70+Q04_L21+Q04_L22+Q04_L71+Q04_L72,,,0,0
+tax_stmt_ies_annex_l_q04_l24,tax_stmt_ies_annex_l,850,Q04_L24,,domain,,ptplus.tax_tag_iva_al_q04_l24,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l25,tax_stmt_ies_annex_l,880,Q04_L25,,domain,,ptplus.tax_tag_iva_al_q04_l25,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l26,tax_stmt_ies_annex_l,910,Q04_L26,,domain,,ptplus.tax_tag_iva_al_q04_l26,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l27,tax_stmt_ies_annex_l,940,Q04_L27,,domain,,ptplus.tax_tag_iva_al_q04_l27,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l28,tax_stmt_ies_annex_l,970,Q04_L28,,domain,,ptplus.tax_tag_iva_al_q04_l28,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l29,tax_stmt_ies_annex_l,1000,Q04_L29,,domain,,ptplus.tax_tag_iva_al_q04_l29,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l30,tax_stmt_ies_annex_l,1030,Q04_L30,,domain,,ptplus.tax_tag_iva_al_q04_l30,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l31,tax_stmt_ies_annex_l,1060,Q04_L31,,expr,Q04_L24+Q04_L73+Q04_L25+Q04_L26+Q04_L27+Q04_L74+Q04_L28+Q04_L29+Q04_L30+Q04_L75+Q04_L76,,,0,0
+tax_stmt_ies_annex_l_q04_l32,tax_stmt_ies_annex_l,1090,Q04_L32,,domain,,ptplus.tax_tag_iva_al_q04_l32,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l33,tax_stmt_ies_annex_l,1120,Q04_L33,,domain,,ptplus.tax_tag_iva_al_q04_l33,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l34,tax_stmt_ies_annex_l,1150,Q04_L34,,domain,,ptplus.tax_tag_iva_al_q04_l34,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l35,tax_stmt_ies_annex_l,1180,Q04_L35,,domain,,ptplus.tax_tag_iva_al_q04_l35,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l36,tax_stmt_ies_annex_l,1210,Q04_L36,,expr,Q04_L32+Q04_L77+Q04_L33+Q04_L34+Q04_L35+Q04_L78+Q04_L79,,,0,0
+tax_stmt_ies_annex_l_q04_l69,tax_stmt_ies_annex_l,1240,Q04_L69,,domain,,ptplus.tax_tag_iva_al_q04_l69,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l70,tax_stmt_ies_annex_l,1270,Q04_L70,,domain,,ptplus.tax_tag_iva_al_q04_l70,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l71,tax_stmt_ies_annex_l,1300,Q04_L71,,domain,,ptplus.tax_tag_iva_al_q04_l71,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l72,tax_stmt_ies_annex_l,1330,Q04_L72,,domain,,ptplus.tax_tag_iva_al_q04_l72,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l73,tax_stmt_ies_annex_l,1360,Q04_L73,,domain,,ptplus.tax_tag_iva_al_q04_l73,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l74,tax_stmt_ies_annex_l,1390,Q04_L74,,domain,,ptplus.tax_tag_iva_al_q04_l74,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l75,tax_stmt_ies_annex_l,1420,Q04_L75,,domain,,ptplus.tax_tag_iva_al_q04_l75,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l76,tax_stmt_ies_annex_l,1450,Q04_L76,,domain,,ptplus.tax_tag_iva_al_q04_l76,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l77,tax_stmt_ies_annex_l,1480,Q04_L77,,domain,,ptplus.tax_tag_iva_al_q04_l77,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l78,tax_stmt_ies_annex_l,1510,Q04_L78,,domain,,ptplus.tax_tag_iva_al_q04_l78,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q04_l79,tax_stmt_ies_annex_l,1540,Q04_L79,,domain,,ptplus.tax_tag_iva_al_q04_l79,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l37,tax_stmt_ies_annex_l,1570,Q05_L37,,domain,,ptplus.tax_tag_iva_al_q05_l37,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l38,tax_stmt_ies_annex_l,1600,Q05_L38,,domain,,ptplus.tax_tag_iva_al_q05_l38,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l39,tax_stmt_ies_annex_l,1630,Q05_L39,,domain,,ptplus.tax_tag_iva_al_q05_l39,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l40,tax_stmt_ies_annex_l,1660,Q05_L40,,domain,,ptplus.tax_tag_iva_al_q05_l40,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l41,tax_stmt_ies_annex_l,1690,Q05_L41,,domain,,ptplus.tax_tag_iva_al_q05_l41,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l42,tax_stmt_ies_annex_l,1720,Q05_L42,,domain,,ptplus.tax_tag_iva_al_q05_l42,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l43,tax_stmt_ies_annex_l,1750,Q05_L43,,domain,,ptplus.tax_tag_iva_al_q05_l43,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q05_l44,tax_stmt_ies_annex_l,1780,Q05_L44,,domain,,ptplus.tax_tag_iva_al_q05_l44,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l45,tax_stmt_ies_annex_l,1810,Q06_L45,,domain,,ptplus.tax_tag_iva_al_q06_l45,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l46,tax_stmt_ies_annex_l,1840,Q06_L46,,domain,,ptplus.tax_tag_iva_al_q06_l46,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l47,tax_stmt_ies_annex_l,1870,Q06_L47,,domain,,ptplus.tax_tag_iva_al_q06_l47,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l48,tax_stmt_ies_annex_l,1900,Q06_L48,,domain,,ptplus.tax_tag_iva_al_q06_l48,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l49,tax_stmt_ies_annex_l,1930,Q06_L49,,domain,,ptplus.tax_tag_iva_al_q06_l49,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l50,tax_stmt_ies_annex_l,1960,Q06_L50,,domain,,ptplus.tax_tag_iva_al_q06_l50,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l51,tax_stmt_ies_annex_l,1990,Q06_L51,,domain,,ptplus.tax_tag_iva_al_q06_l51,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l52,tax_stmt_ies_annex_l,2020,Q06_L52,,domain,,ptplus.tax_tag_iva_al_q06_l52,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l53,tax_stmt_ies_annex_l,2050,Q06_L53,,domain,,ptplus.tax_tag_iva_al_q06_l53,tax_bal_normal,0,0
+tax_stmt_ies_annex_l_q06_l54,tax_stmt_ies_annex_l,2080,Q06_L54,,expr,Q06_L45+Q06_L48+Q06_L51,,,0,0
+tax_stmt_ies_annex_l_q06_l55,tax_stmt_ies_annex_l,2110,Q06_L55,,expr,Q06_L46+Q06_L49+Q06_L52,,,0,0
+tax_stmt_ies_annex_l_q06_l56,tax_stmt_ies_annex_l,2140,Q06_L56,,expr,Q06_L47+Q06_L50+Q06_L53,,,0,0
+tax_stmt_ies_annex_l_q07_l57,tax_stmt_ies_annex_l,2170,Q07_L57,,expr,tax_base_not_converted,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q07_l58,tax_stmt_ies_annex_l,2200,Q07_L58,,expr,tax_amt_on_l57_base,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q07_l59,tax_stmt_ies_annex_l,2230,Q07_L59,,expr,prepaid_income_tax_settled,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q08_l60,tax_stmt_ies_annex_l,2260,Q08_L60,,expr,tax_amt_in_same_conditions,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q09_l61,tax_stmt_ies_annex_l,2290,Q09_L61,,expr,civa_operations_4_6_and_4,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q07_l62,tax_stmt_ies_annex_l,2320,Q09_L62,,expr,other_operations,,base_bal_normal,0,0
+tax_stmt_ies_annex_l_q07_l63,tax_stmt_ies_annex_l,2350,Q09_L63,,expr,civa_operation_4,,base_bal_normal,0,0
+tax_stmt_periodic_paid_tax_import_c018,tax_stmt_periodic_paid_tax_import,305,C018,Importação de bens c/imposto liquidado pelo declarante [Base],domain,,ptplus.tax_tag_iva_dp_18,base_bal_normal,1,0
+tax_stmt_periodic_paid_tax_import_c019,tax_stmt_periodic_paid_tax_import,315,C019,Importação de bens c/imposto liquidado pelo declarante [Imp.],domain,,ptplus.tax_tag_iva_dp_19,tax_bal_normal,0,0
+tax_stmt_periodic_paid_tax_import_c020,tax_stmt_periodic_paid_tax_import,320,C020,Imp. dedut. - Imobilizado,domain,,ptplus.tax_tag_iva_dp_20_iblid,tax_bal_normal,1,0
+tax_stmt_periodic_paid_tax_import_c022,tax_stmt_periodic_paid_tax_import,340,C022,Imp. dedut. - Existências à tx. normal,domain,,ptplus.tax_tag_iva_dp_22_iblid,tax_bal_normal,1,0
+tax_stmt_vat_exploded_view_1_root,tax_stmt_vat_exploded_view_1,10,IVA,IVA,expr,IVAE+IVAO+IVAI,,,0,0
+tax_stmt_vat_exploded_view_1_gds,tax_stmt_vat_exploded_view_1,1000,IVAE,⋅ ⋅ ⋅ Existências,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_gds_cnt,tax_stmt_vat_exploded_view_1,1100,IVAEC,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Continente,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock'), ('pt_vat_country_region', '=', 'PT')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_gds_azo,tax_stmt_vat_exploded_view_1,1200,IVAEA,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Açores,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock'), ('pt_vat_country_region', '=', 'PT-AC')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_gds_mad,tax_stmt_vat_exploded_view_1,1300,IVAEM,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Madeira,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock'), ('pt_vat_country_region', '=', 'PT-MA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_gds_int,tax_stmt_vat_exploded_view_1,1400,IVAEI,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Intracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock'), ('pt_vat_country_region', '=', 'INTRA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_gds_ext,tax_stmt_vat_exploded_view_1,1500,IVAEE,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Extracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'stock'), ('pt_vat_country_region', '=', 'EXTRA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs,tax_stmt_vat_exploded_view_1,2000,IVAO,⋅ ⋅ ⋅ Outros bens e serviços,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs_cnt,tax_stmt_vat_exploded_view_1,2100,IVAOC,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Continente,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs'), ('pt_vat_country_region', '=', 'PT')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs_azo,tax_stmt_vat_exploded_view_1,2200,IVAOA,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Açores,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs'), ('pt_vat_country_region', '=', 'PT-AC')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs_mad,tax_stmt_vat_exploded_view_1,2300,IVAOM,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Madeira,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs'), ('pt_vat_country_region', '=', 'PT-MA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs_int,tax_stmt_vat_exploded_view_1,2400,IVAOI,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Intracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs'), ('pt_vat_country_region', '=', 'INTRA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ogs_ext,tax_stmt_vat_exploded_view_1,2500,IVAOE,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Extracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'obs'), ('pt_vat_country_region', '=', 'EXTRA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass,tax_stmt_vat_exploded_view_1,3000,IVAI,⋅ ⋅ ⋅ Imobilizado,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass_cnt,tax_stmt_vat_exploded_view_1,3100,IVAIC,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Continente,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset'), ('pt_vat_country_region', '=', 'PT')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass_azo,tax_stmt_vat_exploded_view_1,3200,IVAIA,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Açores,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset'), ('pt_vat_country_region', '=', 'PT-AC')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass_mad,tax_stmt_vat_exploded_view_1,3300,IVAIM,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Madeira,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset'), ('pt_vat_country_region', '=', 'PT-MA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass_int,tax_stmt_vat_exploded_view_1,3400,IVAII,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Intracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset'), ('pt_vat_country_region', '=', 'INTRA')]",,tax_bal_total,0,0
+tax_stmt_vat_exploded_view_1_ass_ext,tax_stmt_vat_exploded_view_1,3500,IVAIE,⋅ ⋅ ⋅ ⋅ ⋅ ⋅ Extracomunitário,domain,"[('l10n_pt_genre', '=', 'IVA'), ('pt_vat_subject', '=', 'asset'), ('pt_vat_country_region', '=', 'EXTRA')]",,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_101,tax_stmt_withholding_annual,4000,CD_101,Código 101 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_101,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_102,tax_stmt_withholding_annual,4010,CD_102,Código 102 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_102,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_103,tax_stmt_withholding_annual,4020,CD_103,Código 103 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_103,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_104,tax_stmt_withholding_annual,4030,CD_104,Código 104 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_104,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_105,tax_stmt_withholding_annual,4040,CD_105,Código 105 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_105,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_106,tax_stmt_withholding_annual,4050,CD_106,Código 106 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_106,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_107,tax_stmt_withholding_annual,4060,CD_107,Código 107 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_107,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_110,tax_stmt_withholding_annual,4070,CD_110,Código 110 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_110,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_114,tax_stmt_withholding_annual,4080,CD_114,Código 114 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_114,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_115,tax_stmt_withholding_annual,4090,CD_115,Código 115 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_115,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_116,tax_stmt_withholding_annual,4100,CD_116,Código 116 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_116,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_117,tax_stmt_withholding_annual,4110,CD_117,Código 117 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_117,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_199,tax_stmt_withholding_annual,4120,CD_199,Código 199 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_199,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_201,tax_stmt_withholding_annual,4200,CD_201,Código 201 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_201,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_202,tax_stmt_withholding_annual,4210,CD_202,Código 202 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_202,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_203,tax_stmt_withholding_annual,4220,CD_203,Código 203 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_203,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_204,tax_stmt_withholding_annual,4230,CD_204,Código 204 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_204,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_205,tax_stmt_withholding_annual,4240,CD_205,Código 205 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_205,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_206,tax_stmt_withholding_annual,4250,CD_206,Código 206 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_206,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_207,tax_stmt_withholding_annual,4260,CD_207,Código 207 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_207,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_208,tax_stmt_withholding_annual,4270,CD_208,Código 208 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_208,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_209,tax_stmt_withholding_annual,4280,CD_209,Código 209 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_209,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_210,tax_stmt_withholding_annual,4290,CD_210,Código 210 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_210,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_211,tax_stmt_withholding_annual,4300,CD_211,Código 211 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_211,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_212,tax_stmt_withholding_annual,4310,CD_212,Código 212 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_212,tax_bal_total,0,0
+tax_stmt_withholding_annual_cd_299,tax_stmt_withholding_annual,4320,CD_299,Código 299 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_299,tax_bal_total,0,0
+tax_stmt_withholding_monthly_cd_101,tax_stmt_withholding_monthly,5000,CD_101,Código 101 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_101,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_102,tax_stmt_withholding_monthly,5010,CD_102,Código 102 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_102,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_103,tax_stmt_withholding_monthly,5020,CD_103,Código 103 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_103,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_104,tax_stmt_withholding_monthly,5030,CD_104,Código 104 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_104,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_105,tax_stmt_withholding_monthly,5040,CD_105,Código 105 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_105,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_106,tax_stmt_withholding_monthly,5050,CD_106,Código 106 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_106,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_107,tax_stmt_withholding_monthly,5060,CD_107,Código 107 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_107,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_110,tax_stmt_withholding_monthly,5070,CD_110,Código 110 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_110,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_114,tax_stmt_withholding_monthly,5080,CD_114,Código 114 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_114,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_115,tax_stmt_withholding_monthly,5090,CD_115,Código 115 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_115,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_116,tax_stmt_withholding_monthly,5100,CD_116,Código 116 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_116,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_117,tax_stmt_withholding_monthly,5110,CD_117,Código 117 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_117,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_199,tax_stmt_withholding_monthly,5120,CD_199,Código 199 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_199,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_201,tax_stmt_withholding_monthly,5200,CD_201,Código 201 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_201,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_202,tax_stmt_withholding_monthly,5210,CD_202,Código 202 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_202,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_203,tax_stmt_withholding_monthly,5220,CD_203,Código 203 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_203,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_204,tax_stmt_withholding_monthly,5230,CD_204,Código 204 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_204,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_205,tax_stmt_withholding_monthly,5240,CD_205,Código 205 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_205,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_206,tax_stmt_withholding_monthly,5250,CD_206,Código 206 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_206,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_207,tax_stmt_withholding_monthly,5260,CD_207,Código 207 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_207,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_208,tax_stmt_withholding_monthly,5270,CD_208,Código 208 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_208,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_209,tax_stmt_withholding_monthly,5280,CD_209,Código 209 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_209,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_210,tax_stmt_withholding_monthly,5290,CD_210,Código 210 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_210,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_211,tax_stmt_withholding_monthly,5300,CD_211,Código 211 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_211,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_212,tax_stmt_withholding_monthly,5310,CD_212,Código 212 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_212,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tax_stmt_withholding_monthly_cd_299,tax_stmt_withholding_monthly,5320,CD_299,Código 299 Retenções na Fonte,domain,,ptplus.tax_tag_rf_cd_299,tax_bal_total,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

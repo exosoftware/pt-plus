@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Overdue Report: disable menu entry -->
+    <report id="account.action_report_print_overdue" model="res.partner"
+            name="account.report_overdue" string="Due Payments"
+            menu="False"/>
+
+</odoo>

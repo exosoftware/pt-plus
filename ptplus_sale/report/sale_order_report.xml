@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Sales Document Report: change attachment and print names -->
+    <record id="sale.action_report_saleorder" model="ir.actions.report">
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field
+            name="attachment"
+        >'{}.pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
+    </record>
+
+    <!-- Sale Document Preview Report -->
+    <record id="action_report_saleorder_preview" model="ir.actions.report">
+        <field name="name">Sale Document (preview)</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">ptplus_sale.report_saleorder_preview</field>
+        <field name="report_file">ptplus_sale.report_saleorder_preview</field>
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_saleorder_preview">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="sale.report_saleorder_document"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+
+    <!-- Sale Document Multi-way Report -->
+    <record id="action_report_saleorder_multiway" model="ir.actions.report">
+        <field name="name">Sale Document (multi-way)</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus_sale.report_saleorder_multiway</field>
+        <field name="report_file">ptplus_sale.report_saleorder_multiway</field>
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="binding_type">report</field>
+        <field
+            name="print_report_name"
+        >object.pt_get_fullname(lang=object.partner_id.lang)</field>
+        <field name="attachment_use">False</field>
+    </record>
+
+    <template id="report_saleorder_multiway">
+        <t t-call="web.html_container">
+            <t
+                t-foreach="docs.filtered(lambda rec: (rec.system_entry_date))"
+                t-as="doc"
+            >
+                <t
+                    t-foreach="doc.pt_multiway_tag_list(doc.company_id.l10n_pt_multiway_tag_sale)"
+                    t-as="multiway_tag"
+                >
+                    <t
+                        t-call="sale.report_saleorder_document"
+                        t-lang="doc.partner_id.lang"
+                    />
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

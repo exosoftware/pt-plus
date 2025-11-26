@@ -1,0 +1,103 @@
+
+.currency-label {
+    text-align: center;
+}
+
+.account-label {
+    span {
+        background: gainsboro;
+    }
+}
+
+.partner-common-table {
+
+	td {
+    	white-space: nowrap;
+	}
+}
+
+.partner-balance-table {
+
+	td:nth-child(4) {
+    	white-space: normal;
+	}
+}
+
+.pt-table-outstanding {
+    font-size: 10pt;
+
+    thead {
+        tr th:first-child {
+            width: auto !important;
+            text-align: left;
+        }
+    }
+
+    tbody {
+        td {
+            white-space: nowrap;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+        .col-description {
+            white-space: normal;
+	    }
+
+    }
+
+	.col-reference {
+	    text-align: center;
+	}
+	.col-amount {
+	    text-align: right !important;
+	}
+	.col-delay {
+	    text-align: center;
+	}
+}
+
+.pt-table-statement {
+    font-size: 10pt;
+
+    thead {
+        tr th:first-child {
+            width: auto !important;
+        }
+    }
+
+    tbody {
+        td {
+            white-space: nowrap;
+        }
+
+        .col-description {
+            white-space: normal;
+	    }
+
+    }
+
+	.col-reference {
+	    text-align: left;
+	}
+	.col-amount {
+	    text-align: right !important;
+	}
+}
+
+.pt-table-aging {
+    font-size: 9pt;
+
+    td {
+        text-align: center !important;
+    }
+    td:first-child {
+        text-align: left !important;
+    }
+    td:last-child {
+        text-align: right !important;
+    }
+
+}

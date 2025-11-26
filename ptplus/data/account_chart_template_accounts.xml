@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- pylint:disable=duplicate-xml-record-id -->
+    <record id="account_chart_template_snc_common" model="account.chart.template">
+        <field name="property_account_expense_categ_id" ref="account_snc_common_311" />
+        <field name="property_account_income_categ_id" ref="account_snc_common_711" />
+        <field
+            name="income_currency_exchange_account_id"
+            ref="account_snc_common_7887"
+        />
+        <field
+            name="expense_currency_exchange_account_id"
+            ref="account_snc_common_6887"
+        />
+        <field
+            name="property_stock_account_input_categ_id"
+            ref="account_snc_common_311"
+        />
+        <field
+            name="property_stock_account_output_categ_id"
+            ref="account_snc_common_611"
+        />
+        <field
+            name="property_stock_valuation_account_id"
+            ref="account_snc_common_321"
+        />
+    </record>
+    <record id="account_chart_template_snc_base" model="account.chart.template">
+        <field
+            name="property_account_receivable_id"
+            ref="account_snc_base_receivable"
+        />
+        <field name="property_account_payable_id" ref="account_snc_base_payable" />
+        <field name="default_pos_receivable_account_id" ref="account_snc_base_2118" />
+    </record>
+    <record id="account_chart_template_snc_micro" model="account.chart.template">
+        <field
+            name="property_account_receivable_id"
+            ref="account_snc_micro_receivable"
+        />
+        <field name="property_account_payable_id" ref="account_snc_micro_payable" />
+        <field name="default_pos_receivable_account_id" ref="account_snc_micro_213" />
+    </record>
+    <record id="account_chart_template_snc_esnl" model="account.chart.template">
+        <field
+            name="property_account_receivable_id"
+            ref="account_snc_esnl_receivable"
+        />
+        <field name="property_account_payable_id" ref="account_snc_esnl_payable" />
+        <field name="default_pos_receivable_account_id" ref="account_snc_esnl_2118" />
+    </record>
+</odoo>

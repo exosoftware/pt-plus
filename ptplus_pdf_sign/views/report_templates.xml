@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Layout Boxed -->
+<!--    <template-->
+<!--        id="external_layout_boxed"-->
+<!--        inherit_id="web.external_layout_boxed">-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' footer ')]/div"-->
+<!--            position="before">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='horizontal'" t-call="ptplus_pdf_sign.horizontal_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' header ')]/div"-->
+<!--            position="after">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='vertical'" t-call="ptplus_pdf_sign.vertical_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    &lt;!&ndash; Layout Clean &ndash;&gt;-->
+<!--    <template-->
+<!--        id="external_layout_clean"-->
+<!--        inherit_id="web.external_layout_clean">-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' footer ')]/div"-->
+<!--            position="before">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='horizontal'" t-call="ptplus_pdf_sign.horizontal_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' header ')]/div"-->
+<!--            position="after">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='vertical'" t-call="ptplus_pdf_sign.vertical_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    &lt;!&ndash; Layout Standard &ndash;&gt;-->
+<!--    <template-->
+<!--        id="external_layout_standard"-->
+<!--        inherit_id="web.external_layout_standard">-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' footer ')]/div"-->
+<!--            position="before">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='horizontal'" t-call="ptplus_pdf_sign.horizontal_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' header ')]/div"-->
+<!--            position="after">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='vertical'" t-call="ptplus_pdf_sign.vertical_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    &lt;!&ndash; Layout Background &ndash;&gt;-->
+<!--    <template-->
+<!--        id="external_layout_background"-->
+<!--        inherit_id="web.external_layout_background">-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' footer ')]/div"-->
+<!--            position="before">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='horizontal'" t-call="ptplus_pdf_sign.horizontal_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--        <xpath-->
+<!--            expr="//div[contains(concat(' ', @t-attf-class, ' '), ' header ')]/div"-->
+<!--            position="after">-->
+<!--            <t t-if="company.l10n_pdf_sign_signature_position=='vertical'" t-call="ptplus_pdf_sign.vertical_digital_signature_stamp" />-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <template id="horizontal_digital_signature_stamp">
+        <div
+            class="digital-signature-stamp"
+            t-if="company.l10n_pt_digitalsign_access_token"
+        >
+            <div>
+                <img
+                    t-if="company.l10n_pt_pdf_sign_stamp_image"
+                    t-att-src="image_data_uri(company.l10n_pt_pdf_sign_stamp_image)"
+                />
+            </div>
+            <div>
+                <p><strong>Assinatura Eletrônica Avançada</strong></p>
+                <p t-field="company.name" />
+                <p
+                    t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                />
+                <!-- <span t-field="company.vat"/> -->
+            </div>
+        </div>
+    </template>
+
+    <template id="vertical_digital_signature_stamp">
+        <div
+            class="vertical-digital-signature-stamp"
+            t-if="company.l10n_pt_digitalsign_access_token"
+        >
+            <div>
+                <img
+                    t-if="company.l10n_pt_pdf_sign_stamp_image"
+                    t-att-src="image_data_uri(company.l10n_pt_pdf_sign_stamp_image)"
+                />
+            </div>
+            <div>
+                <p><strong>Assinatura Eletrônica Avançada</strong></p>
+                <span t-field="company.name" />
+                <span> | </span>
+                <span
+                    t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                />
+                <!-- <span t-field="company.vat"/> -->
+            </div>
+        </div>
+    </template>
+
+</odoo>

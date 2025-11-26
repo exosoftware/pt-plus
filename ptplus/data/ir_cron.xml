@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="cron_l10n_pt_subscription_notifications" model="ir.cron">
+        <field name="name">Subscription Notifications</field>
+        <field name="model_id" ref="mail.model_publisher_warranty_contract" />
+        <field name="state">code</field>
+        <field name="code">model._send_subscription_notifications()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="active" eval="True" />
+    </record>
+</odoo>

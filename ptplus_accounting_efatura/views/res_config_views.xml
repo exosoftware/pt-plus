@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_pt_efatura" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt.efatura</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='account_settings_pt']" position="inside">
+
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="efatura-defaults"
+                    title="Select this if you wish to import or synchronize e-fatura data and match it with you recorded bills."
+                >
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">E-Fatura</span>
+                        <span
+                            class="fa fa-lg fa-building-o"
+                            title="Values set here are company-specific."
+                            aria-label="Values set here are company-specific."
+                            groups="base.group_multi_company"
+                            role="img"
+                        />
+                        <div class="text-muted">
+                            Default values for the E-Fatura features
+                        </div>
+                        <div class="content-group" >
+                            <div class="row mt16">
+                                <label
+                                    string="Journal"
+                                    for="l10n_pt_efatura_journal_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_journal_id" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Product"
+                                    for="l10n_pt_efatura_product_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_product_id" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Stand. Tax"
+                                    for="l10n_pt_efatura_tax_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_tax_id" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Interm. Tax"
+                                    for="l10n_pt_efatura_interm_tax_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_interm_tax_id" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Red. Tax"
+                                    for="l10n_pt_efatura_reduced_tax_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_reduced_tax_id" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    string="Exempt Tax"
+                                    for="l10n_pt_efatura_exempt_tax_id"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field name="l10n_pt_efatura_exempt_tax_id" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

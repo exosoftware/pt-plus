@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:guia" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns1="urn:guia" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<complexType name="Guia">
+		<annotation>
+			<documentation>Definição de uma Declaração de Retenções na Fonte de IRS/IRC ou Imposto do Selo</documentation>
+		</annotation>
+		<sequence>
+			<element name="guiaHeader" type="tns1:GuiaHeader" nillable="false"/>
+			<element name="guiaDetail" type="tns1:GuiaDetail" maxOccurs="50"/>
+		</sequence>
+	</complexType>
+	<complexType name="GuiaHeader">
+		<annotation>
+			<documentation>Dados referentes ao Header da Guia</documentation>
+		</annotation>
+		<sequence>
+			<element name="NUMFISC" type="tns1:NUMFISC" nillable="false"/>
+			<element name="PERIDECANO" type="tns1:PERIDECANO"/>
+			<element name="PERIDECMES" type="tns1:PERIDECMES"/>
+			<element name="VMONTANT" type="tns1:VMONTANT" nillable="false"/>
+			<element name="FRESTRAN" type="boolean"/>
+		</sequence>
+	</complexType>
+	<complexType name="GuiaDetail">
+		<annotation>
+			<documentation>Dados referentes às Rúbricas da Guia. Não deverão existir mais do que 50 Rúbricas por Guia. A chave Código de Região(CZONAG) +  Código de Rúbrica (CRUBRI) deverá ser única no conjunto das Rúbricas.
+					</documentation>
+		</annotation>
+		<sequence>
+			<element name="CZONAG" type="tns1:CZONAG" nillable="false"/>
+			<element name="CRUBRI" type="tns1:CRUBRI" nillable="false"/>
+			<element name="MONTLN" type="tns1:MONTLN" nillable="false"/>
+		</sequence>
+	</complexType>
+	<simpleType name="NUMFISC">
+		<annotation>
+			<documentation>Número de Identificação Fiscal</documentation>
+		</annotation>
+		<restriction base="string">
+			<length value="9"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="PERIDECANO">
+		<annotation>
+			<documentation>Periodo a que respeita o imposto retido (Ano)</documentation>
+		</annotation>
+		<restriction base="int">
+			<minInclusive value="1989"/>
+			<maxInclusive value="9999"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="PERIDECMES">
+		<annotation>
+			<documentation>Periodo a que respeita o imposto retido (Mês)</documentation>
+		</annotation>
+		<restriction base="int">
+			<minInclusive value="1"/>
+			<maxInclusive value="12"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="VMONTANT">
+		<annotation>
+			<documentation>Montante Total Declarado (em cêntimos de Euro)</documentation>
+		</annotation>
+		<restriction base="integer">
+			<minExclusive value="0"/>
+			<maxInclusive value="9999999999999"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CZONAG">
+		<annotation>
+			<documentation>Código de zona geográfica</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="C"/>
+			<enumeration value="A"/>
+			<enumeration value="M"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="CRUBRI">
+		<annotation>
+			<documentation>Código de Rúbrica</documentation>
+		</annotation>
+		<restriction base="string">
+			<maxLength value="3"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="MONTLN">
+		<annotation>
+			<documentation>Valor da Linha (em cêntimos de Euro)</documentation>
+		</annotation>
+		<restriction base="integer">
+			<minExclusive value="0"/>
+			<maxInclusive value="9999999999999"/>
+		</restriction>
+	</simpleType>
+</schema>

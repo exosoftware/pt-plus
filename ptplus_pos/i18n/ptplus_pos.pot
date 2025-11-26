@@ -1,0 +1,360 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-22 19:33+0000\n"
+"PO-Revision-Date: 2022-02-22 19:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/xml/receipt.xml:0
+#, python-format
+msgid "!receipt.pt_fiscal_doc_type_id or receipt.is_to_invoice"
+msgstr ""
+
+#. module: ptplus_pos
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid "Can't change a fiscal document type while there's an open session"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cert_code
+msgid "Certification Code"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cert_priv_key
+msgid "Certification Private Key (Safe)"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cert_priv_key_version
+msgid "Certification Private Key Version"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/models.js:0
+#, python-format
+msgid "Credit Note"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cred_fiscal_doc_type_id
+msgid "Credit Note Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cred_padding
+msgid "Credit Note Padding"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cred_prefix
+msgid "Credit Note Prefix"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Credit Notes"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Customer:"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__system_entry_date
+msgid "Date/Time of document validation"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_update
+msgid "Date/Time of last state change"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash
+msgid "Digital signature"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.pos_config_view_form
+msgid "Document Type for Credit Notes"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.pos_config_view_form
+msgid "Document Type for Invoices"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Empty Order"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_status
+msgid "Fiscal Doc. Status"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__id
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Invalid Lines"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_inv_fiscal_doc_type_id
+msgid "Invoice Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_inv_padding
+msgid "Invoice Padding"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_inv_prefix
+msgid "Invoice Prefix"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Invoice exceeds 1000€. You need to select a customer."
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/models.js:0
+#, python-format
+msgid "Invoice-receipt"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Invoices"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cred_last_hash
+msgid "Last Credit Note Hash"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_inv_last_hash
+msgid "Last Invoice Hash"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_dataport_export_saft____last_update
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_uid
+msgid "Last state changed by"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_cred_next
+msgid "Next Credit Note Number"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_inv_next
+msgid "Next Invoice Number"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_tree
+msgid "POS"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:fiscal.document.type,name:ptplus_pos.pt_pos_fiscal_document_type_nc
+msgid "POS Credit Note"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:fiscal.document.type,name:ptplus_pos.pt_pos_fiscal_document_type_fr
+msgid "POS Invoice-receipt"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Please select the Customer"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__pt_invoicing
+msgid "Portuguese Invoicing"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash_control
+msgid "Private key version"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Product must have one VAT type tax: "
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search
+msgid "Show document types that are available in the POS"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__source_billing
+msgid "Source Method"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.pos_config_view_form
+msgid "The portuguese fiscal document to apply on this POS credit notes."
+msgstr ""
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.pos_config_view_form
+msgid "The portuguese fiscal document to apply on this POS invoices."
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid ""
+"There must be at least one product in your order before it can be validated"
+msgstr ""
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__ptplus_unique_id
+msgid "Unique Order ID"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "VAT Error"
+msgstr ""
+
+#. module: ptplus_pos
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"When the PT Invoicing is active, you must define the document type for both "
+"Invoices and Credit Notes."
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid ""
+"You can have positive lines (invoice) and negative lines (credit note) but "
+"not both"
+msgstr ""
+
+#. module: ptplus_pos
+#. openerp-web
+#: code:addons/ptplus_pos/static/src/xml/receipt.xml:0
+#, python-format
+msgid "on"
+msgstr ""

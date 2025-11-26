@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="account_tax_statement_template_line_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.template.line.form</field>
+        <field name="model">l10n_pt.account.tax.statement.line</field>
+        <field name="arch" type="xml">
+            <form string="Tax Statement Template Line">
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="source_type" />
+                        <field name="description" />
+                    </group>
+                    <group>
+                        <field
+                            name="company_id"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="value_type" />
+                        <field name="value_invert" />
+                    </group>
+                </group>
+                <label for="source" />
+                <field name="source" nolabel="1" />
+                <group />
+            </form>
+        </field>
+    </record>
+
+    <!-- Tax Statement -->
+    <record id="account_tax_statement_template_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.template.search</field>
+        <field name="model">l10n_pt.account.tax.statement</field>
+        <field name="arch" type="xml">
+            <search string="Tax Statement Template">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="account_tax_statement_template_view_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.template.tree</field>
+        <field name="model">l10n_pt.account.tax.statement</field>
+        <!-- <field name="field_parent">child_ids</field>
+        <field name="priority">100</field> -->
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="type" />
+                <field name="custom" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    readonly="1"
+                />
+            </tree>
+        </field>
+    </record>
+    <record id="account_tax_statement_template_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.tax.statement.template.form</field>
+        <field name="model">l10n_pt.account.tax.statement</field>
+        <field name="arch" type="xml">
+            <form string="Tax Statement Template">
+                <sheet>
+                    <group>
+                        <group>
+                            <field
+                                name="name"
+                                attrs="{'readonly': [('custom','=', False)]}"
+                            />
+                            <field
+                                name="type"
+                                attrs="{'readonly': [('custom','=', False)]}"
+                            />
+                         </group>
+                        <group>
+                            <field name="active" />
+                            <field name="custom" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                readonly="1"
+                            />
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Elements">
+                            <field
+                                name="line_ids"
+                                nolabel="1"
+                                widget="one2many_list"
+                                mode="tree"
+                                attrs="{'readonly': [('custom','=', False)]}"
+                            >
+                                <tree editable="bottom" default_order="sequence">
+                                    <field name="sequence" widget="handle" />
+                                    <field name="name" />
+                                    <field name="description" />
+                                    <field name="source_type" />
+                                    <field name="source" />
+                                    <field
+                                        name="tax_tag_ids"
+                                        options="{'no_create_edit': True}"
+                                        widget="many2many_tags"
+                                        string="Tags"
+                                    />
+                                    <button
+                                        type="object"
+                                        name="view_tax_selector"
+                                        string="Taxes"
+                                        icon="fa-search"
+                                        attrs="{'invisible': [('source_type','!=', 'domain')]}"
+                                    />
+                                    <field name="value_type" />
+                                    <field
+                                        name="value_invert"
+                                        string="Invert"
+                                        attrs="{'invisible': [('source_type','=', 'expr')]}"
+                                    />
+                                    <field name="auxiliary" string="Aux" />
+                                    <field
+                                        name="company_id"
+                                        groups="base.group_multi_company"
+                                        readonly="1"
+                                        invisible="1"
+                                    />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="action_account_tax_statement_template_list"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Tax Statement Templates</field>
+        <field name="res_model">l10n_pt.account.tax.statement</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_id" ref="account_tax_statement_template_view_tree" />  -->
+        <field name="search_view_id" ref="account_tax_statement_template_view_search" />
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('ptplus_accounting_tax_statement.account_tax_statement_template_view_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('ptplus_accounting_tax_statement.account_tax_statement_template_view_form')})]"
+        />
+    </record>
+
+    <menuitem
+        id="menu_account_report_tax_statement_template"
+        name="Tax Statement Templates"
+        parent="account.account_account_menu"
+        action="action_account_tax_statement_template_list"
+    />
+
+    <record
+        id="action_account_tax_statement_template_form"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Tax Statement Template</field>
+        <field name="res_model">l10n_pt.account.tax.statement</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="account_tax_statement_template_view_form" />
+    </record>
+
+</odoo>

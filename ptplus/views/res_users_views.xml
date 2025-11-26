@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_users_form_pt" model="ir.ui.view">
+        <field name="name">res.users.form.pt</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Portugal" name="portugal">
+                    <group
+                        string="Tax Authority"
+                    >
+                        <group>
+                            <field name="tax_auth_username" string="Username"/>
+                            <field name="tax_auth_password" string="Password" password="True"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="view_users_form_simple_modif_pt" model="ir.ui.view">
+        <field name="name">res.users.preferences.form.pt</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Portugal" name="portugal">
+                    <group
+                        string="Tax Authority"
+                    >
+                        <group>
+                            <field name="tax_auth_username" string="Username"/>
+                            <field name="tax_auth_password" string="Password" password="True"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

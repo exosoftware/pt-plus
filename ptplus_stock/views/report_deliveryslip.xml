@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Invoice document mods -->
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <!-- Refactor lang translation -->
+        <xpath expr="//t[@t-set='o']" position="replace">
+            <t t-set="o" t-value="o.with_context(lang=lang)" />
+        </xpath>
+
+        <!-- The partner concept is somewhat peculiar -->
+        <xpath expr="//t[@t-set='partner']" position="after">
+            <t t-set="partner" t-if="o.source_billing" t-value="o.pt_get_partner('to', 'nominal') " />
+            <t t-set="shipto_partner" t-value="o.pt_get_partner('to', 'physical')" />
+            <t
+                t-set="shipfrom_partner"
+                t-value="o.pt_get_partner('from', 'physical')"
+            />
+        </xpath>
+
+        <!-- Enable partner info for Guias de Transporte Globais-->
+        <xpath expr="//t[@t-if='partner']" position="attributes">
+            <attribute name="t-if">partner or o.source_billing</attribute>
+        </xpath>
+
+        <xpath expr="//div[@t-esc='partner']" position="before">
+            <t t-set="information_block">
+                <div style="font-size: x-small;" t-if="o.source_billing">
+                    <div
+                        style="display: inline-block; vertical-align: top;"
+                        class="mt-0 mr-3"
+                    >
+                        <strong>Loading:</strong>
+                        <div
+                            t-esc="shipfrom_partner"
+                            t-if="shipfrom_partner and (shipfrom_partner != from_partner)"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                        <!--<p t-if="not shipfrom_partner or (shipfrom_partner == from_partner)">Our Warehouse</p>-->
+                        <p t-if="o.l10n_pt_delivery_start">
+                            <i
+                                class="fa fa-clock-o mr-1"
+                                role="img"
+                                aria-label="Date"
+                                title="Date"
+                            />
+                            <span
+                                t-esc="o.l10n_pt_delivery_start"
+                                t-options="{'widget': 'datetime'}"
+                            />
+                        </p>
+                    </div>
+                    <div
+                        style="display: inline-block; vertical-align: top;"
+                        class="mt-0"
+                    >
+                        <strong>Unloading:</strong>
+                        <div
+                            t-esc="shipto_partner"
+                            t-if="shipto_partner and (shipto_partner != partner)"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                        <!--<p t-if="not shipto_partner or (shipto_partner == partner)">You Warehouse</p>-->
+                        <p t-if="o.l10n_pt_delivery_end">
+                            <i
+                                class="fa fa-clock-o mr-1"
+                                role="img"
+                                aria-label="Date"
+                                title="Date"
+                            />
+                            <span
+                                t-esc="o.l10n_pt_delivery_end"
+                                t-options="{'widget': 'datetime'}"
+                            />
+                        </p>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+
+        <!-- Certification Text-->
+        <xpath expr="//t[@t-set='address']" position="after">
+            <t
+                t-if="o.source_billing"
+                t-set="pt_certification_text"
+                t-value="o.pt_get_certification_text()"
+            />
+        </xpath>
+
+        <!-- Document Name -->
+        <xpath expr="//h2" position="attributes">
+            <attribute name="t-if">not o.source_billing</attribute>
+        </xpath>
+        <xpath expr="//h2" position="after">
+            <div t-if="o.source_billing" class="row pt_doc_name">
+                <div class="col-10">
+                    <h2>
+                        <span t-esc="o.pt_get_fullname()" />
+                        <span
+                            t-if="o.state == 'cancel'"
+                            t-field="o.state"
+                            class="pt_cancelled"
+                        />
+                    </h2>
+                </div>
+                <div
+                    t-if="multiway_tag"
+                    class="col-2 text-right"
+                    style="padding-top: 3mm"
+                >
+                    <span class="pt_multiway_tag" t-esc="multiway_tag" />
+                </div>
+            </div>
+
+            <div id="informations" class="row mt32 mb32">
+                <div class="col-auto mw-100 mb-2" t-if="o.l10n_pt_date_issued">
+                    <strong>Date:</strong>
+                    <p
+                        class="m-0 text-nowrap"
+                        t-field="o.l10n_pt_date_issued"
+                        t-options="{'widget': 'date'}"
+                    />
+                </div>
+                <!-- Add Vat No. -->
+                <div t-if="partner.vat" class="col-auto mw-100 mb-2">
+                    <strong><t
+                            t-esc="o.company_id.country_id.vat_label or 'Tax ID'"
+                        />:</strong>
+                    <p class="m-0" t-esc="partner.pt_get_vat()" />
+                </div>
+                <div
+                    class="col-auto mw-100 mb-2"
+                    t-if="o.sudo().sale_id.client_order_ref"
+                >
+                    <strong>Your Ref:</strong>
+                    <p
+                        class="m-0 text-nowrap"
+                        t-field="o.sudo().sale_id.client_order_ref"
+                    />
+                </div>
+                <div class="col-auto mw-100 mb-2" t-if="o.l10n_pt_license_plate">
+                    <strong>Lic. Plate:</strong>
+                    <p class="m-0" t-field="o.l10n_pt_license_plate" />
+                </div>
+                <div class="col-auto mw-100 mb-2" t-if="o.l10n_pt_delivery_code">
+                    <strong>Tax Authority Code:</strong>
+                    <p class="m-0" t-field="o.l10n_pt_delivery_code" />
+                </div>
+
+            </div>
+        </xpath>
+
+        <!-- A place for PT extras -->
+        <xpath expr="//div[@name='signature']" position="after">
+            <t t-call="ptplus.pt_features_bottom" />
+        </xpath>
+    </template>
+
+    <template
+        id="report_delivery_document_inherit_sale_stock"
+        inherit_id="sale_stock.report_delivery_document_inherit_sale_stock"
+    >
+        <xpath
+            expr="//div[@t-if='o.sudo().sale_id.client_order_ref']"
+            position="attributes"
+        >
+            <attribute
+                name="t-if"
+            >not o.source_billing and o.sudo().sale_id.client_order_ref</attribute>
+        </xpath>
+    </template>
+
+</odoo>

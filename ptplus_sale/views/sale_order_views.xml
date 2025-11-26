@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Sales order form  -->
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">view.order.form.pt</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <!-- Disable Pro-forma stuff -->
+            <xpath
+                expr="//button[@name='action_quotation_send'][@groups='sale.group_proforma_sales'][1]"
+                position="attributes"
+            >
+                <attribute name="attrs">{'invisible': ['|', '|', ('state', '!=', 'draft'), ('invoice_count','&gt;=',1), ('source_billing', '!=', False)]}</attribute>
+            </xpath>
+            <xpath
+                expr="//button[@name='action_quotation_send'][@groups='sale.group_proforma_sales'][2]"
+                position="attributes"
+            >
+                <attribute name="attrs">{'invisible': ['|', '|', ('state', '=', 'draft'), ('invoice_count','&gt;=',1), ('source_billing', '!=', False)]}</attribute>
+            </xpath>
+            <!-- Add a issue button for quotations -->
+            <xpath expr="//button[@id='action_confirm']" position="after" >
+                <button name="action_quotation_sent" id="action_quotation_sent" string="Issue Doc."
+                        type="object" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('fiscal_document_type_id', '=', False)]}"
+                        help="Lock and issue the document so that it can be printed or sent to the partner. "/>
+            </xpath>
+            <!-- Confirm cancellation -->
+            <xpath expr="//button[@name='action_cancel']" position="attributes">
+                <attribute
+                    name="confirm"
+                >Are you sure you want to cancel the document?</attribute>
+            </xpath>
+            <!-- Prohibit second confirmation for same quotation -->
+            <xpath expr="//button[@name='action_confirm'][1]" position="attributes" >
+                <attribute name="attrs">{'invisible': ['|', ('state', 'not in', ['sent']), ('l10n_pt_order_id', '!=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_confirm'][2]" position="attributes" >
+                <attribute name="attrs">{'invisible': ['|', ('state', 'not in', ['draft']), ('l10n_pt_order_id', '!=', False)]}</attribute>
+            </xpath>
+
+            <!-- Quotations/Orders cross references-->
+            <field name="origin" position="after">
+                <field
+                    name="l10n_pt_order_id"
+                    attrs="{'invisible': [('l10n_pt_order_id', '=', False)]}"
+                />
+                <field
+                    name="l10n_pt_quotation_id"
+                    attrs="{'invisible': [('l10n_pt_quotation_id', '=', False)]}"
+                />
+                <field
+                    name="l10n_pt_date_issued"
+                    options="{'datepicker': {'warn_future': true}}"
+                />
+            </field>
+
+            <!-- Source Billing and Fiscal Document Type-->
+            <field name="date_order" position="after">
+                <field name="source_billing" invisible="1" />
+                <field
+                    name="fiscal_document_type_id"
+                    string="Document Type"
+                    options="{'no_create_edit': True}"
+                    domain="[('source_billing', '=', source_billing),
+                            ('company_id', '=', company_id),
+                            ('section', '=', 'work'),
+                            ('type', '!=', 'NE')
+                            ]"
+                />
+            </field>
+
+        </field>
+    </record>
+
+    <!-- Insert is_order into context and adjust domain -->
+    <!--
+    <record id="sale.action_quotations" model="ir.actions.act_window">
+        <field name="context">{'hide_sale': True, 'is_order': False}</field>
+        <field name="domain">[('is_order', '=', False)]</field>
+    </record>
+    <record id="sale.action_quotations_with_onboarding" model="ir.actions.act_window">
+        <field name="context">{'search_default_my_quotation': 1, 'is_order': False}</field>
+        <field name="domain">[('is_order', '=', False)]</field>
+    </record>
+    <record id="sale.action_orders" model="ir.actions.act_window">
+        <field name="context">{'is_order': True}</field>
+        <field name="domain">[('is_order', '=', True)]</field>
+    </record>
+    -->
+
+</odoo>

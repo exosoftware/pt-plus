@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_chart_template_snc_common" model="account.chart.template">
+        <field name="name">Portugal - SNC Comum</field>
+        <field name="visible" eval="0" />
+        <field name="currency_id" ref="base.EUR" />
+        <field name="cash_account_code_prefix">11</field>
+        <field name="bank_account_code_prefix">12</field>
+        <field name="transfer_account_code_prefix">129</field>
+    </record>
+
+    <record id="account_chart_template_snc_micro" model="account.chart.template">
+        <field name="name">Portugal - SNC Microentidades</field>
+        <field name="complete_tax_set" eval="True" />
+        <field name="currency_id" ref="base.EUR" />
+        <field name="code_digits">1</field>
+        <field name="cash_account_code_prefix">11</field>
+        <field name="bank_account_code_prefix">12</field>
+        <field name="transfer_account_code_prefix">129</field>
+        <field name="parent_id" ref="account_chart_template_snc_common" />
+    </record>
+
+    <record id="account_chart_template_snc_base" model="account.chart.template">
+        <field name="name">Portugal - SNC Base</field>
+        <field name="complete_tax_set" eval="True" />
+        <field name="currency_id" ref="base.EUR" />
+        <field name="code_digits">1</field>
+        <field name="cash_account_code_prefix">11</field>
+        <field name="bank_account_code_prefix">12</field>
+        <field name="transfer_account_code_prefix">129</field>
+        <field name="parent_id" ref="account_chart_template_snc_common" />
+    </record>
+
+    <record id="account_chart_template_snc_esnl" model="account.chart.template">
+        <field name="name">Portugal - SNC ESNL</field>
+        <field name="complete_tax_set" eval="True" />
+        <field name="currency_id" ref="base.EUR" />
+        <field name="code_digits">1</field>
+        <field name="cash_account_code_prefix">11</field>
+        <field name="bank_account_code_prefix">12</field>
+        <field name="transfer_account_code_prefix">129</field>
+        <field name="parent_id" ref="account_chart_template_snc_common" />
+    </record>
+</odoo>
