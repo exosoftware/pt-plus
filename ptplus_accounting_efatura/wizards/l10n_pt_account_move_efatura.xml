@@ -1,0 +1,38 @@
+<odoo>
+    <record id="account_move_efatura_view" model="ir.ui.view">
+        <field name="name">l10n_pt.account.move.efatura.form</field>
+        <field name="model">l10n_pt.account.move.efatura</field>
+        <field name="arch" type="xml">
+            <form string="Create/Update Invoices">
+                <p class="oe_grey">
+                    A new draft vendor bill or credit note will be created for
+                    each e-fatura line unless there's already one with the same
+                    vendor and reference. In this case the existing document
+                    will be updated with the e-fatura line data if and only if
+                    it's in draft state.
+                </p>
+                <group>
+                    <field name="journal_id" />
+                </group>
+                <footer>
+                    <button
+                        string="Create/Update"
+                        name="invoice_from_efatura"
+                        type="object"
+                        default_focus="1"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_invoice_efatura" model="ir.actions.act_window">
+        <field name="name">Create/Update Invoices</field>
+        <field name="res_model">l10n_pt.account.move.efatura</field>
+        <field name="binding_model_id" ref="model_l10n_pt_account_efatura" />
+        <field name="view_id" ref="account_move_efatura_view" />
+        <field name="target">new</field>
+    </record>
+</odoo>

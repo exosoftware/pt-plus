@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Invoice document mods -->
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <!-- Information zone fields -->
+        <xpath
+            expr="//div[@id='informations']/div[@name='origin']"
+            position="attributes"
+        >
+            <attribute name="t-if">not o.source_billing</attribute>
+        </xpath>
+        <xpath expr="//div[@id='informations']/div[@name='origin']" position="after">
+            <div
+                class="col"
+                t-if="o.source_billing and o.invoice_origin"
+                name="pt_origin"
+            >
+                <strong>Source</strong>
+                <t
+                    t-set="pt_pickings"
+                    t-value="o.picking_ids.filtered(lambda p: p.system_entry_date)"
+                />
+                <div t-if="pt_pickings" t-out="', '.join(pt_pickings.mapped('name'))" />
+                <div t-else="" t-field="o.invoice_origin" />
+            </div>
+        </xpath>
+    </template>
+</odoo>

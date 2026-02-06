@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_pt_efatura" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt.efatura</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_settings_pt']" position="inside">
+                <setting
+                    id="efatura-defaults"
+                    company_dependent="1"
+                    help="Default values for the E-Fatura features"
+                    string="E-Fatura"
+                    invisible="not pt_invoicing"
+                >
+                    <div class="row">
+                        <label
+                            string="Journal"
+                            for="l10n_pt_efatura_journal_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_journal_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Product"
+                            for="l10n_pt_efatura_product_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_product_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Stand. Tax"
+                            for="l10n_pt_efatura_tax_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_tax_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Interm. Tax"
+                            for="l10n_pt_efatura_interm_tax_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_interm_tax_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Red. Tax"
+                            for="l10n_pt_efatura_reduced_tax_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_reduced_tax_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Exempt Tax"
+                            for="l10n_pt_efatura_exempt_tax_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_exempt_tax_id" />
+                    </div>
+                </setting>
+                <setting
+                    id="efatura_qr_code"
+                    company_dependent="1"
+                    help="Automatically detect any Portuguese QR Code in Invoices and
+                    fill them according to E-Fatura."
+                    invisible="not pt_invoicing"
+                >
+                    <field name="l10n_pt_efatura_scan" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

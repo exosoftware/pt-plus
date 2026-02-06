@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Annual Statement Report -->
+    <record id="l10n_pt_report_annual_statement_action" model="ir.actions.report">
+        <field name="name">Annual Income Statements</field>
+        <field name="model">l10n_pt.annual.statement.wizard.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >ptplus_reports_withholding.l10n_pt_report_annual_statement</field>
+        <field
+            name="report_file"
+        >ptplus_reports_withholding.l10n_pt_report_annual_statement</field>
+        <field
+            name="binding_model_id"
+            ref="model_l10n_pt_annual_statement_wizard_line"
+        />
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+        <field
+            name="print_report_name"
+        >'Income Statement ' + object[0].statement_id.period + '.pdf'</field>
+    </record>
+</odoo>

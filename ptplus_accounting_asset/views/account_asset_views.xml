@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_asset_form_pt" model="ir.ui.view">
+        <field name="name">account.asset.form.pt</field>
+        <field name="model">account.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <div
+                    class="alert alert-danger"
+                    role="alert"
+                    style="margin-bottom:0;"
+                    invisible="not l10n_pt_legal_rate_id or not l10n_pt_duration_warning"
+                >
+                    <div class="o_row">
+                        As you have selected an asset lifespan that is shorter than the time implied by the legal rate, or longer than twice the legal rate, Model 32 will have to be produced manually
+                    </div>
+                </div>
+            </xpath>
+
+            <field name="method" position="before">
+                <field name="l10n_pt_legal_rate_id" />
+            </field>
+
+            <field name="original_value" position="after">
+                <field
+                    name="l10n_pt_low_value_asset"
+                    invisible="country_code != 'PT' or original_value &gt;= 1000"
+                    readonly="state != 'draft'"
+                />
+            </field>
+
+            <field name="prorata_date" position="after">
+                <field name="country_code" invisible="1" />
+                <field name="l10n_pt_duration_warning" invisible="1" />
+                <field name="l10n_pt_expected_method_number" invisible="1" />
+                <field
+                    name="l10n_pt_legal_rate_id"
+                    invisible="country_code != 'PT'"
+                    readonly="state != 'draft'"
+                />
+                <field
+                    name="l10n_pt_asset_type"
+                    invisible="country_code != 'PT'"
+                    required="country_code == 'PT'"
+                />
+                <field
+                    name="l10n_pt_acquisition_production_value"
+                    invisible="country_code != 'PT'"
+                    readonly="state != 'draft'"
+                    required="country_code == 'PT'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

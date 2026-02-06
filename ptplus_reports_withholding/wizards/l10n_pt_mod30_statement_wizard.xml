@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_mod30_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.modelo30.statement.wizard.form</field>
+        <field name="model">l10n_pt.modelo30.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <!--<field name="mode">primary</field>-->
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <notebook name="main_block" position="inside">
+                <page name="Header">
+                    <group>
+                        <group>
+                            <field name="declaration_type" />
+                            <field
+                                name="reason_justified_impediment"
+                                invisible="declaration_type != 'second'"
+                                required="declaration_type == 'second'"
+                            />
+                            <field
+                                name="date_of_occurrence"
+                                invisible="declaration_type != 'second'"
+                                required="declaration_type == 'second'"
+                            />
+                            <field name="vat_legal_representative" />
+                        </group>
+                        <group>
+                            <field name="company_eac" />
+                        </group>
+                    </group>
+                </page>
+                <page name="Q6">
+                    <group>
+                        <field name="q6_line_ids" nolabel="1" colspan="3">
+                            <list create="0" delete="0" editable="bottom">
+                                <field name="currency_id" column_invisible="1" />
+                                <field name="name" />
+                                <field name="amount" sum="Total" />
+                                <button
+                                    name="action_view_details"
+                                    type="object"
+                                    string="View"
+                                    icon="fa-search"
+                                />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+                <page name="Q7">
+                    <group>
+                        <field name="q7_line_ids" nolabel="1" colspan="3">
+                            <list editable="bottom">
+                                <field name="currency_id" column_invisible="1" />
+                                <field name="name" />
+                                <field name="amount" sum="Total" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+                <page name="Q8">
+                    <group>
+                        <field name="q8_line_ids" nolabel="1" colspan="3">
+                            <list editable="bottom">
+                                <field name="currency_id" column_invisible="1" />
+                                <field name="q8_31" />
+                                <field name="q8_32" />
+                                <field name="q8_33" optional="hide" />
+                                <field name="q8_34_1" optional="hide" />
+                                <field name="q8_34_2" optional="hide" />
+                                <field name="q8_35_code" />
+                                <field name="q8_35_balance" sum="Total Balance" />
+                                <field name="q8_36_code" />
+                                <field name="q8_36_amount" sum="Total Tax Amount" />
+                                <field name="q8_37" sum="Total Withholding Tax" />
+                                <field name="q8_39" />
+                                <button
+                                    name="action_view_details"
+                                    type="object"
+                                    string="View"
+                                    icon="fa-search"
+                                />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_mod30_statement_wizard_action" model="ir.actions.act_window">
+        <field name="name">Modelo 30</field>
+        <field name="res_model">l10n_pt.modelo30.statement.wizard</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="l10n_pt_mod30_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_mod30_statement_wizard_menu"
+        parent="ptplus_reports_withholding.l10n_pt_income_retention_menu"
+        sequence="20"
+        groups="account.group_account_user,account.group_account_user"
+        action="l10n_pt_mod30_statement_wizard_action"
+    />
+</odoo>

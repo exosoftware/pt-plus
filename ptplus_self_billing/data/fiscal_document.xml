@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- FISCAL DOCUMENT TYPES -->
+
+    <!-- A preset fiscal document type for self-billing invoices -->
+    <record id="fiscal_document_type_ft" model="fiscal.document.type">
+        <field name="type">FT</field>
+        <field name="name">Self-billing Invoice</field>
+        <field name="l10n_pt_self_billing" eval="True" />
+        <field name="source_billing">P</field>
+        <field name="sequence" eval="15" />
+    </record>
+</odoo>

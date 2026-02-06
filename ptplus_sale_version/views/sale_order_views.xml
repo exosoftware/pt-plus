@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page
+                    string="Versions"
+                    attrs="{'invisible': [('has_old_versions', '=', False), ('current_version_id', '=', False)]}"
+                >
+                    <field
+                        name="old_version_ids"
+                        attrs="{'invisible': [('has_old_versions', '=', False)]}"
+                    >
+                        <tree>
+                            <field name='internal_name' />
+                            <field name='name' />
+                            <field name='create_date' />
+                            <field name='create_uid' />
+                            <field name='state' invisible='1' />
+                        </tree>
+                    </field>
+                    <group attrs="{'invisible': [('current_version_id', '=', False)]}">
+                        <field name="current_version_id" invisible="0" />
+                        <field
+                            name="current_version_internal_name"
+                            string="Internal Ref."
+                        />
+                        <field name="has_old_versions" invisible="1" />
+                    </group>
+                </page>
+            </notebook>
+            <xpath expr="//header/button[@name='action_draft']" position='after'>
+                <button
+                    name="create_version"
+                    states="cancel"
+                    string="New Version"
+                    type="object"
+                />
+            </xpath>
+
+            <xpath expr="//h1" position="after">
+                <h3>
+                    <field name="internal_name" />
+                </h3>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Order and Quotation Trees -->
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="internal_name" />
+            </field>
+        </field>
+    </record>
+    <record id="view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="internal_name" />
+            </field>
+        </field>
+    </record>
+</odoo>

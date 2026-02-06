@@ -1,0 +1,9 @@
+id,name,sequence,auto_apply,vat_required,country_id,state_ids,country_group_id
+fp_azores,Açores,10,True,False,base.pt,base.state_pt_pt-20,
+fp_madeira,Madeira,20,True,False,base.pt,base.state_pt_pt-30,
+fp_national,Continente,30,True,False,base.pt,,
+fp_intra_b2c,Continente/Intracom. B2C,35,True,True,,,base.europe
+fp_intra,Intracomunitário B2B,40,True,True,,,base.europe
+fp_extra,Extracomunitário,60,True,False,,,ptplus.non_eu
+fp_ispn,Inversão do Sujeito Passivo Nacional,100,False,False,,,
+fp_northern_ireland,Irlanda do Norte (RU),120,True,False,,,

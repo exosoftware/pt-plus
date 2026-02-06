@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="dataport_export_form_saft_self_billing" model="ir.ui.view">
+        <field name="name">dataport.export.form.saft.self_billing</field>
+        <field name="model">dataport.export.saft</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus_saft.dataport_export_form_saft" />
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field
+                    name="l10n_pt_self_billing_partner_id"
+                    invisible="type != 'S'"
+                    required="type == 'S'"
+                    options="{'no_create_edit': True}"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record
+        id="ptplus_saft.action_wizard_dataport_export_saft"
+        model="ir.actions.act_window"
+    >
+        <!--<field name="name">Export SAF-T</field>-->
+        <field
+            name="view_id"
+            ref="ptplus_self_billing.dataport_export_form_saft_self_billing"
+        />
+    </record>
+</odoo>

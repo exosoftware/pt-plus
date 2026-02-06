@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_annual_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.annual.statement.wizard.form</field>
+        <field name="model">l10n_pt.annual.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <!--<field name="mode">primary</field>-->
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field
+                    name="partner_selection"
+                    widget="radio"
+                    invisible="state != 'analyze'"
+                />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statements">
+                    <field name="line_ids" nolabel="1" widget="many2many" colspan="3">
+                        <list editable="bottom">
+                            <field name="currency_id" column_invisible="1" />
+                            <field name="partner_id" />
+                            <field
+                                name="partner_email"
+                                string="E-mail"
+                                optional="hide"
+                            />
+                            <field
+                                name="partner_company_type"
+                                string="Type"
+                                optional="hide"
+                            />
+                            <field name="income_category" />
+                            <field
+                                name="income_amount"
+                                string="Income"
+                                sum="Total Income"
+                            />
+                            <field
+                                name="withhold_amount"
+                                string="Retention"
+                                sum="Total Retention"
+                            />
+                            <field
+                                name="stamp_duty_amount"
+                                string="S.D"
+                                optional="hide"
+                                sum="Total S.D"
+                            />
+                            <field
+                                name="selected"
+                                string="Sel."
+                                widget="boolean_toggle"
+                            />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_income_retention_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="160"
+        groups="account.group_account_user"
+        name="Income and Retention"
+    />
+
+    <record id="l10n_pt_annual_statement_wizard_action" model="ir.actions.act_window">
+        <field name="name">Annual Statement</field>
+        <field name="res_model">l10n_pt.annual.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_annual_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_annual_statement_wizard_menu"
+        parent="ptplus_reports_withholding.l10n_pt_income_retention_menu"
+        sequence="40"
+        groups="account.group_account_user,account.group_account_user"
+        action="l10n_pt_annual_statement_wizard_action"
+    />
+</odoo>

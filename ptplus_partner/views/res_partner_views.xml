@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">view.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='street']" position="before">
+                <field
+                    name="l10n_pt_legal_name"
+                    invisible="parent_id"
+                />
+
+            </xpath>
+        </field>
+    </record>
+    -->
+
+    <!-- Partner -->
+    <record id="view_partner_form_pt" model="ir.ui.view">
+        <field name="name">res.partner.form.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="l10n_pt_partner_zip_ctt" invisible="1" />
+                <field
+                    name="l10n_pt_legal_name"
+                    context="{'default_is_company': False}"
+                    invisible="not is_company or 'PT' not in fiscal_country_codes"
+                    placeholder="Legal Name"
+                />
+            </field>
+            <xpath expr="//div[@name='partner_address_country']" position="after">
+                <button
+                    name="l10n_pt_action_selection_ctt_zip"
+                    type="object"
+                    string="Auto-fill"
+                    help="Autocomplete with data from CTT API"
+                    icon="fa-magic"
+                    class="btn-link p-0"
+                    invisible="street or not l10n_pt_partner_zip_ctt"
+                />
+            </xpath>
+
+            <xpath expr="//group[@name='fiscal_information']" position="before">
+                <group
+                    string="Establishment Information Pt"
+                    name="establishment_information_pt"
+                    invisible="not is_company or 'PT' not in fiscal_country_codes"
+                >
+                    <field name="l10n_pt_establishment_code" />
+                    <field name="l10n_pt_tax_office_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_simple_form_pt" model="ir.ui.view">
+        <field name="name">res.partner.simple.form.pt</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="fiscal_country_codes" invisible="1" />
+                <field
+                    name="l10n_pt_legal_name"
+                    context="{'default_is_company': False}"
+                    invisible="not is_company or 'PT' not in fiscal_country_codes"
+                    placeholder="Legal Name"
+                />
+            </field>
+        </field>
+    </record>
+
+    <!-- Banks -->
+    <record id="view_res_bank_form_pt" model="ir.ui.view">
+        <field name="name">view.res.bank.form.pt</field>
+        <field name="model">res.bank</field>
+        <field name="inherit_id" ref="base.view_res_bank_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="l10n_pt_lname" />
+            </field>
+            <field name="bic" position="after">
+                <field name="l10n_pt_code" />
+                <field name="l10n_pt_vat" />
+            </field>
+            <field name="email" position="after">
+                <field name="l10n_pt_website" widget="url" />
+            </field>
+        </field>
+    </record>
+    <record id="view_res_bank_tree_pt" model="ir.ui.view">
+        <field name="name">view.res.bank.list.pt</field>
+        <field name="model">res.bank</field>
+        <field name="inherit_id" ref="base.view_res_bank_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="l10n_pt_code" />
+            </field>
+        </field>
+    </record>
+</odoo>
