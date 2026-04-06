@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="wizard_inventory_statement_form" model="ir.ui.view">
+        <field name="name">wizard.inventory_statement.form</field>
+        <field name="model">wizard.inventory_statement</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus.dataport_export_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='main_export_group']" position="before">
+                <div invisible="state != 'select'">
+                    <p>
+                        Please insert a fiscal year to export as well as its last day. Then,
+                        carefully set on the At Date field the date/time that will work as a
+                        threshold for the stock movements to include in the report. For example,
+                        if you had you last inventory adjustment on Jan, 2nd you could set
+                        202x-01-02 23:59:59.
+                    </p>
+                    <p>
+                        WARNING: products with an undefined legal category or with zero
+                        stock quantity will be ignored. Products with a negative stock quantity
+                        will not be exported but will show up in a list for your information.
+                    </p>
+                    <hr />
+                </div>
+            </xpath>
+
+            <field name="period" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="date_from" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </field>
+            <field name="date_to" position="attributes">
+                <attribute name="help">The last day of the fiscal period</attribute>
+            </field>
+            <field name="date_to" position="before">
+                <field name="year" />
+            </field>
+            <field name="validate" position="before">
+                <field name="date" />
+            </field>
+
+            <xpath expr="//group[@name='error_info']" position="before">
+                <group
+                    name="outcome_info"
+                    string="Products with Negative Qty"
+                    invisible="state != 'done'"
+                >
+                    <field name="products_with_negative_qty" readonly="1" nolabel="1" />
+                </group>
+            </xpath>
+
+            <xpath expr="//button[@name='export_xml']" position="after">
+                <button string="View" name="action_view" type="object" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_wizard_inventory_statement" model="ir.actions.act_window">
+        <field name="name">Inventory Report</field>
+        <field name="res_model">wizard.inventory_statement</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wizard_inventory_statement_form" />
+        <field name="target">new</field>
+        <field name="context">{'valuation': True}</field>
+    </record>
+
+    <menuitem
+        id="menu_pt_dataport_export_inventory_statement"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="100"
+        groups="account.group_account_invoice"
+        action="action_wizard_inventory_statement"
+    />
+
+    <record id="view_legal_inventory_valuation_search" model="ir.ui.view">
+        <field name="name">legal.inventory.search</field>
+        <field name="model">stock.valuation.layer</field>
+        <!--<field name="mode">primary</field>-->
+        <field name="inherit_id" ref="stock_account.view_inventory_valuation_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='group_by_product_id']" position="after">
+                <filter
+                    name="group_by_l10n_pt_legal_categ"
+                    string="Legal Category"
+                    context="{'group_by':'l10n_pt_legal_categ'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

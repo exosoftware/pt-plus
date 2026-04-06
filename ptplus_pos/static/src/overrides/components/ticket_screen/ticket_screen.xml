@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('header-row')]/div[2]" position="after">
+            <div class="col wide p-2">Fiscal Doc. No.</div>
+        </xpath>
+        <xpath expr="//div[hasclass('order-row')]/div[2]" position="after">
+            <div t-if="order.l10n_pt_unique_id" class="col wide p-2">
+                <div>
+                    <t t-esc="order.l10n_pt_unique_id" />
+                </div>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

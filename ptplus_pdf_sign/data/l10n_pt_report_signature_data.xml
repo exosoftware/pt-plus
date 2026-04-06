@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="report_signature_invoices" model="l10n_pt.report.signature">
+        <field name="sequence">1</field>
+        <field name="report_id" ref="account.account_invoices" />
+        <field
+            name="domain"
+        >[("source_billing", "!=", False), ("state", "=", "posted")]</field>
+        <field name="multirec">0</field>
+        <field name="active">1</field>
+    </record>
+
+    <record id="report_signature_receipt" model="l10n_pt.report.signature">
+        <field name="sequence">5</field>
+        <field name="report_id" ref="account.action_report_payment_receipt" />
+        <field name="domain">[("system_entry_date", "!=", False)]</field>
+        <field name="multirec">0</field>
+        <field name="active">1</field>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Sales invoice form -->
+    <record id="view_move_form_pt_nd" model="ir.ui.view">
+        <field name="name">account.move.form.pt.nd</field>
+        <field name="model">account.move</field>
+        <field
+            name="inherit_id"
+            ref="ptplus_account_credit_note.view_move_form_pt_nc"
+        />
+        <field name="arch" type="xml">
+            <field name="l10n_pt_origin_move_date" position="attributes">
+                <attribute
+                    name="invisible"
+                >not correction or state == 'draft'</attribute>
+                <attribute
+                    name="readonly"
+                >reversed_entry_id or debit_origin_id</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

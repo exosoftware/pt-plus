@@ -1,0 +1,982 @@
+id,reference,code,name,svat_class,expected_balance
+taxonomy_base_1,S,1,Caixa,AC,D
+taxonomy_base_2,S,2,Depósitos à ordem,APC,S2C
+taxonomy_base_3,S,3,Outros depósitos bancários,APC,S2C
+taxonomy_base_4,S,4,Outros instrumentos financeiros - Derivados - Potencialmente favoráveis,AC,D
+taxonomy_base_5,S,5,Outros instrumentos financeiros - Derivados - Potencialmente desfavoráveis,PC,C
+taxonomy_base_6,S,6,Outros instrumentos financeiros - Instrumentos financeiros detidos para negociação - Ativos financeiros,AC,D
+taxonomy_base_7,S,7,Outros instrumentos financeiros - Instrumentos financeiros detidos para negociação - Passivos financeiros,PC,C
+taxonomy_base_8,S,8,Outros instrumentos financeiros - Outros ativos e passivos financeiros - Outros ativos financeiros,AC,D
+taxonomy_base_9,S,9,Outros instrumentos financeiros - Outros ativos e passivos financeiros - Outros passivos financeiros,PC,C
+taxonomy_base_10,S,10,Clientes - Clientes c/c - Clientes gerais,APC,S2C
+taxonomy_base_11,S,11,Clientes - Clientes c/c - Clientes — empresa -mãe,APC,S2C
+taxonomy_base_12,S,12,Clientes - Clientes c/c - Clientes — empresas subsidiárias,APC,S2C
+taxonomy_base_13,S,13,Clientes - Clientes c/c - Clientes — empresas associadas,APC,S2C
+taxonomy_base_14,S,14,Clientes - Clientes c/c - Clientes — empreendimentos conjuntos,APC,S2C
+taxonomy_base_15,S,15,Clientes - Clientes c/c - Clientes — outras partes relacionadas,APC,S2C
+taxonomy_base_16,S,16,Clientes - Clientes — títulos a receber - Clientes gerais,APC,S2C
+taxonomy_base_17,S,17,Clientes - Clientes — títulos a receber - Clientes — empresa -mãe,APC,S2C
+taxonomy_base_18,S,18,Clientes - Clientes — títulos a receber - Clientes — empresas subsidiárias,APC,S2C
+taxonomy_base_19,S,19,Clientes - Clientes — títulos a receber - Clientes — empresas associadas,APC,S2C
+taxonomy_base_20,S,20,Clientes - Clientes — títulos a receber - Clientes — empreendimentos conjuntos,APC,S2C
+taxonomy_base_21,S,21,Clientes - Clientes — títulos a receber - Clientes — outras partes relacionadas,APC,S2C
+taxonomy_base_22,S,22,Clientes - Outros Clientes,APC,S2C
+taxonomy_base_23,S,23,Clientes - Adiantamentos de clientes,PC,C
+taxonomy_base_24,S,24,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes gerais,AC,C
+taxonomy_base_25,S,25,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes — empresa -mãe,AC,C
+taxonomy_base_26,S,26,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes — empresas subsidiárias,AC,C
+taxonomy_base_27,S,27,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes — empresas associadas,AC,C
+taxonomy_base_28,S,28,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes — empreendimentos conjuntos,AC,C
+taxonomy_base_29,S,29,Clientes - Perdas por imparidade acumuladas - Clientes c/c - Clientes — outras partes relacionadas,AC,C
+taxonomy_base_30,S,30,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes gerais,AC,C
+taxonomy_base_31,S,31,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes — empresa -mãe,AC,C
+taxonomy_base_32,S,32,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes — empresas subsidiárias,AC,C
+taxonomy_base_33,S,33,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes — empresas associadas,AC,C
+taxonomy_base_34,S,34,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes — empreendimentos conjuntos,AC,C
+taxonomy_base_35,S,35,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber - Clientes — outras partes relacionadas,AC,C
+taxonomy_base_36,S,36,Clientes - Perdas por imparidade acumuladas - Outros Clientes,AC,C
+taxonomy_base_37,S,37,Fornecedores - Fornecedores c/c - Fornecedores gerais,APC,S2C
+taxonomy_base_38,S,38,Fornecedores - Fornecedores c/c - Fornecedores — empresa -mãe,APC,S2C
+taxonomy_base_39,S,39,Fornecedores - Fornecedores c/c - Fornecedores — empresas subsidiárias,APC,S2C
+taxonomy_base_40,S,40,Fornecedores - Fornecedores c/c - Fornecedores — empresas associadas,APC,S2C
+taxonomy_base_41,S,41,Fornecedores - Fornecedores c/c - Fornecedores — empreendimentos conjuntos,APC,S2C
+taxonomy_base_42,S,42,Fornecedores - Fornecedores c/c - Fornecedores — outras partes relacionadas,APC,S2C
+taxonomy_base_43,S,43,Fornecedores - Fornecedores — títulos a pagar - Fornecedores gerais,APC,S2C
+taxonomy_base_44,S,44,Fornecedores - Fornecedores — títulos a pagar - Fornecedores — empresa -mãe,APC,S2C
+taxonomy_base_45,S,45,Fornecedores - Fornecedores — títulos a pagar - Fornecedores — empresas subsidiárias,APC,S2C
+taxonomy_base_46,S,46,Fornecedores - Fornecedores — títulos a pagar - Fornecedores — empresas associadas,APC,S2C
+taxonomy_base_47,S,47,Fornecedores - Fornecedores — títulos a pagar - Fornecedores — empreendimentos conjuntos,APC,S2C
+taxonomy_base_48,S,48,Fornecedores - Fornecedores — títulos a pagar - Fornecedores — outras partes relacionadas,APC,S2C
+taxonomy_base_49,S,49,Fornecedores - Outros fornecedores,APC,S2C
+taxonomy_base_50,S,50,Fornecedores - Faturas em receção e conferência,APC,S2C
+taxonomy_base_51,S,51,Fornecedores - Adiantamentos a fornecedores,AC,D
+taxonomy_base_52,S,52,Fornecedores - Perdas por imparidade acumuladas,AC,C
+taxonomy_base_53,S,53,Pessoal - Remunerações a pagar - Aos órgãos sociais,PC,C
+taxonomy_base_54,S,54,Pessoal - Remunerações a pagar - Ao pessoal,PC,C
+taxonomy_base_55,S,55,Pessoal - Adiantamentos - Aos órgãos sociais,AC,D
+taxonomy_base_56,S,56,Pessoal - Adiantamentos - Ao pessoal,AC,D
+taxonomy_base_57,S,57,Pessoal - Cauções - Dos órgãos sociais - (CORRENTE),PC,C
+taxonomy_base_58,S,58,Pessoal - Cauções - Dos órgãos sociais - (NÃO CORRENTE),PNC,C
+taxonomy_base_59,S,59,Pessoal - Cauções - Do pessoal - (CORRENTE),PC,C
+taxonomy_base_60,S,60,Pessoal - Cauções - Do pessoal - (NÃO CORRENTE),PNC,C
+taxonomy_base_61,S,61,Pessoal - Outras operações - Com os órgãos sociais - (CORRENTE),APC,S2C
+taxonomy_base_62,S,62,Pessoal - Outras operações - Com os órgãos sociais - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_63,S,63,Pessoal - Outras operações - Com o pessoal - (CORRENTE),APC,S2C
+taxonomy_base_64,S,64,Pessoal - Outras operações - Com o pessoal - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_65,S,65,Pessoal - Perdas por imparidade acumuladas - Adiantamentos - Aos órgãos sociais,AC,C
+taxonomy_base_66,S,66,Pessoal - Perdas por imparidade acumuladas - Adiantamentos - Ao pessoal,AC,C
+taxonomy_base_67,S,67,Pessoal - Perdas por imparidade acumuladas - Outras operações - Aos órgãos sociais (CORRENTE),AC,C
+taxonomy_base_68,S,68,Pessoal - Perdas por imparidade acumuladas - Outras operações - Aos órgãos sociais (NÃO CORRENTE),ANC,C
+taxonomy_base_69,S,69,Pessoal - Perdas por imparidade acumuladas - Outras operações - Ao pessoal (CORRENTE),AC,C
+taxonomy_base_70,S,70,Pessoal - Perdas por imparidade acumuladas - Outras operações - Ao pessoal (NÃO CORRENTE),ANC,C
+taxonomy_base_71,S,71,Estado e outros entes públicos - Imposto sobre o rendimento,APC,S2C
+taxonomy_base_72,S,72,Estado e outros entes públicos - Retenção de impostos sobre rendimentos,PC,C
+taxonomy_base_73,S,73,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Suportado,AC,D
+taxonomy_base_74,S,74,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Dedutível,AC,D
+taxonomy_base_75,S,75,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Liquidado,PC,C
+taxonomy_base_76,S,76,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Regularizações,APC,S2C
+taxonomy_base_77,S,77,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Apuramento,APC,S2C
+taxonomy_base_78,S,78,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — A pagar,PC,C
+taxonomy_base_79,S,79,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — A recuperar,AC,D
+taxonomy_base_80,S,80,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Reembolsos pedidos,AC,D
+taxonomy_base_81,S,81,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Liquidações oficiosas,APC,S2C
+taxonomy_base_82,S,82,Estado e outros entes públicos - Outros impostos,APC,S2C
+taxonomy_base_83,S,83,Estado e outros entes públicos - Contribuições para a Segurança Social,APC,S2C
+taxonomy_base_84,S,84,Estado e outros entes públicos - Tributos das autarquias locais,APC,S2C
+taxonomy_base_85,S,85,Estado e outros entes públicos - Outras tributações,APC,S2C
+taxonomy_base_86,S,86,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Empréstimos bancários - (CORRENTE),PC,C
+taxonomy_base_87,S,87,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Empréstimos bancários - (NÃO CORRENTE),PNC,C
+taxonomy_base_88,S,88,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Descobertos bancários - (CORRENTE),PC,C
+taxonomy_base_89,S,89,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Descobertos bancários - (NÃO CORRENTE),PNC,C
+taxonomy_base_90,S,90,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Locações financeiras - (CORRENTE),PC,C
+taxonomy_base_91,S,91,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Locações financeiras - (NÃO CORRENTE),PNC,C
+taxonomy_base_92,S,92,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Outros financiamentos - (CORRENTE),PC,C
+taxonomy_base_93,S,93,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Outros financiamentos - (NÃO CORRENTE),PNC,C
+taxonomy_base_94,S,94,Financiamentos obtidos - Mercado de valores mobiliários - Empréstimos por obrigações - (CORRENTE),PC,C
+taxonomy_base_95,S,95,Financiamentos obtidos - Mercado de valores mobiliários - Empréstimos por obrigações - (NÃO CORRENTE),PNC,C
+taxonomy_base_96,S,96,Financiamentos obtidos - Mercado de valores mobiliários - Outros financiamentos - (CORRENTE),PC,C
+taxonomy_base_97,S,97,Financiamentos obtidos - Mercado de valores mobiliários - Outros financiamentos - (NÃO CORRENTE),PNC,C
+taxonomy_base_98,S,98,Financiamentos obtidos - Participantes de capital - Empresa -mãe — Suprimentos e outros mútuos - (CORRENTE),PC,C
+taxonomy_base_99,S,99,Financiamentos obtidos - Participantes de capital - Empresa -mãe — Suprimentos e outros mútuos - (NÃO CORRENTE),PNC,C
+taxonomy_base_100,S,100,Financiamentos obtidos - Participantes de capital - Outros participantes — Suprimentos e outros mútuos - (CORRENTE),PC,C
+taxonomy_base_101,S,101,Financiamentos obtidos - Participantes de capital - Outros participantes — Suprimentos e outros mútuos - (NÃO CORRENTE),PNC,C
+taxonomy_base_102,S,102,"Financiamentos obtidos - Subsidiárias, associadas e empreendimentos conjuntos - (CORRENTE)",PC,C
+taxonomy_base_103,S,103,"Financiamentos obtidos - Subsidiárias, associadas e empreendimentos conjuntos - (NÃO CORRENTE)",PNC,C
+taxonomy_base_104,S,104,Financiamentos obtidos - Outros financiadores - (CORRENTE),PC,C
+taxonomy_base_105,S,105,Financiamentos obtidos - Outros financiadores - (NÃO CORRENTE),PNC,C
+taxonomy_base_106,S,106,Acionistas/sócios - Acionistas c/ subscrição,AC,D
+taxonomy_base_107,S,107,Acionistas/sócios - Quotas não liberadas,AC,D
+taxonomy_base_108,S,108,Acionistas/sócios - Adiantamentos por conta de lucros,AC,D
+taxonomy_base_109,S,109,Acionistas/sócios - Resultados atribuídos,APC,S2C
+taxonomy_base_110,S,110,Acionistas/sócios - Lucros disponíveis,APC,S2C
+taxonomy_base_111,S,111,Acionistas/sócios - Empréstimos concedidos — empresa-mãe - (CORRENTE),AC,D
+taxonomy_base_112,S,112,Acionistas/sócios - Empréstimos concedidos — empresa-mãe - (NÃO CORRENTE),ANC,D
+taxonomy_base_113,S,113,Acionistas/sócios - Outras operações - (CORRENTE),APC,S2C
+taxonomy_base_114,S,114,Acionistas/sócios - Outras operações - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_115,S,115,Acionistas/sócios - Perdas por imparidade acumuladas - Acionistas c/ subscrição,AC,C
+taxonomy_base_116,S,116,Acionistas/sócios - Perdas por imparidade acumuladas - Quotas não liberadas,AC,C
+taxonomy_base_117,S,117,Acionistas/sócios - Perdas por imparidade acumuladas - Adiantamentos por conta de lucros,AC,C
+taxonomy_base_118,S,118,Acionistas/sócios - Perdas por imparidade acumuladas - Resultados atribuídos,AC,C
+taxonomy_base_119,S,119,Acionistas/sócios - Perdas por imparidade acumuladas - Lucros disponíveis,AC,C
+taxonomy_base_120,S,120,Acionistas/sócios - Perdas por imparidade acumuladas - Empréstimos concedidos — empresa-mãe (CORRENTE),AC,C
+taxonomy_base_121,S,121,Acionistas/sócios - Perdas por imparidade acumuladas - Empréstimos concedidos — empresa-mãe (NÃO CORRENTE),ANC,C
+taxonomy_base_122,S,122,Acionistas/sócios - Perdas por imparidade acumuladas - Outras operações (CORRENTE),AC,C
+taxonomy_base_123,S,123,Acionistas/sócios - Perdas por imparidade acumuladas - Outras operações (NÃO CORRENTE),ANC,C
+taxonomy_base_124,S,124,Outras contas a receber e a pagar - Fornecedores de investimentos - Fornecedores de investimentos — contas gerais - (CORRENTE),APC,S2C
+taxonomy_base_125,S,125,Outras contas a receber e a pagar - Fornecedores de investimentos - Fornecedores de investimentos — contas gerais - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_126,S,126,Outras contas a receber e a pagar - Fornecedores de investimentos - Facturas em recepção e conferência - (CORRENTE),APC,S2C
+taxonomy_base_127,S,127,Outras contas a receber e a pagar - Fornecedores de investimentos - Facturas em recepção e conferência - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_128,S,128,Outras contas a receber e a pagar - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos - (CORRENTE),AC,D
+taxonomy_base_129,S,129,Outras contas a receber e a pagar - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos - (NÃO CORRENTE),ANC,D
+taxonomy_base_130,S,130,Outras contas a receber e a pagar - Devedores e credores por acréscimos (periodização económica)* - Devedores por acréscimos de rendimentos,AC,D
+taxonomy_base_131,S,131,Outras contas a receber e a pagar - Devedores e credores por acréscimos (periodização económica)* - Credores por acréscimos de gastos,PC,C
+taxonomy_base_132,S,132,Outras contas a receber e a pagar - Benefícios pós -emprego,PNC,C
+taxonomy_base_133,S,133,Outras contas a receber e a pagar - Impostos diferidos - Ativos por impostos diferidos,ANC,D
+taxonomy_base_134,S,134,Outras contas a receber e a pagar - Impostos diferidos - Passivos por impostos diferidos,PNC,C
+taxonomy_base_135,S,135,Outras contas a receber e a pagar - Credores por subscrições não liberadas - (CORRENTE),PC,C
+taxonomy_base_136,S,136,Outras contas a receber e a pagar - Credores por subscrições não liberadas - (NÃO CORRENTE),PNC,C
+taxonomy_base_137,S,137,Outras contas a receber e a pagar - Adiantamentos por conta de vendas,PC,C
+taxonomy_base_138,S,138,Outras contas a receber e a pagar - Outros devedores e credores - (CORRENTE),APC,S2C
+taxonomy_base_139,S,139,Outras contas a receber e a pagar - Outros devedores e credores - (NÃO CORRENTE),APNC,S2C
+taxonomy_base_140,S,140,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos (CORRENTE),AC,C
+taxonomy_base_141,S,141,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos (NÃO CORRENTE),ANC,C
+taxonomy_base_142,S,142,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Devedores e credores por acréscimos (periodização económica)* - Devedores por acréscimos de rendimentos,AC,C
+taxonomy_base_143,S,143,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Impostos diferidos - Ativos por impostos diferidos,ANC,C
+taxonomy_base_144,S,144,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Outros devedores e credores - (CORRENTE),AC,C
+taxonomy_base_145,S,145,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Outros devedores e credores - (NÃO CORRENTE),ANC,C
+taxonomy_base_146,S,146,Diferimentos - Gastos a reconhecer,AC,D
+taxonomy_base_147,S,147,Diferimentos - Rendimentos a reconhecer,PC,C
+taxonomy_base_148,S,148,Provisões - Impostos,PNC,C
+taxonomy_base_149,S,149,Provisões - Garantias a clientes,PNC,C
+taxonomy_base_150,S,150,Provisões - Processos judiciais em curso,PNC,C
+taxonomy_base_151,S,151,Provisões - Acidentes de trabalho e doenças profissionais,PNC,C
+taxonomy_base_152,S,152,Provisões - Matérias ambientais,PNC,C
+taxonomy_base_153,S,153,Provisões - Contratos onerosos,PNC,C
+taxonomy_base_154,S,154,Provisões - Reestruturação,PNC,C
+taxonomy_base_155,S,155,Provisões - Outras provisões,PNC,C
+taxonomy_base_156,S,156,Compras - Mercadorias,,Dc
+taxonomy_base_157,S,157,"Compras - Matérias -primas, subsidiárias e de consumo",,Dc
+taxonomy_base_158,S,158,Compras - Ativos biológicos,,Dc
+taxonomy_base_159,S,159,Compras - Devoluções de compras - Mercadorias,,Cc
+taxonomy_base_160,S,160,"Compras - Devoluções de compras - Matérias -primas, subsidiárias e de consumo",,Cc
+taxonomy_base_161,S,161,Compras - Devoluções de compras - Ativos biológicos,,Cc
+taxonomy_base_162,S,162,Compras - Descontos e abatimentos em compras - Mercadorias,,Cc
+taxonomy_base_163,S,163,"Compras - Descontos e abatimentos em compras - Matérias -primas, subsidiárias e de consumo",,Cc
+taxonomy_base_164,S,164,Compras - Descontos e abatimentos em compras - Ativos biológicos,,Cc
+taxonomy_base_165,S,165,Mercadorias - Mercadorias,AC,D
+taxonomy_base_166,S,166,Mercadorias - Mercadorias em trânsito,AC,D
+taxonomy_base_167,S,167,Mercadorias - Mercadorias em poder de terceiros,AC,D
+taxonomy_base_168,S,168,Mercadorias - Perdas por imparidade acumuladas - Mercadorias,AC,C
+taxonomy_base_169,S,169,Mercadorias - Perdas por imparidade acumuladas - Mercadorias em trânsito,AC,C
+taxonomy_base_170,S,170,Mercadorias - Perdas por imparidade acumuladas - Mercadorias em poder de terceiros,AC,C
+taxonomy_base_171,S,171,"Matérias -primas, subsidiárias e de consumo - Matérias -primas",AC,D
+taxonomy_base_172,S,172,"Matérias -primas, subsidiárias e de consumo - Matérias subsidiárias",AC,D
+taxonomy_base_173,S,173,"Matérias -primas, subsidiárias e de consumo - Embalagens",AC,D
+taxonomy_base_174,S,174,"Matérias -primas, subsidiárias e de consumo - Materiais diversos",AC,D
+taxonomy_base_175,S,175,"Matérias -primas, subsidiárias e de consumo - Matérias em trânsito",AC,D
+taxonomy_base_176,S,176,"Matérias -primas, subsidiárias e de consumo - Outras matérias -primas, subsidiárias e de consumo",AC,D
+taxonomy_base_177,S,177,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias -primas",AC,C
+taxonomy_base_178,S,178,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias subsidiárias",AC,C
+taxonomy_base_179,S,179,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Embalagens",AC,C
+taxonomy_base_180,S,180,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Materiais diversos",AC,C
+taxonomy_base_181,S,181,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias em trânsito",AC,C
+taxonomy_base_182,S,182,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Outras matérias -primas, subsidiárias e de consumo",AC,C
+taxonomy_base_183,S,183,Produtos acabados e intermédios - Produtos acabados e intermédios,AC,D
+taxonomy_base_184,S,184,Produtos acabados e intermédios - Produtos em poder de terceiros,AC,D
+taxonomy_base_185,S,185,Produtos acabados e intermédios - Perdas por imparidade acumuladas - Produtos acabados e intermédios,AC,C
+taxonomy_base_186,S,186,Produtos acabados e intermédios - Perdas por imparidade acumuladas - Produtos em poder de terceiros,AC,C
+taxonomy_base_187,S,187,"Subprodutos, desperdícios, resíduos e refugos - Subprodutos",AC,D
+taxonomy_base_188,S,188,"Subprodutos, desperdícios, resíduos e refugos - Desperdícios, resíduos e refugos",AC,D
+taxonomy_base_189,S,189,"Subprodutos, desperdícios, resíduos e refugos - Outros subprodutos, desperdícios, resíduos e refugos",AC,D
+taxonomy_base_190,S,190,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Subprodutos",AC,C
+taxonomy_base_191,S,191,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Desperdícios, resíduos e refugos",AC,C
+taxonomy_base_192,S,192,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Outros subprodutos, desperdícios, resíduos e refugos",AC,C
+taxonomy_base_193,S,193,Produtos e trabalhos em curso - Produtos e trabalhos em curso,AC,D
+taxonomy_base_194,S,194,Produtos e trabalhos em curso - Perdas por imparidade acumuladas,AC,C
+taxonomy_base_195,S,195,Ativos biológicos - Consumíveis - Animais,AC,D
+taxonomy_base_196,S,196,Ativos biológicos - Consumíveis - Plantas,AC,D
+taxonomy_base_197,S,197,Ativos biológicos - De produção - Animais,ANC,D
+taxonomy_base_198,S,198,Ativos biológicos - De produção - Plantas,ANC,D
+taxonomy_base_199,S,199,Ativos biológicos - Depreciações acumuladas - Consumíveis,AC,C
+taxonomy_base_200,S,200,Ativos biológicos - Depreciações acumuladas - De produção,ANC,C
+taxonomy_base_201,S,201,Ativos biológicos - Perdas por imparidade acumuladas - Consumíveis,AC,C
+taxonomy_base_202,S,202,Ativos biológicos - Perdas por imparidade acumuladas - De produção,ANC,C
+taxonomy_base_203,S,203,Reclassificação e regularização de inventários e ativos biológicos - Mercadorias,,Sc
+taxonomy_base_204,S,204,"Reclassificação e regularização de inventários e ativos biológicos - Matérias -primas, subsidiárias e de consumo",,Sc
+taxonomy_base_205,S,205,Reclassificação e regularização de inventários e ativos biológicos - Produtos acabados e intermédios,,Sc
+taxonomy_base_206,S,206,"Reclassificação e regularização de inventários e ativos biológicos - Subprodutos, desperdícios, resíduos e refugos",,Sc
+taxonomy_base_207,S,207,Reclassificação e regularização de inventários e ativos biológicos - Produtos e trabalhos em curso,,Sc
+taxonomy_base_208,S,208,Reclassificação e regularização de inventários e ativos biológicos - Ativos biológicos,,Sc
+taxonomy_base_209,S,209,Adiantamentos por conta de compras - Mercadorias,AC,D
+taxonomy_base_210,S,210,"Adiantamentos por conta de compras - Matérias -primas, subsidiárias e de consumo",AC,D
+taxonomy_base_211,S,211,Adiantamentos por conta de compras - Produtos acabados e intermédios,AC,D
+taxonomy_base_212,S,212,"Adiantamentos por conta de compras - Subprodutos, desperdícios, resíduos e refugos",AC,D
+taxonomy_base_213,S,213,Adiantamentos por conta de compras - Produtos e trabalhos em curso,AC,D
+taxonomy_base_214,S,214,Adiantamentos por conta de compras - Ativos biológicos consumíveis,AC,D
+taxonomy_base_215,S,215,Adiantamentos por conta de compras - Ativos biológicos de produção,ANC,D
+taxonomy_base_216,S,216,Investimentos financeiros - Investimentos em subsidiárias - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,S1C
+taxonomy_base_217,S,217,Investimentos financeiros - Investimentos em subsidiárias - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,D
+taxonomy_base_218,S,218,Investimentos financeiros - Investimentos em subsidiárias - Participações de capital — outros métodos,ANC,D
+taxonomy_base_219,S,219,Investimentos financeiros - Investimentos em subsidiárias - Empréstimos concedidos,ANC,D
+taxonomy_base_220,S,220,Investimentos financeiros - Investimentos em subsidiárias - Outros investimentos financeiros,ANC,D
+taxonomy_base_221,S,221,Investimentos financeiros - Investimentos em associadas - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,S1C
+taxonomy_base_222,S,222,Investimentos financeiros - Investimentos em associadas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,D
+taxonomy_base_223,S,223,Investimentos financeiros - Investimentos em associadas - Participações de capital — outros métodos,ANC,D
+taxonomy_base_224,S,224,Investimentos financeiros - Investimentos em associadas - Empréstimos concedidos,ANC,D
+taxonomy_base_225,S,225,Investimentos financeiros - Investimentos em associadas - Outros investimentos financeiros,ANC,D
+taxonomy_base_226,S,226,Investimentos financeiros - Investimentos em entidades conjuntamente controladas - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,S1C
+taxonomy_base_227,S,227,Investimentos financeiros - Investimentos em entidades conjuntamente controladas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,D
+taxonomy_base_228,S,228,Investimentos financeiros - Investimentos em entidades conjuntamente controladas - Participações de capital — outros métodos,ANC,D
+taxonomy_base_229,S,229,Investimentos financeiros - Investimentos em entidades conjuntamente controladas - Empréstimos concedidos,ANC,D
+taxonomy_base_230,S,230,Investimentos financeiros - Investimentos em entidades conjuntamente controladas - Outros investimentos financeiros,ANC,D
+taxonomy_base_231,S,231,Investimentos financeiros - Investimentos noutras empresas - Participações de capital,ANC,D
+taxonomy_base_232,S,232,Investimentos financeiros - Investimentos noutras empresas - Empréstimos concedidos,ANC,D
+taxonomy_base_233,S,233,Investimentos financeiros - Investimentos noutras empresas - Outros investimentos financeiros,ANC,D
+taxonomy_base_234,S,234,Investimentos financeiros - Outros investimentos financeiros - Detidos até à maturidade,ANC,D
+taxonomy_base_235,S,235,Investimentos financeiros - Outros investimentos financeiros - Outros,ANC,D
+taxonomy_base_236,S,236,Investimentos financeiros - Amortizações acumuladas - Investimentos em subsidiárias - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_237,S,237,Investimentos financeiros - Amortizações acumuladas - Investimentos em associadas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_238,S,238,Investimentos financeiros - Amortizações acumuladas - Investimentos em entidades conjuntamente controladas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_239,S,239,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em subsidiárias - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,C
+taxonomy_base_240,S,240,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em subsidiárias - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_241,S,241,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em subsidiárias - Participações de capital — outros métodos,ANC,C
+taxonomy_base_242,S,242,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em subsidiárias - Empréstimos concedidos,ANC,C
+taxonomy_base_243,S,243,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em subsidiárias - Outros investimentos financeiros,ANC,C
+taxonomy_base_244,S,244,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em associadas - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,C
+taxonomy_base_245,S,245,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em associadas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_246,S,246,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em associadas - Participações de capital — outros métodos,ANC,C
+taxonomy_base_247,S,247,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em associadas - Empréstimos concedidos,ANC,C
+taxonomy_base_248,S,248,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em associadas - Outros investimentos financeiros,ANC,C
+taxonomy_base_249,S,249,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em entidades conjuntamente controladas - Participações de capital — método da equivalência patrimonial - Participação de capital,ANC,C
+taxonomy_base_250,S,250,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em entidades conjuntamente controladas - Participações de capital — método da equivalência patrimonial - Goodwill,ANC,C
+taxonomy_base_251,S,251,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em entidades conjuntamente controladas - Participações de capital — outros métodos,ANC,C
+taxonomy_base_252,S,252,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em entidades conjuntamente controladas - Empréstimos concedidos,ANC,C
+taxonomy_base_253,S,253,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos em entidades conjuntamente controladas - Outros investimentos financeiros,ANC,C
+taxonomy_base_254,S,254,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Participações de capital,ANC,C
+taxonomy_base_255,S,255,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Empréstimos concedidos,ANC,C
+taxonomy_base_256,S,256,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Outros investimentos financeiros,ANC,C
+taxonomy_base_257,S,257,Investimentos financeiros - Perdas por imparidade acumuladas - Outros investimentos financeiros - Detidos até à maturidade,ANC,C
+taxonomy_base_258,S,258,Investimentos financeiros - Perdas por imparidade acumuladas - Outros investimentos financeiros - Outros,ANC,C
+taxonomy_base_259,S,259,Propriedades de investimento - Terrenos e recursos naturais,ANC,D
+taxonomy_base_260,S,260,Propriedades de investimento - Edifícios e outras construções,ANC,D
+taxonomy_base_261,S,261,Propriedades de investimento - Outras propriedades de investimento,ANC,D
+taxonomy_base_262,S,262,Propriedades de investimento - Depreciações acumuladas - Terrenos e recursos naturais,ANC,C
+taxonomy_base_263,S,263,Propriedades de investimento - Depreciações acumuladas - Edifícios e outras construções,ANC,C
+taxonomy_base_264,S,264,Propriedades de investimento - Depreciações acumuladas - Outras propriedades de investimento,ANC,C
+taxonomy_base_265,S,265,Propriedades de investimento - Perdas por imparidade acumuladas - Terrenos e recursos naturais,ANC,C
+taxonomy_base_266,S,266,Propriedades de investimento - Perdas por imparidade acumuladas - Edifícios e outras construções,ANC,C
+taxonomy_base_267,S,267,Propriedades de investimento - Perdas por imparidade acumuladas - Outras propriedades de investimento,ANC,C
+taxonomy_base_268,S,268,Ativos fixos tangíveis - Terrenos e recursos naturais,ANC,D
+taxonomy_base_269,S,269,Ativos fixos tangíveis - Edifícios e outras construções,ANC,D
+taxonomy_base_270,S,270,Ativos fixos tangíveis - Equipamento básico,ANC,D
+taxonomy_base_271,S,271,Ativos fixos tangíveis - Equipamento de transporte,ANC,D
+taxonomy_base_272,S,272,Ativos fixos tangíveis - Equipamento administrativo,ANC,D
+taxonomy_base_273,S,273,Ativos fixos tangíveis - Equipamentos biológicos,ANC,D
+taxonomy_base_274,S,274,Ativos fixos tangíveis - Outros ativos fixos tangíveis,ANC,D
+taxonomy_base_275,S,275,Ativos fixos tangíveis - Depreciações acumuladas - Terrenos e recursos naturais,ANC,C
+taxonomy_base_276,S,276,Ativos fixos tangíveis - Depreciações acumuladas - Edifícios e outras construções,ANC,C
+taxonomy_base_277,S,277,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento básico,ANC,C
+taxonomy_base_278,S,278,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento de transporte,ANC,C
+taxonomy_base_279,S,279,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento administrativo,ANC,C
+taxonomy_base_280,S,280,Ativos fixos tangíveis - Depreciações acumuladas - Equipamentos biológicos,ANC,C
+taxonomy_base_281,S,281,Ativos fixos tangíveis - Depreciações acumuladas - Outros ativos fixos tangíveis,ANC,C
+taxonomy_base_282,S,282,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Terrenos e recursos naturais,ANC,C
+taxonomy_base_283,S,283,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Edifícios e outras construções,ANC,C
+taxonomy_base_284,S,284,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Equipamento básico,ANC,C
+taxonomy_base_285,S,285,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Equipamento de transporte,ANC,C
+taxonomy_base_286,S,286,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Equipamento administrativo,ANC,C
+taxonomy_base_287,S,287,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Equipamentos biológicos,ANC,C
+taxonomy_base_288,S,288,Ativos fixos tangíveis - Perdas por imparidade acumuladas - Outros ativos fixos tangíveis,ANC,C
+taxonomy_base_289,S,289,Ativos intangíveis - Goodwill,ANC,D
+taxonomy_base_290,S,290,Ativos intangíveis - Projetos de desenvolvimento,ANC,D
+taxonomy_base_291,S,291,Ativos intangíveis - Programas de computador,ANC,D
+taxonomy_base_292,S,292,Ativos intangíveis - Propriedade industrial,ANC,D
+taxonomy_base_293,S,293,Ativos intangíveis - Outros ativos intangíveis,ANC,D
+taxonomy_base_294,S,294,Ativos intangíveis - Amortizações acumuladas - Goodwill,ANC,C
+taxonomy_base_295,S,295,Ativos intangíveis - Amortizações acumuladas - Projetos de desenvolvimento,ANC,C
+taxonomy_base_296,S,296,Ativos intangíveis - Amortizações acumuladas - Programas de computador,ANC,C
+taxonomy_base_297,S,297,Ativos intangíveis - Amortizações acumuladas - Propriedade industrial,ANC,C
+taxonomy_base_298,S,298,Ativos intangíveis - Amortizações acumuladas - Outros ativos intangíveis,ANC,C
+taxonomy_base_299,S,299,Ativos intangíveis - Perdas por imparidade acumuladas - Goodwill,ANC,C
+taxonomy_base_300,S,300,Ativos intangíveis - Perdas por imparidade acumuladas - Projetos de desenvolvimento,ANC,C
+taxonomy_base_301,S,301,Ativos intangíveis - Perdas por imparidade acumuladas - Programas de computador,ANC,C
+taxonomy_base_302,S,302,Ativos intangíveis - Perdas por imparidade acumuladas - Propriedade industrial,ANC,C
+taxonomy_base_303,S,303,Ativos intangíveis - Perdas por imparidade acumuladas - Outros ativos intangíveis,ANC,C
+taxonomy_base_304,S,304,Investimentos em curso - Investimentos financeiros em curso,ANC,D
+taxonomy_base_305,S,305,Investimentos em curso - Propriedades de investimento em curso,ANC,D
+taxonomy_base_306,S,306,Investimentos em curso - Ativos fixos tangíveis em curso,ANC,D
+taxonomy_base_307,S,307,Investimentos em curso - Ativos intangíveis em curso,ANC,D
+taxonomy_base_308,S,308,Investimentos em curso - Adiantamentos por conta de investimentos - Investimentos financeiros em curso,ANC,D
+taxonomy_base_309,S,309,Investimentos em curso - Adiantamentos por conta de investimentos - Propriedades de investimento em curso,ANC,D
+taxonomy_base_310,S,310,Investimentos em curso - Adiantamentos por conta de investimentos - Ativos fixos tangíveis em curso,ANC,D
+taxonomy_base_311,S,311,Investimentos em curso - Adiantamentos por conta de investimentos - Ativos intangíveis em curso,ANC,D
+taxonomy_base_312,S,312,Investimentos em curso - Perdas por imparidade acumuladas - Investimentos financeiros em curso,ANC,C
+taxonomy_base_313,S,313,Investimentos em curso - Perdas por imparidade acumuladas - Propriedades de investimento em curso,ANC,C
+taxonomy_base_314,S,314,Investimentos em curso - Perdas por imparidade acumuladas - Ativos fixos tangíveis em curso,ANC,C
+taxonomy_base_315,S,315,Investimentos em curso - Perdas por imparidade acumuladas - Ativos intangíveis em curso,ANC,C
+taxonomy_base_316,S,316,Investimentos em curso - Perdas por imparidade acumuladas - Adiantamentos por conta de investimentos - Investimentos financeiros em curso,ANC,C
+taxonomy_base_317,S,317,Investimentos em curso - Perdas por imparidade acumuladas - Adiantamentos por conta de investimentos - Propriedades de investimento em curso,ANC,C
+taxonomy_base_318,S,318,Investimentos em curso - Perdas por imparidade acumuladas - Adiantamentos por conta de investimentos - Ativos fixos tangíveis em curso,ANC,C
+taxonomy_base_319,S,319,Investimentos em curso - Perdas por imparidade acumuladas - Adiantamentos por conta de investimentos - Ativos intangíveis em curso,ANC,C
+taxonomy_base_320,S,320,Ativos não correntes detidos para venda - Ativos não correntes detidos para venda - Investimentos financeiros,AC,D
+taxonomy_base_321,S,321,Ativos não correntes detidos para venda - Ativos não correntes detidos para venda - Propriedades de investimento,AC,D
+taxonomy_base_322,S,322,Ativos não correntes detidos para venda - Ativos não correntes detidos para venda - Ativos fixos tangíveis,AC,D
+taxonomy_base_323,S,323,Ativos não correntes detidos para venda - Ativos não correntes detidos para venda - Ativos intangíveis,AC,D
+taxonomy_base_324,S,324,Ativos não correntes detidos para venda - Ativos não correntes detidos para venda - Outros,AC,D
+taxonomy_base_325,S,325,Ativos não correntes detidos para venda - Passivos não correntes detidos para venda,PC,C
+taxonomy_base_326,S,326,Ativos não correntes detidos para venda - Perdas por imparidade acumuladas - Investimentos financeiros,AC,C
+taxonomy_base_327,S,327,Ativos não correntes detidos para venda - Perdas por imparidade acumuladas - Propriedades de investimento,AC,C
+taxonomy_base_328,S,328,Ativos não correntes detidos para venda - Perdas por imparidade acumuladas - Ativos fixos tangíveis,AC,C
+taxonomy_base_329,S,329,Ativos não correntes detidos para venda - Perdas por imparidade acumuladas - Ativos intangíveis,AC,C
+taxonomy_base_330,S,330,Ativos não correntes detidos para venda - Perdas por imparidade acumuladas - Outros,AC,C
+taxonomy_base_331,S,331,Capital subscrito,C,C
+taxonomy_base_332,S,332,Ações (quotas) próprias - Valor nominal,C,D
+taxonomy_base_333,S,333,Ações (quotas) próprias - Descontos e prémios,C,S1C
+taxonomy_base_334,S,334,Outros instrumentos de capital próprio*,C,C
+taxonomy_base_335,S,335,Prémios de emissão,C,C
+taxonomy_base_336,S,336,Reservas - Reservas legais,C,C
+taxonomy_base_337,S,337,Reservas - Outras reservas,C,C
+taxonomy_base_338,S,338,Resultados transitados,C,S1C
+taxonomy_base_339,S,339,Ajustamentos em ativos financeiros - Relacionados com o método da equivalência patrimonial - Ajustamentos de transição,C,S1C
+taxonomy_base_340,S,340,Ajustamentos em ativos financeiros - Relacionados com o método da equivalência patrimonial - Lucros não atribuídos,C,C
+taxonomy_base_341,S,341,Ajustamentos em ativos financeiros - Relacionados com o método da equivalência patrimonial - Decorrentes de outras variações nos capitais próprios das participadas,C,S1C
+taxonomy_base_342,S,342,Ajustamentos em ativos financeiros - Outros,C,S1C
+taxonomy_base_343,S,343,Excedentes de revalorização de ativos fixos tangíveis e intangíveis - Reavaliações decorrentes de diplomas legais - Antes de imposto sobre o rendimento,C,C
+taxonomy_base_344,S,344,Excedentes de revalorização de ativos fixos tangíveis e intangíveis - Reavaliações decorrentes de diplomas legais - Impostos diferidos,C,D
+taxonomy_base_345,S,345,Excedentes de revalorização de ativos fixos tangíveis e intangíveis - Outros excedentes - Antes de imposto sobre o rendimento,C,C
+taxonomy_base_346,S,346,Excedentes de revalorização de ativos fixos tangíveis e intangíveis - Outros excedentes - Impostos diferidos,C,D
+taxonomy_base_347,S,347,Outras variações no capital próprio - Diferenças de conversão de demonstrações financeiras,C,S1C
+taxonomy_base_348,S,348,Outras variações no capital próprio - Ajustamentos por impostos diferidos,C,S1C
+taxonomy_base_349,S,349,Outras variações no capital próprio - Subsídios - Subsídios atribuídos,C,C
+taxonomy_base_350,S,350,Outras variações no capital próprio - Subsídios - Ajustamentos em subsídios,C,D
+taxonomy_base_351,S,351,Outras variações no capital próprio - Doações,C,C
+taxonomy_base_352,S,352,Outras variações no capital próprio - Outras,C,S1C
+taxonomy_base_353,S,353,Custo das mercadorias vendidas e das matérias consumidas - Mercadorias,GR,Sa1C
+taxonomy_base_354,S,354,"Custo das mercadorias vendidas e das matérias consumidas - Matérias -primas, subsidiárias e de consumo",GR,Sa1C
+taxonomy_base_355,S,355,Custo das mercadorias vendidas e das matérias consumidas - Ativos biológicos (compras)*,GR,Sa1C
+taxonomy_base_356,S,356,Fornecimentos e serviços externos - Subcontratos,GR,Da
+taxonomy_base_357,S,357,Fornecimentos e serviços externos - Serviços especializados - Trabalhos especializados,GR,Da
+taxonomy_base_358,S,358,Fornecimentos e serviços externos - Serviços especializados - Publicidade e propaganda,GR,Da
+taxonomy_base_359,S,359,Fornecimentos e serviços externos - Serviços especializados - Vigilância e segurança,GR,Da
+taxonomy_base_360,S,360,Fornecimentos e serviços externos - Serviços especializados - Honorários,GR,Da
+taxonomy_base_361,S,361,Fornecimentos e serviços externos - Serviços especializados - Comissões,GR,Da
+taxonomy_base_362,S,362,Fornecimentos e serviços externos - Serviços especializados - Conservação e reparação,GR,Da
+taxonomy_base_363,S,363,Fornecimentos e serviços externos - Serviços especializados - Outros,GR,Da
+taxonomy_base_364,S,364,Fornecimentos e serviços externos - Materiais - Ferramentas e utensílios de desgaste rápido,GR,Da
+taxonomy_base_365,S,365,Fornecimentos e serviços externos - Materiais - Livros e documentação técnica,GR,Da
+taxonomy_base_366,S,366,Fornecimentos e serviços externos - Materiais - Material de escritório,GR,Da
+taxonomy_base_367,S,367,Fornecimentos e serviços externos - Materiais - Artigos para oferta,GR,Da
+taxonomy_base_368,S,368,Fornecimentos e serviços externos - Materiais - Outros,GR,Da
+taxonomy_base_369,S,369,Fornecimentos e serviços externos - Energia e fluidos - Eletricidade,GR,Da
+taxonomy_base_370,S,370,Fornecimentos e serviços externos - Energia e fluidos - Combustíveis,GR,Da
+taxonomy_base_371,S,371,Fornecimentos e serviços externos - Energia e fluidos - Água,GR,Da
+taxonomy_base_372,S,372,Fornecimentos e serviços externos - Energia e fluidos - Outros,GR,Da
+taxonomy_base_373,S,373,"Fornecimentos e serviços externos - Deslocações, estadas e transportes - Deslocações e estadas",GR,Da
+taxonomy_base_374,S,374,"Fornecimentos e serviços externos - Deslocações, estadas e transportes - Transportes de pessoal",GR,Da
+taxonomy_base_375,S,375,"Fornecimentos e serviços externos - Deslocações, estadas e transportes - Transportes de mercadorias",GR,Da
+taxonomy_base_376,S,376,"Fornecimentos e serviços externos - Deslocações, estadas e transportes - Outros",GR,Da
+taxonomy_base_377,S,377,Fornecimentos e serviços externos - Serviços diversos - Rendas e alugueres,GR,Da
+taxonomy_base_378,S,378,Fornecimentos e serviços externos - Serviços diversos - Comunicação,GR,Da
+taxonomy_base_379,S,379,Fornecimentos e serviços externos - Serviços diversos - Seguros,GR,Da
+taxonomy_base_380,S,380,Fornecimentos e serviços externos - Serviços diversos - Royalties,GR,Da
+taxonomy_base_381,S,381,Fornecimentos e serviços externos - Serviços diversos - Contencioso e notariado,GR,Da
+taxonomy_base_382,S,382,Fornecimentos e serviços externos - Serviços diversos - Despesas de representação,GR,Da
+taxonomy_base_383,S,383,"Fornecimentos e serviços externos - Serviços diversos - Limpeza, higiene e conforto",GR,Da
+taxonomy_base_384,S,384,Fornecimentos e serviços externos - Serviços diversos - Outros serviços,GR,Da
+taxonomy_base_385,S,385,Gastos com o pessoal - Remunerações dos órgãos sociais,GR,Da
+taxonomy_base_386,S,386,Gastos com o pessoal - Remunerações do pessoal,GR,Da
+taxonomy_base_387,S,387,Gastos com o pessoal - Benefícios pós -emprego - Prémios para pensões,GR,Sa1C
+taxonomy_base_388,S,388,Gastos com o pessoal - Benefícios pós -emprego - Outros benefícios,GR,Sa1C
+taxonomy_base_389,S,389,Gastos com o pessoal - Indemnizações,GR,Da
+taxonomy_base_390,S,390,Gastos com o pessoal - Encargos sobre remunerações,GR,Da
+taxonomy_base_391,S,391,Gastos com o pessoal - Seguros de acidentes no trabalho e doenças profissionais,GR,Da
+taxonomy_base_392,S,392,Gastos com o pessoal - Gastos de ação social,GR,Da
+taxonomy_base_393,S,393,Gastos com o pessoal - Outros gastos com o pessoal,GR,Da
+taxonomy_base_394,S,394,Gastos de depreciação e de amortização - Propriedades de investimento - Terrenos e recursos naturais,GR,Da
+taxonomy_base_395,S,395,Gastos de depreciação e de amortização - Propriedades de investimento - Edifícios e outras construções,GR,Da
+taxonomy_base_396,S,396,Gastos de depreciação e de amortização - Propriedades de investimento - Outras propriedades de investimento,GR,Da
+taxonomy_base_397,S,397,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Terrenos e recursos naturais,GR,Da
+taxonomy_base_398,S,398,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Edifícios e outras construções,GR,Da
+taxonomy_base_399,S,399,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento básico,GR,Da
+taxonomy_base_400,S,400,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento de transporte,GR,Da
+taxonomy_base_401,S,401,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento administrativo,GR,Da
+taxonomy_base_402,S,402,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamentos biológicos,GR,Da
+taxonomy_base_403,S,403,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Da
+taxonomy_base_404,S,404,Gastos de depreciação e de amortização - Ativos intangíveis - Goodwill,GR,Da
+taxonomy_base_405,S,405,Gastos de depreciação e de amortização - Ativos intangíveis - Projetos de desenvolvimento,GR,Da
+taxonomy_base_406,S,406,Gastos de depreciação e de amortização - Ativos intangíveis - Programas de computador,GR,Da
+taxonomy_base_407,S,407,Gastos de depreciação e de amortização - Ativos intangíveis - Propriedade industrial,GR,Da
+taxonomy_base_408,S,408,Gastos de depreciação e de amortização - Ativos intangíveis - Outros ativos intangíveis,GR,Da
+taxonomy_base_409,S,409,Gastos de depreciação e de amortização - Ativos biológicos - Consumíveis,GR,Da
+taxonomy_base_410,S,410,Gastos de depreciação e de amortização - Ativos biológicos - De produção,GR,Da
+taxonomy_base_411,S,411,Gastos de depreciação e de amortização - Investimentos financeiros - Goodwill,GR,Da
+taxonomy_base_412,S,412,Perdas por imparidade - Instrumentos financeiros,GR,Sa1C
+taxonomy_base_413,S,413,Perdas por imparidade - Em dívidas a receber - Clientes,GR,Da
+taxonomy_base_414,S,414,Perdas por imparidade - Em dívidas a receber - Outros devedores,GR,Da
+taxonomy_base_415,S,415,Perdas por imparidade - Em inventários - Mercadorias,GR,Da
+taxonomy_base_416,S,416,"Perdas por imparidade - Em inventários - Matérias -primas, subsidiárias e de consumo",GR,Da
+taxonomy_base_417,S,417,Perdas por imparidade - Em inventários - Produtos acabados e intermédios,GR,Da
+taxonomy_base_418,S,418,"Perdas por imparidade - Em inventários - Subprodutos, desperdícios, resíduos e refugos",GR,Da
+taxonomy_base_419,S,419,Perdas por imparidade - Em inventários - Produtos e trabalhos em curso,GR,Da
+taxonomy_base_420,S,420,Perdas por imparidade - Em inventários - Ativos biológicos consumíveis,GR,Da
+taxonomy_base_421,S,421,Perdas por imparidade - Em inventários - Ativos biológicos de produção,GR,Da
+taxonomy_base_422,S,422,Perdas por imparidade - Em investimentos financeiros - Participações de capital,GR,Da
+taxonomy_base_423,S,423,Perdas por imparidade - Em investimentos financeiros - Empréstimos concedidos,GR,Da
+taxonomy_base_424,S,424,Perdas por imparidade - Em investimentos financeiros - Outros investimentos financeiros,GR,Da
+taxonomy_base_425,S,425,Perdas por imparidade - Em investimentos financeiros - Goodwill,GR,Da
+taxonomy_base_426,S,426,Perdas por imparidade - Em propriedades de investimento - Terrenos e recursos naturais,GR,Da
+taxonomy_base_427,S,427,Perdas por imparidade - Em propriedades de investimento - Edifícios e outras construções,GR,Da
+taxonomy_base_428,S,428,Perdas por imparidade - Em propriedades de investimento - Outras propriedades de investimento,GR,Da
+taxonomy_base_429,S,429,Perdas por imparidade - Em ativos fixos tangíveis - Terrenos e recursos naturais,GR,Da
+taxonomy_base_430,S,430,Perdas por imparidade - Em ativos fixos tangíveis - Edifícios e outras construções,GR,Da
+taxonomy_base_431,S,431,Perdas por imparidade - Em ativos fixos tangíveis - Equipamento básico,GR,Da
+taxonomy_base_432,S,432,Perdas por imparidade - Em ativos fixos tangíveis - Equipamento de transporte,GR,Da
+taxonomy_base_433,S,433,Perdas por imparidade - Em ativos fixos tangíveis - Equipamento administrativo,GR,Da
+taxonomy_base_434,S,434,Perdas por imparidade - Em ativos fixos tangíveis - Equipamentos biológicos,GR,Da
+taxonomy_base_435,S,435,Perdas por imparidade - Em ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Da
+taxonomy_base_436,S,436,Perdas por imparidade - Em ativos intangíveis - Goodwill,GR,Da
+taxonomy_base_437,S,437,Perdas por imparidade - Em ativos intangíveis - Projetos de desenvolvimento,GR,Da
+taxonomy_base_438,S,438,Perdas por imparidade - Em ativos intangíveis - Programas de computador,GR,Da
+taxonomy_base_439,S,439,Perdas por imparidade - Em ativos intangíveis - Propriedade industrial,GR,Da
+taxonomy_base_440,S,440,Perdas por imparidade - Em ativos intangíveis - Outros ativos intangíveis,GR,Da
+taxonomy_base_441,S,441,Perdas por imparidade - Em investimentos em curso - Investimentos financeiros em curso,GR,Da
+taxonomy_base_442,S,442,Perdas por imparidade - Em investimentos em curso - Propriedades de investimento em curso,GR,Da
+taxonomy_base_443,S,443,Perdas por imparidade - Em investimentos em curso - Ativos fixos tangíveis em curso,GR,Da
+taxonomy_base_444,S,444,Perdas por imparidade - Em investimentos em curso - Ativos intangíveis em curso,GR,Da
+taxonomy_base_445,S,445,Perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Investimentos financeiros em curso,GR,Da
+taxonomy_base_446,S,446,Perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Propriedades de investimento em curso,GR,Da
+taxonomy_base_447,S,447,Perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Ativos fixos tangíveis em curso,GR,Da
+taxonomy_base_448,S,448,Perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Ativos intangíveis em curso,GR,Da
+taxonomy_base_449,S,449,Perdas por imparidade - Em ativos não correntes detidos para venda - Investimentos financeiros,GR,Da
+taxonomy_base_450,S,450,Perdas por imparidade - Em ativos não correntes detidos para venda - Propriedades de investimento,GR,Da
+taxonomy_base_451,S,451,Perdas por imparidade - Em ativos não correntes detidos para venda - Ativos fixos tangíveis,GR,Da
+taxonomy_base_452,S,452,Perdas por imparidade - Em ativos não correntes detidos para venda - Ativos intangíveis,GR,Da
+taxonomy_base_453,S,453,Perdas por imparidade - Em ativos não correntes detidos para venda - Outros,GR,Da
+taxonomy_base_454,S,454,Perdas por reduções de justo valor - Em instrumentos financeiros,RG,Da
+taxonomy_base_455,S,455,Perdas por reduções de justo valor - Em investimentos financeiros - Participações de capital,RG,Da
+taxonomy_base_456,S,456,Perdas por reduções de justo valor - Em investimentos financeiros - Outros investimentos financeiros,RG,Da
+taxonomy_base_457,S,457,Perdas por reduções de justo valor - Em propriedades de investimento - Terrenos e recursos naturais,RG,Da
+taxonomy_base_458,S,458,Perdas por reduções de justo valor - Em propriedades de investimento - Edifícios e outras construções,RG,Da
+taxonomy_base_459,S,459,Perdas por reduções de justo valor - Em propriedades de investimento - Outras propriedades de investimento,RG,Da
+taxonomy_base_460,S,460,Perdas por reduções de justo valor - Em propriedades de investimento - Propriedades de investimento em curso,RG,Da
+taxonomy_base_461,S,461,Perdas por reduções de justo valor - Em ativos biológicos - Consumíveis,RG,Da
+taxonomy_base_462,S,462,Perdas por reduções de justo valor - Em ativos biológicos - De produção,RG,Da
+taxonomy_base_463,S,463,Provisões do período - Impostos,GR,Da
+taxonomy_base_464,S,464,Provisões do período - Garantias a clientes,GR,Da
+taxonomy_base_465,S,465,Provisões do período - Processos judiciais em curso,GR,Da
+taxonomy_base_466,S,466,Provisões do período - Acidentes no trabalho e doenças profissionais,GR,Da
+taxonomy_base_467,S,467,Provisões do período - Matérias ambientais,GR,Da
+taxonomy_base_468,S,468,Provisões do período - Contratos onerosos,GR,Da
+taxonomy_base_469,S,469,Provisões do período - Reestruturação,GR,Da
+taxonomy_base_470,S,470,Provisões do período - Outras provisões,GR,Da
+taxonomy_base_471,S,471,Outros gastos - Impostos - Impostos diretos,GR,Da
+taxonomy_base_472,S,472,Outros gastos - Impostos - Impostos indiretos,GR,Da
+taxonomy_base_473,S,473,Outros gastos - Impostos - Taxas,GR,Da
+taxonomy_base_474,S,474,Outros gastos - Descontos de pronto pagamento concedidos,GR,Da
+taxonomy_base_475,S,475,Outros gastos - Dívidas incobráveis,GR,Da
+taxonomy_base_476,S,476,Outros gastos - Perdas em inventários - Sinistros,GR,Da
+taxonomy_base_477,S,477,Outros gastos - Perdas em inventários - Quebras,GR,Da
+taxonomy_base_478,S,478,Outros gastos - Perdas em inventários - Outras perdas,GR,Da
+taxonomy_base_479,S,479,"Outros gastos - Gastos em subsidiárias, associadas e empreendimentos conjuntos - Cobertura de prejuízos",RG,Da
+taxonomy_base_480,S,480,"Outros gastos - Gastos em subsidiárias, associadas e empreendimentos conjuntos - Aplicação do método da equivalência patrimonial",RG,Da
+taxonomy_base_481,S,481,"Outros gastos - Gastos em subsidiárias, associadas e empreendimentos conjuntos - Alienações",RG,Da
+taxonomy_base_482,S,482,"Outros gastos - Gastos em subsidiárias, associadas e empreendimentos conjuntos - Outros gastos",RG,Da
+taxonomy_base_483,S,483,Outros gastos - Gastos nos restantes investimentos financeros - Cobertura de prejuízos,GR,Da
+taxonomy_base_484,S,484,Outros gastos - Gastos nos restantes investimentos financeros - Alienações,GR,Da
+taxonomy_base_485,S,485,Outros gastos - Gastos nos restantes investimentos financeros - Diferenças de câmbio desfavoráveis,GR,Da
+taxonomy_base_486,S,486,Outros gastos - Gastos nos restantes investimentos financeros - Outros gastos,GR,Da
+taxonomy_base_487,S,487,Outros gastos - Gastos em investimentos não financeiros - Alienações,GR,Da
+taxonomy_base_488,S,488,Outros gastos - Gastos em investimentos não financeiros - Sinistros,GR,Da
+taxonomy_base_489,S,489,Outros gastos - Gastos em investimentos não financeiros - Abates,GR,Da
+taxonomy_base_490,S,490,Outros gastos - Gastos em investimentos não financeiros - Gastos em propriedades de investimento,GR,Da
+taxonomy_base_491,S,491,Outros gastos - Gastos em investimentos não financeiros - Outras gastos,GR,Da
+taxonomy_base_492,S,492,Outros gastos - Outros - Correções relativas a períodos anteriores,GR,Da
+taxonomy_base_493,S,493,Outros gastos - Outros - Donativos,GR,Da
+taxonomy_base_494,S,494,Outros gastos - Outros - Quotizações,GR,Da
+taxonomy_base_495,S,495,Outros gastos - Outros - Ofertas e amostras de inventários,GR,Da
+taxonomy_base_496,S,496,Outros gastos - Outros - Insuficiência da estimativa para impostos,GR,Da
+taxonomy_base_497,S,497,Outros gastos - Outros - Perdas em instrumentos financeiros,GR,Da
+taxonomy_base_498,S,498,Outros gastos - Outros - Diferenças de câmbio desfavoráveis,GR,Da
+taxonomy_base_499,S,499,Outros gastos - Outros - Outros não especificados,GR,Da
+taxonomy_base_500,S,500,Gastos de financiamento - Juros suportados - Juros de financiamentos obtidos,GR,Da
+taxonomy_base_501,S,501,Gastos de financiamento - Juros suportados - Outros juros,GR,Da
+taxonomy_base_502,S,502,Gastos de financiamento - Diferenças de câmbio desfavoráveis - Relativas a financiamentos obtidos,GR,Da
+taxonomy_base_503,S,503,Gastos de financiamento - Diferenças de câmbio desfavoráveis - Outras,GR,Da
+taxonomy_base_504,S,504,Gastos de financiamento - Outros gastos de financiamento - Relativos a financiamentos obtidos,GR,Da
+taxonomy_base_505,S,505,Gastos de financiamento - Outros gastos de financiamento - Outros,GR,Da
+taxonomy_base_506,S,506,Vendas - Mercadorias,RG,Ca
+taxonomy_base_507,S,507,Vendas - Produtos acabados e intermédios,RG,Ca
+taxonomy_base_508,S,508,"Vendas - Subprodutos, desperdícios, resíduos e refugos",RG,Ca
+taxonomy_base_509,S,509,Vendas - Ativos biológicos,RG,Ca
+taxonomy_base_510,S,510,Vendas - IVA das vendas com imposto incluído,RG,Sa1C
+taxonomy_base_511,S,511,Vendas - Devoluções de vendas,RG,Da
+taxonomy_base_512,S,512,Vendas - Descontos e abatimentos em vendas,RG,Da
+taxonomy_base_513,S,513,Prestações de serviços - Serviço A,RG,Ca
+taxonomy_base_514,S,514,Prestações de serviços - Serviço B,RG,Ca
+taxonomy_base_515,S,515,Prestações de serviços - Outros serviços,RG,Ca
+taxonomy_base_516,S,516,Prestações de serviços - Serviços secundários,RG,Ca
+taxonomy_base_517,S,517,Prestações de serviços - IVA dos serviços com imposto incluído,RG,Sa1C
+taxonomy_base_518,S,518,Prestações de serviços - Descontos e abatimentos,RG,Da
+taxonomy_base_519,S,519,Variações nos inventários da produção - Produtos acabados e intermédios,RG,Sa1C
+taxonomy_base_520,S,520,"Variações nos inventários da produção - Subprodutos, desperdícios, resíduos e refugos",RG,Sa1C
+taxonomy_base_521,S,521,Variações nos inventários da produção - Produtos e trabalhos em curso,RG,Sa1C
+taxonomy_base_522,S,522,Variações nos inventários da produção - Ativos biológicos,RG,Sa1C
+taxonomy_base_523,S,523,Trabalhos para a própria entidade - Ativos fixos tangíveis,RG,Ca
+taxonomy_base_524,S,524,Trabalhos para a própria entidade - Ativos intangíveis,RG,Ca
+taxonomy_base_525,S,525,Trabalhos para a própria entidade - Propriedades de investimento,RG,Ca
+taxonomy_base_526,S,526,Trabalhos para a própria entidade - Ativos por gastos diferidos,RG,Ca
+taxonomy_base_527,S,527,Subsídios à exploração - Subsídios das entidades públicas,RG,Ca
+taxonomy_base_528,S,528,Subsídios à exploração - Subsídios de outras entidades,RG,Ca
+taxonomy_base_529,S,529,Reversões - De depreciações e de amortizações - Propriedades de investimento - Terrenos e recursos naturais,GR,Ca
+taxonomy_base_530,S,530,Reversões - De depreciações e de amortizações - Propriedades de investimento - Edifícios e outras construções,GR,Ca
+taxonomy_base_531,S,531,Reversões - De depreciações e de amortizações - Propriedades de investimento - Outras propriedades de investimento,GR,Ca
+taxonomy_base_532,S,532,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Terrenos e recursos naturais,GR,Ca
+taxonomy_base_533,S,533,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Edifícios e outras construções,GR,Ca
+taxonomy_base_534,S,534,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento básico,GR,Ca
+taxonomy_base_535,S,535,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento de transporte,GR,Ca
+taxonomy_base_536,S,536,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento administrativo,GR,Ca
+taxonomy_base_537,S,537,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamentos biológicos,GR,Ca
+taxonomy_base_538,S,538,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Ca
+taxonomy_base_539,S,539,Reversões - De depreciações e de amortizações - Ativos intangíveis - Goodwill,GR,Ca
+taxonomy_base_540,S,540,Reversões - De depreciações e de amortizações - Ativos intangíveis - Projetos de desenvolvimento,GR,Ca
+taxonomy_base_541,S,541,Reversões - De depreciações e de amortizações - Ativos intangíveis - Programas de computador,GR,Ca
+taxonomy_base_542,S,542,Reversões - De depreciações e de amortizações - Ativos intangíveis - Propriedade industrial,GR,Ca
+taxonomy_base_543,S,543,Reversões - De depreciações e de amortizações - Ativos intangíveis - Outros ativos intangíveis,GR,Ca
+taxonomy_base_544,S,544,Reversões - De depreciações e de amortizações - Ativos biológicos - Consumíveis,GR,Ca
+taxonomy_base_545,S,545,Reversões - De depreciações e de amortizações - Ativos biológicos - De produção,GR,Ca
+taxonomy_base_546,S,546,Reversões - De depreciações e de amortizações - Investimentos financeiros - Goodwill,GR,Ca
+taxonomy_base_547,S,547,Reversões - De perdas por imparidade - Em dívidas a receber - Clientes,GR,Ca
+taxonomy_base_548,S,548,Reversões - De perdas por imparidade - Em dívidas a receber - Outros devedores,GR,Ca
+taxonomy_base_549,S,549,Reversões - De perdas por imparidade - Em inventários - Mercadorias,GR,Ca
+taxonomy_base_550,S,550,"Reversões - De perdas por imparidade - Em inventários - Matérias -primas, subsidiárias e de consumo",GR,Ca
+taxonomy_base_551,S,551,Reversões - De perdas por imparidade - Em inventários - Produtos acabados e intermédios,GR,Ca
+taxonomy_base_552,S,552,"Reversões - De perdas por imparidade - Em inventários - Subprodutos, desperdícios, resíduos e refugos",GR,Ca
+taxonomy_base_553,S,553,Reversões - De perdas por imparidade - Em inventários - Produtos e trabalhos em curso,GR,Ca
+taxonomy_base_554,S,554,Reversões - De perdas por imparidade - Em inventários - Ativos biológicos consumíveis,GR,Ca
+taxonomy_base_555,S,555,Reversões - De perdas por imparidade - Em inventários - Ativos biológicos de produção,GR,Ca
+taxonomy_base_556,S,556,Reversões - De perdas por imparidade - Em investimentos financeiros - Participações de capital,GR,Ca
+taxonomy_base_557,S,557,Reversões - De perdas por imparidade - Em investimentos financeiros - Empréstimos concedidos,GR,Ca
+taxonomy_base_558,S,558,Reversões - De perdas por imparidade - Em investimentos financeiros - Outros investimentos financeiros,GR,Ca
+taxonomy_base_559,S,559,Reversões - De perdas por imparidade - Em propriedades de investimento - Terrenos e recursos naturais,GR,Ca
+taxonomy_base_560,S,560,Reversões - De perdas por imparidade - Em propriedades de investimento - Edifícios e outras construções,GR,Ca
+taxonomy_base_561,S,561,Reversões - De perdas por imparidade - Em propriedades de investimento - Outras propriedades de investimento,GR,Ca
+taxonomy_base_562,S,562,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Terrenos e recursos naturais,GR,Ca
+taxonomy_base_563,S,563,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Edifícios e outras construções,GR,Ca
+taxonomy_base_564,S,564,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Equipamento básico,GR,Ca
+taxonomy_base_565,S,565,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Equipamento de transporte,GR,Ca
+taxonomy_base_566,S,566,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Equipamento administrativo,GR,Ca
+taxonomy_base_567,S,567,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Equipamentos biológicos,GR,Ca
+taxonomy_base_568,S,568,Reversões - De perdas por imparidade - Em ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Ca
+taxonomy_base_569,S,569,Reversões - De perdas por imparidade - Em ativos intangíveis - Projetos de desenvolvimento,GR,Ca
+taxonomy_base_570,S,570,Reversões - De perdas por imparidade - Em ativos intangíveis - Programas de computador,GR,Ca
+taxonomy_base_571,S,571,Reversões - De perdas por imparidade - Em ativos intangíveis - Propriedade industrial,GR,Ca
+taxonomy_base_572,S,572,Reversões - De perdas por imparidade - Em ativos intangíveis - Outros ativos intangíveis,GR,Ca
+taxonomy_base_573,S,573,Reversões - De perdas por imparidade - Em investimentos em curso - Investimentos financeiros em curso,GR,Ca
+taxonomy_base_574,S,574,Reversões - De perdas por imparidade - Em investimentos em curso - Propriedades de investimento em curso,GR,Ca
+taxonomy_base_575,S,575,Reversões - De perdas por imparidade - Em investimentos em curso - Ativos fixos tangíveis em curso,GR,Ca
+taxonomy_base_576,S,576,Reversões - De perdas por imparidade - Em investimentos em curso - Ativos intangíveis em curso,GR,Ca
+taxonomy_base_577,S,577,Reversões - De perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Investimentos financeiros em curso,GR,Ca
+taxonomy_base_578,S,578,Reversões - De perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Propriedades de investimento em curso,GR,Ca
+taxonomy_base_579,S,579,Reversões - De perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Ativos fixos tangíveis em curso,GR,Ca
+taxonomy_base_580,S,580,Reversões - De perdas por imparidade - Em investimentos em curso - Adiantamentos por conta de investimentos - Ativos intangíveis em curso,GR,Ca
+taxonomy_base_581,S,581,Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda - Investimentos financeiros,GR,Ca
+taxonomy_base_582,S,582,Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda - Propriedades de investimento,GR,Ca
+taxonomy_base_583,S,583,Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda - Ativos fixos tangíveis,GR,Ca
+taxonomy_base_584,S,584,Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda - Ativos intangíveis,GR,Ca
+taxonomy_base_585,S,585,Reversões - De perdas por imparidade - Em ativos não correntes detidos para venda - Outros,GR,Ca
+taxonomy_base_586,S,586,Reversões - De provisões - Impostos,GR,Ca
+taxonomy_base_587,S,587,Reversões - De provisões - Garantias a clientes,GR,Ca
+taxonomy_base_588,S,588,Reversões - De provisões - Processos judiciais em curso,GR,Ca
+taxonomy_base_589,S,589,Reversões - De provisões - Acidentes no trabalho e doenças profissionais,GR,Ca
+taxonomy_base_590,S,590,Reversões - De provisões - Matérias ambientais,GR,Ca
+taxonomy_base_591,S,591,Reversões - De provisões - Contratos onerosos,GR,Ca
+taxonomy_base_592,S,592,Reversões - De provisões - Reestruturação,GR,Ca
+taxonomy_base_593,S,593,Reversões - De provisões - Outras provisões,GR,Ca
+taxonomy_base_594,S,594,Ganhos por aumentos de justo valor - Em instrumentos financeiros,RG,Ca
+taxonomy_base_595,S,595,Ganhos por aumentos de justo valor - Em investimentos financeiros - Participações de capital,RG,Ca
+taxonomy_base_596,S,596,Ganhos por aumentos de justo valor - Em investimentos financeiros - Outros investimentos financeiros,RG,Ca
+taxonomy_base_597,S,597,Ganhos por aumentos de justo valor - Em propriedades de investimento - Terrenos e recursos naturais,RG,Ca
+taxonomy_base_598,S,598,Ganhos por aumentos de justo valor - Em propriedades de investimento - Edifícios e outras construções,RG,Ca
+taxonomy_base_599,S,599,Ganhos por aumentos de justo valor - Em propriedades de investimento - Outras propriedades de investimento,RG,Ca
+taxonomy_base_600,S,600,Ganhos por aumentos de justo valor - Em propriedades de investimento - Propriedades de investimento em curso,RG,Ca
+taxonomy_base_601,S,601,Ganhos por aumentos de justo valor - Em ativos biológicos - Consumíveis,RG,Ca
+taxonomy_base_602,S,602,Ganhos por aumentos de justo valor - Em ativos biológicos - De produção,RG,Ca
+taxonomy_base_603,S,603,Outros rendimentos - Rendimentos suplementares - Serviços sociais,RG,Ca
+taxonomy_base_604,S,604,Outros rendimentos - Rendimentos suplementares - Aluguer de equipamento,RG,Ca
+taxonomy_base_605,S,605,"Outros rendimentos - Rendimentos suplementares - Estudos, projetos e assistência tecnológica",RG,Ca
+taxonomy_base_606,S,606,Outros rendimentos - Rendimentos suplementares - Royalties,RG,Ca
+taxonomy_base_607,S,607,Outros rendimentos - Rendimentos suplementares - Desempenho de cargos sociais noutras empresas,RG,Ca
+taxonomy_base_608,S,608,Outros rendimentos - Rendimentos suplementares - Outros rendimentos suplementares,RG,Ca
+taxonomy_base_609,S,609,Outros rendimentos - Descontos de pronto pagamento obtidos,RG,Ca
+taxonomy_base_610,S,610,Outros rendimentos - Recuperação de dívidas a receber,RG,Ca
+taxonomy_base_611,S,611,Outros rendimentos - Ganhos em inventários - Sinistros,RG,Ca
+taxonomy_base_612,S,612,Outros rendimentos - Ganhos em inventários - Sobras,RG,Ca
+taxonomy_base_613,S,613,Outros rendimentos - Ganhos em inventários - Outros ganhos,RG,Ca
+taxonomy_base_614,S,614,"Outros rendimentos - Rendimentos em subsidiárias, associadas e empreendimentos conjuntos - Aplicação do método da equivalência patrimonial",RG,Ca
+taxonomy_base_615,S,615,"Outros rendimentos - Rendimentos em subsidiárias, associadas e empreendimentos conjuntos - Alienações",RG,Ca
+taxonomy_base_616,S,616,"Outros rendimentos - Rendimentos em subsidiárias, associadas e empreendimentos conjuntos - Outros rendimentos",RG,Ca
+taxonomy_base_617,S,617,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Diferenças de câmbio favoráveis,RG,Ca
+taxonomy_base_618,S,618,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Alienações,RG,Ca
+taxonomy_base_619,S,619,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Outros rendimentos,RG,Ca
+taxonomy_base_620,S,620,Outros rendimentos - Rendimentos em investimentos não financeiros - Alienações,RG,Ca
+taxonomy_base_621,S,621,Outros rendimentos - Rendimentos em investimentos não financeiros - Sinistros,RG,Ca
+taxonomy_base_622,S,622,Outros rendimentos - Rendimentos em investimentos não financeiros - Rendas e outros rendimentos em propriedades de investimento,RG,Ca
+taxonomy_base_623,S,623,Outros rendimentos - Rendimentos em investimentos não financeiros - Outros rendimentos,RG,Ca
+taxonomy_base_624,S,624,Outros rendimentos - Outros - Correções relativas a períodos anteriores,RG,Ca
+taxonomy_base_625,S,625,Outros rendimentos - Outros - Excesso da estimativa para impostos,RG,Ca
+taxonomy_base_626,S,626,Outros rendimentos - Outros - Imputação de subsídios para investimentos,RG,Ca
+taxonomy_base_627,S,627,Outros rendimentos - Outros - Ganhos em outros instrumentos financeiros,RG,Ca
+taxonomy_base_628,S,628,Outros rendimentos - Outros - Restituição de impostos,RG,Ca
+taxonomy_base_629,S,629,Outros rendimentos - Outros - Diferenças de câmbio favoráveis,RG,Ca
+taxonomy_base_630,S,630,Outros rendimentos - Outros - Outros não especificados,RG,Ca
+taxonomy_base_631,S,631,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De depósitos",RG,Ca
+taxonomy_base_632,S,632,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De outras aplicações de meios financeiros líquidos",RG,Ca
+taxonomy_base_633,S,633,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De financiamentos concedidos a associadas e empreendimentos conjuntos",RG,Ca
+taxonomy_base_634,S,634,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De financiamentos concedidos a subsidiárias",RG,Ca
+taxonomy_base_635,S,635,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De financiamentos obtidos",RG,Ca
+taxonomy_base_636,S,636,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De outros financiamentos concedidos",RG,Ca
+taxonomy_base_637,S,637,"Juros, dividendos e outros rendimentos similares - Dividendos obtidos - De aplicações de meios financeiros líquidos",RG,Ca
+taxonomy_base_638,S,638,"Juros, dividendos e outros rendimentos similares - Dividendos obtidos - De associadas e empreendimentos conjuntos",RG,Ca
+taxonomy_base_639,S,639,"Juros, dividendos e outros rendimentos similares - Dividendos obtidos - De subsidiárias",RG,Ca
+taxonomy_base_640,S,640,"Juros, dividendos e outros rendimentos similares - Dividendos obtidos - Outras",RG,Ca
+taxonomy_base_641,S,641,"Juros, dividendos e outros rendimentos similares - Diferenças de câmbio favoráveis",RG,Ca
+taxonomy_base_642,S,642,"Juros, dividendos e outros rendimentos similares - Outros rendimentos similares",RG,Ca
+taxonomy_base_643,S,643,Resultado líquido do período - Resultado antes de impostos,RG,Sa1C
+taxonomy_base_644,S,644,Resultado líquido do período - Imposto sobre o rendimento do período - Imposto estimado para o período,GR,Da
+taxonomy_base_645,S,645,Resultado líquido do período - Imposto sobre o rendimento do período - Imposto diferido,GR,Sa1C
+taxonomy_base_646,S,646,Resultado líquido do período - Resultado líquido,C,S1C
+taxonomy_base_647,S,647,Dividendos antecipados,C,D
+taxonomy_micro_1,M,1,Caixa,AC,D
+taxonomy_micro_2,M,2,Depósitos à ordem,APC,S2C
+taxonomy_micro_3,M,3,Outros depósitos bancários,APC,S2C
+taxonomy_micro_4,M,4,Outros,APC,S2C
+taxonomy_micro_5,M,5,Clientes - Clientes c/c,APC,S2C
+taxonomy_micro_6,M,6,Clientes - Clientes — títulos a receber,APC,S2C
+taxonomy_micro_7,M,7,Clientes - Outros Clientes,APC,S2C
+taxonomy_micro_8,M,8,Clientes - Adiantamentos de clientes,PC,C
+taxonomy_micro_9,M,9,Clientes - Perdas por imparidade acumuladas - Clientes c/c,AC,C
+taxonomy_micro_10,M,10,Clientes - Perdas por imparidade acumuladas - Clientes — títulos a receber,AC,C
+taxonomy_micro_11,M,11,Clientes - Perdas por imparidade acumuladas - Outros Clientes,AC,C
+taxonomy_micro_12,M,12,Fornecedores - Fornecedores c/c,APC,S2C
+taxonomy_micro_13,M,13,Fornecedores - Fornecedores — títulos a pagar,APC,S2C
+taxonomy_micro_14,M,14,Fornecedores - Outros fornecedores,APC,S2C
+taxonomy_micro_15,M,15,Fornecedores - Faturas em receção e conferência,APC,S2C
+taxonomy_micro_16,M,16,Fornecedores - Adiantamentos a fornecedores,AC,D
+taxonomy_micro_17,M,17,Fornecedores - Perdas por imparidade acumuladas,AC,C
+taxonomy_micro_18,M,18,Pessoal - Remunerações a pagar - Aos órgãos sociais,PC,C
+taxonomy_micro_19,M,19,Pessoal - Remunerações a pagar - Ao pessoal,PC,C
+taxonomy_micro_20,M,20,Pessoal - Adiantamentos - Aos órgãos sociais,AC,D
+taxonomy_micro_21,M,21,Pessoal - Adiantamentos - Ao pessoal,AC,D
+taxonomy_micro_22,M,22,Pessoal - Outras operações - Com os órgãos sociais - (CORRENTE),APC,S2C
+taxonomy_micro_23,M,23,Pessoal - Outras operações - Com os órgãos sociais - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_24,M,24,Pessoal - Outras operações - Com o pessoal - (CORRENTE),APC,S2C
+taxonomy_micro_25,M,25,Pessoal - Outras operações - Com o pessoal - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_26,M,26,Pessoal - Perdas por imparidade acumuladas - Adiantamentos - Aos órgãos sociais,AC,C
+taxonomy_micro_27,M,27,Pessoal - Perdas por imparidade acumuladas - Adiantamentos - Ao pessoal,AC,C
+taxonomy_micro_28,M,28,Pessoal - Perdas por imparidade acumuladas - Outras operações - Aos órgãos sociais (CORRENTE),AC,C
+taxonomy_micro_29,M,29,Pessoal - Perdas por imparidade acumuladas - Outras operações - Aos órgãos sociais (NÃO CORRENTE),ANC,C
+taxonomy_micro_30,M,30,Pessoal - Perdas por imparidade acumuladas - Outras operações - Ao pessoal (CORRENTE),AC,C
+taxonomy_micro_31,M,31,Pessoal - Perdas por imparidade acumuladas - Outras operações - Ao pessoal (NÃO CORRENTE),ANC,C
+taxonomy_micro_32,M,32,Estado e outros entes públicos - Imposto sobre o rendimento,APC,S2C
+taxonomy_micro_33,M,33,Estado e outros entes públicos - Retenção de impostos sobre rendimentos,PC,C
+taxonomy_micro_34,M,34,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Suportado,AC,D
+taxonomy_micro_35,M,35,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Dedutível,AC,D
+taxonomy_micro_36,M,36,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Liquidado,PC,C
+taxonomy_micro_37,M,37,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Regularizações,APC,S2C
+taxonomy_micro_38,M,38,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Apuramento,APC,S2C
+taxonomy_micro_39,M,39,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — A pagar,PC,C
+taxonomy_micro_40,M,40,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — A recuperar,AC,D
+taxonomy_micro_41,M,41,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Reembolsos pedidos,AC,D
+taxonomy_micro_42,M,42,Estado e outros entes públicos - Imposto sobre o valor acrescentado (IVA) - IVA — Liquidações oficiosas,APC,S2C
+taxonomy_micro_43,M,43,Estado e outros entes públicos - Outros impostos,APC,S2C
+taxonomy_micro_44,M,44,Estado e outros entes públicos - Contribuições para a Segurança Social,APC,S2C
+taxonomy_micro_45,M,45,Estado e outros entes públicos - Tributos das autarquias locais,APC,S2C
+taxonomy_micro_46,M,46,Estado e outros entes públicos - Outras tributações,APC,S2C
+taxonomy_micro_47,M,47,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Empréstimos bancários - (CORRENTE),PC,C
+taxonomy_micro_48,M,48,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Empréstimos bancários - (NÃO CORRENTE),PNC,C
+taxonomy_micro_49,M,49,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Descobertos bancários - (CORRENTE),PC,C
+taxonomy_micro_50,M,50,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Descobertos bancários - (NÃO CORRENTE),PNC,C
+taxonomy_micro_51,M,51,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Locações financeiras - (CORRENTE),PC,C
+taxonomy_micro_52,M,52,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Locações financeiras - (NÃO CORRENTE),PNC,C
+taxonomy_micro_53,M,53,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Outros financiamentos - (CORRENTE),PC,C
+taxonomy_micro_54,M,54,Financiamentos obtidos - Instituições de crédito e sociedades financeiras - Outros financiamentos - (NÃO CORRENTE),PNC,C
+taxonomy_micro_55,M,55,Financiamentos obtidos - Outros financiadores - (CORRENTE),PC,C
+taxonomy_micro_56,M,56,Financiamentos obtidos - Outros financiadores - (NÃO CORRENTE),PNC,C
+taxonomy_micro_57,M,57,Acionistas/sócios - Quotas não liberadas,AC,D
+taxonomy_micro_58,M,58,Acionistas/sócios - Adiantamentos por conta de lucros,AC,D
+taxonomy_micro_59,M,59,Acionistas/sócios - Resultados atribuídos,APC,S2C
+taxonomy_micro_60,M,60,Acionistas/sócios - Lucros disponíveis,APC,S2C
+taxonomy_micro_61,M,61,Acionistas/sócios - Outras operações - (CORRENTE),APC,S2C
+taxonomy_micro_62,M,62,Acionistas/sócios - Outras operações - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_63,M,63,Acionistas/sócios - Perdas por imparidade acumuladas - Quotas não liberadas,AC,C
+taxonomy_micro_64,M,64,Acionistas/sócios - Perdas por imparidade acumuladas - Adiantamentos por conta de lucros,AC,C
+taxonomy_micro_65,M,65,Acionistas/sócios - Perdas por imparidade acumuladas - Resultados atribuídos,AC,C
+taxonomy_micro_66,M,66,Acionistas/sócios - Perdas por imparidade acumuladas - Lucros disponíveis,AC,C
+taxonomy_micro_67,M,67,Acionistas/sócios - Perdas por imparidade acumuladas - Outras operações (CORRENTE),AC,C
+taxonomy_micro_68,M,68,Acionistas/sócios - Perdas por imparidade acumuladas - Outras operações (NÃO CORRENTE),ANC,C
+taxonomy_micro_69,M,69,Outras contas a receber e a pagar - Fornecedores de investimentos - Fornecedores de investimentos — contas gerais - (CORRENTE),APC,S2C
+taxonomy_micro_70,M,70,Outras contas a receber e a pagar - Fornecedores de investimentos - Fornecedores de investimentos — contas gerais - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_71,M,71,Outras contas a receber e a pagar - Fornecedores de investimentos - Facturas em recepção e conferência - (CORRENTE),APC,S2C
+taxonomy_micro_72,M,72,Outras contas a receber e a pagar - Fornecedores de investimentos - Facturas em recepção e conferência - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_73,M,73,Outras contas a receber e a pagar - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos - (CORRENTE),AC,D
+taxonomy_micro_74,M,74,Outras contas a receber e a pagar - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos - (NÃO CORRENTE),ANC,D
+taxonomy_micro_75,M,75,Outras contas a receber e a pagar - Devedores e credores por acréscimos (periodização económica)* - Devedores por acréscimos de rendimentos,AC,D
+taxonomy_micro_76,M,76,Outras contas a receber e a pagar - Devedores e credores por acréscimos (periodização económica)* - Credores por acréscimos de gastos,PC,C
+taxonomy_micro_77,M,77,Outras contas a receber e a pagar - Adiantamentos por conta de vendas,PC,C
+taxonomy_micro_78,M,78,Outras contas a receber e a pagar - Outros devedores e credores - (CORRENTE),APC,S2C
+taxonomy_micro_79,M,79,Outras contas a receber e a pagar - Outros devedores e credores - (NÃO CORRENTE),APNC,S2C
+taxonomy_micro_80,M,80,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos (CORRENTE),AC,C
+taxonomy_micro_81,M,81,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Fornecedores de investimentos - Adiantamentos a fornecedores de investimentos (NÃO CORRENTE),ANC,C
+taxonomy_micro_82,M,82,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Devedores e credores por acréscimos (periodização económica)* - Devedores por acréscimos de rendimentos,AC,C
+taxonomy_micro_83,M,83,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Outros devedores e credores - (CORRENTE),AC,C
+taxonomy_micro_84,M,84,Outras contas a receber e a pagar - Perdas por imparidade acumuladas - Outros devedores e credores - (NÃO CORRENTE),ANC,C
+taxonomy_micro_85,M,85,Diferimentos - Gastos a reconhecer,AC,D
+taxonomy_micro_86,M,86,Diferimentos - Rendimentos a reconhecer,PC,C
+taxonomy_micro_87,M,87,Provisões - Impostos,PNC,C
+taxonomy_micro_88,M,88,Provisões - Garantias a clientes,PNC,C
+taxonomy_micro_89,M,89,Provisões - Processos judiciais em curso,PNC,C
+taxonomy_micro_90,M,90,Provisões - Acidentes de trabalho e doenças profissionais,PNC,C
+taxonomy_micro_91,M,91,Provisões - Outras provisões,PNC,C
+taxonomy_micro_92,M,92,Compras - Mercadorias,,Dc
+taxonomy_micro_93,M,93,"Compras - Matérias -primas, subsidiárias e de consumo",,Dc
+taxonomy_micro_94,M,94,Compras - Devoluções de compras - Mercadorias,,Cc
+taxonomy_micro_95,M,95,"Compras - Devoluções de compras - Matérias -primas, subsidiárias e de consumo",,Cc
+taxonomy_micro_96,M,96,Compras - Descontos e abatimentos em compras - Mercadorias,,Cc
+taxonomy_micro_97,M,97,"Compras - Descontos e abatimentos em compras - Matérias -primas, subsidiárias e de consumo",,Cc
+taxonomy_micro_98,M,98,Mercadorias - Mercadorias,AC,D
+taxonomy_micro_99,M,99,Mercadorias - Mercadorias em trânsito,AC,D
+taxonomy_micro_100,M,100,Mercadorias - Mercadorias em poder de terceiros,AC,D
+taxonomy_micro_101,M,101,Mercadorias - Perdas por imparidade acumuladas - Mercadorias,AC,C
+taxonomy_micro_102,M,102,Mercadorias - Perdas por imparidade acumuladas - Mercadorias em trânsito,AC,C
+taxonomy_micro_103,M,103,Mercadorias - Perdas por imparidade acumuladas - Mercadorias em poder de terceiros,AC,C
+taxonomy_micro_104,M,104,"Matérias -primas, subsidiárias e de consumo - Matérias -primas",AC,D
+taxonomy_micro_105,M,105,"Matérias -primas, subsidiárias e de consumo - Matérias subsidiárias",AC,D
+taxonomy_micro_106,M,106,"Matérias -primas, subsidiárias e de consumo - Embalagens",AC,D
+taxonomy_micro_107,M,107,"Matérias -primas, subsidiárias e de consumo - Materiais diversos",AC,D
+taxonomy_micro_108,M,108,"Matérias -primas, subsidiárias e de consumo - Matérias em trânsito",AC,D
+taxonomy_micro_109,M,109,"Matérias -primas, subsidiárias e de consumo - Outras matérias -primas, subsidiárias e de consumo",AC,D
+taxonomy_micro_110,M,110,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias -primas",AC,C
+taxonomy_micro_111,M,111,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias subsidiárias",AC,C
+taxonomy_micro_112,M,112,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Embalagens",AC,C
+taxonomy_micro_113,M,113,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Materiais diversos",AC,C
+taxonomy_micro_114,M,114,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Matérias em trânsito",AC,C
+taxonomy_micro_115,M,115,"Matérias -primas, subsidiárias e de consumo - Perdas por imparidade acumuladas - Outras matérias -primas, subsidiárias e de consumo",AC,C
+taxonomy_micro_116,M,116,Produtos acabados e intermédios - Produtos acabados e intermédios,AC,D
+taxonomy_micro_117,M,117,Produtos acabados e intermédios - Produtos em poder de terceiros,AC,D
+taxonomy_micro_118,M,118,Produtos acabados e intermédios - Perdas por imparidade acumuladas - Produtos acabados e intermédios,AC,C
+taxonomy_micro_119,M,119,Produtos acabados e intermédios - Perdas por imparidade acumuladas - Produtos em poder de terceiros,AC,C
+taxonomy_micro_120,M,120,"Subprodutos, desperdícios, resíduos e refugos - Subprodutos",AC,D
+taxonomy_micro_121,M,121,"Subprodutos, desperdícios, resíduos e refugos - Desperdícios, resíduos e refugos",AC,D
+taxonomy_micro_122,M,122,"Subprodutos, desperdícios, resíduos e refugos - Outros subprodutos, desperdícios, resíduos e refugos",AC,D
+taxonomy_micro_123,M,123,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Subprodutos",AC,C
+taxonomy_micro_124,M,124,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Desperdícios, resíduos e refugos",AC,C
+taxonomy_micro_125,M,125,"Subprodutos, desperdícios, resíduos e refugos - Perdas por imparidade acumuladas - Outros subprodutos, desperdícios, resíduos e refugos",AC,C
+taxonomy_micro_126,M,126,Produtos e trabalhos em curso - Produtos e trabalhos em curso,AC,D
+taxonomy_micro_127,M,127,Produtos e trabalhos em curso - Perdas por imparidade acumuladas,AC,C
+taxonomy_micro_128,M,128,Reclassificação e regularização de inventários - Mercadorias,,Sc
+taxonomy_micro_129,M,129,"Reclassificação e regularização de inventários - Matérias -primas, subsidiárias e de consumo",,Sc
+taxonomy_micro_130,M,130,Reclassificação e regularização de inventários - Produtos acabados e intermédios,,Sc
+taxonomy_micro_131,M,131,"Reclassificação e regularização de inventários - Subprodutos, desperdícios, resíduos e refugos",,Sc
+taxonomy_micro_132,M,132,Reclassificação e regularização de inventários - Produtos e trabalhos em curso,,Sc
+taxonomy_micro_133,M,133,Adiantamentos por conta de compras - Mercadorias,AC,D
+taxonomy_micro_134,M,134,"Adiantamentos por conta de compras - Matérias -primas, subsidiárias e de consumo",AC,D
+taxonomy_micro_135,M,135,Adiantamentos por conta de compras - Produtos acabados e intermédios,AC,D
+taxonomy_micro_136,M,136,"Adiantamentos por conta de compras - Subprodutos, desperdícios, resíduos e refugos",AC,D
+taxonomy_micro_137,M,137,Adiantamentos por conta de compras - Produtos e trabalhos em curso,AC,D
+taxonomy_micro_138,M,138,Investimentos financeiros - Investimentos noutras empresas - Participações de capital,ANC,D
+taxonomy_micro_139,M,139,Investimentos financeiros - Investimentos noutras empresas - Empréstimos concedidos,ANC,D
+taxonomy_micro_140,M,140,Investimentos financeiros - Investimentos noutras empresas - Outros investimentos financeiros,ANC,D
+taxonomy_micro_141,M,141,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Participações de capital,ANC,C
+taxonomy_micro_142,M,142,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Empréstimos concedidos,ANC,C
+taxonomy_micro_143,M,143,Investimentos financeiros - Perdas por imparidade acumuladas - Investimentos noutras empresas - Outros investimentos financeiros,ANC,C
+taxonomy_micro_144,M,144,Ativos fixos tangíveis - Terrenos e recursos naturais,ANC,D
+taxonomy_micro_145,M,145,Ativos fixos tangíveis - Edifícios e outras construções,ANC,D
+taxonomy_micro_146,M,146,Ativos fixos tangíveis - Equipamento básico,ANC,D
+taxonomy_micro_147,M,147,Ativos fixos tangíveis - Equipamento de transporte,ANC,D
+taxonomy_micro_148,M,148,Ativos fixos tangíveis - Equipamento administrativo,ANC,D
+taxonomy_micro_149,M,149,Ativos fixos tangíveis - Equipamentos biológicos,ANC,D
+taxonomy_micro_150,M,150,Ativos fixos tangíveis - Outros ativos fixos tangíveis,ANC,D
+taxonomy_micro_151,M,151,Ativos fixos tangíveis - Depreciações acumuladas - Terrenos e recursos naturais,ANC,C
+taxonomy_micro_152,M,152,Ativos fixos tangíveis - Depreciações acumuladas - Edifícios e outras construções,ANC,C
+taxonomy_micro_153,M,153,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento básico,ANC,C
+taxonomy_micro_154,M,154,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento de transporte,ANC,C
+taxonomy_micro_155,M,155,Ativos fixos tangíveis - Depreciações acumuladas - Equipamento administrativo,ANC,C
+taxonomy_micro_156,M,156,Ativos fixos tangíveis - Depreciações acumuladas - Equipamentos biológicos,ANC,C
+taxonomy_micro_157,M,157,Ativos fixos tangíveis - Depreciações acumuladas - Outros ativos fixos tangíveis,ANC,C
+taxonomy_micro_158,M,158,Ativos intangíveis - Goodwill,ANC,D
+taxonomy_micro_159,M,159,Ativos intangíveis - Projetos de desenvolvimento,ANC,D
+taxonomy_micro_160,M,160,Ativos intangíveis - Programas de computador,ANC,D
+taxonomy_micro_161,M,161,Ativos intangíveis - Propriedade industrial,ANC,D
+taxonomy_micro_162,M,162,Ativos intangíveis - Outros ativos intangíveis,ANC,D
+taxonomy_micro_163,M,163,Ativos intangíveis - Amortizações acumuladas - Goodwill,ANC,C
+taxonomy_micro_164,M,164,Ativos intangíveis - Amortizações acumuladas - Projetos de desenvolvimento,ANC,C
+taxonomy_micro_165,M,165,Ativos intangíveis - Amortizações acumuladas - Programas de computador,ANC,C
+taxonomy_micro_166,M,166,Ativos intangíveis - Amortizações acumuladas - Propriedade industrial,ANC,C
+taxonomy_micro_167,M,167,Ativos intangíveis - Amortizações acumuladas - Outros ativos intangíveis,ANC,C
+taxonomy_micro_168,M,168,Investimentos em curso - Investimentos financeiros em curso,ANC,D
+taxonomy_micro_169,M,169,Investimentos em curso - Ativos fixos tangíveis em curso,ANC,D
+taxonomy_micro_170,M,170,Investimentos em curso - Ativos intangíveis em curso,ANC,D
+taxonomy_micro_171,M,171,Investimentos em curso - Adiantamentos por conta de investimentos - Investimentos financeiros em curso,ANC,D
+taxonomy_micro_172,M,172,Investimentos em curso - Adiantamentos por conta de investimentos - Ativos fixos tangíveis em curso,ANC,D
+taxonomy_micro_173,M,173,Investimentos em curso - Adiantamentos por conta de investimentos - Ativos intangíveis em curso,ANC,D
+taxonomy_micro_174,M,174,Capital subscrito,C,C
+taxonomy_micro_175,M,175,Ações (quotas) próprias - Valor nominal,C,D
+taxonomy_micro_176,M,176,Ações (quotas) próprias - Descontos e prémios,C,S1C
+taxonomy_micro_177,M,177,Outros instrumentos de capital próprio*,C,C
+taxonomy_micro_178,M,178,Prémios de emissão,C,C
+taxonomy_micro_179,M,179,Reservas - Reservas legais,C,C
+taxonomy_micro_180,M,180,Reservas - Outras reservas,C,C
+taxonomy_micro_181,M,181,Resultados transitados,C,S1C
+taxonomy_micro_182,M,182,Excedentes de revalorização de ativos fixos tangíveis * - Reavaliações decorrentes de diplomas legais,C,C
+taxonomy_micro_183,M,183,Excedentes de revalorização de ativos fixos tangíveis * - Outros excedentes,C,C
+taxonomy_micro_184,M,184,Outras variações no capital próprio - Subsídios - Subsídios atribuídos,C,C
+taxonomy_micro_185,M,185,Outras variações no capital próprio - Subsídios - Ajustamentos em subsídios,C,D
+taxonomy_micro_186,M,186,Outras variações no capital próprio - Doações,C,C
+taxonomy_micro_187,M,187,Outras variações no capital próprio - Outras,C,S1C
+taxonomy_micro_188,M,188,Custo das mercadorias vendidas e das matérias consumidas - Mercadorias,GR,Sa1C
+taxonomy_micro_189,M,189,"Custo das mercadorias vendidas e das matérias consumidas - Matérias -primas, subsidiárias e de consumo",GR,Sa1C
+taxonomy_micro_190,M,190,Fornecimentos e serviços externos - Subcontratos,GR,Da
+taxonomy_micro_191,M,191,Fornecimentos e serviços externos - Serviços especializados,GR,Da
+taxonomy_micro_192,M,192,Fornecimentos e serviços externos - Materiais,GR,Da
+taxonomy_micro_193,M,193,Fornecimentos e serviços externos - Energia e fluidos,GR,Da
+taxonomy_micro_194,M,194,"Fornecimentos e serviços externos - Deslocações, estadas e transportes",GR,Da
+taxonomy_micro_195,M,195,Fornecimentos e serviços externos - Serviços diversos,GR,Da
+taxonomy_micro_196,M,196,Gastos com o pessoal - Remunerações dos órgãos sociais,GR,Da
+taxonomy_micro_197,M,197,Gastos com o pessoal - Remunerações do pessoal,GR,Da
+taxonomy_micro_198,M,198,Gastos com o pessoal - Indemnizações,GR,Da
+taxonomy_micro_199,M,199,Gastos com o pessoal - Encargos sobre remunerações,GR,Da
+taxonomy_micro_200,M,200,Gastos com o pessoal - Seguros de acidentes no trabalho e doenças profissionais,GR,Da
+taxonomy_micro_201,M,201,Gastos com o pessoal - Gastos de ação social,GR,Da
+taxonomy_micro_202,M,202,Gastos com o pessoal - Outros gastos com o pessoal,GR,Da
+taxonomy_micro_203,M,203,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Terrenos e recursos naturais,GR,Da
+taxonomy_micro_204,M,204,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Edifícios e outras construções,GR,Da
+taxonomy_micro_205,M,205,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento básico,GR,Da
+taxonomy_micro_206,M,206,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento de transporte,GR,Da
+taxonomy_micro_207,M,207,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamento administrativo,GR,Da
+taxonomy_micro_208,M,208,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Equipamentos biológicos,GR,Da
+taxonomy_micro_209,M,209,Gastos de depreciação e de amortização - Ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Da
+taxonomy_micro_210,M,210,Gastos de depreciação e de amortização - Ativos intangíveis - Goodwill,GR,Da
+taxonomy_micro_211,M,211,Gastos de depreciação e de amortização - Ativos intangíveis - Projetos de desenvolvimento,GR,Da
+taxonomy_micro_212,M,212,Gastos de depreciação e de amortização - Ativos intangíveis - Programas de computador,GR,Da
+taxonomy_micro_213,M,213,Gastos de depreciação e de amortização - Ativos intangíveis - Propriedade industrial,GR,Da
+taxonomy_micro_214,M,214,Gastos de depreciação e de amortização - Ativos intangíveis - Outros ativos intangíveis,GR,Da
+taxonomy_micro_215,M,215,Perdas por imparidade - Instrumentos financeiros,GR,Sa1C
+taxonomy_micro_216,M,216,Perdas por imparidade - Em dívidas a receber - Clientes,GR,Da
+taxonomy_micro_217,M,217,Perdas por imparidade - Em dívidas a receber - Outros devedores,GR,Da
+taxonomy_micro_218,M,218,Perdas por imparidade - Em inventários - Mercadorias,GR,Da
+taxonomy_micro_219,M,219,"Perdas por imparidade - Em inventários - Matérias -primas, subsidiárias e de consumo",GR,Da
+taxonomy_micro_220,M,220,Perdas por imparidade - Em inventários - Produtos acabados e intermédios,GR,Da
+taxonomy_micro_221,M,221,"Perdas por imparidade - Em inventários - Subprodutos, desperdícios, resíduos e refugos",GR,Da
+taxonomy_micro_222,M,222,Perdas por imparidade - Em inventários - Produtos e trabalhos em curso,GR,Da
+taxonomy_micro_223,M,223,Perdas por imparidade - Em investimentos financeiros - Participações de capital,GR,Da
+taxonomy_micro_224,M,224,Perdas por imparidade - Em investimentos financeiros - Empréstimos concedidos,GR,Da
+taxonomy_micro_225,M,225,Perdas por imparidade - Em investimentos financeiros - Outros investimentos financeiros,GR,Da
+taxonomy_micro_226,M,226,Perdas por imparidade - Em investimentos financeiros - Goodwill,GR,Da
+taxonomy_micro_227,M,227,Provisões do período - Impostos,GR,Da
+taxonomy_micro_228,M,228,Provisões do período - Garantias a clientes,GR,Da
+taxonomy_micro_229,M,229,Provisões do período - Processos judiciais em curso,GR,Da
+taxonomy_micro_230,M,230,Provisões do período - Acidentes no trabalho e doenças profissionais,GR,Da
+taxonomy_micro_231,M,231,Provisões do período - Outras provisões,GR,Da
+taxonomy_micro_232,M,232,Outros gastos - Impostos - Impostos diretos,GR,Da
+taxonomy_micro_233,M,233,Outros gastos - Impostos - Impostos indiretos,GR,Da
+taxonomy_micro_234,M,234,Outros gastos - Impostos - Taxas,GR,Da
+taxonomy_micro_235,M,235,Outros gastos - Descontos de pronto pagamento concedidos,GR,Da
+taxonomy_micro_236,M,236,Outros gastos - Dívidas incobráveis,GR,Da
+taxonomy_micro_237,M,237,Outros gastos - Perdas em inventários - Sinistros,GR,Da
+taxonomy_micro_238,M,238,Outros gastos - Perdas em inventários - Quebras,GR,Da
+taxonomy_micro_239,M,239,Outros gastos - Perdas em inventários - Outras perdas,GR,Da
+taxonomy_micro_240,M,240,Outros gastos - Gastos nos restantes investimentos financeros - Cobertura de prejuízos,GR,Da
+taxonomy_micro_241,M,241,Outros gastos - Gastos nos restantes investimentos financeros - Alienações,GR,Da
+taxonomy_micro_242,M,242,Outros gastos - Gastos nos restantes investimentos financeros - Diferenças de câmbio desfavoráveis,GR,Da
+taxonomy_micro_243,M,243,Outros gastos - Gastos nos restantes investimentos financeros - Outros gastos,GR,Da
+taxonomy_micro_244,M,244,Outros gastos - Gastos em investimentos não financeiros - Alienações,GR,Da
+taxonomy_micro_245,M,245,Outros gastos - Gastos em investimentos não financeiros - Sinistros,GR,Da
+taxonomy_micro_246,M,246,Outros gastos - Gastos em investimentos não financeiros - Abates,GR,Da
+taxonomy_micro_247,M,247,Outros gastos - Gastos em investimentos não financeiros - Outras gastos,GR,Da
+taxonomy_micro_248,M,248,Outros gastos - Outros - Correções relativas a períodos anteriores,GR,Da
+taxonomy_micro_249,M,249,Outros gastos - Outros - Donativos,GR,Da
+taxonomy_micro_250,M,250,Outros gastos - Outros - Quotizações,GR,Da
+taxonomy_micro_251,M,251,Outros gastos - Outros - Ofertas e amostras de inventários,GR,Da
+taxonomy_micro_252,M,252,Outros gastos - Outros - Insuficiência da estimativa para impostos,GR,Da
+taxonomy_micro_253,M,253,Outros gastos - Outros - Diferenças de câmbio desfavoráveis,GR,Da
+taxonomy_micro_254,M,254,Outros gastos - Outros - Outros não especificados,GR,Da
+taxonomy_micro_255,M,255,Gastos de financiamento - Juros suportados - Juros de financiamentos obtidos,GR,Da
+taxonomy_micro_256,M,256,Gastos de financiamento - Juros suportados - Outros juros,GR,Da
+taxonomy_micro_257,M,257,Gastos de financiamento - Diferenças de câmbio desfavoráveis - Relativas a financiamentos obtidos,GR,Da
+taxonomy_micro_258,M,258,Gastos de financiamento - Diferenças de câmbio desfavoráveis - Outras,GR,Da
+taxonomy_micro_259,M,259,Gastos de financiamento - Outros gastos de financiamento - Relativos a financiamentos obtidos,GR,Da
+taxonomy_micro_260,M,260,Gastos de financiamento - Outros gastos de financiamento - Outros,GR,Da
+taxonomy_micro_261,M,261,Vendas - Mercadorias,RG,Ca
+taxonomy_micro_262,M,262,Vendas - Produtos acabados e intermédios,RG,Ca
+taxonomy_micro_263,M,263,"Vendas - Subprodutos, desperdícios, resíduos e refugos",RG,Ca
+taxonomy_micro_264,M,264,Vendas - IVA das vendas com imposto incluído,RG,Sa1C
+taxonomy_micro_265,M,265,Vendas - Devoluções de vendas,RG,Da
+taxonomy_micro_266,M,266,Vendas - Descontos e abatimentos em vendas,RG,Da
+taxonomy_micro_267,M,267,Prestações de serviços - Serviço A,RG,Ca
+taxonomy_micro_268,M,268,Prestações de serviços - Serviço B,RG,Ca
+taxonomy_micro_269,M,269,Prestações de serviços - Outros serviços,RG,Ca
+taxonomy_micro_270,M,270,Prestações de serviços - Serviços secundários,RG,Ca
+taxonomy_micro_271,M,271,Prestações de serviços - IVA dos serviços com imposto incluído,RG,Sa1C
+taxonomy_micro_272,M,272,Prestações de serviços - Descontos e abatimentos,RG,Da
+taxonomy_micro_273,M,273,Variações nos inventários da produção - Produtos acabados e intermédios,RG,Sa1C
+taxonomy_micro_274,M,274,"Variações nos inventários da produção - Subprodutos, desperdícios, resíduos e refugos",RG,Sa1C
+taxonomy_micro_275,M,275,Variações nos inventários da produção - Produtos e trabalhos em curso,RG,Sa1C
+taxonomy_micro_276,M,276,Trabalhos para a própria entidade - Ativos fixos tangíveis,RG,Ca
+taxonomy_micro_277,M,277,Trabalhos para a própria entidade - Ativos intangíveis,RG,Ca
+taxonomy_micro_278,M,278,Trabalhos para a própria entidade - Ativos por gastos diferidos,RG,Ca
+taxonomy_micro_279,M,279,Subsídios à exploração - Subsídios das entidades públicas,RG,Ca
+taxonomy_micro_280,M,280,Subsídios à exploração - Subsídios de outras entidades,RG,Ca
+taxonomy_micro_281,M,281,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Terrenos e recursos naturais,GR,Ca
+taxonomy_micro_282,M,282,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Edifícios e outras construções,GR,Ca
+taxonomy_micro_283,M,283,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento básico,GR,Ca
+taxonomy_micro_284,M,284,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento de transporte,GR,Ca
+taxonomy_micro_285,M,285,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamento administrativo,GR,Ca
+taxonomy_micro_286,M,286,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Equipamentos biológicos,GR,Ca
+taxonomy_micro_287,M,287,Reversões - De depreciações e de amortizações - Ativos fixos tangíveis - Outros ativos fixos tangíveis,GR,Ca
+taxonomy_micro_288,M,288,Reversões - De depreciações e de amortizações - Ativos intangíveis - Goodwill,GR,Ca
+taxonomy_micro_289,M,289,Reversões - De depreciações e de amortizações - Ativos intangíveis - Projetos de desenvolvimento,GR,Ca
+taxonomy_micro_290,M,290,Reversões - De depreciações e de amortizações - Ativos intangíveis - Programas de computador,GR,Ca
+taxonomy_micro_291,M,291,Reversões - De depreciações e de amortizações - Ativos intangíveis - Propriedade industrial,GR,Ca
+taxonomy_micro_292,M,292,Reversões - De depreciações e de amortizações - Ativos intangíveis - Outros ativos intangíveis,GR,Ca
+taxonomy_micro_293,M,293,Reversões - De perdas por imparidade - Em dívidas a receber - Clientes,GR,Ca
+taxonomy_micro_294,M,294,Reversões - De perdas por imparidade - Em dívidas a receber - Outros devedores,GR,Ca
+taxonomy_micro_295,M,295,Reversões - De perdas por imparidade - Em inventários - Mercadorias,GR,Ca
+taxonomy_micro_296,M,296,"Reversões - De perdas por imparidade - Em inventários - Matérias -primas, subsidiárias e de consumo",GR,Ca
+taxonomy_micro_297,M,297,Reversões - De perdas por imparidade - Em inventários - Produtos acabados e intermédios,GR,Ca
+taxonomy_micro_298,M,298,"Reversões - De perdas por imparidade - Em inventários - Subprodutos, desperdícios, resíduos e refugos",GR,Ca
+taxonomy_micro_299,M,299,Reversões - De perdas por imparidade - Em inventários - Produtos e trabalhos em curso,GR,Ca
+taxonomy_micro_300,M,300,Reversões - De perdas por imparidade - Em investimentos financeiros - Participações de capital,GR,Ca
+taxonomy_micro_301,M,301,Reversões - De perdas por imparidade - Em investimentos financeiros - Empréstimos concedidos,GR,Ca
+taxonomy_micro_302,M,302,Reversões - De perdas por imparidade - Em investimentos financeiros - Outros investimentos financeiros,GR,Ca
+taxonomy_micro_303,M,303,Reversões - De provisões - Impostos,GR,Ca
+taxonomy_micro_304,M,304,Reversões - De provisões - Garantias a clientes,GR,Ca
+taxonomy_micro_305,M,305,Reversões - De provisões - Processos judiciais em curso,GR,Ca
+taxonomy_micro_306,M,306,Reversões - De provisões - Acidentes no trabalho e doenças profissionais,GR,Ca
+taxonomy_micro_307,M,307,Outros rendimentos - Rendimentos suplementares,RG,Ca
+taxonomy_micro_308,M,308,Outros rendimentos - Descontos de pronto pagamento obtidos,RG,Ca
+taxonomy_micro_309,M,309,Outros rendimentos - Recuperação de dívidas a receber,RG,Ca
+taxonomy_micro_310,M,310,Outros rendimentos - Ganhos em inventários - Sinistros,RG,Ca
+taxonomy_micro_311,M,311,Outros rendimentos - Ganhos em inventários - Sobras,RG,Ca
+taxonomy_micro_312,M,312,Outros rendimentos - Ganhos em inventários - Outros ganhos,RG,Ca
+taxonomy_micro_313,M,313,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Diferenças de câmbio favoráveis,RG,Ca
+taxonomy_micro_314,M,314,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Alienações,RG,Ca
+taxonomy_micro_315,M,315,Outros rendimentos - Rendimentos nos restantes ativos financeiros - Outros rendimentos,RG,Ca
+taxonomy_micro_316,M,316,Outros rendimentos - Rendimentos em investimentos não financeiros - Alienações,RG,Ca
+taxonomy_micro_317,M,317,Outros rendimentos - Rendimentos em investimentos não financeiros - Sinistros,RG,Ca
+taxonomy_micro_318,M,318,Outros rendimentos - Rendimentos em investimentos não financeiros - Outros rendimentos,RG,Ca
+taxonomy_micro_319,M,319,Outros rendimentos - Outros - Correções relativas a períodos anteriores,RG,Ca
+taxonomy_micro_320,M,320,Outros rendimentos - Outros - Excesso da estimativa para impostos,RG,Ca
+taxonomy_micro_321,M,321,Outros rendimentos - Outros - Imputação de subsídios para investimentos,RG,Ca
+taxonomy_micro_322,M,322,Outros rendimentos - Outros - Restituição de impostos,RG,Ca
+taxonomy_micro_323,M,323,Outros rendimentos - Outros - Diferenças de câmbio favoráveis,RG,Ca
+taxonomy_micro_324,M,324,Outros rendimentos - Outros - Outros não especificados,RG,Ca
+taxonomy_micro_325,M,325,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De depósitos",RG,Ca
+taxonomy_micro_326,M,326,"Juros, dividendos e outros rendimentos similares - Juros obtidos - De financiamentos obtidos",RG,Ca
+taxonomy_micro_327,M,327,"Juros, dividendos e outros rendimentos similares - Juros obtidos - Outros",RG,Ca
+taxonomy_micro_328,M,328,"Juros, dividendos e outros rendimentos similares - Dividendos obtidos",RG,Ca
+taxonomy_micro_329,M,329,"Juros, dividendos e outros rendimentos similares - Diferenças de câmbio favoráveis",RG,Ca
+taxonomy_micro_330,M,330,"Juros, dividendos e outros rendimentos similares - Outros rendimentos similares",RG,Ca
+taxonomy_micro_331,M,331,Resultado líquido do período - Resultado antes de impostos,RG,Sa1C
+taxonomy_micro_332,M,332,Resultado líquido do período - Imposto sobre o rendimento do período - Imposto estimado para o período,GR,Da
+taxonomy_micro_333,M,333,Resultado líquido do período - Resultado líquido,C,S1C
+taxonomy_micro_334,M,334,Dividendos antecipados,C,D

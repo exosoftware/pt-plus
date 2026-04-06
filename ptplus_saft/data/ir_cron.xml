@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="cron_l10n_pt_get_saft_action" model="ir.cron">
+        <field name="name">Get SAF-T PT Action</field>
+        <field name="model_id" ref="base.model_res_company" />
+        <field name="state">code</field>
+        <field
+            name="code"
+        ># A method to obtain a SAF-T PT file without using the user interface
+#
+# :param company_ids:                 List of companys or False for all the PT companies
+# :param saft_type:                   C, F, I or S (Accounting, Invoicing, Integrated,
+#                                     Self-Billing). Default is F
+# :param period:                      One of month_last, month_curr, quarter_last,
+#                                     quarter_curr, year_last, year_curr
+# :param date_from:                   First day of the extraction period. If empty it will be
+#                                     computed from the period parameter
+# :param date_to:                     Last day of the extraction period. If empty it will be
+#                                     computed from the period parameter
+# :param self_billing_partner_ids:    List of self-billing partners or False for all partners
+#                                     (when saft_type == "S")
+# :param send_email:                  Boolean that determines whether an email should be sent
+#                                     or not.
+# :param email_recipients:            A list of email addresses to which the email will be sent.
+#                                     (when saft_type != "S")
+# :param invoices:                    Boolean that determines if invoices should be sent
+#                                     or not. (when saft_type == "S")
+#
+# :return:                            A list of dictionaries containing:
+#                                     'company_id':       The id of the company
+#                                     'filename' :        The name of the SAF-T file
+#                                     'file_obj':         The file object of the SAF-T in base64 format
+#                                     'error':            A boolean indicating if there are any errors
+#                                     'dataport_log_id':  The recordset of the dataport
+
+model.l10n_pt_get_saft()
+            </field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field
+            name="nextcall"
+            eval="(DateTime.now().replace(day=2, hour=6, minute=0, second=0)).strftime('%Y-%m-%d %H:%M')"
+        />
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="cron_l10n_pt_compute_saft_elements" model="ir.cron">
+        <field name="name">Compute SAF-T Elements</field>
+        <field name="model_id" ref="base.model_res_company" />
+        <field name="state">code</field>
+        <field name="code">model.l10n_pt_compute_saft_elements_cron()</field>
+        <field name="interval_number">4</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="False" />
+    </record>
+</odoo>

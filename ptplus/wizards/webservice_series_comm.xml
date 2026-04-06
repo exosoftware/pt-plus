@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="wizard_webservice_series_comm_form" model="ir.ui.view">
+        <field name="name">wizard.webservice.series.comm.form</field>
+        <field name="model">wizard.webservice.series.comm</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Communicate">
+                <field name="state" invisible="1" />
+                <field name="service_name" invisible="1" />
+                <field name="fiscal_document_type_id" invisible="1" />
+                <field name="error" invisible="1" />
+                <div invisible="service_name != 'registarSerie' or state != 'select'">
+                    <p>
+                        You're about to electronically register this series on the Tax
+                        Authority system. Once registered, you will not be able to modify
+                        it. If you later find out it contains some type of error, you'll
+                        be able to cancel it, provided no related fiscal documents were
+                        produced. Otherwise, you can finalize it and end the series lifecycle.
+                    </p>
+                </div>
+                <div invisible="service_name != 'consultarSeries' or state != 'select'">
+                    <p> You're about to import to Odoo a series that you have previously
+                        registered on the Tax Authority system. You have 2 options:<br
+                    /><br />
+                        Online - Make sure the series matches all the below filters and
+                        press the Communicate button. The series identifier will be obtained
+                        from the Tax Authority portal, together with other data that will be
+                        used for validation.<br />
+                        Offline - Enter the pre-registered series identifier and press Validate.
+                        No validation will be performed.<br /><br />
+                        Either way, if the process succeeds, a new Odoo
+                        sequence will be created and associated with this fiscal document
+                        type. A default value of 5 will be used for padding. You can tune it
+                        after the sequence creation. Also make sure you check and eventually
+                        <strong>adjust the sequence's next number</strong> as the number
+                        returned by the Tax authority may be out of date.
+                    </p>
+                </div>
+                <div invisible="service_name != 'anularSerie' or state != 'select'">
+                    <p>
+                        Use this process if the series has become useless or contains some
+                        kind of error and there are no related fiscal documents. If there
+                        are, finalize it instead.
+                    </p>
+                </div>
+                <div invisible="service_name != 'finalizarSerie' or state != 'select'">
+                    <p>
+                        Finalizing a series means it has reached the end of its lifecycle and
+                        no more fiscal documents will be created from it. If it has no related
+                        fiscal documents, you should cancel it instead.
+                    </p>
+                </div>
+                <group invisible="state != 'select'">
+                    <group>
+                        <field
+                            name="company_id"
+                            options="{'no_create': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field
+                            name="register_start_date"
+                            invisible="service_name != 'registarSerie'"
+                            required="service_name == 'registarSerie'"
+                        />
+                        <field
+                            name="register_initial_number"
+                            invisible="service_name != 'registarSerie'"
+                            required="service_name == 'registarSerie'"
+                        />
+                        <field
+                            name="cancel_reason"
+                            invisible="service_name != 'anularSerie'"
+                            required="service_name == 'anularSerie'"
+                        />
+                        <field
+                            name="cancel_non_use_declaration"
+                            invisible="service_name != 'anularSerie'"
+                            required="service_name == 'anularSerie'"
+                        />
+                        <field
+                            name="finalize_last_number"
+                            string="Last Doc. No."
+                            invisible="service_name != 'finalizarSerie'"
+                            required="service_name == 'finalizarSerie'"
+                        />
+                        <field
+                            name="finalize_justification"
+                            invisible="service_name != 'finalizarSerie'"
+                        />
+                        <field
+                            name="sync_method"
+                            invisible="service_name != 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_doc_type"
+                            invisible="sync_method != 'online' or service_name != 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_series_type"
+                            invisible="sync_method != 'online' or service_name != 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_series_state"
+                            invisible="sync_method != 'online' or service_name != 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_proc_means"
+                            invisible="sync_method != 'online' or service_name != 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_validation_code"
+                            invisible="sync_method != 'online' or service_name != 'consultarSeries'"
+                            required="service_name == 'consultarSeries'"
+                        />
+                        <field
+                            name="sync_series_identifier"
+                            invisible="sync_method != 'offline' or service_name != 'consultarSeries'"
+                            required="sync_method == 'offline' and service_name == 'consultarSeries'"
+                        />
+                    </group>
+                </group>
+                <div invisible="state != 'done'">
+                    <field name="outcome" nolabel="1" colspan="2" />
+                </div>
+                <group
+                    name="error_info"
+                    string="Error"
+                    invisible="state != 'done' or not error"
+                >
+                    <field name="error_code" string="Code" />
+                    <field name="error_message" string="Message" />
+                    <field name="error_detail" string="Detail" />
+                </group>
+                <footer invisible="state != 'select'">
+                    <button
+                        name="action_communicate"
+                        type="object"
+                        class="oe_highlight"
+                        string="Communicate"
+                        invisible="sync_method != 'online'"
+                    />
+                    <button
+                        name="action_communicate"
+                        type="object"
+                        class="oe_highlight"
+                        string="Validate"
+                        invisible="sync_method == 'online'"
+                    />
+                    <button special="cancel" string="Cancel" />
+                </footer>
+                <footer invisible="state != 'done'">
+                    <button name="close" string="Close" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

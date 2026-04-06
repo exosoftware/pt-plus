@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_dataport_log_filter" model="ir.ui.view">
+        <field name="name">dataport.log.select</field>
+        <field name="model">dataport.log</field>
+        <field name="inherit_id" ref="ptplus.view_dataport_log_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='type_saft']" position="after">
+                <filter
+                    name="type_vat_periodic"
+                    string="VAT Periodic Declaration"
+                    domain="[('type','=', 'vat.periodic')]"
+                />
+                <filter
+                    name="type_vat_periodic.annexr"
+                    string="VAT Periodic Declaration - Annex R"
+                    domain="[('type','like', 'vat.periodic.r.%')]"
+                />
+                <filter
+                    name="type_vat_yearly"
+                    string="VAT Yearly Declaration"
+                    domain="[('type','=', 'vat.yearly')]"
+                />
+                <filter
+                    name="type_vat_recap"
+                    string="Recapitulative Declaration"
+                    domain="[('type','=', 'vat.recap')]"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

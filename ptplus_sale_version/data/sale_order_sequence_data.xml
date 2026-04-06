@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="sequence_sale_order_version" model="ir.sequence">
+        <field name="name">Sale Order Version</field>
+        <field name="code">sale.order.internal</field>
+        <field name="prefix">V-%(year)s-</field>
+        <field eval="1" name="number_next" />
+        <field eval="1" name="number_increment" />
+        <field eval="False" name="use_date_range" />
+        <field eval="False" name="company_id" />
+        <field name="padding">4</field>
+    </record>
+</odoo>

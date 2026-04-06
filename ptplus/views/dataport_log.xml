@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="dataport_log_view_tree" model="ir.ui.view">
+        <field name="name">dataport.log.list</field>
+        <field name="model">dataport.log</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="create_date" string="Date" />
+                <field name="name" />
+                <field name="type" />
+                <field name="direction" />
+                <field name="method" />
+                <field name="origin" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="reported" />
+                <field name="error" />
+                <!--<field name="result" />-->
+                <field name="company_id" groups="base.group_multi_company" />
+            </list>
+        </field>
+    </record>
+
+    <record id="dataport_log_view_form" model="ir.ui.view">
+        <field name="name">dataport.log.form</field>
+        <field name="model">dataport.log</field>
+        <field name="arch" type="xml">
+            <form string="Dataport Log">
+                <header>
+                    <!-- Download -->
+                    <button
+                        name="action_open_attachment"
+                        class="oe_highlight"
+                        type="object"
+                        help="Download the imported/exported file"
+                        invisible="not attachment_id"
+                    >
+                            <i class="fa fa-arrow-right" /> Download
+                    </button>
+                </header>
+                <sheet>
+                    <div class="oe_title" colspan="2">
+                        <field name="attachment_id" invisible="1" />
+                        <h2>
+                            <field name="name" class="text-break" />
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="create_date" />
+                            <field name="type" />
+                            <field name="method" />
+                            <field name="values" />
+                        </group>
+                        <group>
+                            <field
+                                name="company_id"
+                                options="{'no_create': True}"
+                                groups="base.group_multi_company"
+                            />
+                            <field
+                                name="self_billing_partner_id"
+                                options="{'no_create': True}"
+                            />
+                            <field name="date_from" />
+                            <field name="date_to" />
+                            <field name="error" />
+                            <field name="reported" />
+                        </group>
+                    </group>
+                    <group name="info" string="Info">
+                        <field name="info" widget="html" nolabel="1" colspan="2" />
+                    </group>
+                    <group name="warnings" string="Errors/Warnings">
+                        <field name="result" widget="html" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_dataport_log_tree" model="ir.actions.act_window">
+        <field name="name">Dataport Log</field>
+        <field name="res_model">dataport.log</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="dataport_log_view_tree" />
+        <field name="domain">[('type', 'not ilike', 'payroll%')]</field>
+        <!-- <field name="search_view_id" ref="dataport_log_view_search"/>  -->
+    </record>
+
+    <record id="view_dataport_log_filter" model="ir.ui.view">
+        <field name="name">dataport.log.select</field>
+        <field name="model">dataport.log</field>
+        <field name="arch" type="xml">
+            <search string="Search Dataport Log">
+                <field
+                    name="name"
+                    filter_domain="[('name','ilike',self)]"
+                    string="Dataport Logs"
+                />
+                <filter
+                    name="type_saft"
+                    string="SAF-T"
+                    domain="[('type','=', 'saf-t')]"
+                />
+                <separator />
+                <filter name="xml" string="XML" domain="[('method','=', 'xml')]" />
+                <filter name="pdf" string="PDF" domain="[('method','=', 'pdf')]" />
+                <filter
+                    name="webservice"
+                    string="Webservice"
+                    domain="[('method','=', 'webservice')]"
+                />
+                <separator />
+                <filter name="error" string="Error" domain="[('error','=', True)]" />
+                <filter
+                    name="success"
+                    string="Success"
+                    domain="[('error','=', False)]"
+                />
+                <separator />
+                <filter
+                    name="reported"
+                    string="Reported"
+                    domain="[('reported','=', True)]"
+                />
+                <filter
+                    name="not_reported"
+                    string="Not Reported"
+                    domain="[('reported','=', False)]"
+                />
+                <separator />
+                <filter
+                    name="my_dataports"
+                    string="My Dataports"
+                    domain="[('create_uid','=',uid)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Type"
+                        name="groupby_type"
+                        context="{'group_by':'type'}"
+                    />
+                    <filter
+                        string="Dataport Date"
+                        name="groupby_create_date"
+                        context="{'group_by':'create_date'}"
+                    />
+                    <filter
+                        string="From Date"
+                        name="groupby_date_from"
+                        context="{'group_by':'date_from'}"
+                    />
+                    <filter
+                        string="To Date"
+                        name="groupby_date_to"
+                        context="{'group_by':'date_to'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_pt_dataport_log"
+        sequence="0"
+        groups="account.group_account_invoice"
+        action="action_dataport_log_tree"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+    />
+</odoo>

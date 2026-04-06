@@ -1,0 +1,332 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_accounting_cashflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-03 19:33+0000\n"
+"PO-Revision-Date: 2020-11-03 19:36+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: EXO Software\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_account
+msgid "Account"
+msgstr "Conta"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Linha de Extrato Bancário"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__cashflow_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__cashflow_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__cashflow_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_register_payments__cashflow_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.account_cashflow_view_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.account_cashflow_view_search
+msgid "Cash Flow"
+msgstr "Fluxo de Caixa"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__cashflow_required
+msgid "Cash Flow Required"
+msgstr "Fluxo de Caixa Obrigatório"
+
+#. module: ptplus_accounting_cashflow
+#: sql_constraint:account.cashflow:0
+msgid "Cash Flow code must be unique"
+msgstr "O código do fluxo de caixa tem que ser único"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__default_credit_cashflow_id
+msgid "Cash Flow on Credit"
+msgstr "Fluxo de Caixa em Créditos"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__default_debit_cashflow_id
+msgid "Cash Flow on Debit"
+msgstr "Fluxo de Caixa em Débitos"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.account_cashflow_action_list
+#: model:ir.ui.menu,name:ptplus_accounting_cashflow.menu_action_account_cashflow_list
+msgid "Cash Flows"
+msgstr "Fluxos de Caixa"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__default_credit_cashflow_id
+msgid ""
+"Cash flow type that will be automatically attributed to move lines related "
+"to accounts requiring a cash flow specification when there's a credit on "
+"this account and no type was manually assigned"
+msgstr ""
+"Tipo de fluxo de caixa que será automaticamente atribuído em linhas de "
+"movimentos relacionadas com contas configuradas com 'Fluxo de Caixa "
+"Obrigatório' quando há um crédito nesta conta e nenhum tipo foi atribuído "
+"manualmente"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__default_debit_cashflow_id
+msgid ""
+"Cash flow type that will be automatically attributed to move lines related "
+"to accounts requiring a cash flow specification when there's a debit on this "
+"account and no type was manually assigned"
+msgstr ""
+"Tipo de fluxo de caixa que será automaticamente atribuído em linhas de "
+"movimentos relacionadas com contas configuradas com 'Fluxo de Caixa "
+"Obrigatório' quando há um débito nesta conta e nenhum tipo foi atribuído "
+"manualmente"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__code
+msgid "Code"
+msgstr "Código"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:123
+#, python-format
+msgid ""
+"Couldn't automatically determine the cash flow type for at least one "
+"movement line whose account requires a cash flow type. You can either "
+"manually insert it or change the default cash flow types setup on the "
+"counterpart accounts. Move: %s. Default cash flow types:%s"
+msgstr ""
+"Não foi possível atribuir automaticamente o tipo de fluxo de caixa em pelo "
+"menos uma linha do lançamento. Pode introduzi-lo manualmente ou alterar a "
+"configuração dos fluxos de caixa pré-definidos nas contas de contrapartida. "
+"Lançamento: %s. Fluxos de Caixa pré-definidos:%s"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_res_company__transfer_cashflow_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_res_config_settings__transfer_cashflow_id
+msgid "Default Transfer Cash Flow"
+msgstr "Fluxo de Caixa de Transferências"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_move
+msgid "Journal Entries"
+msgstr "Lançamentos de Diário"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_move_line
+msgid "Journal Item"
+msgstr "Item do Diário"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_payment
+msgid "Payments"
+msgstr "Pagamentos"
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:93
+#, python-format
+msgid ""
+"Please set the cash flow type on lines containing accounts that require it. "
+"Move: %s. "
+msgstr ""
+"Por favor, atribua tipos de fluxos de caixa em linhas contendo contas que "
+"assim o exigem. Movimento: %s. "
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_register_payments
+msgid "Register Payments"
+msgstr "Registar Pagamentos"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__cashflow_required
+msgid ""
+"Set as True if the account requires a cash flow type to be defined on every "
+"journal item. Should be True on class 11 or 12 accounts and False on the "
+"rest. Please note that changing this field in the middle of a fiscal year "
+"can compromise the cash flow statement. In that case, journal items must be "
+"manually edited"
+msgstr ""
+"Assinale como Verdadeiro se for requerida a especificação do tipo de fluxo "
+"de caixa em cada movimento desta conta. Deve configurar como Verdadeiro nas "
+"contas da classe 11 e 12 e Falso nas restantes. Note, por favor, que a "
+"alteração deste valor a meio de um ano fiscal pode comprometer a "
+"demonstração de fluxos de caixa. Se isso acontecer, terá que efetuar uma "
+"correção manual dos movimentos afetados"
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account.py:43
+#, python-format
+msgid ""
+"The type of account '%s' is View and as such field Cash Flow Required cannot "
+"be True"
+msgstr ""
+"O tipo de conta de '%s' é Vista e, como tal, o campo Fluxo de Caixa "
+"Obrigatório não pode ser verdadeiro"
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:115
+#, python-format
+msgid "Undefined"
+msgstr "Indefinido"
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.res_config_settings_view_form
+msgid ""
+"Use this field to set the default cash flow type that will be applied on\n"
+"                            internal transfer operations on accounts "
+"requiring it"
+msgstr ""
+"Use este campo para estabelecer o tipo de fluxo de caixa pré-definido que "
+"será aplicado em transferências internas às contas que o exigem"
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:39
+#, python-format
+msgid ""
+"You cannot post move lines containing cash flow types on accounts that don't "
+"require it Account: %s. Cash flow type: %s."
+msgstr ""
+"Não pode registar lançamentos com linhas que contenham tipos de fluxos de "
+"caixa em contas onde estes não sejam exigidos. Conta: %s. Fluxo de caixa: %s."
+
+#. module: ptplus_accounting_cashflow
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:141
+#, python-format
+msgid ""
+"You cannot set a cash flow type because no account involved in the movement "
+"requires it. Please clear the cash flow type on the associated payment or "
+"bank statement line and try again."
+msgstr ""
+"Não pode atribuir fluxos de caixa porque nenhuma conta envolvida no "
+"lançamento o suporta. Por favor, limpe o tipo de fluxo de caixa no pagamento "
+"ou linha de extrato bancário associados e tente novamente."
+
+#~ msgid ""
+#~ "Use this field to set the default cash flow type that will be applied on "
+#~ "on internal transfer operations on accounts requiring it"
+#~ msgstr ""
+#~ "Use este campo para estabelecer o tipo de fluxo de caixa pré-definido que "
+#~ "será aplicado em transferências internas às contas que o exigem"
+
+#~ msgid "Account Entry"
+#~ msgstr "Entrada na Conta"
+
+#~ msgid "Register payments on multiple invoices"
+#~ msgstr "Registe pagamentos em múltiplas faturas"
+
+#~ msgid ""
+#~ "Cashflow type that will be associated to Banks & Cash account move lines "
+#~ "when there's a credit on this account and no cashflow type was manually "
+#~ "assigned"
+#~ msgstr ""
+#~ "Tipo de Fluxo de Caixa que será atribuído em linhas de lançamentos das "
+#~ "contas do tipo Bancos e Caixa quando há um crédito nesta conta e nenhum "
+#~ "tipo de fluxo de caixa estiver atribuído manualmente."
+
+#~ msgid ""
+#~ "Cashflow type that will be associated to Banks & Cash account move lines "
+#~ "when there's a debit on this account and no cashflow type was manually "
+#~ "assigned"
+#~ msgstr ""
+#~ "Tipo de Fluxo de Caixa que será atribuído em linhas de lançamentos das "
+#~ "contas do tipo Bancos e Caixa quando há um débito nesta conta e nenhum "
+#~ "tipo de fluxo de caixa estiver atribuído manualmente."
+
+#~ msgid ""
+#~ "Couldn't automatically determine the cash flow type for at least one "
+#~ "movement line whose account class is 11 or 12. You can either manually "
+#~ "insert it or change the default cash flow types setup on the counterpart "
+#~ "accounts. Move: %s. Default cash flow types:%s"
+#~ msgstr ""
+#~ "Não foi possível atribuir automaticamente o tipo de fluxo de caixa em "
+#~ "pelo menos uma linha do lançamento cuja classe da conta é 11 ou 12. Pode "
+#~ "introduzi-lo manualmente ou alterar a configuração dos fluxos de caixa "
+#~ "pré-definidos nas contas de contrapartida. Lançamento: %s. Fluxos de "
+#~ "Caixa pré-definidos:%s"
+
+#~ msgid "Default Debit Cashflow Type "
+#~ msgstr "Fluxo de Caixa em Débitos"
+
+#~ msgid ""
+#~ "You cannot post move lines containing cash flow types on accounts whose "
+#~ "classes are not 11 or 12. Account: %s. Cashflow type: %s."
+#~ msgstr ""
+#~ "Não pode registar lançamentos com linhas que contenham tipos de fluxos de "
+#~ "caixa em contas cuja classe não seja 11 ou 12. Conta: %s. Fluxo de caixa: "
+#~ "%s."
+
+#~ msgid ""
+#~ "Couldn't automatically determine the cashflow type for at least one "
+#~ "movement line containing a 'Banks & Cash' type account. You can either "
+#~ "manually insert it or change the default cashflow types setup on the "
+#~ "counterpart accounts. Move: %s. Default cashflow types:%s"
+#~ msgstr ""
+#~ "Não foi possível determinar automaticamente o tipo de fluxo de caixa para "
+#~ "pelo menos uma linha de lançamento contendo uma conta do tipo Bancos e "
+#~ "Caixa. Poderá atribuí-lo manualmente ou alterar os tipos de fluxos de "
+#~ "caixa pré-definidos nas contas de contrapartida. Lançamento: %s. Tipos de "
+#~ "fluxo de caixa pré-definidos:%s"
+
+#~ msgid ""
+#~ "You can only post move lines containing cashflow types on accounts of "
+#~ "type 'Banks & Cash'. Account: %s. Cashflow type: %s."
+#~ msgstr ""
+#~ "Só podem sem registados lançamentos contabilísticos em cujas linhas "
+#~ "associadas a contas de tipo 'Bancos e Caixa' seja indicado um tipo de "
+#~ "fluxo de caixa. Conta: %s. Tipo de Fluxo de Caixa: %s."

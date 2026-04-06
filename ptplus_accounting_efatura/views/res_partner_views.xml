@@ -1,0 +1,30 @@
+<odoo>
+    <record id="vendor_efatura_field_add" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <group name="accounting_entries" position="after">
+                <group string="E-Fatura Default Values" name="e_fatura">
+                    <field
+                        name="property_l10n_pt_efatura_product_id"
+                        string="Product"
+                    />
+                    <field name="property_l10n_pt_efatura_tax_id" string="Stand. Tax" />
+                    <field
+                        name="property_l10n_pt_efatura_interm_tax_id"
+                        string="Interm. Tax"
+                    />
+                    <field
+                        name="property_l10n_pt_efatura_reduced_tax_id"
+                        string="Red. Tax"
+                    />
+                    <field
+                        name="property_l10n_pt_efatura_exempt_tax_id"
+                        string="Exempt Tax"
+                    />
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
