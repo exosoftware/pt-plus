@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Certification text to add on the on the 4 layout footers -->
+    <template id="certification_text">
+        <div
+            t-if="pt_report and pt_certification_text"
+            class="text-center pt_certification_text"
+        >
+            <span t-out="pt_certification_text" /><span t-out="pt_fiscal_docs" />
+        </div>
+    </template>
+
+    <!-- Stuff to add on center top of first page of external reports -->
+    <template id="pt_features_top">
+        <div t-if="pt_report" class="pt_features_top first-page">
+            <t t-set="o" t-value="o or doc" />
+            <t
+                t-set="pt_qr_text"
+                t-value="company.pt_qrcode_pos == 'top' and o.pt_get_qr_code() or ''"
+            />
+            <div
+                t-if="pt_qr_text and company.pt_qrcode_pos == 'top'"
+                class="pt_qr_code"
+            >
+                <div class="pt_atcud" t-if="o.atcud">
+                    <span>ATCUD: </span>
+                    <span t-field="o.atcud" />
+                </div>
+                <img t-att-src="'/report/pt_qrcode/?value=%s' % pt_qr_text" />
+            </div>
+        </div>
+    </template>
+
+    <!-- Stuff to include on invoices that are used instead of delivery slips -->
+    <template id="pt_invoice_delivery_info">
+        <div
+            class="pt_invoice_delivery_info"
+            t-if="o.l10n_pt_company_invoice_as_delivery and o.source_billing and o.fiscal_document_type_id and o.fiscal_document_type_id.type in ['FT', 'FR', 'FS'] and o.has_products()"
+        >
+            <div style="display: inline-block; vertical-align: top;" class="mt-0 mr-3">
+                <strong>Loading:</strong>
+                <div
+                    t-out="o.l10n_pt_loading_partner_id"
+                    t-if="o.l10n_pt_loading_partner_id and (o.l10n_pt_loading_partner_id != o.partner_id)"
+                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                />
+                <div t-else="">Our Warehouse</div>
+                <p t-if="o.l10n_pt_loading_time">
+                    <i
+                        class="fa fa-clock-o mr-1"
+                        role="img"
+                        aria-label="Date"
+                        title="Date"
+                    />
+                    <span
+                        t-out="o.l10n_pt_loading_time"
+                        t-options="{'widget': 'datetime'}"
+                    />
+                </p>
+            </div>
+            <div style="display: inline-block; vertical-align: top;" class="mt-0 mr-3">
+                <strong>Unloading:</strong>
+                <div
+                    t-out="o.l10n_pt_unloading_partner_id"
+                    t-if="o.l10n_pt_unloading_partner_id and (o.l10n_pt_unloading_partner_id != o.partner_id)"
+                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                />
+                <div t-else="">Customer Address</div>
+                <!--<p t-if="not shipto_partner or (shipto_partner == partner)">You Warehouse</p>-->
+                <p t-if="o.l10n_pt_unloading_time">
+                    <i
+                        class="fa fa-clock-o mr-1"
+                        role="img"
+                        aria-label="Date"
+                        title="Date"
+                    />
+                    <span
+                        t-out="o.l10n_pt_unloading_time"
+                        t-options="{'widget': 'datetime'}"
+                    />
+                </p>
+            </div>
+        </div>
+    </template>
+
+    <!-- Stuff to add after the last content on the last page of external reports -->
+    <template id="pt_features_bottom">
+        <div t-if="pt_report" class="pt_features_bottom">
+            <t t-set="o" t-value="o or doc" />
+            <t
+                t-set="pt_qr_text"
+                t-value="o.company_id.pt_qrcode_pos == 'bottom' and o.pt_get_qr_code() or ''"
+            />
+            <div
+                t-if="pt_qr_text and o.company_id.pt_qrcode_pos == 'bottom'"
+                class="pt_qr_code"
+            >
+                <div class="pt_atcud" t-if="o.atcud">
+                    <span>ATCUD: </span>
+                    <span t-field="o.atcud" />
+                </div>
+                <img t-att-src="'/report/pt_qrcode/?value=%s' % pt_qr_text" />
+            </div>
+            <t
+                t-call="ptplus.pt_invoice_delivery_info"
+                t-if="o._name == 'account.move'"
+            />
+        </div>
+    </template>
+
+    <!-- Layout Striped -->
+    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
+            <t t-call="ptplus.certification_text" />
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_background_header')]" position="before">
+            <t t-call="ptplus.pt_features_top" />
+        </xpath>
+    </template>
+
+    <!-- Layout Boxed -->
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
+            <t t-call="ptplus.certification_text" />
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_boxed_header')]" position="before">
+            <t t-call="ptplus.pt_features_top" />
+        </xpath>
+    </template>
+
+    <!-- Layout Bold -->
+    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
+            <t t-call="ptplus.certification_text" />
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_clean_header')]" position="before">
+            <t t-call="ptplus.pt_features_top" />
+        </xpath>
+    </template>
+
+    <!-- Layout Standard -->
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
+            <t t-call="ptplus.certification_text" />
+        </xpath>
+
+        <xpath expr="//div[@name='company_address']" position="before">
+            <t t-call="ptplus.pt_features_top" />
+        </xpath>
+    </template>
+
+</odoo>

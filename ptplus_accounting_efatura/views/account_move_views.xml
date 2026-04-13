@@ -1,0 +1,162 @@
+<odoo>
+
+    <record id="action_merge_efatura_invoices" model="ir.actions.server">
+        <field name="name">Merge E-Fatura Invoices</field>
+        <field name="model_id" ref="account.model_account_move" />
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                if all(rec.is_purchase_document() for rec in records):
+                    action = records.l10n_pt_efatura_merge()
+                else:
+                    raise UserError("This action is only possible for vender invoices")
+        </field>
+    </record>
+
+    <record id="view_move_form_efatura" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_cancel']" position="before">
+                <field name="l10n_pt_efatura_scan" invisible="1" />
+                <field name="message_main_attachment_id" invisible="1" />
+                <button
+                    name="l10n_pt_action_scan"
+                    string='Scan QR'
+                    type='object'
+                    class="btn-primary"
+                    icon="fa-qrcode"
+                    help="Look for and e-fatura QR code on the document attachment and fill the invoice fields from the data it"
+                    attrs="{'invisible': [
+                        '|',
+                        '|',
+                        '|',
+                        '|',
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('state', '!=', 'draft'),
+                        ('ref', '!=', False),
+                        ('message_main_attachment_id', '=', False),
+                        ('l10n_pt_efatura_scan', '=', False)
+                    ]}"
+                />
+                <button
+                    name="l10n_pt_action_scan"
+                    string='Scan QR'
+                    type='object'
+                    class="btn-secondary"
+                    icon="fa-qrcode"
+                    help="Look for and e-fatura QR code on the document attachment and fill the invoice fields from the data it"
+                    attrs="{'invisible': [
+                        '|',
+                        '|',
+                        '|',
+                        '|',
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('state', '!=', 'draft'),
+                        ('ref', '=', False),
+                        ('message_main_attachment_id', '=', False),
+                        ('l10n_pt_efatura_scan', '=', False)
+                    ]}"
+                />
+            </xpath>
+            <xpath expr="//group[@id='header_right_group']" position="inside">
+                 <field name="attachment_ids" invisible="1" />
+                <field name="l10n_pt_efatura_mismatch" invisible="1" />
+                <field name="l10n_pt_efatura_mismatch_vat" invisible="1" />
+                <field name="country_code" invisible="1" />
+                <field
+                    name="l10n_pt_efatura_vat_amount"
+                    decoration-danger="l10n_pt_efatura_mismatch_vat"
+                    decoration-success="not l10n_pt_efatura_mismatch_vat"
+                    attrs="{'invisible': [
+                        '|',
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('l10n_pt_efatura_id', '=', []),
+                    ]}"
+                />
+                <field
+                    name="l10n_pt_efatura_total"
+                    decoration-danger="l10n_pt_efatura_mismatch"
+                    decoration-success="not l10n_pt_efatura_mismatch"
+                    attrs="{'invisible': [
+                        '|',
+                        '|',
+                        ('country_code', '!=', 'PT'),
+                        ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                        ('l10n_pt_efatura_id', '=', []),
+                    ]}"
+                />
+            </xpath>
+            <page name="other_info" position="inside">
+                <group>
+                    <group>
+                        <field
+                            name="l10n_pt_efatura_id"
+                            attrs="{'invisible': [
+                                '|',
+                                '|',
+                                ('country_code', '!=', 'PT'),
+                                ('move_type', 'not in', ('in_invoice', 'in_refund')),
+                                ('l10n_pt_efatura_id', '=', []),
+                            ]}"
+                        >
+                            <tree>
+                                <field name="reference" />
+                                <field name="vendor_id" />
+                                <button
+                                    name="action_open_efatura"
+                                    string="View"
+                                    type="object"
+                                    class="btn-outline-info"
+                                    icon="fa-arrow-right"
+                                    context="{'default_invoice_id': id}"
+                                />
+                            </tree>
+                        </field>
+                    </group>
+                </group>
+            </page>
+        </field>
+    </record>
+
+    <record id="view_move_tree_efatura" model="ir.ui.view">
+        <field name="name">account.move.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree" />
+        <field name="arch" type="xml">
+            <field name="payment_state" position="before">
+                <field
+                    name="l10n_pt_efatura_mismatch_vat"
+                    attrs="{'column_invisible': True}"
+                />
+                <field
+                    name="l10n_pt_efatura_mismatch"
+                    attrs="{'column_invisible': True}"
+                />
+                <field
+                    name="l10n_pt_efatura_vat_amount"
+                    optional="hide"
+                    decoration-danger="l10n_pt_efatura_mismatch_vat"
+                    decoration-success="not l10n_pt_efatura_mismatch_vat"
+                    attrs="{'column_invisible': [('parent.move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                />
+                <field
+                    name="l10n_pt_efatura_total"
+                    optional="hide"
+                    decoration-danger="l10n_pt_efatura_mismatch"
+                    decoration-success="not l10n_pt_efatura_mismatch"
+                    attrs="{'column_invisible': [('parent.move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

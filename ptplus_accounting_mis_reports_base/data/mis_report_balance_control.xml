@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- MIS Report Base: Expected Balance Control -->
+    <record id="mis_balance_control_pt_base" model="mis.report">
+        <field name="name">Controlo do Saldo Esperado das Contas (Base)</field>
+        <field
+            name="description"
+        >Controlo do Saldo Esperado das Contas SVAT - SNC Base</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account-all"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_d" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">D</field>
+        <field name="description">Saldo devedor após AR</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >nbale[11%,1411%,1421%,1431%,228%,232%,2431%,2432%,2437%,2438%,261%,262%,263%,266%,2713%,2721%,2741%,281%,321%,322%,323%,324%,325%,326%,327%,328%,331%,332%,333%,334%,335%,336%,337%,338%,341%,342%,343%,344%,345%,346%,347%,348%,351%,352%,353%,354%,355%,356%,357%,358%,361%,362%,363%,364%,365%,366%,367%,368%,371%,372%,39%,411%,412%,413%,414%,415%,421%,422%,423%,424%,425%,426%,427%,431%,432%,433%,434%,435%,436%,437%,441%,442%,443%,444%,445%,446%,447%,451%,452%,453%,454%,455%,456%,457%,458%,461%,462%,463%,464%,465%,466%,467%,521%,5812%,5892%,5932%,89%]</field>
+        <field name="sequence">10</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_c" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">C</field>
+        <field name="description">Saldo credor após AR</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbale[1412%,1422%,1432%,218%,219%,229%,231%,237%,239%,242%,2433%,2436%,25%,269%,2722%,273%,2742%,275%,276%,279%,282%,29%,329%,339%,349%,359%,369%,373%,374%,375%,376%,377%,378%,379%,416%,417%,418%,419%,428%,429%,438%,439%,448%,449%,456%,457%,458%,459%,468%,469%,51%,53%,54%,55%,5712%,5811%,5891%,5931%,594%]</field>
+        <field name="sequence">20</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_da" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Da</field>
+        <field name="description">Saldo devedor antes do AR</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >nbalp[62%,631%,632%,634%,635%,636%,637%,638%,64%,65%,66%,67%,68%,69%,717%,718%,728%,8121%][('journal_id.code','!=', 'APR')]</field>
+        <field name="sequence">30</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_ca" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Ca</field>
+        <field name="description">Saldo credor antes do AR</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >pbalp[711%,712%,713%.714%,721%,722%,723%,724%,725%,74%,75%,76%,77%,78%,79%][('journal_id.code', '!=','APR')]</field>
+        <field name="sequence">40</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_da_ca_sa1c" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Da_Ca_Sa1c</field>
+        <field name="description">Saldadas após AR</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >balp[62%,631%,632%,634%,635%,636%,637%,638%,64%,65%,66%,67%,68%,69%,717%,718%,728%,8121%,711%,712%,713%.714%,721%,722%,723%,724%,725%,74%,75%,76%,77%,78%,79%,61%,633%,716%,726%,73%,811%,8122%]</field>
+        <field name="sequence">50</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_dc" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Dc</field>
+        <field name="description">Saldo devedor antes de trnsf INVENTÁRIO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">nbalp[311%,312%,313%]</field>
+        <field name="sequence">60</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_cc" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Cc</field>
+        <field name="description">Saldo credor antes de trnsf INVENTÁRIO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field name="expression">pbalp[317%,318%]</field>
+        <field name="sequence">70</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+    <record id="mis_balance_control_pt_base_kpi_dc_cc_Sc" model="mis.report.kpi">
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="name">Dc_Cc_Sc</field>
+        <field name="description">Saldadas após trnsf INVENTÁRIO</field>
+        <field
+            name="style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_view_indent_0"
+        />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="accumulation_method">sum</field>
+        <field
+            name="expression"
+        >balp[311%,312%,313%,314%,315%,316%,317%,318%,38%]</field>
+        <field name="sequence">80</field>
+        <field name="auto_expand_accounts">True</field>
+        <field
+            name="auto_expand_accounts_style_id"
+            ref="ptplus_accounting_mis_reports.mis_style_account_mov_indent_1"
+        />
+    </record>
+
+    <!-- MIS Report Instance: Balance Control -->
+    <record id="mis_instance_balance_control_pt_base" model="mis.report.instance">
+        <field name="name">Controlo do Saldo Esperado das Contas (Base)</field>
+        <field name="description" />
+        <field name="report_id" ref="mis_balance_control_pt_base" />
+        <field name="comparison_mode">False</field>
+        <field name="date_from" eval="'2022-01-01'" />
+        <field name="date_to" eval="'2022-12-31'" />
+    </record>
+
+</odoo>

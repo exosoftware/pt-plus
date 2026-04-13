@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_edi_pt" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.edi.pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@id='l10n_pt_einvoicing']/div[hasclass('o_setting_right_pane')]"
+                position="inside"
+            >
+                <div class="content-group">
+                    <div class="row mt16">
+                        <group groups="base.group_no_one">
+                            <field
+                                name="l10n_pt_edi_cius_disable_validation"
+                                class="col-lg-1 ml16"
+                                nolabel="1"
+                                attrs="{'invisible': [('l10n_pt_cert_service_backend', '!=', 'test')]}"
+                            />
+                            <label
+                                for="l10n_pt_edi_cius_disable_validation"
+                                class="o_light_label"
+                                attrs="{'invisible': [('l10n_pt_cert_service_backend', '!=', 'test')]}"
+                            />
+                        </group>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

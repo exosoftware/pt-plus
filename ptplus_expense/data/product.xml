@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="trav_expenses_own_vehicle" model="product.template">
+        <field name="name">Traveling Expenses (Own Vehicle)</field>
+        <field name="uom_id" ref="uom.product_uom_km" />
+        <field name="uom_po_id" ref="uom.product_uom_km" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">0.4</field>
+        <field name="l10n_pt_expense_type">DES_VPROP</field>
+    </record>
+
+    <record id="per_diems_national" model="product.template">
+        <field name="name">Per Diems National</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">62.75</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_NAC</field>
+    </record>
+
+    <record id="per_diems_national_75" model="product.template">
+        <field name="name">Per Diems National (75%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">47.06</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_NAC_75</field>
+    </record>
+
+    <record id="per_diems_national_50" model="product.template">
+        <field name="name">Per Diems National (50%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">31.38</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_NAC_50</field>
+    </record>
+
+    <record id="per_diems_national_25" model="product.template">
+        <field name="name">Per Diems National (25%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">15.69</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_NAC_25</field>
+    </record>
+
+    <record id="per_diems_internacional" model="product.template">
+        <field name="name">Per Diems Internacional</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">148.91</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_INT</field>
+    </record>
+
+    <record id="per_diems_internacional_75" model="product.template">
+        <field name="name">Per Diems Internacional (75%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">111.68</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_INT_75</field>
+    </record>
+
+    <record id="per_diems_internacional_50" model="product.template">
+        <field name="name">Per Diems Internacional (50%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">74.46</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_INT_50</field>
+    </record>
+
+    <record id="per_diems_internacional_25" model="product.template">
+        <field name="name">Per Diems Internacional (25%)</field>
+        <field name="uom_id" ref="uom.product_uom_day" />
+        <field name="uom_po_id" ref="uom.product_uom_day" />
+        <field name="detailed_type">service</field>
+        <field name="can_be_expensed">True</field>
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">False</field>
+        <field name="expense_policy">cost</field>
+        <field name="standard_price">37.23</field>
+        <field name="l10n_pt_expense_type">AJUD_CUSTO_INT_25</field>
+    </record>
+</odoo>

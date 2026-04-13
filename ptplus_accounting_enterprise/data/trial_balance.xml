@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="account_reports.trial_balance_report" model="account.report">
+        <field name="unfold_partners" eval="True" />
+        <field name="show_partner_breakdown" eval="True" />
+    </record>
+
+    <template
+        id="search_template_extra_options_balance_report"
+        inherit_id="account_reports.search_template_extra_options"
+        priority="100"
+    >
+        <xpath expr="//div[@role='menu']" position="inside">
+            <a
+                role="menuitem"
+                t-if="report.unfold_partners"
+                class="dropdown-item js_account_report_bool_filter"
+                title="Unfold Partners"
+                data-filter="unfold_partners"
+            >Unfold Partners</a>
+            <a
+                role="menuitem"
+                t-if="report.show_partner_breakdown"
+                class="dropdown-item js_account_report_bool_filter"
+                title="Show Partner Breakdown"
+                data-filter="show_partner_breakdown"
+            >Show Partner Breakdown</a>
+        </xpath>
+        <xpath
+            expr="//div[@role='menu']/a[@data-filter='unfold_all']"
+            position="replace"
+        >
+            <a
+                role="menuitem"
+                class="dropdown-item js_account_report_bool_filter"
+                t-if="report.filter_unfold_all"
+                title="Unfold"
+                data-filter="unfold_all"
+            >Unfold Accounting</a>
+        </xpath>
+    </template>
+
+
+</odoo>

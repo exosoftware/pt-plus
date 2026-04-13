@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@id='pos_accounting_section']" position="inside">
+
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="inv_fiscal_document_type"
+                >
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Document Type for Invoices</span>
+                        <div class="text-muted">
+                            The portuguese fiscal document to apply on this POS invoices.
+                        </div>
+                        <div class="content-group mt16">
+                            <div class="row">
+                                <field name="pos_l10n_pt_inv_fiscal_doc_type_id" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="cred_fiscal_document_type"
+                >
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Document Type for Credit Notes</span>
+                        <div class="text-muted">
+                            The portuguese fiscal document to apply on this POS credit notes.
+                        </div>
+                        <div class="content-group mt16">
+                            <div class="row">
+                                <field name="pos_l10n_pt_cred_fiscal_doc_type_id" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="bill_fiscal_document_type"
+                >
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Document Type for Bills</span>
+                        <div class="text-muted">
+                            The portuguese fiscal document to apply on this POS bills.
+                        </div>
+                        <div class="content-group mt16">
+                            <div class="row">
+                                <field name="pos_l10n_pt_bill_fiscal_doc_type_id" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 o_setting_box" id="default_partner">
+                    <div class="o_setting_right_pane">
+                        <div>
+                            <label
+                                string="Default customer"
+                                for="pos_l10n_pt_default_partner_id"
+                            />
+                            <div class="text-muted">
+                                Default customer to use if none is set
+                            </div>
+                            <div class="content-group mt16">
+                                <field
+                                    name="pos_l10n_pt_default_partner_id"
+                                    colspan="4"
+                                    nolabel="1"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

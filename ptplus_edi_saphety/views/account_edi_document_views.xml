@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_tree_account_edi_document_pt" model="ir.ui.view">
+        <field name="name">Account.edi.document.tree.pt</field>
+        <field name="model">account.edi.document</field>
+        <field name="inherit_id" ref="account_edi.view_tree_account_edi_document" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="l10n_pt_edi_cius_saphety_request_id" />
+                <field name="l10n_pt_edi_cius_saphety_request_status" />
+                <field name="l10n_pt_edi_cius_saphety_document_id" />
+                <field name="l10n_pt_edi_cius_saphety_integration_status" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

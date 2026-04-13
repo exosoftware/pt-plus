@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Sale Report -->
+    <template
+        id="report_saleorder_document_pt_edi"
+        inherit_id="sale.report_saleorder_document"
+    >
+
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div
+                class="col-auto col-3 mw-100 mb-2"
+                t-if="doc.source_billing and doc.l10n_pt_commitment_number"
+            >
+                <strong>Commitment No.:</strong>
+                <p class="m-0" t-field="doc.l10n_pt_commitment_number" />
+            </div>
+            <div
+                class="col-auto col-3 mw-100 mb-2"
+                t-if="doc.source_billing and doc.l10n_pt_fitting_number"
+            >
+                <strong>Fitting No.:</strong>
+                <p class="m-0" t-field="doc.l10n_pt_fitting_number" />
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

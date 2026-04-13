@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="http://www.dgci.gov.pt/2002/OT" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.dgci.gov.pt/2002/OT" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:include schemaLocation="ObrigAcessorias.xsd"/>
+	<xs:element name="Modelo30">
+		<xs:annotation>
+			<xs:documentation>Rendimentos pagos ou colocados à disposição de sujeitos passivos não residentes</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="DeclaracaoType2">
+					<xs:sequence>
+						<xs:element name="Mes" type="Month" minOccurs="0"/>
+						<xs:element name="JustoImpedimento" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Facto que determinou o justo impedimento</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction	base="xs:string">
+									<xs:length value="2" />
+									<xs:whiteSpace value="collapse" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="DataJustoImpedimento" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Data da ocorrência do facto</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction	base="xs:date">
+									<xs:whiteSpace value="collapse" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Retidas" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>[6] - Resumo das Importâncias Retidas</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Dividendos" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[06] - Dividendos ou Lucros derivados de Participações Sociais</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Juros" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[07] - Juros ou Rendimentos derivados da Aplicação de Capitais</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Royalties" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[08] - Royalties</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="TrabDependente" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[09] - Trabalho Dependente</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="TrabIndependente" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[10] - Trabalho Independente</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Comissoes" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[11] - Comissões</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Prediais" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[12] - Prediais</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Pensoes" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[13] - Pensões</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Servicos" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[14] - Prestações de Serviços</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="RemuneracoesPublicas" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[40] - Remunerações Públicas</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="PensoesPublicas" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[41] - Pensões Públicas</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Outros" type="ValorType15_2" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>[16] - Outros</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Guia" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>[7] - Relação das Guias de Pagamento</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="SequenciaType">
+										<xs:sequence>
+											<xs:element name="Numero">
+												<xs:annotation>
+													<xs:documentation>[18.1] - Número da Guia de Pagamento</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:unsignedLong">
+														<xs:totalDigits value="11"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Valor">
+												<xs:annotation>
+													<xs:documentation>[18.2] - Valor Total da Guia de Pagamento</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minExclusive value="0.00"/>
+														<xs:totalDigits value="15"/>
+														<xs:fractionDigits value="2"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Registo" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>[8] - Relação dos Beneficiários dos Rendimento</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="SequenciaType">
+										<xs:sequence>
+											<xs:element name="Beneficiario" type="NIFType">
+												<xs:annotation>
+													<xs:documentation>[31] - Número de Identificação Fiscal Português</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="NIFEstrangeiro" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[32] - Número de Identificação Fiscal no País de Residência</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="NIFEstrangeiroType">
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Pais" type="PaisType">
+												<xs:annotation>
+													<xs:documentation>[33] - Código do País de Residência</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="PercCapitalD" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[34.1] - Percentagem de Participação do sujeito passivo no Capital Social da declarante</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="100"/>
+														<xs:fractionDigits value="0"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="PercCapitalS" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[34.2] - Percentagem de Participação da declarante no Capital Social do sujeito passivo</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="100"/>
+														<xs:fractionDigits value="0"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="TipoRend">
+												<xs:annotation>
+													<xs:documentation>[35.1] - Tipo de Rendimento conforme Modelo de Convenção da OCDE</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:length value="2"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Rendimento">
+												<xs:annotation>
+													<xs:documentation>[35.2] - Valor Total Bruto do Rendimento pago ou colocado à disposição</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minExclusive value="0.00"/>
+														<xs:totalDigits value="17"/>
+														<xs:fractionDigits value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Tributacao">
+												<xs:annotation>
+													<xs:documentation>[36.1] - Código do regime de Tributação</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:length value="2"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Taxa" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[36.2] - Taxa de tributação aplicada</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="100"/>
+														<xs:fractionDigits value="2"/>
+														<xs:whiteSpace value="collapse"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="Retencao" type="ValorType15_2Ext" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[37] - Montante do Imposto Retido</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="Emitente" type="NIFType" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>[39] - Número de Identificação Fiscal da Entidade Emitente</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="ValorType15_2Ext">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.00"/>
+			<xs:totalDigits value="15"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

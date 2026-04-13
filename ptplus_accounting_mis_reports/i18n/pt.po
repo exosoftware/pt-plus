@@ -1,0 +1,189 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_accounting_mis_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-13 18:06+0000\n"
+"PO-Revision-Date: 2024-03-26 19:32+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-16-0/ptplus_accounting_mis_reports/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model,name:ptplus_accounting_mis_reports.model_account_account
+msgid "Account"
+msgstr "Conta"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model,name:ptplus_accounting_mis_reports.model_account_group
+msgid "Account Group"
+msgstr "Grupo de Contas"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_mis_reports.selection__mis_report__l10n_pt_autogen_visibility__all
+msgid "All Accounts"
+msgstr "Todas as contas"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,help:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_expression
+msgid ""
+"An expression that defines the number of columns in the report and its "
+"contents. For a single column output use a simple kpi expression, ex. "
+"bal[$conta%]. For multi column output, use the following syntax: COL1-"
+"NAME=COL1-KPIEXPRESSION;COL2-NAME=COL2-KPIEXPRESSION;(...). Ex. "
+"Debit=debp[$conta%];Credit=crdp[$conta%]. In either case, the $conta or "
+"${conta} keywords will be replaced on each line by the actual line account."
+msgstr ""
+"Uma expressão que define o número de colunas de um relatório e o respetivo "
+"conteúdo. Para um relatório de coluna única, utilize uma expressão KPI "
+"simples, p. ex. bal[$conta%]. Para resultados multi-coluna, use a seguinte "
+"sintaxe: NOME-COL1=EXPRESSAOKPI-COL1;NOME-COL2=EXPRESSÃOKPI-COL2;(...). Ex. "
+"Débito=debp[$conta%];Crédito=crdp[$conta%]. Em qualquer caso, as chaves "
+"$conta ou ${conta} serão substituídas em cada linha do relatório pelo "
+"respetivo número da conta."
+
+#. module: ptplus_accounting_mis_reports
+#: model:mis.report,description:ptplus_accounting_mis_reports.mis_trial_balance_pt
+#: model:mis.report.instance,description:ptplus_accounting_mis_reports.mis_trial_balance_instance_pt
+msgid "Analytic Trial Balance"
+msgstr "Balancete Analítico"
+
+#. module: ptplus_accounting_mis_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_mis_reports.mis_report_view_form
+msgid "Auto Generation"
+msgstr "Auto Geração"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen
+msgid "Auto-generated"
+msgstr "Auto-gerado"
+
+#. module: ptplus_accounting_mis_reports
+#: code:addons/ptplus_accounting_mis_reports/models/mis_report.py:0
+#, python-format
+msgid "Couldn't find required report style %s"
+msgstr "Não foi possível encontrar o necessário estilo de relatório %s"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_account__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_group__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report_instance__display_name
+msgid "Display Name"
+msgstr "Nome"
+
+#. module: ptplus_accounting_mis_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_mis_reports.mis_report_view_form
+msgid "Generate Report"
+msgstr "Gerar Relatório"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_account__id
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_group__id
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__id
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report_instance__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,help:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_totals
+msgid "Include a grand total line on the end of the report"
+msgstr "Adicionar uma linha de totais globais no final do relatório"
+
+#. module: ptplus_accounting_mis_reports
+#: code:addons/ptplus_accounting_mis_reports/models/mis_report.py:0
+#, python-format
+msgid "Incorrect column expression %s"
+msgstr "Expressão de coluna incorreta %s"
+
+#. module: ptplus_accounting_mis_reports
+#: code:addons/ptplus_accounting_mis_reports/models/mis_report.py:0
+#, python-format
+msgid "Incorrect line expression for single column report"
+msgstr "Expressão de linha incorreta para um relatório de coluna única"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_account____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_account_group____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report____last_update
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report_instance____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_expression
+msgid "Line Expression"
+msgstr "Expressão de Linha"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model,name:ptplus_accounting_mis_reports.model_mis_report_instance
+msgid "MIS Report Instance"
+msgstr "Instância de Relatório de Gestão"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model,name:ptplus_accounting_mis_reports.model_mis_report
+msgid "MIS Report Template"
+msgstr "Modelo de Relatórios de Gestão"
+
+#. module: ptplus_accounting_mis_reports
+#: code:addons/ptplus_accounting_mis_reports/models/mis_report.py:0
+#, python-format
+msgid "No line expression defined"
+msgstr "Não foi definida nenhuma expressão de linha"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_tainted
+msgid "Tainted"
+msgstr "Comprometido"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_totals
+msgid "Totals Line"
+msgstr "Linha de Totais"
+
+#. module: ptplus_accounting_mis_reports
+#: model:mis.report,name:ptplus_accounting_mis_reports.mis_trial_balance_pt
+#: model:mis.report.instance,name:ptplus_accounting_mis_reports.mis_trial_balance_instance_pt
+msgid "Trial Balance"
+msgstr "Balancete"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,help:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_tainted
+msgid ""
+"True if the report is not consistent with the CoA. It is automatically set "
+"each time an account is modified. You can force an update using the "
+"'Generate Report' command or wait for the system to automatically do it for "
+"you on report rendering"
+msgstr ""
+"Verdadeiro se o relatório não é consistente com o PdC. É automaticamente "
+"assinalado cada vez que a configuração de uma conta é alterada. Pode forçar "
+"uma atualização usando o comando 'Gerar Relatório' ou esperar que o sistema "
+"o faça automaticamente na próxima vez que o relatório for emitido"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_mis_reports.selection__mis_report__l10n_pt_autogen_visibility__used
+msgid "Used Accounts"
+msgstr "Contas utilizadas"
+
+#. module: ptplus_accounting_mis_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_mis_reports.field_mis_report__l10n_pt_autogen_visibility
+msgid "Visibility"
+msgstr "Visibilidade"
+
+#~ msgid "Real"
+#~ msgstr "Reais"
+
+#~ msgid "Virtual"
+#~ msgstr "Virtuais"
+
+#~ msgid "Include Totals Lines"
+#~ msgstr "Incluir Linha de Totais"

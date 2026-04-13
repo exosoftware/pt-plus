@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="report_saleorder_document"
+        inherit_id="sale.report_saleorder_document"
+    >
+        <xpath expr="//div[@t-if='doc.user_id.name']" position="before">
+            <div class="col-auto col-3 mw-100 mb-2" t-if="doc.internal_name">
+                <strong>Internal Ref.:</strong>
+                <p class="m-0" t-field="doc.internal_name" />
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

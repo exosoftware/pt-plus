@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+        <!-- Sales invoice form -->
+    <record id="view_move_form_pt_adj" model="ir.ui.view">
+        <field name="name">account.move.form.pt.adj</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <!-- VAT Adjustment Norm -->
+            <xpath
+                expr="//page[@name='other_info']//field[@name='fiscal_position_id']"
+                position="after"
+            >
+                <field name="correction" invisible="1" />
+                <field
+                    name="l10n_pt_vat_adjustment_norm_id"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('correction', '=', False)]}"
+                    domain="['|', ('vat_receivable', '=', move_type == 'out_refund'),
+                                     ('vat_receivable', '=', True),
+                                '|', ('vat_payable', '=', move_type == 'in_refund'),
+                                     ('vat_payable', '=', True),
+                                     ]"
+                    options="{'no_create_edit': True}"
+                />
+
+                <field name="l10n_pt_vat_adjustment_requests_policy" invisible="1" />
+                <field
+                    name="l10n_pt_vat_adjustment_request_number"
+                    attrs="{'invisible': ['|', ('country_code', '!=', 'PT'), ('l10n_pt_vat_adjustment_requests_policy', 'not in', ('optional', 'mandatory'))]}"
+                />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='invoice_line_ids']/tree/field[@name='name']"
+                position="after"
+            >
+                <field name="l10n_pt_note" optional="hide" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='line_ids']/tree/field[@name='name']"
+                position="after"
+            >
+                <field name="l10n_pt_note" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

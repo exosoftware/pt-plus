@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="company_eac_search_view" model="ir.ui.view">
+        <field name="name">l10n_pt.company.eac.search</field>
+        <field name="model">l10n_pt.company.eac</field>
+        <field name="arch" type="xml">
+            <search string="Company EAC">
+                <field name="code" string="EAC codes" />
+                <field name="name" string="EAC names" />
+                <field name="parent_id" />
+                <filter
+                    string="Usable EAC"
+                    name="usable_eac"
+                    domain="[('child_ids', '=', False)]"
+                />
+            </search>
+        </field>
+    </record>
+    <record id="company_eac_form_view" model="ir.ui.view">
+        <field name="name">l10n_pt.company.eac.form</field>
+        <field name="model">l10n_pt.company.eac</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="action_view_partners"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-th-list"
+                        >
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field
+                                        name="partner_count"
+                                    /></span>
+                                <span class="o_stat_text"> Partners</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1 class="oe_read_only">
+                            <field name="code" placeholder="code" />
+                            -
+                            <field name="name" placeholder="name" />
+                        </h1>
+                        <div class="oe_inline oe_edit_only">
+                            <label for="code" />
+                            <field name="code" placeholder="code" />
+                            <label for="name" />
+                            <field name="name" placeholder="name" />
+                        </div>
+                    </div>
+                    <group name="first" col="2">
+                        <field name="parent_id" class="oe_inline" />
+                        <field name="type" />
+                        <field name="complete_name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="company_eac_list_view" model="ir.ui.view">
+        <field name="name">l10n_pt.company.eac.list</field>
+        <field name="model">l10n_pt.company.eac</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="child_ids==False">
+                <field name="display_name" string="EAC" />
+                <field name="parent_id" optional="hide" />
+                <field name="type" optional="show" />
+                <field name="complete_name" optional="hide" />
+                <field name="child_ids" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="company_eac_action" model="ir.actions.act_window">
+        <field name="name">Company EAC</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_pt.company.eac</field>
+        <field name="search_view_id" ref="company_eac_search_view" />
+        <field name="view_id" ref="company_eac_list_view" />
+    </record>
+
+    <menuitem
+        id="company_eac_menu"
+        action="company_eac_action"
+        parent="contacts.res_partner_menu_config"
+        name="Company EAC"
+    />
+
+</odoo>
