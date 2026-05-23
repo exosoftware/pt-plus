@@ -1,0 +1,1262 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_saft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-08 15:41+0000\n"
+"PO-Revision-Date: 2025-07-08 16:45+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-17-0/ptplus_saft/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: ptplus_saft
+#: model:mail.template,body_html:ptplus_saft.email_template_partner_saft
+msgid ""
+"<div>\n"
+"                <p>Hello Dear <t t-out=\"object.name\"></t>,</p>\n"
+"                <p>Please find attached your SAF-T pertaining to the company "
+"<t t-out=\"object.company_id.name\"></t>.</p>\n"
+"\n"
+"                <p>Thank you.</p>\n"
+"                <p><t t-out=\"object.company_id.name\"></t></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                    <p>Olá Caro(a) <t t-out=\"object.name\" />,</p>\n"
+"                    <p>Por favor, verifique em anexo o seu SAF-T relativo à "
+"empresa <t t-out=\"object.company_id.name\" />.</p>\n"
+"\n"
+"                    <p>Obrigado(a).</p>\n"
+"                    <p><t t-out=\"object.company_id.name\" /></p>\n"
+"                </div>\n"
+"            "
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
+msgid ""
+"<span class=\"o_form_label\">SAF-T Computing Method</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" "
+"title=\"Values set here are company-specific.\" aria-label=\"Values set here "
+"are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_form
+msgid "<span class=\"o_stat_text\">Odoo Moves</span>"
+msgstr "<span class=\"o_stat_text\">Movimentos Odoo</span>"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid ""
+"<span class=\"text-muted\">\n"
+"                        Please indicate if the following operations have "
+"been completed:\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-muted\">\n"
+"Por favor, indique se as seguintes operações foram concluídas:\n"
+"</span>"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__saft_diff
+msgid "A field to show the difference between Odoo and SAF-T record data"
+msgstr ""
+"Um campo para mostrar a diferença entre os dados verificados no Odoo e no "
+"SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__property_account_payable_id
+msgid "Account Payable"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__property_account_receivable_id
+msgid "Account Receivable"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__c
+msgid "Accounting"
+msgstr "Contabilidade"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__update_accounts
+msgid "Accounts"
+msgstr "Contas"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__action
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Action"
+msgstr "Ação"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__balance_warning_accounts
+msgid "Balance Warning Accounts"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__balance_warnings
+#, python-format
+msgid "Balance Warnings"
+msgstr "Avisos de Saldos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__categ_id
+msgid "Categ"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
+msgid "Choose when and how the SAF-T PT elements are generated."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__city
+msgid "City"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_import_saft_form
+msgid "Close"
+msgstr "Fechar"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Code"
+msgstr "Código"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Column"
+msgstr "Coluna"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__company_id
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__company_id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_form
+msgid "Comparison Table"
+msgstr "Tabela de Comparação"
+
+#. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.cron_l10n_pt_compute_saft_elements_ir_actions_server
+msgid "Compute SAF-T Elements"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-javascript
+#: code:addons/ptplus_saft/static/src/xml/saft_list_button.xml:0
+#, python-format
+msgid "Configuration SAF-T"
+msgstr "Configuração SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__type__consu
+msgid "Consumable"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__country_id
+msgid "Country"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_account_saft_import__action__create
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Create"
+msgstr "Criar"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_import_saft_form
+msgid "Create/Update Records"
+msgstr "Criar/Atualizar Registos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__create_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__create_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__create_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__create_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__create_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__create_uid
+msgid "Created by"
+msgstr "Criada por"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__create_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__create_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__create_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__create_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__create_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__create_date
+msgid "Created on"
+msgstr "Criada em"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__date_from
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__date_from
+msgid "Date From"
+msgstr "Data Inicial"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__date_to
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__date_to
+msgid "Date To"
+msgstr "Data Final"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__default_code
+msgid "Default Code"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__res_company__l10n_pt_saft_computing_method__delayed
+msgid "Delayed"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Description"
+msgstr "Descrição"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_diff
+msgid "Difference"
+msgstr "Diferença"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Disable"
+msgstr "Desativar"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "Disable Accounts"
+msgstr "Desativar Contas"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__disable_accounts
+msgid "Disable Accounts without Moves "
+msgstr "Desabilitar Contas sem Movimentos "
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/account_payment.py:0
+#, python-format
+msgid ""
+"Document %s isn't associated with any account moves. Please fix the "
+"situation before proceeding."
+msgstr ""
+"O documento %s não está associado a nenhuma movimentação de conta. Por "
+"favor, corrija a situação antes de prosseguir."
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_account_saft_import__state__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__done
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_saft_element_mixin__l10n_pt_saft_element_status__done
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Done"
+msgstr "Concluído"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_account_saft_import__state__draft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Draft"
+msgstr "Rascunho"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__email
+msgid "Email"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__enable
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Enable"
+msgstr "Habilitar"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__error
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_saft_element_mixin__l10n_pt_saft_element_status__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_import_saft_form
+msgid "Errors"
+msgstr "Erros"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__exclude_pl_calc
+msgid "Exclude Pl Calc"
+msgstr "Excluir Apuramentos de Resultados"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "Expected Balance Checking"
+msgstr "Verificação de Saldos Esperados"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "Expected Balance Checking Warnings"
+msgstr "Avisos da Verificação de Saldos Esperados"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Expected Balance Type"
+msgstr "Tipo de Saldo Esperado"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "Export"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Botão Exportar PDF"
+
+#. module: ptplus_saft
+#: model:ir.actions.act_window,name:ptplus_saft.action_wizard_dataport_export_saft
+#: model:ir.ui.menu,name:ptplus_saft.menu_pt_dataport_export_saft
+msgid "Export SAF-T"
+msgstr "Exportar SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr "Dataport de Exportação do SAF-T PT"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_txt_button
+msgid "Export Txt Button"
+msgstr "Botão Exportar TXT"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__export_xml_button
+msgid "Export Xml Button"
+msgstr "Botão Exportar XML"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__res_company__l10n_pt_saft_computing_method__extraction
+msgid "Extraction"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_tree
+msgid "Fields"
+msgstr "Campos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__data
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__data
+msgid "File"
+msgstr "Ficheiro"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__filename
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__filename
+msgid "Filename"
+msgstr "Nome do ficheiro"
+
+#. module: ptplus_saft
+#: model_terms:ir.actions.act_window,help:ptplus_saft.action_account_saft_import_view
+msgid "First import the saft."
+msgstr "Primeiro importe o SAF-T."
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_fiscal_document
+msgid "Fiscal Document"
+msgstr "Documento Fiscal"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__format
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__format
+msgid "Format"
+msgstr "Formato"
+
+#. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.cron_l10n_pt_get_saft_action_ir_actions_server
+msgid "Get SAF-T PT Action"
+msgstr "Obter ação SAF-T PT"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_import_saft_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__number
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__saft_number
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Import No."
+msgstr "Nº de Importação"
+
+#. module: ptplus_saft
+#. odoo-javascript
+#: code:addons/ptplus_saft/static/src/xml/saft_list_button.xml:0
+#: model:ir.actions.act_window,name:ptplus_saft.action_dataport_import_saft_form
+#, python-format
+msgid "Import SAF-T"
+msgstr "Importar SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.actions.act_window,name:ptplus_saft.action_l10n_pt_import_saft_configuration_form
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_import_saft_configuration
+msgid "Import SAF-T Configuration"
+msgstr "Configuração de Importação do SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_dataport_import_saft
+msgid "Import SAF-T PT Dataport"
+msgstr "Dataport de Importação do SAF-T PT"
+
+#. module: ptplus_saft
+#: model:ir.actions.act_window,name:ptplus_saft.action_account_saft_import_view
+#: model:ir.ui.menu,name:ptplus_saft.menu_account_saft_import_list
+msgid "Import SAFT-T"
+msgstr "Importar SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_account_saft_import
+msgid "Imported SAF-T Elements"
+msgstr "Elementos SAF-T Importados"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid "In the {} there is no saft account.\n"
+msgstr "No {} não há conta SAF-T.\n"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid "In the {} there is no saft journal.\n"
+msgstr "No {} não há um diário SAF-T.\n"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__type
+msgid ""
+"Indicate the data scope to export. Select 'Accounting' if you just want "
+"accounting data (invoicing is exported through another software package). "
+"Select 'Invoicing' to exclusively generate invoicing data (your bookkeeping "
+"is outsourced). Select 'Integrated' if this Odoo instance is helding both "
+"your invoicing and accounting functions)."
+msgstr ""
+"Indique o âmbito dos dados a exportar. Selecione 'Contabilidade' se apenas "
+"quiser dados contabilísticos (a faturação é exportada noutra aplicação). "
+"Selecione 'Faturação' para gerar exclusivamente dados de faturação (a sua "
+"contabilidade é processada externamente). Selecione 'Integrado' se este "
+"instância do Odoo é usada simultaneamente para as funções de faturação e "
+"contabilística."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__info
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__info
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__info_message
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "Info"
+msgstr "Info"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__log_on_close
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_import_saft__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+"Inserir uma entrada no registo do dataports juntamente com uma cópia do "
+"ficheiro importado ou gerado. "
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Insufficient number of columns on validator output"
+msgstr "Nº de colunas insuficiente no output do validador"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__i
+msgid "Integrated"
+msgstr "Integrado"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "Inventory Transfers"
+msgstr "Transferências de Inventário"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__type__f
+msgid "Invoicing"
+msgstr "Faturação"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_after_inventory_transfers
+msgid "Is After Inventory Transfers"
+msgstr "É Após Transferências de Inventário"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_after_pl_calculation
+msgid "Is After P/L Calculation"
+msgstr "É Após Apuramento de Resultados"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_account_tax_python
+msgid "Is Installed Account Tax Python"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_accounting
+msgid "Is Installed Accounting"
+msgstr "Contabilidade Está Instalada"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_sale
+msgid "Is Installed Sale"
+msgstr "Vendas Está Instalado"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_stock
+msgid "Is Installed Stock"
+msgstr "Stock Está Instalado"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid ""
+"It is not possible to create records that are in the done state or disable."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__update_journal_entries
+msgid "Journal Entries"
+msgstr "Mov. de Diário"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_move
+msgid "Journal Entry"
+msgstr "Mov. de Diário"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_move_line
+msgid "Journal Item"
+msgstr "Item do Diário"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__journal_ids
+msgid "Journals"
+msgstr "Diários"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__l10n_pt_legal_name
+msgid "L10N Pt Legal Name"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__write_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__write_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__write_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__write_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__write_uid
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__write_uid
+msgid "Last Updated by"
+msgstr "Última Modificação por"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__write_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__write_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__write_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__write_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__write_date
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__write_date
+msgid "Last Updated on"
+msgstr "Última Modificação em"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Line"
+msgstr "Linha"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__log_as_reported
+msgid "Log As Reported"
+msgstr "Registar como Submetido"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__log_on_close
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__log_on_close
+msgid "Log On Close"
+msgstr "Registar ao Fechar"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__manual
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__manual
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__manual
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__manual
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__manual
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_saft_element_mixin__l10n_pt_saft_element_status__manual
+msgid "Manual"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
+msgid "Method"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_tree
+msgid "Model"
+msgstr "Modelo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__month_curr
+msgid "Month - Current"
+msgstr "Mês Corrente"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__month_last
+msgid "Month - Last"
+msgstr "Mês Passado"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__name
+msgid "Name"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__needed
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__needed
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__needed
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__needed
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__needed
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_saft_element_mixin__l10n_pt_saft_element_status__needed
+msgid "Needed"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_saft_element.py:0
+#, python-format
+msgid "No compute handler available for the '%s' SAF-T PT element"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.actions.act_window,help:ptplus_saft.action_account_saft_import_view
+msgid "No data yet!"
+msgstr "Sem dados!"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "Non-compliant Accounts"
+msgstr "Contas em Inconformidade"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__moves_created_count
+msgid "Number of Moves Created"
+msgstr "Número de Movimentos Criados"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__account_id
+msgid "Odoo Account"
+msgstr "Conta Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__account_group_id
+msgid "Odoo Account Group"
+msgstr "Grupo de Contas Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__journal_id
+msgid "Odoo Journal"
+msgstr "Diários Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__move_id
+msgid "Odoo Move"
+msgstr "Movimento Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__move_line_id
+msgid "Odoo Move Line"
+msgstr "Linha de Movimento Odoo"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid "Odoo Moves"
+msgstr "Movimentos odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__partner_id
+msgid "Odoo Partner"
+msgstr "Parceiro Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__product_id
+msgid "Odoo Product"
+msgstr "Produto Odoo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__partner_id
+msgid "Original Partner"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__product_id
+msgid "Original Product"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "P/L Calculation"
+msgstr "Apuramento de Resultados"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__parent_account_group_id
+msgid "Parent Account Group"
+msgstr "Grupo de Contas Ascendente"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_partner_changelog
+msgid "Partner Changelog (PT)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__update_partners
+msgid "Partners"
+msgstr "Parceiros"
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_payment
+msgid "Payments"
+msgstr "Pagamentos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__period
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__period
+msgid "Period"
+msgstr "Período"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__phone
+msgid "Phone"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_product_changelog
+msgid "Product Changelog (PT)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__type
+msgid "Product Type"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__update_products
+msgid "Products"
+msgstr "Produtos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_curr
+msgid "Quarter - Current"
+msgstr "Trimestre Corrente"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_last
+msgid "Quarter - Last"
+msgstr "Trimestre Passado"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__res_company__l10n_pt_saft_computing_method__real-time
+msgid "Real-time"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__rec_id
+msgid "Rec. ID"
+msgstr "ID do Reg."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__rec_model_id
+msgid "Rec. Model"
+msgstr "Modelo do Reg."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__rec_model_description
+msgid "Rec. Model Description"
+msgstr "Descrição do Modelo do Reg."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__rec_model
+msgid "Rec. Model Name"
+msgstr "Nome do Modelo do Reg."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__rec_name
+msgid "Rec. Name"
+msgstr "Nome do Reg."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__recompute_elements
+msgid "Recompute Elements"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_tree
+msgid "Record"
+msgstr "Registo"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_saft_element.py:0
+#, python-format
+msgid ""
+"Record: %(rec)s\n"
+"Element: %(el)s\n"
+"Value: %(val)s\n"
+"Reason: %(reason)s\n"
+"Validator: %(validator)s\n"
+"Source: %(src)s"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid "Records created"
+msgstr "Registos criados"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__related_move_ids
+msgid "Related Move"
+msgstr "Movimento Relacionado"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__statement_type__saf-t
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_import_saft_form
+msgid "SAF-T"
+msgstr "SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_account_id
+msgid "SAF-T Account"
+msgstr "Conta SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_move_id
+msgid "SAF-T Account Move"
+msgstr "Movimento Contabilístico SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_move_line_ids
+msgid "SAF-T Account Move Lines"
+msgstr "Linhas de Movimentos Contabilísticos SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__l10n_pt_saft_computing_method
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_company__l10n_pt_saft_computing_method
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_config_settings__l10n_pt_saft_computing_method
+msgid "SAF-T Computing Method"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_data
+msgid "SAF-T Data"
+msgstr "Dados SAF-T"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_import_saft.py:0
+#, python-format
+msgid "SAF-T Import"
+msgstr "Importação de SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_journal_id
+msgid "SAF-T Journal"
+msgstr "Diário SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__saft_move_line_id
+msgid "SAF-T Move Line"
+msgstr "Linha de Movimento SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_bank_statement_line__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_saft_element
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__l10n_pt_saft_element
+msgid "SAF-T PT Element"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_bank_statement_line__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_saft_element_error
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__l10n_pt_saft_element_error
+msgid "SAF-T PT Element Computation Error"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_bank_statement_line__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_saft_element_status
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__l10n_pt_saft_element_status
+msgid "SAF-T PT Element Computation Status"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_bank_statement_line__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_saft_element_version
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__l10n_pt_saft_element_version
+msgid "SAF-T PT Element Computation Version"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_saft_element_mixin
+msgid "SAF-T PT Element Mixin"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_saft_element.py:0
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "SAF-T encoding error: %s\n"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Search SAF-T PT Import"
+msgstr "Pesquisar Importação SAF-T PT"
+
+#. module: ptplus_saft
+#: model:mail.template,name:ptplus_saft.email_template_partner_saft
+msgid "Send Partner SAF-T"
+msgstr "Enviar para Parceiro SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__type__service
+msgid "Service"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
+msgstr ""
+"Indique Verdadeiro se o ficheiro foi devidamente submetido no destino "
+"pretendido. Nesse caso, a entrada no registo de dataports será assinalada "
+"como Submetida."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__state
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__state
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__state
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__state_id
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "State"
+msgstr "Estado"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__statement_type
+msgid "Statement Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__type__product
+msgid "Stockable Product"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__street
+msgid "Street"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__street2
+msgid "Street 2"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_account_tax
+msgid "Tax"
+msgstr "Imposto"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__number
+msgid "The ID of the importation operation"
+msgstr "O ID da operação de importação"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The SAF-T file has been successfully generated but it couldn't be validated. "
+"Please contact your Odoo service provider or try an alternative validation "
+"process. Error: %s"
+msgstr ""
+"O ficheiro SAF-T foi extraído com sucesso mas o seu conteúdo não pode ser "
+"validado. Por favor, contacte o seu fornecedor do serviço Odoo ou tente um "
+"processo alternativo de validação. Erro: %s"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid "The file has been validated!"
+msgstr "O ficheiro foi validado!"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_res_config_settings__l10n_pt_saft_computing_method
+msgid ""
+"The method used to compute the SAF-T elements. Possible values are:\n"
+"* Extraction: all the elements are created on SAF-T extraction. The \n"
+"validation occurs after all the elements are computed.\n"
+"* Real-time: elements are created, validated and cached while issuing, "
+"making its extraction process extremely fast.\n"
+"* Delayed: elements are created, validated and cached in batches \n"
+"using cron tasks. The extraction process is as fast as in the Real-time \n"
+"method and it doesn't slow down document issuing. It does however allow \n"
+"documents to be issued without fully complying to the SAF-T rules which \n"
+"means that the extraction process may require problem solving.\n"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__saft_data
+msgid "The record data as found on the SAF-T PT file"
+msgstr "Os dados do registo tal como encontrados no ficheiro SAF-T PT"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+#, python-format
+msgid "The record(s) were created successfully."
+msgstr "O(s) registo(s) foram criados com sucesso."
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The selected type can only be used when the Accounting module is installed. "
+"Choose Invoicing instead."
+msgstr ""
+"O Tipo selecionado só pode ser usado quando o módulo Contabilidade está "
+"instalado. Escolha antes Faturação."
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__error
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_import_saft__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr "Verdadeiro se houve um erro ou aviso na operação do dataport"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_account_saft_import__action__update
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+msgid "Update"
+msgstr "Atualizar"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__vat
+msgid "VAT"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__valid_after
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__valid_after
+msgid "Valid After"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__values
+msgid "Values"
+msgstr "Valores"
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
+msgid "View Details"
+msgstr "Ver Detalhes"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__warnings
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_import_saft__warnings
+msgid "Warnings"
+msgstr "Avisos"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__website
+msgid "Website"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_dataport_export_saft__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) "
+"before being delivered to the user. As it's a very time consuming task, you "
+"may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Quando ativo, o ficheiro é submetido a uma inspeção técnica (esquema XSD) "
+"antes de ser entregue ao utilizador, evitando-se assim perdas de tempo no "
+"seu envio. Dado que a validação é uma tarefa demorada, é possível que a "
+"queira desativar quando espera obter um grande ficheiro.\n"
+"Desative esta opção se preferir usar um validador externo."
+
+#. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.action_write_records
+msgid "Write Record(s)"
+msgstr "Gravar Registo(s)"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__year_curr
+msgid "Year - Current"
+msgstr "Ano Corrente"
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__year_last
+msgid "Year - Last"
+msgstr "Ano Passado"
+
+#. module: ptplus_saft
+#: model:mail.template,subject:ptplus_saft.email_template_partner_saft
+msgid "Your SAF-T file"
+msgstr "O seu ficheiro SAF-T"
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__zip
+msgid "ZIP"
+msgstr ""
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificação em"

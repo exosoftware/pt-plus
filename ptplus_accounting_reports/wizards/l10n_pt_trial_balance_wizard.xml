@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_trial_balance_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.trial.balance.wizard.form</field>
+        <field name="model">l10n_pt.trial.balance.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <tree editable="bottom">
+                            <field name="l10n_pt_trial_code" />
+                            <field name="l10n_pt_trial_name" />
+                            <!--                            <field name="amount" sum="Total" />-->
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_trial_balance_wizard_action" model="ir.actions.act_window">
+        <field name="name">Trial Balance</field>
+        <field name="res_model">l10n_pt.trial.balance.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_trial_balance_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_financial_statement_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="140"
+        groups="account.group_account_user"
+        name="Financial"
+    />
+
+    <menuitem
+        id="l10n_pt_trial_balance_wizard_menu"
+        parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
+        sequence="10"
+        groups="ptplus.group_experimental_features_pt"
+        action="l10n_pt_trial_balance_wizard_action"
+    />
+</odoo>

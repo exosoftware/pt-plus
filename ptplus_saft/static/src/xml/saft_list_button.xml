@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+   <t t-name="button_saft.ListView.Buttons" t-inherit="web.ListView.Buttons">
+       <xpath expr="//t[@t-if='editedRecord']" position="before">
+            <button
+                type="button"
+                class="btn btn-primary ms-2"
+                t-on-click="OnSaftImportClick"
+            >
+                Import SAF-T
+            </button>
+            <button
+                type="button"
+                class="btn btn-primary ms-2"
+                t-on-click="OnImportSaftConfigurationClick"
+            >
+                Configuration SAF-T
+            </button>
+       </xpath>
+   </t>
+</templates>

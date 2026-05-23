@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_saft_pt" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.saft.pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_settings_pt']" position="inside">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    title=""
+                    invisible="not pt_invoicing"
+                >
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">SAF-T Computing Method</span>
+                            <span
+                            class="fa fa-lg fa-building-o"
+                            title="Values set here are company-specific."
+                            aria-label="Values set here are company-specific."
+                            groups="base.group_multi_company"
+                            role="img"
+                        />
+                            <div class="text-muted">
+                                Choose when and how the SAF-T PT elements are generated.
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label
+                                    string="Method"
+                                    for="l10n_pt_saft_computing_method"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                    <field
+                                    name="l10n_pt_saft_computing_method"
+                                    required="pt_invoicing"
+                                />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

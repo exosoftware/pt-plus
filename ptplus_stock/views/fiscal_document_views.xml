@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Fiscal Document Types -->
+    <record id="fiscal_document_type_view_tree" model="ir.ui.view">
+        <field name="name">fiscal.document.type.tree.inherit.ptplus_stock</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_tree" />
+        <field name="arch" type="xml">
+            <field name="source_billing" position="after">
+                <field name="picking_type_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+
+    <record id="fiscal_document_type_view_form" model="ir.ui.view">
+        <field name="name">fiscal.document.type.form.inherit.ptplus_stock</field>
+        <field name="model">fiscal.document.type</field>
+        <field name="inherit_id" ref="ptplus.fiscal_document_type_view_form" />
+        <field name="arch" type="xml">
+            <field name="section" position="after">
+                <field
+                    name="picking_type_ids"
+                    widget="many2many_tags"
+                    invisible="section != 'stock'"
+                    options="{'no_create_edit': True}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

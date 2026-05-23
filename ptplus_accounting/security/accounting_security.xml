@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <record id="abt_comp_rule" model="ir.rule">
+        <field name="name">Account Balance Transfer multi-company</field>
+        <field name="model_id" ref="model_account_balance_transfer" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+    </record>
+
+    <record id="abt_template_comp_rule" model="ir.rule">
+        <field name="name">Account Balance Transfer Template multi-company</field>
+        <field name="model_id" ref="model_account_balance_transfer_template" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+    </record>
+
+    <record id="abt_template_line_comp_rule" model="ir.rule">
+        <field name="name">Account Balance Transfer Template Line multi-company</field>
+        <field name="model_id" ref="model_account_balance_transfer_template" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="cius_pt_211_InvoiceLineType"
+        inherit_id="account_edi_ubl_cii.ubl_20_InvoiceLineType"
+        primary="True"
+    >
+        <xpath expr="//*[local-name()='Item']" position="inside">
+            <!--<t t-foreach="vals.get('tax_exemption_reason_code', [])" t-as="foreach_vals">-->
+            <t
+                t-foreach="item_vals.get('classified_tax_category_vals', [])"
+                t-as="tax_category_vals"
+            >
+                <t
+                    t-if="tax_category_vals.get('l10n_pt_tax_exemption_reason_code', False)"
+                >
+                    <cac:AdditionalItemProperty
+                        xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                    >
+                        <cbc:Name
+                        >#TAXEXEMPTIONREASONCODE@CLASSIFIEDTAXCATEGORY#</cbc:Name>
+                        <cbc:Value
+                            t-out="tax_category_vals['l10n_pt_tax_exemption_reason_code']"
+                        /> <!--foreach_vals['tax_exemption_reason_code'] -->
+                    </cac:AdditionalItemProperty>
+                    <cac:AdditionalItemProperty
+                        xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                    >
+                        <cbc:Name>#TAXEXEMPTIONREASON@CLASSIFIEDTAXCATEGORY#</cbc:Name>
+                        <cbc:Value
+                            t-out="tax_category_vals['l10n_pt_tax_exemption_reason']"
+                        />
+                    </cac:AdditionalItemProperty>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="cius_pt_211_InvoiceType"
+        inherit_id="account_edi_ubl_cii.ubl_21_InvoiceType"
+        primary="True"
+    >
+        <xpath expr="//*[local-name()='AccountingSupplierParty']" position="before">
+            <!-- ATCUD AND QR CODE -->
+            <cac:AdditionalDocumentReference
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            >
+                <cbc:ID schemeID="ANG" t-out="invoice.atcud" />
+                <cbc:DocumentDescription>QR_CODE</cbc:DocumentDescription>
+                <cac:Attachment>
+                    <cbc:EmbeddedDocumentBinaryObject
+                        mimeCode="text/plain"
+                        filename="$%()*"
+                        t-out="vals['pt_qr_code']"
+                    />
+                </cac:Attachment>
+            </cac:AdditionalDocumentReference>
+            <!--
+            <cac:AdditionalDocumentReference
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+                <cbc:ID schemeID="AIM" t-out="invoice.UUID?"/>
+            </cac:AdditionalDocumentReference>
+            -->
+        </xpath>
+
+        <!-- Commitment number -->
+        <xpath expr="//*[local-name()='BuyerReference']" position="before">
+            <cbc:AccountingCost
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                t-if="vals.get('l10n_pt_commitment_number')"
+                t-out="vals.get('l10n_pt_commitment_number')"
+            />
+        </xpath>
+
+        <!-- Deliveryslip -->
+        <xpath expr="//*[local-name()='BillingReference']" position="after">
+            <t t-foreach="vals.get('deliveryslip_list', [])" t-as="deliveryslip">
+                <cac:DespatchDocumentReference
+                    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                >
+                    <cbc:ID t-out="deliveryslip" />
+                </cac:DespatchDocumentReference>
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="cius_pt_211_TaxCategoryType"
+        inherit_id="account_edi_ubl_cii.ubl_20_TaxCategoryType"
+        primary="True"
+    >
+    </template>
+
+</odoo>

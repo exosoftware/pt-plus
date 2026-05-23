@@ -1,0 +1,1558 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_reports_withholding
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 22:56+0000\n"
+"PO-Revision-Date: 2026-02-27 22:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: ptplus_reports_withholding
+#: model:ir.actions.report,print_report_name:ptplus_reports_withholding.l10n_pt_report_annual_statement_action
+msgid "'Income Statement ' + object.get_period_text() + '.pdf'"
+msgstr "'Declaração de Rendimentos ' + object.get_period_text() + '.pdf'"
+
+#. module: ptplus_reports_withholding
+#: model:mail.template,body_html:ptplus_reports_withholding.email_template_annual_statement
+msgid ""
+"<div>\n"
+"                <p>Dear <t t-out=\"ctx['partner'].name\"></t>,</p>\n"
+"                <p>Please find attached your\n"
+"                    <t t-out=\"object.get_period_text()\"></t>\n"
+"                    income and retention statement.</p>\n"
+"                <p>Regards,</p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                <p>Caro(a) <t t-out=\"ctx['partner'].name\"></t>,</p>\n"
+"                <p>Enviamos em anexo a sua Declaração de Rendimentos de \n"
+"                    <t t-out=\"object.get_period_text()\"></t>.</p>\n"
+"                <p>Cumprimentos,</p>\n"
+"            </div>\n"
+"        "
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.view_partner_custom_form
+msgid "<span>%</span>"
+msgstr "<span>%</span>"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard__partner_selection__all
+msgid "All"
+msgstr "Todos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__is_alternate_accountant
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__is_alternate_accountant
+msgid "Altern. Accountant?"
+msgstr "Contabilista Suplente?"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__amount
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__amount
+msgid "Amount"
+msgstr "Montante"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_annual_statement_wizard
+msgid "Annual Income Statement"
+msgstr "Declaração Anual de Rendimentos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_annual_statement_wizard_line
+msgid "Annual Income Statement Line"
+msgstr "Linha da Declaração Anual de Rendimentos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.actions.report,name:ptplus_reports_withholding.l10n_pt_report_annual_statement_action
+msgid "Annual Income Statements"
+msgstr "Declarações Anuais de Retenções"
+
+#. module: ptplus_reports_withholding
+#: model:ir.actions.act_window,name:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_menu
+msgid "Annual Statement"
+msgstr "Declaração Anual"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__statement_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__statement_id
+msgid "Annual Statement Wizard"
+msgstr "Assistente de Declaração Anual"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__dataport_log__type__withholding_annual
+msgid "Annual Withholding"
+msgstr "Retenções Anuais"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_annual_statement_wizard.py:0
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard__statement_type__withholding_annual
+#, python-format
+msgid "Annual Withholding Statement"
+msgstr "Declaração Anual de Retenções"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard_line__zone__a
+msgid "Azores"
+msgstr "Açores"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo10_statement_wizard_line_q5__q5_05__ra
+msgid "Azores AR"
+msgstr "RA Açores"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_36_base
+msgid "Base"
+msgstr "Base"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__certified_accountant_vat
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__certified_accountant_vat
+msgid "Certified Accountant"
+msgstr "Contabilista Certificado"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__code
+msgid "Code"
+msgstr "Código"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__company_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__company_eac
+msgid "Company EAC"
+msgstr "CAE da Empresa"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__partner_company_type
+msgid "Company Type"
+msgstr "Tipo de Empresa"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_39
+msgid "Company VAT"
+msgstr "NIPC"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo10_statement_wizard_line_q5__q5_05__c
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard_line__zone__c
+msgid "Continent"
+msgstr "Continente"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_33
+msgid "Country Code"
+msgstr "Cód. País"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__currency_id
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_03
+msgid "Current Year Income"
+msgstr "Rendimentos do Ano Corrente"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_dataport_log
+msgid "Dataport Log"
+msgstr "Registo de Dataport"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__date_from
+msgid "Date From"
+msgstr "Data Desde"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__date_to
+msgid "Date To"
+msgstr "Data Até"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__declaration_type
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__declaration_type
+msgid "Declaration Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nome"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__domain
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__domain
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__domain
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__domain
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__domain
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__domain
+msgid "Domain"
+msgstr "Domínio"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "E-mail"
+msgstr "E-mail"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__partner_email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__error
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__error
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__error
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Botão Exportar PDF"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__export_txt_button
+msgid "Export Txt Button"
+msgstr "Botão Exportar TXT"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__export_xml_button
+msgid "Export Xml Button"
+msgstr "Botão Exportar XML"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__data
+msgid "File"
+msgstr "Ficheiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__filename
+msgid "Filename"
+msgstr "Nome do Ficheiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__justifiable_reason
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__justifiable_reason
+msgid ""
+"Fill only if the statement is past due and the reason is justifiable "
+"according to art.º 12.º-A do DL n.º 452/99, 5-nov"
+msgstr ""
+"Preencha apenas se a declaração está fora de prazo e o motivo é justificável "
+"ao abrigo do Art. 12º-A do DL 452/99 de 5-nov"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q8_38_total
+msgid "Fills field 38 of the Model. Sum of all values."
+msgstr "Preenche o campo 38 do Modelo. Soma de todos os valores."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo10_statement_wizard_line_q5__q5_05__e
+msgid "Foreign Country"
+msgstr "País Estrangeiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__format
+msgid "Format"
+msgstr "Formato"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_06
+msgid "IRS/IRC Withheld"
+msgstr "IRS/IRC Retido"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_35_code
+msgid "Inc. Code"
+msgstr "Código Rend."
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid "Income"
+msgstr "Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__income_amount
+msgid "Income Amount"
+msgstr "Valor do Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__income_category
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid "Income Category"
+msgstr "Categoria do Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__income_category_code
+msgid "Income Category Code"
+msgstr "Código da Categoria do Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_05
+msgid "Income Source Location"
+msgstr "Local de Origem do Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid "Income Statement for"
+msgstr "Declaração de Rendimentos de"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_04
+msgid "Income Type"
+msgstr "Tipo de Rendimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.ui.menu,name:ptplus_reports_withholding.l10n_pt_income_retention_menu
+msgid "Income and Retention"
+msgstr "Rendimentos e Retenções"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__g
+msgid "Incrementos patrimoniais"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__info
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__info
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__info
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__info
+msgid "Info"
+msgstr "Info"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+"Inserir uma entrada no registo de dataports juntamente com uma cópia do "
+"ficheiro importado ou exportado."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__journal_ids
+msgid "Journals"
+msgstr "Diários"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__justifiable_reason
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__justifiable_reason
+msgid "Justifiable Reason"
+msgstr "Motivo do Justo Impedim."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_partner__l10n_pt_country_region
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_users__l10n_pt_country_region
+msgid "L10N Pt Country Region"
+msgstr "País Região L10n Pt"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__legal_representative_vat
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__legal_representative_vat
+msgid "Legal Representative"
+msgstr "Representante Legal"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod10_statement_wizard.py:0
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod30_statement_wizard.py:0
+#, python-format
+msgid "Line '{description}' on move {move} has no related withholding tax"
+msgstr ""
+"A linha '{description}' do movimento {move} não tem qualquer retenção na "
+"fonte relacionada"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+#, python-format
+msgid ""
+"Line '{description}' on move {move} is related to tax {tax}. Please fill the "
+"tax's Withholding Code field"
+msgstr ""
+"A linha '{description}' do movimento {move} é relacionada com o imposto "
+"{tax}. Por favor, preencha neste imposto o campo Código de Retenção"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod30_statement_wizard.py:0
+#, python-format
+msgid ""
+"Line '{description}' on move {move} is related to tax {tax}. Please fill the "
+"tax's Withholding Income Type (OECD) field"
+msgstr ""
+"A linha '{description}' do movimento {move} é relacionada com o imposto "
+"{tax}. Por favor, preencha neste imposto o campo Tipo de Retenção (OCDE)"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod10_statement_wizard.py:0
+#, python-format
+msgid ""
+"Line '{description}' on move {move} is related to tax {tax}. Please fill the "
+"tax's Withholding Income Type field"
+msgstr ""
+"A linha '{description}' do movimento {move} é relacionada com o imposto "
+"{tax}. Por favor, preencha neste imposto o campo Tipo de Retenção"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__line_ids
+msgid "Lines"
+msgstr "Linhas"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__log_as_reported
+msgid "Log As Reported"
+msgstr "Registar como Reportado"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__log_on_close
+msgid "Log On Close"
+msgstr "Registar ao Fechar"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard_line__zone__m
+msgid "Madeira"
+msgstr "Madeira"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo10_statement_wizard_line_q5__q5_05__rm
+msgid "Madeira AR"
+msgstr "RA Madeira"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_07
+msgid "Mandatory Contributions"
+msgstr "Contribuições Obrigatórias"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.view_partner_custom_form
+msgid "Model 30"
+msgstr "Modelo 30"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod10_statement_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_menu
+#, python-format
+msgid "Modelo 10"
+msgstr "Modelo 10"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo10_statement_wizard_line_q5
+msgid "Modelo 10 - Q5 Line"
+msgstr "Modelo 10 - Linha Q5"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo10_statement_wizard
+msgid "Modelo 10 Statement Wizard"
+msgstr "Assistente da Declaração Modelo 10"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo10_statement_wizard_line_q4
+msgid "Modelo 10 Statement Wizard Line Q4"
+msgstr "Assistente da Declaração Modelo 10 Linha Q4"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod30_statement_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_menu
+#, python-format
+msgid "Modelo 30"
+msgstr "Modelo 30"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo30_statement_wizard
+msgid "Modelo 30 Statement Wizard"
+msgstr "Assistente da Declaração Modelo 30"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo30_statement_wizard_line_q6
+msgid "Modelo 30 Statement Wizard Line Q6"
+msgstr "Linha Q6 do Assistente da Declaração Modelo 30"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo30_statement_wizard_line_q7
+msgid "Modelo 30 Statement Wizard Line Q7"
+msgstr "Linha Q7 do Assistente da Declaração Modelo 30"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_modelo30_statement_wizard_line_q8
+msgid "Modelo 30 Statement Wizard Line Q8"
+msgstr "Linha Q8 do Assistente da Declaração Modelo 30"
+
+#. module: ptplus_reports_withholding
+#: model:ir.actions.act_window,name:ptplus_reports_withholding.l10n_pt_monthly_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_reports_withholding.l10n_pt_monthly_statement_wizard_menu
+msgid "Monthly Statement"
+msgstr "Declaração Mensal"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_monthly_statement_wizard
+msgid "Monthly Statement Wizard"
+msgstr "Assistente de Declaração Mensal"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model,name:ptplus_reports_withholding.model_l10n_pt_monthly_statement_wizard_line
+msgid "Monthly Statement Wizard Lines"
+msgstr "Linhas do Assistente de Declaração Mensal"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__dataport_log__type__withholding_monthly
+msgid "Monthly Withholding"
+msgstr "Retenção Mensal"
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+#, python-format
+msgid "Monthly Withholding Statement"
+msgstr "Declaração Mensal de Retenções"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__move_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__move_id
+msgid "Move"
+msgstr "Lançamento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__name
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__dataport_log__type__non_resident_income
+msgid "Non Resident Income"
+msgstr "Rendimento de Não-Residentes"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard__withholding_type__non_resident
+msgid "Non-Resident Withholdings"
+msgstr "Retenções de Não-Residentes"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo30_statement_wizard__statement_type__non_resident_income
+msgid "Non-resident Income"
+msgstr "Rendimento de não-residentes"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard__partner_selection__none
+msgid "None"
+msgstr "Nenhum"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__dar
+msgid "Outros"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__partner_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__partner_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__partner_id
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__partner_name
+msgid "Partner Name"
+msgstr "Nome do Parceiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__partner_selection
+msgid "Partner Selection"
+msgstr "Seleção de Parceiros"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__name
+msgid "Payment Slip Number"
+msgstr "Nº do Recibo de Vencimento"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__h
+msgid "Pensões"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__period
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__period
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__period
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__period
+msgid "Period"
+msgstr "Período"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard__partner_selection__persons
+msgid "Persons Only"
+msgstr "Apenas Indivíduos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__f
+msgid "Prediais"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_02_value
+msgid "Previous Years"
+msgstr "Anos Anteriores"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_02_years
+msgid "Previous Years - Nº Years"
+msgstr "Anos Anteriores - Nº de Anos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_02_year
+msgid "Previous Years - Year"
+msgstr "Anos Anteriores - Ano"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__q4_line_ids
+msgid "Q4 Lines"
+msgstr "Linhas Q4"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__q5_line_ids
+msgid "Q5 Lines"
+msgstr "Linhas Q5"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q6_line_ids
+msgid "Q6 Lines"
+msgstr "Linhas Q6"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q06_17
+msgid "Q6 Total"
+msgstr "Total Q6"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q7_line_ids
+msgid "Q7 Lines"
+msgstr "Linhas Q7"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q8_line_ids
+msgid "Q8 Lines"
+msgstr "Linhas Q8"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q8_38_total
+msgid "Q8 Total"
+msgstr "Total Q8"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__justifiable_reason_end_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__justifiable_reason_end_date
+msgid "Reason Fact End"
+msgstr "Data de Cessação do Facto"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__justifiable_reason_start_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__justifiable_reason_start_date
+msgid "Reason Fact Start"
+msgstr "Data de Ocorrência do Facto"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__b
+msgid "Rendimentos empresariais e profissionais"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__dataport_log__type__resident_income
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_modelo10_statement_wizard__statement_type__resident_income
+msgid "Resident Income"
+msgstr "Rendimento de Residentes"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard__withholding_type__resident
+msgid "Resident Withholdings"
+msgstr "Retenção de Residentes"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Retention"
+msgstr "Retenção"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__r
+msgid "Retenções de IRC (Art. 94.º do Código do IRC)"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__rubric
+msgid "Rubric"
+msgstr "Rúbrica"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Sel."
+msgstr "Sel."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__declaration_type
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__declaration_type
+msgid ""
+"Select whether this is the first declaration for the given period or a "
+"replacement."
+msgstr ""
+"Indique se se trata da primeira declaração do período ou de uma declaração "
+"de substituição."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__selected
+msgid "Selected"
+msgstr "Selecionado"
+
+#. module: ptplus_reports_withholding
+#: model:mail.template,name:ptplus_reports_withholding.email_template_annual_statement
+msgid "Send Annual Income Statement"
+msgstr "Enviar Declarações Anuais de Rendimentos"
+
+#. module: ptplus_reports_withholding
+#: model:mail.template,description:ptplus_reports_withholding.email_template_annual_statement
+msgid "Send once a year to suppliers with income/retention values"
+msgstr ""
+"Enviar a fornecedores uma vez por ano com os valores de rendimentos/retenções"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__sequence
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__sequence
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__sequence
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__sequence
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
+msgstr ""
+"Defina como Verdadeiro se o ficheiro tiver sido enviado com sucesso para o "
+"destino pretendido. Nesse caso, o registo de dataports será marcado como "
+"Reportado."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_34_2
+msgid "Share Company"
+msgstr "Cap. Social Empresa"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_partner__l10n_pt_model_30_share_company
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_users__l10n_pt_model_30_share_company
+msgid "Share Company [M30]"
+msgstr "Cap. Social Empresa [M30]"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_34_1
+msgid "Share Partner"
+msgstr "Cap. Social Parceiro"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_partner__l10n_pt_model_30_share_partner
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_users__l10n_pt_model_30_share_partner
+msgid "Share Partner [M30]"
+msgstr "Cap. Social Parceiro [M30]"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_compute
+msgid "Show Button Compute"
+msgstr "Mostrar Botão Calcular"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_csv
+msgid "Show Button Export Csv"
+msgstr "Mostrar Botão Exportar CSV"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_pdf
+msgid "Show Button Export Pdf"
+msgstr "Mostrar Botão Exportar PDF"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_txt
+msgid "Show Button Export Txt"
+msgstr "Mostrar Botão Exportar TXT"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_webservice
+msgid "Show Button Export Webservice"
+msgstr "Mostrar Botão Exportar Webservice"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_xlsx
+msgid "Show Button Export Xlsx"
+msgstr "Mostrar Botão Exportar XLSX"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_export_xml
+msgid "Show Button Export Xml"
+msgstr "Mostrar Botão Exportar XML"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_mail
+msgid "Show Button Mail"
+msgstr "Mostrar Botão E-mail"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_print
+msgid "Show Button Print"
+msgstr "Mostrar Botão Imprimir"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_select_all
+msgid "Show Button Select All"
+msgstr "Mostrar Botão Selecionar Todos"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__show_button_select_none
+msgid "Show Button Select None"
+msgstr "Mostrar Botão Selecionar Nenhum"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__state
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__state
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__state
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__state
+msgid "State"
+msgstr "Estado"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q4__statement_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__statement_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q6__statement_id
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__statement_id
+msgid "Statement"
+msgstr "Declaração"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__line_ids
+msgid "Statement Lines"
+msgstr "Linhas da Declaração"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__statement_type
+msgid "Statement Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__subst_fact_date
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__subst_fact_date
+msgid "Subst. Fact Date"
+msgstr "Data do Facto Orig. Subst."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__q4_09
+msgid "Subtotal (01 + 03 + 05 to 08)"
+msgstr "Subtotal (01 + 03 + 05 a 08)"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__q06_17
+msgid "Sum of all Q6 retained amounts."
+msgstr "Soma de todos os valores retidos do Q6."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_09
+msgid "Surtax Retention (2013-2017)"
+msgstr "Retenção da Sobretaxa (2013-2017)"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_36_percent
+msgid "Tax %"
+msgstr "% Taxa"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_36_code
+msgid "Tax Code"
+msgstr "Código Imposto"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid "Tax ID:"
+msgstr "NIF:"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__tax_office_code
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__tax_office_code
+msgid "Tax Office Code"
+msgstr "Cód. Serviço Finanças"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_01
+msgid "Taxpayer NIF"
+msgstr "NIF do Contribuinte"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__partner_selection
+msgid ""
+"The statement computation is solely based on the tax tags contained in the "
+"account move lines, regardless of whether they are individuals or companies. "
+"However, as these statements are only meant to be sent to individuals, this "
+"option allows you to easily control the inclusion/exclusion of companies in "
+"the email sending process. After selecting this option, you can fine tune "
+"your selection by toggling the Sel. button on specific lines."
+msgstr ""
+"Os cálculos desta declaração são baseados unicamente nas etiquetas de "
+"impostos contidas nas linhas de lançamentos contabilísticos, "
+"independentemente de serem pessoas indivíduos ou empresas. No entanto, como "
+"estas declarações devem ser apenas enviadas para indivíduos, esta opção "
+"permite-lhe controlar facilmente a inclusão/exclusão de empresas no processo "
+"de envio de e-mail. Após selecionar esta opção, pode ainda ajustar a sua "
+"seleção alternando o botão Sel. em linhas específicas."
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_monthly_statement_wizard_form
+msgid "Total"
+msgstr "Total"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__q4_12
+msgid "Total (09 + 10 + 04 - 11)"
+msgstr "Total (09 + 10 + 04 - 11)"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "Total Base"
+msgstr "Total da Base"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "Total Current Year Income"
+msgstr "Total de Rendimentos do Ano Corrente"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "Total IRS/IRC Withheld"
+msgstr "Total de IRS/IRC Retido"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Total Income"
+msgstr "Rendimentos Totais"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "Total Mandatory Contributions"
+msgstr "Total de Contribuições Obrigatórias"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Total Retention"
+msgstr "Retenção Total"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "Total Surtax Retention (2013-2017)"
+msgstr "Total de Retenções da Sobretaxa (2013-2017)"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "Total Union Dues"
+msgstr "Total de Quotizações Sindicais"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "Total Withholding Tax"
+msgstr "Total das Retenções na Fonte"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard_line__income_category__a
+msgid "Trabalho dependente"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__error
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__error
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__error
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr "Verdadeiro se houver um erro ou aviso na operação do dataport"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_dataport_log__type
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__type
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__is_under_art_119_1d
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__is_under_art_119_1d
+msgid "Under art. 119º nº1-d?"
+msgstr "Ao abrigo Art. 119º - 1ºd?"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard_line_q5__q5_08
+msgid "Union Dues"
+msgstr "Quotizações Sindicais"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_32
+msgid "VAT"
+msgstr "NIF"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_31
+msgid "VAT (PT)"
+msgstr "NIF (PT)"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_partner__l10n_pt_vat_pt
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_res_users__l10n_pt_vat_pt
+msgid "VAT PT"
+msgstr "NIF PT"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__values
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__values
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__values
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__values
+msgid "Values"
+msgstr "Valores"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__vat_legal_representative
+msgid "Vat Legal Representative"
+msgstr "NIF do Representante Legal"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_monthly_statement_wizard_form
+msgid "View"
+msgstr "Ver"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__warnings
+msgid "Warnings"
+msgstr "Avisos"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid ""
+"We hereby declare, for IRS/IRC purposes and in accordance with\n"
+"                    Article 119(1)(b) of the Personal Income Tax Code, that "
+"the income\n"
+"                    received by you, as well as the respective withholdings, "
+"were as\n"
+"                    follows:"
+msgstr ""
+"Declara-se, para efeitos de IRS/IRC e conforme disposto na\n"
+"alínea b) do nº 1 do artigo 119º do Código do Imposto sobre o Rendimento\n"
+"das Pessoas Singulares, que os rendimentos auferidos por V. Exa.,\n"
+"bem como as respetivas retenções na fonte, foram os seguintes:"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__validate
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__validate
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__validate
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) "
+"before being delivered to the user. As it's a very time consuming task, you "
+"may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Quando ativo, o arquivo passará por uma inspeção técnica (esquema XSD) antes "
+"de ser entregue ao utilizador. Como é uma tarefa que consome muito tempo, "
+"pode querer desabilitá-la quando estiver à espera de um arquivo grande.\n"
+"Desmarque se preferir usar um validador externo."
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard_line__withhold_amount
+msgid "Withhold Amount"
+msgstr "Valor Retido"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
+msgid "Withhold Tax"
+msgstr "Retenção na Fonte"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_monthly_statement_wizard__statement_type__withholding_monthly
+msgid "Withholding Monthly"
+msgstr "Retenção Mensal"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q8__q8_37
+msgid "Withholding Tax"
+msgstr "Retenção na Fonte"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__withholding_type
+msgid "Withholding Type"
+msgstr "Tipo de Retenção"
+
+#. module: ptplus_reports_withholding
+#: model:mail.template,subject:ptplus_reports_withholding.email_template_annual_statement
+msgid "Your {{object.get_period_text()}} Income Statement"
+msgstr "A sua Declaração de Rendimentos de {{object.get_period_text()}}"
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard_line__zone
+msgid "Zone"
+msgstr "Zona"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "[Q1-C01] The 4-digit tax office code"
+msgstr "[Q1-C01] O código de 4 dígitos do Serviço de Finanças"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "[Q2-C02] Certified Accountant VAT No."
+msgstr "[Q2-C02] Nº de Contribuinte do Contabilista Certificado"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "[Q2-C02a] Fact that originated the justifiable reason"
+msgstr "[Q2-C02a] Facto que determinou o justo impedimento"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "[Q2-C02b] Date of the fact that originated the justifiable reason"
+msgstr ""
+"[Q2-C02b] Data do facto que determinou a obrigação de declarar ou alterar "
+"rendimentos já declarados"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid "[Q4-C04] The 4-digit tax office code"
+msgstr "[Q4-C04] O código de 4 dígitos do Serviço de Finanças"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod30_statement_wizard_form
+msgid ""
+"[Q5-C05] Select whether this is the first declaration for the given period "
+"or a replacement."
+msgstr ""
+"[Q5-C05] Indique se se trata da primeira declaração do período ou de uma "
+"declaração de substituição."
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid ""
+"[Q6-C01,C02] Select whether this is the first declaration for the given "
+"period or a replacement."
+msgstr ""
+"[Q6-C01,C02] Indique se se trata da primeira declaração do período ou de uma "
+"declaração de substituição."
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid ""
+"[Q6-C03] Set true if this declaration is being submitted under Art. 119º nº "
+"1d"
+msgstr ""
+"[Q6-C03] Assinale como Verdadeiro caso esta declaração esteja a ser "
+"apresentada nos termos da alínea d), nº1, art. 119º do CIRS"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid ""
+"[Q6-C04] Date of the event that triggered the obligation to declare or amend "
+"income already declared"
+msgstr ""
+"[Q6-C04] Data do facto que determinou a obrigação de declarar ou alterar "
+"rendimentos já declarados"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "[Q7-C01] Certified Accountant VAT No."
+msgstr "[Q7-C01] Nº de Contribuinte do Contabilista Certificado"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "[Q7-C02] Legal representative or taxable person VAT No."
+msgstr "[Q7-C02] Número do Sujeito Passivo ou Representante Legal"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "[Q7-C03] Fact that originated the justifiable reason"
+msgstr "[Q7-C03] Facto que determinou o justo impedimento"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "[Q7-C04] Date of the fact that originated the justifiable reason"
+msgstr "[Q7-C04] Data da ocorrência do facto que originou o justo impledimento"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid ""
+"[Q7-C05] Date on which the fact that originated the justifiable reason "
+"ceased to exist"
+msgstr "[Q7-C05] Data da cessação do facto que originou o justo impedimento"
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid ""
+"[Q7-C06,C07] Set True if the accountant is a substitute of the official one."
+msgstr ""
+"[Q7-C06,C07] Assinale como Verdadeiro caso o contabilista seja suplente."
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_mod10_statement_wizard_form
+msgid "q5_02_value"
+msgstr ""
+
+#~ msgid ""
+#~ "Income Statement for {{ (object.get_period_text()).replace('/','_') }}"
+#~ msgstr ""
+#~ "Declaração de Rendimentos de "
+#~ "{{ (object.get_period_text()).replace('/','_') }}"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificação em"
+
+#~ msgid "Annual Income Statement Report"
+#~ msgstr "Declaração Anual de Rendimentos"
+
+#~ msgid "Annual Income Statement Wizard"
+#~ msgstr "Assistente de Declaração Anual de Rendimentos"
+
+#, python-format
+#~ msgid "Invalid rubric code '{code}'. Tag not found."
+#~ msgstr "Código de rúbrica '{code}' inválido. Etiquetas não encontrada."
+
+#~ msgid "<span>Withholding Tax</span>"
+#~ msgstr "<span>Imposto de Selo</span>"
+
+#~ msgid ""
+#~ "For information purposes, it is further stated that, with regard to\n"
+#~ "                    stamp duty, withholding amounts were as described\n"
+#~ "                    herein:"
+#~ msgstr ""
+#~ "A título informativo, declara-se adicionalmente que, relativamente ao \n"
+#~ "imposto de selo, os valores de retenções foram os que aqui \n"
+#~ "se descrevem:"
+
+#~ msgid "ISO"
+#~ msgstr "ISO"
+
+#~ msgid "S.D"
+#~ msgstr "I. S."
+
+#~ msgid "Stamp Duty Amount"
+#~ msgstr "Valor do Imposto de Selo"
+
+#~ msgid "Total S.D"
+#~ msgstr "Total de I.S."
+
+#~ msgid "Balance"
+#~ msgstr "Saldo"
+
+#, python-format
+#~ msgid "Programming Error: invalid Q6 field %s"
+#~ msgstr "Erro de Programação: campo Q6 inválido %s"
+
+#~ msgid "Tax. Amount"
+#~ msgstr "Montante Imposto"
+
+#~ msgid "Total Tax Amount"
+#~ msgstr "Montante Total do Imposto"
+
+#~ msgid "Annual Statement Wizard Lines"
+#~ msgstr "Linhas do Assistente de Declaração Anual"
+
+#~ msgid "Date of Occurrence"
+#~ msgstr "Data da Ocurrência"
+
+#~ msgid ""
+#~ "Death of other relative or affinity in the direct line or 2nd degree "
+#~ "collateral line"
+#~ msgstr ""
+#~ "Falecimento de outro parente ou afim na linha reta ou no 2.º grau da "
+#~ "linha colateral"
+
+#~ msgid ""
+#~ "Death of spouse (not separated), person living in similar conditions, or "
+#~ "direct relative/affinity in 1st degree"
+#~ msgstr ""
+#~ "Falecimento de cônjuge não separado de pessoas e bens, de pessoa com quem "
+#~ "vivam em condições análogas às dos cônjuges, ou de parente ou afim no 1.º "
+#~ "grau da linha reta"
+
+#~ msgid "Parental situations"
+#~ msgstr "Situações parentais"
+
+#~ msgid "Reason for Justified Impediment"
+#~ msgstr "Motivo para o Justo Impedimento"
+
+#~ msgid ""
+#~ "Serious and sudden illness or hospitalization making the accountant "
+#~ "absolutely unable to fulfill obligations, including childbirth"
+#~ msgstr ""
+#~ "Doença grave e súbita ou internamento hospitalar, que impossibilite em "
+#~ "absoluto o contabilista certificado de cumprir as suas obrigações, bem "
+#~ "como nas situações de parto"
+
+#~ msgid "Commissions"
+#~ msgstr "Comissões"
+
+#~ msgid "Dividends"
+#~ msgstr "Dividendos"
+
+#~ msgid "Employment"
+#~ msgstr "Emprego"
+
+#~ msgid "Occurrence Date"
+#~ msgstr "Data da Ocurrência"
+
+#~ msgid "Other"
+#~ msgstr "Outros"
+
+#~ msgid "Services"
+#~ msgstr "Serviços"
+
+#~ msgid "Stamp Duty"
+#~ msgstr "Imposto de Selo"
+
+#~ msgid "Year"
+#~ msgstr "Ano"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "Send by E-mail"
+#~ msgstr "Enviar por E-mail"

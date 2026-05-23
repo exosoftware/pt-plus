@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.at.gov.pt/2019/DRIVAWeb/schema"
+    targetNamespace="http://www.at.gov.pt/2019/DRIVAWeb/schema"
+    elementFormDefault="qualified"
+>
+    <xs:element name="dr" type="drType" />
+    <xs:complexType name="drType">
+        <xs:sequence>
+            <xs:element name="rosto" type="rostoFormType" minOccurs="1" maxOccurs="1">
+            </xs:element>
+
+        </xs:sequence>
+        <xs:attribute name="version" fixed="1.0" use="required" />
+    </xs:complexType>
+    <xs:complexType name="rostoFormType">
+        <xs:sequence>
+            <xs:element name="quadro01" type="rostoQuadro01SectionType" />
+            <xs:element name="quadro02" type="rostoQuadro02SectionType" />
+            <xs:element name="quadro03" type="rostoQuadro03SectionType" />
+            <xs:element
+                name="quadro0405"
+                type="rostoQuadro0405SectionType"
+                minOccurs="0"
+            />
+            <xs:element name="quadro06" type="rostoQuadro07SectionType" />
+            <xs:element name="quadro07" type="rostoQuadro06SectionType" minOccurs="0" />
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rostoQuadro01SectionType">
+        <xs:sequence>
+            <xs:element name="f1" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Número de Identificação Fiscal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoQuadro02SectionType">
+        <xs:sequence>
+            <xs:element name="f1" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Tipo de declaração
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f3" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Houve alteração de periodicidade de envio de trimestral para mensal?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f4" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.1.
+
+                            Alteração de periodicidade de envio de trimestral para mensal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f5" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            O valor mensal substitui ou não totalmente o anterior valor trimestral declarado?
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f6" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.2.
+
+                            Inexistência de operações no respectivo período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f7" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.3.
+
+                            Outros
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f8" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.
+
+                            Vendas de bens à consignação
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f9" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.1
+
+                            Sem alterações no respetivo período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f10" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.1.1
+
+                            Sem vendas de bens à consignação declaradas
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f11" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.1.2
+
+                            Com vendas de bens à consignação declaradas
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f12" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.2
+
+                            Com alterações no respetivo período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f13" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.4.3
+
+                            Declara pela 1ª vez no respetivo período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoQuadro03SectionType">
+        <xs:sequence>
+            <xs:element name="f1" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 1.
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f2" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 2.
+
+                            Mensal
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f3" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 3.
+
+                            Trimestral
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f4" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 4.
+
+                            Mes(es) incluído(s) no trimestre
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="f5" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 5.
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoQuadro0405SectionType">
+        <xs:sequence>
+            <xs:element name="f10" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 10.
+
+                            Soma (apenas dos valores que respeitem às operações tipificadas na coluna 5 com 1)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="f11" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 11.
+
+                            Total das vendas de meios de transporte novos a particulares e equiparados de outros estados membros
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="f17" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 17.
+
+                            Soma (apenas dos valores que respeitem às operações indicadas na coluna 5 com 4)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="f18" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 18.
+
+                            Soma (apenas dos valores que respeitem às operações indicadas na coluna 5 com 5)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="f19" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+                            Campo 19.
+
+                            Total (10+11+18)
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="table" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element
+                            name="tableItem"
+                            minOccurs="0"
+                            maxOccurs="unbounded"
+                            type="rostoQuadro0405TableItemType"
+                        >
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoQuadro0405TableItemType">
+        <xs:sequence>
+            <xs:element name="f2" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="f3" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="f4" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Money field
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="13" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="f5" type="xs:token" minOccurs="0">
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rostoQuadro06SectionType">
+        <xs:sequence>
+            <xs:element name="table" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element
+                            name="tableItem"
+                            minOccurs="0"
+                            maxOccurs="unbounded"
+                            type="rostoQuadro06TableItemType"
+                        >
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rostoQuadro06TableItemType">
+        <xs:sequence>
+            <xs:element name="f2" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="f3" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="f4" type="xs:token" minOccurs="0">
+            </xs:element>
+            <xs:element name="f5" type="xs:token" minOccurs="0">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rostoQuadro07SectionType">
+        <xs:sequence>
+            <xs:element name="f1" type="nifType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            NIF Técnico Oficial de Contas
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="nifType">
+        <xs:restriction base="xs:long">
+            <xs:pattern value="[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

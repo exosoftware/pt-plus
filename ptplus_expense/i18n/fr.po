@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-18 18:33+0000\n"
+"PO-Revision-Date: 2024-04-18 18:33+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid ""
+"<br/>\n"
+"                        <span class=\"text-muted fst-italic text-truncate"
+"\">\n"
+"                            Note: unless expressly stated otherwise, the "
+"origin of the trips will be the company's headquarters.\n"
+"                        </span>\n"
+"                        <br/><br/>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Description:</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Employee:</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Payment By:</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "<strong>Validated By:</strong>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Certified honest and conform,<br/>(Date and signature).<br/><br/>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Description"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Destination/Date"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_partner__l10n_pt_distance_to_hq
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_users__l10n_pt_distance_to_hq
+msgid "Distance to HQ"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/res_partner.py:0
+#, python-format
+msgid "Distance to HQ on partner '{partner}' cannot be negative."
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_hr_expense
+msgid "Expense"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_product_product__l10n_pt_expense_type
+#: model:ir.model.fields,field_description:ptplus_expense.field_product_template__l10n_pt_expense_type
+msgid "Expense Type"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_hr_employee
+msgid "Hr Employee"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__l10n_pt_is_travel_expense
+msgid "L10N Pt Is Travel Expense"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_employee__l10n_pt_license_plate
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__l10n_pt_license_plate
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "License Plate"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "N/A"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__l10n_pt_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_int
+#: model:product.template,name:ptplus_expense.per_diems_internacional
+msgid "Per Diems Internacional"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_int_25
+#: model:product.template,name:ptplus_expense.per_diems_internacional_25
+msgid "Per Diems Internacional (25%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_int_50
+#: model:product.template,name:ptplus_expense.per_diems_internacional_50
+msgid "Per Diems Internacional (50%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_int_75
+#: model:product.template,name:ptplus_expense.per_diems_internacional_75
+msgid "Per Diems Internacional (75%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_nac
+#: model:product.template,name:ptplus_expense.per_diems_national
+msgid "Per Diems National"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_nac_25
+#: model:product.template,name:ptplus_expense.per_diems_national_25
+msgid "Per Diems National (25%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_nac_50
+#: model:product.template,name:ptplus_expense.per_diems_national_50
+msgid "Per Diems National (50%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__ajud_custo_nac_75
+#: model:product.template,name:ptplus_expense.per_diems_national_75
+msgid "Per Diems National (75%)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Price"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Price in Company Currency"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Qty"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,help:ptplus_expense.field_res_partner__l10n_pt_distance_to_hq
+#: model:ir.model.fields,help:ptplus_expense.field_res_users__l10n_pt_distance_to_hq
+msgid ""
+"Round trip distance in Km from HQ to partner, to make travel expense "
+"tracking easier."
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Travel by own car"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.actions.report,name:ptplus_expense.action_report_vehicle_expense
+msgid "Travel by own car Report"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields.selection,name:ptplus_expense.selection__product_template__l10n_pt_expense_type__des_vprop
+#: model:product.template,name:ptplus_expense.trav_expenses_own_vehicle
+msgid "Traveling Expenses (Own Vehicle)"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
+msgid "Unit Price"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/product.py:0
+#, python-format
+msgid "You can't delete the '%s' product. It's required for expense logging."
+msgstr ""

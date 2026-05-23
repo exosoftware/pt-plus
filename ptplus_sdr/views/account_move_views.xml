@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_form_sdr" model="ir.ui.view">
+        <field name="name">account.move.form.sdr</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_cancel']" position="before">
+                <button
+                    name="action_l10n_pt_sdr_recompute"
+                    id="action_l10n_pt_sdr_recompute"
+                    string="Recompute SDR"
+                    type="object"
+                    invisible="state != 'draft' or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or not l10n_pt_sdr_has_flagged_line or not l10n_pt_sdr_auto_compute"
+                />
+            </xpath>
+            <xpath expr="//field[@name='invoice_line_ids']" position="before">
+                <field name="l10n_pt_sdr_base_qty" invisible="1" />
+                <field name="l10n_pt_sdr_has_flagged_line" invisible="1" />
+                <field name="l10n_pt_sdr_auto_compute" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

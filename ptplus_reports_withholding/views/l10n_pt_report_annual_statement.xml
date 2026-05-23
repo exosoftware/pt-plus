@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="l10n_pt_report_annual_statement_document">
+        <t
+            t-set="partners"
+            t-value="docs.env.context.get('partner', False) or docs[0].line_ids.mapped('partner_id')"
+        />
+        <t t-set="statement" t-value="docs[0]" />
+        <t t-call="web.external_layout" t-foreach="partners" t-as="partner">
+            <!--<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />-->
+            <div class="row">
+                <div class="offset-col-6 col-6" style="font-size: 10pt;">
+                    <t t-set="address">
+                        <address
+                            class="mb-0"
+                            t-out="partner"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                        <div t-if="partner.vat" id="partner_vat_no_shipping">
+                            Tax ID: <span t-out="partner.vat" />
+                        </div>
+                    </t>
+                </div>
+            </div>
+            <div class="page">
+                <br /><br />
+                <h3>Income Statement for <span t-out="docs[0].get_period_text()" /></h3>
+                <br /><br /><br /><br />
+                <p>
+                    We hereby declare, for IRS/IRC purposes and in accordance with
+                    Article 119(1)(b) of the Personal Income Tax Code, that the income
+                    received by you, as well as the respective withholdings, were as
+                    follows:
+                </p>
+                <br /><br />
+                <table class="table table-sm o_main_table" style="font-size: 10pt;">
+                    <thead>
+                        <tr>
+                            <th class="text-start">Income Category</th>
+                            <th class="text-end" style="width: 20%">Income</th>
+                            <th class="text-end" style="width: 20%">Withhold Tax</th>
+                            <!--<th class="text-end">Stamp Duty</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            t-foreach="docs[0].line_ids.filtered(lambda r: r.partner_id == partner and r.income_category_code != 'DAR')"
+                            t-as="l"
+                        >
+                            <td class="text-start"><span
+                                    t-field="l.income_category"
+                                /></td>
+                            <td class="text-end"><span t-field="l.income_amount" /></td>
+                            <td class="text-end"><span
+                                    t-field="l.withhold_amount"
+                                /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="l10n_pt_report_annual_statement">
+        <t t-call="web.html_container">
+            <t
+                t-call="ptplus_reports_withholding.l10n_pt_report_annual_statement_document"
+            />
+        </t>
+    </template>
+
+</odoo>

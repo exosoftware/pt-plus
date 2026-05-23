@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_monthly_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.monthly.statement.wizard.form</field>
+        <field name="model">l10n_pt.monthly.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field name="withholding_type" invisible="state != 'select'" />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <tree editable="bottom">
+                            <field name="currency_id" column_invisible="1" />
+                            <field name="zone" />
+                            <field name="rubric" />
+                            <field name="amount" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_monthly_statement_wizard_action" model="ir.actions.act_window">
+        <field name="name">Monthly Statement</field>
+        <field name="res_model">l10n_pt.monthly.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_monthly_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_monthly_statement_wizard_menu"
+        parent="ptplus_reports_withholding.l10n_pt_income_retention_menu"
+        sequence="30"
+        groups="account.group_account_user"
+        action="l10n_pt_monthly_statement_wizard_action"
+    />
+</odoo>

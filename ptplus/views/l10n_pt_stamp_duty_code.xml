@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Stamp Duty Codes -->
+    <record id="l10n_pt_stamp_duty_code_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.stamp.duty.code.search</field>
+        <field name="model">l10n_pt.stamp.duty.code</field>
+        <field name="arch" type="xml">
+            <search string="Stamp Duty Codes">
+                <filter
+                    name="usable"
+                    string="Usable"
+                    domain="[('is_group','=', False), ('active','!=', False)]"
+                    help="Show usable stamp duty codes"
+                />
+                <separator />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active','=',True)]"
+                    help="Show active stamp duty codes"
+                />
+                <filter
+                    name="inactive"
+                    string="Inactive"
+                    domain="[('active','=',False)]"
+                    help="Show inactive stamp duty codes"
+                />
+            </search>
+        </field>
+    </record>
+    <record id="l10n_pt_stamp_duty_code_view_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.stamp.duty.code.list</field>
+        <field name="model">l10n_pt.stamp.duty.code</field>
+        <field name="arch" type="xml">
+            <tree
+                editable="bottom"
+                decoration-muted="not active"
+                decoration-bf="is_group"
+            >
+                <field name="sequence" widget="handle" />
+                <field name="code" />
+                <field name="name" />
+                <field name="description" optional="hide" />
+                <field name="amount" />
+                <field name="amount_type" />
+                <field name="is_group" />
+                <field name="active" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="l10n_pt_stamp_duty_code_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.stamp.duty.code.form</field>
+        <field name="model">l10n_pt.stamp.duty.code</field>
+        <field name="arch" type="xml">
+            <form string="Stamp Duty Code">
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        invisible="active"
+                    />
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="is_group" />
+                        </group>
+                        <group>
+                            <field name="amount" invisible="is_group" />
+                            <field name="amount_type" invisible="is_group" />
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_pt_stamp_duty_code_action_list" model="ir.actions.act_window">
+        <field name="name">Stamp Duty Codes</field>
+        <field name="res_model">l10n_pt.stamp.duty.code</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="l10n_pt_stamp_duty_code_view_tree" />
+        <field name="search_view_id" ref="l10n_pt_stamp_duty_code_view_search" />
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+    <menuitem
+        id="menu_action_l10n_pt_stamp_duty_code_list"
+        parent="account.account_account_menu"
+        action="l10n_pt_stamp_duty_code_action_list"
+        sequence="85"
+        groups="account.group_account_invoice"
+    />
+</odoo>

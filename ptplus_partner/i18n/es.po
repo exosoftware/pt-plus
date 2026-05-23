@@ -1,0 +1,286 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-20 20:05+0000\n"
+"PO-Revision-Date: 2021-08-25 10:16+0100\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_address_selection_ctt
+msgid "Address Selection Wizard"
+msgstr ""
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.view_partner_form_pt
+msgid "Auto-fill"
+msgstr ""
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.res_config_settings_view_form
+msgid "Autocomplete address details from the ZIP Code"
+msgstr ""
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.view_partner_form_pt
+msgid "Autocomplete with data from CTT API"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.res_config_settings_view_form
+msgid "CTT API"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__city
+msgid "City"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model,name:ptplus_partner.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner_bank__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__display_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__l10n_pt_establishment_code
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__l10n_pt_establishment_code
+msgid "Establishment Code"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner_bank__country_id
+msgid ""
+"If the bank account is Portuguese, the account number will be validated and "
+"formatted accordingly."
+msgstr ""
+"Si la cuenta bancaria es Portuguesa, el número de cuenta será validado y "
+"formateado en consecuencia."
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.address_selection_ctt_tree
+msgid "Insert"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__l10n_pt_legal_name
+#, fuzzy
+#| msgid "Legal Name"
+msgid "L10N Pt Legal Name"
+msgstr "Nombre Legal"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_partner__l10n_pt_partner_zip_ctt
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_users__l10n_pt_partner_zip_ctt
+msgid "L10N Pt Partner Zip Ctt"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__write_date
+#, fuzzy
+#| msgid "Last Modified on"
+msgid "Last Updated on"
+msgstr "Última modificación el"
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.view_partner_form_pt
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.view_partner_simple_form_pt
+msgid "Legal Name"
+msgstr "Nombre Legal"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,help:ptplus_partner.field_res_partner__l10n_pt_legal_name
+#: model:ir.model.fields,help:ptplus_partner.field_res_users__l10n_pt_legal_name
+msgid ""
+"Legal name or any other form of business name. When filled, will be used on "
+"legal documents (invoices, credit notes, etc.) instead of the regular name"
+msgstr ""
+"Nombre legal o cualquier otra forma de nombre comercial. Cuando se rellene, "
+"se utilizará en los documentos legales (facturas, notas de crédito, etc.) en "
+"lugar del nombre normal"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__l10n_pt_lname
+msgid "Long name"
+msgstr "Nombre largo"
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__l10n_pt_code
+msgid "National Code"
+msgstr ""
+
+#. module: ptplus_partner
+#: model_terms:ir.ui.view,arch_db:ptplus_partner.view_partner_form_pt
+msgid "PT Establishment Information"
+msgstr ""
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, fuzzy, python-format
+#| msgid "Invalid zip code %s"
+msgid "Please enter a valid zip code"
+msgstr "Código postal inválido %s"
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "Select Address"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__state_id
+msgid "State"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__street
+msgid "Street"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__street2
+msgid "Street2"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__l10n_pt_vat
+msgid "TIN"
+msgstr "NIF"
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/models/res_bank.py:0
+#, python-format
+msgid "The IBAN must have 25 digits"
+msgstr "El IBAN debe tener 25 dígitos"
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/webservice.py:0
+#, python-format
+msgid "Timeout"
+msgstr ""
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/webservice.py:0
+#, python-format
+msgid "Too many redirects"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_bank__l10n_pt_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "You can't change the TIN of customer %s because it has posted invoices"
+msgstr ""
+"No se puede cambiar el número de identificación del cliente %s porque ya ha "
+"contabilizado facturas"
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/models/res_partner.py:0
+#, python-format
+msgid "You can't delete the 'End Consumer' partner"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_company__l10n_pt_partner_zip_ctt
+#: model:ir.model.fields,field_description:ptplus_partner.field_res_config_settings__l10n_pt_partner_zip_ctt
+msgid "ZIP CTT"
+msgstr ""
+
+#. module: ptplus_partner
+#. odoo-python
+#: code:addons/ptplus_partner/webservice.py:0
+#, python-format
+msgid ""
+"ZIP CTT API Error on service %s:\n"
+"\n"
+"%s"
+msgstr ""
+
+#. module: ptplus_partner
+#: model:ir.model.fields,field_description:ptplus_partner.field_address_selection_ctt__zip
+#, fuzzy
+#| msgid "Code"
+msgid "Zip Code"
+msgstr "Código"
+
+#~ msgid "The internal reference already exists!"
+#~ msgstr "¡La referencia interna ya existe!"
+
+#, python-format
+#~ msgid "VAT number %s is already associated with a different partner"
+#~ msgstr "El número de IVA %s ya está asociado con un otro contacto"

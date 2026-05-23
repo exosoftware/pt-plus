@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Invoice document mods -->
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+
+        <!-- Information zone fields -->
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div
+                t-attf-class="#{'col-auto col-3 mw-100' if report_type != 'html' else 'col'} mb-2"
+                t-if="o.l10n_pt_commitment_number"
+            >
+                <strong>Commitment No.:</strong><br />
+                <span t-field="o.l10n_pt_commitment_number" />
+            </div>
+            <div
+                t-attf-class="#{'col-auto col-3 mw-100' if report_type != 'html' else 'col'} mb-2"
+                t-if="o.l10n_pt_fitting_number"
+            >
+                <strong>Fitting No.:</strong><br />
+                <span t-field="o.l10n_pt_fitting_number" />
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

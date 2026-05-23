@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_multi_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.multi.statement.wizard.form</field>
+        <field name="model">l10n_pt.multi.statement.wizard</field>
+        <field name="inherit_id" ref="l10n_pt_statement_wizard_form" />
+        <field name="mode">primary</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="show_button_mail" position="after">
+                <field name="show_button_select_all" invisible="1" />
+                <field name="show_button_select_none" invisible="1" />
+            </field>
+
+            <notebook name="main_block" position="inside">
+                <page name="Statements">
+                    <field name="line_ids" nolabel="1" widget="many2many" colspan="2">
+                        <tree editable="bottom" decoration-muted="not selected">
+                            <field
+                                name="selected"
+                                string="Sel."
+                                widget="boolean_toggle"
+                            />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+
+            <button special="cancel" position="before">
+                <button
+                    name="action_select_all"
+                    string="Select All"
+                    type="object"
+                    class="btn-secondary"
+                    invisible="not show_button_select_all or state != 'analyze'"
+                />
+                <button
+                    name="action_select_none"
+                    string="Select None"
+                    type="object"
+                    class="btn-secondary"
+                    invisible="not show_button_select_none or state != 'analyze'"
+                />
+            </button>
+        </field>
+    </record>
+</odoo>

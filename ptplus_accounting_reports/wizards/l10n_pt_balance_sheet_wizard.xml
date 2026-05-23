@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_balance_sheet_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.balance.sheet.wizard.form</field>
+        <field name="model">l10n_pt.balance.sheet.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main" position="after">
+                <group
+                    name="expected_balance_check"
+                    string="Expected Balance Checking"
+                    invisible="state != 'select'"
+                >
+                    <span class="text-muted">
+                        Please indicate if the following operations have been completed:
+                    </span>
+                    <group />
+                    <div class="o_row">
+                        <label for="is_after_pl_calculation" string="P/L Calculation" />
+                        <field name="is_after_pl_calculation" widget="boolean_toggle" />
+                        <label
+                            class="ps-5"
+                            for="is_after_inventory_transfers"
+                            string="Inventory Transfers"
+                        />
+                        <field
+                            name="is_after_inventory_transfers"
+                            widget="boolean_toggle"
+                        />
+                    </div>
+                </group>
+                <group
+                    name="error_analyze"
+                    string="Errors"
+                    invisible="state != 'analyze' or not warnings"
+                >
+                    <field
+                        name="warnings"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+            </group>
+            <group name="main_left" position="inside">
+                <field name="chart_template" readonly="state != 'select'" />
+                <field name="include_draft" widget="boolean_toggle" />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <tree editable="bottom">
+                            <field name="code" />
+                            <field name="display_name" string="Name" readonly="1" />
+                            <field name="amount" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_balance_sheet_wizard_action" model="ir.actions.act_window">
+        <field name="name">Balance Sheet</field>
+        <field name="res_model">l10n_pt.balance.sheet.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_balance_sheet_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_balance_sheet_wizard_menu"
+        parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
+        sequence="20"
+        action="l10n_pt_balance_sheet_wizard_action"
+    />
+</odoo>

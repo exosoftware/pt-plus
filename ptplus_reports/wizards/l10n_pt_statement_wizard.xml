@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.statement.wizard.form</field>
+        <field name="model">l10n_pt.statement.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form name="Options">
+                <field name="state" invisible="1" />
+                <field name="filename" invisible="1" />
+                <field name="currency_id" invisible="1" />
+                <field name="show_button_compute" invisible="1" />
+                <field name="show_button_export_pdf" invisible="1" />
+                <field name="show_button_export_xml" invisible="1" />
+                <field name="show_button_export_txt" invisible="1" />
+                <field name="show_button_export_xlsx" invisible="1" />
+                <field name="show_button_export_csv" invisible="1" />
+                <field name="show_button_export_webservice" invisible="1" />
+                <field name="show_button_print" invisible="1" />
+                <field name="show_button_mail" invisible="1" />
+                <group name="main" invisible="state == 'done'">
+                    <group name="main_left">
+                        <field
+                            name="company_id"
+                            options="{'no_create_edit': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="period" readonly="state != 'select'" />
+                        <field
+                            name="date_from"
+                            string="From"
+                            invisible="period != 'custom'"
+                            readonly="state != 'select'"
+                        />
+                        <field
+                            name="date_to"
+                            string="To"
+                            invisible="period != 'custom'"
+                            readonly="state != 'select'"
+                        />
+                    </group>
+                </group>
+                <group name="options" string="Options" invisible="state != 'analyze'">
+                    <group name="options_left" />
+                    <group name="options_right" />
+                </group>
+                <notebook invisible="state != 'analyze'" name="main_block" />
+                <div invisible="state != 'done'">
+                    <h2>Export Complete</h2>
+                    <p>
+                        Generated file: <field
+                            name="data"
+                            readonly="1"
+                            filename="filename"
+                        />
+                    </p>
+                </div>
+                <group name="error_info" string="Errors" invisible="state != 'done'">
+                    <field
+                        name="warnings"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+                <group name="log_info" string="Log info" invisible="state != 'done'">
+                    <field name="log_on_close" />
+                    <field name="log_as_reported" />
+                </group>
+                <footer>
+                    <button
+                        name="action_compute"
+                        string="Compute"
+                        type="object"
+                        class="btn-primary"
+                        invisible="not show_button_compute or state != 'select'"
+                    />
+                    <button
+                        name="export_xml"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export XML"
+                        invisible="not show_button_export_xml or state != 'analyze'"
+                    />
+                    <button
+                        name="export_pdf"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export PDF"
+                        invisible="not show_button_export_pdf or state != 'analyze'"
+                    />
+                    <button
+                        name="export_txt"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export TXT"
+                        invisible="not show_button_export_txt or state != 'analyze'"
+                    />
+                    <button
+                        name="export_xlsx"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export XLSX"
+                        invisible="not show_button_export_xlsx or state != 'analyze'"
+                    />
+                    <button
+                        name="export_csv"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export CSV"
+                        invisible="not show_button_export_csv or state != 'analyze'"
+                    />
+                    <button
+                        name="export_webservice"
+                        type="object"
+                        class="oe_highlight"
+                        string="Export Webservice"
+                        invisible="not show_button_export_webservice or state != 'analyze'"
+                    />
+                    <button
+                        name="action_send_mail"
+                        string="Send by E-mail"
+                        type="object"
+                        class="btn-primary"
+                        confirm="Are you sure you want to send emails to the selected records?"
+                        invisible="not show_button_mail or state != 'analyze'"
+                    />
+                    <button
+                        name="action_print"
+                        string="Print"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="not show_button_print or state != 'analyze'"
+                    />
+                    <button
+                        string="Cancel"
+                        class="btn-secondary"
+                        special="cancel"
+                        data-hotkey="z"
+                        invisible="state == 'done'"
+                    />
+
+                    <button
+                        name="go_back"
+                        type="object"
+                        string="Previous"
+                        class="btn-primary"
+                        invisible="state != 'done'"
+                    />
+
+                    <button
+                        name="close"
+                        type="object"
+                        string="Close"
+                        invisible="state != 'done'"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

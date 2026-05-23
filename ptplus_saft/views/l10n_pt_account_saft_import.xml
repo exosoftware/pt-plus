@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_saft_import_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.saft.import.form</field>
+        <field name="model">l10n_pt.account.saft.import</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div name="button_box" position="inside">
+                        <field name="moves_created_count" invisible="1" />
+                        <button
+                            name="action_related_moves"
+                            class="oe_stat_button"
+                            icon="fa-address-card-o"
+                            type="object"
+                            invisible="moves_created_count == 0 or rec_model != 'account.move'"
+                        >
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field
+                                        name="moves_created_count"
+                                    /></span>
+                                <span class="o_stat_text">Odoo Moves</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="number" readonly="1" />
+                            <field name="action" readonly="1" />
+                            <field name="rec_model" readonly="1" />
+                            <field
+                                name="company_id"
+                                readonly="1"
+                                groups="base.group_multi_company"
+                            />
+                            <field name="enable" widget="boolean_toggle" />
+                        </group>
+                        <group>
+                            <field name="rec_name" invisible="rec_name == False" />
+                            <field
+                                name="parent_account_group_id"
+                                invisible="parent_account_group_id == False"
+                            />
+                            <field name="journal_id" invisible="journal_id == False" />
+                            <field name="partner_id" invisible="partner_id == False" />
+                            <field name="account_id" invisible="account_id == False" />
+                            <field
+                                name="account_group_id"
+                                invisible="account_group_id == False"
+                            />
+                            <field name="move_id" invisible="move_id == False" />
+                            <field
+                                name="move_line_id"
+                                invisible="move_line_id == False"
+                            />
+                            <field name="product_id" invisible="product_id == False" />
+                            <field
+                                name="saft_journal_id"
+                                invisible="saft_journal_id == False"
+                            />
+                            <field
+                                name="saft_move_id"
+                                invisible="saft_move_id == False"
+                            />
+                            <field
+                                name="saft_account_id"
+                                invisible="saft_account_id == False"
+                            />
+                            <field
+                                name="saft_move_line_ids"
+                                widget="many2many"
+                                invisible="saft_move_line_ids == []"
+                            >
+                                <tree>
+                                    <field name="display_name" />
+                                </tree>
+                            </field>
+                            <field
+                                name="saft_move_line_id"
+                                invisible="saft_move_line_id == False"
+                            />
+                        </group>
+                        <group string="Comparison Table">
+                            <field name="saft_diff" nolabel="1" colspan="2" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_saft_import_tree" model="ir.ui.view">
+        <field name="name">l10n_pt.account.saft.import.tree</field>
+        <field name="model">l10n_pt.account.saft.import</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-danger="action=='update'"
+                create="false"
+                js_class="l10n_pt_saft_list"
+            >
+                <field name="number" />
+                <field name="action" />
+                <field name="notes" string="Fields" />
+                <field name="rec_model_description" string="Model" />
+                <field name="rec_name" string="Record" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state == 'done'"
+                    decoration-info="state == 'draft'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="account_saft_import_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.saft.import.search</field>
+        <field name="model">l10n_pt.account.saft.import</field>
+        <field name="arch" type="xml">
+            <search string="Search SAF-T PT Import">
+                <field name="number" />
+                <field name="saft_data" />
+                <filter
+                    string="Create"
+                    name="create"
+                    domain="[('action','=', 'create')]"
+                />
+                <filter
+                    string="Update"
+                    name="update"
+                    domain="[('action','=', 'update')]"
+                />
+                <filter
+                    string="Enable"
+                    name="filter_enable"
+                    domain="[('enable','=', True)]"
+                />
+                <filter
+                    string="Disable"
+                    name="filter_disable"
+                    domain="[('enable','=', False)]"
+                />
+                <filter
+                    string="Done"
+                    name="filter_done"
+                    domain="[('state','=', 'done')]"
+                />
+                <filter
+                    string="Draft"
+                    name="filter_draft"
+                    domain="[('state','=', 'draft')]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="State"
+                        name="state"
+                        context="{'group_by': 'state'}"
+                    />
+                    <filter
+                        string="Import No."
+                        name="group_by_number"
+                        context="{'group_by': 'number'}"
+                    />
+                    <filter
+                        string="Model"
+                        name="group_by_model"
+                        context="{'group_by': 'rec_model_id'}"
+                    />
+                    <filter
+                        string="Action"
+                        name="group_by_action"
+                        context="{'group_by': 'action'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_write_records">
+        <field name="name">Write Record(s)</field>
+        <field name="model_id" ref="ptplus_saft.model_l10n_pt_account_saft_import" />
+        <field
+            name="binding_model_id"
+            ref="ptplus_saft.model_l10n_pt_account_saft_import"
+        />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_write_records()
+        </field>
+    </record>
+
+    <record id="action_account_saft_import_view" model="ir.actions.act_window">
+        <field name="name">Import SAFT-T</field>
+        <field name="res_model">l10n_pt.account.saft.import</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('account_saft_import_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('account_saft_import_form')})]"
+        />
+        <field name="context">{
+            'search_default_group_by_number': 1,
+            'search_default_group_by_model': 1,
+            'search_default_filter_enable': 1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No data yet!
+            </p><p>
+                First import the saft.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_account_saft_import_list"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="2"
+        action="action_account_saft_import_view"
+        groups="ptplus.group_experimental_features_pt"
+    />
+
+</odoo>

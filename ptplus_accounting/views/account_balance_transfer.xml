@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- ABT Template -->
+    <record id="view_abt_template_tree" model="ir.ui.view">
+        <field name="name">account.balance.transfer.template.tree</field>
+        <field name="model">account.balance.transfer.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="journal_id" />
+                <field name="company_id" options="{'no_create': True}" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_abt_template_form" model="ir.ui.view">
+        <field name="name">account.balance.transfer.template.form</field>
+        <field name="model">account.balance.transfer.template</field>
+        <field name="arch" type="xml">
+            <form string="Account Balance Transfer Template">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="journal_id" />
+                        </group>
+                        <group>
+                            <field name="active" />
+                            <field name="company_id" options="{'no_create': True}" />
+                        </group>
+                    </group>
+                    <group string="Transfer Rules">
+                        <field name="line_ids" nolabel="1" colspan="2">
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="sequence" widget="handle" />
+                                <!--<field name="source_account_ids" widget="many2many_tags" options="{'no_create': True}"/>-->
+                                <field name="source_account_prefix" />
+                                <field
+                                    name="debit_account_id"
+                                    options="{'no_create': True}"
+                                />
+                                <field
+                                    name="credit_account_id"
+                                    options="{'no_create': True}"
+                                />
+                                <field name="chained" />
+                            </tree>
+                            <form
+                                string="Transfer Mapping"
+                                editable="bottom"
+                                default_order="sequence"
+                            >
+                                <field name="sequence" widget="handle" />
+                                <!--<field name="source_account_ids" widget="many2many_tags" options="{'no_create': True}"/>-->
+                                <field name="source_account_prefix" />
+                                <field
+                                    name="debit_account_id"
+                                    options="{'no_create': True}"
+                                />
+                                <field
+                                    name="credit_account_id"
+                                    options="{'no_create': True}"
+                                />
+                                <field name="chained" />
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="action_account_balance_transfer_template_form"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Account Balance Transfer Templates</field>
+        <field name="res_model">account.balance.transfer.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="menu_action_account_balance_transfer_template_form"
+        action="action_account_balance_transfer_template_form"
+        parent="account.account_account_menu"
+    />
+
+    <!-- ABT tree view -->
+    <record model="ir.ui.view" id="view_abt_tree">
+        <field name="name">account.balance.transfer.tree</field>
+        <field name="model">account.balance.transfer</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-muted="state=='cancelled'"
+                decoration-info="state=='draft'"
+                decoration-warning="state=='in_progress'"
+            >
+                <field name="name" />
+                <field name="move_date" />
+                <field name="journal_id" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="state" />
+                <field name="company_id" options="{'no_create': True}" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ABT form view -->
+    <record model="ir.ui.view" id="view_abt_form">
+        <field name="name">account.balance.transfer.form</field>
+        <field name="model">account.balance.transfer</field>
+        <field name="arch" type="xml">
+            <form string="Account balance transfer">
+                <header>
+                    <button
+                        name="action_run"
+                        string="Execute"
+                        class="oe_highlight"
+                        type="object"
+                        invisible="state != 'draft'"
+                    />
+                    <button
+                        name="action_confirm"
+                        string="Confirm"
+                        class="oe_highlight"
+                        type="object"
+                        invisible="state != 'in_progress'"
+                    />
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        invisible="state not in ['in_progress', 'done']"
+                    />
+                    <button
+                        name="action_recover"
+                        string="Set to Draft"
+                        type="object"
+                        invisible="state != 'cancelled'"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,in_progress,done"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="template_id" readonly="state != 'draft'" />
+                            <field name="name" readonly="state != 'draft'" />
+                            <field name="company_id" />
+                        </group>
+                        <group>
+                            <field name="journal_id" readonly="state != 'draft'" />
+                            <field name="move_date" readonly="state != 'draft'" />
+                            <field name="manual_move" readonly="state != 'draft'" />
+                        </group>
+
+                    </group>
+                    <group string="Filters" colspan="2">
+                        <group>
+                            <field name="date_from" />
+                            <field name="date_to" />
+                        </group>
+                    </group>
+                    <group string="Moves created by the operation">
+                        <group>
+                            <field name="move_id" />
+                        </group>
+                        <group>
+                            <field name="manual_move_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Menus and windows -->
+
+    <record model="ir.actions.act_window" id="action_view_abt_tree">
+        <field name="name">Account Balance Transfers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.balance.transfer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_abt_tree" />
+    </record>
+
+    <menuitem
+        id="menu_abt_list"
+        action="action_view_abt_tree"
+        parent="account.menu_finance_entries_management"
+    />
+
+</odoo>

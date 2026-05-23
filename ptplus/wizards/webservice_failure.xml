@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_wizard_webservice_failure" model="ir.ui.view">
+        <field name="name">wizard_webservice_failure</field>
+        <field name="model">wizard.webservice.failure</field>
+        <field name="arch" type="xml">
+            <form string="Webservice Failure">
+                <group>
+                    <p invisible="not description">
+                        <field name="description" readonly="1" nolabel="1" />
+                    </p>
+                    <p invisible="not help" class="text-muted">
+                        <field name="help" readonly="1" nolabel="1" widget="html" />
+                    </p>
+                    <!--
+                    <field name="description" readonly="1" />
+                    <field
+                        name="help"
+                        readonly="1"
+                        widget="html"
+                    />
+                    -->
+                    <!--
+                    <p>
+                        Couldn't communicate fiscal document to tax authorities.
+                    </p>
+                    <p class="text-muted">
+                    </p>
+                    -->
+                </group>
+                <group name="error_info" string="Error">
+                    <field name="error_code" readonly="1" />
+                    <field name="error_msg" readonly="1" widget="html" />
+                    <field
+                        name="error_detail"
+                        readonly="1"
+                        widget="html"
+                        invisible="not error_detail"
+                    />
+                </group>
+                <footer>
+                    <button string="Close" class="btn-primary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

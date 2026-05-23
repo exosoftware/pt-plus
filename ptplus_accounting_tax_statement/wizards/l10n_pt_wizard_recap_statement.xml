@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="wizard_recap_statement_form" model="ir.ui.view">
+        <field name="name">l10n_pt.wizard.recap.statement.form</field>
+        <field name="model">l10n_pt.wizard.recap.statement</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus.dataport_export_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='main_export_group']/group" position="before">
+                <div name="info">
+                    <p
+                    >The recapitulative statement will consider the VAT base for all the invoice lines
+                    containing tag IVA DP [7] that also relate to a partner that belongs to the Europe
+                    country group (except Portugal).</p>
+                    <p />
+                </div>
+                <div />
+                <hr />
+                <hr />
+            </xpath>
+
+            <xpath expr="//group[@id='main_export_group']/group" position="inside">
+                <field name="substitution" />
+            </xpath>
+
+            <xpath expr="//group[@name='error_info']" position="before">
+                <group name="outcome_info" string="Info" invisible="state != 'done'">
+                    <field
+                        name="info"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="action_wizard_recap_statement" model="ir.actions.act_window">
+        <field name="name">Recapitulative Statement</field>
+        <field name="res_model">l10n_pt.wizard.recap.statement</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wizard_recap_statement_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="wizard_recap_statement_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="140"
+        groups="account.group_account_user,account.group_account_user"
+        action="action_wizard_recap_statement"
+    />
+
+</odoo>

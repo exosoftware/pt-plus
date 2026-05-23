@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.PaymentScreenButtons" t-inherit-mode="extension">
+            <xpath
+            expr="//button[@t-on-click='toggleIsToInvoice']"
+            position="attributes"
+        >
+                <attribute name="t-if">!pos.config.l10n_pt_invoicing</attribute>
+            </xpath>
+    </t>
+
+</templates>

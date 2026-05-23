@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_monthly_stamp_duty_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.monthly.stamp.duty.statement.wizard.form</field>
+        <field name="model">l10n_pt.monthly.stamp.duty.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="options_left" position="inside">
+                <field name="tax_office_code" help="[Q1] The 4-digit tax office code" />
+                <field
+                    name="declaration_type"
+                    help="[Q6-C01,C02] Select whether this is the first declaration for the given period or a replacement."
+                />
+                <field
+                    name="is_under_art_119_1d"
+                    invisible="declaration_type != 'subst'"
+                    help="Set true if this declaration is being submitted under Art. 119º nº 1d"
+                />
+                <!--                <field-->
+                <!--                    name="subst_fact_date"-->
+                <!--                    invisible="declaration_type != 'subst'"-->
+                <!--                    required="declaration_type == 'subst'"-->
+                <!--                    help="[Q6-C04] Date of the event that triggered the obligation to declare or amend income already declared"-->
+                <!--                />-->
+            </group>
+            <group name="options_right" position="inside">
+                <field
+                    name="certified_accountant_vat"
+                    help="[Q5-C02] Certified Accountant VAT No."
+                />
+                <!--                <field-->
+                <!--                    name="is_alternate_accountant"-->
+                <!--                    help="[Q7-C06,C07] Set True if the accountant is a substitute of the official one."-->
+                <!--                />-->
+                <field
+                    name="justifiable_reason"
+                    help="[Q5-C03] Fact that originated the justifiable reason"
+                />
+                <field
+                    name="justifiable_reason_start_date"
+                    help="[Q5-C04] Date of the fact that originated the justifiable reason"
+                    invisible="not justifiable_reason"
+                />
+                <!--                <field-->
+                <!--                    name="justifiable_reason_end_date"-->
+                <!--                    help="[Q7-C05] Date on which the fact that originated the justifiable reason ceased to exist"-->
+                <!--                    invisible="not justifiable_reason"-->
+                <!--                />-->
+                <field
+                    name="legal_representative_vat"
+                    help="[Q5-C01] Legal representative or taxable person VAT No."
+                />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <tree editable="bottom">
+                            <field name="l10n_pt_dmis_q4c1" />
+                            <field name="amount" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_monthly_stamp_duty_statement_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Monthly SD Statement</field>
+        <field name="res_model">l10n_pt.monthly.stamp.duty.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_monthly_stamp_duty_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_monthly_stamp_duty_statement_wizard_menu"
+        parent="ptplus_reports.l10n_pt_tax_statement_menu"
+        sequence="90"
+        groups="ptplus.group_experimental_features_pt"
+        action="l10n_pt_monthly_stamp_duty_statement_wizard_action"
+    />
+</odoo>
