@@ -171,6 +171,9 @@
                                     string="[24] Other Goods/Serv."
                                 />
                             </group>
+                            <group string="Refund Value" invisible="not request_refund">
+                                <field name="refund_amount" />
+                            </group>
                         </group>
                         <group string="Paid Tax Imports">
                             <field name="paid_tax_import_base" string="[18] Tax Base" />

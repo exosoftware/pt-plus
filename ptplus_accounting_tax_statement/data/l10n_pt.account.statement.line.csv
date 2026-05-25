@@ -56,8 +56,8 @@ tax_stmt_periodic_c091,tax_stmt_periodic,480,C091,Total do imposto a favor do su
 tax_stmt_periodic_c092,tax_stmt_periodic,490,C092,Total do imposto a favor do Estado,expr,C002+C004+C006+C011+C017+C019+C041+C066+C068,,,,,,0,0
 tax_stmt_periodic_c093,tax_stmt_periodic,500,C093,Imposto a entregar ao Estado,expr,C092-C091 if C092 > C091 else 0.00,,,,,,0,0
 tax_stmt_periodic_c094,tax_stmt_periodic,510,C094,Crédito de imposto a recuperar,expr,C091-C092 if C091 > C092 else 0.00,,,,,,0,0
-tax_stmt_periodic_c095,tax_stmt_periodic,520,C095,Solicito Reeembolso,expr,C094 if C094 and request_refund else '',,,,,,0,0
-tax_stmt_periodic_c096,tax_stmt_periodic,530,C096,Excesso a reportar,expr,C094 if C094 and not request_refund else '',,,,,,0,0
+tax_stmt_periodic_c095,tax_stmt_periodic,520,C095,Solicito Reeembolso,expr,"(min(refund_amount, C094) or C094) if C094 and request_refund else 0.00",,,,,,0,0
+tax_stmt_periodic_c096,tax_stmt_periodic,530,C096,Excesso a reportar,expr,C094 - C095,,,,,,0,0
 tax_stmt_periodic_c097,tax_stmt_periodic,540,C097,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países comunitários (não inclui as operações mencionadas no campo 16)",domain,,ptplus.tax_tag_iva_dp_97_r65,,,,base_bal_normal,1,0
 tax_stmt_periodic_c098,tax_stmt_periodic,550,C098,"A - Operação localizadas em Portugal em que, na qualidade de adquirente, liquidou o IVA devido (Valores das bases tributáveis, incluídos nos campos 1,5 e 3) - Efetuadas por entidades residentes em países ou territórios terceiros",domain,,ptplus.tax_tag_iva_dp_98_r66,,,,base_bal_normal,1,0
 tax_stmt_periodic_c099,tax_stmt_periodic,560,C099,"B - Operações em que liquidou o IVA devido por aplicação da regra de inversão do sujeito passivo (Valores das bases tributáveis, incluídos nos campos 1, 5 e 3) - Ouro (Decreto-Lei 362/99)",domain,,ptplus.tax_tag_iva_dp_99_r67,,,,base_bal_normal,1,0
