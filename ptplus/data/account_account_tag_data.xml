@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Tax Report Tags: IVA - Declaração Periódica -->
+    <record id="tax_tag_iva_dp_na" model="account.account.tag">
+        <field name="name">IVA DP [N/A]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_1_v" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C1] VND</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_1_c" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C1] CMP</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_2" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C2]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_3_v" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C3] VND</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_3_c" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C3] CMP</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_4" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C4]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_5_v" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C5] VND</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_5_c" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C5] CMP</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_6" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C6]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_7" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C7]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_8" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C8]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_9" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C9]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_12" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C12]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_13" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C13]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_14" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C14]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_15" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C15]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_16" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C16]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_17" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C17]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_18" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C18]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_19" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C19]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_20" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C20]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_20_iblid" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C20] IBLID</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_21" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C21]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_22" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C22]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_22_iblid" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C22] IBLID</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_23" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C23]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_24" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C24]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_97_r65" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C97] R65</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_98_r66" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C98] R66</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_99_r67" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C99] R67</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_100_r68" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C100] R68</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_101_r69" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C101] R69</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_102_r70" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C102] R70</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_103_r71" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C103] R71</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_104_r72" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C104] R72</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_105_r73" model="account.account.tag">
+        <field name="name">IVA DP [Q06A-C105] R73</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_40" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C40]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_dp_41" model="account.account.tag">
+        <field name="name">IVA DP [Q06-C41]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <!-- Tax Report Tags: IVA - Declaração Anual - Anexo L -->
+    <record id="tax_tag_iva_al_q03_l01" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L01]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l02" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L02]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l03" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L03]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l04" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L04]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l05" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L05]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l64" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L64]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l65" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L65]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l07" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L07]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l08" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L08]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l09" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L09]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l10" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L10]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l11" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L11]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l66" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L66]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l67" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L67]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l12" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L12]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l14" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L14]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l15" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L15]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l16" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L16]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l68" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L68]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l17" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L17]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q03_l18" model="account.account.tag">
+        <field name="name">IVA AL [Q03-L18]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l20" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L20]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l69" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L69]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l70" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L70]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l21" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L21]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l22" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L22]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l71" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L71]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l72" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L72]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l24" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L24]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l73" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L73]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l25" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L25]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l26" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L26]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l27" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L27]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l74" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L74]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l28" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L28]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l29" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L29]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l30" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L30]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l75" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L75]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l76" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L76]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l32" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L32]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l77" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L77]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l33" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L33]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l34" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L34]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l35" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L35]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l78" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L78]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q04_l79" model="account.account.tag">
+        <field name="name">IVA AL [Q04-L79]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l37" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L37]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l38" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L38]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l39" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L39]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l40" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L40]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l41" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L41]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l42" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L42]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l43" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L43]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q05_l44" model="account.account.tag">
+        <field name="name">IVA AL [Q05-L44]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l45" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L45]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l46" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L46]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l47" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L47]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l48" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L48]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l49" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L49]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l50" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L50]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l51" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L51]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l52" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L52]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_iva_al_q06_l53" model="account.account.tag">
+        <field name="name">IVA AL [Q06-L53]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <!-- Stamp Duty -->
+    <record id="tax_tag_is_dm_04_07" model="account.account.tag">
+        <field name="name">IS DM [Q04-C07]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+    <record id="tax_tag_is_dm_04_08" model="account.account.tag">
+        <field name="name">IS DM [Q04-C08]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.pt" />
+    </record>
+
+    <!-- Withholding Tax -->
+
+    <data>
+        <!--Monthly Statement-->
+        <record id="tax_tag_rf_dm" model="account.account.tag">
+            <field name="name">RF DM</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <record id="tax_tag_rf_dar" model="account.account.tag">
+            <field name="name">RF DAR</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <record id="tax_tag_rf_dar_base" model="account.account.tag">
+            <field name="name">RF DAR BASE</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <!--Model 30-->
+        <record id="tax_tag_rf_m30_08_35" model="account.account.tag">
+            <field name="name">RF M30 [Q08-C35]</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <record id="tax_tag_rf_m30_08_37" model="account.account.tag">
+            <field name="name">RF M30 [Q08-C37]</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <!--Model 10-->
+        <record id="tax_tag_rf_m10_05_03" model="account.account.tag">
+            <field name="name">RF M10 [Q05-C03]</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+        <record id="tax_tag_rf_m10_05_06" model="account.account.tag">
+            <field name="name">RF M10 [Q05-C06]</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.pt" />
+        </record>
+    </data>
+</odoo>

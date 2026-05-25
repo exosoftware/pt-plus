@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="urn:guia" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns1="urn:guia" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<include schemaLocation="GuiaType.xsd"/>
+	<element name="Guia" type="tns1:Guia" />
+</schema>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_exploration_map_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.exploration.map.wizard.form</field>
+        <field name="model">l10n_pt.exploration.map.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field name="comparison_mode" readonly="state != 'select'" />
+            </group>
+            <group name="main" position="after">
+                <group
+                    name="error_analyze"
+                    string="Errors"
+                    invisible="state != 'analyze' or not warnings"
+                >
+                    <field
+                        name="warnings"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <list editable="bottom">
+                            <field name="display_name" string="Name" readonly="1" />
+                            <field
+                                name="amount"
+                                column_invisible="parent.comparison_mode"
+                            />
+                            <field
+                                name="m01"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m02"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m03"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m04"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m05"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m06"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m07"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m08"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m09"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m10"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m11"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="m12"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <field
+                                name="total"
+                                readonly="1"
+                                column_invisible="not parent.comparison_mode"
+                            />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                                column_invisible="parent.comparison_mode"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_exploration_map_wizard_action" model="ir.actions.act_window">
+        <field name="name">Exploration Map</field>
+        <field name="res_model">l10n_pt.exploration.map.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_exploration_map_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_exploration_map_wizard_menu"
+        parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
+        sequence="30"
+        action="l10n_pt_exploration_map_wizard_action"
+    />
+</odoo>

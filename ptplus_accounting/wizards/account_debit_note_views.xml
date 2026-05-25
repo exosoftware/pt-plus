@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_debit_note_pt" model="ir.ui.view">
+        <field name="name">account.debit.note.form.pt</field>
+        <field name="model">account.debit.note</field>
+        <field name="inherit_id" ref="account_debit_note.view_account_debit_note" />
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field
+                    name="l10n_pt_vat_adjustment_norm_id"
+                    options="{'no_create_edit': True}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

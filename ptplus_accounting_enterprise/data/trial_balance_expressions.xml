@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record
+        id="account_reports.trial_balance_report_all_balance"
+        model="account.report.expression"
+    >
+        <field name="date_scope">strict_range</field>
+    </record>
+    <record
+        id="account_reports.trial_balance_report_all_debit"
+        model="account.report.expression"
+    >
+        <field name="date_scope">strict_range</field>
+    </record>
+    <record
+        id="account_reports.trial_balance_report_all_credit"
+        model="account.report.expression"
+    >
+        <field name="date_scope">strict_range</field>
+    </record>
+</odoo>

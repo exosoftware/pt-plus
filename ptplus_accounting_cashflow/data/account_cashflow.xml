@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <record id="cashflow_rcli" model="account.cashflow">
+        <field name="code">rcli</field>
+        <field name="name">Recebimentos de clientes</field>
+    </record>
+    <record id="cashflow_pfor" model="account.cashflow">
+        <field name="code">pfor</field>
+        <field name="name">Pagamentos a fornecedores</field>
+    </record>
+    <record id="cashflow_ppes" model="account.cashflow">
+        <field name="code">ppes</field>
+        <field name="name">Pagamentos ao pessoal</field>
+    </record>
+    <record id="cashflow_mird" model="account.cashflow">
+        <field name="code">mird</field>
+        <field name="name">Pagamento/recebimento do Imposto sobre o rendimento</field>
+    </record>
+    <record id="cashflow_mout" model="account.cashflow">
+        <field name="code">mout</field>
+        <field name="name">Outros recebimentos/pagamentos</field>
+    </record>
+    <record id="cashflow_paft" model="account.cashflow">
+        <field name="code">paft</field>
+        <field name="name">Pagamentos respeitantes a Ativos fixos tangíveis</field>
+    </record>
+    <record id="cashflow_pati" model="account.cashflow">
+        <field name="code">pati</field>
+        <field name="name">Pagamentos respeitantes a Ativos intangíveis</field>
+    </record>
+    <record id="cashflow_pifi" model="account.cashflow">
+        <field name="code">pifi</field>
+        <field name="name">Pagamentos respeitantes a Investimentos financeiros</field>
+    </record>
+    <record id="cashflow_poat" model="account.cashflow">
+        <field name="code">poat</field>
+        <field name="name">Pagamentos respeitantes a Outros ativos</field>
+    </record>
+    <record id="cashflow_raft" model="account.cashflow">
+        <field name="code">raft</field>
+        <field name="name">Recebimentos provenientes de Ativos fixos tangíveis</field>
+    </record>
+    <record id="cashflow_rati" model="account.cashflow">
+        <field name="code">rati</field>
+        <field name="name">Recebimentos provenientes de Ativos intangíveis</field>
+    </record>
+    <record id="cashflow_rifi" model="account.cashflow">
+        <field name="code">rifi</field>
+        <field
+            name="name"
+        >Recebimentos provenientes de Investimentos financeiros</field>
+    </record>
+    <record id="cashflow_roat" model="account.cashflow">
+        <field name="code">roat</field>
+        <field name="name">Recebimentos provenientes de Outros ativos</field>
+    </record>
+    <record id="cashflow_rsui" model="account.cashflow">
+        <field name="code">rsui</field>
+        <field name="name">Recebimentos provenientes de Subsídio ao investimento</field>
+    </record>
+    <record id="cashflow_rjrs" model="account.cashflow">
+        <field name="code">rjrs</field>
+        <field
+            name="name"
+        >Recebimentos provenientes de Juros e rendimentos similares</field>
+    </record>
+    <record id="cashflow_rdiv" model="account.cashflow">
+        <field name="code">rdiv</field>
+        <field name="name">Recebimentos provenientes de Dividendos</field>
+    </record>
+    <record id="cashflow_rfio" model="account.cashflow">
+        <field name="code">rfio</field>
+        <field name="name">Recebimentos provenientes de Financiamentos obtidos</field>
+    </record>
+    <record id="cashflow_rcap" model="account.cashflow">
+        <field name="code">rcap</field>
+        <field
+            name="name"
+        >Recebimentos provenientes de Realizações de capital e de outros instrumentos de capital
+            próprio
+        </field>
+    </record>
+    <record id="cashflow_rprj" model="account.cashflow">
+        <field name="code">rprj</field>
+        <field name="name">Recebimentos provenientes de Cobertura de prejuízos</field>
+    </record>
+    <record id="cashflow_rdoa" model="account.cashflow">
+        <field name="code">rdoa</field>
+        <field name="name">Recebimentos provenientes de Doações</field>
+    </record>
+    <record id="cashflow_roof" model="account.cashflow">
+        <field name="code">roof</field>
+        <field
+            name="name"
+        >Recebimentos provenientes de Outras operações de financiamento</field>
+    </record>
+    <record id="cashflow_pfio" model="account.cashflow">
+        <field name="code">pfio</field>
+        <field name="name">Pagamentos respeitantes a Financiamentos obtidos</field>
+    </record>
+    <record id="cashflow_pjgs" model="account.cashflow">
+        <field name="code">pjgs</field>
+        <field name="name">Pagamentos respeitantes a Juros e gastos similares</field>
+    </record>
+    <record id="cashflow_pdiv" model="account.cashflow">
+        <field name="code">pdiv</field>
+        <field name="name">Pagamentos respeitantes a Dividendos</field>
+    </record>
+    <record id="cashflow_pcap" model="account.cashflow">
+        <field name="code">pcap</field>
+        <field
+            name="name"
+        >Pagamentos respeitantes a Reduções de capital e de outros instrumentos de capital próprio
+        </field>
+    </record>
+    <record id="cashflow_poof" model="account.cashflow">
+        <field name="code">poof</field>
+        <field
+            name="name"
+        >Pagamentos respeitantes a Outras operações de financiamento</field>
+    </record>
+    <record id="cashflow_pdcb" model="account.cashflow">
+        <field name="code">pdcb</field>
+        <field name="name">Efeito das diferenças de câmbio</field>
+    </record>
+
+</odoo>

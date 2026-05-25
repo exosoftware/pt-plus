@@ -1,0 +1,618 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-02 16:31+0000\n"
+"PO-Revision-Date: 2025-08-12 23:25+0000\n"
+"Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
+"portugal-plus-18-0/ptplus_pos/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__atcud
+msgid ""
+"A unique code that identifies a particular fiscal document in the Tax "
+"Authority database."
+msgstr ""
+"Um código único que identifica um determinado documento fiscal na base de "
+"dados da Autoridade Tributária."
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__atcud
+msgid "ATCUD"
+msgstr "ATCUD"
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/order_receipt/order_receipt.xml:0
+#, python-format
+msgid "ATCUD:"
+msgstr "ATCUD:"
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid "Can't change a fiscal document type while there's an open session"
+msgstr ""
+"Não é possível alterar um tipo de documento fiscal enquanto houver uma "
+"sessão aberta"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_res_config_settings
+msgid "Config Settings"
+msgstr "Parâmetros de Configuração"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_cred_fiscal_doc_type_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_cred_fiscal_doc_type_id
+msgid "Credit Note Doc. Type"
+msgstr "Tipo Doc. para Notas de Crédito"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Credit Notes"
+msgstr "Notas de Crédito"
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/order_receipt/order_receipt.xml:0
+#, python-format
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_default_partner_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_default_partner_id
+msgid "Default Customer"
+msgstr "Cliente Predefinido"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "Default customer to use if none is set"
+msgstr "Cliente predefinido a utilizar se não for definido nenhum"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash
+msgid "Digital signature"
+msgstr "Assinatura digital"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__system_entry_date
+msgid "Document Validation Timestamp"
+msgstr "Data/Hora da Validação do Documento"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_atcud
+#, fuzzy
+#| msgid "Fiscal Doc. Type"
+msgid "Fiscal Doc. ATCUD"
+msgstr "Série Documental"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_certification_text
+#, fuzzy
+#| msgid "Fiscal Doc. Type"
+msgid "Fiscal Doc. Certi. Text"
+msgstr "Série Documental"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_doc_name
+#, fuzzy
+#| msgid "Document Name"
+msgid "Fiscal Doc. Document Name"
+msgstr "Nome do Documento"
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_unique_id
+#, python-format
+msgid "Fiscal Doc. No."
+msgstr "Nº Doc. Fiscal"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__l10n_pt_qr_code
+#, fuzzy
+#| msgid "Fiscal Doc. No."
+msgid "Fiscal Doc. QR Code"
+msgstr "Nº Doc. Fiscal"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_status
+msgid "Fiscal Doc. Status"
+msgstr "Estado do Doc. Fiscal"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr "Série Documental"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr "Nº de Série de Doc. Manual"
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Invalid Lines"
+msgstr "Linhas Inválidas"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_inv_fiscal_doc_type_id
+#: model:ir.model.fields,field_description:ptplus_pos.field_res_config_settings__pos_l10n_pt_inv_fiscal_doc_type_id
+msgid "Invoice Doc. Type"
+msgstr "Tipo Doc. para Faturas"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.view_pos_order_filter_pt
+msgid "Invoices"
+msgstr "Faturas"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order_line__l10n_pt_origin_move_line_id
+#, fuzzy
+#| msgid "Origin Move Line"
+msgid "L10N Pt Origin Move Line"
+msgstr "Linha de Origem"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_update
+msgid "Last State Change"
+msgstr "Última Mudança de Estado"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__last_state_uid
+msgid "Last state changed by"
+msgstr "Última alteração de Estado por"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search_pt_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_tree_pt_pos
+msgid "POS"
+msgstr "POS"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_account_payment
+msgid "Payments"
+msgstr "Pagamentos"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuração do Ponto de Venda"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Linhas da Ordem do Ponto de Venda"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Ordens do Ponto de Venda"
+
+#. module: ptplus_pos
+#: model:ir.model,name:ptplus_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Secções do Ponto de Venda"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_config__l10n_pt_invoicing
+msgid "Portuguese Invoicing"
+msgstr "Faturação Portuguesa"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__hash_control
+msgid "Private key version"
+msgstr "Versão da chave privada"
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "Product must have one VAT type tax: "
+msgstr "O produto tem que ter um (e um só) imposto do tipo IVA: "
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+"Nº de série do documento a ser integrado. Introduza apenas a parte numérica "
+"(incluindo os zeros à esquerda)"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.fiscal_document_type_view_search_pt_pos
+msgid "Show document types that are available in the POS"
+msgstr "Mostrar os tipos de documentos que estão disponíveis no PdV"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,field_description:ptplus_pos.field_pos_order__source_billing
+msgid "Source Method"
+msgstr "Método de Origem"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+"O método (ou origem) usado para inserir o documento. Se não \n"
+"conhece os conceitos subjacentes, deve manter o \n"
+"valor predefinido (Aplicação). Os valores possíveis são:\n"
+"* Aplicação: O documento foi criado neste sistema.\n"
+"* Integração: O documento foi emitido noutra aplicação e \n"
+"importado para este sistema.\n"
+"* Manual/Reposição: O documento foi previamente criado mas, \n"
+"de alguma forma, foi perdido e teve que ser recuperado com recurso \n"
+"a documentos impressos ou fontes digitais.\n"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "The portuguese fiscal document to apply on this POS credit notes"
+msgstr ""
+"O documento fiscal português a ser aplicado nas notas de crédito deste PdV"
+
+#. module: ptplus_pos
+#: model_terms:ir.ui.view,arch_db:ptplus_pos.res_config_settings_view_form
+msgid "The portuguese fiscal document to apply on this POS invoices"
+msgstr "O documento fiscal português a ser aplicado nas faturas deste PdV"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+"A série documental associada com um registo. Por norma, um documento fiscal "
+"é um documento que será incluído no ficheiro SAF-T da empresa"
+
+#. module: ptplus_pos
+#: model:ir.model.fields,help:ptplus_pos.field_pos_order_line__l10n_pt_origin_move_line_id
+msgid ""
+"This field is only filled out when we are processing a refund and it "
+"references the original invoice line."
+msgstr ""
+"Este campo só é preenchido quando estamos a processar um reembolso e faz "
+"referência à linha da fatura original."
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid "VAT Error"
+msgstr "Erro de IVA"
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"When PT Invoicing is active, you must define the document type for both "
+"Invoices and Credit Notes."
+msgstr ""
+"Quando a Faturação PT está ativa, deve definir o tipo de documento para as "
+"Faturas e para as Notas de Crédito."
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid "When the company is Portuguese, you must have activate PT Invoicing."
+msgstr "Quando a empresa é portuguesa, deverá ativar a Faturação PT."
+
+#. module: ptplus_pos
+#. odoo-python
+#: code:addons/ptplus_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"When the company is Portuguese, you need to define the company's VAT number "
+"to continue."
+msgstr ""
+"Quando a empresa é portuguesa, é necessário definir o NIF da empresa para "
+"continuar."
+
+#. module: ptplus_pos
+#. odoo-javascript
+#: code:addons/ptplus_pos/static/src/overrides/components/payment_screen/payment_screen.js:0
+#, python-format
+msgid ""
+"You can have positive lines (invoice) and negative lines (credit note) but "
+"not both"
+msgstr ""
+"Pode ter linhas positivas (fatura) e linhas negativas (nota de crédito), mas "
+"não ambas"
+
+#~ msgid "Certification Text"
+#~ msgstr "Texto de Certificação"
+
+#~ msgid "Export SAF-T PT Dataport"
+#~ msgstr "Dataport de Exportação do SAF-T PT"
+
+#~ msgid "QR Code"
+#~ msgstr "Código QR"
+
+#~ msgid "<span class=\"o_form_label\">Document Type for Bills</span>"
+#~ msgstr "<span class=\"o_form_label\">Tipo de documento para contas</span>"
+
+#~ msgid "<span class=\"o_form_label\">Document Type for Credit Notes</span>"
+#~ msgstr ""
+#~ "<span class=\"o_form_label\">Tipo de documento para Notas de Crédito</"
+#~ "span>"
+
+#~ msgid "<span class=\"o_form_label\">Document Type for Invoices</span>"
+#~ msgstr "<span class=\"o_form_label\">Tipo de documento para Facturas</span>"
+
+#~ msgid "? Clicking \"Confirm\" will validate the payment."
+#~ msgstr "? Ao clicar em \"Confirmar\", o pagamento será validado."
+
+#~ msgid ""
+#~ "A unique code that is returned by the Tax Authority when the fiscal doc. "
+#~ "series is communicated."
+#~ msgstr ""
+#~ "Um código único que é devolvido pela Autoridade Tributária quando a série "
+#~ "de documentos fiscais é comunicada."
+
+#~ msgid "Are you sure that the customer wants to  pay"
+#~ msgstr "Tem a certeza de que o cliente quer pagar"
+
+#~ msgid "Bill"
+#~ msgstr "Conta"
+
+#~ msgid "Bill Doc. Type"
+#~ msgstr "Contas Tipo de Doc."
+
+#~ msgid "Bill Last Hash"
+#~ msgstr "Hash da Última Conta"
+
+#~ msgid "Bill Padding"
+#~ msgstr "Padding das Contas"
+
+#~ msgid "Bill Prefix"
+#~ msgstr "Prefixo das Contas"
+
+#~ msgid "Cancel Order"
+#~ msgstr "Cancelar Ordem"
+
+#~ msgid "Cannot refund products from different orders."
+#~ msgstr "Não é possível reembolsar produtos de pedidos diferentes."
+
+#~ msgid "Cannot return change without a cash payment method"
+#~ msgstr ""
+#~ "Não é possível devolver o troco sem um método de pagamento em dinheiro"
+
+#~ msgid "Certification Code"
+#~ msgstr "Código de Certificação"
+
+#~ msgid "Certification Private Key (Safe)"
+#~ msgstr "Chave Privada da Certificação (Segura)"
+
+#~ msgid "Certification Private Key Version"
+#~ msgstr "Versão da Chave Privada da Certificação"
+
+#~ msgid "Companies"
+#~ msgstr "Empresas"
+
+#~ msgid "Connection Error"
+#~ msgstr "Erro de Ligação"
+
+#~ msgid "Create a new order ?"
+#~ msgstr "Criar uma nova ordem ?"
+
+#~ msgid "Customer Required"
+#~ msgstr "Cliente Requerido"
+
+#~ msgid "Customer is required for %s payment method."
+#~ msgstr "O cliente é obrigado a utilizar o método de pagamento %s."
+
+#~ msgid "Default customer"
+#~ msgstr "Cliente predefinido"
+
+#~ msgid "Do you want to cancel the current order?"
+#~ msgstr "Pretende cancelar a ordem atual?"
+
+#~ msgid "Empty Order"
+#~ msgstr "Pedido Vazio"
+
+#~ msgid "Error: no internet connection."
+#~ msgstr "Erro: sem ligação à Internet."
+
+#~ msgid "Incorrect address for shipping"
+#~ msgstr "Endereço incorreto para envio"
+
+#~ msgid "Incorrect rounding"
+#~ msgstr "Arredondamento incorreto"
+
+#~ msgid "Last Bill Hash"
+#~ msgstr "Última Hash da Conta"
+
+#~ msgid "Move Data"
+#~ msgstr "Mover Dados"
+
+#~ msgid "Next Bill Number"
+#~ msgstr "Próximo Número da Conta"
+
+#~ msgid "Order Deletion Unsuccessful"
+#~ msgstr "Eliminação da ordem sem êxito"
+
+#~ msgid "Order is not synced. Check your internet connection"
+#~ msgstr "A ordem não está sincronizada. Verifique a sua ligação à Internet"
+
+#~ msgid "PT Vat Exemption Reason Text"
+#~ msgstr "Texto do motivo da isenção de IVA PT"
+
+#~ msgid "Please Confirm Large Amount"
+#~ msgstr "Confirmar Montante Elevado"
+
+#~ msgid "Point of Sale"
+#~ msgstr "Ponto de Venda"
+
+#~ msgid "Remaining unsynced orders"
+#~ msgstr "Ordens restantes não sincronizadas"
+
+#~ msgid "Select a payment method to validate the order."
+#~ msgstr "Selecionar um método de pagamento para validar a ordem."
+
+#~ msgid "Some, if not all, post-processing after syncing order failed."
+#~ msgstr ""
+#~ "Alguns, se não todos, pós-processamento após a ordem de sincronização "
+#~ "falharam."
+
+#~ msgid "Tax"
+#~ msgstr "Imposto"
+
+#~ msgid ""
+#~ "The deletion operation could not be completed because the bill for this "
+#~ "order has already been printed."
+#~ msgstr ""
+#~ "A operação de eliminação não pôde ser concluída porque a conta desta "
+#~ "ordem já foi impressa."
+
+#~ msgid "The portuguese fiscal document to apply on this POS bills."
+#~ msgstr "O documento fiscal português a ser aplicado nas contas deste PdV."
+
+#~ msgid "The selected customer needs an address."
+#~ msgstr "O cliente selecionado precisa de um endereço."
+
+#~ msgid "There are unsynced orders. Do you want to sync these orders?"
+#~ msgstr ""
+#~ "Existem encomendas não sincronizadas. Pretende sincronizar estas "
+#~ "encomendas?"
+
+#~ msgid ""
+#~ "There is no cash payment method available in this point of sale to handle "
+#~ "the change.\n"
+#~ "\n"
+#~ " Please pay the exact amount or add a cash payment method in the point of "
+#~ "sale configuration"
+#~ msgstr ""
+#~ "Não existe um método de pagamento em numerário disponível neste ponto de "
+#~ "venda para efetuar o troco.\n"
+#~ "\n"
+#~ " Por favor, pague o montante exato ou adicione um método de pagamento em "
+#~ "numerário na configuração do ponto de venda"
+
+#~ msgid ""
+#~ "There must be at least one product in your order before it can be "
+#~ "validated"
+#~ msgstr ""
+#~ "Tem de existir pelo menos um produto na sua ordem para a poder validar"
+
+#~ msgid ""
+#~ "There must be at least one product in your order before it can be "
+#~ "validated and invoiced."
+#~ msgstr ""
+#~ "Tem de existir pelo menos um produto na sua ordem para a poder validar e "
+#~ "faturar."
+
+#~ msgid ""
+#~ "This operation will duplicate the current order. Please note, once the "
+#~ "table information is printed, you will be unable to make any further "
+#~ "modifications to this order."
+#~ msgstr ""
+#~ "Esta operação irá duplicar a encomenda atual. Note que, uma vez impressas "
+#~ "a conta, não será possível efetuar mais alterações a esta ordem."
+
+#~ msgid "Validation Code on Bill"
+#~ msgstr "Código de Validação para Contas"
+
+#~ msgid ""
+#~ "When PT Invoicing is active, and 'Is a Bar/Restaurant' are activated you "
+#~ "must define the document type Bill."
+#~ msgstr ""
+#~ "Quando a Faturação PT está ativa, e a opção \"É um Bar/Restaurante\" está "
+#~ "ativada, deve definir o tipo de documento para as Contas."
+
+#~ msgid "You have to round your payments lines. is not rounded."
+#~ msgstr "É necessário arredondar as linhas de pagamento. não é arredondado."
+
+#~ msgid "for an order of"
+#~ msgstr "para uma ordem de"
+
+#~ msgid "on"
+#~ msgstr "em"
+
+#~ msgid "L10N Pt Certification Text"
+#~ msgstr "Texto de Certificação PT"
+
+#~ msgid "L10N Pt Doc Name"
+#~ msgstr "Nome do Documento"
+
+#~ msgid "L10N Pt Qr Code"
+#~ msgstr "Qr Code"
+
+#~ msgid "!receipt.pt_fiscal_doc_type_id or receipt.is_to_invoice"
+#~ msgstr "!receipt.pt_fiscal_doc_type_id or receipt.is_to_invoice"
+
+#~ msgid "Credit Note"
+#~ msgstr "Nota de Crédito"
+
+#~ msgid "Credit Note Padding"
+#~ msgstr "Padding de Notas de Crédito"
+
+#~ msgid "Credit Note Prefix"
+#~ msgstr "Prefixo das Notas de Crédito"
+
+#~ msgid "Date/Time of document validation"
+#~ msgstr "Data/Hora da validação do documento"
+
+#~ msgid "Date/Time of last state change"
+#~ msgstr "Data/Hora da última mudança de estado"
+
+#~ msgid "Invoice exceeds 1000€. You need to select a customer."
+#~ msgstr "A fatura excede 1000 euros. É preciso selecionar um cliente."
+
+#~ msgid "Invoice-receipt"
+#~ msgstr "Fatura-recibo"
+
+#~ msgid "Last Credit Note Hash"
+#~ msgstr "Hash da Última Nota de Crédito"
+
+#~ msgid "Next Credit Note Number"
+#~ msgstr "Próximo Número de Nota de Crédito"
+
+#~ msgid "POS Credit Note"
+#~ msgstr "Nota de Crédito POS"
+
+#~ msgid "POS Invoice-receipt"
+#~ msgstr "Fatura-recibo POS"
+
+#~ msgid "Please select the Customer"
+#~ msgstr "Por favor, selecione o Cliente"
+
+#~ msgid "Validation Code on Credit Notes"
+#~ msgstr "Código de Validação para Notas de Crédito"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome a Apresentar"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificação Em"
+
+#~ msgid "Unique Order ID"
+#~ msgstr "Ident. Única do Pedido"

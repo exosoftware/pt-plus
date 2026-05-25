@@ -1,0 +1,112 @@
+.pt_doc_name {
+    margin-top: 5mm;
+}
+
+.pt_certification_text {
+    color: $o-gray-700;
+    font-size: 7pt;
+    font-style: italic;
+    margin-bottom: 3mm;
+}
+
+.pt_multiway_tag {
+    font-size: 7pt;
+    text-transform: uppercase;
+    background-color: $o-gray-500;
+    color: white;
+    /*margin-top:             3mm;*/
+    /*float:                  right;*/
+    padding-left: 1mm;
+    padding-right: 1mm;
+    border-radius: 0.5mm;
+    -moz-border-radius: 0.5mm;
+    -webkit-border-radius: 0.5mm;
+}
+
+.pt_cancelled {
+    color: white !important;
+    background-color: firebrick; // #b22222
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    left-margin: 1mm;
+    padding-left: 1mm;
+    padding-right: 1mm;
+}
+
+.pt_vat_list {
+    .pt_vat_exemption_reason {
+        font-size: 50%;
+        font-style: italic;
+        vertical-align: super;
+    }
+
+    &:nth-child(n + 2)::before {
+        content: ", ";
+    }
+}
+
+.pt_vat_exemption_reason_list {
+    //font-size: x-small;
+    font-style: italic;
+
+    span:nth-child(n + 2)::before {
+        content: "; ";
+    }
+}
+
+.pt_features_top {
+    //margin: auto;
+    //width: 100%;
+    // float: none;
+    text-align: center !important;
+}
+
+.pt_features_bottom {
+    page-break-inside: avoid;
+}
+
+.pt_qr_code {
+    img {
+        width: 34mm;
+        height: 34mm;
+        background-color: white;
+        // margin-left: 2cm;  // use left/right margin to get the exact horizontal position
+        // border: 2mm solid white; activate if extra margin is required
+    }
+    display: inline-block;
+    margin-right: 1cm;
+    /*
+    background-color: yellow;
+    padding: 0 2.5mm 2.5mm 2.5mm;
+    width: 35mm;
+    height: 32.5mm;
+    */
+}
+
+.pt_atcud {
+    margin-left: 8px;
+    color: $o-gray-700;
+    font-size: 6.4pt;
+}
+
+.pt_invoice_delivery_info {
+    color: $o-gray-800;
+    font-size: 7.5pt;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Standard Odoo layouts fixing */
+
+.o_report_layout_background {
+    .row > div > table,
+    div#total table {
+        tr {
+            td:first-child {
+                white-space: nowrap;
+            }
+        }
+    }
+}

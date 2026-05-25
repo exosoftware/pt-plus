@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_edi_pt" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.edi.pt</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='enable_l10n_pt_einvoicing']" position="inside">
+                <div
+                    class="mt16"
+                    invisible="l10n_pt_cert_service_backend != 'test'"
+                    groups="base.group_no_one"
+                >
+                    <div>
+                        <field name="l10n_pt_edi_cius_disable_validation" />
+                        <label for="l10n_pt_edi_cius_disable_validation" />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

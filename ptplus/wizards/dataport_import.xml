@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="dataport_import_form" model="ir.ui.view">
+        <field name="name">dataport.import.form</field>
+        <field name="model">dataport.import</field>
+        <field name="type">form</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <form string="Import">
+                <field name="state" invisible="1" />
+                <field name="filename" invisible="1" />
+                <field name="format" invisible="1" />
+                <field name="error" invisible="1" />
+                <group invisible="state != 'select'">
+                    <group>
+                        <field name="data" filename="filename" />
+                        <field
+                            name="company_id"
+                            options="{'no_create': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="period" />
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+                </group>
+                <div invisible="state != 'done'">
+                    <h2>Import Complete</h2>
+                </div>
+                <group
+                    name="info"
+                    string="Info"
+                    invisible="state != 'done' or not info"
+                >
+                    <field name="info" readonly="1" nolabel="1" colspan="2" />
+                </group>
+                <group
+                    name="error_info"
+                    string="Errors"
+                    invisible="state != 'done' or not warnings"
+                >
+                    <field name="warnings" readonly="1" nolabel="1" colspan="2" />
+                </group>
+                <group name="log_info" string="Log info" invisible="state != 'done'">
+                    <field name="log_on_close" />
+                </group>
+                <footer invisible="state != 'select'">
+                    <button
+                        name="action_import"
+                        type="object"
+                        class="oe_highlight"
+                        string="Import"
+                    />
+                    <button special="cancel" string="Cancel" />
+                </footer>
+                <footer invisible="state != 'done'">
+                    <button name="close" type="object" string="Close" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

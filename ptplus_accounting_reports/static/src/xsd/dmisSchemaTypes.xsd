@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="dmisService" elementFormDefault="qualified" targetNamespace="dmisService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="DmisWsSubmissionRequest" type="tns:DmisWsSubmissionRequestType" />
+  <xsd:element name="DmisWsSubmissionResponse" type="tns:DmisWsSubmissionResponseType" />
+  <xsd:element name="DmisFileSubmission" type="tns:DmisWsSubmissionRequestType" />
+  <xsd:complexType name="DmisWsSubmissionRequestType">
+    <xsd:sequence>
+      <xsd:element name="TaxableEntityTaxOfficeCode">
+        <xsd:annotation>
+          <xsd:documentation>Código do Serviço de Finanças do Sujeito Passivo</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{4}" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TaxableEntityTaxID" type="tns:PtVatNumberType">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal do Sujeito Passivo</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaxPeriod">
+        <xsd:annotation>
+          <xsd:documentation>Período Mensal de Imposto</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:gYearMonth">
+            <xsd:pattern value="\d{4}-\d{2}" />
+            <xsd:minInclusive value="2021-01" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="SubstitutionDeclaration" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Indica se se trata de uma Declaração de Substituição para o correspondente Período Mensal (deve ser preenchido com "false" no caso de ser a 1.ª Declaração)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TaxRepresentativeTaxID" type="tns:PtVatNumberType">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal do Representante Legal</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CertifiedAccountantTaxID" type="tns:PtVatNumberType">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal do Contabilista Certificado</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DeclarationLinesQuantity" type="tns:NumberMax9">
+        <xsd:annotation>
+          <xsd:documentation>Quantidade (total) de Linhas da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DeclarationLinesBlocksQuantity" type="tns:NumberPositiveMax5">
+        <xsd:annotation>
+          <xsd:documentation>Quantidade (total) de Blocos de Linhas da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DeclarationLinesBlock" type="tns:DeclarationLinesBlockType">
+        <xsd:annotation>
+          <xsd:documentation>Bloco de Linhas da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="AlreadyPaidTaxAmount" type="tns:PositiveMonetaryType">
+        <xsd:annotation>
+          <xsd:documentation>Montante de Imposto já Pago, para o Período Mensal de Imposto (a preencher, opcionalmente, apenas em Declaração de Substituição)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="PtVatNumberType">
+    <xsd:restriction base="xsd:int">
+      <xsd:pattern value="[1-9]\d{8}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="DeclarationLinesListType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="5000" name="DeclarationLine" type="tns:DeclarationLineType">
+        <xsd:annotation>
+          <xsd:documentation>Linha da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeclarationLineType">
+    <xsd:annotation>
+      <xsd:documentation>Montante correspondente ao valor do imposto</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="LineId" type="tns:NumberPositiveMax9">
+        <xsd:annotation>
+          <xsd:documentation>Número Identificador de Linha (sequencial)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TaxChargeHolder" type="tns:TaxChargeHolderType">
+        <xsd:annotation>
+          <xsd:documentation>Titular do Encargo Fiscal</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaxCode" type="tns:TextMandatoryMax10">
+        <xsd:annotation>
+          <xsd:documentation>Código correspondente à verba constante na Tabela Geral do Imposto do Selo</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TerritorialConstituencyCode">
+        <xsd:annotation>
+          <xsd:documentation>Código de Circunscrição Territorial:
+C - Continente
+A - Açores
+M - Madeira</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="C" />
+            <xsd:enumeration value="A" />
+            <xsd:enumeration value="M" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TerritorialityCode">
+        <xsd:annotation>
+          <xsd:documentation>Código de Territorialidade:
+1 - Art.º 4.º, n.º 1 CIS
+2 - Art.º 4.º, n.º 2 CIS
+3 - Art.º 4.º, n.º 7 CIS
+4 - Art.º 4.º, n.º 8 CIS</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="1" />
+            <xsd:enumeration value="2" />
+            <xsd:enumeration value="3" />
+            <xsd:enumeration value="4" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="OperationTypeCode">
+        <xsd:annotation>
+          <xsd:documentation>Código de Tipo de Operação sujeita a Imposto (isenta ou não)</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:short">
+            <xsd:pattern value="\d{1,2}" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="OperationPerformedByRepresentative" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Indica se a Operação foi realizada por um Representante obrigatoriamente nomeado em Portugal, ao abrigo das alíneas i) a l) do n.º 1 do Art.º 2.º CIS</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaxBase" type="tns:TaxBaseType">
+        <xsd:annotation>
+          <xsd:documentation>Base Tributável</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TaxAmount" type="tns:NonNegativeMonetaryType">
+        <xsd:annotation>
+          <xsd:documentation>Montante correspondente ao valor do imposto liquidado</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxChargeHolderType">
+    <xsd:choice>
+      <xsd:element name="PortugueseTaxID" type="tns:PtVatNumberType">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal Português</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ForeignTaxID" type="tns:VatNumberInfoType">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal Estrangeiro</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:simpleType name="TextMandatoryMax30">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="30" />
+      <xsd:pattern value="\S(.*\S)?" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="VatNumberInfoType">
+    <xsd:sequence>
+      <xsd:element name="CountryCode" type="tns:NumericCountryCode">
+        <xsd:annotation>
+          <xsd:documentation>Código de País (código numérico ISO 3166-1, diferente de 620 - Portugal)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaxID" type="tns:TextMandatoryMax30">
+        <xsd:annotation>
+          <xsd:documentation>Número de Identificação Fiscal</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="TextMandatoryMax10">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="10" />
+      <xsd:pattern value="\S(.*\S)?" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PositiveMonetaryType">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="15" />
+      <xsd:minInclusive value="0.01" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NonNegativeMonetaryType">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2" />
+      <xsd:totalDigits value="15" />
+      <xsd:minInclusive value="0.00" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ReturnInfoType">
+    <xsd:sequence>
+      <xsd:element name="ReturnCode" type="xsd:short">
+        <xsd:annotation>
+          <xsd:documentation>Código de Resultado da invocação (código de sucesso ou de erro)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ReturnMessage" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Descrição do Código de Resultado da invocação</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DmisWsSubmissionResponseType">
+    <xsd:sequence>
+      <xsd:element name="ReturnInfo" type="tns:ReturnInfoType">
+        <xsd:annotation>
+          <xsd:documentation>Informação de Controlo do Resultado da Operação</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="DmisRegistrationData" type="tns:DmisRegistrationDataType">
+        <xsd:annotation>
+          <xsd:documentation>Dados de Registo da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeclarationLinesBlockType">
+    <xsd:sequence>
+      <xsd:element name="BlockId" type="tns:NumberPositiveMax5">
+        <xsd:annotation>
+          <xsd:documentation>Número Identificador do Bloco de Linhas</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DeclarationLinesList" type="tns:DeclarationLinesListType">
+        <xsd:annotation>
+          <xsd:documentation>Lista de Linhas da Declaração</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="NumberPositiveMax9">
+    <xsd:restriction base="xsd:int">
+      <xsd:pattern value="[1-9]\d{0,8}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumberPositiveMax5">
+    <xsd:restriction base="xsd:int">
+      <xsd:pattern value="[1-9]\d{0,4}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumberPositiveMax6">
+    <xsd:restriction base="xsd:int">
+      <xsd:pattern value="[1-9]\d{0,5}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumberPositiveMax13">
+    <xsd:restriction base="xsd:long">
+      <xsd:pattern value="[1-9]\d{0,12}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumericCountryCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TaxBaseType">
+    <xsd:choice>
+      <xsd:element name="BankCheckQuantity" type="tns:NumberPositiveMax6">
+        <xsd:annotation>
+          <xsd:documentation>Quantidade de Cheques Bancários atribuídos</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaxBaseAmount" type="tns:PositiveMonetaryType">
+        <xsd:annotation>
+          <xsd:documentation>Montante da Base Tributável, incluindo a relativa a operações isentas</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="DmisRegistrationDataType">
+    <xsd:sequence>
+      <xsd:element name="SubmittedDeclarationLinesBlocksQuantity" type="tns:NumberPositiveMax5">
+        <xsd:annotation>
+          <xsd:documentation>Quantidade de Blocos de Linhas da Declaração que já foram submetidos (com sucesso)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="NotSubmittedDeclarationLinesBlocksQuantity" type="tns:NumberPositiveMax5">
+        <xsd:annotation>
+          <xsd:documentation>Quantidade de Blocos de Linhas da Declaração que ainda não foram submetidos (com sucesso)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="DmisRegistrationID" type="tns:NumberPositiveMax13">
+        <xsd:annotation>
+          <xsd:documentation>Identificador da Declaração submetida (apenas disponível após a submissão, com sucesso, de todos os Blocos de Linhas da Declaração)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="DmisRegistrationTimeStamp" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>Data/Hora de Registo da Declaração submetida (apenas disponível após a submissão, com sucesso, de todos os Blocos de Linhas da Declaração)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TaxPaymentReference" type="tns:PaymentRefType">
+        <xsd:annotation>
+          <xsd:documentation>Referência para Pagamento do Imposto (apenas disponível após a submissão, com sucesso, de todos os Blocos de Linhas da Declaração)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TaxPaymentAmount" type="tns:PositiveMonetaryType">
+        <xsd:annotation>
+          <xsd:documentation>Montante de Imposto a Pagar (apenas disponível após a submissão, com sucesso, de todos os Blocos de Linhas da Declaração)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="PaymentRefType">
+    <xsd:restriction base="xsd:long">
+      <xsd:pattern value="\d{15}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumberMax9">
+    <xsd:restriction base="xsd:int">
+      <xsd:pattern value="\d{1,9}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

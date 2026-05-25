@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_move_reversal_pt" model="ir.ui.view">
+        <field name="name">account.move.reversal.form.pt</field>
+        <field name="model">account.move.reversal</field>
+        <field name="inherit_id" ref="account.view_account_move_reversal" />
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field
+                    name="l10n_pt_vat_adjustment_norm_id"
+                    options="{'no_create_edit': True}"
+                />
+                <field name="l10n_pt_vat_adjustment_requests_policy" invisible="1" />
+                <field
+                    name="l10n_pt_vat_adjustment_request_number"
+                    invisible="l10n_pt_vat_adjustment_requests_policy not in ['optional', 'mandatory']"
+                />
+            </field>
+        </field>
+    </record>
+
+    <!--
+    <record id="view_account_invoice_refund" model="ir.ui.view">
+        <field name="name">account.invoice.refund.form.pt</field>
+        <field name="model">account.invoice.refund</field>
+        <field name="inherit_id" ref="account.view_account_invoice_refund" />
+        <field name="arch" type="xml">
+            <field name="date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+    -->
+</odoo>
