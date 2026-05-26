@@ -23,7 +23,7 @@ Usage
 
 On purchase and sales invoices the deposit line is recomputed automatically
 when invoice line quantities or products change. It can also be recomputed
-on demand with the *Recompute SDR* button.
+on demand with the *Compute SDR* button.
 
 The deposit amount is not subject to VAT; it is reported in the SAF-T file
 with exemption reason M99.

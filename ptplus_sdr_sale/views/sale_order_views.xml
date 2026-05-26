@@ -5,19 +5,30 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='action_cancel']" position="before">
-                <button
-                    name="action_l10n_pt_sdr_recompute"
-                    id="action_l10n_pt_sdr_recompute"
-                    string="Recompute SDR"
-                    type="object"
-                    invisible="state not in ('draft', 'sent') or not l10n_pt_sdr_has_flagged_line or not l10n_pt_sdr_auto_compute"
-                />
-            </xpath>
-            <xpath expr="//field[@name='order_line']" position="before">
+            <xpath
+                expr="//group[@name='order_details']/field[@name='payment_term_id']"
+                position="after"
+            >
                 <field name="l10n_pt_sdr_base_qty" invisible="1" />
                 <field name="l10n_pt_sdr_has_flagged_line" invisible="1" />
                 <field name="l10n_pt_sdr_auto_compute" invisible="1" />
+                <label
+                    for="l10n_pt_sdr_base_qty"
+                    invisible="state not in ('draft', 'sent') or not l10n_pt_sdr_has_flagged_line"
+                />
+                <div
+                    class="o_row"
+                    invisible="state not in ('draft', 'sent') or not l10n_pt_sdr_has_flagged_line"
+                >
+                    <button
+                        name="action_l10n_pt_sdr_recompute"
+                        type="object"
+                        string="Compute SDR"
+                        help="Compute the SDR / Volta deposit line"
+                        class="btn-outline-primary"
+                        icon="fa-refresh"
+                    />
+                </div>
             </xpath>
         </field>
     </record>
