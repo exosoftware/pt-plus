@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="ptplus_sdr_pos.ControlButtons"
+        t-inherit="point_of_sale.ControlButtons"
+        t-inherit-mode="extension"
+    >
+        <xpath
+            expr="//t[@t-if='props.showRemainingButtons']/div/button[hasclass('o_pricelist_button')]"
+            position="before"
+        >
+            <button
+                t-if="this.displayL10nPtSdrRecomputeBtn()"
+                class="o_l10n_pt_sdr_recompute_button"
+                t-att-class="buttonClass"
+                t-on-click="() => this.clickL10nPtSdrRecompute()"
+            >
+                <i
+                class="fa fa-refresh me-1"
+                role="img"
+                aria-label="Compute SDR"
+                title="Compute SDR"
+            />
+                Compute SDR
+            </button>
+        </xpath>
+    </t>
+</templates>

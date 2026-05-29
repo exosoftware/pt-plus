@@ -31,4 +31,19 @@
             </field>
         </field>
     </record>
+
+    <record id="view_category_property_form_account_pt" model="ir.ui.view">
+        <field name="name">product.category.account.property.form.inherit.pt</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="stock_account.view_category_property_form" />
+        <field name="arch" type="xml">
+            <field name="property_stock_valuation_account_id" position="after">
+                <field
+                    name="l10n_pt_inventory_loss_account_id"
+                    options="{'no_create': True}"
+                    groups="account.group_account_invoice"
+                />
+            </field>
+        </field>
+    </record>
 </odoo>

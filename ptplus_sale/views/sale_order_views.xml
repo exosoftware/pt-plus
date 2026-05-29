@@ -44,7 +44,7 @@
             <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'sent' or l10n_pt_order_id</attribute>
+                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
@@ -52,10 +52,13 @@
             <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'draft' or l10n_pt_order_id</attribute>
+                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="before">
+                <field name="fiscal_document_type_code" invisible="1" />
             </xpath>
 
             <!-- Quotations/Orders cross references-->

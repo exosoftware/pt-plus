@@ -6,10 +6,13 @@
         <field name="inherit_id" ref="account_edi.view_tree_account_edi_document" />
         <field name="arch" type="xml">
             <xpath expr="//list" position="inside">
-                <field name="l10n_pt_edi_cius_saphety_request_id" />
-                <field name="l10n_pt_edi_cius_saphety_request_status" />
-                <field name="l10n_pt_edi_cius_saphety_document_id" />
-                <field name="l10n_pt_edi_cius_saphety_integration_status" />
+                <field name="l10n_pt_edi_cius_saphety_request_status" optional="hide" />
+                <field name="l10n_pt_edi_cius_saphety_request_id" optional="hide" />
+                <field
+                    name="l10n_pt_edi_cius_saphety_document_status"
+                    optional="hide"
+                />
+                <field name="l10n_pt_edi_cius_saphety_document_id" optional="hide" />
             </xpath>
         </field>
     </record>

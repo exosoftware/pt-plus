@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_sdr" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.sdr</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40" />
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='enable_l10n_pt_sdr']" position="inside">
+                <div class="mt16" invisible="not module_ptplus_sdr">
+                    <div class="row">
+                        <label
+                            string="Default Product"
+                            for="l10n_pt_sdr_product_id"
+                            class="col-lg-4 o_light_label"
+                        />
+                        <field name="l10n_pt_sdr_product_id" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Algorithm"
+                            for="l10n_pt_sdr_algorithm"
+                            class="col-lg-4 o_light_label"
+                        />
+                        <field name="l10n_pt_sdr_algorithm" />
+                    </div>
+                    <div class="row">
+                        <label
+                            string="Compute Line Automatically"
+                            for="l10n_pt_sdr_auto_compute"
+                            class="col-lg-4 o_light_label"
+                        />
+                        <field name="l10n_pt_sdr_auto_compute" />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

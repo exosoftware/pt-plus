@@ -78,6 +78,7 @@ Contributors
 
   * Pedro Castro Silva
   * André Leite
+  * Diogo Pereira
   * João Costa
 
 * `Growfactor <https://www.growfactor.pt>`_:

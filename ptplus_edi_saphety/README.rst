@@ -76,6 +76,7 @@ Contributors
 
   * Pedro Castro Silva
   * André Leite
+  * Diogo Pereira
   * João Costa
 
 Maintainer

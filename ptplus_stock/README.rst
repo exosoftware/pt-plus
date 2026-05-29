@@ -32,6 +32,12 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.2 (2026-05-26)
+~~~~~~~~~~~~~~~~~~~
+**Features**
+
+- Add per-product-category Inventory Loss Account, used by manual inventory adjustments instead of the single account on the stock location. Applying an adjustment whose categories are not configured raises an error linking to the categories that need to be fixed.
+
 5.1.1 (2026-01-15)
 ~~~~~~~~~~~~~~~~~~~
 **Improvement**

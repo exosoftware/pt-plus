@@ -19,7 +19,7 @@
         "views/sale_order_views.xml",
         "views/report_sale_order.xml",
     ],
-    "installable": False,
+    "installable": True,
     "auto_install": True,
     "application": False,
     "license": "OPL-1",
