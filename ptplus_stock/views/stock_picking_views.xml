@@ -53,13 +53,14 @@
                 <field name="source_billing" invisible="1" />
                 <field name="system_entry_date" invisible="1" />
                 <field name="l10n_pt_is_national" invisible="1" />
+                <field name="picking_type_code" invisible="1" />
                 <field
                     name="fiscal_document_type_id"
                     string="Document Type"
                     options="{'no_create_edit': True}"
-                    invisible="not source_billing"
+                    invisible="not source_billing and picking_type_code != 'incoming'"
                     readonly="state in ['done', 'cancel']"
-                    domain="[('source_billing', '=', source_billing),
+                    domain="[('source_billing', '=', source_billing or 'P'),
                             ('company_id', '=', company_id),
                             ('section', '=', 'stock'),
                             ('picking_type_ids', 'in', picking_type_id)
@@ -146,7 +147,7 @@
                 />
                 <field
                     name="l10n_pt_disable_auto_issuance"
-                    invisible="l10n_pt_disable_fiscal_document or code not in ['outgoing', 'internal']"
+                    invisible="l10n_pt_disable_fiscal_document or code not in ['outgoing', 'internal', 'incoming']"
                 />
             </field>
         </field>

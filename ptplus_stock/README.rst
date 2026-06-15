@@ -32,6 +32,14 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.3 (2026-06-03)
+~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Allow receptions to issue transport documents: selecting a document type on an incoming picking marks it as a fiscal document. Return notes (GD) now apply to receptions and asset transport notes (GA) accept any operation except deliveries.
+- Report the transport movement direction following the actual goods flow, so a reception loads at the counterparty and unloads at our warehouse.
+
 5.1.2 (2026-05-26)
 ~~~~~~~~~~~~~~~~~~~
 **Features**

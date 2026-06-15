@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:45+0000\n"
-"PO-Revision-Date: 2026-05-26 18:47+0100\n"
+"POT-Creation-Date: 2026-05-29 16:29+0000\n"
+"PO-Revision-Date: 2026-05-29 17:43+0100\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
@@ -21,14 +21,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
 msgid ""
 "<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != "
-"'Connected'\">Has Saphety</span>\n"
+"'Connected'\">Works with Sovos/Saphety</span>\n"
 "                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety !"
-"= 'NotConnected'\">No Saphety</span>"
+"= 'NotConnected'\">Doesn't work with Sovos/Saphety</span>"
 msgstr ""
 "<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != "
-"'Connected'\">Têm Saphety</span>\r\n"
+"'Connected'\">Trabalha com Sovos/Saphety</span>\n"
 "                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety !"
-"= 'NotConnected'\">Sem Saphety</span>"
+"= 'NotConnected'\">Não trabalha com Sovos/Saphety</span>"
 
 #. module: ptplus_edi_saphety
 #: model:ir.model,name:ptplus_edi_saphety.model_account_move_send
@@ -49,19 +49,19 @@ msgstr "O CIUS-PT já foi enviado para a Saphety, não o pode enviar duas vezes.
 #. module: ptplus_edi_saphety
 #. odoo-python
 #: code:addons/ptplus_edi_saphety/webservice.py:0
-#, fuzzy
-#| msgid ""
-#| "CODE: %s\n"
-#| "FIELD: %s\n"
-#| "VALUES: %s"
 msgid ""
 "CODE: %(code)s\n"
 "FIELD: %(field)s\n"
 "VALUES: %(values)scode"
 msgstr ""
-"CÓDIGO: %s\n"
-"CAMPO: %s\n"
-"VALORES: %s"
+"CÓDIGO: %(code)s\n"
+"CAMPO: %(field)s\n"
+"VALORES: %(values)scode"
+
+#. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Check Sovos/Saphety"
+msgstr "Verificar Sovos/Saphety"
 
 #. module: ptplus_edi_saphety
 #: model:ir.model,name:ptplus_edi_saphety.model_res_company
@@ -82,17 +82,6 @@ msgstr "Connectado"
 #: model:ir.model,name:ptplus_edi_saphety.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
-
-#. module: ptplus_edi_saphety
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_edi_document__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move_send__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move_send_wizard__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_company__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_partner__display_name
-msgid "Display Name"
-msgstr "Nome de Exibição"
 
 #. module: ptplus_edi_saphety
 #: model:ir.model.fields,help:ptplus_edi_saphety.field_res_partner__l10n_pt_has_saphety
@@ -119,23 +108,6 @@ msgstr "Concluído"
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.res_config_settings_view_form_edi_pt_saphety
 msgid "Have your CIUS-PT invoices delivered to your customers by Saphety."
 msgstr "Envie as suas faturas CIUS-PT aos seus clientes através da Saphety."
-
-#. module: ptplus_edi_saphety
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_edi_document__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move_send__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_move_send_wizard__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_company__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_config_settings__id
-#: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_partner__id
-msgid "ID"
-msgstr "ID"
-
-#. module: ptplus_edi_saphety
-#. odoo-python
-#: code:addons/ptplus_edi_saphety/models/account_move_send.py:0
-msgid "Invalid type of Fiscal Document Type "
-msgstr "Tipo de documento fiscal inválido"
 
 #. module: ptplus_edi_saphety
 #: model:ir.model.fields,field_description:ptplus_edi_saphety.field_res_partner__invoice_sending_method
@@ -177,6 +149,11 @@ msgstr "Palavra-passe"
 #: model:ir.model.fields.selection,name:ptplus_edi_saphety.selection__account_edi_document__l10n_pt_edi_cius_saphety_request_status__queued
 msgid "Queued"
 msgstr "Em Espera"
+
+#. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Reload"
+msgstr ""
 
 #. module: ptplus_edi_saphety
 #: model:ir.model.fields.selection,name:ptplus_edi_saphety.selection__account_edi_document__l10n_pt_edi_cius_saphety_request_status__running
@@ -302,6 +279,15 @@ msgstr "Os valores aqui definidos são específicos da empresa."
 #: model:ir.model.fields.selection,name:ptplus_edi_saphety.selection__res_partner__invoice_sending_method__saphety
 msgid "by Saphety"
 msgstr "pela Saphety"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome de Exibição"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Invalid type of Fiscal Document Type "
+#~ msgstr "Tipo de documento fiscal inválido"
 
 #, python-format
 #~ msgid "Couldn't get integration status. Errors: %s"
