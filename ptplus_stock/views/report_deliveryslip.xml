@@ -131,14 +131,19 @@
                 </div>
             </div>
 
-            <div id="informations" class="report-wrapping-flexbox clearfix row mt32 mb32">
+            <div
+                id="informations"
+                class="report-wrapping-flexbox clearfix row mt32 mb32"
+            >
                 <div t-if="o.l10n_pt_date_issued" class="col col-3 mw-100 mb-2">
                     <strong>Date:</strong>
                     <div t-field="o.l10n_pt_date_issued" class="m-0" />
                 </div>
                 <!-- Add Vat No. -->
                 <div t-if="partner and partner.vat" class="col col-3 mw-100 mb-2">
-                    <strong><t t-out="o.company_id.country_id.vat_label or 'Tax ID'" />:</strong>
+                    <strong><t
+                        t-out="o.company_id.country_id.vat_label or 'Tax ID'"
+                    />:</strong>
                     <div t-out="partner.pt_get_vat()" class="m-0" />
                 </div>
                 <div

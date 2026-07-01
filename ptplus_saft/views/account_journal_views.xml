@@ -6,7 +6,11 @@
         <field name="inherit_id" ref="account.view_account_journal_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <field name="import_saft_id" invisible="1" />
+                <field
+                    name="import_saft_id"
+                    invisible="1"
+                    groups="account.group_account_invoice"
+                />
                 <button
                     class="oe_stat_button"
                     type="object"
@@ -14,6 +18,7 @@
                     icon="fa-cloud-upload"
                     invisible="not import_saft_id"
                     help="Imports"
+                    groups="account.group_account_invoice"
                 >
                     <field name="no_imports" string="Imports" widget="statinfo" />
                 </button>

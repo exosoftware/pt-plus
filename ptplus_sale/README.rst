@@ -33,6 +33,14 @@ Available soon.
 Changelog
 =========
 
+5.1.1 (2026-06-16)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Added the SAF-T element status as an optional column on the sale orders list,
+  plus list actions to (un)block and to recompute the element on the spot.
+
 5.1.0 (2025-11-11)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -34,6 +34,15 @@ Available soon.
 Changelog
 =========
 
+1.1.0
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Warn in the Profit & Loss and Balance Sheet statements when accounts 31 or 38
+  still hold a balance, since they must be regularized at year-end and otherwise
+  make the statement figures incorrect.
+
 1.0.0
 ~~~~~~~~~~~~~~~~~~~
 
