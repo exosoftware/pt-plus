@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_cope_code_form" model="ir.ui.view">
+        <field name="name">l10n_pt.cope.code.form</field>
+        <field name="model">l10n_pt.cope.code</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="code" />
+                    </group>
+                    <group>
+                        <field name="name" />
+                        <field name="active" widget="boolean_toggle" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cope_code_list" model="ir.ui.view">
+        <field name="name">l10n_pt.cope.code.list</field>
+        <field name="model">l10n_pt.cope.code</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="code" />
+                <field name="name" />
+                <field name="active" widget="boolean_toggle" />
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cope_code_search" model="ir.ui.view">
+        <field name="name">l10n_pt.cope.code.search</field>
+        <field name="model">l10n_pt.cope.code</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code" />
+                <field name="name" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cope_code_action_list" model="ir.actions.act_window">
+        <field name="name">COPE Codes</field>
+        <field name="res_model">l10n_pt.cope.code</field>
+        <field name="view_mode">list</field>
+        <field
+            name="domain"
+        >['|', ('active', '=', False), ('active', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add COPE codes
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_action_l10n_pt_cope_code_list"
+        parent="account.account_account_menu"
+        action="l10n_pt_cope_code_action_list"
+        sequence="90"
+        groups="account.group_account_manager"
+    />
+</odoo>

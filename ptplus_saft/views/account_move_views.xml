@@ -6,7 +6,11 @@
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <field name="import_saft_id" invisible="1" />
+                <field
+                    name="import_saft_id"
+                    invisible="1"
+                    groups="account.group_account_invoice"
+                />
                 <button
                     class="oe_stat_button"
                     type="object"
@@ -14,10 +18,31 @@
                     icon="fa-cloud-upload"
                     invisible="not import_saft_id"
                     help="Imports"
+                    groups="account.group_account_invoice"
                 >
                     <field name="no_imports" string="Imports" widget="statinfo" />
                 </button>
             </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_invoice_tree_saft">
+        <field name="name">account.move.list.saft</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree" />
+        <field name="arch" type="xml">
+            <field name="status_in_payment" position="before">
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
+            </field>
         </field>
     </record>
 </odoo>

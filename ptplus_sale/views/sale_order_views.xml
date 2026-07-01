@@ -44,7 +44,7 @@
             <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'sent' or l10n_pt_order_id</attribute>
+                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
@@ -52,10 +52,13 @@
             <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'draft' or l10n_pt_order_id</attribute>
+                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="before">
+                <field name="fiscal_document_type_code" invisible="1" />
             </xpath>
 
             <!-- Quotations/Orders cross references-->
@@ -105,4 +108,42 @@
         <field name="domain">[('is_order', '=', True)]</field>
     </record>
     -->
+
+    <record id="view_order_tree_saft" model="ir.ui.view">
+        <field name="name">sale.order.list.saft</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="action_l10n_pt_toggle_saft_element_sale" model="ir.actions.server">
+        <field name="name">(Un)block SAF-T element</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="binding_model_id" ref="sale.model_sale_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_toggle_saft_element_block()</field>
+    </record>
+
+    <record id="action_l10n_pt_recompute_saft_element_sale" model="ir.actions.server">
+        <field name="name">Recompute SAF-T element</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="binding_model_id" ref="sale.model_sale_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_recompute_saft_element()</field>
+    </record>
 </odoo>

@@ -26,6 +26,17 @@ Available soon.
 Changelog
 =========
 
+5.0.1 (2026-06-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Emit the SAF-T line ``References`` (Reason only, no Reference) on rappel
+  credit notes, taking the reason from the move reference. Adds a dependency on
+  ``ptplus_saft``.
+- Require a reference on rappel credit notes, since it is reported as the
+  SAF-T References/Reason (a rappel credit note has no origin invoice).
+
 5.0.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

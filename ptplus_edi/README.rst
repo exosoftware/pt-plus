@@ -6,8 +6,7 @@ Adds CIUS-PT enabled invoicing to Odoo according to the CIUS-PT 2.1.1 dated
 26-Feb-2021 norm published by the (`eSPap <https://www.espap.gov.pt/spfin/normas/Paginas/normas.aspx>`_).
 
 An XML file will be created and attached to every sales invoice or debit/credit note
-and included on the Send by Mail feature. This file can than be manually uploaded to
-some e-invoicing brokers.
+and included on the Send. This file can then be manually sent to some e-invoicing brokers.
 
 **Table of contents**
 
@@ -19,26 +18,27 @@ Installation
 
 Install the module with required dependencies:
 
-* pip install unicodecsv
 * add the module to an addons folder, restart Odoo, update the addons list and activate
   it.
 
 Configuration
 =============
 
-After module installation you'll see a new option on every sales journal that
-belongs to a Portuguese company. It's called CIUS-PT (File)) and is
-available on the Electronic Data Interchange section. When active, the CIUS-PT
-rules will be enforced and an XML file will be added to every invoice or credit
-note issued on the journal. You can have multiple sales journal, some of them
-with CIUS-PT activation and others without it.
+For general information regarding e-invoicing in Odoo, please read the
+(`online manual <https://www.odoo.com/documentation/19.0/applications/finance/accounting/customer_invoices/electronic_invoicing.html>`_).
 
-The generated CIUS-PT files will be validated against an official schematron
+After module installation, you'll see a new option in the Accounting tab of the
+customer form: Portugal (CIUS-PT). Partners that are marked with this option will
+have an XML file attached to its invoices and credit notes when these documents
+are posted. This file will also be embedded in the document PDF.
+
+These generated CIUS-PT files, representing the document data according to the
+portuguese standards, will be validated against an official schematron
 source in order to ensure compliance. When the validation fails, invoices will
 not be posted. You can disable this validation if you want to have you invoice
-posted despite possible problems in the XML file. Just set the Disable Schema
-Validation on the Electronic Invoicing options inside the Portuguese Invoicing
-settings section.
+posted despite possible problems in the XML file (not recommended). Just set
+the Disable Schema Validation on the Electronic Invoicing options inside the
+Portuguese Invoicing settings section.
 
 This module just creates and attaches the XML file. To electronically transmit
 it you'll need to install additional modules for specific brokers.
@@ -78,6 +78,7 @@ Contributors
 
   * Pedro Castro Silva
   * André Leite
+  * Diogo Pereira
   * João Costa
 
 * `Growfactor <https://www.growfactor.pt>`_:

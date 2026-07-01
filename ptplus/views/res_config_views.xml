@@ -106,6 +106,15 @@
                     </setting>
 
                     <setting
+                        id="enable_l10n_pt_sdr"
+                        help="Deposit Return Scheme (SDR / Volta) for single-use beverage packaging"
+                        title="Tick to install the SDR module. It adds a separate, VAT-exempt deposit line to purchase and sales invoices."
+                        invisible="not pt_invoicing"
+                    >
+                        <field name="module_ptplus_sdr" />
+                    </setting>
+
+                    <setting
                         id="l10n_pt_subscription_code"
                         invisible="not pt_invoicing"
                         string="Subscription Code"

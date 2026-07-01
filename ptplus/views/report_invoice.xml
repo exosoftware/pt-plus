@@ -112,9 +112,13 @@
             expr="//t[@name='account_invoice_line_accountable']"
             position="attributes"
         >
+            <t
+                t-set="is_downpayment"
+                t-value="'is_downpayment' in line._fields and line.is_downpayment"
+            />
             <attribute
                 name="t-if"
-            >line.display_type == 'product' and (not o.source_billing or line.is_downpayment or (o.source_billing and line.price_subtotal &gt;= 0))</attribute>
+            >line.display_type == 'product' and (not o.source_billing or is_downpayment or (o.source_billing and line.price_subtotal &gt;= 0))</attribute>
         </xpath>
 
         <!--New summary table to display discounts-->

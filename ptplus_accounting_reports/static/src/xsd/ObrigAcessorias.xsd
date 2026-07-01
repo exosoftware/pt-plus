@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="http://www.dgci.gov.pt/2002/OT"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.dgci.gov.pt/2002/OT"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="NIFType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:whiteSpace value="collapse" />
+			<xs:fractionDigits value="0" />
+			<xs:pattern value="[0-9]{9}" />
+			<xs:minInclusive value="100000000" />
+			<xs:maxInclusive value="999999999" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoDeclType">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+			<xs:enumeration value="1" />
+			<xs:enumeration value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoDeclLong">
+		<xs:restriction base="xs:long">
+			<xs:enumeration id="OP1" value="1" />
+			<xs:enumeration id="OP2" value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Cat_Codigos">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+			<xs:maxLength value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Cat_Anos">
+		<xs:restriction base="xs:long">
+			<xs:totalDigits value="4" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValorEmCentimos16">
+		<xs:restriction base="xs:long">
+			<xs:totalDigits value="16" />
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValorEmCentimos13">
+		<xs:restriction base="xs:long">
+			<xs:totalDigits value="13" />
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SF">
+		<xs:restriction base="xs:long">
+			<xs:totalDigits value="4" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NIBType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{21}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IBANType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z0-9]{6,45}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValorType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2" />
+			<xs:totalDigits value="13" />
+			<xs:minExclusive value="0.00" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="QuantidadeType">
+		<xs:restriction base="xs:unsignedLong">
+			<xs:totalDigits value="13" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumOrdemType">
+		<xs:restriction base="xs:unsignedLong">
+			<xs:fractionDigits value="0" />
+			<xs:whiteSpace value="collapse" />
+			<xs:minExclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="NumComercianteType">
+      <xs:restriction base="xs:positiveInteger">
+        <xs:whiteSpace value="collapse" />
+        <xs:totalDigits value="9" />
+        <xs:minInclusive value="1" />
+        <xs:maxInclusive value="999999999" />
+      </xs:restriction>
+    </xs:simpleType>
+	<xs:complexType name="DeclaracaoType">
+		<xs:sequence>
+			<xs:element name="Declarante" type="NIFType">
+				<xs:annotation>
+					<xs:documentation>Número de Identificação Fiscal do
+						Declarante [1]
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TOC" type="NIFType">
+				<xs:annotation>
+					<xs:documentation>Número de Identificação Fiscal do Técnico
+						Oficial
+						de Contas [2]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ano" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation>Ano [3]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SF">
+				<xs:annotation>
+					<xs:documentation>Código de Serviço de Finanças da Sede ou
+						Domicílo
+						Fiscal [4]</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:short">
+						<xs:totalDigits value="4" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Tipo" type="TipoDeclType">
+				<xs:annotation>
+					<xs:documentation>Dados da declaração - Tipo de declaração [5]
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SequenciaType" abstract="true"
+		block="restriction">
+		<xs:attribute name="numero" type="NumOrdemType" use="required" />
+	</xs:complexType>
+	<xs:simpleType name="Month">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[0-9]{1,2}" />
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="12" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PaisType">
+		<xs:restriction base="xs:string">
+			<xs:length value="3" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DeclaracaoType2">
+		<xs:sequence>
+			<xs:element name="Declarante" type="NIFType">
+				<xs:annotation>
+					<xs:documentation>[1] - Número de Identificação Fiscal da
+						Declarante</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TOC" type="NIFType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>[2] - Número de Identificação Fiscal do
+						Técnico
+						Oficial de Contas</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ano" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation>[3] - Ano</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SF">
+				<xs:annotation>
+					<xs:documentation>[4] - Código do Serviço de Finanças da sede ou
+						domicílo fiscal</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:short">
+						<xs:totalDigits value="4" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Tipo" type="TipoDeclType">
+				<xs:annotation>
+					<xs:documentation>[5] Dados da Declaração - Tipo de Declaração
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="NIFEstrangeiroType">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse" />
+			<xs:maxLength value="15" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValorType15_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="15" />
+			<xs:fractionDigits value="2" />
+			<xs:minExclusive value="0.00" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

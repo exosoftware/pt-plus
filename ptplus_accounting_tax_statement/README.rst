@@ -45,6 +45,11 @@ Available soon.
 Changelog
 =========
 
+5.1.7 (2026-04-13)
+~~~~~~~~~~~~~~~~~~~
+
+- Add refund amount in periodic statement, allowing partial refunds.
+
 5.1.5 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

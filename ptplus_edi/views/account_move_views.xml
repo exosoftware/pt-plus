@@ -6,13 +6,6 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
-            <field name="edi_state" position="after">
-                <field
-                    name="l10n_pt_edi_cius_broker_id"
-                    string="Broker"
-                    invisible="not source_billing"
-                />
-            </field>
             <xpath expr="//group[@name='sale_info_group']" position="inside">
                 <field
                     name="l10n_pt_commitment_number"

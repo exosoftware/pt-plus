@@ -1,0 +1,539 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tko_cope_pt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 16:25+0000\n"
+"PO-Revision-Date: 2025-05-07 16:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid ""
+"<br/>\n"
+"                        <strong>Month:</strong>"
+msgstr ""
+"<br/>\n"
+"                \t <strong>Mês:</strong>"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid ""
+"<br/>\n"
+"                        <strong>Year:</strong>"
+msgstr ""
+"<br/>\n"
+"               \t <strong>Ano:</strong>"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid "<span>P</span>"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid "<strong>NIPC:</strong>"
+msgstr "<strong>NIF:</strong>"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__active
+msgid "Active"
+msgstr "Ativo"
+
+#. module: tko_cope_pt
+#: model_terms:ir.actions.act_window,help:tko_cope_pt.action_cope_code_list
+msgid "Add COPE codes"
+msgstr "Adicionar códigos COPE"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Amount (amount)"
+msgstr "Montante (montante)"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_code_search
+msgid "Archived"
+msgstr "Arquivado"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,help:tko_cope_pt.field_account_journal__bank_id
+msgid "Associate a Bank to help extracting COPEresume Map."
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_res_bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_account_journal__bank_id
+msgid "Bank Associated"
+msgstr "Banco Associado"
+
+#. module: tko_cope_pt
+#: model:ir.ui.menu,name:tko_cope_pt.menu_finance_reports_cope
+msgid "COPE"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment__cope_code_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment_register__cope_code_id
+msgid "COPE Code"
+msgstr "Código COPE"
+
+#. module: tko_cope_pt
+#: model:ir.actions.act_window,name:tko_cope_pt.action_cope_code_list
+#: model:ir.ui.menu,name:tko_cope_pt.menu_cope_code_list
+msgid "COPE Codes"
+msgstr "Códigos COPE"
+
+#. module: tko_cope_pt
+#: model:ir.actions.act_window,name:tko_cope_pt.action_cope_export
+#: model:ir.ui.menu,name:tko_cope_pt.menu_cope_export
+msgid "COPE Export"
+msgstr "Exportar COPE"
+
+#. module: tko_cope_pt
+#: model:ir.actions.report,name:tko_cope_pt.action_report_cope_pt
+msgid "COPE Report"
+msgstr "COPE"
+
+#. module: tko_cope_pt
+#: model:ir.model.constraint,message:tko_cope_pt.constraint_cope_code_code_uniq
+msgid "COPE code is unique, please check if it's archived."
+msgstr "Código COPE é unico, confirme se está arquivada."
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid "Category"
+msgstr "Categoria"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__code
+msgid "Code"
+msgstr "Código"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_country__code_alpha3
+msgid "Code Alpha3"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,help:tko_cope_pt.field_res_bank__id_bank
+msgid ""
+"Code from financial institution to identifythe account of movement.Help for "
+"extracting COPE resume Map."
+msgstr ""
+"Código financeiro pda instituição para identificar o movimento da conta. "
+"Ajuda na extração do resumo COPE"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Counterpart (counterpart)"
+msgstr "Contraparte (contraparte)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Counterpart country (country_counterp)"
+msgstr "País Contraparte (pais_contraparte)"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_res_country
+msgid "Country"
+msgstr "País"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Country account (country_account)"
+msgstr "País Conta (pais_conta)"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__create_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__create_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__create_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__create_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__create_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__create_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__create_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__create_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__create_date
+msgid "Created on"
+msgstr "Criada em"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Currency (currency)"
+msgstr "Moeda (divisa)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Date due (date_due)"
+msgstr "Data Vencimento (data_vencimento)"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__name
+msgid "Description"
+msgstr "Descrição"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__display_name
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__display_name
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__display_name
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__display_name
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__display_name
+msgid "Display Name"
+msgstr "Nome a Exibir"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.res_config_settings_view_form
+msgid "Distinct discount accounts in invoices"
+msgstr "Contas de descontos distintas nas faturas"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid "Document: Resume COPE (to XML)"
+msgstr "Documento: Resumo para extração XML do COPE"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
+msgid "Done"
+msgstr "Concluído"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
+msgid "Download File"
+msgstr "Download do Ficheiro"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_download_file_wizard
+msgid "Download File Wizard"
+msgstr "Wizard de Download do Ficheiro"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__excel_available_flag
+msgid "Excel Available Flag"
+msgstr "Excel disponível"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
+msgid "Export"
+msgstr "Exportar"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
+msgid "Export COPE Codes"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__report_type_xls
+msgid "Extract as Excel File"
+msgstr "Extrair em Excel"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__file
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__file
+msgid "File"
+msgstr "Ficheiro"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__filename
+msgid "File Name"
+msgstr "Nome do Ficheiro"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Financial country (country_ative)"
+msgstr "País ativo financeiro (pais_ativo)"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__fiscalyear_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__fiscalyear_id
+msgid "Fiscal Year"
+msgstr "Ano fiscal"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment__force_cope_country_id
+msgid "Force in COPE Country"
+msgstr "Forçar País no COPE"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/report/cope.py:0
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr ""
+"Conteúdo do formulário em falta, este relatório não pode ser imprimido"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__group_lines
+msgid "Group lines"
+msgstr "Agrupar linhas"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__id
+msgid "ID"
+msgstr "Id."
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "ID Bank (id_bank)"
+msgstr "Instituição financeira (id_banco)"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_bank__id_bank
+msgid "ID bank"
+msgstr "ID banco"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "ID record (id_reg)"
+msgstr "ID Registo (id_reg)"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_country_import_wizard
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
+msgid "Import Country Data"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.actions.act_window,name:tko_cope_pt.action_country_import
+#: model:ir.ui.menu,name:tko_cope_pt.menu_country_data_import
+msgid "Import Country ISO Alpha-3"
+msgstr " Importar País ISO Alpha-3"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_res_config_settings
+msgid "Invoice Certification Service Configuration"
+msgstr "Configuração Serviço de Certificação de Faturas (ICS)"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_account_journal
+msgid "Journal"
+msgstr "Diário"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__write_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__write_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__write_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__write_uid
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__write_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__write_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__write_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__write_date
+#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+msgid "NPC 2º intervener (npc2)"
+msgstr "NPC 2º interveniente (npc2)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#, python-format
+msgid "NPC 2º intervener (npc2) "
+msgstr "NPC 2º interveniente (npc2) "
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Nature (nature)"
+msgstr "Natureza (natureza)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Observations (observations)"
+msgstr "Observações (observacoes)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Operation date (data_ref)"
+msgstr "Data Operação (data_ref)"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_company__cope_code_payable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_config_settings__cope_code_payable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_partner__property_cope_code_payable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_users__property_cope_code_payable_id
+msgid "Payable COPE Code"
+msgstr "Código COPE Pagamentos"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_account_payment
+msgid "Payments"
+msgstr "Pagamentos"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__period_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__period_id
+msgid "Period"
+msgstr "Período"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#, python-format
+msgid "Please select a period!"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: tko_cope_pt
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_company__cope_code_receivable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_config_settings__cope_code_receivable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_partner__property_cope_code_receivable_id
+#: model:ir.model.fields,field_description:tko_cope_pt.field_res_users__property_cope_code_receivable_id
+msgid "Recievable COPE Code"
+msgstr "Código COPE Recebimentos"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_account_payment_register
+msgid "Register Payment"
+msgstr "Registar Pagamento"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Stat. Classification (cod_estat)"
+msgstr "Cód. Estatística (cod_estat)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Type account (type_account)"
+msgstr "Tipo Conta (tipo_conta)"
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#, python-format
+msgid "Type value (type_value)"
+msgstr "Tipo Valor (tipo_valor)"
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_cope_export_wizard
+msgid "Wizard to Export COPE Codes"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
+msgid "Your file is ready! Click on the link below to download the file..."
+msgstr ""
+"O seu ficheiro está pronto! Clique na hiperligação em baixo para fazer o "
+"download do ficheiro..."
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_cope_code
+msgid "cope.code"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_cope_wizard
+msgid "cope.wizard"
+msgstr ""
+
+#. module: tko_cope_pt
+#. odoo-python
+#: code:addons/tko_cope_pt/wizard/cope.py:0
+#, python-format
+msgid "cope_resume_"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
+msgid "ou"
+msgstr ""
+
+#. module: tko_cope_pt
+#: model:ir.model,name:tko_cope_pt.model_report_tko_cope_pt_report_cope
+msgid "report.tko_cope_pt.report_cope"
+msgstr ""

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_form_sdr" model="ir.ui.view">
+        <field name="name">account.move.form.sdr</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='header_right_group']" position="inside">
+                <field name="l10n_pt_sdr_base_qty" invisible="1" />
+                <field name="l10n_pt_sdr_has_flagged_line" invisible="1" />
+                <field name="l10n_pt_sdr_auto_compute" invisible="1" />
+                <label
+                    for="l10n_pt_sdr_base_qty"
+                    invisible="state != 'draft' or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or not l10n_pt_sdr_has_flagged_line"
+                />
+                <div
+                    class="o_row"
+                    invisible="state != 'draft' or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or not l10n_pt_sdr_has_flagged_line"
+                >
+                    <button
+                        name="action_l10n_pt_sdr_recompute"
+                        type="object"
+                        string="Compute SDR"
+                        help="Compute the SDR / Volta deposit line"
+                        class="btn-outline-primary"
+                        icon="fa-refresh"
+                    />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
