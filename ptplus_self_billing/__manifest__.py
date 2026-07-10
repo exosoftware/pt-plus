@@ -12,7 +12,12 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "depends": ["ptplus", "ptplus_saft", "ptplus_account_credit_note"],
+    "depends": [
+        "ptplus",
+        "ptplus_saft",
+        "ptplus_account_credit_note",
+        "account_edi_ubl_cii",
+    ],
     "data": [
         "security/ir.model.access.csv",
         "data/fiscal_document.xml",

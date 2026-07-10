@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - SAF-T PT Statement",
-    "version": "19.0.4.1.3",
+    "version": "19.0.4.1.7",
     "license": "OPL-1",
     "depends": ["ptplus", "ptplus_partner"],
     "author": "Exo Software",
@@ -17,6 +17,7 @@
         "security/ir.model.access.csv",
         "data/ir_cron.xml",
         "data/mail_templates.xml",
+        "data/saft_element_actions.xml",
         "views/l10n_pt_account_saft_import.xml",
         "views/res_config_settings_views.xml",
         "wizards/dataport_export_saft.xml",
@@ -26,6 +27,7 @@
         "views/account_account_views.xml",
         "views/account_journal_views.xml",
         "views/account_move_views.xml",
+        "views/account_payment_views.xml",
     ],
     "external_dependencies": {
         "python": [

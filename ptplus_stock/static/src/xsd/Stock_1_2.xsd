@@ -54,6 +54,7 @@
 				<xs:element minOccurs="1" ref="ProductNumberCode" />
 				<xs:element minOccurs="1" ref="ClosingStockQuantity" />
 				<xs:element minOccurs="1" ref="UnitOfMeasure" />
+				<xs:element minOccurs="0" ref="ClosingStockValue" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -64,6 +65,7 @@
 	<xs:element name="ProductNumberCode" type="SAFPTtextTypeMandatoryMax60Car" />
 	<xs:element name="ClosingStockQuantity" type="SAFdecimalType" />
 	<xs:element name="UnitOfMeasure" type="SAFPTtextTypeMandatoryMax20Car" />
+	<xs:element name="ClosingStockValue" type="SAFmonetaryType" />
 	<!-- ELEMENTOS SIMPLES COM RESTRICOES ADICIONAIS -->
 	<xs:element name="FileVersion">
 		<xs:simpleType>
@@ -121,6 +123,11 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1" />
 			<xs:maxLength value="200" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SAFmonetaryType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SAFdecimalType">

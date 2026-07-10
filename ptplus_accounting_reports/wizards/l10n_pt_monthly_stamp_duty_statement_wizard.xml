@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_monthly_stamp_duty_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.monthly.stamp.duty.statement.wizard.form</field>
+        <field name="model">l10n_pt.monthly.stamp.duty.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="options_left" position="inside">
+                <field
+                    name="legal_representative_vat"
+                    help="[Q5-C01] Legal representative or taxable person VAT No."
+                />
+                <field
+                    name="certified_accountant_vat"
+                    help="[Q5-C02] Certified Accountant VAT No."
+                />
+                <field
+                    name="justifiable_reason"
+                    help="[Q5-C03] Fact that originated the justifiable reason"
+                />
+                <field
+                    name="justifiable_reason_start_date"
+                    help="[Q5-C04] Date of the fact that originated the justifiable reason"
+                    invisible="not justifiable_reason"
+                />
+            </group>
+            <group name="options_right" position="inside">
+                <field name="tax_office_code" help="[Q1] The 4-digit tax office code" />
+                <field
+                    name="declaration_type"
+                    help="[Q6-C01,C02] Select whether this is the first declaration for the given period or a replacement."
+                />
+                <field
+                    name="already_paid_tax_amount"
+                    invisible="declaration_type != 'subst'"
+                />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="Statement Lines">
+                    <group>
+                        <field name="line_ids" nolabel="1" colspan="2">
+                            <list editable="bottom">
+                                <field name="q04_01" />
+                                <field name="q04_02" />
+                                <field name="q04_03" />
+                                <field name="q04_04" />
+                                <field name="q04_05" />
+                                <field name="q04_06_01" optional="hide" />
+                                <field
+                                    name="q04_06_02"
+                                    optional="hide"
+                                    readonly="not q04_06_01"
+                                />
+                                <field name="q04_07" sum="Total" />
+                                <field name="q04_08" sum="Total" />
+                                <button
+                                    name="action_view_details"
+                                    type="object"
+                                    string="View"
+                                    icon="fa-search"
+                                />
+                            </list>
+                        </field>
+                    </group>
+                    <group />
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_monthly_stamp_duty_statement_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Monthly SD Statement</field>
+        <field name="res_model">l10n_pt.monthly.stamp.duty.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_monthly_stamp_duty_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_monthly_stamp_duty_statement_wizard_menu"
+        parent="ptplus_reports.l10n_pt_tax_statement_menu"
+        sequence="90"
+        groups="ptplus.group_experimental_features_pt"
+        action="l10n_pt_monthly_stamp_duty_statement_wizard_action"
+    />
+</odoo>

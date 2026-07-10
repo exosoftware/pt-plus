@@ -24,6 +24,15 @@ Available soon.
 Changelog
 =========
 
+5.0.1 (2026-06-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Report the SAF-T line ``References`` (origin invoice and reason) on debit
+  notes, so they point at the invoice they correct. Adds a dependency on
+  ``ptplus_saft``.
+
 5.0.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

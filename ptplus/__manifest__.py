@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Invoicing",
-    "version": "19.0.5.0.9",
+    "version": "19.0.5.1.2",
     "license": "OPL-1",
     "depends": ["base_vat", "account", "l10n_pt", "bus"],
     "countries": ["pt"],
@@ -23,9 +23,11 @@
         "data/account_account_tag_data.xml",
         "data/res_country.xml",
         "data/ir_cron.xml",
+        "data/l10n_pt.stamp.duty.code.csv",
         "views/account_views.xml",
         "views/dataport_log.xml",
         "views/layout.xml",
+        "views/l10n_pt_stamp_duty_code.xml",
         "views/fiscal_document.xml",
         "views/account_tax_views.xml",
         "views/account_tax_group_views.xml",

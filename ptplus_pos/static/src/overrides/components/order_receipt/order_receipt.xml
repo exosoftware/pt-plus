@@ -41,11 +41,11 @@
                 </div>
                 <img
                     id="pt_qrcode"
-                    t-att-src="order.l10n_pt_generateQRCode(order.l10n_pt_bill_qr_code)"
+                    t-att-src="order.l10n_pt_generateQRCode(order.l10n_pt_qr_code)"
                     class="pt_qrcode"
                 />
             </div>
-            <div class="pos-receipt-contact">
+            <div t-if="order.l10n_pt_certification_text">
                 <t t-esc="order.l10n_pt_certification_text" />
             </div>
         </xpath>

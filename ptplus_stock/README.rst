@@ -32,6 +32,49 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.8 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Printed transport documents now source their loading/unloading partners from
+  the same computed fields as the AT webservice communication, so an unknown
+  destination is no longer rendered as the company address.
+
+5.1.7 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Omit CustomerAddress and AddressTo from the AT transport document
+  communication when the destination is unknown (no partner nor destination
+  warehouse on the picking), instead of sending incomplete or company-fallback
+  addresses; SAF-T exports report the unloading place as unknown accordingly.
+
+5.1.6 (2026-06-17)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Drop the reverted per-category inventory loss account view on upgrade so the
+  registry can load on databases that had the feature installed.
+
+5.1.5 (2026-06-16)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Added the SAF-T element status as an optional column on the transfers list,
+  plus list actions to (un)block and to recompute the element on the spot.
+
+5.1.3 (2026-06-03)
+~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Allow receptions to issue transport documents: selecting a document type on an incoming picking marks it as a fiscal document. Return notes (GD) now apply to receptions and asset transport notes (GA) accept any operation except deliveries.
+- Report the transport movement direction following the actual goods flow, so a reception loads at the counterparty and unloads at our warehouse.
+
 5.1.1 (2026-01-15)
 ~~~~~~~~~~~~~~~~~~~
 **Improvement**

@@ -5,9 +5,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="ptplus.view_partner_custom_form" />
         <field name="arch" type="xml">
-            <group name="accounting_entries" position="after">
+            <xpath expr="//group[@name='general']" position="after">
                 <group string="PT Reports" name="pt_reports" />
-            </group>
+            </xpath>
         </field>
     </record>
 </odoo>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="l10n_pt_report_annual_statement_document">
-        <t t-set="partners" t-value="docs.mapped('partner_id')" />
-        <t t-set="statement" t-value="docs[0].statement_id" />
+        <t
+            t-set="partners"
+            t-value="docs.env.context.get('partner', False) or docs[0].line_ids.mapped('partner_id')"
+        />
+        <t t-set="statement" t-value="docs[0]" />
         <t t-call="web.external_layout" t-foreach="partners" t-as="partner">
             <!--<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />-->
             <div class="row">
@@ -22,9 +25,7 @@
             <div class="page">
                 <br />
                 <br />
-                <h3>Income Statement for <span
-                    t-out="statement.get_period_text()"
-                /></h3>
+                <h3>Income Statement for <span t-out="docs[0].get_period_text()" /></h3>
                 <br />
                 <br />
                 <br />
@@ -37,21 +38,6 @@
                 </p>
                 <br />
                 <br />
-                <!--                <div id="informations" class="row mt32 mb32">
-                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.date">
-                        <strong>Date:</strong>
-                        <p class="m-0" t-field="o.date" />
-                    </div>
-                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.journal_id">
-                        <strong>Journal:</strong>
-                        <p class="m-0 text-nowrap" t-field="o.journal_id" />
-                    </div>
-                    <div class="col-auto col-3 mw-100 mb-2" t-if="o.ref">
-                        <strong>Reference:</strong>
-                        <p class="m-0 text-nowrap" t-field="o.ref" />
-                    </div>
-                </div>-->
-
                 <table class="table table-sm o_main_table" style="font-size: 10pt;">
                     <thead>
                         <tr>
@@ -63,7 +49,7 @@
                     </thead>
                     <tbody>
                         <tr
-                            t-foreach="statement.line_ids.filtered(lambda r: r.partner_id == partner and r.income_category_code != 'SD')"
+                            t-foreach="docs[0].line_ids.filtered(lambda r: r.partner_id == partner and r.income_category_code != 'DAR')"
                             t-as="l"
                         >
                             <td class="text-start">
@@ -74,42 +60,6 @@
                             </td>
                             <td class="text-end">
                                 <span t-field="l.withhold_amount" />
-                            </td>
-                            <!--<td class="text-end"><span t-field="l.stamp_duty_amount" /></td>-->
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Stamp Duty Tax -->
-                <br />
-                <br />
-                <t
-                    t-set="sd_lines"
-                    t-value="statement.line_ids.filtered(lambda r: r.partner_id == partner and r.income_category_code == 'SD')"
-                />
-                <table
-                    class="table table-sm o_main_table"
-                    style="font-size: 10pt;"
-                    t-if="sd_lines"
-                >
-                    <thead>
-                        <tr>
-                            <th class="text-start" />
-                            <th class="text-end" style="width: 20%">Income</th>
-                            <th class="text-end" style="width: 20%">Withhold Tax</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr t-foreach="sd_lines" t-as="l">
-                            <td class="text-start">
-                                <span t-field="l.income_category" />
-                            </td>
-                            <td class="text-end">
-                                <span t-field="l.income_amount" />
-                            </td>
-                            <!--<td class="text-end"><span t-field="l.withhold_amount" /></td>-->
-                            <td class="text-end">
-                                <span t-field="l.stamp_duty_amount" />
                             </td>
                         </tr>
                     </tbody>
@@ -123,12 +73,6 @@
             <t
                 t-call="ptplus_reports_withholding.l10n_pt_report_annual_statement_document"
             />
-            <!--            <t t-foreach="docs" t-as="o">
-                <t
-                    t-call="ptplus_reports_withholding.l10n_pt_report_annual_statement_document"
-                    t-lang="o.partner_id.lang"
-                />
-            </t>-->
         </t>
     </template>
 </odoo>

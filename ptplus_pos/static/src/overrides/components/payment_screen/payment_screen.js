@@ -10,6 +10,11 @@ patch(PaymentScreen.prototype, {
         if (!this.pos.config.l10n_pt_invoicing) {
             return await super.validateOrder(...arguments);
         }
+
+        if (this.pos.data.network.offline) {
+            this.pos.data.network.warningTriggered = false;
+            throw new ConnectionLostError();
+        }
         // Set default partner
         const default_customer = this.pos.config.l10n_pt_default_partner_id.id;
         const currentPartner = this.currentOrder.getPartner();

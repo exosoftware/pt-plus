@@ -1,0 +1,162 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_sdr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_sdr
+#: model_terms:ir.ui.view,arch_db:ptplus_sdr.res_config_settings_view_form_sdr
+msgid "Algorithm"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,help:ptplus_sdr.field_res_company__l10n_pt_sdr_algorithm
+#: model:ir.model.fields,help:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_algorithm
+msgid ""
+"Algorithm used to compute the deposit (SDR / Volta) line.\n"
+"Normal: the deposit line aggregates the quantities of the products flagged as subject to SDR.\n"
+"Modules adding another algorithm extend this selection and override account.move._l10n_pt_sdr_compute_qty."
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model,name:ptplus_sdr.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model_terms:ir.ui.view,arch_db:ptplus_sdr.res_config_settings_view_form_sdr
+msgid "Compute Line Automatically"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_bank_statement_line__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_move__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_company__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_auto_compute
+msgid "Compute SDR / Volta Line Automatically"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model,name:ptplus_sdr.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model_terms:ir.ui.view,arch_db:ptplus_sdr.res_config_settings_view_form_sdr
+msgid "Default Product"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_sdr.field_product_template__display_name
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_sdr.field_product_template__id
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model,name:ptplus_sdr.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_bank_statement_line__l10n_pt_sdr_has_flagged_line
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_move__l10n_pt_sdr_has_flagged_line
+msgid "L10N Pt Sdr Has Flagged Line"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields.selection,name:ptplus_sdr.selection__res_company__l10n_pt_sdr_algorithm__normal
+msgid "Normal"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model,name:ptplus_sdr.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,help:ptplus_sdr.field_res_company__l10n_pt_sdr_product_id
+#: model:ir.model.fields,help:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_product_id
+msgid "Product used for the deposit (SDR / Volta) line on invoices."
+msgstr ""
+
+#. module: ptplus_sdr
+#: model_terms:ir.ui.view,arch_db:ptplus_sdr.view_move_form_sdr
+msgid "Compute SDR"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_product_product__l10n_pt_sdr_volta
+#: model:ir.model.fields,field_description:ptplus_sdr.field_product_template__l10n_pt_sdr_volta
+msgid "SDR / Volta"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_company__l10n_pt_sdr_algorithm
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_algorithm
+msgid "SDR Algorithm"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_bank_statement_line__l10n_pt_sdr_base_qty
+#: model:ir.model.fields,field_description:ptplus_sdr.field_account_move__l10n_pt_sdr_base_qty
+msgid "SDR Base Quantity"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_company__l10n_pt_sdr_product_id
+#: model:ir.model.fields,field_description:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_product_id
+msgid "SDR Default Product"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:product.template,name:ptplus_sdr.product_sdr_volta
+msgid "SDR/Volta charge"
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,help:ptplus_sdr.field_product_product__l10n_pt_sdr_volta
+#: model:ir.model.fields,help:ptplus_sdr.field_product_template__l10n_pt_sdr_volta
+msgid ""
+"Single-use beverage subject to the Deposit Return Scheme (SDR / Volta). "
+"Flagged products contribute to the SDR deposit line on purchase and sales "
+"invoices."
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,help:ptplus_sdr.field_account_bank_statement_line__l10n_pt_sdr_base_qty
+#: model:ir.model.fields,help:ptplus_sdr.field_account_move__l10n_pt_sdr_base_qty
+msgid ""
+"Total quantity of the SDR-flagged products at the last deposit line "
+"computation. The deposit line is recomputed only when this total changes, so"
+" it can still be edited by hand."
+msgstr ""
+
+#. module: ptplus_sdr
+#: model:ir.model.fields,help:ptplus_sdr.field_account_bank_statement_line__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,help:ptplus_sdr.field_account_move__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,help:ptplus_sdr.field_res_company__l10n_pt_sdr_auto_compute
+#: model:ir.model.fields,help:ptplus_sdr.field_res_config_settings__l10n_pt_sdr_auto_compute
+msgid ""
+"When enabled, the SDR / Volta deposit line is kept in sync with the flagged "
+"products. When disabled, the deposit line is left untouched unless the "
+"Compute SDR button is used."
+msgstr ""

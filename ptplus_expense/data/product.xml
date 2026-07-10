@@ -3,7 +3,6 @@
     <record id="trav_expenses_own_vehicle" model="product.template">
         <field name="name">Traveling Expenses (Own Vehicle)</field>
         <field name="uom_id" ref="uom.product_uom_km" />
-        <field name="uom_po_id" ref="uom.product_uom_km" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -16,7 +15,6 @@
     <record id="per_diems_national" model="product.template">
         <field name="name">Per Diems National</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -29,7 +27,6 @@
     <record id="per_diems_national_75" model="product.template">
         <field name="name">Per Diems National (75%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -42,7 +39,6 @@
     <record id="per_diems_national_50" model="product.template">
         <field name="name">Per Diems National (50%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -55,7 +51,6 @@
     <record id="per_diems_national_25" model="product.template">
         <field name="name">Per Diems National (25%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -68,7 +63,6 @@
     <record id="per_diems_internacional" model="product.template">
         <field name="name">Per Diems Internacional</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -81,7 +75,6 @@
     <record id="per_diems_internacional_75" model="product.template">
         <field name="name">Per Diems Internacional (75%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -94,7 +87,6 @@
     <record id="per_diems_internacional_50" model="product.template">
         <field name="name">Per Diems Internacional (50%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>
@@ -107,7 +99,6 @@
     <record id="per_diems_internacional_25" model="product.template">
         <field name="name">Per Diems Internacional (25%)</field>
         <field name="uom_id" ref="uom.product_uom_day" />
-        <field name="uom_po_id" ref="uom.product_uom_day" />
         <field name="type">service</field>
         <field name="can_be_expensed">True</field>
         <field name="sale_ok">False</field>

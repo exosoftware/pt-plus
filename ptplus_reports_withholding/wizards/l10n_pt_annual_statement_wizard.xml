@@ -16,7 +16,7 @@
             </group>
             <notebook name="main_block" position="inside">
                 <page name="Statements">
-                    <field name="line_ids" nolabel="1" widget="many2many" colspan="3">
+                    <field name="line_ids" nolabel="1" widget="many2many" colspan="2">
                         <list editable="bottom">
                             <field name="currency_id" column_invisible="1" />
                             <field name="partner_id" />
@@ -30,6 +30,7 @@
                                 string="Type"
                                 optional="hide"
                             />
+                            <field name="income_category_code" />
                             <field name="income_category" />
                             <field
                                 name="income_amount"
@@ -40,12 +41,6 @@
                                 name="withhold_amount"
                                 string="Retention"
                                 sum="Total Retention"
-                            />
-                            <field
-                                name="stamp_duty_amount"
-                                string="S.D"
-                                optional="hide"
-                                sum="Total S.D"
                             />
                             <field
                                 name="selected"
@@ -65,14 +60,6 @@
         </field>
     </record>
 
-    <menuitem
-        id="l10n_pt_income_retention_menu"
-        parent="l10n_pt.account_reports_pt_statements_menu"
-        sequence="160"
-        groups="account.group_account_user"
-        name="Income and Retention"
-    />
-
     <record id="l10n_pt_annual_statement_wizard_action" model="ir.actions.act_window">
         <field name="name">Annual Statement</field>
         <field name="res_model">l10n_pt.annual.statement.wizard</field>
@@ -80,6 +67,14 @@
         <field name="view_id" ref="l10n_pt_annual_statement_wizard_form" />
         <field name="target">new</field>
     </record>
+
+    <menuitem
+        id="l10n_pt_income_retention_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="300"
+        groups="account.group_account_user"
+        name="Income and Retention"
+    />
 
     <menuitem
         id="l10n_pt_annual_statement_wizard_menu"

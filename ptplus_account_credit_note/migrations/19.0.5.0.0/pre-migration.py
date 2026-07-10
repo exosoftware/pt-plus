@@ -17,4 +17,4 @@ def migrate(env, version):
             ("state", "in", ["installed", "to remove"]),
         ]
     ):
-        openupgrade.update_module_names(env.cr, _module_rename)
+        openupgrade.update_module_names(env.cr, _module_rename, merge_modules=True)

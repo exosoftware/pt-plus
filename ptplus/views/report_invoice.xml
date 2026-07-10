@@ -188,7 +188,7 @@
         </xpath>
 
         <!-- VAT Exemption Reasons and amount in EUR -->
-        <xpath expr="//p[@name='payment_communication']" position="before">
+        <xpath expr="//p[@name='payment_communication']/.." position="before">
             <t
                 t-set="exempt_taxes"
                 t-value="o.mapped('invoice_line_ids.tax_ids').filtered(lambda r: r.pt_vat_exemption_reason)"

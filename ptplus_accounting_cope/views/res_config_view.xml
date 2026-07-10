@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_res_partner_cope_form" model="ir.ui.view">
+        <field name="name">res.partner.cope.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <field name="property_account_payable_id" position="after">
+                <field name="l10n_pt_cope_code_receivable_id" />
+                <field name="l10n_pt_cope_code_payable_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='default_accounts']" position="inside">
+                <setting
+                    string="Distinct discount accounts in invoices"
+                    name="cope_code"
+                >
+                    <div class="content-group">
+                        <div class="row mt8">
+                            <label
+                                for="l10n_pt_cope_code_receivable_id"
+                                class="col-lg-4 o_light_label"
+                            />
+                            <field name="l10n_pt_cope_code_receivable_id" />
+                        </div>
+                        <div class="row mt8">
+                            <label
+                                for="l10n_pt_cope_code_payable_id"
+                                class="col-lg-4 o_light_label"
+                            />
+                            <field name="l10n_pt_cope_code_payable_id" />
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

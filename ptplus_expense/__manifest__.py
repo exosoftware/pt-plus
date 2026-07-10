@@ -20,7 +20,7 @@
         "views/hr_employee_views.xml",
         "views/product_views.xml",
     ],
-    "installable": False,
-    "auto_install": False,
+    "installable": True,
+    "auto_install": True,
     "application": False,
 }

@@ -179,6 +179,13 @@
             <t t-call="ptplus.certification_text" />
         </xpath>
 
+        <xpath
+            expr="//div[@name='company_address']/preceding-sibling::div[1]"
+            position="attributes"
+        >
+            <attribute name="class" remove="w-50" />
+        </xpath>
+
         <xpath expr="//div[@name='company_address']" position="before">
             <t t-call="ptplus.pt_features_top" />
         </xpath>
@@ -188,6 +195,13 @@
     <template id="external_layout_wave" inherit_id="web.external_layout_wave">
         <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
             <t t-call="ptplus.certification_text" />
+        </xpath>
+
+        <xpath
+            expr="//div[@name='company_address']/preceding-sibling::div[1]"
+            position="attributes"
+        >
+            <attribute name="class" remove="w-50" />
         </xpath>
 
         <xpath expr="//div[@name='company_address']" position="before">

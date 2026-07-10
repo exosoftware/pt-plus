@@ -18,7 +18,7 @@
                 <field name="show_button_export_webservice" invisible="1" />
                 <field name="show_button_print" invisible="1" />
                 <field name="show_button_mail" invisible="1" />
-                <group name="main">
+                <group name="main" invisible="state == 'done'">
                     <group name="main_left">
                         <field
                             name="company_id"
@@ -40,17 +40,11 @@
                         />
                     </group>
                 </group>
-
-                <notebook invisible="state != 'analyze'" name="main_block">
-                    <!--Added by other reports -->
-                    <!--<page string="Tab 1" name="tab1">
-                        <field name="line_ids" nolabel="1" widget="many2many" colspan="3">
-                            <tree editable="bottom">
-                                <button name="action_view_details" type="object" string="View"/>
-                            </tree>
-                        </field>
-                    </page>-->
-                </notebook>
+                <group name="options" string="Options" invisible="state != 'analyze'">
+                    <group name="options_left" />
+                    <group name="options_right" />
+                </group>
+                <notebook invisible="state != 'analyze'" name="main_block" />
                 <div invisible="state != 'done'">
                     <h2>Export Complete</h2>
                     <p>

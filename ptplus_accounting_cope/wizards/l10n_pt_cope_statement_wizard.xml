@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_cope_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.cope.statement.wizard.form</field>
+        <field name="model">l10n_pt.cope.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="period" position="after">
+                <field name="group_lines" readonly="state != 'select'" invisible="1" />
+            </field>
+
+            <notebook name="main_block" position="inside">
+                <page name="COPE Lines">
+                    <field name="line_ids" nolabel="1">
+                        <list>
+                            <field name="id_reg" />
+                            <field name="data_ref" optional="show" />
+                            <field name="natureza" optional="show" />
+                            <field name="npc2" optional="show" />
+                            <field name="montante" optional="show" />
+                            <field name="divisa" optional="show" />
+                            <field name="cod_estat" optional="show" />
+                            <field name="tipo_valor" optional="show" />
+                            <field name="tipo_conta" optional="show" />
+                            <field name="id_banco" optional="show" />
+                            <field name="pais_conta" optional="show" />
+                            <field name="pais_contraparte" optional="show" />
+                            <field name="pais_ativo" optional="show" />
+                            <field name="data_vencim" optional="show" />
+                            <field name="contraparte" optional="show" />
+                            <field name="observacoes" optional="show" />
+                            <field name="montante_signed" optional="show" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cope_statement_wizard_line_form" model="ir.ui.view">
+        <field name="name">l10n_pt.cope.statement.wizard.line.form</field>
+        <field name="model">l10n_pt.cope.statement.wizard.line</field>
+        <field name="arch" type="xml">
+            <form string="COPE Line">
+                <group>
+                    <group>
+                        <field name="id_reg" />
+                        <field name="data_ref" />
+                        <field name="natureza" />
+                        <field name="npc2" />
+                        <field name="montante" />
+                        <field name="divisa" />
+                        <field name="cod_estat" />
+                        <field name="tipo_valor" />
+                        <field name="tipo_conta" />
+                        <field name="partner_id" />
+                    </group>
+                    <group>
+                        <field name="id_banco" />
+                        <field name="pais_conta" />
+                        <field name="pais_contraparte" />
+                        <field name="pais_ativo" />
+                        <field name="data_vencim" />
+                        <field name="contraparte" />
+                        <field name="observacoes" />
+                        <field name="montante_signed" />
+                        <field name="account_id" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cope_statement_wizard_action" model="ir.actions.act_window">
+        <field name="name">COPE Report</field>
+        <field name="res_model">l10n_pt.cope.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_cope_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_cope_menu"
+        parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
+        name="COPE Report"
+        sequence="900"
+        action="l10n_pt_cope_statement_wizard_action"
+    />
+</odoo>

@@ -38,20 +38,6 @@
         <field name="statement">tax</field>
     </record>
 
-    <record id="tax_stmt_withholding_annual" model="l10n_pt.account.statement">
-        <field name="name">Retenções na Fonte - Decl. Anual</field>
-        <field name="type">withholding.annual</field>
-        <field name="custom">False</field>
-        <field name="statement">tax</field>
-    </record>
-
-    <record id="tax_stmt_withholding_monthly" model="l10n_pt.account.statement">
-        <field name="name">Retenções na Fonte - Decl. Mensal</field>
-        <field name="type">withholding.monthly</field>
-        <field name="custom">False</field>
-        <field name="statement">tax</field>
-    </record>
-
     <record
         id="accounting_stmt_asset_value_adjustment"
         model="l10n_pt.account.statement"
@@ -65,20 +51,6 @@
     <record id="accounting_stmt_cash_flow" model="l10n_pt.account.statement">
         <field name="name">Fluxo de Caixa</field>
         <field name="type">cash.flow</field>
-        <field name="custom">False</field>
-        <field name="statement">accounting</field>
-    </record>
-
-    <record id="accounting_stmt_non_resident_income" model="l10n_pt.account.statement">
-        <field name="name">Rendimentos Não Residentes</field>
-        <field name="type">non.resident.income</field>
-        <field name="custom">False</field>
-        <field name="statement">accounting</field>
-    </record>
-
-    <record id="accounting_stmt_resident_income" model="l10n_pt.account.statement">
-        <field name="name">Rendimentos Residentes</field>
-        <field name="type">resident.income</field>
         <field name="custom">False</field>
         <field name="statement">accounting</field>
     </record>

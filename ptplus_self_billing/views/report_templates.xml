@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+    <!--This view is confliting with modifications to our 'external_layout'.
+    Since it is always present (comes with l10n_pt) and seems to have no effect
+    in the report, we are disabling it-->
+    <record id="account_edi_ubl_cii.external_layout_with_context" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+
     <template id="external_layout_pt_self_billing">
         <div class="header">
             <t t-set="company" t-value="o.company_id" />

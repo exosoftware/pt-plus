@@ -45,7 +45,10 @@
         <field
             name="print_report_name"
         >object.pt_get_fullname(lang=object.partner_id.lang)</field>
-        <field name="attachment_use">False</field>
+        <field
+            name="attachment"
+        >object.system_entry_date and '{} (multiway).pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
+        <field name="attachment_use">True</field>
     </record>
 
     <template id="report_saleorder_multiway">

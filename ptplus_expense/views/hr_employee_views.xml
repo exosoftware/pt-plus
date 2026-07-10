@@ -6,9 +6,9 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form" />
         <field name="arch" type="xml">
-            <field name="bank_account_id" position="before">
+            <xpath expr="//label[@for='distance_home_work']" position="before">
                 <field name="l10n_pt_license_plate" />
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-03 11:03+0000\n"
-"PO-Revision-Date: 2025-11-03 11:07+0000\n"
+"POT-Creation-Date: 2026-02-28 19:10+0000\n"
+"PO-Revision-Date: 2026-02-28 19:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -16,6 +16,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.8\n"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__01
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__01
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__01
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__01
+msgid "01 - Death of spouse (...)"
+msgstr "01 - Falecimento de cônjuge (...)"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__02
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__02
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__02
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__02
+msgid "02 - Death of other relative (...)"
+msgstr "02 - Falecimento de outro parente (...)"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__03
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__03
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__03
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__03
+msgid "03 - Serious and sudden illness (...)"
+msgstr "03 - Doença grave e súbita (...)"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__04
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__04
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__04
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__04
+msgid "04 - Parental situations (...)"
+msgstr "04 - Situações parentais (...)"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__05
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__05
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__05
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__05
+msgid "05 - Long-term illness (...)"
+msgstr "05 - Doença prolongada do contab. (...)"
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__justifiable_reason__06
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__justifiable_reason__06
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason__06
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__justifiable_reason__06
+msgid "06 - New accountant nomination (...)"
+msgstr "06 - Nomeação de novo contab. (...)"
 
 #. module: ptplus_reports
 #. odoo-python
@@ -42,18 +90,26 @@ msgid "4th Quarter"
 msgstr "4º Trim."
 
 #. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__is_alternate_accountant
+msgid "Altern. Accountant?"
+msgstr "Contabilista Suplente?"
+
+#. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__amount
 msgid "Amount"
-msgstr "Valor"
+msgstr "Montante"
 
 #. module: ptplus_reports
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__state__analyze
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__state__analyze
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__state__analyze
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__state__analyze
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_profit_loss_wizard__state__analyze
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__state__analyze
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_trial_balance_wizard__state__analyze
 msgid "Analyze"
 msgstr "Analisar"
 
@@ -67,7 +123,7 @@ msgstr "Abril"
 #: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
 msgid "Are you sure you want to send emails to the selected records?"
 msgstr ""
-"Tem certeza de que deseja enviar e-mails para os registros selecionados?"
+"Tem certeza de que deseja enviar e-mails para os registos selecionados?"
 
 #. module: ptplus_reports
 #. odoo-python
@@ -79,6 +135,11 @@ msgstr "Agosto"
 #: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
 msgid "Cancel"
 msgstr "Cancelar"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__certified_accountant_vat
+msgid "Certified Accountant"
+msgstr "Contabilista Certificado"
 
 #. module: ptplus_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
@@ -157,18 +218,24 @@ msgid "December"
 msgstr "Dezembro"
 
 #. module: ptplus_reports
-#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__declaration_type
-#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__declaration_type
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__declaration_type
 msgid "Declaration Type"
 msgstr "Tipo de Declaração"
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__display_name
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__display_name
 msgid "Display Name"
 msgstr "Nome"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__domain
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__domain
+msgid "Domain"
+msgstr "Domínio"
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__error
@@ -241,6 +308,12 @@ msgid "February"
 msgstr "Fevereiro"
 
 #. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Field '%s' is required."
+msgstr "O campo '%s' é obrigatório."
+
+#. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__data
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__data
 msgid "File"
@@ -253,14 +326,26 @@ msgid "Filename"
 msgstr "Nome do Ficheiro"
 
 #. module: ptplus_reports
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__declaration_type__first
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__justifiable_reason
+msgid ""
+"Fill only if the statement is past due and the reason is justifiable "
+"according to art.º 12.º-A do DL n.º 452/99, 5-nov"
+msgstr ""
+"Preencha apenas se a declaração está fora de prazo e o motivo é justificável "
+"ao abrigo do Art. 12º-A do DL 452/99 de 5-nov"
+
+#. module: ptplus_reports
+#: model:ir.ui.menu,name:ptplus_reports.l10n_pt_financial_statement_menu
+msgid "Financial"
+msgstr "Financeiros"
+
+#. module: ptplus_reports
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__declaration_type__first
 #: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__declaration_type__first
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__declaration_type__first
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__declaration_type__first
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__declaration_type__first
-msgid "First Declaration"
-msgstr "Primeira Declaração"
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__declaration_type__first
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__declaration_type__first
+msgid "First"
+msgstr "Primeira"
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__format
@@ -281,6 +366,7 @@ msgstr "Ficheiro gerado:"
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__id
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__id
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__id
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__id
 msgid "ID"
@@ -327,6 +413,11 @@ msgid "June"
 msgstr "Junho"
 
 #. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__justifiable_reason
+msgid "Justifiable Reason"
+msgstr "Motivo do Justo Impedim."
+
+#. module: ptplus_reports
 #: model:ir.model,name:ptplus_reports.model_l10n_pt_statement_wizard
 msgid "L10nPt Statement Wizard"
 msgstr "Assistente de Declarações L10nPt"
@@ -346,6 +437,11 @@ msgstr "Ultima Atualização por"
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__write_date
 msgid "Last Updated on"
 msgstr "Última Atualização em"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__legal_representative_vat
+msgid "Legal Representative"
+msgstr "Representante Legal"
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__line_ids
@@ -383,6 +479,12 @@ msgid "May"
 msgstr "Maio"
 
 #. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
+msgid "Moves"
+msgstr "Movimentos"
+
+#. module: ptplus_reports
 #: model:ir.model,name:ptplus_reports.model_l10n_pt_multi_statement_wizard
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__statement_id
 msgid "Multi-statement Wizard"
@@ -398,6 +500,16 @@ msgstr "Linhas do Assistente Multi-declarações"
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard_line__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: ptplus_reports
+#. odoo-python
+#: code:addons/ptplus_reports/wizards/l10n_pt_multi_statement_wizard.py:0
+msgid ""
+"No email address found for partner {partner}. Please add one or exclude it "
+"from the selection"
+msgstr ""
+"O parceiro {partner} não tem endereço de e-mail. Por favor, adicione um ou "
+"exclua o parceiro da seleção."
 
 #. module: ptplus_reports
 #. odoo-python
@@ -424,9 +536,24 @@ msgid "October"
 msgstr "Outubro"
 
 #. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_statement_wizard_form
+msgid "Options"
+msgstr "Opções"
+
+#. module: ptplus_reports
+#: model:ir.ui.menu,name:ptplus_reports.l10n_pt_other_menu
+msgid "Other"
+msgstr "Outros"
+
+#. module: ptplus_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_reports.view_partner_custom_form
 msgid "PT Reports"
 msgstr "Relatórios PT"
+
+#. module: ptplus_reports
+#: model:ir.model,name:ptplus_reports.model_l10n_pt_reports_tax_auth_mixin
+msgid "PT Tax Authority Reports Mixin"
+msgstr "Mixin de Relatórios AT PT"
 
 #. module: ptplus_reports
 #. odoo-python
@@ -457,14 +584,19 @@ msgid "Reason"
 msgstr "Motivo"
 
 #. module: ptplus_reports
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_annual_statement_wizard__declaration_type__second
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__declaration_type__second
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__declaration_type__second
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_statement_wizard__declaration_type__second
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_multi_statement_wizard__declaration_type__second
-#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_statement_wizard__declaration_type__second
-msgid "Second Declaration"
-msgstr "Segunda Declaração"
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__justifiable_reason_end_date
+msgid "Reason Fact End"
+msgstr "Data de Cessação do Facto"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__justifiable_reason_start_date
+msgid "Reason Fact Start"
+msgstr "Data de Ocorrência do Facto"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_multi_statement_wizard_form
+msgid "Sel."
+msgstr "Sel."
 
 #. module: ptplus_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_multi_statement_wizard_form
@@ -477,10 +609,13 @@ msgid "Select None"
 msgstr "Selecionar Nenhum"
 
 #. module: ptplus_reports
-#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_multi_statement_wizard__declaration_type
-#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_statement_wizard__declaration_type
-msgid "Select whether this is the first or second declaration."
-msgstr "Indique se se trata da primeira ou segunda declaração."
+#: model:ir.model.fields,help:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__declaration_type
+msgid ""
+"Select whether this is the first declaration for the given period or a "
+"replacement."
+msgstr ""
+"Indique se se trata da primeira declaração do período ou de uma declaração "
+"de substituição."
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard_line__selected
@@ -604,6 +739,29 @@ msgid "Statement Wizard Lines"
 msgstr "Linhas do Assistente de Declarações"
 
 #. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__subst_fact_date
+msgid "Subst. Fact Date"
+msgstr "Data do Facto Orig. Subst."
+
+#. module: ptplus_reports
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo10_statement_wizard__declaration_type__subst
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_modelo30_statement_wizard__declaration_type__subst
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__declaration_type__subst
+#: model:ir.model.fields.selection,name:ptplus_reports.selection__l10n_pt_reports_tax_auth_mixin__declaration_type__subst
+msgid "Substitution"
+msgstr "Substituição"
+
+#. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__tax_office_code
+msgid "Tax Office Code"
+msgstr "Cód. Serviço Finanças"
+
+#. module: ptplus_reports
+#: model:ir.ui.menu,name:ptplus_reports.l10n_pt_tax_statement_menu
+msgid "Taxes"
+msgstr "Impostos"
+
+#. module: ptplus_reports
 #. odoo-python
 #: code:addons/ptplus_reports/wizards/l10n_pt_statement_wizard.py:0
 msgid "This feature is under development and will soon be available."
@@ -628,6 +786,11 @@ msgid "Undefined period type"
 msgstr "Tipo de período indefinido"
 
 #. module: ptplus_reports
+#: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_reports_tax_auth_mixin__is_under_art_119_1d
+msgid "Under art. 119º nº1-d?"
+msgstr "Ao abrigo Art. 119º - 1ºd?"
+
+#. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__validate
 msgid "Validate"
@@ -644,6 +807,11 @@ msgstr "Valores"
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_statement_wizard__vat_legal_representative
 msgid "Vat Legal Representative"
 msgstr "NIF do Representante Legal"
+
+#. module: ptplus_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_reports.l10n_pt_multi_statement_wizard_form
+msgid "View"
+msgstr "Ver"
 
 #. module: ptplus_reports
 #: model:ir.model.fields,field_description:ptplus_reports.field_l10n_pt_multi_statement_wizard__warnings
@@ -683,9 +851,6 @@ msgstr "a"
 
 #~ msgid "Tab 1"
 #~ msgstr "Separador 1"
-
-#~ msgid "View"
-#~ msgstr "Ver"
 
 #~ msgid "done"
 #~ msgstr "concluído "

@@ -7,12 +7,12 @@
 
 {
     "name": "Portugal - Credit Notes",
-    "version": "19.0.5.0.0",
+    "version": "19.0.5.0.1",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "depends": ["ptplus"],
+    "depends": ["ptplus", "ptplus_saft"],
     "data": [
         "views/account_move_views.xml",
     ],
