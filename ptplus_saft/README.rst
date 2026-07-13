@@ -35,6 +35,11 @@ Changelog
 4.1.7 (2026-07-01)
 ~~~~~~~~~~~~~~~~~~~
 
+**Improvement**
+
+- Adding a VAT to a customer that had none now updates the SAF-T of invoices
+  already issued to that customer as "consumidor final".
+
 **Bugfixes**
 
 - Include the accounting data of company branches and sub-branches in the

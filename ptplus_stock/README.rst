@@ -32,6 +32,25 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.7 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Printed transport documents now source their loading/unloading partners from
+  the same computed fields as the AT webservice communication, so an unknown
+  destination is no longer rendered as the company address.
+
+5.1.6 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Omit CustomerAddress and AddressTo from the AT transport document
+  communication when the destination is unknown (no partner nor destination
+  warehouse on the picking), instead of sending incomplete or company-fallback
+  addresses; SAF-T exports report the unloading place as unknown accordingly.
+
 5.1.5 (2026-06-16)
 ~~~~~~~~~~~~~~~~~~
 

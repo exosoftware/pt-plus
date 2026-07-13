@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "18.0.5.1.5",
+    "version": "18.0.5.1.7",
     "depends": [
         "ptplus_saft",
         "stock_picking_invoice_link",
