@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2016 Exo Software, Lda. (<https://exosoftware.pt>)
+-->
+<odoo>
+    <record id="hr_expense_view_form_efatura_scan" model="ir.ui.view">
+        <field name="name">hr.expense.form.efatura.scan</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_split_wizard']" position="before">
+                <field name="l10n_pt_efatura_scan" invisible="1" />
+                <field name="l10n_pt_country_code" invisible="1" />
+                <button
+                    name="l10n_pt_action_scan"
+                    string="Scan QR"
+                    type="object"
+                    class="btn-primary"
+                    icon="fa-qrcode"
+                    help="Look for an e-fatura QR code on the expense receipt and fill the expense fields from its data"
+                    invisible="l10n_pt_country_code != 'PT' or not l10n_pt_efatura_scan or state != 'draft' or nb_attachment &lt; 1 or total_amount_currency != 0"
+                />
+                <button
+                    name="l10n_pt_action_scan"
+                    string="Scan QR"
+                    type="object"
+                    class="btn-secondary"
+                    icon="fa-qrcode"
+                    help="Look for an e-fatura QR code on the expense receipt and fill the expense fields from its data"
+                    invisible="l10n_pt_country_code != 'PT' or not l10n_pt_efatura_scan or state != 'draft' or nb_attachment &lt; 1 or total_amount_currency == 0"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

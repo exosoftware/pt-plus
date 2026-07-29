@@ -32,6 +32,112 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.2.2 (2026-07-23)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Recompute the payment SAF-T element when the payment is (un)reconciled: on
+  real-time companies the element was computed at issuing, before the register
+  payment wizard reconciles it with the invoice, and stayed cached empty — the
+  payment then silently disappeared from the SAF-T Payments section until a
+  manual "Recompute elements" export.
+
+4.2.1 (2026-07-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Clear the previous run's staged lines inside the background job (a new
+  batched "cleanup" stage with periodic commits) instead of synchronously in
+  the "Process File" click, which timed out the HTTP worker when the previous
+  import had staged hundreds of thousands of lines.
+- Don't stage the MasterFiles twice when the first staging chunk is
+  interrupted before completing its first journal.
+- Index ``configuration_id`` and ``saft_import_move_id`` on the staging model:
+  without them every staged-line delete seq-scanned the whole table for the
+  restrict-FK check, making cleanup of a large import extremely slow.
+
+4.2.0 (2026-07-21)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Accept SAF-T files uploaded as a ``.zip`` archive (as commonly distributed in
+  Portugal for large files), in addition to raw ``.xml``. The archive's XML
+  entry is extracted before validation/parsing.
+- Process the SAF-T import in the background instead of inline in the HTTP
+  request. Clicking "Process File" or "Create/Update Records" now queues the
+  work to a cron job (``ir_cron_process_saft_import``) and returns
+  immediately; a progress note on the form ("Progress") shows whether the
+  import is still running or finished. This avoids Odoo worker time/memory
+  limits killing large imports mid-way and taking down the database.
+- Parse ``GeneralLedgerEntries``/``Journal``/``Transaction`` data in a
+  streaming fashion (``xmlschema`` lazy resource) instead of decoding the
+  whole SAF-T file into memory at once, and commit to the database every 500
+  records instead of holding the entire import in a single transaction. This
+  is what actually allows large files (e.g. 25MB+) to be imported without
+  running out of memory or losing all progress on a worker restart.
+- Import partner VAT numbers exactly as they appear in the SAF-T source,
+  without re-running Odoo's offline NIF checksum (``no_vat_validation``), so
+  the foreign/legacy/malformed VAT numbers real AT exports contain no longer
+  abort the import.
+- Report structural XSD violations (wrong types, lengths, missing required
+  elements) with a readable message listing the offending nodes (path and
+  reason) instead of a raw ``xmlschema`` traceback, so the source file can be
+  corrected. XSD 1.1 ``<xs:assert>`` violations (e.g. a GM account without a
+  ``TaxonomyCode``) are only logged as warnings and no longer block the import:
+  they are not enforced by the AT on export, so files that are valid in
+  practice are now accepted.
+- Show record-creation progress as ``x/Y`` (done/total) on the configuration,
+  so it is clear how much of the import is left.
+- Add a list view to the SAF-T import configurations (kanban stays the default)
+  to make it easier to select and delete several at once.
+
+**Bugfixes**
+
+- The "Process File" button no longer stays visible once a configuration has
+  reached the "Done" state (the ``done`` state was previously never reached).
+- Actually import journal entries: the streaming lazy resource used depth 1
+  while ``GeneralLedgerEntries/Journal`` sits at depth 2, so no journal (and
+  therefore no ``account.move``) was ever imported.
+- No longer crash staging a PT partner without a NIF (e.g. "Consumidor
+  Final"), which legally carries none.
+- Fix ``account.move`` creation from journal entries: write ``partner_id``
+  (the previously written ``partner_code`` field does not exist on
+  ``account.move``), resolve the partner by ``CustomerID`` or ``SupplierID``,
+  and allow GL transactions with no counterparty to be imported without a
+  partner.
+- Decode the ``Header`` and ``MasterFiles`` from a sliced "head" document
+  (``GeneralLedgerEntries``/``SourceDocuments`` are optional in the schema)
+  instead of parsing the whole file, so a large (e.g. 250MB) SAF-T no longer
+  runs out of memory building the full XML tree just to read the top of it.
+- Resume the chunked import immediately between chunks: the cron progress is
+  now reported so Odoo re-runs the job at once while work remains, instead of
+  treating each chunk as "finished" and waiting for the hourly fallback (which
+  made a large import appear stuck for a long time between chunks).
+- Compute the smart-button counts with a single SQL aggregation instead of
+  loading every staged line, so opening a configuration or returning to the
+  kanban stays fast even after a large import.
+
+4.1.8 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Remove the legacy "Extraction" SAF-T computing method; companies still
+  using it are migrated to "Real-time".
+
+**Bugfixes**
+
+- Include the GeneralLedgerEntries section in the Accounting and Integrated
+  files, placed before SourceDocuments as the schema requires.
+- Don't drop the Customer/Supplier/Product master files when the file has no
+  TaxTable (e.g. Accounting exports).
+- Read the branches' journal entries when exporting from the root company.
+- Declare stamp-duty charge lines (product configured as stamp duty) with
+  the line's NS tax and exemption M99.
+
 4.1.7 (2026-07-01)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -34,6 +34,15 @@ Available soon.
 Changelog
 =========
 
+1.2.0 (2026-07-26)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Trial Balance statement: reports the closing balance of each account as of the
+  selected date, with XLSX export. Unlike the remaining IES statements it works
+  account by account, without any taxonomy mapping.
+
 1.1.0
 ~~~~~~~~~~~~~~~~~~~
 

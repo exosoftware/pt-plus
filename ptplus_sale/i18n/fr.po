@@ -434,12 +434,10 @@ msgstr ""
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/sale_order.py:0
-#, fuzzy, python-format
-#| msgid "Cannot confirm %s. An order fiscal document type is required."
+#, python-format
 msgid "You cannot change the order lines of a document that is already issued."
 msgstr ""
-"Impossible de confirmer le %s. Un type de document fiscal de commande est "
-"requis."
+"Vous ne pouvez pas modifier les lignes de commande d'un document déjà émis."
 
 #. module: ptplus_sale
 #. odoo-python

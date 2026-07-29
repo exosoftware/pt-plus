@@ -33,6 +33,22 @@ Available soon.
 Changelog
 =========
 
+5.1.3 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- SAF-T: taxes referenced by the exported Working Documents are now listed
+  in the TaxTable master file.
+
+5.1.2 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Sale Document (multi-way) report no longer registers its printed PDF as
+  a chatter attachment
+
 5.1.1 (2026-06-16)
 ~~~~~~~~~~~~~~~~~~~
 
