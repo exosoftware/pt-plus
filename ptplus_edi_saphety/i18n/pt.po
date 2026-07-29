@@ -52,11 +52,11 @@ msgstr "O CIUS-PT já foi enviado para a Saphety, não o pode enviar duas vezes.
 msgid ""
 "CODE: %(code)s\n"
 "FIELD: %(field)s\n"
-"VALUES: %(values)scode"
+"VALUES: %(values)s"
 msgstr ""
 "CÓDIGO: %(code)s\n"
 "CAMPO: %(field)s\n"
-"VALORES: %(values)scode"
+"VALORES: %(values)s"
 
 #. module: ptplus_edi_saphety
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
@@ -163,19 +163,14 @@ msgstr "Em Curso"
 #. module: ptplus_edi_saphety
 #. odoo-python
 #: code:addons/ptplus_edi_saphety/webservice.py:0
-#, fuzzy
-#| msgid ""
-#| "Saphety API Error on service %s:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "Saphety API Error on service %(path)s:\n"
 "\n"
-"%(msg)spath"
+"%(msg)s"
 msgstr ""
-"Erro da API Saphety no serviço %s:\n"
+"Erro da API Saphety no serviço %(path)s:\n"
 "\n"
-"%s"
+"%(msg)s"
 
 #. module: ptplus_edi_saphety
 #: model:ir.model.fields,field_description:ptplus_edi_saphety.field_account_edi_document__l10n_pt_edi_cius_saphety_document_id

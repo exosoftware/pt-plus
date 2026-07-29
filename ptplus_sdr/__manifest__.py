@@ -7,7 +7,7 @@
     "name": "Portugal - SDR / Volta",
     "category": "Accounting/Localizations",
     "summary": "Sistema de Depósito e Reembolso (deposit return scheme)",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "license": "OPL-1",

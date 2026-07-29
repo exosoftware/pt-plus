@@ -32,6 +32,41 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.10 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Delivery Slip (multi-way) report no longer registers its printed PDF as
+  a chatter attachment
+
+5.1.9 (2026-07-13)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Delivery Slip (multi-way) report only shows up in the print menu when
+  the picking has a source billing set
+
+5.1.8 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Printed transport documents now source their loading/unloading partners from
+  the same computed fields as the AT webservice communication, so an unknown
+  destination is no longer rendered as the company address.
+
+5.1.7 (2026-07-07)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Omit CustomerAddress and AddressTo from the AT transport document
+  communication when the destination is unknown (no partner nor destination
+  warehouse on the picking), instead of sending incomplete or company-fallback
+  addresses; SAF-T exports report the unloading place as unknown accordingly.
+
 5.1.6 (2026-06-17)
 ~~~~~~~~~~~~~~~~~~
 

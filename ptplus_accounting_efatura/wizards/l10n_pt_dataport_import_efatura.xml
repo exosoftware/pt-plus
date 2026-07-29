@@ -26,6 +26,26 @@
             <button name="action_import" position="attributes">
                 <attribute name="invisible">not data</attribute>
             </button>
+
+            <group name="error_info" position="after">
+                <field name="mapping_missing_ids" invisible="1" />
+                <div class="mt8" invisible="state != 'done' or not mapping_missing_ids">
+                    <button
+                        name="action_open_mapping_missing"
+                        type="object"
+                        icon="fa-arrow-right"
+                        string="Documents Missing a Tax Mapping"
+                        class="btn-link"
+                    />
+                    <button
+                        name="action_open_tax_mapping"
+                        type="object"
+                        icon="fa-arrow-right"
+                        string="Configure Mappings"
+                        class="btn-link"
+                    />
+                </div>
+            </group>
         </field>
     </record>
 

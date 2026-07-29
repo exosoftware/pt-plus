@@ -159,7 +159,7 @@ account_tax_template_iva_6_aq_imob,False,,VAT 6%,IVA 6%,20110,IVA 6% AQ. (Imob.)
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
-account_tax_template_iva_6_aq_ob,False,,VAT 6%,IVA 6%,20120,IVA 6% AQ. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,,,,,"fp_national,fp_intra_b2c,fp_ispn",,base,invoice,IVA AL [Q04-L73],,100
+account_tax_template_iva_6_aq_ob,True,,VAT 6%,IVA 6%,20120,IVA 6% AQ. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,,,,,"fp_national,fp_intra_b2c,fp_ispn",,base,invoice,IVA AL [Q04-L73],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100

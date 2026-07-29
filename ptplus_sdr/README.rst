@@ -27,3 +27,15 @@ on demand with the *Compute SDR* button.
 
 The deposit amount is not subject to VAT; it is reported in the SAF-T file
 with exemption reason M99.
+
+Changelog
+=========
+
+19.0.1.0.1 (2026-07-10)
+-----------------------
+
+**Bugfixes**
+
+- Do not crash on install when the ``product.product_category_services``
+  category has been deleted or merged in the target database; resolve it
+  defensively (matches Odoo core's own pattern).

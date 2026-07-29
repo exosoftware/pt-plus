@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 18:33+0000\n"
-"PO-Revision-Date: 2024-04-18 18:33+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -20,10 +18,18 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid ""
 "<br/>\n"
-"                        <span class=\"text-muted fst-italic text-truncate\">\n"
-"                            Note: unless expressly stated otherwise, the origin of the trips will be the company's headquarters.\n"
+"                        <span class=\"text-muted fst-italic text-"
+"truncate\">\n"
+"                            Note: unless expressly stated otherwise, the "
+"origin of the trips will be the company's headquarters.\n"
 "                        </span>\n"
-"                        <br/><br/>"
+"                        <br/>\n"
+"                        <br/>"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.view_move_form_reimbursement
+msgid "<span class=\"o_stat_text\">Debt Transfer</span>"
 msgstr ""
 
 #. module: ptplus_expense
@@ -57,13 +63,52 @@ msgid "<strong>Validated By:</strong>"
 msgstr ""
 
 #. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.res_config_settings_view_form_pt_expense
+msgid "Account"
+msgstr ""
+
+#. module: ptplus_expense
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid "Certified honest and conform,<br/>(Date and signature).<br/><br/>"
 msgstr ""
 
 #. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_expense
 #: model:ir.model,name:ptplus_expense.model_res_partner
 msgid "Contact"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__l10n_pt_country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,website_form_label:ptplus_expense.model_res_partner
+msgid "Create a Customer"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/account_move.py:0
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_move_id
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_move__l10n_pt_reimbursement_move_id
+msgid "Debt Transfer Entry"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/account_move.py:0
+msgid "Debt Transfer of Invoice %s"
 msgstr ""
 
 #. module: ptplus_expense
@@ -77,6 +122,18 @@ msgid "Destination/Date"
 msgstr ""
 
 #. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense_post_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_product_template__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_expense
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_partner__l10n_pt_distance_to_hq
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_users__l10n_pt_distance_to_hq
 msgid "Distance to HQ"
@@ -85,8 +142,16 @@ msgstr ""
 #. module: ptplus_expense
 #. odoo-python
 #: code:addons/ptplus_expense/models/res_partner.py:0
-#, python-format
 msgid "Distance to HQ on partner '{partner}' cannot be negative."
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,help:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_partner_id
+#: model:ir.model.fields,help:ptplus_expense.field_account_move__l10n_pt_reimbursement_partner_id
+msgid ""
+"Employee (partner) that paid this vendor bill out of pocket and must be "
+"reimbursed. When the bill is posted, its payable balance is transferred from "
+"the vendor to this partner on the company's Reimbursement Account."
 msgstr ""
 
 #. module: ptplus_expense
@@ -95,8 +160,13 @@ msgid "Expense"
 msgstr ""
 
 #. module: ptplus_expense
-#: model:ir.model,name:ptplus_expense.model_hr_expense_sheet
-msgid "Expense Report"
+#: model:ir.model,name:ptplus_expense.model_hr_expense_post_wizard
+msgid "Expense Posting Wizard"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.res_config_settings_view_form_pt_expense
+msgid "Expense Reimbursement"
 msgstr ""
 
 #. module: ptplus_expense
@@ -111,8 +181,49 @@ msgid "Hr Employee"
 msgstr ""
 
 #. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_employee__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense_post_wizard__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_product_template__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,help:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_move_id
+#: model:ir.model.fields,help:ptplus_expense.field_account_move__l10n_pt_reimbursement_move_id
+msgid ""
+"Journal entry transferring the payable balance of this bill from the vendor "
+"to the Reimbursement Partner."
+msgstr ""
+
+#. module: ptplus_expense
 #: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__l10n_pt_is_travel_expense
 msgid "L10N Pt Is Travel Expense"
+msgstr ""
+
+#. module: ptplus_expense
+#: model_terms:ir.ui.view,arch_db:ptplus_expense.res_config_settings_view_form_pt_expense
+msgid ""
+"Liability account holding the debt to employees for expenses they paid out "
+"of pocket"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,help:ptplus_expense.field_res_company__l10n_pt_reimbursement_account_id
+#: model:ir.model.fields,help:ptplus_expense.field_res_config_settings__l10n_pt_reimbursement_account_id
+msgid ""
+"Liability account holding the debt to employees for expenses they paid out "
+"of pocket. When a vendor bill with a Reimbursement Partner is posted, its "
+"payable balance is transferred to this account."
 msgstr ""
 
 #. module: ptplus_expense
@@ -125,6 +236,18 @@ msgstr ""
 #. module: ptplus_expense
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid "N/A"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/wizards/hr_expense_post_wizard.py:0
+msgid "New expense entries"
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/account_move.py:0
+msgid "No miscellaneous journal found for company %s."
 msgstr ""
 
 #. module: ptplus_expense
@@ -181,6 +304,14 @@ msgid "Per Diems National (75%)"
 msgstr ""
 
 #. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/account_move.py:0
+msgid ""
+"Please set the Reimbursement Account in the accounting settings before "
+"posting a vendor bill with a Reimbursement Partner."
+msgstr ""
+
+#. module: ptplus_expense
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid "Price"
 msgstr ""
@@ -201,11 +332,36 @@ msgid "Qty"
 msgstr ""
 
 #. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_company__l10n_pt_reimbursement_account_id
+#: model:ir.model.fields,field_description:ptplus_expense.field_res_config_settings__l10n_pt_reimbursement_account_id
+msgid "Reimbursement Account"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_partner_id
+#: model:ir.model.fields,field_description:ptplus_expense.field_account_move__l10n_pt_reimbursement_partner_id
+msgid "Reimbursement Partner"
+msgstr ""
+
+#. module: ptplus_expense
 #: model:ir.model.fields,help:ptplus_expense.field_res_partner__l10n_pt_distance_to_hq
 #: model:ir.model.fields,help:ptplus_expense.field_res_users__l10n_pt_distance_to_hq
 msgid ""
 "Round trip distance in Km from HQ to partner, to make travel expense "
 "tracking easier."
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/hr_expense.py:0
+msgid "Set the Vendor on the following expenses before posting: %s"
+msgstr ""
+
+#. module: ptplus_expense
+#: model:ir.model.fields,help:ptplus_expense.field_hr_expense__l10n_pt_country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
 msgstr ""
 
 #. module: ptplus_expense
@@ -232,6 +388,11 @@ msgstr ""
 #. module: ptplus_expense
 #. odoo-python
 #: code:addons/ptplus_expense/models/product.py:0
-#, python-format
 msgid "You can't delete the '%s' product. It's required for expense logging."
+msgstr ""
+
+#. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/wizards/hr_expense_post_wizard.py:0
+msgid "You don't have the rights to create accounting entries."
 msgstr ""

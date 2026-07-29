@@ -4,10 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 10:29+0000\n"
-"PO-Revision-Date: 2025-08-12 23:25+0000\n"
+"PO-Revision-Date: 2026-07-28 17:20+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_accounting_efatura/pt/>\n"
@@ -15,8 +14,51 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid ""
+"\n"
+"%(count)s document(s) were left without a vendor bill because at least one "
+"of the taxes they report has no E-Fatura tax mapping with a product. "
+"Configure the missing mappings and run Create/Update Invoices on those "
+"documents."
+msgstr ""
+"\n"
+"%(count)s documento(s) ficaram sem fatura de fornecedor porque pelo menos um "
+"dos impostos que reportam não tem mapeamento E-Fatura com produto. Configure "
+"os mapeamentos em falta e corra Criar/Atualizar Faturas nesses documentos."
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid ""
+"%(in_c)s invoices created. %(in_u)s invoices updated.\n"
+"%(cn_c)s credit notes created. %(cn_u)s credit notes updated."
+"in_cbills_created"
+msgstr ""
+"%(in_c)s faturas criadas. %(in_u)s faturas atualizadas.\n"
+"%(cn_c)s notas de crédito criadas. %(cn_u)s notas de crédito atualizadas."
+"in_cbills_created"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
+msgid "%(rate)s%% (implied by the document totals)"
+msgstr "%(rate)s%% (implícita nos totais do documento)"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura_tax_mapping.py:0
+msgid ""
+"%s is not a valid tax rate. Write it as a number, e.g. 23, or leave it empty "
+"to match any rate."
+msgstr ""
+"%s não é uma taxa válida. Escreva-a como número, por exemplo 23, ou deixe "
+"vazio para corresponder a qualquer taxa."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__status_mismatch
@@ -31,12 +73,9 @@ msgstr ""
 "foi cancelado."
 
 #. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
 #: model:ir.model.constraint,message:ptplus_accounting_efatura.constraint_l10n_pt_account_efatura_vat_ref_uniq
-#, python-format
-msgid "A document with the same reference already exists for this vendor !"
-msgstr "Um documento com a mesma referência já existe para este fornecedor !"
+msgid "A document with the same reference already exists for this vendor!"
+msgstr "Já existe um documento com a mesma referência para este fornecedor!"
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_move_efatura_view
@@ -72,6 +111,11 @@ msgid "AT ID"
 msgstr "ID AT"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model,name:ptplus_accounting_efatura.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Modelo de Plano de Contas"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__message_needaction
 msgid "Action Needed"
 msgstr "Ação Necessária"
@@ -97,9 +141,73 @@ msgid "Activity Type Icon"
 msgstr "Ícone do Tipo de Atividade"
 
 #. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Any country"
+msgstr "Qualquer país"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Any exemption reason"
+msgstr "Qualquer motivo de isenção"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "Any product"
+msgstr "Qualquer produto"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "Any rate"
+msgstr "Qualquer taxa"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Any rate item"
+msgstr "Qualquer verba"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "Any rate type"
+msgstr "Qualquer tipo de taxa"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Any region"
+msgstr "Qualquer região"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "Any type"
+msgstr "Qualquer tipo"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Applies To"
+msgstr "Aplica-se A"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__message_attachment_count
 msgid "Attachment Count"
 msgstr "Número de Anexos"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+msgid ""
+"Automatically detect any Portuguese QR Code in Invoices "
+"and                     fill them according to E-Fatura."
+msgstr ""
+"Detetar automaticamente qualquer Código QR português nas Faturas e preenchê-"
+"las de acordo com o E-Fatura."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__region__pt-ac
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__region__pt-ac
+msgid "Azores"
+msgstr "Açores"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__amount_base
@@ -109,24 +217,12 @@ msgstr "Base Tributável"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid ""
 "Both selected invoices have an associated e-fatura record. Only one of the "
 "invoices must have an associated e-fatura record."
 msgstr ""
 "Ambas as faturas selecionadas têm um registo e-fatura associado mas apenas "
 "uma o devia ter."
-
-#. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
-msgid ""
-"Can't create/update document with reference %s: product %s is missing an "
-"expense or expense refund account."
-msgstr ""
-"Não é possível criar/atualizar o documento com a referência %s: falta ao "
-"produto %s uma conta de compras ou de crédito de compras."
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_move_efatura_view
@@ -151,6 +247,7 @@ msgstr "Empresas"
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__company_id
 msgid "Company"
 msgstr "Empresa"
@@ -166,21 +263,34 @@ msgid "Config Settings"
 msgstr "Parâmetros de Configuração"
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_move_efatura.py:0
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.dataport_import_form_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
+msgid "Configure Mappings"
+msgstr "Configurar Mapeamentos"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model,name:ptplus_accounting_efatura.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__region__pt
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__region__pt
+msgid "Continent"
+msgstr "Continente"
+
+#. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid "Could not import e-fatura file. Error: %s"
 msgstr "Não foi possível importar o ficheiro e-fatura. Erro: %s"
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid ""
 "Couldn't obtain the list of documents for the chosen period. This may be a "
 "temporary condition. Try again later. If the problem persists, please "
@@ -189,6 +299,36 @@ msgstr ""
 "Não foi possível obter a lista de documentos para o período escolhido. Esta "
 "pode ser uma condição temporária. Tente novamente mais tarde. Se o problema "
 "persistir, por favor, contacte a equipa de suporte."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__country_id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_country_code
+msgid "Country Code"
+msgstr "Código do País"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__country_id
+msgid "Country of the tax reported by the e-fatura line (paisTaxa)."
+msgstr "País do imposto reportado na linha do e-fatura (paisTaxa)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__country_id
+msgid ""
+"Country of the tax reported by the e-fatura line (paisTaxa). Leave empty to "
+"match any country."
+msgstr ""
+"País do imposto reportado na linha do e-fatura (paisTaxa). Deixe vazio para "
+"corresponder a qualquer país."
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
+msgid "Create the tax mapping for this line"
+msgstr "Criar o mapeamento de imposto desta linha"
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_move_efatura_view
@@ -210,6 +350,7 @@ msgstr "Criar/Atualizar Faturas"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__create_uid
 msgid "Created by"
@@ -219,6 +360,7 @@ msgstr "Criada por"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__create_date
 msgid "Created on"
@@ -252,39 +394,9 @@ msgid "Date To"
 msgstr "Data Final"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_exempt_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_exempt_tax_id
-msgid "Default E-Fatura Exempt Tax"
-msgstr "Taxa Isenta Predefinida para E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_interm_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_interm_tax_id
-msgid "Default E-Fatura Intermediate Tax"
-msgstr "Taxa Intermédia Predefinida para E-Fatura"
-
-#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_journal_id
 msgid "Default E-Fatura Journal"
 msgstr "Diário E-Fatura Predefinido"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_product_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_product_id
-msgid "Default E-Fatura Product"
-msgstr "Produto Padrão E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_reduced_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_reduced_tax_id
-msgid "Default E-Fatura Reduced Tax"
-msgstr "Taxa Isenta Reduzida para E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_tax_id
-msgid "Default E-Fatura Standard Tax"
-msgstr "Taxa Normal Predefinida para E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
@@ -297,16 +409,31 @@ msgid "Details of the status mismatch, if any."
 msgstr "Detalhes da não correspondência de estados, se houver."
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+msgid "Different Company VAT Detected"
+msgstr "NIF de Empresa Diferente Detetado"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__status_mismatch_disable
 msgid "Disable Status Mismatch"
 msgstr "Desabilitar Situação Inconsistente"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_journal__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nome a Apresentar"
 
@@ -318,11 +445,11 @@ msgstr "Documento"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
-msgid "Document %s dated %s is out of the allowed import date range."
+msgid ""
+"Document %(ref)s dated %(date)s is out of the allowed import date range.ref"
 msgstr ""
-"O documento %s, datado de %s, está fora do período permitido para a "
-"importação."
+"O documento %(ref)s com data de %(date)s está fora do intervalo de datas de "
+"importação permitido.ref"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__tax_auth_doc_id
@@ -332,7 +459,6 @@ msgstr "ID Documento"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
 msgid "Document contains values that don't match the information in E-Fatura."
 msgstr ""
 "O documento contém valores que não correspondem às informações do E-Fatura."
@@ -340,7 +466,6 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
 msgid ""
 "Document is marked as %(status)s in E-Fatura, but its state isn't Posted in "
 "the system.\n"
@@ -351,7 +476,6 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
 msgid ""
 "Document is marked as Cancelled in E-Fatura, but its state isn't Cancelled "
 "in the system.\n"
@@ -360,41 +484,41 @@ msgstr ""
 "sistema não é Cancelado.\n"
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__mapping_missing_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.dataport_import_form_efatura
+msgid "Documents Missing a Tax Mapping"
+msgstr "Documentos sem Mapeamento de Imposto"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__mapping_missing_ids
+msgid ""
+"Documents left without a vendor bill because at least one of the taxes they "
+"report has no E-Fatura tax mapping with a product."
+msgstr ""
+"Documentos que ficaram sem fatura de fornecedor porque pelo menos um dos "
+"impostos que reportam não tem mapeamento E-Fatura com produto."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.actions.act_window,name:ptplus_accounting_efatura.action_account_efatura_view
 #: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_account_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_payment__l10n_pt_efatura_id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__l10n_pt_efatura_id
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__dataport_log__type__e-fatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_dataport_import_efatura__statement_type__e-fatura
 #: model:ir.ui.menu,name:ptplus_accounting_efatura.menu_account_efatura_list
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tree
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
 msgid "E-Fatura"
 msgstr "E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "E-Fatura Default Values"
-msgstr "Valore Predefinidos para E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__property_l10n_pt_efatura_exempt_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__property_l10n_pt_efatura_exempt_tax_id
-msgid "E-Fatura Exempt Tax"
-msgstr "Taxa Isenta E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_dataport_import_efatura
 msgid "E-Fatura Import Wizard"
 msgstr "Assistente de Importação de E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__property_l10n_pt_efatura_interm_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__property_l10n_pt_efatura_interm_tax_id
-msgid "E-Fatura Intermediate Tax"
-msgstr "Taxa Intermédia E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_journal_id
@@ -408,41 +532,34 @@ msgstr "Linha E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__line_ids
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
 msgid "E-Fatura Lines"
 msgstr "Linhas E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_mismatch
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_mismatch
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_payment__l10n_pt_efatura_mismatch
 msgid "E-Fatura Mismatch"
 msgstr "Inconsistência E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_mismatch_vat
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_mismatch_vat
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_payment__l10n_pt_efatura_mismatch_vat
 msgid "E-Fatura Mismatch Vat"
 msgstr "Inconsistência de IVA E-Fatura"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__property_l10n_pt_efatura_product_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__property_l10n_pt_efatura_product_id
-msgid "E-Fatura Product"
-msgstr "Produto E-Fatura"
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_ref
+msgid "E-Fatura Reference"
+msgstr "Referência E-Fatura"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__property_l10n_pt_efatura_reduced_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__property_l10n_pt_efatura_reduced_tax_id
-msgid "E-Fatura Reduced Tax"
-msgstr "Taxa Reduzida E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__property_l10n_pt_efatura_tax_id
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__property_l10n_pt_efatura_tax_id
-msgid "E-Fatura Standard Tax"
-msgstr "Taxa Normal E-Fatura"
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_scan
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_scan
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_scan
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_scan
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_scan
+msgid "E-Fatura Scan"
+msgstr "Leitura E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_account_efatura_tag
@@ -450,18 +567,42 @@ msgid "E-Fatura Tag"
 msgstr "Etiqueta E-Fatura"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_total
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_total
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_payment__l10n_pt_efatura_total
-msgid "E-Fatura Total"
-msgstr "Total E-Fatura"
+#: model:ir.actions.act_window,name:ptplus_accounting_efatura.action_account_efatura_tax_mapping
+#: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_account_efatura_tax_mapping
+#: model:ir.ui.menu,name:ptplus_accounting_efatura.menu_account_efatura_tax_mapping
+msgid "E-Fatura Tax Mapping"
+msgstr "Mapeamento de Impostos E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_vat_amount
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_vat_amount
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_payment__l10n_pt_efatura_vat_amount
-msgid "E-Fatura Vat Amount"
-msgstr "Valor do IVA E-Fatura"
+msgid "E-Fatura Taxes"
+msgstr "Impostos do E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/res_partner.py:0
+msgid "E-Fatura Taxes of %s"
+msgstr "Impostos E-Fatura de %s"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_total
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_total
+msgid "E-Fatura Total"
+msgstr "Total E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid ""
+"E-fatura document %(reference)s is already linked to vendor bill %(bill)s. "
+"This bill was created separately for the expense: consider merging the two "
+"bills (Merge E-Fatura Invoices action) while this one is still draft."
+msgstr ""
+"O documento e-fatura %(reference)s já está associado à fatura de fornecedor "
+"%(bill)s. Esta fatura foi criada separadamente para a despesa: considere "
+"fundir as duas faturas (ação Fundir Faturas E-Fatura) enquanto esta ainda "
+"está em rascunho."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__status_mismatch_disable
@@ -477,6 +618,15 @@ msgstr ""
 "entre os registos do sistema e o estado do E-Fatura."
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_scan
+msgid ""
+"Enable to automatically detect any Portuguese QR Code in Invoices and "
+"Expenses and fill them according with E-Fatura."
+msgstr ""
+"Ative para detetar automaticamente qualquer Código QR português em Faturas e "
+"Despesas e preenchê-las de acordo com o E-Fatura."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__error
 msgid "Error"
 msgstr "Erro"
@@ -484,15 +634,85 @@ msgstr "Erro"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
-msgid "Error fetching documents: , "
-msgstr "Erro ao obter documentos: , "
+msgid "Error parsing response: %s"
+msgstr "Erro ao processar a resposta: %s"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "Exempt Tax"
-msgstr "Taxa Isenta"
+#: model_terms:ir.actions.act_window,help:ptplus_accounting_efatura.action_account_efatura_tax_mapping
+msgid ""
+"Every tax reported by the E-Fatura synchronization is matched\n"
+"                against this table to find the tax to apply on the vendor "
+"bill\n"
+"                lines. Criteria left empty match any value, and mappings set "
+"for\n"
+"                a specific vendor take precedence over the generic ones."
+msgstr ""
+"Cada imposto reportado pela sincronização com o E-Fatura é comparado\n"
+"                com esta tabela para determinar o imposto a aplicar nas "
+"linhas\n"
+"                da fatura de fornecedor. Os critérios deixados vazios\n"
+"                correspondem a qualquer valor, e os mapeamentos definidos "
+"para\n"
+"                um fornecedor específico têm precedência sobre os genéricos."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_vat_amount
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_vat_amount
+msgid ""
+"Every tax reported for the e-fatura document, to compare with the taxes of "
+"this bill. The AT sends VAT alone in the document total, so stamp duty is "
+"taken from the e-fatura lines."
+msgstr ""
+"Todos os impostos reportados no documento do e-fatura, para comparar com os "
+"impostos desta fatura. A AT envia só o IVA no total do documento, por isso o "
+"imposto do selo é obtido das linhas do e-fatura."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__tax_amount
+msgid ""
+"Every tax reported for this document, not only VAT: the AT sends VAT alone "
+"in valorTotalIva, while stamp duty is only visible on the lines."
+msgstr ""
+"Todos os impostos reportados neste documento, não apenas o IVA: a AT envia "
+"só o IVA no valorTotalIva, enquanto o imposto do selo só é visível nas "
+"linhas."
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "Every vendor"
+msgstr "Todos os fornecedores"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__ise
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__ise
+msgid "Exempt"
+msgstr "Isento"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__exemption_reason
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__exemption_reason
+msgid "Exemption Reason"
+msgstr "Motivo de Isenção"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__exemption_reason
+msgid "Exemption reason reported by the e-fatura line (motivoIsencao)."
+msgstr "Motivo de isenção reportado na linha do e-fatura (motivoIsencao)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__exemption_reason
+msgid ""
+"Exemption reason reported by the e-fatura line (motivoIsencao). Leave empty "
+"to match any exemption reason."
+msgstr ""
+"Motivo de isenção reportado na linha do e-fatura (motivoIsencao). Deixe "
+"vazio para corresponder a qualquer motivo de isenção."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model,name:ptplus_accounting_efatura.model_hr_expense
+msgid "Expense"
+msgstr "Despesa"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__data
@@ -503,15 +723,6 @@ msgstr "Ficheiro"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__filename
 msgid "Filename"
 msgstr "Nome do ficheiro"
-
-#. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
-msgid ""
-"Follow this database to automatically track the events associated to users "
-"of this database."
-msgstr ""
-"Siga esta base de dados para rastrear automaticamente os eventos associados "
-"aos seus utilizadores."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__message_follower_ids
@@ -534,9 +745,29 @@ msgid "Format"
 msgstr "Formato"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
-msgid "Group By"
-msgstr "Agrupar Por"
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__nor
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__nor
+msgid "General"
+msgstr "Normal"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
+msgid "Generic"
+msgstr "Genéricos"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__tax_genre
+msgid "Genre of the tax reported by the e-fatura line (tipoTaxaIva)."
+msgstr "Género do imposto reportado na linha do e-fatura (tipoTaxaIva)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_genre
+msgid ""
+"Genre of the tax reported by the e-fatura line (tipoTaxaIva). Leave empty to "
+"match any genre."
+msgstr ""
+"Género do imposto reportado na linha do e-fatura (tipoTaxaIva). Deixe vazio "
+"para corresponder a qualquer género."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__has_message
@@ -544,11 +775,20 @@ msgid "Has Message"
 msgstr "Tem Mensagem"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_chart_template__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_journal__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__id
 msgid "ID"
 msgstr "ID"
 
@@ -576,7 +816,6 @@ msgstr "Se marcada, algumas mensagens têm um erro de entrega."
 #. module: ptplus_accounting_efatura
 #. odoo-javascript
 #: code:addons/ptplus_accounting_efatura/static/src/xml/efatura_list_button.xml:0
-#, python-format
 msgid "Import"
 msgstr "Importar"
 
@@ -584,6 +823,11 @@ msgstr "Importar"
 #: model:ir.actions.act_window,name:ptplus_accounting_efatura.dataport_import_efatura_action
 msgid "Import E-Fatura"
 msgstr "Importar E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__info
+msgid "Info"
+msgstr "Info"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
@@ -600,24 +844,16 @@ msgid "Insert selected records into vendor invoices"
 msgstr "Inserir os registos selecionados em faturas de fornecedores"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "Interm. Tax"
-msgstr "Taxa Interm."
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__int
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__int
+msgid "Intermediate"
+msgstr "Intermédia"
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid "Invalid document status %s"
 msgstr "A situação do documento %s é inválida"
-
-#. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
-msgid "Invalid tax percentage %s"
-msgstr "Percentagem de imposto inválida %s"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__message_is_follower
@@ -625,6 +861,7 @@ msgid "Is Follower"
 msgstr "É Seguidor"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model,name:ptplus_accounting_efatura.model_account_journal
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__journal_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__journal_id
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
@@ -640,6 +877,7 @@ msgstr "Movimento de Diário"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__write_uid
 msgid "Last Updated by"
@@ -649,6 +887,7 @@ msgstr "Última Modificação por"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__write_date
 msgid "Last Updated on"
@@ -666,14 +905,231 @@ msgstr ""
 "usando a opção Criar/Atualizar Faturas no botão Ação"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
-msgid "Lines"
-msgstr "Linhas"
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__partner_ids
+msgid ""
+"Leave empty to apply this mapping to every vendor. A mapping set for "
+"specific vendors only takes precedence over a generic one when it sits above "
+"it in the table, so it starts at the top."
+msgstr ""
+"Deixe vazio para aplicar este mapeamento a todos os fornecedores. Um "
+"mapeamento definido para fornecedores específicos só tem precedência "
+"sobre um genérico quando está acima dele na tabela, por isso começa no "
+"topo."
+
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
 msgid "Log On Close"
 msgstr "Registar ao Fechar"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.hr_expense_view_form_efatura_scan
+msgid ""
+"Look for an e-fatura QR code on the expense receipt and fill the expense "
+"fields from its data"
+msgstr ""
+"Procurar um código QR e-fatura no recibo da despesa e preencher os campos da "
+"despesa com os seus dados"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.view_move_form_efatura
+msgid ""
+"Look for and e-fatura QR code on the document attachment and fill the "
+"invoice fields from the data it"
+msgstr ""
+"Procurar um código QR e-fatura no anexo do documento e preencher os campos "
+"da fatura com os seus dados"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m01
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m01
+msgid "M01 - Artigo 16.º n.º 6 do CIVA (ou similar)"
+msgstr "M01 - Artigo 16.º n.º 6 do CIVA (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m02
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m02
+msgid "M02 - Artigo 6.º do Decreto‐Lei n.º 198/90, de 19 de Junho"
+msgstr "M02 - Artigo 6.º do Decreto‐Lei n.º 198/90, de 19 de Junho"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m03
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m03
+msgid "M03 - Exigibilidade de caixa"
+msgstr "M03 - Exigibilidade de caixa"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m04
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m04
+msgid "M04 - Isento Artigo 13.º do CIVA (ou similar)"
+msgstr "M04 - Isento Artigo 13.º do CIVA (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m05
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m05
+msgid "M05 - Isento Artigo 14.º do CIVA (ou similar)"
+msgstr "M05 - Isento Artigo 14.º do CIVA (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m06
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m06
+msgid "M06 - Isento Artigo 15.º do CIVA (ou similar)"
+msgstr "M06 - Isento Artigo 15.º do CIVA (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m07
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m07
+msgid "M07 - Isento Artigo 9.º do CIVA (ou similar)"
+msgstr "M07 - Isento Artigo 9.º do CIVA (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m08
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m08
+msgid "M08 - IVA - Autoliquidação"
+msgstr "M08 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m09
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m09
+msgid "M09 - IVA ‐ Não confere direito a dedução"
+msgstr "M09 - IVA ‐ Não confere direito a dedução"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m10
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m10
+msgid "M10 - IVA - Regime de isenção"
+msgstr "M10 - IVA - Regime de isenção"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m11
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m11
+msgid "M11 - Regime particular do tabaco"
+msgstr "M11 - Regime particular do tabaco"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m12
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m12
+msgid "M12 - Regime da margem de lucro - Agências de Viagens"
+msgstr "M12 - Regime da margem de lucro - Agências de Viagens"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m13
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m13
+msgid "M13 - Regime da margem de lucro - Bens em segunda mão"
+msgstr "M13 - Regime da margem de lucro - Bens em segunda mão"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m14
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m14
+msgid "M14 - Regime da margem de lucro - Objetos de arte"
+msgstr "M14 - Regime da margem de lucro - Objetos de arte"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m15
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m15
+msgid "M15 - Regime da margem de lucro - Objetos de coleção e antiguidades"
+msgstr "M15 - Regime da margem de lucro - Objetos de coleção e antiguidades"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m16
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m16
+msgid "M16 - Isento Artigo 14.º do RITI (ou similar)"
+msgstr "M16 - Isento Artigo 14.º do RITI (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m19
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m19
+msgid "M19 - Outras isenções"
+msgstr "M19 - Outras isenções"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m20
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m20
+msgid "M20 - IVA - Regime forfetário"
+msgstr "M20 - IVA - Regime forfetário"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m21
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m21
+msgid "M21 - IVA – não confere direito à dedução (ou expressão similar)"
+msgstr "M21 - IVA – não confere direito à dedução (ou expressão similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m25
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m25
+msgid "M25 - Mercadorias à consignação"
+msgstr "M25 - Mercadorias à consignação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m26
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m26
+msgid "M26 - Isenção de IVA com direito à dedução no cabaz alimentar"
+msgstr "M26 - Isenção de IVA com direito à dedução no cabaz alimentar"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m30
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m30
+msgid "M30 - IVA - Autoliquidação"
+msgstr "M30 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m31
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m31
+msgid "M31 - IVA - Autoliquidação"
+msgstr "M31 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m32
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m32
+msgid "M32 - IVA - Autoliquidação"
+msgstr "M32 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m33
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m33
+msgid "M33 - IVA - Autoliquidação"
+msgstr "M33 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m40
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m40
+msgid "M40 - IVA - Autoliquidação"
+msgstr "M40 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m41
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m41
+msgid "M41 - IVA - Autoliquidação"
+msgstr "M41 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m42
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m42
+msgid "M42 - IVA - Autoliquidação"
+msgstr "M42 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m43
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m43
+msgid "M43 - IVA - Autoliquidação"
+msgstr "M43 - IVA - Autoliquidação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__exemption_reason__m99
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__exemption_reason__m99
+msgid "M99 - Não sujeito; não tributado (ou similar)"
+msgstr "M99 - Não sujeito; não tributado (ou similar)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__region__pt-ma
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__region__pt-ma
+msgid "Madeira"
+msgstr "Madeira"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.actions.act_window,help:ptplus_accounting_efatura.action_account_efatura_tax_mapping
+msgid "Map an E-Fatura tax"
+msgstr "Mapear um imposto E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.actions.server,name:ptplus_accounting_efatura.action_merge_efatura_invoices
@@ -683,7 +1139,6 @@ msgstr "Fundir Faturas E-Fatura"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid "Merged E-Fatura Invoice"
 msgstr "Fatura E-Fatura Fundida"
 
@@ -698,9 +1153,33 @@ msgid "Messages"
 msgstr "Mensagens"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__mapping_missing
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__mapping_missing
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
+msgid "Missing Tax Mapping"
+msgstr "Mapeamento de Imposto em Falta"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__mapping_missing_text
+msgid "Missing Tax Mapping Details"
+msgstr "Detalhes do Mapeamento de Imposto em Falta"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr "Prazo Limite da Minha Atividade"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid "Network error: %s"
+msgstr "Erro de rede: %s"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
+msgid "New E-Fatura Tax Mapping"
+msgstr "Novo Mapeamento de Impostos E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_date_deadline
@@ -718,9 +1197,85 @@ msgid "Next Activity Type"
 msgstr "Tipo da Atividade Seguinte"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__mapping_missing
+msgid ""
+"No E-Fatura tax mapping matches at least one of the taxes reported for this "
+"document, so no vendor bill can be created for it without leaving amounts "
+"out."
+msgstr ""
+"Não há mapeamento de impostos E-Fatura para pelo menos um dos impostos "
+"reportados neste documento, por isso não é possível criar-lhe uma fatura de "
+"fornecedor sem deixar montantes de fora."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__mapping_missing
+msgid ""
+"No E-Fatura tax mapping with a product matches the tax reported on this "
+"line, so no vendor bill line can be created for it."
+msgstr ""
+"Não há mapeamento de impostos E-Fatura com produto para o imposto reportado "
+"nesta linha, por isso não é possível criar-lhe uma linha de fatura de "
+"fornecedor."
+
+#. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid "No Portuguese QR code was detected in the attachment."
+msgstr "Não foi detetado nenhum código QR português no anexo."
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_list
+msgid "No tax"
+msgstr "Sem imposto"
+
+#. module: ptplus_accounting_efatura
+#. odoo-javascript
+#: code:addons/ptplus_accounting_efatura/static/src/js/efatura_mapping_missing_field.js:0
+msgid "No tax mapping for this tax: use the + on the left to create it"
+msgstr "Sem mapeamento para este imposto: use o + à esquerda para o criar"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
+msgid ""
+"No vendor bill created because no tax mapping for the following taxes:\n"
+" %(taxes)s\n"
+" Create it with the + button on the flagged lines below."
+msgstr ""
+"Fatura de fornecedor não criada porque não há mapeamento para os seguintes "
+"impostos:\n"
+" %(taxes)s\n"
+" Crie-o com o botão + nas linhas sinalizadas abaixo."
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_move_efatura.py:0
+msgid ""
+"No vendor bill was created. The documents below report taxes with no E-"
+"Fatura tax mapping, and a bill built from the rest would not add up to the E-"
+"Fatura total:\n"
+"\n"
+"%(documents)s"
+msgstr ""
+"Não foi criada nenhuma fatura de fornecedor. Os documentos abaixo reportam "
+"impostos sem mapeamento E-Fatura, e uma fatura feita a partir do resto não "
+"somaria o total do E-Fatura:\n"
+"\n"
+"%(documents)s"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__tax_genre__ns
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__ns
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__tax_genre__ns
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__ns
+msgid "Non Applicable"
+msgstr "Não sujeito"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
 msgid ""
 "None of the selected invoices have an associated e-fatura record. One of the "
 "invoices must have an associated e-fatura record."
@@ -758,9 +1313,25 @@ msgstr ""
 "carregá-lo acima"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__sequence
+msgid ""
+"Of the mappings that match an e-fatura line, the first one of the table "
+"applies: drag a mapping up to give it precedence."
+msgstr ""
+"Dos mapeamentos que correspondem a uma linha do e-fatura, aplica-se o "
+"primeiro da tabela: arraste um mapeamento para cima para lhe dar "
+"precedência."
+
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__out
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__out
+msgid "Other"
+msgstr "Outro"
+
+#. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid "Payments associated with the invoice were not handled."
 msgstr "Os pagamentos associados à fatura não foram processados."
 
@@ -777,7 +1348,6 @@ msgstr "Período"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid ""
 "Please set your username and password on the Tax Authority section of you "
 "user profile preferences. These credentials must have the proper permissions "
@@ -788,10 +1358,24 @@ msgstr ""
 "devem ter as devidas permissões no portal da AT"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "Product"
-msgstr "Produto"
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid "Possible duplicate vendor bill"
+msgstr "Possível fatura de fornecedor duplicada"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__product_id
+msgid ""
+"Product of the vendor bill lines created from the matching e-fatura lines. "
+"Leave empty to create them without a product."
+msgstr ""
+"Produto das linhas da fatura de fornecedor criadas a partir das linhas do e-"
+"fatura correspondentes. Deixe vazio para as criar sem produto."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__product_id
+msgid "Product to Apply"
+msgstr "Produto a Aplicar"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__journal_id
@@ -799,20 +1383,103 @@ msgid "Purchase journal on which the new invoices will be created"
 msgstr "Diário de compras no qual as novas faturas serão criadas"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
-msgid "Ratings"
-msgstr "Avaliações"
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid "QR Code Not Detected"
+msgstr "Código QR Não Detetado"
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "Red. Tax"
-msgstr "Taxa Reduz."
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid "QR Code Scanned"
+msgstr "Código QR Lido"
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+msgid "QR code scanned successfully."
+msgstr "Código QR lido com sucesso."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__vat_tax_type
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__vat_tax_type
+msgid "Rate"
+msgstr "Taxa"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_rate
+msgid "Rate (technical)"
+msgstr "Taxa (técnico)"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__tax_verba
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_verba
+msgid "Rate Item"
+msgstr "Verba"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__tax_verba
+msgid "Rate item reported by the e-fatura line (taxaIvaVerba)."
+msgstr "Verba reportada na linha do e-fatura (taxaIvaVerba)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_verba
+msgid ""
+"Rate item reported by the e-fatura line (taxaIvaVerba): the rate type for "
+"VAT lines or the Stamp Duty item for stamp duty lines. Leave empty to match "
+"any item."
+msgstr ""
+"Verba reportada na linha do e-fatura (taxaIvaVerba): o tipo de taxa nas "
+"linhas de IVA ou a verba do Imposto de Selo nas linhas de imposto de selo. "
+"Deixe vazio para corresponder a qualquer verba."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__vat_tax_type
+msgid "Rate type reported by the e-fatura line (taxa)."
+msgstr "Tipo de taxa reportado na linha do e-fatura (taxa)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__vat_tax_type
+msgid ""
+"Rate type reported by the e-fatura line (taxa). Leave empty to match any "
+"rate type."
+msgstr ""
+"Tipo de taxa reportado na linha do e-fatura (taxa). Deixe vazio para "
+"corresponder a qualquer tipo de taxa."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__red
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__red
+msgid "Reduced"
+msgstr "Reduzida"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__reference
 msgid "Reference"
 msgstr "Referência"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__region
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__region
+msgid "Region"
+msgstr "Região"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__region
+msgid "Region of the tax reported by the e-fatura line (regiaoTaxa)."
+msgstr "Região do imposto reportada na linha do e-fatura (regiaoTaxa)."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__region
+msgid ""
+"Region of the tax reported by the e-fatura line (regiaoTaxa). Leave empty to "
+"match any region."
+msgstr ""
+"Região do imposto reportada na linha do e-fatura (regiaoTaxa). Deixe vazio "
+"para corresponder a qualquer região."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura__status__register
@@ -830,9 +1497,25 @@ msgid "SMS Delivery error"
 msgstr "Erro de entrega de SMS"
 
 #. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.hr_expense_view_form_efatura_scan
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.view_move_form_efatura
+msgid "Scan QR"
+msgstr "Ler QR"
+
+#. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
 msgid "Search E-Fatura"
 msgstr "Pesquisar E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
+msgid "Search E-Fatura Tax Mapping"
+msgstr "Pesquisar Mapeamento de Impostos E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__sequence
+msgid "Sequence"
+msgstr "Sequência"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__period
@@ -848,10 +1531,10 @@ msgstr ""
 "documento mais antigo e mais recente do arquivo."
 
 #. module: ptplus_accounting_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
-msgid "Stand. Tax"
-msgstr "Taxa Normal"
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__tax_genre__is
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__tax_genre__is
+msgid "Stamp Duty"
+msgstr "Imposto de Selo"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__state
@@ -934,6 +1617,76 @@ msgid "Tax Percentage"
 msgstr "Percentagem de Imposto"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__tax_genre
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_genre
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
+msgid "Tax Type"
+msgstr "Tipo de Imposto"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_id
+msgid ""
+"Tax of the vendor bill lines created from the matching e-fatura lines. Leave "
+"empty to create them without a tax: the line then takes the whole amount "
+"reported by the AT, taxes included."
+msgstr ""
+"Imposto das linhas da fatura de fornecedor criadas a partir das linhas do e-"
+"fatura correspondentes. Deixe vazio para as criar sem imposto: a linha fica "
+"então com o montante total reportado pela AT, impostos incluídos."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_percentage
+msgid ""
+"Tax rate reported by the e-fatura line (taxaIva), e.g. 23. Leave empty to "
+"match any rate."
+msgstr ""
+"Taxa reportada na linha do e-fatura (taxaIva), por exemplo 23. Deixe vazio "
+"para corresponder a qualquer taxa."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_id
+msgid "Tax to Apply"
+msgstr "Imposto a Aplicar"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__tax_amount
+msgid "Taxes"
+msgstr "Impostos"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_id
+msgid "Technical field: e-fatura record matching this expense."
+msgstr "Campo técnico: registo e-fatura correspondente a esta despesa."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__tax_rate
+msgid ""
+"Technical field: the tax rate in a single format, so that 23, 23.0 and 23,00 "
+"all match a rate of 23% reported by the AT."
+msgstr ""
+"Campo técnico: a taxa num único formato, para que 23, 23.0 e 23,00 "
+"correspondam todos a uma taxa de 23% reportada pela AT."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_ref
+msgid ""
+"Technical field: vendor document reference read from the QR code (field G), "
+"used to match the expense with its e-fatura record and vendor bill."
+msgstr ""
+"Campo técnico: referência do documento do fornecedor lida do código QR "
+"(campo G), usada para associar a despesa ao seu registo e-fatura e à fatura "
+"de fornecedor."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_hr_expense__l10n_pt_country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"O código ISO do país em dois caracteres. \n"
+"Pode usar este campo para pesquisa rápida."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_journal_id
 msgid ""
 "The default purchase accounting journal where e-fatura invoices will be "
@@ -950,43 +1703,44 @@ msgstr "O registo e-fatura para esta linha de movimento."
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid "The invoices have been successfully merged."
 msgstr "As faturas foram fundidas com sucesso."
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
-msgid ""
-"The total amount %s of document %s must be equal to the total amount %s of "
-"the related E-Fatura line."
-msgstr ""
-"O valor total %s do documento %s deve ser igual ao valor total %s da "
-"respectiva linha do E-Fatura."
+msgid "The scanned VAT {scanned_vat} does not match your company VAT."
+msgstr "O NIF lido {scanned_vat} não corresponde ao NIF da sua empresa."
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid ""
-"The untaxed amount %s of document %s must be equal to the untaxed amount %s "
-"of the related E-Fatura line."
+"The total amount %(tot_amount)s of document %(doc_number)s must be equal to "
+"the total amount %(efat_tot_amount)s of the related E-Fatura line."
 msgstr ""
-"O valor sem IVA %s do documento %s deve ser igual ao valor sem IVA %s da "
-"linha do E-Fatura relacionada."
+"O valor total %(tot_amount)s do documento %(doc_number)s tem de ser igual ao "
+"valor total %(efat_tot_amount)s da linha E-Fatura relacionada."
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+msgid ""
+"The untaxed amount %(amount_unt)s of document %(doc_number)s must be equal "
+"to the untaxed amount %(line_amount)s of the related E-Fatura line."
+msgstr ""
+"O valor sem impostos %(amount_unt)s do documento %(doc_number)s tem de ser "
+"igual ao valor sem impostos %(line_amount)s da linha E-Fatura relacionada."
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid "Timeout"
 msgstr "Tempo esgotado"
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid "Too many redirects"
 msgstr "Demasiados redireccionamentos"
 
@@ -1018,6 +1772,12 @@ msgid "Type of the exception activity on record."
 msgstr "Tipo de atividade de exceção no registo."
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid "Unexpected error: %s"
+msgstr "Erro inesperado: %s"
+
+#. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
 msgid "Unlinked"
 msgstr "Sem ligação"
@@ -1028,9 +1788,11 @@ msgid "Utility field to express amount currency"
 msgstr "Campo utilitário que exprime a moeda do montante"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__tax_genre__iva
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__tax_genre__iva
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
 msgid "VAT"
-msgstr "NIF"
+msgstr "IVA"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__vat
@@ -1040,9 +1802,13 @@ msgstr "NIF"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
-#, python-format
 msgid "VAT number %s doesn't have a minimum of 9 digits"
 msgstr "O NIF %s não tem um mínimo de 9 algarismos"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
+msgid "Values To Apply"
+msgstr "Valores A Aplicar"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__vat_amount
@@ -1052,6 +1818,7 @@ msgstr "Valor do IVA"
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__vendor_id
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
 msgid "Vendor"
 msgstr "Fornecedor"
 
@@ -1064,6 +1831,21 @@ msgstr "Fatura de Fornecedor"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__vendor_name
 msgid "Vendor Name on E-Fatura"
 msgstr "Nome do Fornecedor no E-Fatura"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
+msgid "Vendor Specific"
+msgstr "Específicos do Fornecedor"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__partner_ids
+msgid "Vendors"
+msgstr "Fornecedores"
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.view_move_form_efatura
+msgid "View"
+msgstr "Ver"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__warnings
@@ -1083,14 +1865,12 @@ msgstr "Histórico de comunicação do Website"
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid "You can only merge two vender invoices at the same time."
 msgstr "Só pode fundir duas faturas de fornecedor de cada vez."
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#, python-format
 msgid ""
 "You can't validate document %s because its state on the related E-Fatura "
 "info is Cancelled. Youshould cancel the document instead."
@@ -1101,54 +1881,18 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
-#, python-format
 msgid "Your session has expired. Please log in again later to continue."
 msgstr ""
 "A sua sessão expirou. Por favor, faça login novamente mais tarde para "
 "continuar."
 
-#, python-format
-#~ msgid ""
-#~ "%s invoices created. %s invoices updated.\n"
-#~ "%s credit notes created. %s credit notes updated."
-#~ msgstr ""
-#~ "%s faturas criadas. %s faturas atualizadas.\n"
-#~ "%s notas de crédito criadas. %s notas de crédito atualizadas."
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
+msgid "e-Fatura Lines"
+msgstr "Linhas e-Fatura"
 
-#~ msgid ""
-#~ "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are "
-#~ "company-specific.\" aria-label=\"Values set here are company-specific.\" "
-#~ "groups=\"base.group_multi_company\" role=\"img\"/>"
-#~ msgstr ""
-#~ "<span class=\"fa fa-lg fa-building-o\" title=\"Os valores atribuídos aqui "
-#~ "são específicos para a empresa.\" aria-label=\"Os valores atribuídos aqui "
-#~ "são específicos para a empresa.\" groups=\"base.group_multi_company\" "
-#~ "role=\"img\"/>"
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última Modificação em"
-
-#~ msgid "S. M."
-#~ msgstr "S. I."
-
-#~ msgid ""
-#~ "Select this if you wish to import or synchronize e-fatura data and match "
-#~ "it with you recorded bills."
-#~ msgstr ""
-#~ "Selecione esta caixa se desejar importar ou sincronizar os dados do e-"
-#~ "fatura e fazê-los corresponder às faturas registadas."
-
-#~ msgid "Use E-Fatura"
-#~ msgstr "Utilizar E-Fatura"
-
-#~ msgid "Default values for e-fatura invoices"
-#~ msgstr "Valores padrão para faturas de e-fatura"
-
-#~ msgid "Default Product"
-#~ msgstr "Produto Padrão"
-
-#~ msgid "Default Tax"
-#~ msgstr "Imposto Padrão"
-
-#~ msgid "Tax"
-#~ msgstr "Imposto"
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid "id"
+msgstr ""
