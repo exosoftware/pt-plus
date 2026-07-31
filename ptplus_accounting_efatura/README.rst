@@ -70,6 +70,18 @@ Available soon.
 Changelog
 =========
 
+5.11.1 (2026-07-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Scanning the QR code of a document issued to another company no longer fills
+  in the vendor bill: the vendor, the reference and the E-Fatura record are left
+  untouched, only the warning is shown.
+- Scanning the receipt of an expense issued to another VAT (e.g. the employee's)
+  still fills in the expense, but no longer links it to an E-Fatura document: the
+  reimbursement vendor bill is created without an E-Fatura record.
+
 5.11.0 (2026-07-28)
 ~~~~~~~~~~~~~~~~~~~
 
