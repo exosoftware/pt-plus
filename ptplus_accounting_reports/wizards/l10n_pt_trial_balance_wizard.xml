@@ -6,13 +6,27 @@
         <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
         <field name="type">form</field>
         <field name="arch" type="xml">
+            <!-- Only the closing date drives the reported balances -->
+            <field name="date_from" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="date_to" position="attributes">
+                <attribute name="string">As of</attribute>
+            </field>
+            <group name="main_left" position="inside">
+                <field
+                    name="include_draft"
+                    widget="boolean_toggle"
+                    readonly="state != 'select'"
+                />
+            </group>
             <notebook name="main_block" position="inside">
-                <page name="Statement Lines">
+                <page name="Statement Lines" string="Accounts">
                     <field name="line_ids" nolabel="1" colspan="2">
-                        <tree editable="bottom">
-                            <field name="l10n_pt_trial_code" />
-                            <field name="l10n_pt_trial_name" />
-                            <!--                            <field name="amount" sum="Total" />-->
+                        <tree create="0" delete="0">
+                            <field name="code" string="Code" />
+                            <field name="name" string="Account" />
+                            <field name="amount" string="Balance" sum="Total" />
                             <button
                                 name="action_view_details"
                                 type="object"
@@ -46,7 +60,6 @@
         id="l10n_pt_trial_balance_wizard_menu"
         parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
         sequence="10"
-        groups="ptplus.group_experimental_features_pt"
         action="l10n_pt_trial_balance_wizard_action"
     />
 </odoo>

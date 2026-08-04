@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Exo PT+\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 11:13+0000\n"
-"PO-Revision-Date: 2024-11-08 11:13+0000\n"
+"POT-Creation-Date: 2026-08-03 10:33+0000\n"
+"PO-Revision-Date: 2026-08-03 10:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -60,6 +60,15 @@ msgid "Cannot confirm %s. An order fiscal document type is required."
 msgstr ""
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid ""
+"Cannot set this quantity for '%(product)s': the total quantity booked across"
+" Proforma Invoices would exceed the quantity still available on the original"
+" order (%(remaining)s)."
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model,name:ptplus_sale.model_res_company
 msgid "Companies"
 msgstr ""
@@ -86,8 +95,24 @@ msgid "Consignment Invoice"
 msgstr ""
 
 #. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Create PRÓ-FORMA invoice"
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash
 msgid "Digital signature"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_advance_payment_inv__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__display_name
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: ptplus_sale
@@ -105,6 +130,11 @@ msgstr ""
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__system_entry_date
 msgid "Document Validation Timestamp"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Duplicate this document as a Proforma Invoice"
 msgstr ""
 
 #. module: ptplus_sale
@@ -152,6 +182,11 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_count
+msgid "L10N Pt Proforma Count"
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_update
 msgid "Last State Change"
 msgstr ""
@@ -178,6 +213,15 @@ msgstr ""
 #: code:addons/ptplus_sale/models/sale_order.py:0
 #, python-format
 msgid "New"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_qty_sent
+msgid ""
+"On an original order line: the cumulative quantity currently booked across "
+"all its Proforma Invoices. On a Proforma Invoice line: the quantity of this "
+"line already booked against the original line. Kept in sync as Proforma "
+"Invoice lines are created or their quantity is changed."
 msgstr ""
 
 #. module: ptplus_sale
@@ -239,6 +283,29 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__pf
 #, python-format
 msgid "Proforma Invoice"
+msgstr ""
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Proforma Invoices"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_origin_id
+msgid "Proforma Origin"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
+msgid "Proforma Origin Line"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__l10n_pt_proforma_qty_sent
+msgid "Proforma Qty Sent"
 msgstr ""
 
 #. module: ptplus_sale
@@ -305,6 +372,16 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Send PRO-FORMA Invoice"
+msgstr ""
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Send this document to the customer as a Proforma Invoice"
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__source_billing
 msgid "Source Method"
 msgstr ""
@@ -347,6 +424,16 @@ msgid "The order created from this quotation"
 msgstr ""
 
 #. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_proforma_origin_id
+msgid "The order this Proforma Invoice was created from"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
+msgid "The original order line this Proforma Invoice line was copied from"
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_quotation_id
 msgid "The reference of the quotation that originated the order"
 msgstr ""
@@ -360,6 +447,12 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid "There is no fiscal document type with the type PRÓ-FORMA ('PF')."
+msgstr ""
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
 msgid ""
 "These tags will be printed on every multi-way document report copy. The "
@@ -368,6 +461,7 @@ msgstr ""
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__type
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_type_code
 msgid "Type"
 msgstr ""
 

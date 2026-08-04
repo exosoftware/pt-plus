@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 11:13+0000\n"
-"PO-Revision-Date: 2025-02-20 22:24+0000\n"
+"POT-Creation-Date: 2026-08-03 10:33+0000\n"
+"PO-Revision-Date: 2026-08-03 10:41+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-17-0/ptplus_sale/pt/>\n"
@@ -67,6 +67,18 @@ msgstr ""
 "encomendas."
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid ""
+"Cannot set this quantity for '%(product)s': the total quantity booked across "
+"Proforma Invoices would exceed the quantity still available on the original "
+"order (%(remaining)s)."
+msgstr ""
+"Não é possível definir esta quantidade para '%(product)s': a quantidade "
+"total reservada nas Faturas Pró-forma excederia a quantidade ainda "
+"disponível na encomenda original (%(remaining)s)."
+
+#. module: ptplus_sale
 #: model:ir.model,name:ptplus_sale.model_res_company
 msgid "Companies"
 msgstr "Empresas"
@@ -91,6 +103,11 @@ msgstr "Crédito de Consignação"
 #, python-format
 msgid "Consignment Invoice"
 msgstr "Fatura de Consignação"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Create PRÓ-FORMA invoice"
+msgstr "Criar fatura PRÓ-FORMA"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash
@@ -118,6 +135,11 @@ msgstr "Data/Hora da Validação do Documento"
 #: model:ir.model,name:ptplus_sale.model_dataport_export_saft
 msgid "Export SAF-T PT Dataport"
 msgstr "Dataport de Exportação do SAF-T PT"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Extracommunity"
+msgstr "Extra-comunitária"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_status
@@ -161,6 +183,11 @@ msgstr ""
 "%s"
 
 #. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_count
+msgid "L10N Pt Proforma Count"
+msgstr ""
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__last_state_update
 msgid "Last State Change"
 msgstr "Última Mudança de Estado"
@@ -189,6 +216,20 @@ msgstr "Relatório Multi-via"
 #, python-format
 msgid "New"
 msgstr "Novo"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_qty_sent
+msgid ""
+"On an original order line: the cumulative quantity currently booked across "
+"all its Proforma Invoices. On a Proforma Invoice line: the quantity of this "
+"line already booked against the original line. Kept in sync as Proforma "
+"Invoice lines are created or their quantity is changed."
+msgstr ""
+"Numa linha da encomenda original: a quantidade acumulada atualmente "
+"reservada em todas as suas Faturas Pró-forma. Numa linha de Fatura "
+"Pró-forma: a quantidade desta linha já reservada na linha original. "
+"Mantido sincronizado à medida que as linhas de Fatura Pró-forma são "
+"criadas ou a sua quantidade é alterada."
 
 #. module: ptplus_sale
 #. odoo-python
@@ -252,6 +293,29 @@ msgstr "Versão da chave privada"
 #, python-format
 msgid "Proforma Invoice"
 msgstr "Fatura pró-forma"
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Proforma Invoices"
+msgstr "Faturas Pró-forma"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_origin_id
+msgid "Proforma Origin"
+msgstr "Origem da Pró-forma"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
+msgid "Proforma Origin Line"
+msgstr "Linha de Origem da Pró-forma"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__l10n_pt_proforma_qty_sent
+msgid "Proforma Qty Sent"
+msgstr "Qtd. Pró-forma Enviada"
 
 #. module: ptplus_sale
 #. odoo-python
@@ -319,6 +383,16 @@ msgstr ""
 "(incluindo os zeros à esquerda)"
 
 #. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Send PRO-FORMA Invoice"
+msgstr "Enviar Fatura PRÓ-FORMA"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Send this document to the customer as a Proforma Invoice"
+msgstr "Enviar este documento ao cliente como Fatura Pró-forma"
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__source_billing
 msgid "Source Method"
 msgstr "Método de Origem"
@@ -373,6 +447,18 @@ msgid "The order created from this quotation"
 msgstr "A encomenda criada a partir deste orçamento"
 
 #. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_proforma_origin_id
+msgid "The order this Proforma Invoice was created from"
+msgstr "A encomenda a partir da qual esta Fatura Pró-forma foi criada"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
+msgid "The original order line this Proforma Invoice line was copied from"
+msgstr ""
+"A linha da encomenda original a partir da qual esta linha de Fatura "
+"Pró-forma foi copiada"
+
+#. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_quotation_id
 msgid "The reference of the quotation that originated the order"
 msgstr "A referência do orçamento que originou a encomenda"
@@ -388,6 +474,12 @@ msgstr ""
 "é um documento que será incluído no ficheiro SAF-T da empresa"
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid "There is no fiscal document type with the type PRÓ-FORMA ('PF')."
+msgstr "Não existe nenhuma série documental com o tipo PRÓ-FORMA ('PF')."
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
 msgid ""
 "These tags will be printed on every multi-way document report copy. The "
@@ -398,6 +490,7 @@ msgstr ""
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__type
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__fiscal_document_type_code
 msgid "Type"
 msgstr "Tipo"
 
@@ -409,6 +502,7 @@ msgstr "Conferência Mercadorias/Serviços"
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/res_company.py:0
+#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_fo
 #: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fo
 #, python-format
 msgid "Worksheet"

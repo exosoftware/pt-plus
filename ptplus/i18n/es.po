@@ -2967,10 +2967,8 @@ msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_series_comm__finalize_last_number
-#, fuzzy
-#| msgid "Invalid document number %s"
 msgid "Last Document Number"
-msgstr "Número de documento inválido %s"
+msgstr "Último número de documento"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_account_bank_statement_line__last_state_update
@@ -3830,18 +3828,16 @@ msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/wizards/webservice_series_comm.py:0
-#, fuzzy, python-format
-#| msgid "Please add lines to document %s and try again"
+#, python-format
 msgid "Please change the search criteria and try again"
-msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
+msgstr "Por favor, cambie los criterios de búsqueda e inténtelo de nuevo"
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/wizards/dataport_import.py:0
-#, fuzzy, python-format
-#| msgid "Please add lines to document %s and try again"
+#, python-format
 msgid "Please load the file to import and try again"
-msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
+msgstr "Por favor, cargue el archivo a importar e inténtelo de nuevo"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__point_of_sale

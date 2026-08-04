@@ -1223,12 +1223,13 @@ msgstr ""
 #. module: ptplus_accounting_tax_statement
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
-#, fuzzy, python-format
-#| msgid "Tax <b>%s</b> has no periodic statement tag.<br>"
+#, python-format
 msgid ""
 "Tax {tax_name} has no periodic statement tag on any of its {line_type_value}."
 "<br/>"
-msgstr "Fiscalité <b>%s</b> n'a pas d'étiquette de relevé périodique<br>"
+msgstr ""
+"La taxe {tax_name} n'a aucune étiquette de relevé périodique sur aucun de ses "
+"{line_type_value}.<br/>"
 
 #. module: ptplus_accounting_tax_statement
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.account_statement_template_view_form

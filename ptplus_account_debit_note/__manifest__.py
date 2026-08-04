@@ -7,13 +7,14 @@
 
 {
     "name": "Portugal - Debit Notes",
-    "version": "17.0.5.0.0",
+    "version": "17.0.5.0.1",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
     "depends": [
         "ptplus",
+        "ptplus_saft",
         "account_debit_note",
         "ptplus_account_credit_note",
     ],

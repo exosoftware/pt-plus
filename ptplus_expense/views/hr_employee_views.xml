@@ -10,6 +10,9 @@
         <field name="lang" position="after">
             <field name="l10n_pt_license_plate" />
         </field>
+        <field name="private_car_plate" position="attributes">
+            <attribute name="invisible">1</attribute>
+        </field>
     </field>
 </record>
 

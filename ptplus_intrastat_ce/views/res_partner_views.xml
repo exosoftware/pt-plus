@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_intrastat" model="ir.ui.view">
+        <field name="name">res.partner.form.intrastat</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']" position="inside">
+                <group name="intrastat" string="Intrastat">
+                    <field name="l10n_intrastat_region_id" />
+                    <field name="l10n_incoterm_id" />
+                    <field name="l10n_intrastat_transport_id" />
+                    <field name="l10n_intrastat_default_invoice_transaction_code_id" />
+                    <field name="l10n_intrastat_default_refund_transaction_code_id" />
+                    <field name="port_airport_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

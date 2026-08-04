@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_account_payment_tree_saft">
+        <field name="name">account.payment.list.saft</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

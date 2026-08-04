@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema targetNamespace="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+            xmlns:tns="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Operation elements type / Reference as needed -->
+    <xsd:complexType name="WSResponseType">
+        <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:int"/>
+            <xsd:element name="mensagem" minOccurs="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="256"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="submeterDeclaracaoRequestType">
+        <xsd:sequence>
+            <xsd:element name="versaoDeclaracao">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="declaracao" type="xsd:base64Binary"/>
+            <xsd:element name="aceitaAlertas" type="xsd:boolean" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="submeterDeclaracaoResponseType">
+        <xsd:complexContent>
+            <xsd:extension base="tns:WSResponseType">
+                <xsd:sequence>
+                    <xsd:element name="dadosSubmissao" type="tns:informacaoSubmissaoType" minOccurs="0"/>
+                    <xsd:element name="alertas" type="tns:informacaoAlertasType" minOccurs="0"/>
+                    <xsd:element name="erros" type="tns:informacaoErrosType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="validarDeclaracaoRequestType">
+        <xsd:sequence>
+            <xsd:element name="versaoDeclaracao">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="declaracao" type="xsd:base64Binary"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="validarDeclaracaoResponseType">
+        <xsd:complexContent>
+            <xsd:extension base="tns:WSResponseType">
+                <xsd:sequence>
+                    <xsd:element name="alertas" type="tns:informacaoAlertasType" minOccurs="0"/>
+                    <xsd:element name="erros" type="tns:informacaoErrosType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="consultarDeclaracoesRequestType">
+        <xsd:annotation><xsd:documentation>
+            Stub: A consulta depende em grande parte do negócio, pelo que é esperado que cada serviço estenda / reimplemente
+            este tipo de acordo com as suas necessidades.
+        </xsd:documentation></xsd:annotation>
+    </xsd:complexType>
+    <xsd:complexType name="consultarDeclaracoesResponseType">
+        <xsd:annotation><xsd:documentation>
+            Stub: A informação retornada depende em grande parte do negócio, pelo que é esperado que cada serviço estenda / reimplemente
+            este tipo de acordo com as suas necessidades.
+            O elemento idDeclaracao é obrigatório para permitir a ligação com outros serviços como obtenção de comprovativo / duc / etc.
+        </xsd:documentation></xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="tns:WSResponseType">
+                <xsd:sequence>
+                    <xsd:element name="idDeclaracao" type="xsd:long" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="obterComprovativoRequestType">
+        <xsd:sequence>
+            <xsd:element name="idDeclaracao" type="xsd:long"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="obterComprovativoResponseType">
+        <xsd:complexContent>
+            <xsd:extension base="tns:WSResponseType">
+                <xsd:sequence>
+                    <xsd:element name="pdf" type="xsd:base64Binary" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="obterErrosCentraisRequestType">
+        <xsd:sequence>
+            <xsd:element name="idDeclaracao" type="xsd:long"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="obterErrosCentraisResponseType">
+        <xsd:complexContent>
+            <xsd:extension base="tns:WSResponseType">
+                <xsd:sequence>
+                    <xsd:element name="erros" type="tns:informacaoErrosType" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <!-- Generic authentication failed exception element -->
+    <xsd:element name="AutenticationException">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="AuthenticationFailed" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Code" type="xsd:int"/>
+                            <xsd:element name="Message" type="xsd:string"/>
+                            <xsd:element name="NumberOfTriesRemaining" type="xsd:int"/>
+                            <xsd:element name="Actor" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <!-- Auxiliary information types, used in preceding elements / types -->
+    <xsd:complexType name="informacaoSubmissaoType">
+        <xsd:sequence>
+            <xsd:element name="data" type="xsd:dateTime"/>
+            <xsd:element name="periodo" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Período a que diz respeito a declaração. Pode ser o ano de exercício, um trimestre ou outra informação identificadora
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="idDeclaracao" type="xsd:long"/>
+            <xsd:element name="contribuinte" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Actor">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="40"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="nif" type="xsd:long"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="informacaoAlertasType">
+        <xsd:sequence>
+            <xsd:element name="temMaisAlertas" type="xsd:boolean"/>
+            <xsd:element name="alerta" type="tns:informacaoErroOuAlerta" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="informacaoErrosType">
+        <xsd:sequence>
+            <xsd:element name="temMaisErros" type="xsd:boolean"/>
+            <xsd:element name="erro" type="tns:informacaoErroOuAlerta" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="informacaoErroOuAlerta">
+        <xsd:sequence>
+            <xsd:element name="anexo" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="quadro" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="tabela" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="linha" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="campo" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="localizacao" type="tns:localizacaoNoFicheiroType" minOccurs="0"/>
+            <xsd:element name="codigo" minOccurs="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="mensagem">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="256"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="localizacaoNoFicheiroType">
+        <xsd:sequence>
+            <xsd:element name="linha" type="xsd:positiveInteger" minOccurs="0"/>
+            <xsd:element name="coluna" type="xsd:positiveInteger" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="dadosPagamentoType">
+        <xsd:sequence>
+            <xsd:element name="entidade" type="xsd:long" minOccurs="0">
+                <xsd:annotation><xsd:documentation>
+                    Pagamentos ao estado não precisam de identificação da entidade.
+                    Pagamentos a outras entidades necessitam da identificação da entidade.
+                </xsd:documentation></xsd:annotation>
+            </xsd:element>
+            <xsd:element name="referencia" type="xsd:long">
+                <xsd:annotation><xsd:documentation>
+                    Exemplo: 164735000002962 ou 123456789
+                </xsd:documentation></xsd:annotation>
+            </xsd:element>
+            <xsd:element name="montante" type="xsd:long">
+                <xsd:annotation><xsd:documentation>
+                    Montante a pagar, em cêntimos.
+                    Exemplo: 289403 corresponde a 2 894,03 €
+                </xsd:documentation></xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

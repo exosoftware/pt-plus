@@ -54,13 +54,14 @@
                 <field name="source_billing" invisible="1" />
                 <field name="system_entry_date" invisible="1" />
                 <field name="l10n_pt_is_national" invisible="1" />
+                <field name="picking_type_code" invisible="1" />
                 <field
                     name="fiscal_document_type_id"
                     string="Document Type"
                     options="{'no_create_edit': True}"
-                    invisible="not source_billing"
+                    invisible="not source_billing and picking_type_code != 'incoming'"
                     readonly="state in ['done', 'cancel']"
-                    domain="[('source_billing', '=', source_billing),
+                    domain="[('source_billing', '=', source_billing or 'P'),
                             ('company_id', '=', company_id),
                             ('section', '=', 'stock'),
                             ('picking_type_ids', 'in', picking_type_id)
@@ -131,6 +132,16 @@
         <field name="arch" type="xml">
             <field name="scheduled_date" position="before">
                 <field name="date_done" />
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
             </field>
         </field>
     </record>
@@ -148,10 +159,30 @@
                 />
                 <field
                     name="l10n_pt_disable_auto_issuance"
-                    invisible="l10n_pt_disable_fiscal_document or code not in ['outgoing', 'internal']"
+                    invisible="l10n_pt_disable_fiscal_document or code not in ['outgoing', 'internal', 'incoming']"
                 />
             </field>
         </field>
     </record>
 
+    <record id="action_l10n_pt_toggle_saft_element_picking" model="ir.actions.server">
+        <field name="name">(Un)block SAF-T element</field>
+        <field name="model_id" ref="stock.model_stock_picking" />
+        <field name="binding_model_id" ref="stock.model_stock_picking" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_toggle_saft_element_block()</field>
+    </record>
+
+    <record
+        id="action_l10n_pt_recompute_saft_element_picking"
+        model="ir.actions.server"
+    >
+        <field name="name">Recompute SAF-T element</field>
+        <field name="model_id" ref="stock.model_stock_picking" />
+        <field name="binding_model_id" ref="stock.model_stock_picking" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_recompute_saft_element()</field>
+    </record>
 </odoo>

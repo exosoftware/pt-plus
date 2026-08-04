@@ -1,0 +1,453 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_intrastat_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-19 15:27+0000\n"
+"PO-Revision-Date: 2025-11-19 15:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__4
+msgid "April"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__8
+msgid "August"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__code
+msgid "Code"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_bank_statement_line__l10n_intrastat_region_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_move__l10n_intrastat_region_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_payment__l10n_intrastat_region_id
+msgid "Company's Intrastat Region"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__status__completed
+msgid "Completed"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_res_country
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_bank_statement_line__country_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_move__country_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_account_payment__country_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__country_id
+msgid "Country"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__create_uid
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__create_date
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__create_date
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__date_invoice
+msgid "Date Invoice"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__12
+msgid "December"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__incoterm_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__l10n_incoterm_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__l10n_incoterm_id
+msgid "Delivery Conditions"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__display_name
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__display_name_r
+msgid "Display Name Reduced"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "Done"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "Download CSV"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#. odoo-python
+#: code:addons/ptplus_intrastat_ce/wizard/intrastat_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_intrastat_ce.list_intrastat_wizard_action
+#: model:ir.ui.menu,name:ptplus_intrastat_ce.list_intrastat_account_wizard_menu
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+#, python-format
+msgid "Export Intrastat"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#. odoo-python
+#: code:addons/ptplus_intrastat_ce/wizard/intrastat_wizard.py:0
+#, python-format
+msgid "Export Intrastat: Purchases"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#. odoo-python
+#: code:addons/ptplus_intrastat_ce/wizard/intrastat_wizard.py:0
+#, python-format
+msgid "Export Intrastat: Sales"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__2
+msgid "February"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__flux
+msgid "Flux"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_line__flux__import
+msgid "INTRA-CH"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_line__flux__export
+msgid "INTRA-EX"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_intrastat_line_tree
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_partner_form_intrastat
+msgid "Intrastat"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__intrastat_id
+msgid "Intrastat Code"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__intrastat_line_ids
+msgid "Intrastat Line"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "Intrastat Lines"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_country__l10n_intrastat
+msgid "Intrastat Member"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_intrastat_line_form
+msgid "Intrastat Purchases"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__l10n_intrastat_region_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__l10n_intrastat_region_id
+msgid "Intrastat region"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__account_move_id
+msgid "Invoice"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__l10n_intrastat_default_invoice_transaction_code_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__l10n_intrastat_default_invoice_transaction_code_id
+msgid "Invoice Nature Transaction"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__1
+msgid "January"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__7
+msgid "July"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__6
+msgid "June"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__write_uid
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__write_date
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__write_date
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__3
+msgid "March"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__mass
+msgid "Mass"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__5
+msgid "May"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__month
+msgid "Month"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__display_name
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_port_airport__name
+msgid "Name"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "Next"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__11
+msgid "November"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__10
+msgid "October"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__origin_country_id
+msgid "Origin Country"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__partner_vat
+msgid "Partner TIN"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__period
+msgid "Period"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__port_airport_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__port_airport_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__port_airport_id
+msgid "Port / Airport"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__product_code
+msgid "Product Code"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__product_weight
+msgid "Product Weight"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__report_type__purchase
+msgid "Purchase"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__product_name
+msgid "Ref"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__l10n_intrastat_default_refund_transaction_code_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__l10n_intrastat_default_refund_transaction_code_id
+msgid "Refund Nature Transaction"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__intrastat_region_id
+msgid "Region"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__report_type
+msgid "Report"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__report_type__sale
+msgid "Sale"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__month__9
+msgid "September"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields.selection,name:ptplus_intrastat_ce.selection__intrastat_wizard__status__start
+msgid "Start"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__status
+msgid "Status"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__supply_units
+msgid "Supplementary Units"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ce.view_form_intrastat_wizard
+msgid "There's no Intrastat items in this selected period"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__intrastat_transaction_id
+msgid "Transaction"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__transportation_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_partner__l10n_intrastat_transport_id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_res_users__l10n_intrastat_transport_id
+msgid "Transportation Mode"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__company_vat
+msgid "VAT Number"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__company_vat_intrastat
+msgid "VAT Number Intrastat"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_wizard__year
+msgid "Year"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_intrastat_line
+msgid "intrastat.line"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_intrastat_port_airport
+msgid "intrastat.port_airport"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model,name:ptplus_intrastat_ce.model_intrastat_wizard
+msgid "intrastat.wizard"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__statistic_value
+msgid "valest"
+msgstr ""
+
+#. module: ptplus_intrastat_ce
+#: model:ir.model.fields,field_description:ptplus_intrastat_ce.field_intrastat_line__invoiced_value
+msgid "valfac"
+msgstr ""

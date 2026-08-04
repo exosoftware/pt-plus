@@ -16,6 +16,7 @@
         "ptplus_sale",
     ],
     "data": [
+        "data/product_data.xml",
         "views/sale_order_views.xml",
     ],
     "installable": True,

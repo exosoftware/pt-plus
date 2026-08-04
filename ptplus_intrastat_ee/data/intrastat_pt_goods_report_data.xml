@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="intrastat_report_pt" model="account.report">
+        <field name="name">Intrastat PT</field>
+        <field name="root_report_id" ref="account_intrastat.intrastat_report" />
+        <field name="sequence" eval="30" />
+        <field
+            name="custom_handler_model_id"
+            ref="model_account_intrastat_pt_report_handler"
+        />
+        <field name="load_more_limit" eval="80" />
+        <field name="column_ids">
+            <record id="intrastat_report_column_flux" model="account.report.column">
+                <field name="name">Flux</field>
+                <field name="expression_label">flux</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_period" model="account.report.column">
+                <field name="name">Period</field>
+                <field name="expression_label">period</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_partner_vat"
+                model="account.report.column"
+            >
+                <field name="name">NIF</field>
+                <field name="expression_label">partner_vat</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_ref" model="account.report.column">
+                <field name="name">Reference</field>
+                <field name="expression_label">ref</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_commodity_code"
+                model="account.report.column"
+            >
+                <field name="name">Commodity</field>
+                <field name="expression_label">commodity_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_country_code"
+                model="account.report.column"
+            >
+                <field name="name">Country</field>
+                <field name="expression_label">country_name</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_product_origin_country"
+                model="account.report.column"
+            >
+                <field name="name">Origin Country</field>
+                <field
+                    name="expression_label"
+                >intrastat_product_origin_country_name</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_region_code"
+                model="account.report.column"
+            >
+                <field name="name">Region</field>
+                <field name="expression_label">region_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_incoterm_code"
+                model="account.report.column"
+            >
+                <field name="name">Incoterm</field>
+                <field name="expression_label">incoterm_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_transaction_nature"
+                model="account.report.column"
+            >
+                <field name="name">Transaction</field>
+                <field name="expression_label">transaction_nature</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_transport_code"
+                model="account.report.column"
+            >
+                <field name="name">Transport</field>
+                <field name="expression_label">transport_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_port_airport_code"
+                model="account.report.column"
+            >
+                <field name="name">Port / Airport</field>
+                <field name="expression_label">port_airport_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_weight" model="account.report.column">
+                <field name="name">Weight</field>
+                <field name="expression_label">weight</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_supplementary_units"
+                model="account.report.column"
+            >
+                <field name="name">Supplementary Units</field>
+                <field name="expression_label">supplementary_units</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_value" model="account.report.column">
+                <field name="name">Value</field>
+                <field name="expression_label">value</field>
+            </record>
+            <record
+                id="intrastat_report_column_services_value"
+                model="account.report.column"
+            >
+                <field name="name">In Currency</field>
+                <field name="expression_label">value_currency</field>
+                <field name="blank_if_zero" eval="True" />
+            </record>
+            <record id="intrastat_report_column_adqnif" model="account.report.column">
+                <field name="name">Purchaser VAT</field>
+                <field name="expression_label">adqnif</field>
+                <field name="figure_type">string</field>
+                <field name="blank_if_zero" eval="True" />
+            </record>
+        </field>
+    </record>
+</odoo>
