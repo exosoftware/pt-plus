@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 10:57+0000\n"
-"PO-Revision-Date: 2026-05-26 11:59+0100\n"
+"POT-Creation-Date: 2026-07-27 15:55+0000\n"
+"PO-Revision-Date: 2026-07-27 17:01+0100\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus/pt/>\n"
@@ -1718,8 +1718,8 @@ msgid ""
 "Document %(doc_name)s contains a VAT tax (%(tax_name)s) with an obsolete M08 "
 "VAT exemption reason. Please choose another and try again."
 msgstr ""
-"O documento %s contém um IVA (%(tax_name)s) com um motivo de isenção de IVA "
-"M08 obsoleto. Escolha outro e tente novamente."
+"O documento %(doc_name)s contém um IVA (%(tax_name)s) com um motivo de "
+"isenção de IVA M08 obsoleto. Escolha outro e tente novamente."
 
 #. module: ptplus
 #. odoo-python
@@ -2065,6 +2065,8 @@ msgstr "Data de Início Esperada"
 #: model:ir.model.fields,field_description:ptplus.field_product_category__property_account_expense_refund_categ_id
 #: model:ir.model.fields,field_description:ptplus.field_product_product__property_account_expense_refund_id
 #: model:ir.model.fields,field_description:ptplus.field_product_template__property_account_expense_refund_id
+#: model:ir.model.fields,field_description:ptplus.field_res_company__l10n_pt_expense_refund_account_id
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_expense_refund_account_id
 msgid "Expense Refund Account"
 msgstr "Conta de Crédito de Compras"
 
@@ -2999,6 +3001,8 @@ msgstr "Inativo"
 #: model:ir.model.fields,field_description:ptplus.field_product_category__property_account_income_refund_categ_id
 #: model:ir.model.fields,field_description:ptplus.field_product_product__property_account_income_refund_id
 #: model:ir.model.fields,field_description:ptplus.field_product_template__property_account_income_refund_id
+#: model:ir.model.fields,field_description:ptplus.field_res_company__l10n_pt_income_refund_account_id
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_income_refund_account_id
 msgid "Income Refund Account"
 msgstr "Conta de Crédito de Vendas"
 
@@ -5305,6 +5309,26 @@ msgstr ""
 "nas categorias do produto."
 
 #. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_company__l10n_pt_income_refund_account_id
+#: model:ir.model.fields,help:ptplus.field_res_config_settings__l10n_pt_income_refund_account_id
+msgid ""
+"This account will be used when validating customer credit notes on "
+"Portuguese companies."
+msgstr ""
+"Esta conta será usada na validação de notas de crédito a clientes em "
+"empresas Portuguesas."
+
+#. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_company__l10n_pt_expense_refund_account_id
+#: model:ir.model.fields,help:ptplus.field_res_config_settings__l10n_pt_expense_refund_account_id
+msgid ""
+"This account will be used when validating supplier credit notes on "
+"Portuguese companies."
+msgstr ""
+"Esta conta será usada na validação de notas de crédito de fornecedores em "
+"empresas Portuguesas."
+
+#. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/account_move.py:0
 msgid "This action isn't available for fiscal documents."
@@ -5337,6 +5361,8 @@ msgid ""
 "Tick to install the SDR module. It adds a separate, VAT-exempt deposit line "
 "to purchase and sales invoices."
 msgstr ""
+"Assinale para instalar o módulo SDR, para adicionar, nas faturas de compra e "
+"venda, linhas específicas de depósito isentas de IVA."
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_dataport_log__date_to
@@ -5448,7 +5474,7 @@ msgstr "Nome de utilizador"
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax_group__l10n_pt_genre__iva
 msgid "VAT"
-msgstr "NIF"
+msgstr "IVA"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_account_tax__pt_vat_country_region

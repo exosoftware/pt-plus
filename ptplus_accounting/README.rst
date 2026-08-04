@@ -50,6 +50,18 @@ Available soon.
 Changelog
 =========
 
+5.1.0 (2026-04-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Allow partial refunds in the periodic statement.
+
+**Bugfixes**
+
+- Fix singleton error when writing the name of multiple journal items at once
+  (e.g. generating deferral entries from the Deferred Expense/Revenue reports).
+
 5.0.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

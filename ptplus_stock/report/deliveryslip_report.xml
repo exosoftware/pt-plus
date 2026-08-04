@@ -41,13 +41,11 @@
         <field name="report_file">ptplus_stock.report_deliveryslip_multiway</field>
         <field name="binding_model_id" ref="model_stock_picking" />
         <field name="binding_type">report</field>
+        <field name="domain">[("source_billing", "!=", False)]</field>
         <field
             name="print_report_name"
         >object.pt_get_fullname(lang=object.partner_id.lang)</field>
-        <field
-            name="attachment"
-        >object.system_entry_date and '{} (multiway).pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))</field>
-        <field name="attachment_use">True</field>
+        <field name="attachment_use">False</field>
     </record>
 
     <template id="report_deliveryslip_multiway">

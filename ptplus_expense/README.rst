@@ -27,6 +27,29 @@ Available soon.
 Changelog
 =========
 
+1.3.0 (2026-07-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Reimbursement Account can now also be an account payable (e.g. 278121),
+  besides a current liabilities account.
+
+1.2.0 (2026-07-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Employee-paid expenses of Portuguese companies now generate a draft vendor
+  bill on the real vendor of the expense instead of a posted receipt on the
+  employee. When the bill is posted, its payable balance is automatically
+  transferred to the employee on the new "Reimbursement Account" (accounting
+  settings) through a reconciled debt transfer entry, and the expense is only
+  marked as Paid once that debt to the employee is settled.
+- The Vendor field of the expense is now also visible for employee-paid
+  expenses of Portuguese companies.
+- New "Reimbursement Partner" field on vendor bills.
+
 1.1.0 (2024-01-02)
 ~~~~~~~~~~~~~~~~~~~
 

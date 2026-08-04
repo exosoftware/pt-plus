@@ -7,9 +7,9 @@
 
 {
     "name": "Portugal - SAF-T PT Statement",
-    "version": "19.0.4.1.7",
+    "version": "19.0.4.3.1",
     "license": "OPL-1",
-    "depends": ["ptplus", "ptplus_partner"],
+    "depends": ["bus", "ptplus", "ptplus_partner"],
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
@@ -29,6 +29,11 @@
         "views/account_move_views.xml",
         "views/account_payment_views.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "ptplus_saft/static/src/js/saft_import_progress_field.js",
+        ],
+    },
     "external_dependencies": {
         "python": [
             "unicodecsv",

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_pt_expense" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.pt.expense</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_settings_pt']" position="inside">
+                <setting
+                    id="expense_reimbursement"
+                    company_dependent="1"
+                    string="Expense Reimbursement"
+                    help="Liability account holding the debt to employees for expenses they paid out of pocket"
+                    invisible="not pt_invoicing"
+                >
+                    <div class="row">
+                        <label
+                            string="Account"
+                            for="l10n_pt_reimbursement_account_id"
+                            class="col-lg-3 o_light_label"
+                        />
+                        <field name="l10n_pt_reimbursement_account_id" />
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

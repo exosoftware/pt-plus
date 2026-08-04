@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema targetNamespace="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+            xmlns:tns="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+            xmlns:gdns="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+                schemaLocation="gestaoDeclarativa.xsd"/>
+
+    <!-- Operações -->
+    <xsd:element name="submeterDeclaracaoRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para submissão de uma OA.
+                    Extende o pedido base para indicar qual a OA e nos casos em que necessário, o ano e mês.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:submeterDeclaracaoRequestType">
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string" />
+                        <xsd:element name="ano" type="xsd:short" minOccurs="0"/>
+                        <xsd:element name="mes" type="xsd:short" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="submeterDeclaracaoResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de submissão de uma OA.
+                    Extende a resposta base para indicar o mes da declaração se necessário.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:submeterDeclaracaoResponseType">
+                    <xsd:sequence>
+                        <xsd:element name="mes" type="xsd:short" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="validarDeclaracaoRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para validação de uma OA.
+                    Extende o pedido base para indicar qual a OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:validarDeclaracaoRequestType">
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="validarDeclaracaoResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de validação de uma OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:validarDeclaracaoResponseType"/>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="consultarDeclaracoesRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para consulta de uma OA.
+                    Define como parâmetros de pesquisa o identificador da OA, o ano, o mês e a situação.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:consultarDeclaracoesRequestType">
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string"/>
+                        <xsd:element name="ano" type="xsd:short" minOccurs="0"/>
+                        <xsd:element name="mes" type="xsd:short" minOccurs="0"/>
+                        <xsd:element name="situacao" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="nifSP" type="xsd:long" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="consultarDeclaracoesResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de consulta de uma OA.
+                    Extende a resposta base para indicar o nome do ficheiro, ano, mês, data de submissão e situação.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:WSResponseType">
+                    <xsd:sequence>
+                        <xsd:element name="declaracoes" type="tns:infoConsultaType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterComprovativoRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para obtenção de comprovativos de uma OA.
+                    Extende o pedido base para indicar qual a OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:obterComprovativoRequestType">
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterComprovativoResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de obtenção de comprovativos de uma OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:obterComprovativoResponseType"/>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterErrosRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para obtenção de erros centrais de uma OA.
+                    Extende o pedido base para indicar qual a OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:obterErrosCentraisRequestType">
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterErrosResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de obtenção de erros centrais de uma OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:obterErrosCentraisResponseType"/>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterReferenciaPagamentoRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para obtenção de DUC de uma OA.
+                    Define os parâmetros necessário para o pedido de obtenção de referência de pagamento.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+                <xsd:element name="modelo" type="xsd:string"/>
+                <xsd:element name="idDeclaracao" type="xsd:long"/>
+                <xsd:element name="impostoPago" type="xsd:long"  minOccurs="0">
+                    <xsd:annotation><xsd:documentation>
+                        Imposto pago relativo ao período, em cêntimos.
+                        Exemplo: 289403 corresponde a 2 894,03 €
+                    </xsd:documentation></xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+
+    </xsd:element>
+
+    <xsd:element name="obterReferenciaPagamentoResponse">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Resposta para os pedidos de obtenção de DUC de uma OA.
+                    Extende o pedido base para indicar os dados da referência de pagamento.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:WSResponseType">
+                    <xsd:sequence>
+                        <xsd:element name="nif" type="xsd:long" minOccurs="0"/>
+                        <xsd:element name="periodo" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="dadosPagamento" type="gdns:dadosPagamentoType" minOccurs="0"/>
+                        <xsd:element name="dataLimite" type="xsd:date" minOccurs="0"/>
+                        <xsd:element name="pdf" type="xsd:base64Binary" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+    </xsd:element>
+
+    <xsd:element name="obterPrePreenchimentoRequest">
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Pedido para obtenção de pré-preenchimento de uma OA.
+                    Define os parâmetros necessário para o pedido de pré-preenchimento de uma OA.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+                <xsd:element name="modelo" type="xsd:string"/>
+                <xsd:element name="ano" type="xsd:short"/>
+                <xsd:element name="mes" type="xsd:short" minOccurs="0"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="obterPrePreenchimentoResponse">
+        <xsd:complexType>
+            <xsd:annotation><xsd:documentation>
+                Resposta para os pedidos de pré-preenchimento de uma OA.
+                Se não for possível efetuar o pré-preenchimento, é retornada uma
+                declaração vazia seguindo a estrutura pública do ficheiro publicada para a OA indicada.
+                (Consultar: https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Suporte_Informatico_Formato_ficheiros/Pages/default.aspx)
+            </xsd:documentation></xsd:annotation>
+            <xsd:complexContent>
+                <xsd:extension base="gdns:WSResponseType">
+                    <xsd:sequence>
+                        <xsd:element name="versaoDeclaracao" minOccurs="0">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="10"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="declaracao" type="xsd:base64Binary" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+    </xsd:element>
+
+    <!-- Utilitarios -->
+    <xsd:complexType name="infoConsultaType">
+        <xsd:sequence>
+            <xsd:element name="idDeclaracao" type="xsd:long"/>
+            <xsd:element name="nomeFicheiro" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ano" type="xsd:short" minOccurs="0"/>
+            <xsd:element name="mes" type="xsd:short" minOccurs="0"/>
+            <xsd:element name="dataSubmissao" type="xsd:date"/>
+            <xsd:element name="situacao" type="tns:situacaoType"/>
+            <xsd:element name="dataSituacao" type="xsd:date"/>
+            <xsd:element name="modoEntrega" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="tamanhoFicheiro" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="nifCC" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="nomeCC" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="erros" type="gdns:informacaoErrosType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="situacaoType">
+        <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:short"/>
+            <xsd:element name="descricao" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

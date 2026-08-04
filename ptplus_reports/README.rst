@@ -27,6 +27,26 @@ Available soon.
 Changelog
 =========
 
+1.3.0 (2026-07-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Move the AT "Obrigações Acessórias" (OA) webservice into the core: the
+  ``WebserviceOA`` client and a reusable ``l10n_pt.oa.statement.mixin`` so every
+  OA statement (Modelo 10, Modelo 30, DMR, ...) reuses submit / validate /
+  consult / receipt / errors by implementing only ``_oa_modelo()``.
+
+1.2.0 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Add the AT webservice submission core: multi-actor authentication (taxpayer +
+  certified accountant) and a dedicated "Submit" step in the statement wizard
+  (validate / submit online, fetch receipt), available to any statement that
+  enables it.
+
 1.0.0
 ~~~~~~~~~~~~~~~~~~~
 

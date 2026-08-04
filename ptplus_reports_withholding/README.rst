@@ -31,6 +31,28 @@ Available soon.
 Changelog
 =========
 
+1.3.0 (2026-07-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Modelo 10: submit / validate / consult / receipt / errors online through the
+  AT "Obrigações Acessórias" webservice.
+
+**Improvement**
+
+- Reuse the shared ``l10n_pt.oa.statement.mixin`` from ptplus_reports for the OA
+  webservice; each model only declares its model code and file format (Modelo 30
+  ``M30`` XML, Modelo 10 ``M10`` TXT).
+
+1.2.0 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Modelo 30: submit, validate, consult and fetch the receipt online through the
+  AT "Obrigações Acessórias" webservice, reusing the generated declaration XML.
+
 1.0.0
 ~~~~~~~~~~~~~~~~~~~
 

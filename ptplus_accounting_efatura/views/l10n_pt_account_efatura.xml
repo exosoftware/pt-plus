@@ -7,10 +7,12 @@
             <list
                 js_class="l10n_pt_efatura_list"
                 create="0"
-                decoration-success="not status_mismatch"
+                decoration-success="not status_mismatch and not mapping_missing"
                 decoration-danger="status_mismatch"
+                decoration-warning="mapping_missing and not status_mismatch"
             >
                 <field name="status_mismatch" column_invisible="True" />
+                <field name="mapping_missing" column_invisible="True" />
                 <field name="date" />
                 <field name="reference" />
                 <field name="vendor_id" />
@@ -45,6 +47,13 @@
                 >
                     <field name="status_mismatch_text" />
                 </div>
+                <div
+                    class="alert alert-warning text-center"
+                    invisible="not mapping_missing"
+                    role="alert"
+                >
+                    <field name="mapping_missing_text" />
+                </div>
                 <header />
                 <sheet>
                     <group>
@@ -66,6 +75,7 @@
                             <field name="status" />
                             <field name="status_mismatch" invisible="1" />
                             <field name='vat_amount' />
+                            <field name="tax_amount" />
                             <field name='total_amount' />
                             <field name="tax_base" />
                             <field
@@ -80,16 +90,38 @@
                             />
                             <field name="status_mismatch_disable" />
                         </group>
-                        <group string="Lines" name="efaturas_lines">
-                            <field name="line_ids" mode="list" nolabel="1" colspan="2">
-                                <list editable="bottom">
-                                    <field name="amount_base" string="Tax Base" />
-                                    <field name="tax_percentage" string="Tax %" />
-                                    <field name="amount_tax" string="VAT" />
-                                    <field name="amount_total" string="Total" />
-                                </list>
-                            </field>
-                        </group>
+                        <notebook>
+                            <page string="e-Fatura Lines" name="efaturas_lines">
+                                <field name="line_ids" mode="list" nolabel="1">
+                                    <list editable="bottom">
+                                        <field name="amount_base" string="Tax Base" />
+                                        <field name="tax_percentage" string="Tax %" />
+                                        <field name="amount_tax" string="VAT" />
+                                        <field name="amount_total" string="Total" />
+                                        <field name="tax_genre" optional="show" />
+                                        <field name="vat_tax_type" optional="show" />
+                                        <field
+                                            name="exemption_reason"
+                                            optional="show"
+                                        />
+                                        <field name="tax_verba" optional="show" />
+                                        <field name="country_id" optional="hide" />
+                                        <field name="region" optional="hide" />
+                                        <button
+                                            name="l10n_pt_action_create_mapping"
+                                            type="object"
+                                            icon="fa-plus"
+                                            title="Create the tax mapping for this line"
+                                        />
+                                        <field
+                                            name="mapping_missing"
+                                            widget="l10n_pt_efatura_mapping_missing"
+                                            string=" "
+                                        />
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
                 <chatter />
@@ -113,6 +145,11 @@
                     string="Status Mismatch"
                     name="status_mismatch_filter"
                     domain="[('status_mismatch','=',True)]"
+                />
+                <filter
+                    string="Missing Tax Mapping"
+                    name="mapping_missing_filter"
+                    domain="[('mapping_missing','=',True)]"
                 />
                 <group>
                     <filter string="Date" name="date" context="{'group_by': 'date'}" />

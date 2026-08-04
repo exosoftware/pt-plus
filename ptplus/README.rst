@@ -53,6 +53,39 @@ Available soon.
 Changelog
 =========
 
+5.1.6 (2026-07-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Issuing fiscal documents (invoices, receipts) is faster, especially on
+  databases holding years of documents: finding the previously issued
+  document of each series no longer slows down as the history grows
+
+5.1.5 (2026-07-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The "IVA 6% AQ. (OB)" purchase tax is no longer archived, so the reduced rate
+  is selectable on vendor bills and usable as an E-Fatura tax mapping default
+
+5.1.4 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Payment (multi-way) report no longer registers its printed PDF as a
+  chatter attachment
+
+5.1.3 (2026-07-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Invoice/Payment (multi-way) reports only show up in the print menu when
+  the document has a source billing set
+
 5.0.7 (2025-10-26)
 ~~~~~~~~~~~~~~~~~~~
 **FIX**

@@ -53,4 +53,17 @@ model.l10n_pt_get_saft()
         <field name="interval_type">hours</field>
         <field name="active" eval="False" />
     </record>
+
+    <record id="ir_cron_process_saft_import" model="ir.cron">
+        <field name="name">Process SAF-T Import</field>
+        <field name="model_id" ref="model_l10n_pt_import_saft_configuration" />
+        <field name="state">code</field>
+        <field name="code">model._cron_run_saft_import()</field>
+        <!-- Woken up immediately via _trigger() when a SAF-T import is queued
+             (see l10n_pt_import_saft_configuration.py); this interval is only
+             a safety net in case a trigger is ever missed. Must stay active,
+             an inactive cron is never picked up even when triggered. -->
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+    </record>
 </odoo>

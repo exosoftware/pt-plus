@@ -79,20 +79,27 @@
                                                 />
                                             </td>
                                             <td class="text-end">
-                                                <span t-esc="expense.total_amount" />
+                                                <span
+                                                    t-esc="expense.price_unit"
+                                                    t-options='{"widget": "monetary", "display_currency": expense.company_currency_id}'
+                                                />
                                             </td>
                                             <td class="text-end">
                                                 <span t-esc="expense.quantity" />
                                             </td>
                                             <td class="text-end">
-                                                <span t-esc="expense.total_amount" />
+                                                <span
+                                                    t-esc="expense.total_amount_currency"
+                                                    t-options='{"widget": "monetary", "display_currency": expense.currency_id}'
+                                                />
                                             </td>
                                             <td
                                                 t-if="o.is_multiple_currency"
                                                 class="text-end"
                                             >
                                                 <span
-                                                    t-esc="expense.total_amount_company"
+                                                    t-esc="expense.total_amount"
+                                                    t-options='{"widget": "monetary", "display_currency": expense.company_currency_id}'
                                                 />
                                             </td>
                                         </tr>

@@ -1592,143 +1592,104 @@ msgstr "Tipo de Documento"
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s contains an inactive tax %s.Please choose another and try "
-#| "again."
 msgid ""
 "Document %(doc_name)s contains a VAT tax (%(tax_name)s) with an obsolete M08 "
 "VAT exemption reason. Please choose another and try again."
 msgstr ""
-"El documento %s contiene un impuesto inactivo %s.Elija otro e inténtelo de "
-"nuevo."
+"El documento %(doc_name)s contiene un impuesto de IVA (%(tax_name)s) con un "
+"motivo de exención de IVA M08 obsoleto. Elija otro e inténtelo de nuevo."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s contains an inactive tax %s.Please choose another and try "
-#| "again."
 msgid ""
 "Document %(doc_name)s contains a line (%(tax_name)s) with an exempt tax that "
 "requires an exemption reason. Please review the tax configuration and try "
 "again."
 msgstr ""
-"El documento %s contiene un impuesto inactivo %s.Elija otro e inténtelo de "
-"nuevo."
+"El documento %(doc_name)s contiene una línea (%(tax_name)s) con un impuesto "
+"exento que requiere un motivo de exención. Revise la configuración del "
+"impuesto e inténtelo de nuevo."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s contains an inactive tax %s.Please choose another and try "
-#| "again."
 msgid ""
 "Document %(doc_name)s contains a line with a negative tax amount "
 "(%(tax_name)s). Please choose another and try again."
 msgstr ""
-"El documento %s contiene un impuesto inactivo %s.Elija otro e inténtelo de "
-"nuevo."
+"El documento %(doc_name)s contiene una línea con un importe de impuesto "
+"negativo (%(tax_name)s). Elija otro e inténtelo de nuevo."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s contains an inactive tax %s.Please choose another and try "
-#| "again."
 msgid ""
 "Document %(doc_name)s contains a tax (%(tax_name)s) with an undefined genre. "
 "Please review the tax configuration and try again"
 msgstr ""
-"El documento %s contiene un impuesto inactivo %s.Elija otro e inténtelo de "
-"nuevo."
+"El documento %(doc_name)s contiene un impuesto (%(tax_name)s) con un género "
+"indefinido. Revise la configuración del impuesto e inténtelo de nuevo"
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s contains an inactive tax %s.Please choose another and try "
-#| "again."
 msgid ""
 "Document %(doc_name)s contains an inactive tax %(tax_name)s.Please choose "
 "another and try again."
 msgstr ""
-"El documento %s contiene un impuesto inactivo %s.Elija otro e inténtelo de "
-"nuevo."
+"El documento %(doc_name)s contiene un impuesto inactivo %(tax_name)s.Elija "
+"otro e inténtelo de nuevo."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line '%s' that contains an invalid discount percentage. "
-#| "Please use a number between 0 and 100."
 msgid ""
 "Document %(doc_name)s has a line '%(line_name)s' that contains an invalid "
 "discount percentage. Please use a number between 0 and 100."
 msgstr ""
-"El documento %s tiene una línea '%s' que contiene un porcentaje de descuento "
-"no válido. Utilice un número entre 0 y 100."
+"El documento %(doc_name)s tiene una línea '%(line_name)s' que contiene un "
+"porcentaje de descuento no válido. Utilice un número entre 0 y 100."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line of product %s that contains more than one VAT "
-#| "entry defined"
 msgid ""
 "Document %(doc_name)s has a line '%(line_name)s' that contains an "
 "unsupported discount."
 msgstr ""
-"El documento %s tiene una línea de producto %s que contiene más de una "
-"entrada de IVA definida"
+"El documento %(doc_name)s tiene una línea '%(line_name)s' que contiene un "
+"descuento no soportado."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line of product %s that contains more than one VAT "
-#| "entry defined"
 msgid ""
 "Document %(doc_name)s has a line of product %(line_name)s that contains both "
 "stamp duty and non-exempt VAT taxes."
 msgstr ""
-"El documento %s tiene una línea de producto %s que contiene más de una "
-"entrada de IVA definida"
+"El documento %(doc_name)s tiene una línea de producto %(line_name)s que "
+"contiene a la vez impuesto del timbre e IVA no exento."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line of product %s that contains more than one VAT "
-#| "entry defined"
 msgid ""
 "Document %(doc_name)s has a line of product %(line_name)s that contains more "
 "than one VAT tax defined"
 msgstr ""
-"El documento %s tiene una línea de producto %s que contiene más de una "
-"entrada de IVA definida"
+"El documento %(doc_name)s tiene una línea de producto %(line_name)s que "
+"contiene más de un impuesto de IVA definido"
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line of product %s that contains more than one VAT "
-#| "entry defined"
 msgid ""
 "Document %(doc_name)s has a line of product %(line_name)s that contains more "
 "than one stamp duty tax defined"
 msgstr ""
-"El documento %s tiene una línea de producto %s que contiene más de una "
-"entrada de IVA definida"
+"El documento %(doc_name)s tiene una línea de producto %(line_name)s que "
+"contiene más de un impuesto del timbre definido"
 
 #. module: ptplus
 #. odoo-python
@@ -1741,19 +1702,15 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Document %s has a line of product %s that contains no VAT information. "
-#| "Please note that even when the VAT rate is zero, you're still obliged to "
-#| "define a VAT tax in the document line."
 msgid ""
 "Document %(name)s has a line of product %(line_name)s that contains no VAT. "
 "Please note that even when the VAT rate is zero, you're still obliged to "
 "define a VAT tax in the document line."
 msgstr ""
-"El documento %s tiene una línea de producto %s que no contiene información "
-"de IVA. Tenga en cuenta que incluso cuando el tipo de IVA es cero, todavía "
-"está obligado a definir un impuesto sobre el IVA en la línea del documento."
+"El documento %(name)s tiene una línea de producto %(line_name)s que no "
+"contiene IVA. Tenga en cuenta que incluso cuando el tipo de IVA es cero, "
+"todavía está obligado a definir un impuesto sobre el IVA en la línea del "
+"documento."
 
 #. module: ptplus
 #. odoo-python
@@ -4379,10 +4336,8 @@ msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_series_comm__finalize_last_number
-#, fuzzy
-#| msgid "Invalid document number %s"
 msgid "Last Document Number"
-msgstr "Número de documento inválido %s"
+msgstr "Último número de documento"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_account_bank_statement_line__last_state_update
@@ -5530,26 +5485,20 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid "Please add lines to document %s and try again"
 msgid "Please add lines to document %(doc_name)s and try again"
-msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
+msgstr "Por favor, añada líneas al documento %(doc_name)s e intente de nuevo"
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/wizards/webservice_series_comm.py:0
-#, fuzzy
-#| msgid "Please add lines to document %s and try again"
 msgid "Please change the search criteria and try again"
-msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
+msgstr "Por favor, cambie los criterios de búsqueda e inténtelo de nuevo"
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/wizards/dataport_import.py:0
-#, fuzzy
-#| msgid "Please add lines to document %s and try again"
 msgid "Please load the file to import and try again"
-msgstr "Por favor, añada líneas al documento %s e intente de nuevo"
+msgstr "Por favor, cargue el archivo a importar e inténtelo de nuevo"
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__l10n_pt_eco_tax_type__pneus
@@ -6850,16 +6799,12 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "Sequence '%s' is a duplicate of sequence '%s'. Please change the prefix "
-#| "(or code) and try again."
 msgid ""
 "Sequence '%(name)s' is a duplicate of sequence '%(dup_name)s'. Please change "
 "the prefix (or code) and try again."
 msgstr ""
-"La secuencia '%s' es un duplicado de la secuencia '%s'. Por favor, cambie el "
-"prefijo (o código) e inténtelo de nuevo."
+"La secuencia '%(name)s' es un duplicado de la secuencia '%(dup_name)s'. Por "
+"favor, cambie el prefijo (o código) e inténtelo de nuevo."
 
 #. module: ptplus
 #. odoo-python
@@ -7243,18 +7188,14 @@ msgstr "Tasa"
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/account_tax.py:0
-#, fuzzy
-#| msgid "Tax %s cannot have a %s tag."
 msgid "Tax %(name)s cannot have a %(prefix)s tag."
-msgstr "El impuesto %s no puede tener una etiqueta %s."
+msgstr "El impuesto %(name)s no puede tener una etiqueta %(prefix)s."
 
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/account_tax.py:0
-#, fuzzy
-#| msgid "Tax %s must have one and only %s tag."
 msgid "Tax %(name)s must have one and only %(prefix)s tag."
-msgstr "Lo impuesto %s debe tener una y sólo una etiqueta %s."
+msgstr "El impuesto %(name)s debe tener una y sólo una etiqueta %(prefix)s."
 
 #. module: ptplus
 #. odoo-python
@@ -7544,17 +7485,13 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/res_company.py:0
-#, fuzzy
-#| msgid ""
-#| "The value %s for the Accountant TIN does not seem to be valid. \n"
-#| "Note: the expected format is %s"
 msgid ""
 "The value %(acc_off_vat)s for the Accountant TIN does not seem to be "
 "valid. \n"
 "Note: the expected format is %(format)s"
 msgstr ""
-"El valor %s para el NIF del TOC no parece ser válido\n"
-"Nota: el formato esperado es %s"
+"El valor %(acc_off_vat)s para el NIF del TOC no parece ser válido\n"
+"Nota: el formato esperado es %(format)s"
 
 #. module: ptplus
 #. odoo-python
@@ -8336,18 +8273,14 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
-#, fuzzy
-#| msgid ""
-#| "You're trying to post a document which date (%s) is prior to the last of "
-#| "the same kind (%s). Please change document date to %s or later."
 msgid ""
 "You're trying to post a document which date (%(date)s) is prior to the last "
 "of the same kind (%(last_doc_name)s). Please change document date to "
 "%(last_doc_date)s or later."
 msgstr ""
-"Está intentando publicar un documento cuya fecha (%s) es anterior a la "
-"última de la misma clase (%s). Por favor, cambie la fecha del documento a %s "
-"o más tarde."
+"Está intentando publicar un documento cuya fecha (%(date)s) es anterior a "
+"la última de la misma clase (%(last_doc_name)s). Por favor, cambie la fecha "
+"del documento a %(last_doc_date)s o más tarde."
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__state__done

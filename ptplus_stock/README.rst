@@ -32,6 +32,22 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.10 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Delivery Slip (multi-way) report no longer registers its printed PDF as
+  a chatter attachment
+
+5.1.9 (2026-07-13)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Delivery Slip (multi-way) report only shows up in the print menu when
+  the picking has a source billing set
+
 5.1.8 (2026-07-07)
 ~~~~~~~~~~~~~~~~~~
 
