@@ -6,7 +6,7 @@
 
 {
     "name": "Portugal - Expenses",
-    "version": "19.0.1.3.0",
+    "version": "19.0.1.4.0",
     "license": "OPL-1",
     "depends": ["hr_expense", "sale_expense", "ptplus"],
     "author": "Exo Software",

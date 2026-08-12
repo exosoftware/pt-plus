@@ -93,11 +93,6 @@ msgid "Country Code"
 msgstr ""
 
 #. module: ptplus_expense
-#: model:ir.model,website_form_label:ptplus_expense.model_res_partner
-msgid "Create a Customer"
-msgstr ""
-
-#. module: ptplus_expense
 #. odoo-python
 #: code:addons/ptplus_expense/models/account_move.py:0
 #: model:ir.model.fields,field_description:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_move_id
@@ -146,6 +141,11 @@ msgid "Distance to HQ on partner '{partner}' cannot be negative."
 msgstr ""
 
 #. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: ptplus_expense
 #: model:ir.model.fields,help:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_partner_id
 #: model:ir.model.fields,help:ptplus_expense.field_account_move__l10n_pt_reimbursement_partner_id
 msgid ""
@@ -173,11 +173,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_expense.field_product_product__l10n_pt_expense_type
 #: model:ir.model.fields,field_description:ptplus_expense.field_product_template__l10n_pt_expense_type
 msgid "Expense Type"
-msgstr ""
-
-#. module: ptplus_expense
-#: model:ir.model,name:ptplus_expense.model_hr_employee
-msgid "Hr Employee"
 msgstr ""
 
 #. module: ptplus_expense
@@ -349,12 +344,6 @@ msgstr ""
 msgid ""
 "Round trip distance in Km from HQ to partner, to make travel expense "
 "tracking easier."
-msgstr ""
-
-#. module: ptplus_expense
-#. odoo-python
-#: code:addons/ptplus_expense/models/hr_expense.py:0
-msgid "Set the Vendor on the following expenses before posting: %s"
 msgstr ""
 
 #. module: ptplus_expense

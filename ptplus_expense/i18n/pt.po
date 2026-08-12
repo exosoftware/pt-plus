@@ -104,11 +104,6 @@ msgid "Country Code"
 msgstr "Código do País"
 
 #. module: ptplus_expense
-#: model:ir.model,website_form_label:ptplus_expense.model_res_partner
-msgid "Create a Customer"
-msgstr "Criar um Cliente"
-
-#. module: ptplus_expense
 #. odoo-python
 #: code:addons/ptplus_expense/models/account_move.py:0
 #: model:ir.model.fields,field_description:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_move_id
@@ -157,6 +152,11 @@ msgid "Distance to HQ on partner '{partner}' cannot be negative."
 msgstr "A Distância à Sede no parceiro '{partner}' não pode ser negativa."
 
 #. module: ptplus_expense
+#: model:ir.model,name:ptplus_expense.model_hr_employee
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: ptplus_expense
 #: model:ir.model.fields,help:ptplus_expense.field_account_bank_statement_line__l10n_pt_reimbursement_partner_id
 #: model:ir.model.fields,help:ptplus_expense.field_account_move__l10n_pt_reimbursement_partner_id
 msgid ""
@@ -189,11 +189,6 @@ msgstr "Reembolso de Despesas"
 #: model:ir.model.fields,field_description:ptplus_expense.field_product_template__l10n_pt_expense_type
 msgid "Expense Type"
 msgstr "Tipo de Despesa"
-
-#. module: ptplus_expense
-#: model:ir.model,name:ptplus_expense.model_hr_employee
-msgid "Hr Employee"
-msgstr "Funcionário"
 
 #. module: ptplus_expense
 #: model:ir.model.fields,field_description:ptplus_expense.field_account_move__id
@@ -376,12 +371,6 @@ msgid ""
 msgstr ""
 "Distância de ida e volta em Km da sede até ao parceiro, para facilitar o "
 "registo de despesas de viagem."
-
-#. module: ptplus_expense
-#. odoo-python
-#: code:addons/ptplus_expense/models/hr_expense.py:0
-msgid "Set the Vendor on the following expenses before posting: %s"
-msgstr "Defina o Fornecedor nas seguintes despesas antes de publicar: %s"
 
 #. module: ptplus_expense
 #: model:ir.model.fields,help:ptplus_expense.field_hr_expense__l10n_pt_country_code

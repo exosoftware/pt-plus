@@ -6,7 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-28 17:20+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -213,6 +212,19 @@ msgid "Cancelled"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid ""
+"Checked when this contact was created automatically from an E-Fatura "
+"document (import or QR code scan), out of the VAT number reported by the Tax "
+"Authority: its data may still be incomplete and should be reviewed."
+msgstr ""
+"Coché lorsque ce contact a été créé automatiquement à partir d'un document "
+"E-Fatura (importation ou lecture du code QR), sur la base du numéro de TVA "
+"communiqué par l'Autorité fiscale : ses données peuvent encore être "
+"incomplètes et doivent être vérifiées."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__color
 msgid "Color"
 msgstr ""
@@ -330,6 +342,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__create_uid
 msgid "Created by"
 msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid "Created by E-Fatura"
+msgstr "Créé par l'E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_date
@@ -866,10 +884,9 @@ msgid ""
 "it in the table, so it starts at the top."
 msgstr ""
 "Laissez vide pour appliquer cette correspondance à tous les fournisseurs. "
-"Une correspondance définie pour des fournisseurs précis n'a priorité sur "
-"une générique que lorsqu'elle est au-dessus d'elle dans la table, c'est "
-"pourquoi elle commence en haut."
-
+"Une correspondance définie pour des fournisseurs précis n'a priorité sur une "
+"générique que lorsqu'elle est au-dessus d'elle dans la table, c'est pourquoi "
+"elle commence en haut."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
@@ -1265,10 +1282,9 @@ msgid ""
 "Of the mappings that match an e-fatura line, the first one of the table "
 "applies: drag a mapping up to give it precedence."
 msgstr ""
-"Parmi les correspondances qui couvrent une ligne e-fatura, la première de "
-"la table s'applique : faites glisser une correspondance vers le haut pour "
-"lui donner priorité."
-
+"Parmi les correspondances qui couvrent une ligne e-fatura, la première de la "
+"table s'applique : faites glisser une correspondance vers le haut pour lui "
+"donner priorité."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__out
@@ -1393,6 +1409,11 @@ msgid ""
 msgstr ""
 "Type de taux déclaré sur la ligne e-fatura (taxa). Laissez vide pour "
 "correspondre à n'importe quel type de taux."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
+msgid "Ratings"
+msgstr "Évaluations"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__red

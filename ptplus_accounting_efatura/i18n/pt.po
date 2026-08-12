@@ -6,7 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-28 17:20+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_accounting_efatura/pt/>\n"
@@ -235,6 +234,19 @@ msgid "Cancelled"
 msgstr "Cancelada"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid ""
+"Checked when this contact was created automatically from an E-Fatura "
+"document (import or QR code scan), out of the VAT number reported by the Tax "
+"Authority: its data may still be incomplete and should be reviewed."
+msgstr ""
+"Assinalado quando este contacto foi criado automaticamente a partir de um "
+"documento do E-Fatura (importação ou leitura do código QR), com base no NIF "
+"comunicado pela Autoridade Tributária: os seus dados podem ainda estar "
+"incompletos e devem ser revistos."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__color
 msgid "Color"
 msgstr "Cor"
@@ -355,6 +367,12 @@ msgstr "Criar/Atualizar Faturas"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__create_uid
 msgid "Created by"
 msgstr "Criada por"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid "Created by E-Fatura"
+msgstr "Criado pelo E-Fatura"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_date
@@ -912,10 +930,8 @@ msgid ""
 "it in the table, so it starts at the top."
 msgstr ""
 "Deixe vazio para aplicar este mapeamento a todos os fornecedores. Um "
-"mapeamento definido para fornecedores específicos só tem precedência "
-"sobre um genérico quando está acima dele na tabela, por isso começa no "
-"topo."
-
+"mapeamento definido para fornecedores específicos só tem precedência sobre "
+"um genérico quando está acima dele na tabela, por isso começa no topo."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
@@ -1319,9 +1335,7 @@ msgid ""
 "applies: drag a mapping up to give it precedence."
 msgstr ""
 "Dos mapeamentos que correspondem a uma linha do e-fatura, aplica-se o "
-"primeiro da tabela: arraste um mapeamento para cima para lhe dar "
-"precedência."
-
+"primeiro da tabela: arraste um mapeamento para cima para lhe dar precedência."
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__out
@@ -1449,6 +1463,11 @@ msgid ""
 msgstr ""
 "Tipo de taxa reportado na linha do e-fatura (taxa). Deixe vazio para "
 "corresponder a qualquer tipo de taxa."
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
+msgid "Ratings"
+msgstr "Classificações"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__red

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_move_form_intrastat" model="ir.ui.view">
+        <field name="name">account.move.form.intrastat</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <field name="src_dest_country_id" position="after">
+                <field name="country_id" invisible="1" />
+                <field name="l10n_intrastat_region_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

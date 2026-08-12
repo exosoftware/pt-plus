@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_form_intrastat_wizard" model="ir.ui.view">
+        <field name="name">intrastat.wizard.form</field>
+        <field name="model">intrastat.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Export Intrastat">
+                <header>
+                    <field name="status" widget="statusbar" />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="year" readonly="status != 'start'" />
+                        <field name="month" readonly="status != 'start'" />
+                        <field name="report_type" readonly="status != 'start'" />
+                        <separator
+                            string="There's no Intrastat items in this selected period"
+                            invisible="not (status == 'completed' and not intrastat_line_ids)"
+                        />
+                        <separator
+                            string="Intrastat Lines"
+                            invisible="not (status == 'completed' and intrastat_line_ids)"
+                        />
+                    </group>
+                    <group>
+                        <group />
+                        <field
+                            name="intrastat_line_ids"
+                            invisible="not (status == 'completed' and intrastat_line_ids)"
+                        >
+                            <list>
+                                <field name="flux" />
+                                <field name="period" />
+                                <field name="company_vat" />
+                                <field name="product_name" />
+                                <field name="intrastat_id" />
+                                <field name="product_code" />
+                                <field name="product_id" />
+                                <field name="product_weight" />
+                                <field name="country_id" />
+                                <field name="origin_country_id" />
+                                <field name="intrastat_region_id" />
+                                <field name="incoterm_id" />
+                                <field name="intrastat_transaction_id" />
+                                <field name="transportation_id" />
+                                <field name="port_airport_id" />
+                                <field name="mass" />
+                                <field name="supply_units" />
+                                <field name="invoiced_value" />
+                                <field name="statistic_value" />
+                                <field name="partner_vat" />
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="calculate_intrastat"
+                        string="Next"
+                        type="object"
+                        class="btn-primary"
+                        invisible="status != 'start'"
+                    />
+                    <button
+                        string="Cancel"
+                        class="btn-default"
+                        special="cancel"
+                        invisible="status != 'start'"
+                    />
+                    <button
+                        string="Done"
+                        class="btn-primary"
+                        special="cancel"
+                        invisible="status == 'start'"
+                    />
+                    <button
+                        name="action_report_intrastat_url"
+                        string="Download CSV"
+                        type="object"
+                        class="btn-default"
+                        invisible="not (status == 'completed' and intrastat_line_ids)"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="list_intrastat_wizard_action" model="ir.actions.act_window">
+        <field name="name">Export Intrastat</field>
+        <field name="res_model">intrastat.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_form_intrastat_wizard" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="list_intrastat_account_wizard_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        name="Export Intrastat"
+        action="list_intrastat_wizard_action"
+        sequence="10"
+    />
+</odoo>

@@ -197,6 +197,15 @@ msgid "Cancelled"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid ""
+"Checked when this contact was created automatically from an E-Fatura "
+"document (import or QR code scan), out of the VAT number reported by the Tax"
+" Authority: its data may still be incomplete and should be reviewed."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__color
 msgid "Color"
 msgstr ""
@@ -311,6 +320,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__create_uid
 msgid "Created by"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_partner__l10n_pt_efatura_auto_created
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_users__l10n_pt_efatura_auto_created
+msgid "Created by E-Fatura"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1318,6 +1333,11 @@ msgstr ""
 msgid ""
 "Rate type reported by the e-fatura line (taxa). Leave empty to match any "
 "rate type."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
+msgid "Ratings"
 msgstr ""
 
 #. module: ptplus_accounting_efatura

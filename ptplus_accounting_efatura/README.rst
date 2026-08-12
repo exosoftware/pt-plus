@@ -70,6 +70,17 @@ Available soon.
 Changelog
 =========
 
+5.12.0 (2026-08-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- A contact created automatically by the E-Fatura process (import or QR code
+  scan) is now marked with the new "Created by E-Fatura" checkbox, in the
+  E-Fatura section of the contact form, so the contacts whose data still has to
+  be reviewed and completed can be told apart. The checkbox cannot be changed
+  by hand.
+
 5.11.1 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~~
 
