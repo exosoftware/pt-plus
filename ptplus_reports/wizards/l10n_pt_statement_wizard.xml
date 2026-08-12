@@ -16,9 +16,10 @@
                 <field name="show_button_export_xlsx" invisible="1" />
                 <field name="show_button_export_csv" invisible="1" />
                 <field name="show_button_export_webservice" invisible="1" />
+                <field name="show_button_ws_oa" invisible="1" />
                 <field name="show_button_print" invisible="1" />
                 <field name="show_button_mail" invisible="1" />
-                <group name="main">
+                <group name="main" invisible="state in ('done', 'submit')">
                     <group name="main_left">
                         <field
                             name="company_id"
@@ -40,17 +41,11 @@
                         />
                     </group>
                 </group>
-
-                <notebook invisible="state != 'analyze'" name="main_block">
-                    <!--Added by other reports -->
-                    <!--<page string="Tab 1" name="tab1">
-                        <field name="line_ids" nolabel="1" widget="many2many" colspan="3">
-                            <tree editable="bottom">
-                                <button name="action_view_details" type="object" string="View"/>
-                            </tree>
-                        </field>
-                    </page>-->
-                </notebook>
+                <group name="options" string="Options" invisible="state != 'analyze'">
+                    <group name="options_left" />
+                    <group name="options_right" />
+                </group>
+                <notebook invisible="state != 'analyze'" name="main_block" />
                 <div invisible="state != 'done'">
                     <h2>Export Complete</h2>
                     <p>
@@ -73,6 +68,114 @@
                 <group name="log_info" string="Log info" invisible="state != 'done'">
                     <field name="log_on_close" />
                     <field name="log_as_reported" />
+                </group>
+                <group
+                    name="webservice"
+                    string="Online Submission (AT)"
+                    invisible="state != 'submit'"
+                >
+                    <group name="ws_credentials">
+                        <field name="representative_user_status" />
+                        <field
+                            name="representative_user_id"
+                            invisible="representative_user_status"
+                            required="not representative_user_status"
+                            options="{'no_create': True}"
+                        />
+                        <field
+                            name="representative_user_password"
+                            password="True"
+                            invisible="representative_user_status"
+                            required="not representative_user_status"
+                        />
+                    </group>
+                    <group name="ws_options">
+                        <field name="accept_alerts" />
+                        <field name="get_proof" />
+                        <field
+                            name="ws_submission_ref"
+                            readonly="1"
+                            invisible="not ws_submission_ref"
+                        />
+                    </group>
+                    <div name="ws_actions" colspan="2" class="mt-2 mb-3">
+                        <button
+                            name="action_ws_validate"
+                            type="object"
+                            string="Validate online"
+                            title="Ask the Tax Authority to check the declaration for errors, without sending it."
+                            class="btn btn-secondary me-2"
+                        />
+                        <button
+                            name="action_ws_submit"
+                            type="object"
+                            string="Submit Online"
+                            title="Send the declaration to the Tax Authority. This is the official submission."
+                            class="btn btn-primary me-2"
+                            confirm="Submit the declaration to the AT?"
+                        />
+                    </div>
+                    <group name="ws_file" colspan="2">
+                        <field
+                            name="data"
+                            readonly="1"
+                            filename="filename"
+                            string="Declaration"
+                            invisible="not data"
+                        />
+                        <field name="proof_filename" invisible="1" />
+                        <field
+                            name="proof_data"
+                            readonly="1"
+                            filename="proof_filename"
+                            string="Submission proof"
+                            invisible="not proof_data"
+                        />
+                    </group>
+                    <div
+                        name="ws_oa_actions"
+                        colspan="2"
+                        class="mb-2"
+                        invisible="not show_button_ws_oa"
+                    >
+                        <button
+                            name="action_ws_consult"
+                            type="object"
+                            string="Consult"
+                            icon="fa-search"
+                            class="btn btn-link"
+                            title="See the declarations of this type already sent to the Tax Authority."
+                        />
+                        <button
+                            name="action_ws_get_proof"
+                            type="object"
+                            string="Get receipt"
+                            icon="fa-download"
+                            class="btn btn-link"
+                            title="Download the submission receipt (proof) from the Tax Authority."
+                            invisible="not ws_submission_ref"
+                        />
+                        <button
+                            name="action_ws_get_errors"
+                            type="object"
+                            string="Get errors"
+                            icon="fa-exclamation-triangle"
+                            class="btn btn-link"
+                            title="See the errors the Tax Authority found in the submitted declaration."
+                            invisible="not ws_submission_ref"
+                        />
+                    </div>
+                    <group name="ws_response" string="Response" colspan="2">
+                        <field name="error_code" invisible="not error_code" />
+                        <field name="error_message" invisible="not error_message" />
+                        <field
+                            name="warnings"
+                            readonly="1"
+                            widget="html"
+                            nolabel="1"
+                            colspan="2"
+                        />
+                    </group>
                 </group>
                 <footer>
                     <button
@@ -118,10 +221,11 @@
                         invisible="not show_button_export_csv or state != 'analyze'"
                     />
                     <button
-                        name="export_webservice"
+                        name="action_goto_submit"
                         type="object"
                         class="oe_highlight"
-                        string="Export Webservice"
+                        string="Submit Online"
+                        title="Go to the online submission to send this declaration to the Tax Authority."
                         invisible="not show_button_export_webservice or state != 'analyze'"
                     />
                     <button
@@ -144,22 +248,22 @@
                         class="btn-secondary"
                         special="cancel"
                         data-hotkey="z"
-                        invisible="state == 'done'"
+                        invisible="state in ('done', 'submit')"
                     />
 
                     <button
                         name="go_back"
                         type="object"
                         string="Previous"
-                        class="btn-primary"
-                        invisible="state != 'done'"
+                        class="btn-secondary"
+                        invisible="state not in ('done', 'submit')"
                     />
 
                     <button
                         name="close"
                         type="object"
                         string="Close"
-                        invisible="state != 'done'"
+                        invisible="state not in ('done', 'submit')"
                     />
                 </footer>
             </form>

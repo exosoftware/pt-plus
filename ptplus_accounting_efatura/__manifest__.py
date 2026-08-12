@@ -10,10 +10,10 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "18.0.5.3.0",
-    "depends": ["ptplus"],
+    "version": "18.0.5.5.1",
+    "depends": ["ptplus", "ptplus_expense"],
     "external_dependencies": {
-        "python": ["bs4", "requests_html", "pymupdf", "pyzbar", "html5lib"],
+        "python": ["bs4", "requests_html", "pymupdf", "html5lib"],
     },
     "data": [
         "security/ir.model.access.csv",
@@ -21,6 +21,7 @@
         "views/l10n_pt_account_efatura.xml",
         "views/res_partner_views.xml",
         "views/account_move_views.xml",
+        "views/hr_expense_views.xml",
         "views/res_config_views.xml",
         "wizards/l10n_pt_dataport_import_efatura.xml",
         "wizards/l10n_pt_account_move_efatura.xml",

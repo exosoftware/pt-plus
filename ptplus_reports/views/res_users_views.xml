@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_users_form_pt_toc" model="ir.ui.view">
+        <field name="name">res.users.form.pt.toc</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="ptplus.view_users_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_auth_password']" position="after">
+                <field name="toc_auth_status" />
+                <field
+                    name="toc_auth_username"
+                    string="TOC Username"
+                    invisible="not toc_auth_status"
+                    required="toc_auth_status"
+                />
+                <field
+                    name="toc_auth_password"
+                    string="TOC Password"
+                    password="True"
+                    invisible="not toc_auth_status"
+                    required="toc_auth_status"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_users_form_simple_modif_pt_toc" model="ir.ui.view">
+        <field name="name">res.users.preferences.form.pt.toc</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="ptplus.view_users_form_simple_modif_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_auth_password']" position="after">
+                <field name="toc_auth_status" />
+                <field
+                    name="toc_auth_username"
+                    string="TOC Username"
+                    invisible="not toc_auth_status"
+                    required="toc_auth_status"
+                />
+                <field
+                    name="toc_auth_password"
+                    string="TOC Password"
+                    password="True"
+                    invisible="not toc_auth_status"
+                    required="toc_auth_status"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

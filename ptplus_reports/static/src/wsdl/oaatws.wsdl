@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:tns="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+        xmlns:beans="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+        xmlns:gdns="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        name="GestaoDeclarativaOAWebService"
+        targetNamespace="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021">
+
+    <wsdl:types>
+        <xsd:schema targetNamespace="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/2021"
+                        schemaLocation="oaatws.xsd"/>
+            <xsd:import namespace="https://servicos.portaldasfinancas.gov.pt/GestaoDeclarativaWebService/2021/beans"
+                        schemaLocation="gestaoDeclarativa.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="submeterDeclaracaoRequest">
+        <wsdl:part element="beans:submeterDeclaracaoRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="submeterDeclaracaoResponse">
+        <wsdl:part element="beans:submeterDeclaracaoResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="validarDeclaracaoRequest">
+        <wsdl:part element="beans:validarDeclaracaoRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="validarDeclaracaoResponse">
+        <wsdl:part element="beans:validarDeclaracaoResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="consultarDeclaracoesRequest">
+        <wsdl:part element="beans:consultarDeclaracoesRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="consultarDeclaracoesResponse">
+        <wsdl:part element="beans:consultarDeclaracoesResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="obterComprovativoRequest">
+        <wsdl:part element="beans:obterComprovativoRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="obterComprovativoResponse">
+        <wsdl:part element="beans:obterComprovativoResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="obterErrosRequest">
+        <wsdl:part element="beans:obterErrosRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="obterErrosResponse">
+        <wsdl:part element="beans:obterErrosResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="obterReferenciaPagamentoRequest">
+        <wsdl:part element="beans:obterReferenciaPagamentoRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="obterReferenciaPagamentoResponse">
+        <wsdl:part element="beans:obterReferenciaPagamentoResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="obterPrePreenchimentoRequest">
+        <wsdl:part element="beans:obterPrePreenchimentoRequest" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="obterPrePreenchimentoResponse">
+        <wsdl:part element="beans:obterPrePreenchimentoResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="AutenticationFault">
+        <wsdl:part element="gdns:AutenticationException" name="fault"/>
+    </wsdl:message>
+
+    <wsdl:portType name="GestaoDeclarativaOA">
+        <wsdl:operation name="submeterDeclaracao">
+            <wsdl:input message="tns:submeterDeclaracaoRequest" />
+            <wsdl:output message="tns:submeterDeclaracaoResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="validarDeclaracao">
+            <wsdl:input message="tns:validarDeclaracaoRequest" />
+            <wsdl:output message="tns:validarDeclaracaoResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="consultarDeclaracoes">
+            <wsdl:input message="tns:consultarDeclaracoesRequest" />
+            <wsdl:output message="tns:consultarDeclaracoesResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="obterComprovativo">
+            <wsdl:input message="tns:obterComprovativoRequest" />
+            <wsdl:output message="tns:obterComprovativoResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="obterErrosDeclaracao">
+            <wsdl:input message="tns:obterErrosRequest" />
+            <wsdl:output message="tns:obterErrosResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="obterReferenciaPagamento">
+            <wsdl:input message="tns:obterReferenciaPagamentoRequest" />
+            <wsdl:output message="tns:obterReferenciaPagamentoResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="obterPrePreenchimento">
+            <wsdl:input message="tns:obterPrePreenchimentoRequest" />
+            <wsdl:output message="tns:obterPrePreenchimentoResponse" />
+            <wsdl:fault message="tns:AutenticationFault" name="AutenticationFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="GestaoDeclarativaOAWebServicePortBinding" type="tns:GestaoDeclarativaOA">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="submeterDeclaracao">
+            <soap:operation soapAction="tns:submeterDeclaracao"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validarDeclaracao">
+            <soap:operation soapAction="tns:validarDeclaracao"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="consultarDeclaracoes">
+            <soap:operation soapAction="tns:consultarDeclaracoes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterComprovativo">
+            <soap:operation soapAction="tns:obterComprovativo"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterErrosDeclaracao">
+            <soap:operation soapAction="tns:obterErrosDeclaracao"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterReferenciaPagamento">
+            <soap:operation soapAction="tns:obterReferenciaPagamento"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterPrePreenchimento">
+            <soap:operation soapAction="tns:obterPrePreenchimento"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticationFault">
+                <soap:fault name="AutenticationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="GestaoDeclarativaOAWebService">
+        <wsdl:port binding="tns:GestaoDeclarativaOAWebServicePortBinding" name="GestaoDeclarativaOAPort">
+            <soap:address location="https://servicos.portaldasfinancas.gov.pt/oaatws/GestaoDeclarativaOAWebService/"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

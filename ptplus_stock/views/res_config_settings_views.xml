@@ -22,6 +22,12 @@
                             <field name="l10n_pt_multiway_tag_deliveryslip" />
                         </div>
                     </setting>
+                    <setting
+                        help="Define whether to report Work in Progress Products in the Inventory Statement (when Production is installed)"
+                        string="Report WIP in Inventory Statement"
+                    >
+                        <field name="show_wip_in_inventory_statement" />
+                    </setting>
                 </block>
             </xpath>
         </field>

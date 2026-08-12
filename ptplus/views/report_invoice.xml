@@ -112,9 +112,13 @@
             expr="//t[@name='account_invoice_line_accountable']"
             position="attributes"
         >
+            <t
+                t-set="is_downpayment"
+                t-value="'is_downpayment' in line._fields and line.is_downpayment"
+            />
             <attribute
                 name="t-if"
-            >line.display_type == 'product' and (not o.source_billing or line.is_downpayment or (o.source_billing and line.price_subtotal &gt;= 0))</attribute>
+            >line.display_type == 'product' and (not o.source_billing or is_downpayment or (o.source_billing and line.price_subtotal &gt;= 0))</attribute>
         </xpath>
 
         <!--New summary table to display discounts-->
@@ -194,17 +198,6 @@
                     <span t-out="exempt_tax.pt_get_vat_exemption_reason_text()" />
                 </t>
             </p>
-            <div
-                id="company_currency_total"
-                t-if="o.source_billing and o.currency_id != o.company_currency_id"
-            >
-                <t t-set="doc_totals" t-value="o.l10n_pt_get_document_totals()" />
-                <span>Total in EUR: </span>
-                <span
-                    t-out="doc_totals[2]"
-                    t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'
-                />
-            </div>
         </xpath>
 
         <!-- A place for PT extras -->

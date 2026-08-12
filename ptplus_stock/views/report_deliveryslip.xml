@@ -38,18 +38,15 @@
             <div
                 class="col-7"
                 name="loading"
-                style="font-size: x-small;"
-                t-if="o.source_billing"
+                style="font-size: small;"
+                t-if="o.source_billing and shipfrom_partner and (shipfrom_partner != partner)"
             >
-                <div t-if="o.picking_type_id.code=='outgoing' and partner">
+                <div>
                     <span>
                         <strong>Loading:</strong>
                     </span>
                 </div>
-                <div
-                    t-if="shipfrom_partner and (shipfrom_partner != partner)"
-                    name="shipfrom_partner_header"
-                >
+                <div name="shipfrom_partner_header">
                     <div
                         t-out="shipfrom_partner"
                         t-options='{"widget": "contact", "fields": ["address", "phone"], "no_marker": True, "phone_icons": True}'
@@ -72,17 +69,14 @@
                 class="col-7"
                 name="unloading"
                 style="font-size: small;"
-                t-if="o.source_billing"
+                t-if="o.source_billing and shipto_partner"
             >
-                <div t-if="o.picking_type_id.code=='outgoing' and partner">
+                <div>
                     <span>
                         <strong>Unloading:</strong>
                     </span>
                 </div>
-                <div
-                    t-if="shipto_partner and (shipto_partner != partner)"
-                    name="shipto_partner_header"
-                >
+                <div name="shipto_partner_header">
                     <div
                         t-out="shipto_partner"
                         t-options='{"widget": "contact", "fields": ["address", "phone"], "no_marker": True, "phone_icons": True}'
@@ -137,31 +131,34 @@
                 </div>
             </div>
 
-            <div id="informations" class="row mt32 mb32">
+            <div
+                id="informations"
+                class="report-wrapping-flexbox clearfix row mt32 mb32"
+            >
                 <div t-if="o.l10n_pt_date_issued" class="col col-3 mw-100 mb-2">
-                    <strong>Date</strong>
+                    <strong>Date:</strong>
                     <div t-field="o.l10n_pt_date_issued" class="m-0" />
                 </div>
                 <!-- Add Vat No. -->
-                <div t-if="partner.vat" class="col col-3 mw-100 mb-2">
-                    <strong>
-                        <t t-out="o.company_id.country_id.vat_label or 'Tax ID'" />
-                    </strong>
+                <div t-if="partner and partner.vat" class="col col-3 mw-100 mb-2">
+                    <strong><t
+                        t-out="o.company_id.country_id.vat_label or 'Tax ID'"
+                    />:</strong>
                     <div t-out="partner.pt_get_vat()" class="m-0" />
                 </div>
                 <div
                     t-if="o.sudo().sale_id.client_order_ref"
                     class="col col-3 mw-100 mb-2"
                 >
-                    <strong>Your Ref.</strong>
+                    <strong>Your Ref.:</strong>
                     <div t-field="o.sudo().sale_id.client_order_ref" class="m-0" />
                 </div>
                 <div t-if="o.l10n_pt_license_plate" class="col col-3 mw-100 mb-2">
-                    <strong>Lic. Plate</strong>
+                    <strong>Lic. Plate:</strong>
                     <div t-field="o.l10n_pt_license_plate" class="m-0" />
                 </div>
                 <div t-if="o.l10n_pt_delivery_code" class="col col-3 mw-100 mb-2">
-                    <strong>Tax Authority Code</strong>
+                    <strong>Tax Authority Code:</strong>
                     <div t-field="o.l10n_pt_delivery_code" class="m-0" />
                 </div>
             </div>

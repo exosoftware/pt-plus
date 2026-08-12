@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t
+        t-name="ptplus_accounting_reports.FilterExtraOptions"
+        t-inherit="account_reports.AccountReportFilterExtraOptions"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//t[@t-if='controller.filters.show_all']" position="after">
+            <t t-if="controller.filters.unfold_partners">
+                <DropdownItem
+                    class="{ 'selected': controller.options.unfold_partners }"
+                    onSelected="() => this.filterClicked({ optionKey: 'unfold_partners', reload: true})"
+                >
+                    Unfold Partners
+                </DropdownItem>
+            </t>
+
+            <t t-if="controller.filters.show_partner_breakdown">
+                <DropdownItem
+                    class="{ 'selected': controller.options.show_partner_breakdown }"
+                    onSelected="() => this.filterClicked({ optionKey: 'show_partner_breakdown', reload: true})"
+                >
+                    Show Partner Breakdown
+                </DropdownItem>
+            </t>
+        </xpath>
+        <xpath
+            expr="//t[@t-if='controller.filters.show_all']/DropdownItem"
+            position="replace"
+        >
+            <DropdownItem
+                class="{ 'filter_show_all_hook': true, 'selected': controller.options.unfold_all }"
+                onSelected="() => this.filterClicked({ optionKey: 'unfold_all', reload: true})"
+                closingMode="'none'"
+            >
+                Unfold Accounting
+            </DropdownItem>
+        </xpath>
+    </t>
+</templates>

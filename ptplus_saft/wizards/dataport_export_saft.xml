@@ -6,12 +6,15 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="ptplus.dataport_export_form" />
         <field name="arch" type="xml">
-            <field name="company_id" position="after">
+            <xpath
+                expr="//group[@id='main_export_group']//field[@name='company_id']"
+                position="after"
+            >
                 <field name="is_installed_accounting" invisible="1" />
                 <field name="company_id" invisible="1" />
                 <field name="type" invisible="not is_installed_accounting" />
                 <field name="l10n_pt_saft_computing_method" invisible="1" />
-            </field>
+            </xpath>
 
             <field name="validate" position="attributes">
                 <attribute

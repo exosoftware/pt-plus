@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- The SDR / Volta deposit is a charge that follows the order, not a
+         delivered item. As a service, a "delivered quantities" policy would
+         never be invoiced (no delivery is ever created for it), so the
+         deposit line would not reach invoices generated from sales orders.
+         Pin the policy to "ordered quantities".
+
+         This lives in ptplus_sdr_sale (not ptplus_sdr) because invoice_policy
+         is provided by the sale module, which ptplus_sdr does not depend on. -->
+    <record id="ptplus_sdr.product_sdr_volta" model="product.template">
+        <field name="invoice_policy">order</field>
+    </record>
+</odoo>

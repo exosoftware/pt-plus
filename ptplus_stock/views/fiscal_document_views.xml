@@ -18,10 +18,12 @@
         <field name="inherit_id" ref="ptplus.fiscal_document_type_view_form" />
         <field name="arch" type="xml">
             <field name="section" position="after">
+                <field name="l10n_pt_picking_type_domain" invisible="1" />
                 <field
                     name="picking_type_ids"
                     widget="many2many_tags"
                     invisible="section != 'stock'"
+                    domain="l10n_pt_picking_type_domain"
                     options="{'no_create_edit': True}"
                 />
             </field>

@@ -34,44 +34,6 @@ if records:
                     />
                     <div class="mt16 text-muted" groups="base.group_no_one">
                         <label
-                            for="l10n_pt_use_own_credentials"
-                            string="Use My Own Credentials"
-                            class="col-4 o_light_label"
-                        />
-                        <field name="l10n_pt_use_own_credentials" />
-                    </div>
-                    <field name="l10n_pt_use_own_credentials" invisible="1" />
-                    <div class="mt16 text-muted">
-                        <div invisible="not l10n_pt_use_own_credentials">
-                            <label
-                                for="l10n_pt_digitalsign_client_id"
-                                string="Client ID"
-                                class="col-4 o_light_label"
-                            />
-                            <field
-                                name="l10n_pt_digitalsign_client_id"
-                                required="enable_signatures and l10n_pt_use_own_credentials"
-                            />
-
-                            <label
-                                for="l10n_pt_digitalsign_client_secret"
-                                class="col-4 o_light_label"
-                            />
-                            <field
-                                name="l10n_pt_digitalsign_client_secret"
-                                required="enable_signatures and l10n_pt_use_own_credentials"
-                            />
-                            <label
-                                for="l10n_pt_digitalsign_redirect_uri"
-                                class="col-4 o_light_label"
-                            />
-                            <field
-                                name="l10n_pt_digitalsign_redirect_uri"
-                                required="enable_signatures and l10n_pt_use_own_credentials"
-                            />
-                        </div>
-
-                        <label
                             for="l10n_pt_digitalsign_authorizer_id"
                             class="col-4 o_light_label"
                         />

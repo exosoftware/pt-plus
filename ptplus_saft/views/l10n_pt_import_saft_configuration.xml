@@ -11,18 +11,49 @@
                         string="Process File"
                         type="object"
                         class="btn-primary"
-                        invisible="state == 'done'"
+                        invisible="state != 'configuration' or import_running"
                     />
                     <button
                         name="action_write_records"
                         string="Create/Update Records"
                         type="object"
                         class="btn-primary"
-                        invisible="state not in ['processed', 'error']"
+                        invisible="state not in ['processed', 'error'] or import_running"
                     />
-                    <field name="state" widget="statusbar" />
+                    <button
+                        name="action_reset_import"
+                        string="Reset"
+                        type="object"
+                        confirm="This clears every staged line of this import so a new SAF-T file can be processed. Records already created in Odoo are not touched. Continue?"
+                        invisible="state not in ['processed', 'error', 'done'] or import_running"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="configuration,processing,processed,done"
+                    />
                 </header>
                 <sheet>
+                    <div
+                        class="alert alert-warning d-flex align-items-center"
+                        role="alert"
+                        invisible="not import_running"
+                    >
+                        <i class="fa fa-spinner fa-spin me-2" title="Processing" />
+                        <field
+                            name="import_progress"
+                            nolabel="1"
+                            readonly="1"
+                            widget="saft_import_progress"
+                        />
+                    </div>
+                    <div
+                        class="alert alert-info"
+                        role="alert"
+                        invisible="not import_progress or import_running"
+                    >
+                        <field name="import_progress" nolabel="1" readonly="1" />
+                    </div>
                     <div class="oe_button_box" name="button_box">
                         <button
                             class="oe_stat_button"
@@ -143,6 +174,20 @@
                                 widget="statinfo"
                             />
                         </button>
+                        <button
+                            class="oe_stat_button text-danger"
+                            type="object"
+                            name="action_view_error_imports"
+                            icon="fa-exclamation-triangle"
+                            invisible="errors_count == 0"
+                            help="Records that could not be imported"
+                        >
+                            <field
+                                name="errors_count"
+                                string="Errors"
+                                widget="statinfo"
+                            />
+                        </button>
                     </div>
                     <div class="oe_title">
                         <label for="name" />
@@ -154,10 +199,7 @@
                         <group id="header_group_left">
                             <field name="company_id" />
                             <field name="disable_accounts" />
-                            <field
-                                name="default_ignore"
-                                string="Ignore Default Value"
-                            />
+                            <field name="default_ignore" string="Ignore By Value" />
                             <label for="date_start" string="Date Range" />
                             <div>
                                 <field
@@ -175,6 +217,7 @@
                                 widget="binary"
                                 string="File"
                                 filename="saft_filename"
+                                readonly="import_running"
                             />
 
                             <separator string="Records to Import" />
@@ -316,10 +359,32 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="import_saft_configuration_list_view">
+        <field name="name">import.saft.configuration.list</field>
+        <field name="model">l10n_pt.import.saft.configuration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="company_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="saft_filename" optional="show" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state == 'done'"
+                    decoration-danger="state == 'error'"
+                    decoration-warning="state == 'processing'"
+                    decoration-info="state == 'processed'"
+                />
+            </list>
+        </field>
+    </record>
+
     <record id="action_import_saft_configuration_view" model="ir.actions.act_window">
-        <field name="name">Import SAFT-T</field>
+        <field name="name">Import SAF-T</field>
         <field name="res_model">l10n_pt.import.saft.configuration</field>
-        <field name="view_mode">kanban,form</field>
+        <field name="view_mode">kanban,list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No data yet!

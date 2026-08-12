@@ -45,18 +45,27 @@ Available soon.
 Changelog
 =========
 
-5.0.1 (2023-11-16)
+5.1.7 (2026-04-13)
 ~~~~~~~~~~~~~~~~~~~
 
-**Features**
+- Add refund amount in periodic statement, allowing partial refunds.
 
-- Initial changelog
+5.1.5 (2023-11-16)
+~~~~~~~~~~~~~~~~~~~
+
+- Add missing 'anexoR' tag in DP IVA's XML extraction.
 
 5.0.2 (2024-03-11)
 ~~~~~~~~~~~~~~~~~~~
 
 - VAT periodic report fields no. 18 and 19 now add the correct tag values plus the manual value introduced in the wizard. Manual fields are to be removed later.
 
+5.0.1 (2023-11-16)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Initial changelog
 
 Credits
 =======

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="intrastat_report_pt" model="account.report">
+        <field name="name">Intrastat PT</field>
+        <field name="root_report_id" ref="account_intrastat.intrastat_report" />
+        <field name="sequence" eval="30" />
+        <field
+            name="custom_handler_model_id"
+            ref="model_account_intrastat_pt_report_handler"
+        />
+        <field name="load_more_limit" eval="80" />
+        <field name="column_ids">
+            <record id="intrastat_report_column_flux" model="account.report.column">
+                <field name="name">Flux</field>
+                <field name="expression_label">flux</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_period" model="account.report.column">
+                <field name="name">Period</field>
+                <field name="expression_label">period</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_partner_vat"
+                model="account.report.column"
+            >
+                <field name="name">NIF</field>
+                <field name="expression_label">partner_vat</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_ref" model="account.report.column">
+                <field name="name">Reference</field>
+                <field name="expression_label">reference</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_commodity_code"
+                model="account.report.column"
+            >
+                <field name="name">Commodity</field>
+                <field name="expression_label">commodity_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_country_code"
+                model="account.report.column"
+            >
+                <field name="name">Country</field>
+                <field name="expression_label">country_name</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_product_origin_country"
+                model="account.report.column"
+            >
+                <field name="name">Origin Country</field>
+                <field
+                    name="expression_label"
+                >intrastat_product_origin_country_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_region_code"
+                model="account.report.column"
+            >
+                <field name="name">Region</field>
+                <field name="expression_label">region_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_incoterm_code"
+                model="account.report.column"
+            >
+                <field name="name">Incoterm</field>
+                <field name="expression_label">incoterm_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_transaction_nature"
+                model="account.report.column"
+            >
+                <field name="name">Transaction</field>
+                <field name="expression_label">transaction_nature</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_transport_code"
+                model="account.report.column"
+            >
+                <field name="name">Transport</field>
+                <field name="expression_label">transport_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_port_airport_code"
+                model="account.report.column"
+            >
+                <field name="name">Port / Airport</field>
+                <field name="expression_label">port_airport_code</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_weight" model="account.report.column">
+                <field name="name">Weight</field>
+                <field name="expression_label">weight</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record
+                id="intrastat_report_column_supplementary_units"
+                model="account.report.column"
+            >
+                <field name="name">Supplementary Units</field>
+                <field name="expression_label">supplementary_units</field>
+                <field name="figure_type">string</field>
+            </record>
+            <record id="intrastat_report_column_value" model="account.report.column">
+                <field name="name">Value</field>
+                <field name="expression_label">value</field>
+            </record>
+            <record
+                id="intrastat_report_column_services_value"
+                model="account.report.column"
+            >
+                <field name="name">In Currency</field>
+                <field name="expression_label">value_currency</field>
+                <field name="blank_if_zero" eval="True" />
+            </record>
+            <record id="intrastat_report_column_adqnif" model="account.report.column">
+                <field name="name">Purchaser VAT</field>
+                <field name="expression_label">adqnif</field>
+                <field name="figure_type">string</field>
+                <field name="blank_if_zero" eval="True" />
+            </record>
+        </field>
+        <field name="line_ids">
+            <record id="intrastat_line" model="account.report.line">
+                <field name="name">Intrastat</field>
+                <field name="groupby">intrastat_grouping, id</field>
+                <field name="foldable" eval="False" />
+                <field name="expression_ids">
+                    <record
+                        id="intrastat_report_line_flux"
+                        model="account.report.expression"
+                    >
+                        <field name="label">flux</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">flux</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_period"
+                        model="account.report.expression"
+                    >
+                        <field name="label">period</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">period</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_partner_vat"
+                        model="account.report.expression"
+                    >
+                        <field name="label">partner_vat</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">partner_vat</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_ref"
+                        model="account.report.expression"
+                    >
+                        <field name="label">reference</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">reference</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_commodity_code"
+                        model="account.report.expression"
+                    >
+                        <field name="label">commodity_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">commodity_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_country_test"
+                        model="account.report.expression"
+                    >
+                        <field name="label">country_name</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">country_name</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_product_origin_country"
+                        model="account.report.expression"
+                    >
+                        <field
+                            name="label"
+                        >intrastat_product_origin_country_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field
+                            name="subformula"
+                        >intrastat_product_origin_country_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_region_code"
+                        model="account.report.expression"
+                    >
+                        <field name="label">region_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">region_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_incoterm_code"
+                        model="account.report.expression"
+                    >
+                        <field name="label">incoterm_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">incoterm_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_transaction_nature"
+                        model="account.report.expression"
+                    >
+                        <field name="label">transaction_nature</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">transaction_nature</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_transport_code"
+                        model="account.report.expression"
+                    >
+                        <field name="label">transport_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">transport_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_port_airport_code"
+                        model="account.report.expression"
+                    >
+                        <field name="label">port_airport_code</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">port_airport_code</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_weight"
+                        model="account.report.expression"
+                    >
+                        <field name="label">weight</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">weight</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_supplementary_units"
+                        model="account.report.expression"
+                    >
+                        <field name="label">supplementary_units</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">supplementary_units</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_value"
+                        model="account.report.expression"
+                    >
+                        <field name="label">value</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">value</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_value_currency"
+                        model="account.report.expression"
+                    >
+                        <field name="label">value_currency</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">value_currency</field>
+                    </record>
+                    <record
+                        id="intrastat_report_line_adqnif"
+                        model="account.report.expression"
+                    >
+                        <field name="label">adqnif</field>
+                        <field name="engine">custom</field>
+                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="subformula">adqnif</field>
+                    </record>
+                </field>
+            </record>
+        </field>
+    </record>
+</odoo>

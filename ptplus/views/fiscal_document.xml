@@ -118,6 +118,14 @@
                         help="Start a wizard to communicate that this series has reached the end of its lifecycle"
                         invisible="state != 'running'"
                     />
+                    <button
+                        name="action_set_running"
+                        string="Set Running"
+                        type="object"
+                        groups="account.group_account_manager"
+                        help="Set this series directly as running, without registering it"
+                        invisible="state == 'running' or source_billing != 'I'"
+                    />
                     <field
                         name="state"
                         widget="statusbar"

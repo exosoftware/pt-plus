@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_intrastat_line_list" model="ir.ui.view">
+        <field name="name">intrastat.line.list</field>
+        <field name="model">intrastat.line</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="display_name" column_invisible="1" />
+                <field name="flux" />
+                <field name="period" />
+                <field name="company_vat" />
+                <field name="product_name" />
+                <field name="intrastat_id" />
+                <field name="product_code" />
+                <field name="product_id" />
+                <field name="product_weight" />
+                <field name="country_id" />
+                <field name="origin_country_id" />
+                <field name="intrastat_region_id" />
+                <field name="incoterm_id" />
+                <field name="intrastat_transaction_id" />
+                <field name="transportation_id" />
+                <field name="port_airport_id" />
+                <field name="mass" />
+                <field name="supply_units" />
+                <field name="invoiced_value" />
+                <field name="statistic_value" />
+                <field name="partner_vat" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_intrastat_line_form" model="ir.ui.view">
+        <field name="name">intrastat.line.form</field>
+        <field name="model">intrastat.line</field>
+        <field name="arch" type="xml">
+            <form string="Intrastat Purchases">
+                <sheet>
+                    <group>
+                        <field name="display_name" invisible="1" />
+                        <group>
+                            <field name="flux" />
+                            <field name="period" />
+                        </group>
+                        <group>
+                            <field name="company_vat" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="intrastat_id" />
+                            <field name="product_id" />
+                        </group>
+                        <group>
+                            <field name="product_name" />
+                            <field name="product_code" />
+                            <field name="product_weight" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="country_id" />
+                            <field name="origin_country_id" />
+                            <field name="intrastat_region_id" />
+                            <field name="incoterm_id" />
+                            <field name="intrastat_transaction_id" />
+                            <field name="transportation_id" />
+                            <field name="port_airport_id" />
+                        </group>
+                        <group>
+                            <field name="supply_units" />
+                            <field name="mass" />
+                            <field name="invoiced_value" />
+                            <field name="statistic_value" />
+                            <field name="account_move_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

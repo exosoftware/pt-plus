@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_cope_document">
+        <t t-call="web.internal_layout">
+            <t t-foreach="docs" t-as="wizard">
+                <div class="page">
+                    <p>
+                        <br />
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                    <h4>Document: Resume COPE (to XML)</h4>
+                    <br />
+
+                    <p>
+                        <strong>NIPC: <t t-out="wizard.company_id.vat" /></strong>
+                        <br />
+                        <strong>Year: <t t-out="wizard.date_from.year" /></strong>
+                        <br />
+                        <strong>Month: <t t-out="wizard.date_from.month" /></strong>
+                    </p>
+
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">ID record (id_reg)</th>
+                                <th class="text-left">Operation date (data_ref)</th>
+                                <th class="text-left">Nature (nature)</th>
+                                <th class="text-left">NPC 2º intervener (npc2) </th>
+                                <th style="text-align: right;">Amount (amount)</th>
+                                <th class="text-left">Currency (currency)</th>
+                                <th
+                                    class="text-left"
+                                >Stat. Classification (cod_estat)</th>
+                                <th class="text-left">Type value (type_value)</th>
+                                <th class="text-left">Type account (type_account)</th>
+                                <th class="text-left">ID Bank (id_bank)</th>
+                                <th
+                                    class="text-left"
+                                >Country account (country_account)</th>
+                                <th
+                                    class="text-left"
+                                >Counterpart country (country_counterp)</th>
+                                <th
+                                    class="text-left"
+                                >Financial country (country_ative)</th>
+                                <th class="text-left">Date due (date_due)</th>
+                                <th class="text-left">Counterpart (counterpart)</th>
+                                <th class="text-left">Observations (observations)</th>
+                                <!--                         <th class="text-left">Ref.invoice</th> -->
+                            </tr>
+                        </thead>
+                        <t t-if="wizard.group_lines">
+                            <!--                                <t t-set="i" t-value="1"/>-->
+                            <t
+                                t-foreach="wizard._compute_move_lines(wizard.id, wizard.group_lines).items()"
+                                t-as="catline"
+                            >
+                                <t t-if="catline[0] == 'special_ES'">
+                                    <tr t-foreach="catline[1]" t-as="moveline">
+                                        <td class="text-left">
+                                            <span t-esc="moveline['id_reg']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['data_ref']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['natureza']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['npc2']" />
+                                        </td>
+                                        <td style="text-align: right;">
+                                            <span
+                                                t-esc="_formatLang(moveline['montante'],digits=2 )"
+                                            />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['divisa']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['cod_estat']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['tipo_valor']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['tipo_conta']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['id_banco']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['pais_conta']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span
+                                                t-esc="moveline['pais_contraparte']"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="moveline['pais_ativo']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['data_vencim']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['contraparte']" />
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="moveline['observacoes']" />
+                                        </td>
+                                        <!-- <td class="text-left">
+                                                <span t-esc="moveline['ref_invoice']"/>
+                                            </td> -->
+                                    </tr>
+                                </t>
+
+                                <t t-if="catline[0] != 'special_ES'">
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span
+                                                    style="white-space: nowrap;"
+                                                >Category <span t-esc="i" /></span>
+                                            </strong>
+                                        </td>
+                                        <td />
+                                        <td />
+                                        <td />
+
+                                        <!-- amount -->
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="_formatLang(catline[1],digits=2 )"
+                                            />
+                                        </td>
+
+                                        <!-- divisa -->
+                                        <td class="text-left">
+                                            <span
+                                                t-if="catline[0].split(',')[0]"
+                                                t-esc="catline[0].split(',')[0]"
+                                            />
+                                        </td>
+
+                                        <!-- cod_estat-->
+                                        <td class="text-left">
+                                            <span
+                                                t-if="catline[0].split(',')[1]"
+                                                t-esc="catline[0].split(',')[1]"
+                                            />
+                                        </td>
+
+                                        <!-- tipo_valor -->
+                                        <td class="text-left">
+                                            <span>P</span>
+                                        </td>
+
+                                        <td />
+
+                                        <td />
+                                        <td />
+
+                                        <!-- pais_contraparte -->
+                                        <td class="text-left">
+                                            <span
+                                                t-if="catline[0].split(',')[2]"
+                                                t-esc="catline[0].split(',')[2]"
+                                            />
+                                        </td>
+
+                                        <td />
+                                        <td />
+                                        <td />
+                                        <td />
+                                    </tr>
+                                    <t t-set="i" t-value="i+1" />
+                                </t>
+                            </t>
+                        </t>
+
+                        <t t-if="not wizard.group_lines">
+                            <tr t-foreach="wizard.line_ids" t-as="moveline">
+                                <td class="text-left">
+                                    <span t-esc="moveline['id_reg']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['data_ref']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['natureza']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['npc2']" />
+                                </td>
+                                <td style="text-align: right;">
+                                    <span
+                                        t-esc="wizard._formatLang(moveline['montante'],digits=2 )"
+                                    />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['divisa']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['cod_estat']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['tipo_valor']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['tipo_conta']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['id_banco']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['pais_conta']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['pais_contraparte']" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="moveline['pais_ativo']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['data_vencim']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['contraparte']" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="moveline['observacoes']" />
+                                </td>
+                                <!-- <td class="text-left">
+                                        <span t-esc="moveline['ref_invoice']"/>
+                                    </td> -->
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_cope">
+        <t t-call="web.html_container">
+            <t t-call="ptplus_accounting_cope.report_cope_document" />
+        </t>
+    </template>
+
+    <record id="paperformat_landscape_COPE_pt" model="report.paperformat">
+        <field name="name">Landscape COPE</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">15</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <record id="action_report_cope_pt" model="ir.actions.report">
+        <field name="name">COPE Report</field>
+        <field name="model">l10n_pt.cope.statement.wizard</field>
+        <field name="report_name">ptplus_accounting_cope.report_cope</field>
+        <field name="report_file">ptplus_accounting_cope.report_cope</field>
+        <field name="paperformat_id" ref="paperformat_landscape_COPE_pt" />
+    </record>
+</odoo>

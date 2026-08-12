@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_saphety_inherit" model="ir.ui.view">
+        <field name="name">partner.form.saphety.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="l10n_pt_has_saphety" invisible="True" />
+                <button
+                    name="action_recompute_l10n_pt_has_saphety"
+                    string="Check Sovos/Saphety"
+                    type="object"
+                    class="btn-primary"
+                    invisible="l10n_pt_has_saphety"
+                />
+                <button
+                    name="action_recompute_l10n_pt_has_saphety"
+                    title="Reload"
+                    type="object"
+                    icon="fa-repeat"
+                    class="col-lg-1"
+                    invisible="not l10n_pt_has_saphety"
+                />
+                <span
+                    class="text-success"
+                    invisible="l10n_pt_has_saphety != 'Connected'"
+                >Works with Sovos/Saphety</span>
+                <span
+                    class="text-danger"
+                    invisible="l10n_pt_has_saphety != 'NotConnected'"
+                >Doesn't work with Sovos/Saphety</span>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -14,20 +14,19 @@
 
             <notebook name="main_block" position="inside">
                 <page name="Statements">
-                    <field name="line_ids" nolabel="1" widget="many2many" colspan="3">
-                        <tree editable="bottom">
-                            <!--                            decoration-muted="not selected"-->
-                            <!--                            <field-->
-                            <!--                                name="selected"-->
-                            <!--                                string="Sel."-->
-                            <!--                                widget="boolean_toggle"-->
-                            <!--                            />-->
-                            <!--                            <button-->
-                            <!--                                name="action_view_details"-->
-                            <!--                                type="object"-->
-                            <!--                                string="View"-->
-                            <!--                            />-->
-                        </tree>
+                    <field name="line_ids" nolabel="1" widget="many2many" colspan="2">
+                        <list editable="bottom" decoration-muted="not selected">
+                            <field
+                                name="selected"
+                                string="Sel."
+                                widget="boolean_toggle"
+                            />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                            />
+                        </list>
                     </field>
                 </page>
             </notebook>

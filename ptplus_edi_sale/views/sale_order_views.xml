@@ -7,13 +7,13 @@
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <!-- B2G fields -->
-            <field name="fiscal_position_id" position="after">
+            <xpath expr="//group[@name='sale_info']" position="inside">
                 <field
                     name="l10n_pt_commitment_number"
                     invisible="not source_billing"
                 />
                 <field name="l10n_pt_fitting_number" invisible="not source_billing" />
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>

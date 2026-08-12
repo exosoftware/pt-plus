@@ -20,6 +20,51 @@
                     groups="account.group_account_invoice"
                 />
             </field>
+            <group name="payables" position="after">
+                <group
+                    string="Tax Classification"
+                    groups="account.group_account_invoice"
+                >
+                    <field name="l10n_pt_genre" />
+                    <field name="amount" invisible="l10n_pt_genre != 'IS'" />
+                    <field
+                        name="amount_type"
+                        invisible="l10n_pt_genre != 'IS'"
+                        required="l10n_pt_genre == 'IS'"
+                    />
+                    <field
+                        name="pt_vat_country_region"
+                        string="Country/Region"
+                        invisible="l10n_pt_genre not in ['IVA', 'IS']"
+                        required="l10n_pt_genre in ['IVA', 'IS']"
+                    />
+                    <field
+                        name="l10n_pt_sd_code_id"
+                        string="Code"
+                        invisible="l10n_pt_genre != 'IS'"
+                        required="l10n_pt_genre == 'IS'"
+                    />
+                    <field name="l10n_pt_sd_code" invisible="1" />
+                    <field
+                        name="l10n_pt_sd_exemption_reason"
+                        string="Exemption Reason"
+                        invisible="l10n_pt_genre != 'IS' or amount"
+                        required="l10n_pt_sd_code == 'IS' and not amount"
+                    />
+                    <field
+                        name="l10n_pt_eco_tax_type"
+                        string="Type"
+                        invisible="l10n_pt_genre != 'ECO'"
+                        required="l10n_pt_genre == 'ECO'"
+                    />
+                    <field
+                        name="l10n_pt_ed_tax_type"
+                        string="Type"
+                        invisible="l10n_pt_genre != 'IEC'"
+                        required="l10n_pt_genre == 'IEC'"
+                    />
+                </group>
+            </group>
         </field>
     </record>
 

@@ -21,8 +21,8 @@
                 <field
                     name="pt_vat_country_region"
                     string="Country/Region"
-                    invisible="country_code != 'PT' or l10n_pt_genre not in ['IVA', 'RF']"
-                    required="country_code == 'PT' and l10n_pt_genre in ['IVA', 'RF']"
+                    invisible="country_code != 'PT' or l10n_pt_genre not in ['IVA', 'RF', 'IS']"
+                    required="country_code == 'PT' and l10n_pt_genre in ['IVA', 'RF', 'IS']"
                 />
                 <field
                     name="pt_vat_purchase_destination_region"
@@ -60,15 +60,36 @@
                     required="country_code == 'PT' and l10n_pt_genre == 'RF'"
                 />
                 <field
-                    name="l10n_pt_sd_tax_type"
-                    string="Stamp Duty Type"
+                    name="l10n_pt_wh_code"
+                    string="Withholding Code"
+                    invisible="country_code != 'PT' or l10n_pt_genre != 'RF'"
+                />
+                <field
+                    name="l10n_pt_wh_income_type"
+                    string="Withholding Income Type"
+                    invisible="country_code != 'PT' or l10n_pt_genre != 'RF' or l10n_pt_wh_tax_type == 'IS'"
+                />
+                <field
+                    name="l10n_pt_wh_income_type_oecd"
+                    string="Withholding Income Type (OECD)"
+                    invisible="country_code != 'PT' or l10n_pt_genre != 'RF' or l10n_pt_wh_tax_type == 'IS'"
+                />
+                <field
+                    name="l10n_pt_wh_taxation_regime"
+                    string="Withholding Taxation Regime"
+                    invisible="country_code != 'PT' or l10n_pt_genre != 'RF' or l10n_pt_wh_tax_type == 'IS'"
+                />
+                <field
+                    name="l10n_pt_sd_code_id"
+                    string="Stamp Duty Code"
                     invisible="country_code != 'PT' or l10n_pt_genre != 'IS'"
                     required="country_code == 'PT' and l10n_pt_genre == 'IS'"
                 />
+                <field name="l10n_pt_sd_code" invisible="1" />
                 <field
                     name="l10n_pt_sd_exemption_reason"
                     invisible="country_code != 'PT' or l10n_pt_genre != 'IS' or amount"
-                    required="country_code == 'PT' and l10n_pt_genre == 'IS' and not amount and type_tax_use == 'sale'"
+                    required="country_code == 'PT' and l10n_pt_sd_code == 'IS' and not amount and type_tax_use == 'sale'"
                 />
                 <field
                     name="l10n_pt_eco_tax_type"

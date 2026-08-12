@@ -52,7 +52,7 @@
                     class="pt_qrcode"
                 />
             </div>
-            <div class="pos-receipt-contact">
+            <div t-if="props.data.l10n_pt_certification_text">
                 <t t-esc="props.data.l10n_pt_certification_text" />
             </div>
         </xpath>

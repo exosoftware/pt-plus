@@ -53,6 +53,23 @@ Available soon.
 Changelog
 =========
 
+5.1.4 (2026-07-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Issuing fiscal documents (invoices, receipts) is faster, especially on
+  databases holding years of documents: finding the previously issued
+  document of each series no longer slows down as the history grows
+
+5.1.3 (2026-07-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Invoice/Payment (multi-way) reports no longer register their printed
+  PDF as a chatter attachment
+
 5.0.7 (2025-10-26)
 ~~~~~~~~~~~~~~~~~~~
 **FIX**

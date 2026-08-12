@@ -8,10 +8,18 @@
                 decoration-muted="ignore"
                 decoration-info="state in ['create', 'update'] and not ignore"
                 decoration-success="state in ['created', 'updated']"
+                decoration-danger="state == 'error'"
                 create="false"
                 editable="top"
                 multi_edit="1"
             >
+                <header>
+                    <button
+                        name="action_retry_import_errors"
+                        type="object"
+                        string="Retry"
+                    />
+                </header>
                 <field name="action" />
                 <field name="saft_diff" string="Fields" />
                 <field name="rec_model_description" string="Model" />
@@ -27,7 +35,9 @@
                     decoration-info="state == 'create'"
                     decoration-warning="state == 'update'"
                     decoration-success="state in ['created', 'updated']"
+                    decoration-danger="state == 'error'"
                 />
+                <field name="error_message" optional="show" />
             </list>
         </field>
     </record>
@@ -66,6 +76,11 @@
                     string="Done"
                     name="filter_done"
                     domain="[('state', 'in', ['created', 'updated'])]"
+                />
+                <filter
+                    string="Errors"
+                    name="filter_errors"
+                    domain="[('state', '=', 'error')]"
                 />
                 <group expand="0" string="Group By">
                     <filter

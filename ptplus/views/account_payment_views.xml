@@ -32,8 +32,7 @@
                     invisible="payment_type != 'inbound'"
                     domain="[('source_billing', '=', source_billing),
                         ('company_id', '=', company_id),
-                        ('section', '=', 'pay'),
-                        ('type', '=', 'RG')
+                        ('section', '=', 'pay')
                         ]"
                     readonly="state != 'draft'"
                 />
@@ -88,7 +87,7 @@
                     options="{'no_create_edit': True}"
                     invisible="source_billing not in ['P', 'I', 'M']"
                     domain="[('source_billing', '=', source_billing), ('section', '=', 'pay'),
-                                ('type', '=', 'RG'), ('company_id', '=', company_id)]"
+                               ('company_id', '=', company_id)]"
                 />
             </field>
         </field>
