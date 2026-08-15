@@ -32,6 +32,20 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.4.0 (2026-08-14)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The SAF-T import now says up front what it can take from the file you
+  uploaded. There are three kinds of SAF-T and they do not all carry the same
+  data: an accounting file has the chart of accounts and the journal entries, an
+  invoicing file has neither, and an integrated file has both plus the invoices.
+  Until now an invoicing file imported only its customers and suppliers with no
+  explanation, which looked as though records had gone missing. A note at the
+  top of the import now states which kind of file it is and what will be
+  imported from it.
+
 4.3.1 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~
 

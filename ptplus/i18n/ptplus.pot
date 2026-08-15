@@ -5203,6 +5203,16 @@ msgid "The start date must be before the end date"
 msgstr ""
 
 #. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_users.py:0
+#, python-format
+msgid ""
+"The Tax Authority password of user %(user)s is not correctly stored for "
+"company %(company)s. Please open the user, type the password again and save "
+"it."
+msgstr ""
+
+#. module: ptplus
 #: model:ir.model.fields,help:ptplus.field_account_tax__l10n_pt_wh_taxation_regime
 msgid ""
 "The taxation regime that will be used to group values on Modelo 30 - Quadro "

@@ -53,6 +53,33 @@ Available soon.
 Changelog
 =========
 
+5.1.6 (2026-08-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When a document cannot be communicated to the Tax Authority, the failure
+  window now shows the reason the Tax Authority gave, such as its
+  authentication service being unavailable. Until now it showed only the text
+  "Unknown error when sanitizing", with no clue about what had failed, which
+  made these situations impossible to tell apart
+- Failures caused by the network or by the Tax Authority being unreachable now
+  also explain themselves in the failure window, where before the detail was
+  left blank
+
+5.1.5 (2026-08-12)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Tax Authority password is now protected also when it is filled in while
+  the user is being created. Until now it was only protected when it was typed
+  on an already existing user, and a password saved on the creation screen was
+  kept readable and made the communications with the Tax Authority fail
+- When the stored Tax Authority password cannot be read (for instance because
+  it was loaded by an import), the user now gets a message asking to type the
+  password again on the user form, instead of a technical error
+
 5.1.4 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~~
 

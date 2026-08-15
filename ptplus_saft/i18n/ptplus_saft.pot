@@ -4,16 +4,338 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0+e\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-13 10:34+0000\n"
-"PO-Revision-Date: 2025-09-13 10:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"%s record(s) could not be imported. Open the Errors button above for the "
+"details, fix the causes and click Create/Update Records to retry the failed "
+"records."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.action_l10n_pt_toggle_saft_element_move
+#: model:ir.actions.server,name:ptplus_saft.action_l10n_pt_toggle_saft_element_payment
+msgid "(Un)block SAF-T element"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__0
+msgid "0 - Operação Sujeita e não isenta"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__1
+msgid ""
+"1 - Estado, RA, autarquias e afins, sem carácter empresarial - CIS Artº 6º "
+"a)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__10
+msgid ""
+"10 - Empréstimos, incluindo juros, exclusivamente destinados à cobertura de "
+"carência de tesouraria  - CIS Artº 7º nº1 g)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__11
+msgid ""
+"11 - Empréstimos, incluindo juros, concedidos no âmbito da gestão "
+"centralizada de tesouraria - CIS Artº 7º nº1 h)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__12
+msgid ""
+"12 - Empréstimos, incluindo juros, com características de suprimentos - CIS "
+"Artº 7º nº1 i)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__13
+msgid ""
+"13 - Mútuos constituídos no âmbito do regime legal do crédito à habitação - "
+"CIS Artº 7º nº1 j)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__14
+msgid ""
+"14 - Juros cobrados por empréstimos relativos a melhoramento de habitação "
+"própria - CIS Artº 7º nº1 l)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__15
+msgid ""
+"15 - Reporte de valores mobiliários ou direitos equiparados - CIS Artº 7º "
+"nº1 m)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__16
+msgid ""
+"16 - Crédito concedido por meio de conta poupança-ordenado - CIS Artº 7º nº1"
+" n)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__17
+msgid ""
+"17 - Atos, contratos e operações envolvendo instit. comunitárias ou o BEI - "
+"CIS Artº 7º nº1 o)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__18
+msgid ""
+"18 - Jogo do bingo e jogos organizados por instit. de solid. social e afins "
+"- CIS Artº 7º nº1 p)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__19
+msgid ""
+"19 - Garantias a favor do Estado ou instit. de seg. social - CIS Artº 7º nº1"
+" u)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__2
+msgid "2 - Instituições de segurança social - CIS Artº 6º b)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__22
+msgid ""
+"22 - Regime Zona Franca da Madeira 2015-2024. 36.º-A / n.º 12 + 33.º / n.º "
+"11, remissãoart.º 36.º-A / n.º 13, art.º 2 Lei n.º 21/2021, de 20 de abril."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__24
+msgid ""
+"24 - Entidades e Unidades de Gestão Florestal - EBF Artº 59º-G nº 9 e 15"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__25
+msgid "25 - Cooperativas - EBF Artº 66º-A nº 13"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__26
+msgid ""
+"26 - Benefícios fiscais contratuais ao investimento produtivo - CFI Artº 8º,"
+" nº 1 d)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__27
+msgid "27 - Insolvência e da Recuperação de Empresas - CIRE Artº 269º"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__28
+msgid "28 - Operações de titularização de créditos - DL nº 219/2001 4-Ago"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__29
+msgid ""
+"29 - Instituições de Ensino Superior Público - Artº 116º Lei 62/2007 10-Set"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__3
+msgid ""
+"3 - Pessoas coletivas com estatuto de utilidade pública - CIS Artº 6º c)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__30
+msgid "30 - Universidade Católica Portuguesa - Artº 10º nº1 a) e outros"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__31
+msgid "31 - Partidos Políticos - Artº 10º nº1 a) da Lei nº 19/2003 20-Jun"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__32
+msgid "32 - Fundação Aga Khan - Artº 4º DL nº 27/96 30-Mar"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__33
+msgid ""
+"33 - Laboratório Ibérico Internacional de Nanotecnologia - Resol. AR nº "
+"44/2008 27-Jun-2008"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__34
+msgid "34 - Comboios de Portugal - Base XXIX do DL nº 104/73 13-Mar e outros"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__35
+msgid "35 - NATO - Resol. AR nº 79/2014; Aviso nº 110/2014"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__36
+msgid "36 - Estruturação Fundiária - Artº 51º nº3 Lei nº 111/2015 27-Ago"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__37
+msgid ""
+"37 - Grupo Intern. de Estudos do Chumbo e do Zinco - Resol. AR nº 63/2006 e "
+"outros"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__38
+msgid "38 - Grupo Intern. de Estudos do Cobre - Resol. AR nº 63/2006 e outros"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__39
+msgid ""
+"39 - Grupo Intern. de Estudos do Níquel - Resol. AR nº 63/2006 e outros"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__4
+msgid ""
+"4 - Instituições partic. de solid. social e entidades a estas legalmente "
+"equiparadas- CIS Artº 6º d)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__40
+msgid ""
+"40 - Associações representativas das famílias - Artº 6º nº1 g) da Lei nº "
+"9/97 12-Mai"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__41
+msgid ""
+"41 - Transm. de estab. comercial, industrial ou agrícola - EBF Artº 60º nº1 "
+"b)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__42
+msgid ""
+"42 - Transportes Aéreos Portugueses SA - Artº Ún. nº 2 do DL nº 258/98 "
+"17-Ago"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__43
+msgid ""
+"43 - Apólices de seguros de crédito à exportação - Artº 2º nº1 a) do DL nº "
+"109/2020 31-Dez"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__44
+msgid ""
+"44 - Garantias das obrigações - Artº 2º nº1 b) do DL nº 109/2020 31-Dez"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__45
+msgid ""
+"45 - Garantias prestadas pelo Estado no âmbito das apólices de seguros - "
+"Artº 2º nº2 do DL nº 109/2020 31-Dez"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__46
+msgid ""
+"46 - Verbas 10 e 17.1 da tabela geral anexa ao CIS - Lei nº 70/2021 4-Nov"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__47
+msgid ""
+"47 - Apólices seguros de crédito exportação, CIS Art.º 7.º, n.º 1, al. v)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__48
+msgid "48 - Garantias das obrigações, Art.º 7.º, n.º 1, al. w)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__49
+msgid ""
+"49 - Garantias Estado, direito internacional. Art.º 7.º, n.º 1, al. x), 1.ª "
+"parte"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__5
+msgid ""
+"5 - Prémios recebidos por resseguros tomados a empresas operando legalmente "
+"em Portugal  - CIS Artº 7º nº1 a)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__50
+msgid ""
+"50 - Garantias Estado, apólices seguros. Art.º 7.º, n.º 1, al. x), 2.ª parte"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__56
+msgid ""
+"56 - Garantias Estado Compacto Financiamento Desenvolvimento Países "
+"Africanos Língua Portuguesa, Art.º 8.º Lei n.º 20/2023, de 17 de maio."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__6
+msgid ""
+"6 - Prémios e comissões relativos a seguros do ramo «Vida» - CIS Artº 7º nº1"
+" b)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__7
+msgid ""
+"7 - Garantias inerentes a operações que tenham por objecto valores "
+"mobiliários - CIS Artº 7º nº1 d)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__8
+msgid ""
+"8 - Juros e comissões cobrados, garantias prestadas, a utilização de crédito"
+" concedido, etc. - CIS Artº 7º nº1 e)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_sd_exemption_reason__9
+msgid ""
+"9 - Garantias prestadas ao Estado p/ gestão da dívida pública - CIS Artº 7º "
+"nº1 f)"
+msgstr ""
 
 #. module: ptplus_saft
 #: model:mail.template,body_html:ptplus_saft.email_template_partner_saft
@@ -59,6 +381,11 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "<i class=\"fa fa-spinner fa-spin me-2\" title=\"Processing\"/>"
+msgstr ""
+
+#. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.import_saft_configuration_kanban_view
 msgid ""
 "<i class=\"fa fa-user me-1\" role=\"img\" aria-label=\"Partner Imports\" "
@@ -67,9 +394,7 @@ msgstr ""
 
 #. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
-msgid ""
-"<span class=\"o_form_label\">SAF-T Computing Method</span>\n"
-"                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgid "<span class=\"o_form_label\">SAF-T Computing Method</span>"
 msgstr ""
 
 #. module: ptplus_saft
@@ -174,6 +499,27 @@ msgid "Action"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__amount
+msgid "Amount"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__amount_type
+msgid "Amount Type"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "An import is already running for this configuration."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__pt_vat_country_region__pt-ac
+msgid "Azores"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__balance_warning_accounts
 msgid "Balance Warning Accounts"
 msgstr ""
@@ -188,6 +534,27 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__barcode
 msgid "Barcode"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__bater
+msgid "Baterias e seus resíduos"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_saft_element_mixin__l10n_pt_saft_element_status__blocked
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__sale_order__l10n_pt_saft_element_status__blocked
+msgid "Blocked"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "C:"
 msgstr ""
 
 #. module: ptplus_saft
@@ -214,6 +581,17 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__city
 msgid "City"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__import_stage__cleanup
+msgid "Cleaning"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Clearing previous import… (%s remaining)"
 msgstr ""
 
 #. module: ptplus_saft
@@ -267,6 +645,20 @@ msgid "Contact"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__pt_vat_country_region__pt
+msgid "Continent"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"Could not resolve a single created partner for SAF-T id %s referenced by a "
+"journal entry. Make sure it is present in MasterFiles and not ignored in "
+"this import."
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__country_id
 msgid "Country"
 msgstr ""
@@ -303,6 +695,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__create_date
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__create_date
 msgid "Created on"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__import_stage__create
+msgid "Creating"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Creating/updating records… (%(done)s/%(total)s)"
 msgstr ""
 
 #. module: ptplus_saft
@@ -352,11 +755,25 @@ msgid "Disable Accounts without Moves "
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_account__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_journal__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_tax__display_name
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_ir_websocket__display_name
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__display_name
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__display_name
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__display_name
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_product_product__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_product_template__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -375,8 +792,23 @@ msgid "Done"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_genre__eco
+msgid "Ecovalue"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_eco_tax_type
+msgid "Ecovalue Tax Type"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__email
 msgid "Email"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__embal
+msgid "Embalagens e seus resíduos"
 msgstr ""
 
 #. module: ptplus_saft
@@ -385,12 +817,16 @@ msgid "End Date"
 msgstr ""
 
 #. module: ptplus_saft
-#. odoo-python
-#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__electr
+msgid "Equip. elétricos e eletrónicos e seus resíduos"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__error
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_account_saft_import__state__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__state__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_partner_changelog__l10n_pt_saft_element_status__error
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_saft_element_status__error
@@ -405,8 +841,30 @@ msgid "Error Description"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__error_message
+msgid "Error Message"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__errors
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
 msgid "Errors"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__errors_count
+msgid "Errors Count"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_genre__iec
+msgid "Excise Duty"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_ed_tax_type
+msgid "Excise Duty Tax Type"
 msgstr ""
 
 #. module: ptplus_saft
@@ -467,8 +925,14 @@ msgid "Export Xml Button"
 msgstr ""
 
 #. module: ptplus_saft
-#: model:ir.model.fields.selection,name:ptplus_saft.selection__res_company__l10n_pt_saft_computing_method__extraction
-msgid "Extraction"
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__pt_vat_country_region__extra
+msgid "Extra-community"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Failed"
 msgstr ""
 
 #. module: ptplus_saft
@@ -498,8 +962,18 @@ msgid "Fiscal Document"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__amount_type__fixed
+msgid "Fixed"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__format
 msgid "Format"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_genre
+msgid "Genre"
 msgstr ""
 
 #. module: ptplus_saft
@@ -508,16 +982,30 @@ msgid "Get SAF-T PT Action"
 msgstr ""
 
 #. module: ptplus_saft
-#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
-msgid "Group By"
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "I:"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_account__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_journal__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_move_line__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_payment__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_account_tax__id
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_fiscal_document__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_ir_websocket__id
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__id
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__id
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__id
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_saft_element_mixin__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_product_product__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_product_template__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_saft.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -528,7 +1016,7 @@ msgstr ""
 
 #. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
-msgid "Ignore Default Value"
+msgid "Ignore By Value"
 msgstr ""
 
 #. module: ptplus_saft
@@ -537,14 +1025,25 @@ msgid "Ignored"
 msgstr ""
 
 #. module: ptplus_saft
-#: model:ir.model,name:ptplus_saft.model_l10n_pt_import_saft_configuration
-msgid "Import SAF-T Configuration"
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Import Errors"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__import_running
+msgid "Import Running"
 msgstr ""
 
 #. module: ptplus_saft
 #: model:ir.actions.act_window,name:ptplus_saft.action_import_saft_configuration_view
 #: model:ir.ui.menu,name:ptplus_saft.menu_account_saft_import_list
-msgid "Import SAFT-T"
+msgid "Import SAF-T"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_l10n_pt_import_saft_configuration
+msgid "Import SAF-T Configuration"
 msgstr ""
 
 #. module: ptplus_saft
@@ -557,6 +1056,29 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_saft.field_res_partner__import_saft_id
 #: model:ir.model.fields,field_description:ptplus_saft.field_res_users__import_saft_id
 msgid "Import Saft"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__import_stage
+msgid "Import Stage"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Import complete."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Import finished: %s record(s) failed."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Import queued"
 msgstr ""
 
 #. module: ptplus_saft
@@ -614,6 +1136,11 @@ msgid "Integrated"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__pt_vat_country_region__intra
+msgid "Intra-community"
+msgstr ""
+
+#. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.dataport_export_form_saft
 msgid "Inventory Transfers"
 msgstr ""
@@ -631,6 +1158,11 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_after_pl_calculation
 msgid "Is After P/L Calculation"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__is_installed_account_tax_python
+msgid "Is Installed Account Tax Python"
 msgstr ""
 
 #. module: ptplus_saft
@@ -757,6 +1289,11 @@ msgid "Log On Close"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__pt_vat_country_region__pt-ma
+msgid "Madeira"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__account_move__l10n_pt_saft_element_status__manual
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__account_payment__l10n_pt_saft_element_status__manual
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__fiscal_document__l10n_pt_saft_element_status__manual
@@ -770,11 +1307,6 @@ msgstr ""
 #. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
 msgid "Method"
-msgstr ""
-
-#. module: ptplus_saft
-#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__mobile
-msgid "Mobile"
 msgstr ""
 
 #. module: ptplus_saft
@@ -867,12 +1399,6 @@ msgstr ""
 
 #. module: ptplus_saft
 #. odoo-python
-#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
-msgid "No Partner with VAT number %s could not be found"
-msgstr ""
-
-#. module: ptplus_saft
-#. odoo-python
 #: code:addons/ptplus_saft/models/l10n_pt_saft_element.py:0
 msgid "No compute handler available for the '%s' SAF-T PT element"
 msgstr ""
@@ -883,9 +1409,20 @@ msgid "No data yet!"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_genre__ns
+msgid "Non Applicable"
+msgstr ""
+
+#. module: ptplus_saft
 #. odoo-python
 #: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
 msgid "Non-compliant Accounts"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_genre
+msgid ""
+"One of the possible tax genres. Only available for Portuguese companies."
 msgstr ""
 
 #. module: ptplus_saft
@@ -909,21 +1446,13 @@ msgid "Parent State"
 msgstr ""
 
 #. module: ptplus_saft
-#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__partner_id
-msgid "Partner"
-msgstr ""
-
-#. module: ptplus_saft
 #: model:ir.model,name:ptplus_saft.model_l10n_pt_partner_changelog
 msgid "Partner Changelog (PT)"
 msgstr ""
 
 #. module: ptplus_saft
-#. odoo-python
-#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
-msgid ""
-"Partner with VAT number %s is not created yet, make sure you're not ignoring"
-" it in the current import"
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_account_saft_import__partner_code
+msgid "Partner Code"
 msgstr ""
 
 #. module: ptplus_saft
@@ -968,6 +1497,11 @@ msgid "Payments"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__amount_type__percent
+msgid "Percent"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__period
 msgid "Period"
 msgstr ""
@@ -978,13 +1512,34 @@ msgid "Phone"
 msgstr ""
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Please select a SAF-T file to import."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__pneus
+msgid "Pneus e pneus usados"
+msgstr ""
+
+#. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
 msgid "Process File"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.ir_cron_process_saft_import_ir_actions_server
+msgid "Process SAF-T Import"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__state__processed
 msgid "Processed"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__state__processing
+msgid "Processing"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1044,6 +1599,16 @@ msgid "Products To Update"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_ed_tax_type__isp
+msgid "Produtos Petrolíferos e Energéticos (ISP)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__import_progress
+msgid "Progress"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_curr
 msgid "Quarter - Current"
 msgstr ""
@@ -1051,6 +1616,18 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields.selection,name:ptplus_saft.selection__dataport_export_saft__period__quarter_last
 msgid "Quarter - Last"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Queued…"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Ready to review and create records."
 msgstr ""
 
 #. module: ptplus_saft
@@ -1089,6 +1666,12 @@ msgid "Recompute Elements"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.actions.server,name:ptplus_saft.action_l10n_pt_recompute_saft_element_move
+#: model:ir.actions.server,name:ptplus_saft.action_l10n_pt_recompute_saft_element_payment
+msgid "Recompute SAF-T element"
+msgstr ""
+
+#. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_tree
 msgid "Record"
 msgstr ""
@@ -1106,14 +1689,28 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_saft
-#. odoo-python
-#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
-msgid "Records created/updated"
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "Records that could not be imported"
 msgstr ""
 
 #. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
 msgid "Records to Import"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "Reset"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__import_stage__reset
+msgid "Resetting"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_tree
+msgid "Retry"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1210,8 +1807,25 @@ msgid "Saft Filename"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_import_saft_configuration__saft_import_transaction_cursor
+msgid "Saft Import Transaction Cursor"
+msgstr ""
+
+#. module: ptplus_saft
 #: model_terms:ir.ui.view,arch_db:ptplus_saft.account_saft_import_search
 msgid "Search SAF-T PT Import"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+msgid "Select at least one line in the Error state."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_saft_element.py:0
+msgid "Select records that are either all blocked or all unblocked."
 msgstr ""
 
 #. module: ptplus_saft
@@ -1230,6 +1844,67 @@ msgid ""
 "Set True if the file has been successfully submitted to the intended "
 "destination. In that case the dataport log record will be marked as "
 "Reported."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_import_saft_configuration__import_stage__stage
+msgid "Staging"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging accounts… (%(done)s/%(total)s)"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging journal entries… (%(done)s/%(total)s transactions)"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging journal entries… (%s transactions)"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging partners, accounts and products…"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging partners… (%(done)s/%(total)s)"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "Staging products… (%(done)s/%(total)s)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_genre__is
+msgid "Stamp Duty"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_sd_code_id
+msgid "Stamp Duty Code"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_sd_code
+msgid "Stamp Duty Code (read-only)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__l10n_pt_sd_exemption_reason
+msgid "Stamp Duty Exemption Reason"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1272,8 +1947,22 @@ msgid "Street 2"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_ed_tax_type__tab
+msgid "Tabaco (IT)"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model,name:ptplus_saft.model_account_tax
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__type__tax
 msgid "Tax"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"The SAF-T file does not conform to the schema and cannot be imported. Correct the following node(s) at the source and export the file again:\n"
+"%s"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1286,8 +1975,46 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"The SAF-T file is invalid: account %(code)s appears more than once in the "
+"MasterFiles with different descriptions (%(first)s / %(second)s)."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"The SAF-T file was queued for processing. Reopen this record to follow its "
+"progress."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "The ZIP file does not contain any XML file."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"The creation/update of records was queued. Reopen this record to follow its "
+"progress."
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__ignore
 msgid "The default value for the Ignore field of imported records"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"The file cannot be imported or some errors have occurred.\n"
+"Error: %s"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1300,8 +2027,6 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_saft.field_res_config_settings__l10n_pt_saft_computing_method
 msgid ""
 "The method used to compute the SAF-T elements. Possible values are:\n"
-"* Extraction: all the elements are created on SAF-T extraction. The \n"
-"validation occurs after all the elements are computed.\n"
 "* Real-time: elements are created, validated and cached while issuing, making its extraction process extremely fast.\n"
 "* Delayed: elements are created, validated and cached in batches \n"
 "using cron tasks. The extraction process is as fast as in the Real-time \n"
@@ -1318,13 +2043,23 @@ msgstr ""
 #. module: ptplus_saft
 #. odoo-python
 #: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
-msgid "The record(s) could not be created/updated."
+msgid "The record to update no longer exists (%(model)s, %(rec_id)s)."
 msgstr ""
 
 #. module: ptplus_saft
 #. odoo-python
 #: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
-msgid "The record(s) were created/updated successfully."
+msgid ""
+"The reset was queued: the staged lines are being cleared. Reopen this record"
+" to follow its progress."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_account_saft_import.py:0
+msgid ""
+"The retry of the selected lines was queued. Reopen the configuration to "
+"follow its progress."
 msgstr ""
 
 #. module: ptplus_saft
@@ -1333,6 +2068,39 @@ msgstr ""
 msgid ""
 "The selected type can only be used when the Accounting module is installed. "
 "Choose Invoicing instead."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"This SAF-T does not declare an accounting type: only customers, suppliers "
+"and products can be imported from it. The chart of accounts and the journal "
+"entries are only present in an accounting SAF-T."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"This SAF-T is an integrated file (I): its chart of accounts and journal "
+"entries are imported, but the invoices and receipts it also holds are not."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid ""
+"This SAF-T is of type %(basis)s (%(name)s): only customers, suppliers and "
+"products can be imported from it. The chart of accounts and the journal "
+"entries are only present in an accounting SAF-T."
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid ""
+"This clears every staged line of this import so a new SAF-T file can be "
+"processed. Records already created in Odoo are not touched. Continue?"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1373,6 +2141,11 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__type
 msgid "Type"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.l10n_pt_import_saft_configuration_form
+msgid "U:"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1417,6 +2190,11 @@ msgid "VAT"
 msgstr ""
 
 #. module: ptplus_saft
+#: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__pt_vat_country_region
+msgid "VAT Country/Region"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__valid_after
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_product_changelog__valid_after
 msgid "Valid After"
@@ -1430,6 +2208,16 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__values
 msgid "Values"
+msgstr ""
+
+#. module: ptplus_saft
+#: model_terms:ir.ui.view,arch_db:ptplus_saft.res_config_settings_view_form_saft_pt
+msgid "Values set here are company-specific."
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__veicul
+msgid "Veículos e veículos em fim de vida"
 msgstr ""
 
 #. module: ptplus_saft
@@ -1472,4 +2260,83 @@ msgstr ""
 #. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_l10n_pt_partner_changelog__zip
 msgid "ZIP"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+msgid "account_id"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "configuration_id"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/account_account.py:0
+#: code:addons/ptplus_saft/models/account_journal.py:0
+#: code:addons/ptplus_saft/models/account_move.py:0
+#: code:addons/ptplus_saft/models/product_template.py:0
+#: code:addons/ptplus_saft/models/res_partner.py:0
+msgid "id"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "invoicing"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "invoicing issued by a third party"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "partial invoicing"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "receipts"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "self-billing"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "transport documents"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model,name:ptplus_saft.model_ir_websocket
+msgid "websocket message handling"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_ed_tax_type__iaba
+msgid "Álcool e bebidas alcoólicas (IABA)"
+msgstr ""
+
+#. module: ptplus_saft
+#: model:ir.model.fields.selection,name:ptplus_saft.selection__l10n_pt_product_changelog__l10n_pt_eco_tax_type__oleos
+msgid "Óleos e óleos usados"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/models/l10n_pt_import_saft_configuration.py:0
+msgid "… and %s more."
 msgstr ""

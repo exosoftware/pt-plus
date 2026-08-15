@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Invoicing",
-    "version": "18.0.5.1.4",
+    "version": "18.0.5.1.6",
     "license": "OPL-1",
     "depends": ["base_vat", "account", "l10n_pt", "bus"],
     "countries": ["pt"],
