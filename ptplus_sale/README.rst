@@ -33,6 +33,14 @@ Available soon.
 Changelog
 =========
 
+5.1.7 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Subsection lines can now be added to a locked quotation, just like
+  section and note lines.
+
 5.1.6 (2026-07-30)
 ~~~~~~~~~~~~~~~~~~~
 

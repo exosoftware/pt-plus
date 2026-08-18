@@ -30,6 +30,23 @@
                     />
                 </setting>
                 <setting
+                    id="efatura_auto_sync"
+                    company_dependent="1"
+                    help="Collect the e-fatura documents from the Tax Authority
+                    automatically"
+                    invisible="not pt_invoicing"
+                >
+                    <field name="l10n_pt_efatura_auto_sync" />
+                    <div class="mt16 row" invisible="not l10n_pt_efatura_auto_sync">
+                        <label
+                            string="Synchronization User"
+                            for="l10n_pt_efatura_auto_sync_user_id"
+                            class="col-lg-4 o_light_label"
+                        />
+                        <field name="l10n_pt_efatura_auto_sync_user_id" />
+                    </div>
+                </setting>
+                <setting
                     id="efatura_qr_code"
                     company_dependent="1"
                     help="Automatically detect any Portuguese QR Code in Invoices and

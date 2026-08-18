@@ -27,6 +27,16 @@ Available soon.
 Changelog
 =========
 
+1.4.0 (2026-08-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- An employee-paid expense without a Vendor is no longer blocked when it is
+  posted: it now follows the standard Odoo posting (a posted entry on the
+  employee). The vendor bill with the reimbursement of the employee keeps being
+  created whenever the expense has a Vendor.
+
 1.3.0 (2026-07-28)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -70,6 +70,97 @@ Available soon.
 Changelog
 =========
 
+5.14.0 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Uploading a vendor bill, or photographing a receipt for an expense, now
+  tells you what came out of its QR code. Until now the document was filled in
+  without a word, so there was no way to tell whether it had been read at all:
+  a message in the top right corner now confirms the document that was read.
+- When nothing can be read from the photo, that message asks you what to do
+  with it: "Accept" keeps the document as it is, "Reject" deletes it along
+  with the photo, and "Try Again" deletes it and opens the camera again so you
+  can take a new photo right away. The same happens when you photograph a
+  receipt for an expense, which is what the Odoo app does, so a bad photo can
+  be redone on the spot instead of reaching the accounting without data.
+- You are asked this for a photo with no QR code at all, for one whose QR code
+  is there but unusable (blurred, cut off, or a code that is not the one of a
+  Portuguese invoice), and for a document issued to another company, from
+  which nothing is taken. A receipt issued to the employee is still a valid
+  expense: it is filled in as usual and asks you nothing.
+- Sending several files at once asks about each one in turn, showing the name
+  of the file and how many are still waiting for a decision.
+
+**Bugfixes**
+
+- Updating a database whose old E-Fatura default product or tax belonged to
+  another company no longer interrupts the update. The E-Fatura tax mapping
+  created out of that configuration is left without a product, and a tax of
+  another company is left out of the table.
+
+5.13.0 (2026-08-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The E-Fatura synchronization now collects the documents through the Tax
+  Authority webservice instead of reading the E-Fatura portal pages. The daily
+  limit of 300 documents the portal imposes is gone, and a period covering
+  several months is fetched month by month without any action from you.
+- The synchronization now runs in the background. The import window tells you
+  it is collecting and fills itself in with the usual result as soon as it
+  finishes, without you having to do anything. A company with thousands of
+  documents a month no longer risks the operation being cut short, and one that
+  is interrupted picks up where it stopped instead of starting over.
+- A new "Automatic E-Fatura Synchronization" option, in the E-Fatura section of
+  the Accounting settings, collects the documents on its own, without anyone
+  asking for it. Each run collects the last 30 days, so a document a vendor
+  only communicated to the Tax Authority now is still picked up; a longer gap
+  since the previous collection is covered too, so no period is ever skipped.
+  How often it runs, and how far back it goes, are both up to you on the
+  "Automatic E-Fatura Synchronization" scheduled action. Turning the option on
+  asks for the user the synchronization signs in to the Tax Authority as, whose
+  credentials must be the ones of the company's VAT number.
+- The synchronization requires the Portal das Finanças credentials of the VAT
+  number of the company, set on the Tax Authority section of your user
+  preferences: either the credentials of the company itself or those of one of
+  its sub-users, in the "NIF/user" form. The Tax Authority only returns the
+  documents of the VAT number that signs in, so credentials of a different VAT
+  number are refused, and the refusal now tells you which VAT number is expected
+  and which one is signing in.
+- Synchronized documents now show the ATCUD printed on the document, the
+  activity sector the Tax Authority reports, and whether the vendor issued them
+  under the cash VAT scheme.
+- Documents issued by you on behalf of the vendor, under a self-billing
+  agreement, are now flagged as such, linked to the document already issued in
+  the system, and no longer ask for a tax mapping or create a second vendor
+  bill.
+- Receipts and the remaining document types the Tax Authority reports which are
+  not purchase documents are no longer collected.
+- The journal chosen when importing E-Fatura documents, or when creating the
+  vendor bills from the E-Fatura list, is now the journal those bills are
+  created on. Until now it was ignored and the bills went to whichever purchase
+  journal came first.
+- The state the E-Fatura portal shows for each document (Pending, Registered,
+  Cancelled) is only given to the issuer of the document, never to its
+  customer. Documents collected by the synchronization are therefore recorded
+  as Registered. A state collected earlier from the E-Fatura file is kept as it
+  stands, since that one is the real state: to know the state of a document,
+  import the E-Fatura file, which still carries it.
+
+5.12.0 (2026-08-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- A contact created automatically by the E-Fatura process (import or QR code
+  scan) is now marked with the new "Created by E-Fatura" checkbox, in the
+  E-Fatura section of the contact form, so the contacts whose data still has to
+  be reviewed and completed can be told apart. The checkbox cannot be changed
+  by hand.
+
 5.11.1 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~~
 

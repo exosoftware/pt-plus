@@ -53,6 +53,62 @@ Available soon.
 Changelog
 =========
 
+5.1.10 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Invoices containing a subsection line can now be confirmed. Subsection
+  lines are treated like section and note lines: they are no longer
+  required to have a product or taxes.
+
+5.1.9 (2026-08-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When the Tax Authority refuses a communication, the failure window now shows
+  the whole reason it gave, and not only its first line. Refused credentials, in
+  particular, used to show just "An error occurred authenticating the taxpayer",
+  while the Tax Authority was also saying whether the password was wrong or the
+  access had been blocked, and how many attempts were left
+
+5.1.8 (2026-08-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When a document cannot be communicated to the Tax Authority, the failure
+  window now shows the reason the Tax Authority gave, such as its
+  authentication service being unavailable. Until now it showed only the text
+  "Unknown error when sanitizing", with no clue about what had failed, which
+  made these situations impossible to tell apart
+- Failures caused by the network or by the Tax Authority being unreachable now
+  also explain themselves in the failure window, where before the detail was
+  left blank
+
+5.1.7 (2026-08-12)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Tax Authority password is now protected also when it is filled in while
+  the user is being created. Until now it was only protected when it was typed
+  on an already existing user, and a password saved on the creation screen was
+  kept readable and made the communications with the Tax Authority fail
+- When the stored Tax Authority password cannot be read (for instance because
+  it was loaded by an import), the user now gets a message asking to type the
+  password again on the user form, instead of a technical error
+
+5.1.6 (2026-07-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Issuing fiscal documents (invoices, receipts) is faster, especially on
+  databases holding years of documents: finding the previously issued
+  document of each series no longer slows down as the history grows
+
 5.1.5 (2026-07-28)
 ~~~~~~~~~~~~~~~~~~~
 

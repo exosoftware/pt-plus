@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <group name="general" position="after">
                 <group string="E-Fatura" name="e_fatura">
+                    <field name="l10n_pt_efatura_auto_created" />
                     <button
                         name="l10n_pt_action_efatura_tax_mapping"
                         icon="fa-arrow-right"
