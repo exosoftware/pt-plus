@@ -6,6 +6,49 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
+            <!-- Quantity already sent in issued Proforma Invoices -->
+            <xpath
+                expr="//field[@name='order_line']/list/field[@name='qty_invoiced']"
+                position="after"
+            >
+                <field
+                    name="l10n_pt_proforma_qty_sent"
+                    optional="hide"
+                    groups="sale.group_proforma_sales"
+                />
+            </xpath>
+            <!-- Smart button showing the Proforma Invoices created from this order -->
+            <xpath
+                expr="//div[@name='button_box']/button[@name='action_view_invoice']"
+                position="after"
+            >
+                <button
+                    name="action_view_l10n_pt_proformas"
+                    id="action_view_l10n_pt_proformas"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-file-text-o"
+                    invisible="l10n_pt_proforma_count == 0"
+                >
+                    <field
+                        name="l10n_pt_proforma_count"
+                        widget="statinfo"
+                        string="Proforma Invoices"
+                    />
+                </button>
+                <button
+                    name="action_view_l10n_pt_proforma_origin"
+                    id="action_view_l10n_pt_proforma_origin"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-arrow-left"
+                    invisible="not l10n_pt_proforma_origin_id"
+                >
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Original Order</span>
+                    </div>
+                </button>
+            </xpath>
             <!-- Disable Pro-forma stuff -->
             <xpath
                 expr="//button[@name='action_quotation_send'][@groups='sale.group_proforma_sales'][1]"
@@ -33,6 +76,25 @@
                     invisible="state != 'draft' or not fiscal_document_type_id"
                     help="Lock and issue the document so that it can be printed or sent to the partner. "
                 />
+                <button
+                    name="action_create_proforma_invoice"
+                    id="action_create_proforma_invoice"
+                    string="Create PRÓ-FORMA invoice"
+                    type="object"
+                    invisible="state in ('draft', 'cancel') or fiscal_document_type_code == 'PF'"
+                    help="Duplicate this document as a Proforma Invoice"
+                    groups="sale.group_proforma_sales"
+                />
+                <button
+                    name="action_quotation_send"
+                    id="action_send_proforma_invoice"
+                    string="Send PRO-FORMA Invoice"
+                    type="object"
+                    context="{'validate_analytic': True}"
+                    invisible="fiscal_document_type_code != 'PF' or state in ('draft', 'cancel')"
+                    help="Send this document to the customer as a Proforma Invoice"
+                    groups="sale.group_proforma_sales"
+                />
             </xpath>
             <!-- Confirm cancellation -->
             <xpath expr="//button[@name='action_cancel']" position="attributes">
@@ -44,7 +106,7 @@
             <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
+                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC', 'PF']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
@@ -52,7 +114,7 @@
             <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
+                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC', 'PF']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>

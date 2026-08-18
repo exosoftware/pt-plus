@@ -55,6 +55,15 @@ Available soon.
 Changelog
 =========
 
+5.5.1 (2026-07-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Scanning the QR code of a document issued to another company no longer fills
+  in the vendor bill: the vendor, the reference and the E-Fatura record are left
+  untouched, only the warning is shown.
+
 5.5.0 (2026-07-24)
 ~~~~~~~~~~~~~~~~~~~
 

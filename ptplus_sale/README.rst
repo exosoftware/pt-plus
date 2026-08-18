@@ -33,6 +33,17 @@ Available soon.
 Changelog
 =========
 
+5.1.4 (2026-07-30)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Working documents that have been invoiced now report the SAF-T
+  ``WorkStatus`` ``F``, as required by Portaria 302/2016 (field 4.3.4.3.1);
+  they were always reported as ``N``. It applies as soon as an invoice (``FT``,
+  ``FS`` or ``FR``) is issued, even on a partial invoicing, and goes back to
+  ``N`` if that invoice is cancelled.
+
 5.1.3 (2026-07-14)
 ~~~~~~~~~~~~~~~~~~~
 

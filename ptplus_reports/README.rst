@@ -27,6 +27,38 @@ Available soon.
 Changelog
 =========
 
+1.3.0 (2026-08-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Online statements can now fetch the payment reference (payment guide) from the
+  Tax Authority and email the Tax Authority documents (submission receipt or
+  payment reference) to chosen recipients, with the PDF attached.
+
+**Bugfixes**
+
+- Consulting the submitted declarations online now works when it is done on
+  behalf of the taxpayer by the certified accountant: the taxpayer number is now
+  sent in the request, which the Tax Authority requires (it was rejected before).
+- The Tax Authority error message shown after a failed submission is now
+  displayed once and without raw formatting tags around the text.
+- The option to email the Tax Authority documents now appears only after a
+  receipt or payment reference has been fetched, not while an error is shown.
+
+1.2.1 (2026-08-12)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Certified Accountant password is now protected also when it is filled in
+  while the user is being created. Until now it was only protected when it was
+  typed on an already existing user, and a password saved on the creation
+  screen was kept readable and made the statement submissions fail
+- When the stored Certified Accountant password cannot be read (for instance
+  because it was loaded by an import), the user now gets a message asking to
+  type the password again on the user form, instead of a technical error
+
 1.2.0 (2026-07-15)
 ~~~~~~~~~~~~~~~~~~~
 
