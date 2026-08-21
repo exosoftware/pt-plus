@@ -159,7 +159,7 @@ account_tax_template_iva_6_aq_imob,False,,VAT 6%,IVA 6%,20110,IVA 6% AQ. (Imob.)
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C20]||IVA AL [Q06-L48],account_snc_common_2432,100
 ,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
-account_tax_template_iva_6_aq_ob,False,,VAT 6%,IVA 6%,20120,IVA 6% AQ. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,,,,,base,invoice,IVA AL [Q04-L73],,100
+account_tax_template_iva_6_aq_ob,True,,VAT 6%,IVA 6%,20120,IVA 6% AQ. (OB),purchase,6,,,percent,tax_group_iva_6,on_invoice,PT,,RED,ogs,,,,,,,base,invoice,IVA AL [Q04-L73],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,IVA DP [Q06-C24]||IVA AL [Q06-L51],account_snc_common_2432,100
 ,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,IVA DP [Q06-C41],account_snc_common_2434,100
@@ -771,9 +771,9 @@ account_tax_template_rfirs_25000_terc,False,,WHT 25%,RF 25%,30000,RF IRS 25% (Te
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
-account_tax_template_rfirs_ns,True,,WHT N/A,RF N/S,31000,RF IRS N/S (Trab. Ind.),purchase,0,account_snc_common_278129,,percent,tax_group_rf_ns,on_invoice,PT,,,,,IRS,102,B,,,base,invoice,,,100
+account_tax_template_rfirs_ns,True,,WHT N/A,RF N/S,31000,RF IRS N/S (Trab. Ind.),purchase,0,account_snc_common_278129,,percent,tax_group_rf_ns,on_invoice,PT,,,,,IRS,102,B,,,base,invoice,RF M10 [Q05-C03],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
-,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M10 [Q05-C03],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
 account_tax_template_rfirs_0_ti,True,,WHT 0%,RF 0%,31001,RF IRS 0% (Trab.Ind.),purchase,0,,,percent,tax_group_rf_0,on_invoice,PT,,,,,IRS,102,B,,,base,invoice,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
@@ -835,14 +835,14 @@ account_tax_template_rfirc_35000_jogo,False,,WHT 35%,RF 35%,31024,"RF IRC 35% (J
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
 ,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
-account_tax_template_rfirc_21500_org_est_res,False,,"WHT 21,5%","RF 21,5%",31025,RF IRC 21.5% (Rem. Orgãos Estat. Resid.),purchase,-21.5,account_snc_common_278129,,percent,tax_group_rf_21500,on_invoice,PT,,,,,IRC,208,R11,21,01,base,invoice,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
-,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
-,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
-,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
-account_tax_template_rfirc_25000_org_est_nres,False,,WHT 25%,RF 25%,31026,RF IRC 25% (Rem. Orgãos Estat. Não Resid.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,208,R11,21,01,base,invoice,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
-,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
-,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M10 [Q05-C03]||RF M30 [Q08-C35],,100
-,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM||RF M10 [Q05-C06] ||RF M30 [Q08-C37],account_snc_common_242,100
+account_tax_template_rfirc_21500_org_est_res,False,,"WHT 21,5%","RF 21,5%",31025,RF IRC 21.5% (Rem. Orgãos Estat. Resid.),purchase,-21.5,account_snc_common_278129,,percent,tax_group_rf_21500,on_invoice,PT,,,,,IRC,208,R11,21,01,base,invoice,RF M10 [Q05-C03],,100
+,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM||RF M10 [Q05-C06],account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M10 [Q05-C03],,100
+,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM||RF M10 [Q05-C06],account_snc_common_242,100
+account_tax_template_rfirc_25000_org_est_nres,False,,WHT 25%,RF 25%,31026,RF IRC 25% (Rem. Orgãos Estat. Não Resid.),purchase,-25,account_snc_common_278129,,percent,tax_group_rf_25000,on_invoice,PT,,,,,IRC,208,R11,21,01,base,invoice,RF M30 [Q08-C35],,100
+,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,RF DM||RF M30 [Q08-C37],account_snc_common_242,100
+,,,,,,,,,,,,,,,,,,,,,,,,base,refund,RF M30 [Q08-C35],,100
+,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,RF DM||RF M30 [Q08-C37],account_snc_common_242,100
 account_tax_template_ns,True,,N/A,N/A,99999,N/A,sale,0,,,percent,tax_group_ns,on_invoice,,,,,,,,,,,base,invoice,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,base,refund,,,100
