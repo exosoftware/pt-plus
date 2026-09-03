@@ -24,6 +24,8 @@ function scanTitle(state) {
             no_qr: _t("No QR Code Found"),
             unreadable_qr: _t("QR Code Not Readable"),
             other_company: _t("Document of Another Company"),
+            unavailable: _t("QR Code Reader Unavailable"),
+            timed_out: _t("QR Code Not Read in Time"),
         }[state] || _t("QR Code Not Read")
     );
 }
@@ -38,6 +40,23 @@ function scanMessage(state, name) {
         case "other_company":
             return _t(
                 "%s was issued to another company, so nothing was read from it.",
+                name
+            );
+        case "unavailable":
+            // Retaking the photo would change nothing: it is the server that
+            // cannot read any QR code
+            return _t(
+                "QR codes cannot be read on this server, so nothing was read " +
+                    "from %s. Ask your support team to install the QR code " +
+                    "reader.",
+                name
+            );
+        case "timed_out":
+            // A new photo of the same long document would be read no further
+            return _t(
+                "Reading the QR code of %s took too long and was interrupted. " +
+                    "Attach the page carrying the QR code on its own to have " +
+                    "it read.",
                 name
             );
         default:
@@ -91,14 +110,21 @@ function askQrScanDecision(services, document, index, total) {
                             close();
                         },
                     },
-                    {
-                        name: _t("Try Again"),
-                        icon: "fa-refresh",
-                        onClick: () => {
-                            resolve("retry");
-                            close();
-                        },
-                    },
+                    // A new photo changes nothing when the server has no
+                    // reader, or when the document is too long to be read
+                    // through, so it is not offered
+                    ...(["unavailable", "timed_out"].includes(document.state)
+                        ? []
+                        : [
+                              {
+                                  name: _t("Try Again"),
+                                  icon: "fa-refresh",
+                                  onClick: () => {
+                                      resolve("retry");
+                                      close();
+                                  },
+                              },
+                          ]),
                 ],
             }
         );

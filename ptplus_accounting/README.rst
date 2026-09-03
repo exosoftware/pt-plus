@@ -50,6 +50,14 @@ Available soon.
 Changelog
 =========
 
+5.1.2 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The country ISO codes moved to the base module of the localization. Nothing
+  changes for you: they keep working exactly as before.
+
 5.1.1 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~~
 

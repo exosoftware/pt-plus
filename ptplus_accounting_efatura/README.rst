@@ -2,7 +2,7 @@
 Portugal - E-Fatura
 ===================
 
-Synchronize supplier invoices the Tax Authority website or from an
+Synchronize supplier invoices from the Tax Authority webservice or from an
 E-Fatura .csv file:
 
 * For every line in the e-fatura file, a new draft vendor bill or refund will
@@ -25,12 +25,21 @@ Installation
 
 Install the module with required dependencies:
 
-* pip install bs4, requests_html
+* pip install pymupdf
 * add the module to an addons folder, restart Odoo, update the addons list and activate
   it.
 
 Configuration
 =============
+
+The synchronization signs in to the Tax Authority with the credentials on the
+Tax Authority section of your user preferences, and they have to be the Portal
+das Finanças credentials of the company's own VAT number: either the taxpayer's
+or those of one of its sub-users, in the "NIF/user" form. The Tax Authority only
+returns the documents of the VAT number that signs in, so credentials of a
+different VAT number are refused. The 'Automatic E-Fatura Synchronization'
+option asks for the user it signs in as, since a scheduled run has no one
+logged in, and refuses to be turned on until that user has credentials.
 
 The E-Fatura block of the Accounting settings holds the default journal used for
 the vendor bills created from the e-fatura data, plus a 'Configure Mappings'
@@ -69,6 +78,109 @@ Available soon.
 
 Changelog
 =========
+
+5.16.0 (2026-09-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Merging the duplicate vendor bill of an E-Fatura document now opens a window
+  that says what is about to happen before anything is done, instead of acting
+  on the spot.
+- The bill that stays is no longer rewritten. Until now it was reset to draft,
+  took a new number from the journal and had its date, its vendor and its
+  reference replaced with the ones of the other bill. Now the E-Fatura document
+  is simply pointed at it, and everything on it (number, dates, amounts, lines)
+  is left as it stands, posted bills included.
+- The vendor document is kept: the attachments of the duplicate are copied to
+  the bill that stays before the duplicate goes.
+- A duplicate still in draft is deleted, as before. A posted one is now
+  cancelled instead of being reset to draft and deleted, which used to undo the
+  reconciliations it was part of.
+- The window lists what deserves a second look without stopping you: the two
+  bills disagreeing on the date, the total or the currency, the bill that stays
+  already carrying assets or deferral entries built from amounts the Tax
+  Authority contradicts, and the two bills being on different vendors.
+- The merge now refuses the cases where it would have to decide on its own what
+  to do with accounting already produced: a duplicate with payments matched to
+  it, one that originated an asset, or one that generated deferral entries.
+  Undo those first, or keep that bill instead, which the window lets you do
+  with one button.
+- Two bills of different companies can no longer be merged.
+- A cancelled bill is never the one that stays, and the merge refuses to leave
+  the E-Fatura document on one. A cancelled duplicate is left as it is: there
+  is nothing left to delete or cancel, only the document to move.
+- On the vendor bill, the Odoo banner that spots a duplicate now offers "Merge
+  E-Fatura" where a merge is possible, in place of "Delete duplicate", which
+  would have deleted the bill carrying the E-Fatura document and had the next
+  synchronization create it all over again, or done the same as the merge
+  without keeping the attachments.
+- The help of the "E-Fatura Taxes" field now says what it shows: every tax the
+  Tax Authority reported, VAT and stamp duty included.
+- The merge window shows what the Tax Authority reported for the document
+  (vendor, date, total, taxes and state) above the two bills, and marks in
+  orange the date and the total of each bill that disagree with it, so it is
+  plain which of the two matches the E-Fatura.
+
+5.15.2 (2026-09-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- In the E-Fatura list, a document with no vendor bill is now greyed out instead
+  of shown in green. Green only meant that no problem had been detected, so a
+  document still waiting for its vendor bill looked as settled as a fully
+  processed one.
+
+5.15.1 (2026-09-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- On a database with several companies, an E-Fatura document is no longer
+  matched against the vendor bills of another company. Companies of the same
+  group share their vendors and see each other's documents, so a document
+  could take the bill of whichever company had issued one with the same
+  reference first, and the synchronization stopped with an error instead of
+  creating the bill. The same goes for the document a QR code scan, an expense
+  or an import looks for: each company only finds its own.
+
+5.15.0 (2026-09-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Choosing the product on a line of a vendor bill built from the E-Fatura no
+  longer changes its amount or its taxes. Those are the ones the Tax Authority
+  reported for the document, and until now picking a product replaced them with
+  the price and the taxes of that product, leaving a bill that no longer added
+  up to the E-Fatura. The same goes for the bill of an expense filled in from
+  a QR code.
+
+5.14.1 (2026-09-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A server without the QR code reader installed now says so, instead of
+  reporting the document as having no QR code: you were being asked to take a
+  new photo of a document that was perfectly readable, over and over. The
+  "Try Again" option is not offered in that case, since a new photo changes
+  nothing, and the message tells you to ask your support team to install the
+  reader.
+- The "Scan QR" button of a vendor bill and of an expense now gives the same
+  reason as the upload does. Until now every attempt that read nothing ended
+  in "no QR code was detected", whatever had happened.
+- Reading a document of several pages no longer takes minutes. Looking for a
+  QR code on a page that has none is what costs the time, so the search now
+  starts with the first and the last page, which is where the QR code of an
+  invoice is, and stops once it has spent the time it is given. A document
+  whose QR code is a picture, as invoices issued by software normally are,
+  keeps being read as fast as before, however many pages it has.
+- A document the search did not get through in time now says so and is put to
+  you like the others, to keep or to reject. Until now the upload waited
+  twenty seconds and then went on in silence, and a long document whose QR
+  code was on a late page was reported as having none.
 
 5.14.0 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~~

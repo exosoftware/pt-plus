@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 16:17+0000\n"
+"PO-Revision-Date: 2026-09-02 16:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -167,6 +169,24 @@ msgid "Activity sector the Tax Authority reports for this document."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Already cancelled, left as it is."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Also receives the %(count)s attachments of the other bill."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Also receives the attachment of the other bill."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_form
 msgid "Any country"
 msgstr ""
@@ -251,8 +271,25 @@ msgid "Base Amount"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Bill"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__bill_cursor
 msgid "Bill Cursor"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_move_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Bill to keep"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_move_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Bill to remove"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -267,13 +304,23 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
 msgid ""
-"Both selected invoices have an associated e-fatura record. Only one of the "
-"invoices must have an associated e-fatura record."
+"Both bills are linked to an E-Fatura document, so neither is a duplicate of "
+"the other."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"Both bills are posted, so the document was booked twice: cancelling the "
+"second one takes back the cost and the VAT it posted, and if the period was "
+"already declared to the Tax Authority the correction does not end here"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_move_efatura_view
 msgid "Cancel"
 msgstr ""
@@ -284,8 +331,19 @@ msgid "Cancelled"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Cancelled, not deleted, since it is posted."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__cash_vat_scheme
 msgid "Cash VAT Scheme"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__warning_note
+msgid "Check"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -448,6 +506,7 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__create_uid
@@ -464,6 +523,7 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__create_date
@@ -479,6 +539,16 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__currency_id
 msgid "Currency"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_currency_id
+msgid "Currency kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_currency_id
+msgid "Currency removed"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -501,6 +571,7 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__date
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
 msgid "Date"
 msgstr ""
@@ -516,6 +587,16 @@ msgid "Date To"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_date
+msgid "Date kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_date
+msgid "Date removed"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_journal_id
 msgid "Default E-Fatura Journal"
 msgstr ""
@@ -526,13 +607,19 @@ msgid "Default values for the E-Fatura features"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Deleted, a draft with no number yet."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__status_mismatch_text
 msgid "Details of the status mismatch, if any."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
 msgid "Different Company VAT Detected"
 msgstr ""
 
@@ -551,6 +638,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_ir_websocket__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__display_name
@@ -563,6 +651,7 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Document"
 msgstr ""
 
@@ -622,18 +711,31 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_duplicate_linked
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_duplicate_linked
+msgid "Duplicate Linked to E-Fatura"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.actions.act_window,name:ptplus_accounting_efatura.action_account_efatura_view
 #: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_account_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_efatura_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__l10n_pt_efatura_id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_id
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__dataport_log__type__e-fatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_dataport_import_efatura__statement_type__e-fatura
 #: model:ir.ui.menu,name:ptplus_accounting_efatura.menu_account_efatura_list
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.vendor_efatura_field_add
 msgid "E-Fatura"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_merge_move_id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_merge_move_id
+msgid "E-Fatura Duplicate"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -713,6 +815,41 @@ msgid "E-Fatura Total"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_currency_id
+msgid "E-Fatura currency"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_date
+msgid "E-Fatura date"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "E-Fatura document"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_status
+msgid "E-Fatura status"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_tax_amount
+msgid "E-Fatura taxes"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_total
+msgid "E-Fatura total"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_vendor_id
+msgid "E-Fatura vendor"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
 msgid ""
@@ -752,19 +889,19 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_vat_amount
-#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_vat_amount
-msgid ""
-"Every tax reported for the e-fatura document, to compare with the taxes of "
-"this bill. The AT sends VAT alone in the document total, so stamp duty is "
-"taken from the e-fatura lines."
-msgstr ""
-
-#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__tax_amount
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__efatura_tax_amount
 msgid ""
 "Every tax reported for this document, not only VAT: the AT sends VAT alone "
 "in TaxPayable, while stamp duty is only visible on the lines."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_vat_amount
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_vat_amount
+msgid ""
+"Every tax the Tax Authority reported for the e-fatura document, VAT and "
+"stamp duty included, to compare with the taxes of this bill."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -870,6 +1007,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_ir_websocket__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__id
@@ -966,8 +1104,14 @@ msgid "Journal Entry"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Keep the other bill instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__write_uid
@@ -978,6 +1122,7 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tag__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_move_efatura__write_date
@@ -1242,14 +1387,33 @@ msgid "Map an E-Fatura tax"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Merge"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.view_move_form_efatura
+msgid "Merge E-Fatura"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.actions.act_window,name:ptplus_accounting_efatura.action_account_efatura_merge
 #: model:ir.actions.server,name:ptplus_accounting_efatura.action_merge_efatura_invoices
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Merge E-Fatura Invoices"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model,name:ptplus_accounting_efatura.model_l10n_pt_account_efatura_merge
+msgid "Merge the duplicate vendor bill of an e-fatura document"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid "Merged E-Fatura Invoice"
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"Merged with the duplicate bill %(drop)s of E-Fatura document %(reference)s, "
+"which was %(outcome)s."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1282,6 +1446,14 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__my_activity_date_deadline
 msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"Neither bill is linked to an E-Fatura document. There is nothing to merge: "
+"delete the duplicate instead."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1327,8 +1499,7 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
 msgid "No Portuguese QR code was detected in the attachment."
 msgstr ""
 
@@ -1379,11 +1550,8 @@ msgid "Non Applicable"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid ""
-"None of the selected invoices have an associated e-fatura record. One of the"
-" invoices must have an associated e-fatura record."
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__blocker_note
+msgid "Not possible"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1427,6 +1595,12 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Only vendor bills can be merged."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_line__vat_tax_type__out
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_account_efatura_tax_mapping__vat_tax_type__out
 msgid "Other"
@@ -1435,12 +1609,6 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__page_cursor
 msgid "Page Cursor"
-msgstr ""
-
-#. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid "Payments associated with the invoice were not handled."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1494,8 +1662,7 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
 msgid "QR Code Not Detected"
 msgstr ""
 
@@ -1503,6 +1670,16 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/ptplus_accounting_efatura/static/src/js/qr_scan_decision.js:0
 msgid "QR Code Not Read"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-javascript
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
+#: code:addons/ptplus_accounting_efatura/static/src/js/qr_scan_decision.js:0
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__account_move__l10n_pt_qr_scan_state__timed_out
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__hr_expense__l10n_pt_qr_scan_state__timed_out
+msgid "QR Code Not Read in Time"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1520,6 +1697,16 @@ msgid "QR Code Read"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-javascript
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
+#: code:addons/ptplus_accounting_efatura/static/src/js/qr_scan_decision.js:0
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__account_move__l10n_pt_qr_scan_state__unavailable
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__hr_expense__l10n_pt_qr_scan_state__unavailable
+msgid "QR Code Reader Unavailable"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_qr_scan_state
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_account_move__l10n_pt_qr_scan_state
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_hr_expense__l10n_pt_qr_scan_state
@@ -1529,16 +1716,29 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
 msgid "QR Code Scanned"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-#: code:addons/ptplus_accounting_efatura/models/hr_expense.py:0
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
 msgid "QR code scanned successfully."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-javascript
+#: code:addons/ptplus_accounting_efatura/static/src/js/qr_scan_decision.js:0
+msgid ""
+"QR codes cannot be read on this server, so nothing was read from %s. Ask "
+"your support team to install the QR code reader."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
+msgid ""
+"QR codes cannot be read on this server. Ask your support team to install the"
+" QR code reader."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1581,6 +1781,30 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
 msgid "Ratings"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-javascript
+#: code:addons/ptplus_accounting_efatura/static/src/js/qr_scan_decision.js:0
+msgid ""
+"Reading the QR code of %s took too long and was interrupted. Attach the page"
+" carrying the QR code on its own to have it read."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
+msgid ""
+"Reading the QR code of this document took too long and was interrupted. "
+"Attach the page carrying the QR code on its own to have it read."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"Receives the E-Fatura document %(reference)s. Number, dates, amounts and "
+"lines are kept."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1665,6 +1889,12 @@ msgid "Sector"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "Select exactly two vendor bills to merge."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__self_billing
 msgid "Self-Billing"
 msgstr ""
@@ -1706,6 +1936,7 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__status
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Status"
 msgstr ""
 
@@ -1727,6 +1958,21 @@ msgid ""
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_state
+msgid "Status kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_state
+msgid "Status removed"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
+msgid "Swap"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1816,7 +2062,27 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__tax_amount
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Taxes"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_tax
+msgid "Taxes kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_tax
+msgid "Taxes removed"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_duplicate_linked
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_duplicate_linked
+msgid ""
+"Technical field: a duplicate of this bill is linked to an E-Fatura document,"
+" so deleting it would leave the document without a bill and the "
+"synchronization would create one all over again."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1860,6 +2126,53 @@ msgid "The Tax Authority response carries no execution status."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The bill that goes generated deferral entries. Remove the deferral first, or"
+" keep that bill instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The bill that goes has payments matched to it. Undo the reconciliation "
+"first, or keep that bill instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The bill that goes originated an asset. Dispose of the asset first, or keep "
+"that bill instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The bill that stays already has %(label)s built from its own date and "
+"amounts: review them"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_move_id
+msgid ""
+"The bill that stays as it is: the merge moves the e-fatura link to it and "
+"changes nothing else on it."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The bill that stays is cancelled, and an E-Fatura document cannot be left on"
+" a cancelled bill. Keep the other one instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_journal_id
 msgid ""
 "The default purchase accounting journal where e-fatura invoices will be "
@@ -1892,6 +2205,21 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_move_id
+msgid ""
+"The duplicate bill: it is deleted while still a draft, and cancelled once "
+"posted."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_efatura_merge_move_id
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_efatura_merge_move_id
+msgid ""
+"The duplicate this bill can be merged with, keeping the E-Fatura document on"
+" the bill that stays."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__l10n_pt_efatura_id
 msgid "The e-fatura record for this entry line."
 msgstr ""
@@ -1905,30 +2233,47 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid "The invoices have been successfully merged."
+#: code:addons/ptplus_accounting_efatura/models/account_journal.py:0
+msgid "The scanned VAT %s does not match your company VAT."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid "The scanned VAT {scanned_vat} does not match your company VAT."
-msgstr ""
-
-#. module: ptplus_accounting_efatura
-#. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
 msgid ""
-"The total amount %(tot_amount)s of document %(doc_number)s must be equal to "
-"the total amount %(efat_tot_amount)s of the related E-Fatura line."
+"The two bills are on different vendors, %(keep_partner)s and "
+"%(drop_partner)s"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "The two bills belong to different companies."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
 msgid ""
-"The untaxed amount %(amount_unt)s of document %(doc_number)s must be equal "
-"to the untaxed amount %(line_amount)s of the related E-Fatura line."
+"The two bills disagree on the %(fields)s, and it is the bill that goes that "
+"matches the E-Fatura document. Nothing is copied over, so check the bill "
+"that stays, or keep the other one instead"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The two bills disagree on the %(fields)s, and neither matches the E-Fatura "
+"document. Nothing is copied over, so check the bill that stays"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"The two bills disagree on the %(fields)s. The bill that stays is the one "
+"matching the E-Fatura document, and nothing is copied from the other"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1946,7 +2291,17 @@ msgid "The vendor issued this document under the cash VAT scheme."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid ""
+"This merge is not possible:\n"
+"\n"
+"%(reasons)s"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Total"
 msgstr ""
 
@@ -1954,6 +2309,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__total_amount
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__amount_total
 msgid "Total Amount"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_total
+msgid "Total kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_total
+msgid "Total removed"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -2030,6 +2395,7 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__vendor_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_search
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
 msgid "Vendor"
@@ -2048,6 +2414,16 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_tax_mapping_search
 msgid "Vendor Specific"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_partner_id
+msgid "Vendor kept"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_partner_id
+msgid "Vendor removed"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -2076,6 +2452,16 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_note
+msgid "What happens to it"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__drop_note
+msgid "What happens to that"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_qr_scan_state
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_qr_scan_state
 msgid ""
@@ -2094,16 +2480,38 @@ msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid "You can only merge two vender invoices at the same time."
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "assets"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
-#: code:addons/ptplus_accounting_efatura/models/account_move.py:0
-msgid ""
-"You can't validate document %s because its state on the related E-Fatura "
-"info is Cancelled. Youshould cancel the document instead."
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "cancelled"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "currency"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "deferral entries"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "deleted"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "document date"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -2124,6 +2532,12 @@ msgid "id"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "left cancelled"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__l10n_pt_dataport_import_efatura__state__running
 msgid "running"
 msgstr ""
@@ -2132,6 +2546,18 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
 msgid "tax region"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "taxes"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_account_efatura_merge.py:0
+msgid "total"
 msgstr ""
 
 #. module: ptplus_accounting_efatura

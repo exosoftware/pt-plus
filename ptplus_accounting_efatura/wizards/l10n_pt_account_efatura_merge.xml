@@ -1,0 +1,182 @@
+<odoo>
+    <record id="account_efatura_merge_view" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.merge.form</field>
+        <field name="model">l10n_pt.account.efatura.merge</field>
+        <field name="arch" type="xml">
+            <form string="Merge E-Fatura Invoices">
+                <div
+                    class="alert alert-danger"
+                    role="alert"
+                    invisible="not blocker_note"
+                >
+                    <field name="blocker_note" nolabel="1" readonly="1" />
+                </div>
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="not warning_note"
+                >
+                    <field name="warning_note" nolabel="1" readonly="1" />
+                </div>
+                <div class="alert alert-info mb-3" role="status">
+                    <group string="E-Fatura document">
+                        <group>
+                            <field name="efatura_id" readonly="1" string="Document" />
+                            <field
+                                name="efatura_vendor_id"
+                                readonly="1"
+                                string="Vendor"
+                            />
+                            <field
+                                name="efatura_status"
+                                readonly="1"
+                                string="Status"
+                                widget="badge"
+                                decoration-success="efatura_status == 'register'"
+                                decoration-info="efatura_status == 'pending'"
+                                decoration-danger="efatura_status == 'cancel'"
+                            />
+                        </group>
+                        <group>
+                            <field name="efatura_date" readonly="1" string="Date" />
+                            <field
+                                name="efatura_total"
+                                readonly="1"
+                                string="Total"
+                                widget="monetary"
+                                options="{'currency_field': 'efatura_currency_id'}"
+                            />
+                            <field
+                                name="efatura_tax_amount"
+                                readonly="1"
+                                string="Taxes"
+                                widget="monetary"
+                                options="{'currency_field': 'efatura_currency_id'}"
+                            />
+                            <field name="efatura_currency_id" invisible="1" />
+                        </group>
+                    </group>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6">
+                        <div class="alert alert-success h-100 mb-0" role="status">
+                            <group string="Bill to keep">
+                                <field name="keep_move_id" readonly="1" string="Bill" />
+                                <field
+                                    name="keep_partner_id"
+                                    readonly="1"
+                                    string="Vendor"
+                                />
+                                <field
+                                    name="keep_date"
+                                    string="Date"
+                                    readonly="1"
+                                    decoration-warning="keep_date != efatura_date"
+                                />
+                                <field
+                                    name="keep_total"
+                                    string="Total"
+                                    readonly="1"
+                                    decoration-warning="keep_total != efatura_total"
+                                    widget="monetary"
+                                    options="{'currency_field': 'keep_currency_id'}"
+                                />
+                                <field
+                                    name="keep_tax"
+                                    string="Taxes"
+                                    readonly="1"
+                                    decoration-warning="keep_tax != efatura_tax_amount"
+                                    widget="monetary"
+                                    options="{'currency_field': 'keep_currency_id'}"
+                                />
+                                <field
+                                    name="keep_state"
+                                    string="Status"
+                                    readonly="1"
+                                    widget="badge"
+                                    decoration-success="keep_state == 'posted'"
+                                    decoration-info="keep_state == 'draft'"
+                                    decoration-danger="keep_state == 'cancel'"
+                                />
+                                <field name="keep_currency_id" invisible="1" />
+                            </group>
+                            <hr class="my-2" />
+                            <field name="keep_note" nolabel="1" readonly="1" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="alert alert-danger h-100 mb-0" role="status">
+                            <group string="Bill to remove">
+                                <field name="drop_move_id" readonly="1" string="Bill" />
+                                <field
+                                    name="drop_partner_id"
+                                    readonly="1"
+                                    string="Vendor"
+                                />
+                                <field
+                                    name="drop_date"
+                                    string="Date"
+                                    readonly="1"
+                                    decoration-warning="drop_date != efatura_date"
+                                />
+                                <field
+                                    name="drop_total"
+                                    string="Total"
+                                    readonly="1"
+                                    decoration-warning="drop_total != efatura_total"
+                                    widget="monetary"
+                                    options="{'currency_field': 'drop_currency_id'}"
+                                />
+                                <field
+                                    name="drop_tax"
+                                    string="Taxes"
+                                    readonly="1"
+                                    decoration-warning="drop_tax != efatura_tax_amount"
+                                    widget="monetary"
+                                    options="{'currency_field': 'drop_currency_id'}"
+                                />
+                                <field
+                                    name="drop_state"
+                                    string="Status"
+                                    readonly="1"
+                                    widget="badge"
+                                    decoration-success="drop_state == 'posted'"
+                                    decoration-info="drop_state == 'draft'"
+                                    decoration-danger="drop_state == 'cancel'"
+                                />
+                                <field name="drop_currency_id" invisible="1" />
+                            </group>
+                            <hr class="my-2" />
+                            <field name="drop_note" nolabel="1" readonly="1" />
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <button
+                        string="Merge"
+                        name="action_merge"
+                        type="object"
+                        default_focus="1"
+                        class="btn-primary"
+                        invisible="blocker_note"
+                    />
+                    <button
+                        string="Swap"
+                        name="action_swap"
+                        type="object"
+                        class="btn-secondary"
+                        help="Keep the other bill instead"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_efatura_merge" model="ir.actions.act_window">
+        <field name="name">Merge E-Fatura Invoices</field>
+        <field name="res_model">l10n_pt.account.efatura.merge</field>
+        <field name="view_id" ref="account_efatura_merge_view" />
+        <field name="target">new</field>
+    </record>
+</odoo>

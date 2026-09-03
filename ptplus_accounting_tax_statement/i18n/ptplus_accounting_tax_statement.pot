@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0+e\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 16:27+0000\n"
-"PO-Revision-Date: 2025-04-14 16:27+0000\n"
+"POT-Creation-Date: 2026-08-19 16:57+0000\n"
+"PO-Revision-Date: 2026-08-19 16:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,8 +33,22 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_partner_custom_form
-msgid "<span>%</span>"
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid ""
+"<p>Vendors annex - field {field} has rows identifying non-EU vendors, which "
+"the AT does not accept. These operations must be reported under the reverse "
+"charge (RC) or import (IM) classification, or by the import liquidation "
+"number - please review the following taxes: {taxes}.</p><br/>"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid ""
+"<p>Vendors annex - field {field} has rows without the vendor's VAT number or"
+" an import liquidation number. Please fill in the VAT number of: "
+"{names}.</p><br/>"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
@@ -275,7 +289,6 @@ msgstr ""
 #. module: ptplus_accounting_tax_statement
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_recap_statement.py:0
-#: model:ir.model,name:ptplus_accounting_tax_statement.model_res_country
 msgid "Country"
 msgstr ""
 
@@ -398,11 +411,17 @@ msgid "Details"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_asset_mixin__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_statement__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_statement_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_payment_slip__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_recap_statement__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_statement__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -410,8 +429,9 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/models/account_move.py:0
 msgid ""
-"Document %s contains a tax (%s) with a Periodic Statement Feature, without a"
-" defined Export Number. Please define one and try again."
+"Document %(doc_name)s contains a tax (%(tax_name)s) with a Periodic "
+"Statement Feature, without a defined Export Number. Please define one and "
+"try again."
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
@@ -519,11 +539,17 @@ msgid "Has Move Lines"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_account_tax__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_asset_mixin__id
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_statement__id
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_account_statement_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_payment_slip__id
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_recap_statement__id
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_statement__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -538,16 +564,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_recap_statement.py:0
 msgid "INVOICING"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_country__iso_3166
-msgid "ISO 3166"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields,help:ptplus_accounting_tax_statement.field_res_country__iso_3166
-msgid "ISO 3166 numeric code for the country"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
@@ -594,7 +610,6 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_asset__l10n_pt_asset_type__intangible_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__intangible_assets
 msgid "Intangible Assets"
 msgstr ""
@@ -622,7 +637,6 @@ msgid "Invert value"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_asset__l10n_pt_asset_type__investment_properties
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__investment_properties
 msgid "Investment Properties"
 msgstr ""
@@ -648,12 +662,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_recap_statement__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_statement__journal_ids
 msgid "Journals"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_partner__l10n_pt_country_region
-#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_users__l10n_pt_country_region
-msgid "L10N Pt Country Region"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
@@ -708,11 +716,6 @@ msgid "Madeira"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.view_partner_custom_form
-msgid "Model 32 Information"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_recap_statement__period__month_curr
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_statement__period__month_curr
 msgid "Month - Current"
@@ -748,7 +751,6 @@ msgid "Non Resident Income"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_asset__l10n_pt_asset_type__non-consumable_biological_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__non-consumable_biological_assets
 msgid "Non-Consumable Biological Assets"
 msgstr ""
@@ -879,9 +881,19 @@ msgid "Recapitulative Statement Total"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
+#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_l10n_pt_wizard_statement__refund_amount
+msgid "Refund Amount"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
 msgid "Refund Lines"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_tax_statement.wizard_tax_statement_form
+msgid "Refund Value"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
@@ -1088,7 +1100,6 @@ msgid "Tags"
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__account_asset__l10n_pt_asset_type__tangible_fixed_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__tangible_fixed_assets
 msgid "Tangible Fixed Assets"
 msgstr ""
@@ -1237,12 +1248,6 @@ msgid "VAT No."
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_partner__l10n_pt_vat_pt
-#: model:ir.model.fields,field_description:ptplus_accounting_tax_statement.field_res_users__l10n_pt_vat_pt
-msgid "VAT PT"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__dataport_log__type__vat_periodic
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_statement__type__vat_periodic
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_statement__statement_type__vat_periodic
@@ -1386,18 +1391,6 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_statement__type__withholding_annual
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_statement__statement_type__withholding_annual
-msgid "WithHolding Tax Annual Declaration"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_account_statement__type__withholding_monthly
-#: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_statement__statement_type__withholding_monthly
-msgid "WithHolding Tax Monthly Declaration"
-msgstr ""
-
-#. module: ptplus_accounting_tax_statement
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_recap_statement__period__year_curr
 #: model:ir.model.fields.selection,name:ptplus_accounting_tax_statement.selection__l10n_pt_wizard_statement__period__year_curr
 msgid "Year - Current"
@@ -1536,4 +1529,16 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
 msgid "to"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid "unknown"
+msgstr ""
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid "unknown tax"
 msgstr ""

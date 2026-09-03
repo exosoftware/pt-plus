@@ -7,9 +7,10 @@
             <list
                 js_class="l10n_pt_efatura_list"
                 create="0"
-                decoration-success="not status_mismatch and not mapping_missing"
+                decoration-success="invoice_id and not status_mismatch and not mapping_missing"
                 decoration-danger="status_mismatch"
                 decoration-warning="mapping_missing and not status_mismatch"
+                decoration-muted="not invoice_id and not status_mismatch and not mapping_missing"
             >
                 <field name="status_mismatch" column_invisible="True" />
                 <field name="mapping_missing" column_invisible="True" />

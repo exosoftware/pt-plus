@@ -31,6 +31,45 @@ Available soon.
 Changelog
 =========
 
+1.4.2 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The tabs of the monthly statement and of the income statement are now shown in
+  your language, instead of always in English.
+
+1.4.1 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The withholding statements no longer require the accounting modules to be
+  installed: they are part of the invoicing offer and work on their own.
+
+1.4.0 (2026-08-19)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Monthly Withholding Statement: the statement now warns you when a credit note
+  was posted on a period other than the one of the invoice it corrects, listing
+  the credit notes that don't belong to the period being filed and the ones,
+  from later periods, that do. The withholding is due on the period of the
+  invoice, so those periods have to be filed again as a replacement statement.
+
+**Bugfixes**
+
+- Modelo 30: filling the statement no longer fails with a technical error when
+  the PT+ accounting module isn't installed: it is now installed along with this
+  one, since the beneficiary's country code (Quadro 08, field 33) comes from it.
+
+- Modelo 30: the taxation regime (Quadro 08, field 36) is now taken from the
+  withholding tax used on each line, instead of always being reported as
+  "01 - Tributação nos termos dos Códigos do IRS e/ou IRC". Fill the
+  **Withholding Taxation Regime** field on your withholding taxes; the
+  statement now warns you when it is missing.
+
 1.3.0 (2026-07-15)
 ~~~~~~~~~~~~~~~~~~~
 

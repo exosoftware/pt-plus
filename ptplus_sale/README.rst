@@ -33,6 +33,18 @@ Available soon.
 Changelog
 =========
 
+5.1.8 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Orders confirmed automatically after an online payment are now issued as an
+  order (NE) document, like the ones confirmed by hand. When the company that
+  received the payment was not the one the automatic process was running under,
+  the confirmation either kept the quotation number or stopped with the error
+  "the document is not a fiscal document", leaving the order unconfirmed and
+  uninvoiced even though the payment had been received.
+
 5.1.7 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~~
 

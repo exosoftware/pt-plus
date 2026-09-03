@@ -15,6 +15,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+msgid ""
+"%(refund)s of %(refund_date)s, on invoice %(invoice)s of %(invoice_date)s"
+msgstr ""
+
+#. module: ptplus_reports_withholding
 #: model:ir.actions.report,print_report_name:ptplus_reports_withholding.l10n_pt_report_annual_statement_action
 msgid "'Income Statement ' + object.get_period_text() + '.pdf'"
 msgstr ""
@@ -307,6 +314,14 @@ msgid "Email"
 msgstr ""
 
 #. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__email_partner_ids
+msgid "Email Recipients"
+msgstr ""
+
+#. module: ptplus_reports_withholding
 #: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__representative_user_status
@@ -476,6 +491,14 @@ msgid "Inc. Code"
 msgstr ""
 
 #. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+msgid ""
+"Included here, but due on the period of their invoice (remove them from this "
+"statement):"
+msgstr ""
+
+#. module: ptplus_reports_withholding
 #: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_report_annual_statement_document
 msgid "Income"
@@ -635,6 +658,14 @@ msgstr ""
 msgid ""
 "Line '{description}' on move {move} is related to tax {tax}. Please fill the "
 "tax's Withholding Income Type field"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_mod30_statement_wizard.py:0
+msgid ""
+"Line '{description}' on move {move} is related to tax {tax}. Please fill the "
+"tax's Withholding Taxation Regime field"
 msgstr ""
 
 #. module: ptplus_reports_withholding
@@ -821,6 +852,32 @@ msgid "Partner Selection"
 msgstr ""
 
 #. module: ptplus_reports_withholding
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__email_partner_ids
+msgid ""
+"Partners the Tax Authority document (submission receipt or payment "
+"reference) will be emailed to."
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__payment_reference_data
+msgid "Payment Reference"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_annual_statement_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__payment_reference_filename
+msgid "Payment Reference Filename"
+msgstr ""
+
+#. module: ptplus_reports_withholding
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard_line_q7__name
 msgid "Payment Slip Number"
 msgstr ""
@@ -841,6 +898,13 @@ msgstr ""
 #. module: ptplus_reports_withholding
 #: model:ir.model.fields.selection,name:ptplus_reports_withholding.selection__l10n_pt_annual_statement_wizard__partner_selection__persons
 msgid "Persons Only"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+msgid ""
+"Posted on a later period, but due on this one (add them to this statement):"
 msgstr ""
 
 #. module: ptplus_reports_withholding
@@ -916,6 +980,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo10_statement_wizard__justifiable_reason_start_date
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__justifiable_reason_start_date
 msgid "Reason Fact Start"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__refund_warning
+msgid "Refund Warning"
 msgstr ""
 
 #. module: ptplus_reports_withholding
@@ -1132,6 +1201,7 @@ msgstr ""
 
 #. module: ptplus_reports_withholding
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__line_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_monthly_statement_wizard_form
 msgid "Statement Lines"
 msgstr ""
 
@@ -1141,6 +1211,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_modelo30_statement_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__statement_type
 msgid "Statement Type"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#: model_terms:ir.ui.view,arch_db:ptplus_reports_withholding.l10n_pt_annual_statement_wizard_form
+msgid "Statements"
 msgstr ""
 
 #. module: ptplus_reports_withholding
@@ -1433,6 +1508,16 @@ msgstr ""
 #. module: ptplus_reports_withholding
 #: model:ir.model.fields,field_description:ptplus_reports_withholding.field_l10n_pt_monthly_statement_wizard__withholding_type
 msgid "Withholding Type"
+msgstr ""
+
+#. module: ptplus_reports_withholding
+#. odoo-python
+#: code:addons/ptplus_reports_withholding/wizards/l10n_pt_monthly_statement_wizard.py:0
+msgid ""
+"Withholdings are due on the period of the invoice that originated them. The "
+"credit notes below don't match the period they were posted on, so the "
+"statement of the invoice's period has to be filed again as a replacement "
+"statement."
 msgstr ""
 
 #. module: ptplus_reports_withholding

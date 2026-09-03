@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-03 10:33+0000\n"
-"PO-Revision-Date: 2026-08-03 10:41+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_sale/pt/>\n"
@@ -17,6 +15,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 3.8\n"
+
+#. module: ptplus_sale
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_toggle_saft_element_sale
+msgid "(Un)block SAF-T element"
+msgstr "(Des)bloquear elemento SAF-T"
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
@@ -56,6 +59,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__atcud
 msgid "ATCUD"
 msgstr "ATCUD"
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid ""
+"All the quantities on this order are already booked across its Proforma "
+"Invoices. There is nothing left to send."
+msgstr ""
+"Todas as quantidades desta encomenda já estão reservadas nas suas Faturas "
+"Pró-forma. Não há nada para enviar."
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
@@ -117,6 +130,7 @@ msgid "Digital signature"
 msgstr "Assinatura digital"
 
 #. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_account_move__display_name
 #: model:ir.model.fields,field_description:ptplus_sale.field_dataport_export_saft__display_name
 #: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__display_name
 #: model:ir.model.fields,field_description:ptplus_sale.field_res_company__display_name
@@ -220,6 +234,7 @@ msgid "Fiscal Document Type"
 msgstr "Série Documental"
 
 #. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_account_move__id
 #: model:ir.model.fields,field_description:ptplus_sale.field_dataport_export_saft__id
 #: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__id
 #: model:ir.model.fields,field_description:ptplus_sale.field_res_company__id
@@ -229,6 +244,12 @@ msgstr "Série Documental"
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__id
 msgid "ID"
 msgstr ""
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid "Insufficient quantity"
+msgstr "Quantidade insuficiente"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__integration_doc_number
@@ -276,6 +297,11 @@ msgstr ""
 "É proibido modificar os seguintes campos de um documento emitido durante a "
 "criação:\n"
 "%s"
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_count
@@ -334,10 +360,10 @@ msgid ""
 "Invoice lines are created or their quantity is changed."
 msgstr ""
 "Numa linha da encomenda original: a quantidade acumulada atualmente "
-"reservada em todas as suas Faturas Pró-forma. Numa linha de Fatura "
-"Pró-forma: a quantidade desta linha já reservada na linha original. "
-"Mantido sincronizado à medida que as linhas de Fatura Pró-forma são "
-"criadas ou a sua quantidade é alterada."
+"reservada em todas as suas Faturas Pró-forma. Numa linha de Fatura Pró-"
+"forma: a quantidade desta linha já reservada na linha original. Mantido "
+"sincronizado à medida que as linhas de Fatura Pró-forma são criadas ou a sua "
+"quantidade é alterada."
 
 #. module: ptplus_sale
 #. odoo-python
@@ -435,9 +461,9 @@ msgid "Quotation - %s"
 msgstr "Orçamento - %s"
 
 #. module: ptplus_sale
-#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_or
-msgid "Quote"
-msgstr "Cotação"
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_recompute_saft_element_sale
+msgid "Recompute SAF-T element"
+msgstr "Recalcular elemento SAF-T"
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
@@ -588,8 +614,8 @@ msgstr "A encomenda a partir da qual esta Fatura Pró-forma foi criada"
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
 msgid "The original order line this Proforma Invoice line was copied from"
 msgstr ""
-"A linha da encomenda original a partir da qual esta linha de Fatura "
-"Pró-forma foi copiada"
+"A linha da encomenda original a partir da qual esta linha de Fatura Pró-"
+"forma foi copiada"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_quotation_id
@@ -641,7 +667,6 @@ msgstr "Conferência Mercadorias/Serviços"
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/res_company.py:0
-#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_fo
 #: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fo
 msgid "Worksheet"
 msgstr "Folha de Obra"

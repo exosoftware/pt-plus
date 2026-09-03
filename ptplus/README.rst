@@ -53,6 +53,63 @@ Available soon.
 Changelog
 =========
 
+5.1.16 (2026-08-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports the Odoo version and edition the database
+  is running, so that support no longer has to keep them up to date by hand
+
+5.1.15 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Invoices posted automatically, such as the ones issued after an online
+  payment, are now signed and numbered under the company that issues them.
+  When that company was not the one the automatic process was running under,
+  posting stopped with the error "the document is not a fiscal document".
+5.1.14 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports every app authored by Exo Software that is
+  installed in the database, and not only the PT+ family, so that support sees
+  the whole picture of what is running
+
+5.1.13 (2026-08-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Communications with the Tax Authority now give up after 30 seconds. Until
+  now, whenever the Tax Authority accepted the connection and then stopped
+  answering, the request stayed waiting indefinitely and kept the server
+  occupied: a few documents being validated at the same time were enough to
+  leave the whole installation without capacity to answer anything, until it
+  was restarted by hand. The communication now fails with the usual connection
+  timeout message and can be tried again.
+
+5.1.12 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The country ISO codes (three-letter and numeric) are now available on every
+  PT+ installation, instead of only on the ones with accounting. The Modelo 30
+  needs the numeric code to identify the beneficiary's country.
+
+5.1.11 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Documents other than invoices (for example payment receipts) can now
+  report withheld amounts in their QR code (field P). Until now these
+  documents always showed a zero withholding in the QR code.
+
 5.1.10 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~~
 
