@@ -33,6 +33,27 @@ Available soon.
 Changelog
 =========
 
+5.1.6 (2026-09-09)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The QR code and the certification text now belong to the quotation/order
+  document itself, so any other report printed from a sales order no longer
+  carries them
+
+5.1.5 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Orders confirmed automatically after an online payment are now issued as an
+  order (NE) document, like the ones confirmed by hand. When the company that
+  received the payment was not the one the automatic process was running under,
+  the confirmation either kept the quotation number or stopped with the error
+  "the document is not a fiscal document", leaving the order unconfirmed and
+  uninvoiced even though the payment had been received.
+
 5.1.4 (2026-07-30)
 ~~~~~~~~~~~~~~~~~~~
 

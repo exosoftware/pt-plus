@@ -45,6 +45,24 @@ Available soon.
 Changelog
 =========
 
+5.1.8 (2026-08-19)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The vendors and customers annexes of the VAT refund request now follow the
+  AT filling rules: Greek vendors are identified with the EL prefix (instead
+  of the country code GR) and Northern Ireland vendors with the XI prefix,
+  the prefix is no longer repeated inside the VAT number column, rows whose
+  amounts are all zero are no longer exported, and extracting a declaration
+  where a vendor row lacks the vendor's VAT number now shows a warning
+  naming the vendors to fix, since the AT rejects the file until it is
+  corrected.
+- Extracting a refund request whose vendors annex identifies vendors from
+  outside the EU now warns the user: the AT does not accept those rows, and
+  the operations must be reported under reverse charge or with the import
+  liquidation number. The warning names the taxes to review.
+
 5.1.7 (2026-04-13)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -141,6 +141,27 @@
                             </div>
                         </div>
                     </setting>
+                    <setting
+                        id="l10n_pt_refund_accounts"
+                        string="Credit Note Accounts"
+                        help="Default accounts used when validating credit notes on Portuguese companies"
+                        invisible="not pt_invoicing"
+                    >
+                        <div class="row mt8">
+                            <label
+                                for="l10n_pt_income_refund_account_id"
+                                class="col-lg-5 o_light_label"
+                            />
+                            <field name="l10n_pt_income_refund_account_id" />
+                        </div>
+                        <div class="row mt8">
+                            <label
+                                for="l10n_pt_expense_refund_account_id"
+                                class="col-lg-5 o_light_label"
+                            />
+                            <field name="l10n_pt_expense_refund_account_id" />
+                        </div>
+                    </setting>
                 </block>
             </xpath>
         </field>

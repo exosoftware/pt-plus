@@ -6,14 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-03 10:33+0000\n"
-"PO-Revision-Date: 2026-08-03 10:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: ptplus_sale
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_toggle_saft_element_sale
+msgid "(Un)block SAF-T element"
+msgstr ""
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
@@ -50,6 +53,14 @@ msgstr ""
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__atcud
 msgid "ATCUD"
+msgstr ""
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid ""
+"All the quantities on this order are already booked across its Proforma "
+"Invoices. There is nothing left to send."
 msgstr ""
 
 #. module: ptplus_sale
@@ -104,17 +115,6 @@ msgstr ""
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__hash
 msgid "Digital signature"
-msgstr ""
-
-#. module: ptplus_sale
-#: model:ir.model.fields,field_description:ptplus_sale.field_dataport_export_saft__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_advance_payment_inv__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__display_name
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__display_name
-msgid "Display Name"
 msgstr ""
 
 #. module: ptplus_sale
@@ -175,6 +175,11 @@ msgid "Down payment Tax Reduced Rate"
 msgstr ""
 
 #. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__l10n_pt_multiway_tag_sale__dup
+msgid "Duplicate"
+msgstr ""
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
 msgid "Duplicate this document as a Proforma Invoice"
 msgstr ""
@@ -205,14 +210,9 @@ msgid "Fiscal Document Type"
 msgstr ""
 
 #. module: ptplus_sale
-#: model:ir.model.fields,field_description:ptplus_sale.field_dataport_export_saft__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_advance_payment_inv__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__id
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order_line__id
-msgid "ID"
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+msgid "Insufficient quantity"
 msgstr ""
 
 #. module: ptplus_sale
@@ -254,6 +254,11 @@ msgstr ""
 msgid ""
 "It is forbidden to set the following fields in an issued document during creation:\n"
 "%s"
+msgstr ""
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_account_move
+msgid "Journal Entry"
 msgstr ""
 
 #. module: ptplus_sale
@@ -404,8 +409,8 @@ msgid "Quotation - %s"
 msgstr ""
 
 #. module: ptplus_sale
-#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_or
-msgid "Quote"
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_recompute_saft_element_sale
+msgid "Recompute SAF-T element"
 msgstr ""
 
 #. module: ptplus_sale
@@ -619,7 +624,6 @@ msgstr ""
 
 #. module: ptplus_sale
 #. odoo-python
-#: code:addons/ptplus_sale/models/sale_order.py:0
 #: code:addons/ptplus_sale/wizards/sale_make_invoice_advance.py:0
 msgid ""
 "You must set a value for %s field in your company settings if you wish to "

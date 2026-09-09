@@ -6,7 +6,7 @@
 # pylint: disable=license-allowed, manifest-required-author
 {
     "name": "Portugal - Tax Statements",
-    "version": "18.0.5.1.7",
+    "version": "18.0.5.1.8",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",

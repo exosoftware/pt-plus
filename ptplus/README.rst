@@ -53,6 +53,96 @@ Available soon.
 Changelog
 =========
 
+5.1.15 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The QR code, the ATCUD and the certification text are now printed only by
+  the reports that reproduce the fiscal document itself. Other printouts of
+  the same record, such as the journal entry of an invoice, no longer carry
+  them
+
+5.1.14 (2026-08-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports the Odoo version and edition the database
+  is running, so that support no longer has to keep them up to date by hand
+
+5.1.13 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Invoices posted automatically, such as the ones issued after an online
+  payment, are now signed and numbered under the company that issues them.
+  When that company was not the one the automatic process was running under,
+  posting stopped with the error "the document is not a fiscal document".
+5.1.12 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports every app authored by Exo Software that is
+  installed in the database, and not only the PT+ family, so that support sees
+  the whole picture of what is running
+
+5.1.11 (2026-08-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Communications with the Tax Authority now give up after 30 seconds. Until
+  now, whenever the Tax Authority accepted the connection and then stopped
+  answering, the request stayed waiting indefinitely and kept the server
+  occupied: a few documents being validated at the same time were enough to
+  leave the whole installation without capacity to answer anything, until it
+  was restarted by hand. The communication now fails with the usual connection
+  timeout message and can be tried again.
+
+5.1.10 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The country ISO codes (three-letter and numeric) are now available on every
+  PT+ installation, instead of only on the ones with accounting. The Modelo 30
+  needs the numeric code to identify the beneficiary's country.
+
+5.1.9 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Documents other than invoices (for example payment receipts) can now
+  report withheld amounts in their QR code (field P). Until now these
+  documents always showed a zero withholding in the QR code.
+
+5.1.8 (2026-08-19)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When the Tax Authority refuses a communication, the failure window now shows
+  the whole reason it gave, and not only its first line. Refused credentials, in
+  particular, used to show just "An error occurred authenticating the taxpayer",
+  while the Tax Authority was also saying whether the password was wrong or the
+  access had been blocked, and how many attempts were left
+
+5.1.7 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The "IVA 6% AQ. (OB)" purchase tax is no longer archived, so the reduced rate
+  is selectable on vendor bills and usable as an E-Fatura tax mapping default
+- New Income Refund Account and Expense Refund Account settings, in the
+  Portugal section of the Accounting settings: they are the accounts credit
+  notes fall back to when neither the product nor its category defines a
+  refund account
+
 5.1.6 (2026-08-14)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_efatura_tax_mapping_list" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.tax.mapping.list</field>
+        <field name="model">l10n_pt.account.efatura.tax.mapping</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" multi_edit="1">
+                <field name="sequence" widget="handle" />
+                <field name="product_id" placeholder="Any product" />
+                <field name="tax_id" placeholder="No tax" />
+                <field
+                    name="partner_ids"
+                    widget="many2many_tags"
+                    placeholder="Every vendor"
+                />
+                <field name="tax_percentage" placeholder="Any rate" />
+                <field name="tax_genre" placeholder="Any type" />
+                <field name="vat_tax_type" placeholder="Any rate type" />
+                <field name="exemption_reason" optional="show" />
+                <field name="country_id" optional="hide" />
+                <field name="region" optional="hide" />
+                <field name="tax_verba" optional="hide" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="hide"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="account_efatura_tax_mapping_form" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.tax.mapping.form</field>
+        <field name="model">l10n_pt.account.efatura.tax.mapping</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Values To Apply">
+                            <field name="product_id" placeholder="Any product" />
+                            <field name="tax_id" placeholder="No tax" />
+                            <field name="sequence" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
+                        <group string="Applies To">
+                            <field
+                                name="partner_ids"
+                                widget="many2many_tags"
+                                placeholder="Every vendor"
+                            />
+                            <field name="tax_percentage" placeholder="Any rate" />
+                            <field name="tax_genre" placeholder="Any type" />
+                            <field name="vat_tax_type" placeholder="Any rate type" />
+                            <field
+                                name="exemption_reason"
+                                placeholder="Any exemption reason"
+                            />
+                            <field name="country_id" placeholder="Any country" />
+                            <field name="region" placeholder="Any region" />
+                            <field name="tax_verba" placeholder="Any rate item" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_efatura_tax_mapping_search" model="ir.ui.view">
+        <field name="name">l10n_pt.account.efatura.tax.mapping.search</field>
+        <field name="model">l10n_pt.account.efatura.tax.mapping</field>
+        <field name="arch" type="xml">
+            <search string="Search E-Fatura Tax Mapping">
+                <field name="partner_ids" />
+                <field name="tax_id" />
+                <field name="tax_verba" />
+                <filter
+                    string="Generic"
+                    name="generic"
+                    domain="[('partner_ids', '=', False)]"
+                />
+                <filter
+                    string="Vendor Specific"
+                    name="vendor_specific"
+                    domain="[('partner_ids', '!=', False)]"
+                />
+                <group>
+                    <filter
+                        string="Vendor"
+                        name="group_partner"
+                        context="{'group_by': 'partner_ids'}"
+                    />
+                    <filter
+                        string="Tax Type"
+                        name="group_tax_genre"
+                        context="{'group_by': 'tax_genre'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_account_efatura_tax_mapping" model="ir.actions.act_window">
+        <field name="name">E-Fatura Tax Mapping</field>
+        <field name="res_model">l10n_pt.account.efatura.tax.mapping</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="account_efatura_tax_mapping_list" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Map an E-Fatura tax</p>
+            <p>
+                Every tax reported by the E-Fatura synchronization is matched
+                against this table to find the tax to apply on the vendor bill
+                lines. Criteria left empty match any value, and mappings set for
+                a specific vendor take precedence over the generic ones.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_account_efatura_tax_mapping"
+        parent="account.menu_finance_configuration"
+        action="action_account_efatura_tax_mapping"
+        sequence="99"
+    />
+</odoo>
