@@ -26,6 +26,14 @@ Available soon.
 Changelog
 =========
 
+5.0.2 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Subsection lines on a credit note are no longer required to reference a
+  line of the original invoice, just like section and note lines.
+
 5.0.1 (2026-06-24)
 ~~~~~~~~~~~~~~~~~~~
 

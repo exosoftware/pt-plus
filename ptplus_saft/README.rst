@@ -32,6 +32,44 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.4.2 (2026-08-18)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Subsection lines are now left out of the SAF-T file, just like section
+  and note lines, both in the invoice lines and in the accounting entries.
+
+4.4.1 (2026-08-17)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A tax with an empty "Label on Invoices" no longer breaks the SAF-T export.
+  Until now the file came out without the Master Files section and an encoding
+  error was shown; the export now uses the tax name as the description in the
+  tax table and adds a warning telling you which tax should be fixed. The same
+  applies to a stamp duty tax whose verba has no name.
+- More generally, a badly configured tax can no longer void the whole Master
+  Files section with an unreadable encoding error. Since the SAF-T tax table
+  must report every tax used in the documents, the export now stops with a
+  clear message naming the tax(es) that cannot be reported and a button that
+  opens them for correction.
+
+4.4.0 (2026-08-14)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The SAF-T import now says up front what it can take from the file you
+  uploaded. There are three kinds of SAF-T and they do not all carry the same
+  data: an accounting file has the chart of accounts and the journal entries, an
+  invoicing file has neither, and an integrated file has both plus the invoices.
+  Until now an invoicing file imported only its customers and suppliers with no
+  explanation, which looked as though records had gone missing. A note at the
+  top of the import now states which kind of file it is and what will be
+  imported from it.
+
 4.3.1 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~
 

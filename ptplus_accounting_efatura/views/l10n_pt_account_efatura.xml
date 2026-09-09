@@ -7,9 +7,10 @@
             <list
                 js_class="l10n_pt_efatura_list"
                 create="0"
-                decoration-success="not status_mismatch and not mapping_missing"
+                decoration-success="invoice_id and not status_mismatch and not mapping_missing"
                 decoration-danger="status_mismatch"
                 decoration-warning="mapping_missing and not status_mismatch"
+                decoration-muted="not invoice_id and not status_mismatch and not mapping_missing"
             >
                 <field name="status_mismatch" column_invisible="True" />
                 <field name="mapping_missing" column_invisible="True" />
@@ -64,7 +65,9 @@
                             <field name="vendor_name" />
                             <field name="vat" />
                             <field name="type" />
+                            <field name="atcud" />
                             <field name="tax_auth_doc_id" string="AT ID" />
+                            <field name="sector" />
                             <field
                                 name="tag_ids"
                                 widget="many2many_tags"
@@ -73,6 +76,8 @@
                         </group>
                         <group>
                             <field name="status" />
+                            <field name="self_billing" />
+                            <field name="cash_vat_scheme" />
                             <field name="status_mismatch" invisible="1" />
                             <field name='vat_amount' />
                             <field name="tax_amount" />
@@ -82,12 +87,24 @@
                                 name='company_id'
                                 groups="base.group_multi_company"
                             />
-                            <field
-                                name="invoice_id"
-                                string="Document"
-                                domain="[('move_type', 'in', ('in_invoice', 'in_refund')), ('l10n_pt_efatura_id', '=', False)]"
-                                options="{'no_create': True, 'no_edit': True}"
-                            />
+                            <label for="invoice_id" string="Document" />
+                            <div class="o_row" name="invoice_id_row">
+                                <field
+                                    name="invoice_id"
+                                    nolabel="1"
+                                    domain="[('move_type', 'in', ('in_invoice', 'in_refund')), ('l10n_pt_efatura_id', '=', False)]"
+                                    options="{'no_create': True, 'no_edit': True}"
+                                />
+                                <button
+                                    name="%(action_account_invoice_efatura)d"
+                                    type="action"
+                                    string="Create Bill"
+                                    help="Create the vendor bill of this document, with the product and the tax of the E-Fatura tax mapping"
+                                    class="btn-link mb-1 px-0"
+                                    icon="fa-plus"
+                                    invisible="invoice_id or self_billing"
+                                />
+                            </div>
                             <field name="status_mismatch_disable" />
                         </group>
                         <notebook>

@@ -72,6 +72,17 @@ def _partner_defaults(env):
     return defaults
 
 
+def _owner_companies(env, model):
+    """{record_id: company_id} of every record of the model, with False for the
+    ones shared by all companies."""
+    return {
+        record["id"]: record["company_id"] and record["company_id"][0]
+        for record in env[model]
+        .with_context(active_test=False)
+        .search_read([], ["company_id"])
+    }
+
+
 def _mapping_vals(company_id, partner_id, product_id, rate, tax_id, country_id):
     """One mapping row, shaped like the ones a fresh install gets by default.
 
@@ -102,18 +113,24 @@ def migrate(env, version):
         return
 
     company_ids = set(env["res.company"].with_context(active_test=False).search([]).ids)
-    tax_ids = set(env["account.tax"].with_context(active_test=False).search([]).ids)
-    product_ids = set(
-        env["product.product"].with_context(active_test=False).search([]).ids
-    )
+    # A mapping can only point at a tax or a product of its own company
+    # (check_company), and the old default fields may well hold one of another
+    # company: keep the owner of each of them to tell.
+    tax_companies = _owner_companies(env, "account.tax")
+    product_companies = _owner_companies(env, "product.product")
     country_pt = env.ref("base.pt", raise_if_not_found=False)
     country_id = country_pt.id if country_pt else False
 
-    def usable_product(product_id, company_product):
-        """The old product field is optional on a mapping, so an unset or deleted
-        one simply carries over as empty."""
+    def usable(record_id, company_id, owners):
+        """Whether the mapping of this company can point at this record: it has
+        to still exist, and to be shared or belong to the very same company."""
+        return record_id in owners and owners[record_id] in (False, company_id)
+
+    def usable_product(company_id, product_id, company_product):
+        """The old product field is optional on a mapping, so an unset, deleted
+        or another company's one simply carries over as empty."""
         for candidate in (product_id, company_product):
-            if candidate in product_ids:
+            if usable(candidate, company_id, product_companies):
                 return candidate
         return None
 
@@ -121,9 +138,9 @@ def migrate(env, version):
     for company_id, (company_taxes, company_product) in company_defaults.items():
         if company_id not in company_ids:
             continue
-        product_id = usable_product(company_product, None)
+        product_id = usable_product(company_id, company_product, None)
         for rate, tax_id in company_taxes.items():
-            if tax_id in tax_ids:
+            if usable(tax_id, company_id, tax_companies):
                 vals_list.append(
                     _mapping_vals(
                         company_id, None, product_id, rate, tax_id, country_id
@@ -137,9 +154,9 @@ def migrate(env, version):
         if company_id not in company_ids:
             continue
         company_taxes, company_product = company_defaults.get(company_id, ({}, None))
-        product_id = usable_product(partner_product, company_product)
+        product_id = usable_product(company_id, partner_product, company_product)
         for rate, tax_id in partner_taxes.items():
-            if tax_id not in tax_ids:
+            if not usable(tax_id, company_id, tax_companies):
                 continue
             # The old get_create_supplier() copied the company defaults onto
             # every vendor it created, so most vendors carry a configuration
@@ -147,7 +164,7 @@ def migrate(env, version):
             # what the generic one already says: skip it and keep the table
             # readable.
             if tax_id == company_taxes.get(rate) and product_id == usable_product(
-                company_product, None
+                company_id, company_product, None
             ):
                 continue
             vals_list.append(

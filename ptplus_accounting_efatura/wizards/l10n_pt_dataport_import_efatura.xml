@@ -46,6 +46,27 @@
                     />
                 </div>
             </group>
+
+            <div invisible="state != 'done'" position="before">
+                <div
+                    class="alert alert-info d-flex align-items-center"
+                    role="alert"
+                    invisible="state != 'running'"
+                >
+                    <i class="fa fa-circle-o-notch fa-spin me-2" />
+                    <span class="me-1">Synchronizing with the Tax Authority:</span>
+                    <!-- The widget on this field subscribes to the run's bus
+                         channel and reloads the dialog when the cron is done.
+                         It has to sit on a rendered field: the state one is
+                         invisible on the inherited form. -->
+                    <field name="sync_stage" widget="efatura_sync_stage" nolabel="1" />
+                </div>
+            </div>
+            <footer invisible="state != 'done'" position="after">
+                <footer invisible="state != 'running'">
+                    <button special="cancel" string="Close" />
+                </footer>
+            </footer>
         </field>
     </record>
 

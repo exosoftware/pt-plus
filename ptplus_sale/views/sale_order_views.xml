@@ -66,6 +66,18 @@
                     name="invisible"
                 >state == 'draft' or invoice_count >= 1 or source_billing</attribute>
             </xpath>
+            <!-- On a Pró-forma the native Send button is replaced by the
+                Send PRO-FORMA Invoice one, which uses the Proforma template -->
+            <xpath expr="//button[@id='quotation_send_primary']" position="attributes">
+                <attribute
+                    name="invisible"
+                >state != 'draft' or fiscal_document_type_code == 'PF'</attribute>
+            </xpath>
+            <xpath expr="//button[@id='quotation_send']" position="attributes">
+                <attribute
+                    name="invisible"
+                >state not in ('sent', 'sale') or fiscal_document_type_code == 'PF'</attribute>
+            </xpath>
             <!-- Add a issue button for quotations -->
             <xpath expr="//button[@id='action_confirm']" position="after">
                 <button
@@ -90,7 +102,7 @@
                     id="action_send_proforma_invoice"
                     string="Send PRO-FORMA Invoice"
                     type="object"
-                    context="{'validate_analytic': True}"
+                    context="{'proforma': True, 'validate_analytic': True}"
                     invisible="fiscal_document_type_code != 'PF' or state in ('draft', 'cancel')"
                     help="Send this document to the customer as a Proforma Invoice"
                     groups="sale.group_proforma_sales"
@@ -140,6 +152,8 @@
             <!-- Source Billing and Fiscal Document Type-->
             <field name="date_order" position="after">
                 <field name="source_billing" invisible="1" />
+                <!-- Pró-forma (PF) series are only offered to the users allowed
+                    to issue Proforma Invoices, just like the buttons are -->
                 <field
                     name="fiscal_document_type_id"
                     string="Document Type"
@@ -150,6 +164,19 @@
                             ('type', '!=', 'NE')
                             ]"
                     readonly="state != 'draft'"
+                    groups="sale.group_proforma_sales"
+                />
+                <field
+                    name="fiscal_document_type_id"
+                    string="Document Type"
+                    options="{'no_create_edit': True}"
+                    domain="[('source_billing', '=', source_billing),
+                            ('company_id', '=', company_id),
+                            ('section', '=', 'work'),
+                            ('type', 'not in', ['NE', 'PF'])
+                            ]"
+                    readonly="state != 'draft'"
+                    groups="!sale.group_proforma_sales"
                 />
             </field>
         </field>

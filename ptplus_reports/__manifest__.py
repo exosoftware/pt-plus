@@ -6,7 +6,7 @@
 # pylint: disable=license-allowed, manifest-required-author
 {
     "name": "Portugal - Statements/Reports",
-    "version": "19.0.1.3.0",
+    "version": "19.0.1.4.2",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
@@ -21,6 +21,7 @@
         "views/menu.xml",
         "wizards/l10n_pt_statement_wizard.xml",
         "wizards/l10n_pt_multi_statement_wizard.xml",
+        "data/mail_template_at_document.xml",
     ],
     "demo": [],
     "auto_install": False,

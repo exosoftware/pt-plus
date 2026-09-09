@@ -11,14 +11,13 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.1.0",
+    "version": "19.0.5.1.2",
     "depends": [
         "account",
         "ptplus",
         "ptplus_account_credit_note",
         "ptplus_account_debit_note",
     ],
-    "external_dependencies": {"python": ["pycountry"]},
     "data": [
         "data/l10n_pt_account_vat_adjustment_norm_data.xml",
         "data/l10n_pt.account.taxonomy.csv",

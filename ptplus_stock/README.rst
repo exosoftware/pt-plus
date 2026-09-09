@@ -32,6 +32,15 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.11 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Stock Operations report no longer prints the QR code and the
+  certification text. A stock operation is internal paperwork, and only the
+  transport document printed from it is a fiscal document
+
 5.1.10 (2026-07-14)
 ~~~~~~~~~~~~~~~~~~~
 
@@ -88,7 +97,7 @@ Changelog
 
 **Features**
 
-- Allow receptions to issue transport documents: selecting a document type on an incoming picking marks it as a fiscal document. Return notes (GD) now apply to receptions and asset transport notes (GA) accept any operation except deliveries.
+- Allow receptions to issue transport documents: selecting a document type on an incoming picking marks it as a fiscal document. Return notes (GD) apply only to deliveries, asset transport notes (GA) accept any operation except deliveries, and waybills (GT) accept internal transfers and deliveries like delivery notes.
 - Report the transport movement direction following the actual goods flow, so a reception loads at the counterparty and unloads at our warehouse.
 
 5.1.1 (2026-01-15)

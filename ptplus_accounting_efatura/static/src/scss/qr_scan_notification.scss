@@ -1,0 +1,28 @@
+// The notification asking what to do with a photo carries three buttons, too
+// many for the half-width column the standard notification puts them in (they
+// end up stacked one per line, beside the message). Lay them out side by side
+// under the message instead.
+.o_notification.o_l10n_pt_qr_scan_notification {
+    .o_notification_body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .o_notification_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        // Bootstrap's w-50 carries !important, and the three buttons need the
+        // whole width to fit on one line
+        width: 100% !important;
+        // The room kept on the right is there for the close button, which sits
+        // on the first line, next to the message
+        margin-right: -2.5rem;
+        margin-top: 0.25rem;
+
+        .btn {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            white-space: nowrap;
+        }
+    }
+}

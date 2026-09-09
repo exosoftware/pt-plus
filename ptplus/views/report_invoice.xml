@@ -2,8 +2,9 @@
 <odoo>
     <!-- Invoice document mods -->
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-        <!-- Certification Text-->
+        <!-- Fiscal features (QR code, ATCUD) and certification text -->
         <xpath expr="//t[@t-set='o']" position="after">
+            <t t-if="o.source_billing" t-set="pt_report" t-value="True" />
             <t
                 t-if="o.source_billing"
                 t-set="pt_certification_text"

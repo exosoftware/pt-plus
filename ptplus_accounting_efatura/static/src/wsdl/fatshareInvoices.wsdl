@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://factemi.at.min_financas.pt/fatshareInvoices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://factemi.at.min_financas.pt/fatshareInvoices" targetNamespace="http://factemi.at.min_financas.pt/fatshareInvoices">
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://factemi.at.min_financas.pt/fatshareInvoices">
+            <element name="InvoicesRequest">
+                <annotation>
+                    <documentation>TaxRegistrationNumber: Numero de identificacao fiscal (NIF) igual ao NIF login, indicando que pretende obter faturas como emitente
+				CustomerTaxID: NIF igual ao NIF login, indicando que pretende obter faturas como adquirente
+				StartDate: Data de inicio do periodo a consultar (YYYY-MM-DD)
+				EndDate: Data de fim do periodo a consultar (YYYY-MM-DD)
+
+				Pagination: Número de documentos por página e número da página desejada</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <choice>
+                            <element name="TaxRegistrationNumber" type="tns:SAFPTPortugueseVatNumber"/>
+                            <element name="CustomerTaxID" type="tns:SAFPTPortugueseVatNumber"/>
+                        </choice>
+                        <element name="StartDate" type="date"/>
+                        <element name="EndDate" type="date"/>
+                        <element minOccurs="0" name="Pagination" type="tns:PaginationType"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="InvoicesResponse">
+                <annotation>
+                    <documentation>InvoicesList: Lista de faturas emitidas para um emitente ou adquirente num determinado periodo.
+				estadoExecucao: Estado e descrição da operação</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element minOccurs="0" name="InvoicesList" type="tns:InvoicesListResponseType"/>
+                        <element name="estadoExecucao" type="tns:ResponseType"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="PaginationType">
+                <sequence>
+                    <element default="1" name="nPage" type="positiveInteger"/>
+                    <element default="300" name="nDocsPage">
+                        <simpleType>
+                            <restriction base="positiveInteger">
+                                <maxInclusive value="5000"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </complexType>
+            <complexType name="InvoicesListResponseType">
+                <annotation>
+                    <documentation>Invoice: Resposta à pesquisa efetuada
+				PaginationTotal: Informação sobre a paginação</documentation>
+                </annotation>
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="1" name="Invoice" nillable="false" type="tns:InvoiceResponseType"/>
+                    <element name="PaginationTotal" type="tns:TotalPaginationType"/>
+                </sequence>
+            </complexType>
+            <complexType name="InvoiceResponseType">
+                <annotation>
+                    <documentation>Cabecalho - informação enviada:
+				SoftwareCertificateNumber: Numero do certificado do software emitente (só no SFE)
+				InvoiceNo: Identificação única do documento de venda
+				ATCUD: Código Único do Documento
+				InvoiceDate: Data do documento de venda
+				InvoiceType: Tipo de Documento
+				SelfBillingIndicator: Indicador de autoinvoiceção
+				TaxRegistrationNumber: NIF emitente, para o serviço de pedido de faturas como adquirente
+				CustomerTaxID: NIF adquirente, para o serviço de pedido de faturas como emitente
+				CustomerTaxIDCountry: Pais do adquirente, para o serviço de pedido de faturas como emitente
+				DocumentStatus: Estado atual do documento (só no SFE)
+				CashVATSchemeIndicator: Indicador de regime de IVA de Caixa
+				EACCode: código CAE da atividade relacionada com a emissão do documento (só no SFE)
+
+				Sector: Setor do documento
+
+			Linha - informação enviada:
+				TaxPointDate: Data de envio da mercadoria ou prestação do serviço
+				DebitCreditIndicator: D para débito e C para Crédito na conta de vendas
+				TaxAmount: valor do imposto da linha
+				NetAmount: valor sem impostos da linha
+				GrossAmount: valor com impostos da linha
+				TotalTaxBase: Valor tributável que não concorre para o total
+				TaxType: Código do tipo de imposto
+				TaxCountryRegion: País ou região do imposto
+				TaxCode: Código da taxa
+				TaxPercentage: Percentagem da taxa de imposto
+				TotalTaxAmount: Montante total de imposto da linha, no caso verba fixa de imposto de selo
+				TaxExemptionCode: Código do motivo de isenção de imposto
+
+
+			Totais do documento - informação enviada:
+				TaxPayable: Valor do imposto a pagar
+				NetTotal: Total do documento sem impostos
+				GrossTotal: Total do documento com impostos</documentation>
+                </annotation>
+                <sequence>
+                    <element minOccurs="0" name="SoftwareCertificateNumber" type="tns:FSsoftwareCertificateNumber"/>
+
+<!-- só SFE
+-->
+                    <element name="InvoiceNo" type="tns:SAFPTtextTypeMandatoryMax60Car"/>
+                    <element name="ATCUD" type="tns:FStextTypeOptionalMax100Car"/>
+                    <element name="InvoiceDate" type="date"/>
+                    <element name="InvoiceType" type="tns:InvoiceTypeType"/>
+                    <element name="SelfBillingIndicator" type="tns:FSselfBillingIndicator"/>
+                    <choice>
+                        <element name="TaxRegistrationNumber" type="tns:SAFPTPortugueseVatNumber"/>
+
+<!-- no SFA
+-->
+                        <sequence>
+                            <element name="CustomerTaxID" type="tns:SAFPTtextTypeMandatoryMax30Car"/>
+
+<!-- no SFE
+-->
+                            <element name="CustomerTaxIDCountry" type="tns:FStaxIDCountry"/>
+
+<!-- no SFE
+-->
+                        </sequence>
+                    </choice>
+
+<!-- MADE BY EXO: the service sends the name of the issuer here, and this WSDL
+     as published by the AT does not declare it. Left undeclared, zeep stops
+     parsing at this unexpected element, and every element after it (the line
+     summary, the totals and the sector) is silently dropped.
+-->
+                    <element minOccurs="0" name="TaxRegistrationName" type="string"/>
+                    <element minOccurs="0" name="DocumentStatus" type="tns:InvoiceStatus"/>
+
+<!-- só SFE
+-->
+                    <element name="CashVATSchemeIndicator" type="tns:FScashVATSchemeIndicator"/>
+                    <element minOccurs="0" name="EACCode" type="tns:FSEACCode"/>
+
+<!-- só SFE
+-->
+                    <element minOccurs="0" name="Sector" type="tns:CodSetorType"/>
+
+<!-- no SFA
+-->
+                    <element maxOccurs="unbounded" name="LineSummary">
+                        <complexType>
+                            <sequence>
+                                <element name="TaxPointDate" type="date"/>
+                                <element name="DebitCreditIndicator" type="tns:FSdebitCreditIndicator"/>
+                                <element name="TaxAmount" type="tns:MonetaryType"/>
+                                <element name="NetAmount" type="tns:MonetaryType"/>
+                                <element name="GrossAmount" type="tns:MonetaryType"/>
+                                <element name="TotalTaxBase" type="tns:MonetaryType"/>
+                                <element name="Tax">
+                                    <complexType>
+                                        <sequence>
+                                            <element name="TaxType" type="tns:FSTaxType"/>
+                                            <element name="TaxCountryRegion" type="tns:FSTaxCountryRegion"/>
+                                            <element name="TaxCode" type="tns:FSTaxCode"/>
+                                            <choice>
+                                                <element name="TaxPercentage" type="tns:PercentageType"/>
+                                                <element name="TotalTaxAmount" type="tns:MonetaryType"/>
+                                            </choice>
+                                        </sequence>
+                                    </complexType>
+                                </element>
+                                <element name="TaxExemptionCode" type="tns:FSTaxExemptionCode"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="TaxPayable" type="tns:MonetaryType"/>
+                    <element name="NetTotal" type="tns:MonetaryType"/>
+                    <element name="GrossTotal" type="tns:MonetaryType"/>
+                </sequence>
+            </complexType>
+            <complexType name="TotalPaginationType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="totalDocs" type="int"/>
+                    <element maxOccurs="1" minOccurs="1" name="totalDocsSent" type="int"/>
+                    <element maxOccurs="1" minOccurs="1" name="totalPages" type="int"/>
+                    <element maxOccurs="1" minOccurs="1" name="nPage" type="int"/>
+                </sequence>
+            </complexType>
+            <complexType name="ResponseType">
+                <annotation>
+                    <documentation>EstadoOperacao: Estado da Operação
+				Desc: Descrição do pedido</documentation>
+                </annotation>
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="EstadoOperacao" type="int"/>
+                    <element name="Desc" type="tns:SAFPTtextTypeMandatoryMax255Car"/>
+                </sequence>
+            </complexType>
+
+<!-- 	<simpleType name="OrigemRegistoType">
+-->
+
+<!-- 		<restriction base="string">
+-->
+
+<!-- 			<length value="1"></length>
+-->
+
+<!-- 			<enumeration value="A"></enumeration>
+-->
+
+<!-- 			<enumeration value="E"></enumeration>
+-->
+
+<!-- 		</restriction>
+-->
+
+<!-- 	</simpleType>
+-->
+            <simpleType name="SAFPTPortugueseVatNumber">
+                <restriction base="integer">
+                    <minInclusive value="100000000"/>
+                    <maxInclusive value="999999999"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="CodSetorType">
+                <annotation>
+                    <documentation>3-char strings only</documentation>
+                </annotation>
+                <restriction base="string">
+                    <length value="3"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="SAFPTtextTypeMandatoryMax255Car">
+                <restriction base="string">
+                    <minLength value="1"/>
+                    <maxLength value="255"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSsoftwareCertificateNumber">
+<!-- número não negativo ou nulo
+-->
+                <union>
+                    <simpleType>
+                        <restriction base="nonNegativeInteger"/>
+                    </simpleType>
+                    <simpleType>
+                        <restriction base="string">
+                            <length value="0"/>
+                        </restriction>
+                    </simpleType>
+                </union>
+            </simpleType>
+            <simpleType name="SAFPTtextTypeMandatoryMax60Car">
+                <restriction base="string">
+                    <minLength value="1"/>
+                    <maxLength value="60"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FStextTypeOptionalMax100Car">
+                <restriction base="string">
+                    <minLength value="0"/>
+                    <maxLength value="100"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="InvoiceTypeType">
+                <annotation>
+                    <documentation>Restricao: Tipos de Documento fatura (FT - fatura,
+				NC-Nota de
+				Credito, ND - Nota de Debito, FS - Fatura Simplificada, FR
+				- Invoice-recibo).
+				Para o setor Segurador (a), ainda pode ser
+				preenchido com: RP para
+				Premio ou
+				recibo de premio, RE para Estorno ou
+				recibo de estorno, CS para Imputacao
+				a
+				co-seguradoras, LD para
+				Imputacao a co-seguradora lider, RA para Resseguro
+				aceite. (a) Para
+				os dados ate 2019-12-31.</documentation>
+                </annotation>
+                <restriction base="string">
+                    <enumeration value="FT"/>
+                    <enumeration value="NC"/>
+                    <enumeration value="ND"/>
+                    <enumeration value="FS"/>
+                    <enumeration value="FR"/>
+                    <enumeration value="RP"/>
+                    <enumeration value="RE"/>
+                    <enumeration value="CS"/>
+                    <enumeration value="LD"/>
+                    <enumeration value="RA"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSselfBillingIndicator">
+<!-- enumerações 0 ou 1 ou nulo
+-->
+                <union>
+                    <simpleType>
+                        <restriction base="integer">
+                            <enumeration value="0"/>
+                            <enumeration value="1"/>
+                        </restriction>
+                    </simpleType>
+                    <simpleType>
+                        <restriction base="string">
+                            <length value="0"/>
+                        </restriction>
+                    </simpleType>
+                </union>
+            </simpleType>
+            <simpleType name="SAFPTtextTypeMandatoryMax30Car">
+                <restriction base="string">
+                    <minLength value="1"/>
+                    <maxLength value="30"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FStaxIDCountry">
+<!-- texto de nulo a 30 carateres
+-->
+                <restriction base="string">
+                    <pattern value="([A-Z]{2})?|Desconhecido"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="InvoiceStatus">
+                <annotation>
+                    <documentation>N para Normal, A anulado, F invoicedo, S Autofaturado</documentation>
+                </annotation>
+                <restriction base="string">
+                    <enumeration value="N"/>
+                    <enumeration value="A"/>
+                    <enumeration value="F"/>
+                    <enumeration value="S"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FScashVATSchemeIndicator">
+<!-- enumerações 0 ou 1 ou nulo
+-->
+                <union>
+                    <simpleType>
+                        <restriction base="integer">
+                            <enumeration value="0"/>
+                            <enumeration value="1"/>
+                        </restriction>
+                    </simpleType>
+                    <simpleType>
+                        <restriction base="string">
+                            <length value="0"/>
+                        </restriction>
+                    </simpleType>
+                </union>
+            </simpleType>
+            <simpleType name="FSEACCode">
+<!-- padrão de 5 numeros ou nulo
+-->
+                <union>
+                    <simpleType>
+                        <restriction base="string">
+                            <pattern value="(([0-9]*))"/>
+                            <length value="5"/>
+                        </restriction>
+                    </simpleType>
+                    <simpleType>
+                        <restriction base="string">
+                            <length value="0"/>
+                        </restriction>
+                    </simpleType>
+                </union>
+            </simpleType>
+            <simpleType name="FSdebitCreditIndicator">
+<!-- enumerações D e C, e nulo
+-->
+                <annotation>
+                    <documentation>D para Débito, C para Crédito. É possivel nulo nalguns recibos verdes.</documentation>
+                </annotation>
+                <restriction base="string">
+                    <enumeration value="D"/>
+                    <enumeration value="C"/>
+                    <enumeration value=""/>
+                </restriction>
+            </simpleType>
+            <simpleType name="MonetaryType">
+                <annotation>
+                    <documentation>Elemento do SAF-T alterado, com a inclusão do valor
+				máximo permitido.</documentation>
+                </annotation>
+                <restriction base="decimal">
+                    <minInclusive value="0.00"/>
+                    <maxInclusive value="9999999999999.99"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSTaxType">
+<!-- enumerações IVA IS NS, e nulo
+-->
+                <restriction base="string">
+                    <enumeration value="IVA"/>
+                    <enumeration value="IS"/>
+                    <enumeration value="NS"/>
+                    <enumeration value=""/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSTaxCountryRegion">
+                <restriction base="string">
+                    <pattern value="([A-Z]{2})?|PT-MA|PT-AC"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSTaxCode">
+                <restriction base="string">
+                    <maxLength value="10"/>
+                    <pattern value="RED|INT|NOR|ISE|OUT|(([a-zA-Z0-9.])*)?|NS|NA"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="PercentageType">
+                <restriction base="decimal">
+                    <minInclusive value="0.00"/>
+                    <maxInclusive value="100.00"/>
+                </restriction>
+            </simpleType>
+            <simpleType name="FSTaxExemptionCode">
+                <restriction base="string">
+                    <pattern value="((M[0-9]{2})+)?"/>
+                </restriction>
+            </simpleType>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="InvoicesRequest">
+        <wsdl:part element="tns:InvoicesRequest" name="InvoicesRequest"/>
+    </wsdl:message>
+    <wsdl:message name="InvoicesResponse">
+        <wsdl:part element="tns:InvoicesResponse" name="InvoicesResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="fatshareInvoicesPort">
+        <wsdl:operation name="Invoices">
+            <wsdl:input message="tns:InvoicesRequest" name="InvoicesRequest"/>
+            <wsdl:output message="tns:InvoicesResponse" name="InvoicesResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="fatshareInvoicesPortSoap11" type="tns:fatshareInvoicesPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Invoices">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="InvoicesRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="InvoicesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="fatshareInvoicesPortService">
+        <wsdl:port binding="tns:fatshareInvoicesPortSoap11" name="fatshareInvoicesPortSoap11">
+            <soap:address location="http://fatshare.gdcontfsimpostosdev.ritta.local:80/fatshare/ws/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

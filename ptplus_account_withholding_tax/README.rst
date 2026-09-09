@@ -49,6 +49,15 @@ Available soon.
 Changelog
 =========
 
+1.0.1 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The receipt of a payment with taxes withheld on payment now shows the
+  withheld amount in its QR code (field P), matching what the receipt
+  reports in the SAF-T.
+
 1.0.0 (2026-07-23)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Invoicing",
-    "version": "19.0.5.1.6",
+    "version": "19.0.5.1.18",
     "license": "OPL-1",
     "depends": ["base_vat", "account", "l10n_pt", "bus"],
     "countries": ["pt"],
@@ -49,7 +49,7 @@
         "wizards/webservice_series_comm.xml",
     ],
     "external_dependencies": {
-        "python": ["xmlschema", "unicodecsv", "zeep"],
+        "python": ["xmlschema", "unicodecsv", "zeep", "pycountry"],
     },
     "assets": {
         "web.report_assets_common": [
