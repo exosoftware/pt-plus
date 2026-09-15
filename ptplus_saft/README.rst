@@ -32,6 +32,32 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.1.11 (2026-09-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Accounting users without access to the Settings app can export the SAF-T
+  again. The export started by checking the installed modules with the current
+  user's rights, which only administrators have, so it failed with an access
+  error before producing anything.
+
+4.1.10 (2026-08-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A tax with an empty "Label on Invoices" no longer breaks the SAF-T export.
+  Until now the file came out without the Master Files section and an encoding
+  error was shown; the export now uses the tax name as the description in the
+  tax table and adds a warning telling you which tax should be fixed. The same
+  applies to a stamp duty tax whose verba has no name.
+- More generally, a badly configured tax can no longer void the whole Master
+  Files section with an unreadable encoding error. Since the SAF-T tax table
+  must report every tax used in the documents, the export now stops with a
+  clear message naming the tax(es) that cannot be reported and a button that
+  opens them for correction.
+
 4.1.9 (2026-07-31)
 ~~~~~~~~~~~~~~~~~~~
 

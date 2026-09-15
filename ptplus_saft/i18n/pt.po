@@ -1078,6 +1078,12 @@ msgid "State"
 msgstr "Estado"
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+msgid "Review Taxes"
+msgstr "Rever Impostos"
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__statement_type
 msgid "Statement Type"
 msgstr "Tipo de Declaração"
@@ -1103,6 +1109,24 @@ msgid "Tax"
 msgstr "Imposto"
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"Tax '%s' has no description (invoice label or stamp duty code name); its "
+"name was used as the tax description in the SAF-T Tax Table."
+msgstr ""
+"O imposto '%s' não tem descrição (rótulo nas faturas ou nome da verba de "
+"imposto do selo); o seu nome foi utilizado como descrição do imposto na "
+"Tabela de Impostos do SAF-T."
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+msgid "Taxes"
+msgstr "Impostos"
+
+#. module: ptplus_saft
 #: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__number
 msgid "The ID of the importation operation"
 msgstr "O ID da operação de importação"
@@ -1119,6 +1143,27 @@ msgstr ""
 "O ficheiro SAF-T foi extraído com sucesso mas o seu conteúdo não pode ser "
 "validado. Por favor, contacte o seu fornecedor do serviço Odoo ou tente um "
 "processo alternativo de validação. Erro: %s"
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The SAF-T file was not generated because the following tax(es) cannot be "
+"reported in the Tax Table:\n"
+"\n"
+"%(errors)s\n"
+"\n"
+"Every tax used in the documents must be reported in the SAF-T Tax Table. "
+"Please fix the tax(es) and export again."
+msgstr ""
+"O ficheiro SAF-T não foi gerado porque o(s) seguinte(s) imposto(s) não "
+"pode(m) ser reportado(s) na Tabela de Impostos:\n"
+"\n"
+"%(errors)s\n"
+"\n"
+"Todos os impostos utilizados nos documentos têm de ser reportados na Tabela "
+"de Impostos do SAF-T. Corrija o(s) imposto(s) e exporte novamente."
 
 #. module: ptplus_saft
 #. odoo-python

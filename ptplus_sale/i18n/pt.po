@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-03 10:33+0000\n"
-"PO-Revision-Date: 2026-08-03 10:41+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-17-0/ptplus_sale/pt/>\n"
@@ -17,6 +15,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.16.4\n"
+
+#. module: ptplus_sale
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_toggle_saft_element_sale
+msgid "(Un)block SAF-T element"
+msgstr "(Des)bloquear elemento SAF-T"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "<span class=\"o_stat_text\">Original Order</span>"
+msgstr "<span class=\"o_stat_text\">Encomenda Original</span>"
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.report_saleorder_document
@@ -53,6 +61,17 @@ msgid "ATCUD"
 msgstr "ATCUD"
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid ""
+"All the quantities on this order are already booked across its Proforma "
+"Invoices. There is nothing left to send."
+msgstr ""
+"Todas as quantidades desta encomenda já estão reservadas nas suas Faturas "
+"Pró-forma. Não há nada para enviar."
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
 msgid "Are you sure you want to cancel the document?"
 msgstr "Tem a certeza de que quer cancelar o documento?"
@@ -69,6 +88,7 @@ msgstr ""
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
 msgid ""
 "Cannot set this quantity for '%(product)s': the total quantity booked across "
 "Proforma Invoices would exceed the quantity still available on the original "
@@ -122,6 +142,13 @@ msgid "Document %s cannot be set back to quotation"
 msgstr "O documento %s não pode ser redefinido para orçamento"
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Document %s has an invalid negative total amount of %s."
+msgstr "O documento %s tem um valor total negativo inválido de %s."
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
 msgid "Document Type"
 msgstr "Tipo de Documento"
@@ -130,6 +157,51 @@ msgstr "Tipo de Documento"
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__system_entry_date
 msgid "Document Validation Timestamp"
 msgstr "Data/Hora da Validação do Documento"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Down Payment Taxes"
+msgstr "Impostos de Adiantamentos"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_downpayment_tax_extra
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_downpayment_tax_extra
+msgid "Down payment Tax Extracommunity"
+msgstr "Imposto para Adiantamentos Extra-comunitários"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_downpayment_tax_int
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_downpayment_tax_int
+msgid "Down payment Tax Intermediate Rate"
+msgstr "Imposto para Adiantamentos à Taxa Intermédia"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_downpayment_tax_intra
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_downpayment_tax_intra
+msgid "Down payment Tax Intracommunity"
+msgstr "Imposto para Adiantamentos Intra-comunitários"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_downpayment_tax_nor
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_downpayment_tax_nor
+msgid "Down payment Tax Normal Rate"
+msgstr "Imposto para Adiantamentos à Taxa Normal"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_company__l10n_pt_downpayment_tax_red
+#: model:ir.model.fields,field_description:ptplus_sale.field_res_config_settings__l10n_pt_downpayment_tax_red
+msgid "Down payment Tax Reduced Rate"
+msgstr "Imposto para Adiantamentos à Taxa Reduzida"
+
+#. module: ptplus_sale
+#: model:ir.model.fields.selection,name:ptplus_sale.selection__res_company__l10n_pt_multiway_tag_sale__dup
+msgid "Duplicate"
+msgstr "Duplicado"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+msgid "Duplicate this document as a Proforma Invoice"
+msgstr "Duplicar este documento como Fatura Pró-forma"
 
 #. module: ptplus_sale
 #: model:ir.model,name:ptplus_sale.model_dataport_export_saft
@@ -157,9 +229,26 @@ msgid "Fiscal Document Type"
 msgstr "Série Documental"
 
 #. module: ptplus_sale
-#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__integration_doc_serial
-msgid "Integrated Document Serial"
-msgstr "Nº de Série de Doc. Manual"
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid "Insufficient quantity"
+msgstr "Quantidade insuficiente"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__integration_doc_number
+msgid "Integrated Document Number"
+msgstr "Nº do Doc. Integrado"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Intermediate"
+msgstr "Intermédia"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Intracommunity"
+msgstr "Intra-comunitária"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_date_issued
@@ -176,11 +265,40 @@ msgstr "Emitir Doc."
 #: code:addons/ptplus_sale/models/sale_order.py:0
 #, python-format
 msgid ""
+"It is forbidden to delete lines from an issued document:\n"
+"%s"
+msgstr ""
+"É proibido eliminar linhas de um documento emitido:\n"
+"%s"
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid ""
 "It is forbidden to modify the following fields in an issued document:\n"
 "%s"
 msgstr ""
 "É proibido modificar os seguintes campos de um documento emitido:\n"
 "%s"
+
+#. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
+msgid ""
+"It is forbidden to set the following fields in an issued document during "
+"creation:\n"
+"%s"
+msgstr ""
+"É proibido modificar os seguintes campos de um documento emitido durante a "
+"criação:\n"
+"%s"
+
+#. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_count
@@ -218,6 +336,20 @@ msgid "New"
 msgstr "Novo"
 
 #. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Normal"
+msgstr "Normal"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,help:ptplus_sale.field_sale_order__integration_doc_number
+msgid ""
+"Number of the document being integrated. Insert the incremental numerical "
+"part and the series number (without the document type) e.g. A/00001"
+msgstr ""
+"Nº do documento a ser integrado. Introduza apenas a parte numérica "
+"incremental e o nº da série (sem o tipo de documento), p. ex. A/00001"
+
+#. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_qty_sent
 msgid ""
 "On an original order line: the cumulative quantity currently booked across "
@@ -226,10 +358,10 @@ msgid ""
 "Invoice lines are created or their quantity is changed."
 msgstr ""
 "Numa linha da encomenda original: a quantidade acumulada atualmente "
-"reservada em todas as suas Faturas Pró-forma. Numa linha de Fatura "
-"Pró-forma: a quantidade desta linha já reservada na linha original. "
-"Mantido sincronizado à medida que as linhas de Fatura Pró-forma são "
-"criadas ou a sua quantidade é alterada."
+"reservada em todas as suas Faturas Pró-forma. Numa linha de Fatura Pró-"
+"forma: a quantidade desta linha já reservada na linha original. Mantido "
+"sincronizado à medida que as linhas de Fatura Pró-forma são criadas ou a sua "
+"quantidade é alterada."
 
 #. module: ptplus_sale
 #. odoo-python
@@ -299,6 +431,7 @@ msgstr "Fatura pró-forma"
 #: code:addons/ptplus_sale/models/sale_order.py:0
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_proforma_ids
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
+#, python-format
 msgid "Proforma Invoices"
 msgstr "Faturas Pró-forma"
 
@@ -333,9 +466,39 @@ msgid "Quotation - %s"
 msgstr "Orçamento - %s"
 
 #. module: ptplus_sale
+#: model:ir.actions.server,name:ptplus_sale.action_l10n_pt_recompute_saft_element_sale
+msgid "Recompute SAF-T element"
+msgstr "Recalcular elemento SAF-T"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Reduced"
+msgstr "Reduzida"
+
+#. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_order_id
 msgid "Related Order"
 msgstr "Encomenda Relacionada"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_saft_element
+msgid "SAF-T PT Element"
+msgstr "Elemento SAF-T PT"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_saft_element_error
+msgid "SAF-T PT Element Computation Error"
+msgstr "Erro de Computação do Elemento SAF-T PT"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_saft_element_status
+msgid "SAF-T PT Element Computation Status"
+msgstr "Estado da Computação do Elemento SAF-T PT"
+
+#. module: ptplus_sale
+#: model:ir.model.fields,field_description:ptplus_sale.field_sale_order__l10n_pt_saft_element_version
+msgid "SAF-T PT Element Computation Version"
+msgstr "Versão da Computação do Elemento SAF-T PT"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,field_description:ptplus_sale.field_fiscal_document_type__section
@@ -359,6 +522,11 @@ msgid "Sale Report Multi-way Tags"
 msgstr "Etiquetas para Vendas Multi-via"
 
 #. module: ptplus_sale
+#: model:ir.model,name:ptplus_sale.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Fatura de Adiantamento de Vendas"
+
+#. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
 msgid "Sales Doc."
 msgstr "Doc. Vendas"
@@ -372,15 +540,6 @@ msgstr "Encomenda de Venda"
 #: model:ir.model,name:ptplus_sale.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Linha de Encomenda de Venda"
-
-#. module: ptplus_sale
-#: model:ir.model.fields,help:ptplus_sale.field_sale_order__integration_doc_serial
-msgid ""
-"Serial Number of the document being integrated. Insert the incremental "
-"numerical part only (including left side zeros)"
-msgstr ""
-"Nº de série do documento a ser integrado. Introduza apenas a parte numérica "
-"(incluindo os zeros à esquerda)"
 
 #. module: ptplus_sale
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.view_order_form
@@ -406,6 +565,11 @@ msgstr "Consulta de Mesa"
 #: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
 msgid "Tags to differentiate document copies"
 msgstr "Etiquetas para diferenciar as cópias dos documentos impressos"
+
+#. module: ptplus_sale
+#: model_terms:ir.ui.view,arch_db:ptplus_sale.res_config_settings_view_form_pt_sale
+msgid "Taxes to be applied to down payment lines"
+msgstr "Impostos a aplicar em linhas de adiantamentos"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_date_issued
@@ -455,8 +619,8 @@ msgstr "A encomenda a partir da qual esta Fatura Pró-forma foi criada"
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order_line__l10n_pt_proforma_origin_line_id
 msgid "The original order line this Proforma Invoice line was copied from"
 msgstr ""
-"A linha da encomenda original a partir da qual esta linha de Fatura "
-"Pró-forma foi copiada"
+"A linha da encomenda original a partir da qual esta linha de Fatura Pró-"
+"forma foi copiada"
 
 #. module: ptplus_sale
 #: model:ir.model.fields,help:ptplus_sale.field_sale_order__l10n_pt_quotation_id
@@ -476,6 +640,7 @@ msgstr ""
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/sale_order.py:0
+#, python-format
 msgid "There is no fiscal document type with the type PRÓ-FORMA ('PF')."
 msgstr "Não existe nenhuma série documental com o tipo PRÓ-FORMA ('PF')."
 
@@ -502,7 +667,6 @@ msgstr "Conferência Mercadorias/Serviços"
 #. module: ptplus_sale
 #. odoo-python
 #: code:addons/ptplus_sale/models/res_company.py:0
-#: model:fiscal.document.type,name:ptplus_sale.fiscal_document_type_fo
 #: model:ir.model.fields.selection,name:ptplus_sale.selection__fiscal_document_type__type__fo
 #, python-format
 msgid "Worksheet"
@@ -519,13 +683,6 @@ msgstr "Não pode imprimir documentos fiscais em rascunho"
 #. odoo-python
 #: code:addons/ptplus_sale/models/sale_order.py:0
 #, python-format
-msgid "You cannot change the order lines of a document that is already issued."
-msgstr "Não pode modificar as linhas de um documento emitido."
-
-#. module: ptplus_sale
-#. odoo-python
-#: code:addons/ptplus_sale/models/sale_order.py:0
-#, python-format
 msgid ""
 "You cannot change the value of an unalterable field on a document that is "
 "already issued."
@@ -533,42 +690,17 @@ msgstr ""
 "Não pode modificar o valor de um campo inalterável num documento emitido."
 
 #. module: ptplus_sale
+#. odoo-python
+#: code:addons/ptplus_sale/wizards/sale_make_invoice_advance.py:0
+#, python-format
+msgid ""
+"You must set a value for %s field in your company settings if you wish to "
+"use down payments"
+msgstr ""
+"Tem que atribuir um valor para o campo %s, nas configurações da sua empresa, "
+"se desejar utilizar adiantamentos"
+
+#. module: ptplus_sale
 #: model:ir.actions.report,print_report_name:ptplus_sale.action_report_saleorder_multiway
 msgid "object.pt_get_fullname(lang=object.partner_id.lang)"
 msgstr "object.pt_get_fullname(lang=object.partner_id.lang)"
-
-#~ msgid ""
-#~ "<span class=\"o_form_label\">Multi-way Reports</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" title="
-#~ "\"Values set here are company-specific.\" aria-label=\"Values set here "
-#~ "are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
-#~ msgstr ""
-#~ "<span class=\"o_form_label\">Documentos Multi-via</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" title="
-#~ "\"Valores atribuídos aqui são específicos para a empresa.\" aria-label="
-#~ "\"Valores atribuídos aqui são específicos para a empresa.\" groups=\"base."
-#~ "group_multi_company\" role=\"img\"/>"
-
-#~ msgid "Display Name"
-#~ msgstr "Nome a Exibir"
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última Modificação em"
-
-#~ msgid "Quote"
-#~ msgstr "Cotação"
-
-#~ msgid "Date Issued"
-#~ msgstr "Data de Emissão"
-
-#~ msgid "Warning"
-#~ msgstr "Aviso"
-
-#~ msgid "Date/Time of document validation"
-#~ msgstr "Data/Hora da validação do documento"
-
-#~ msgid "Date/Time of last state change"
-#~ msgstr "Data/Hora da última mudança de estado"
-
-#~ msgid "Validate"
-#~ msgstr "Validar"

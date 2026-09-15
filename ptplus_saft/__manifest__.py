@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - SAF-T PT Statement",
-    "version": "17.0.4.1.9",
+    "version": "17.0.4.1.11",
     "license": "OPL-1",
     "depends": ["ptplus", "ptplus_partner"],
     "author": "Exo Software",

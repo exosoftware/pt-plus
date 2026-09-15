@@ -1047,6 +1047,12 @@ msgid "State"
 msgstr ""
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+msgid "Review Taxes"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,field_description:ptplus_saft.field_dataport_export_saft__statement_type
 msgid "Statement Type"
 msgstr ""
@@ -1072,6 +1078,21 @@ msgid "Tax"
 msgstr ""
 
 #. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"Tax '%s' has no description (invoice label or stamp duty code name); its "
+"name was used as the tax description in the SAF-T Tax Table."
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+msgid "Taxes"
+msgstr ""
+
+#. module: ptplus_saft
 #: model:ir.model.fields,help:ptplus_saft.field_l10n_pt_account_saft_import__number
 msgid "The ID of the importation operation"
 msgstr ""
@@ -1084,6 +1105,20 @@ msgid ""
 "The SAF-T file has been successfully generated but it couldn't be validated."
 " Please contact your Odoo service provider or try an alternative validation "
 "process. Error: %s"
+msgstr ""
+
+#. module: ptplus_saft
+#. odoo-python
+#: code:addons/ptplus_saft/wizards/dataport_export_saft.py:0
+#, python-format
+msgid ""
+"The SAF-T file was not generated because the following tax(es) cannot be "
+"reported in the Tax Table:\n"
+"\n"
+"%(errors)s\n"
+"\n"
+"Every tax used in the documents must be reported in the SAF-T Tax Table. "
+"Please fix the tax(es) and export again."
 msgstr ""
 
 #. module: ptplus_saft
