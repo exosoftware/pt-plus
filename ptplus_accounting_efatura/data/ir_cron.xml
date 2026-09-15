@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="ir_cron_process_efatura_sync" model="ir.cron">
+        <field name="name">Process E-Fatura Synchronization</field>
+        <field name="model_id" ref="model_l10n_pt_dataport_import_efatura" />
+        <field name="state">code</field>
+        <field name="code">model._cron_run_efatura_sync()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+    </record>
+
+    <record id="ir_cron_efatura_auto_sync" model="ir.cron">
+        <field name="name">Automatic E-Fatura Synchronization</field>
+        <field name="model_id" ref="model_l10n_pt_dataport_import_efatura" />
+        <field name="state">code</field>
+        <field name="code">model._cron_efatura_auto_sync()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+    </record>
+</odoo>

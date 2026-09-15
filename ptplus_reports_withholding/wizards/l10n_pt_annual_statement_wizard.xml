@@ -15,7 +15,7 @@
                 />
             </group>
             <notebook name="main_block" position="inside">
-                <page name="Statements">
+                <page name="statements" string="Statements">
                     <field name="line_ids" nolabel="1" widget="many2many" colspan="2">
                         <list editable="bottom">
                             <field name="currency_id" column_invisible="1" />

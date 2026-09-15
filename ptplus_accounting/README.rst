@@ -50,6 +50,25 @@ Available soon.
 Changelog
 =========
 
+5.1.2 (2026-08-20)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The country ISO codes moved to the base module of the localization. Nothing
+  changes for you: they keep working exactly as before.
+
+5.1.1 (2026-08-18)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Balance transfers now move a net debit balance to the "Credit Destination"
+  account instead of always using the "Debit Destination". In the VAT
+  settlement model, a period with VAT in the company's favour is now
+  transferred to account 2437 (IVA - A recuperar) instead of 2436
+  (IVA - A pagar).
+
 5.1.0 (2026-04-13)
 ~~~~~~~~~~~~~~~~~~~
 

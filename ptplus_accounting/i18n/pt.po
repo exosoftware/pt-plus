@@ -66,6 +66,24 @@ msgid "Account"
 msgstr "Conta"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template_line__credit_account_id
+msgid ""
+"Account receiving the counterpart of the credits made to the source "
+"accounts, i.e. the destination of a net debit balance."
+msgstr ""
+"Conta que recebe a contrapartida dos créditos efetuados às contas de "
+"origem, ou seja, o destino de um saldo devedor."
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template_line__debit_account_id
+msgid ""
+"Account receiving the counterpart of the debits made to the source accounts,"
+" i.e. the destination of a net credit balance."
+msgstr ""
+"Conta que recebe a contrapartida dos débitos efetuados às contas de "
+"origem, ou seja, o destino de um saldo credor."
+
+#. module: ptplus_accounting
 #: model:ir.model,name:ptplus_accounting.model_account_balance_transfer
 msgid "Account Balance Transfer"
 msgstr "Transferência de Saldos"

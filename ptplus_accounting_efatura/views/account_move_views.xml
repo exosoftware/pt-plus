@@ -7,10 +7,7 @@
         <field name="state">code</field>
         <field name="code">
             if records:
-                if all(rec.is_purchase_document() for rec in records):
-                    action = records.l10n_pt_efatura_merge()
-                else:
-                    raise UserError("This action is only possible for vender invoices")
+                action = records.l10n_pt_efatura_merge()
         </field>
     </record>
 
@@ -19,6 +16,20 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='duplicated_ref_ids'][@widget='x2many_buttons']"
+                position="after"
+            >
+                <field name="l10n_pt_efatura_merge_move_id" invisible="1" />
+                <button
+                    name="l10n_pt_action_efatura_merge_duplicate"
+                    type="object"
+                    string="Merge E-Fatura"
+                    icon="fa-compress"
+                    class="btn btn-link ms-auto d-flex align-items-center gap-1"
+                    invisible="not l10n_pt_efatura_merge_move_id"
+                />
+            </xpath>
             <xpath expr="//button[@name='button_cancel']" position="before">
                 <field name="l10n_pt_efatura_scan" invisible="1" />
                 <button

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="mail_template_at_document" model="mail.template">
+        <field name="name">Tax Authority Document (Receipt / Payment Reference)</field>
+        <field name="model_id" ref="model_l10n_pt_statement_wizard" />
+        <field
+            name="subject"
+        >{{ object.company_id.name }}{{ object.date_from and ' - ' + object.date_from.strftime('%m/%Y') or '' }}</field>
+        <field
+            name="email_from"
+        >{{ (object.company_id.email or user.email) or '' }}</field>
+        <field name="body_html" type="html">
+            <div>
+                <p>Boa tarde,</p>
+                <p>
+                    Segue em anexo o documento da Autoridade Tributária referente a
+                    <t t-out="object.company_id.name or ''">Empresa</t><t
+                    t-if="object.date_from"
+                >, período <t
+                    t-out="object.date_from.strftime('%m/%Y')"
+                >MM/AAAA</t></t>.
+                </p>
+                <p>Com os melhores cumprimentos.</p>
+            </div>
+        </field>
+    </record>
+</odoo>

@@ -9,6 +9,13 @@
         >['|',('company_id','=',False),('company_id','in',company_ids)]</field>
     </record>
 
+    <record id="efatura_tax_mapping_comp_rule" model="ir.rule">
+        <field name="name">E-fatura tax mapping multi-company</field>
+        <field name="model_id" ref="model_l10n_pt_account_efatura_tax_mapping" />
+        <field name="global" eval="True" />
+        <field name="domain_force">[('company_id','in',company_ids)]</field>
+    </record>
+
     <record id="efatura_line_comp_rule" model="ir.rule">
         <field name="name">E-fatura line multi-company</field>
         <field name="model_id" ref="model_l10n_pt_account_efatura_line" />

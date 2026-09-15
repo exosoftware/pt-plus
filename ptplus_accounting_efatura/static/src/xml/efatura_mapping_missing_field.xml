@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+    <t t-name="ptplus_accounting_efatura.MappingMissingField">
+        <span
+            t-if="props.record.data[props.name]"
+            class="fa fa-exclamation-triangle text-warning"
+            t-att-title="tooltip"
+        />
+    </t>
+</templates>

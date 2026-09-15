@@ -7,7 +7,7 @@
     "name": "Portugal - Withholding Tax on Payment",
     "category": "Accounting/Localizations",
     "summary": "Portuguese localization for withholding tax on payments",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "license": "OPL-1",

@@ -131,6 +131,14 @@
                             string="Submission proof"
                             invisible="not proof_data"
                         />
+                        <field name="payment_reference_filename" invisible="1" />
+                        <field
+                            name="payment_reference_data"
+                            readonly="1"
+                            filename="payment_reference_filename"
+                            string="Payment reference"
+                            invisible="not payment_reference_data"
+                        />
                     </group>
                     <div
                         name="ws_oa_actions"
@@ -164,16 +172,52 @@
                             title="See the errors the Tax Authority found in the submitted declaration."
                             invisible="not ws_submission_ref"
                         />
+                        <button
+                            name="action_ws_get_payment_reference"
+                            type="object"
+                            string="Get payment reference"
+                            icon="fa-money"
+                            class="btn btn-link"
+                            title="Fetch the payment reference (DUC) from the Tax Authority."
+                            invisible="not ws_submission_ref"
+                        />
                     </div>
-                    <group name="ws_response" string="Response" colspan="2">
+                    <group
+                        name="ws_response"
+                        string="Response"
+                        colspan="2"
+                        invisible="not error_code and not warnings"
+                    >
                         <field name="error_code" invisible="not error_code" />
                         <field name="error_message" invisible="not error_message" />
+                        <field name="error_detail" invisible="not error_detail" />
                         <field
                             name="warnings"
                             readonly="1"
                             widget="html"
                             nolabel="1"
                             colspan="2"
+                            invisible="not warnings"
+                        />
+                    </group>
+                    <group
+                        name="ws_email"
+                        string="Send by email"
+                        colspan="2"
+                        invisible="not proof_data and not payment_reference_data"
+                    >
+                        <field
+                            name="email_partner_ids"
+                            widget="many2many_tags"
+                            colspan="2"
+                        />
+                        <button
+                            name="action_ws_send_email"
+                            type="object"
+                            string="Send email"
+                            icon="fa-envelope"
+                            class="btn btn-secondary"
+                            invisible="not payment_reference_data and not proof_data"
                         />
                     </group>
                 </group>

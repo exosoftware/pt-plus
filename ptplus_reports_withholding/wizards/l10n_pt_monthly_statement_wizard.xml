@@ -9,8 +9,17 @@
             <group name="main_left" position="inside">
                 <field name="withholding_type" invisible="state != 'select'" />
             </group>
+            <notebook name="main_block" position="before">
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="state != 'analyze' or not refund_warning"
+                >
+                    <field name="refund_warning" readonly="1" nolabel="1" />
+                </div>
+            </notebook>
             <notebook name="main_block" position="inside">
-                <page name="Statement Lines">
+                <page name="statement_lines" string="Statement Lines">
                     <field name="line_ids" nolabel="1" colspan="2">
                         <list editable="bottom">
                             <field name="currency_id" column_invisible="1" />

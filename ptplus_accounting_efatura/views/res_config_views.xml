@@ -11,7 +11,7 @@
                     company_dependent="1"
                     help="Default values for the E-Fatura features"
                     string="E-Fatura"
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <div class="row">
                         <label
@@ -21,45 +21,38 @@
                         />
                         <field name="l10n_pt_efatura_journal_id" />
                     </div>
-                    <div class="row">
+                    <button
+                        name="%(ptplus_accounting_efatura.action_account_efatura_tax_mapping)d"
+                        icon="fa-arrow-right"
+                        type="action"
+                        string="Configure Mappings"
+                        class="btn-link"
+                    />
+                </setting>
+                <setting
+                    id="efatura_self_billing"
+                    company_dependent="1"
+                    help="What to do with the documents you issue on behalf of your vendors under a self-billing agreement, which the Tax Authority reports back to you"
+                    string="Self-Billing Documents"
+                    invisible="country_code != 'PT'"
+                >
+                    <field name="l10n_pt_efatura_self_billing" class="w-100" />
+                </setting>
+                <setting
+                    id="efatura_auto_sync"
+                    company_dependent="1"
+                    help="Collect the e-fatura documents from the Tax Authority
+                    automatically"
+                    invisible="country_code != 'PT'"
+                >
+                    <field name="l10n_pt_efatura_auto_sync" />
+                    <div class="mt16 row" invisible="not l10n_pt_efatura_auto_sync">
                         <label
-                            string="Product"
-                            for="l10n_pt_efatura_product_id"
-                            class="col-lg-3 o_light_label"
+                            string="Synchronization User"
+                            for="l10n_pt_efatura_auto_sync_user_id"
+                            class="col-lg-4 o_light_label"
                         />
-                        <field name="l10n_pt_efatura_product_id" />
-                    </div>
-                    <div class="row">
-                        <label
-                            string="Stand. Tax"
-                            for="l10n_pt_efatura_tax_id"
-                            class="col-lg-3 o_light_label"
-                        />
-                        <field name="l10n_pt_efatura_tax_id" />
-                    </div>
-                    <div class="row">
-                        <label
-                            string="Interm. Tax"
-                            for="l10n_pt_efatura_interm_tax_id"
-                            class="col-lg-3 o_light_label"
-                        />
-                        <field name="l10n_pt_efatura_interm_tax_id" />
-                    </div>
-                    <div class="row">
-                        <label
-                            string="Red. Tax"
-                            for="l10n_pt_efatura_reduced_tax_id"
-                            class="col-lg-3 o_light_label"
-                        />
-                        <field name="l10n_pt_efatura_reduced_tax_id" />
-                    </div>
-                    <div class="row">
-                        <label
-                            string="Exempt Tax"
-                            for="l10n_pt_efatura_exempt_tax_id"
-                            class="col-lg-3 o_light_label"
-                        />
-                        <field name="l10n_pt_efatura_exempt_tax_id" />
+                        <field name="l10n_pt_efatura_auto_sync_user_id" />
                     </div>
                 </setting>
                 <setting
@@ -67,7 +60,7 @@
                     company_dependent="1"
                     help="Automatically detect any Portuguese QR Code in Invoices and
                     fill them according to E-Fatura."
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <field name="l10n_pt_efatura_scan" />
                 </setting>

@@ -189,6 +189,13 @@
                             />
                         </button>
                     </div>
+                    <div
+                        class="alert alert-info"
+                        role="alert"
+                        invisible="not info_message"
+                    >
+                        <field name="info_message" nolabel="1" readonly="1" />
+                    </div>
                     <div class="oe_title">
                         <label for="name" />
                         <h1>

@@ -1670,3 +1670,42 @@ msgstr "a"
 #~ "Falta um valor no no campo obrigatório Norma de Regularização de IVA nas "
 #~ "seguintes notas de crédito: %s. Por favor, corrija a situação e tente "
 #~ "novamente."
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid ""
+"<p>Vendors annex - field {field} has rows without the vendor's VAT number or "
+"an import liquidation number. Please fill in the VAT number of: {names}.</"
+"p><br/>"
+msgstr ""
+"<p>Relação de fornecedores - o campo {field} tem linhas sem o NIF do "
+"fornecedor nem número de liquidação de importação. Preencha o NIF de: "
+"{names}.</p><br/>"
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid "unknown tax"
+msgstr "imposto desconhecido"
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid "unknown"
+msgstr "desconhecido"
+
+#. module: ptplus_accounting_tax_statement
+#. odoo-python
+#: code:addons/ptplus_accounting_tax_statement/wizards/l10n_pt_wizard_statement.py:0
+msgid ""
+"<p>Vendors annex - field {field} has rows identifying non-EU vendors, which "
+"the AT does not accept. These operations must be reported under the reverse "
+"charge (RC) or import (IM) classification, or by the import liquidation "
+"number - please review the following taxes: {taxes}.</p><br/>"
+msgstr ""
+"<p>Relação de fornecedores - o campo {field} tem linhas que identificam "
+"fornecedores extracomunitários, o que a AT não aceita. Estas operações "
+"devem ser declaradas com a classificação de autoliquidação (RC) ou de "
+"importação (IM), ou através do número de liquidação de importação - reveja "
+"os seguintes impostos: {taxes}.</p><br/>"
