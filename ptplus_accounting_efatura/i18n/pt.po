@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-02 16:17+0000\n"
+"POT-Creation-Date: 2026-09-10 15:45+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_accounting_efatura/pt/>\n"
@@ -56,6 +56,18 @@ msgstr ""
 "%(count)s documento(s) de auto-faturação não puderam ser associados ao "
 "documento emitido para eles no sistema. Associe-os manualmente na lista E-"
 "Fatura."
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid ""
+"\n"
+"%(count)s self-billing document(s) were left out, as set on the E-Fatura "
+"settings."
+msgstr ""
+"\n"
+"%(count)s documento(s) de auto-faturação ficaram de fora, conforme definido "
+"nas definições do E-Fatura."
 
 #. module: ptplus_accounting_efatura
 #. odoo-python
@@ -440,6 +452,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.dataport_import_form_efatura
 msgid "Close"
 msgstr "Fechar"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__res_company__l10n_pt_efatura_self_billing__keep
+msgid "Collect and link to the document issued"
+msgstr "Recolher e associar ao documento emitido"
 
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
@@ -1275,6 +1292,16 @@ msgstr ""
 "um genérico quando está acima dele na tabela, por isso começa no topo."
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__res_company__l10n_pt_efatura_self_billing__exclude
+msgid "Leave out of the synchronization"
+msgstr "Deixar de fora da sincronização"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__linked_to_posted
+msgid "Linked To Posted"
+msgstr "Associados a Faturas Lançadas"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
 msgid "Log On Close"
 msgstr "Registar ao Fechar"
@@ -2077,9 +2104,21 @@ msgid "Select exactly two vendor bills to merge."
 msgstr "Selecione exatamente duas faturas de fornecedor para fundir."
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__self_billing_skipped
+msgid "Self Billing Skipped"
+msgstr "Auto-faturação Deixada de Fora"
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__self_billing
 msgid "Self-Billing"
 msgstr "Auto-faturação"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_self_billing
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+msgid "Self-Billing Documents"
+msgstr "Documentos de Auto-faturação"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__sequence
@@ -2717,6 +2756,22 @@ msgid "What happens to that"
 msgstr "O que acontece à que sai"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_self_billing
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_self_billing
+msgid ""
+"What the E-Fatura synchronization does with the documents you issued on "
+"behalf of your vendors under a self-billing agreement, which the Tax "
+"Authority reports back to you. Collected, they are linked to the document "
+"issued for them, need no tax mapping and never create a vendor bill. Left "
+"out, they are not brought into the E-Fatura list at all."
+msgstr ""
+"O que a sincronização do E-Fatura faz com os documentos que emitiu em nome "
+"dos seus fornecedores ao abrigo de um acordo de auto-faturação, que a "
+"Autoridade Tributária lhe devolve. Recolhidos, são associados ao documento "
+"emitido para eles, não precisam de mapeamento de imposto e nunca criam "
+"fatura de fornecedor. Deixados de fora, não entram de todo na lista E-Fatura."
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_qr_scan_state
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_qr_scan_state
 msgid ""
@@ -2739,6 +2794,16 @@ msgstr ""
 "O que a leitura do código QR português obteve do recibo carregado: qualquer "
 "resultado diferente de lido significa que nada foi aproveitado e que foi "
 "perguntado ao utilizador se queria manter o recibo ou enviar uma nova foto."
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+msgid ""
+"What to do with the documents you issue on behalf of your vendors under a "
+"self-billing agreement, which the Tax Authority reports back to you"
+msgstr ""
+"O que fazer com os documentos que emite em nome dos seus fornecedores ao "
+"abrigo de um acordo de auto-faturação, que a Autoridade Tributária lhe "
+"devolve"
 
 #. module: ptplus_accounting_efatura
 #. odoo-python

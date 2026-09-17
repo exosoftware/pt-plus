@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_line_tree_pt_cashflow" model="ir.ui.view">
+        <field name="name">account.move.line.list.pt.cashflow</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute
+                    name="decoration-warning"
+                >l10n_pt_cashflow_to_classify</attribute>
+            </xpath>
+            <field name="analytic_distribution" position="after">
+                <field name="l10n_pt_cashflow_required" column_invisible="True" />
+                <field name="l10n_pt_cashflow_to_classify" column_invisible="True" />
+                <field name="l10n_pt_cashflow_document_ids" column_invisible="True" />
+                <field
+                    name="l10n_pt_cashflow_distribution"
+                    widget="l10n_pt_cashflow_distribution"
+                    optional="hide"
+                    options="{'amount_field': 'balance'}"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+                <button
+                    name="action_l10n_pt_cashflow_backfill"
+                    type="object"
+                    icon="fa-tags"
+                    title="Classify Cash Flows"
+                    invisible="not l10n_pt_cashflow_to_classify or not l10n_pt_cashflow_document_ids"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_move_line_filter_pt_cashflow" model="ir.ui.view">
+        <field name="name">account.move.line.search.pt.cashflow</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_account_move_line_filter" />
+        <field name="arch" type="xml">
+            <filter name="posted" position="after">
+                <separator />
+                <filter
+                    string="Cash Flow To Classify [pt]"
+                    name="l10n_pt_cashflow_to_classify"
+                    domain="[('l10n_pt_cashflow_to_classify', '=', True)]"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <!-- The cash flows list: every bank/cash movement, the ones still to
+         classify first; the header buttons work on the selection, or on the
+         movements matching the filters without one -->
+    <record id="view_l10n_pt_cashflow_move_line_list" model="ir.ui.view">
+        <field name="name">account.move.line.list.pt.cashflow.classify</field>
+        <field name="model">account.move.line</field>
+        <field name="arch" type="xml">
+            <list
+                string="Cash Flows"
+                editable="bottom"
+                multi_edit="1"
+                create="0"
+                delete="0"
+                decoration-warning="l10n_pt_cashflow_to_classify"
+            >
+                <header>
+                    <button
+                        name="action_l10n_pt_cashflow_accept_suggestions"
+                        string="Accept Suggestions"
+                        type="object"
+                        class="btn-primary"
+                        display="always"
+                    />
+                    <button
+                        name="action_l10n_pt_cashflow_backfill"
+                        string="Classify In Detail"
+                        type="object"
+                    />
+                </header>
+                <field name="company_currency_id" column_invisible="1" />
+                <field name="l10n_pt_cashflow_required" column_invisible="1" />
+                <field name="l10n_pt_cashflow_to_classify" column_invisible="1" />
+                <field name="date" readonly="1" />
+                <field name="journal_id" readonly="1" optional="show" />
+                <field name="move_id" readonly="1" />
+                <field name="account_id" readonly="1" optional="hide" />
+                <field name="partner_id" readonly="1" optional="show" />
+                <field name="name" readonly="1" optional="show" />
+                <field
+                    name="l10n_pt_cashflow_document_ids"
+                    widget="many2many_tags"
+                    readonly="1"
+                    optional="show"
+                />
+                <button
+                    name="action_l10n_pt_cashflow_view_documents"
+                    type="object"
+                    icon="fa-external-link"
+                    title="View the reconciled documents"
+                    invisible="not l10n_pt_cashflow_document_ids"
+                />
+                <field name="balance" readonly="1" sum="Total" />
+                <field
+                    name="l10n_pt_cashflow_suggestion"
+                    widget="l10n_pt_cashflow_distribution"
+                    options="{'amount_field': 'balance', 'hide_remainder': True}"
+                    readonly="1"
+                    optional="show"
+                />
+                <button
+                    name="action_l10n_pt_cashflow_accept_suggestions"
+                    type="object"
+                    icon="fa-arrow-right"
+                    title="Accept the suggestion"
+                    invisible="not l10n_pt_cashflow_suggestion"
+                />
+                <field
+                    name="l10n_pt_cashflow_distribution"
+                    widget="l10n_pt_cashflow_distribution"
+                    options="{'amount_field': 'balance'}"
+                />
+                <field name="l10n_pt_cashflow_category_ids" column_invisible="1" />
+                <field name="l10n_pt_cashflow_summary" optional="hide" />
+                <button
+                    name="action_l10n_pt_cashflow_backfill"
+                    type="object"
+                    icon="fa-tags"
+                    title="Classify in detail"
+                    invisible="not l10n_pt_cashflow_document_ids"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_l10n_pt_cashflow_move_line_search" model="ir.ui.view">
+        <field name="name">account.move.line.search.pt.cashflow.classify</field>
+        <field name="model">account.move.line</field>
+        <field name="arch" type="xml">
+            <search string="Cash Flows">
+                <field name="move_id" />
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="journal_id" />
+                <field name="account_id" />
+                <field name="l10n_pt_cashflow_category_ids" />
+                <filter
+                    string="To Classify"
+                    name="l10n_pt_cashflow_to_classify"
+                    domain="[('l10n_pt_cashflow_to_classify', '=', True)]"
+                />
+                <filter
+                    string="Classified"
+                    name="classified"
+                    domain="[('l10n_pt_cashflow_to_classify', '=', False)]"
+                />
+                <filter
+                    string="Internal Transfers"
+                    name="internal_transfers"
+                    domain="[('l10n_pt_cashflow_category_ids.excluded_from_statement', '=', True)]"
+                />
+                <separator />
+                <filter
+                    string="Today"
+                    name="today"
+                    domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    string="This Week"
+                    name="this_week"
+                    domain="[('date', '>=', (context_today() + relativedelta(weeks=-1, days=1, weekday=0)).strftime('%Y-%m-%d')), ('date', '&lt;=', (context_today() + relativedelta(weekday=6)).strftime('%Y-%m-%d'))]"
+                />
+                <filter string="Date" name="date" date="date" />
+                <group>
+                    <filter
+                        string="Journal"
+                        name="group_journal"
+                        context="{'group_by': 'journal_id'}"
+                    />
+                    <filter
+                        string="Partner"
+                        name="group_partner"
+                        context="{'group_by': 'partner_id'}"
+                    />
+                    <filter
+                        string="Categories"
+                        name="group_category"
+                        context="{'group_by': 'l10n_pt_cashflow_category_ids'}"
+                    />
+                    <filter
+                        string="Account"
+                        name="group_account"
+                        context="{'group_by': 'account_id'}"
+                    />
+                    <filter
+                        string="Month"
+                        name="group_month"
+                        context="{'group_by': 'date:month'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_l10n_pt_cashflow_move_lines" model="ir.actions.act_window">
+        <field name="name">Classify Cash Flows</field>
+        <field name="res_model">account.move.line</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_l10n_pt_cashflow_move_line_list" />
+        <field name="search_view_id" ref="view_l10n_pt_cashflow_move_line_search" />
+        <field
+            name="domain"
+        >[('account_id.account_type', '=', 'asset_cash'), ('display_type', 'not in', ('line_section', 'line_note')), ('parent_state', '=', 'posted')]</field>
+        <field
+            name="context"
+        >{'search_default_l10n_pt_cashflow_to_classify': 1, 'create': False}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There are no bank/cash movements here.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_cashflow_backfill_wizard_menu"
+        parent="account.account_audit_control_menu"
+        sequence="50"
+        action="action_l10n_pt_cashflow_move_lines"
+        groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+    />
+
+    <record id="view_move_line_cashflow_edit_form" model="ir.ui.view">
+        <field name="name">account.move.line.cashflow.edit.form</field>
+        <field name="model">account.move.line</field>
+        <field name="arch" type="xml">
+            <form string="Cash Flow Distribution">
+                <sheet>
+                    <group>
+                        <field name="account_id" readonly="1" />
+                        <field name="balance" readonly="1" />
+                        <field name="company_currency_id" invisible="1" />
+                        <field name="l10n_pt_cashflow_required" invisible="1" />
+                        <field
+                            name="l10n_pt_cashflow_distribution"
+                            widget="l10n_pt_cashflow_distribution"
+                            options="{'amount_field': 'balance'}"
+                        />
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        string="Save"
+                        special="save"
+                        class="btn-primary"
+                        data-hotkey="q"
+                    />
+                    <button string="Discard" special="cancel" data-hotkey="x" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

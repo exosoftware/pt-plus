@@ -11,7 +11,7 @@
                     company_dependent="1"
                     help="Default values for the E-Fatura features"
                     string="E-Fatura"
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <div class="row">
                         <label
@@ -30,11 +30,20 @@
                     />
                 </setting>
                 <setting
+                    id="efatura_self_billing"
+                    company_dependent="1"
+                    help="What to do with the documents you issue on behalf of your vendors under a self-billing agreement, which the Tax Authority reports back to you"
+                    string="Self-Billing Documents"
+                    invisible="country_code != 'PT'"
+                >
+                    <field name="l10n_pt_efatura_self_billing" class="w-100" />
+                </setting>
+                <setting
                     id="efatura_auto_sync"
                     company_dependent="1"
                     help="Collect the e-fatura documents from the Tax Authority
                     automatically"
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <field name="l10n_pt_efatura_auto_sync" />
                     <div class="mt16 row" invisible="not l10n_pt_efatura_auto_sync">
@@ -51,7 +60,7 @@
                     company_dependent="1"
                     help="Automatically detect any Portuguese QR Code in Invoices and
                     fill them according to E-Fatura."
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <field name="l10n_pt_efatura_scan" />
                 </setting>

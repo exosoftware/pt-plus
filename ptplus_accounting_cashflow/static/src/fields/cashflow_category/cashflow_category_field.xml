@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="ptplus_accounting_cashflow.CashflowCategoryField">
+        <t t-if="props.readonly">
+            <span
+                t-if="tag"
+                t-attf-class="o_tag o_badge badge rounded-pill o_tag_color_{{ tag.color }}"
+                t-att-data-tooltip="tag.title"
+                t-esc="tag.label"
+            />
+            <!-- Empty: the placeholder as the red tag of the distribution widget -->
+            <span
+                t-elif="props.placeholder"
+                class="o_tag o_badge badge rounded-pill o_tag_color_1"
+                t-esc="props.placeholder"
+            />
+        </t>
+        <Many2One t-else="" t-props="m2oProps" />
+    </t>
+</templates>

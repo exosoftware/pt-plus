@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.17.1",
+    "version": "19.0.5.18.1",
     "depends": ["ptplus", "ptplus_expense"],
     "external_dependencies": {
         "python": ["pymupdf"],

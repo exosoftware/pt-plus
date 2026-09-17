@@ -79,6 +79,35 @@ Available soon.
 Changelog
 =========
 
+5.18.1 (2026-09-10)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The "Self-Billing Documents" option of the E-Fatura settings now shows its
+  name, and the choice set on it is no longer cut off halfway.
+- The Self-Billing box on an E-Fatura document is now only shown on the
+  documents that are self-billed. On every other document, which is nearly all
+  of them, it was an unticked box that said nothing.
+
+5.18.0 (2026-09-10)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- A new "Self-Billing Documents" option, in the E-Fatura section of the
+  Accounting settings, sets what the synchronization does with the documents
+  you issue on behalf of your vendors under a self-billing agreement, which the
+  Tax Authority reports back to you. By default they keep being collected and
+  linked to the document issued for them, as until now. Set to leave them out,
+  they are no longer collected at all, and the result of each run says how many
+  were left out: they were issued in Odoo, so there is nothing to check against
+  the Tax Authority.
+- The E-Fatura settings (journal, tax mappings, automatic synchronization, QR
+  code scan) are now shown to every Portuguese company, whether or not it
+  issues its invoices with Portuguese Invoicing turned on. Until now they only
+  appeared with Portuguese Invoicing active.
+
 5.17.1 (2026-09-09)
 ~~~~~~~~~~~~~~~~~~~
 

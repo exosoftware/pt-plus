@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_form_pt_cashflow" model="ir.ui.view">
+        <field name="name">account.move.form.pt.cashflow</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <field name="l10n_pt_cashflow_to_classify" invisible="1" />
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="not l10n_pt_cashflow_to_classify"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                >
+                    This entry has cash movements without cash flow classification.
+                </div>
+            </xpath>
+            <xpath
+                expr="//page[@id='aml_tab']//list/field[@name='analytic_distribution']"
+                position="after"
+            >
+                <field name="l10n_pt_cashflow_required" column_invisible="True" />
+                <field
+                    name="l10n_pt_cashflow_distribution"
+                    widget="l10n_pt_cashflow_distribution"
+                    optional="show"
+                    options="{'amount_field': 'balance'}"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+                <button
+                    name="action_l10n_pt_cashflow_edit"
+                    type="object"
+                    icon="fa-pencil"
+                    title="Edit Cash Flow Distribution"
+                    invisible="not l10n_pt_cashflow_required"
+                    column_invisible="parent.state == 'draft'"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+            </xpath>
+            <xpath
+                expr="//page[@id='aml_tab']//form//field[@name='analytic_distribution']"
+                position="after"
+            >
+                <field name="l10n_pt_cashflow_required" invisible="1" />
+                <field
+                    name="l10n_pt_cashflow_distribution"
+                    widget="l10n_pt_cashflow_distribution"
+                    options="{'amount_field': 'balance'}"
+                    invisible="not l10n_pt_cashflow_required"
+                    groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

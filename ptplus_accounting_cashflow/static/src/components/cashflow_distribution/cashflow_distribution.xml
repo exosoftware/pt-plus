@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="ptplus_accounting_cashflow.CashflowDistribution">
+        <div
+            class="o_field_tags d-inline-flex flex-wrap mw-100"
+            t-att-class="{'o_tags_input o_input': editingRecord}"
+            t-ref="cashflowDistribution"
+            t-on-keydown="onWidgetKeydown"
+        >
+            <TagsList tags="summaryTags()" />
+            <div
+                t-if="editingRecord"
+                class="o_input_dropdown d-inline-flex w-100"
+                tabindex="0"
+                t-ref="mainElement"
+                t-on-focus="onMainElementFocus"
+                t-on-click="onMainElementFocus"
+            >
+                <span class="cashflow_distribution_placeholder">
+                    <t t-if="!state.formattedData.length" t-esc="props.placeholder" />
+                </span>
+                <span class="o_dropdown_button" />
+                <t t-call="ptplus_accounting_cashflow.CashflowDistributionPopup" />
+            </div>
+        </div>
+    </t>
+
+    <t t-name="ptplus_accounting_cashflow.CashflowDistributionPopup">
+        <div
+            class="popover cashflow_distribution_popup dropdown-menu o-dropdown--menu show rounded py-0 overflow-x-hidden"
+            t-if="state.showDropdown"
+            t-ref="cashflowDropdown"
+        >
+            <div class="popover-header sticky-top">
+                <div class="d-flex">
+                    <div class="h5 mt-2 me-auto">Cash Flow</div>
+                    <div class="popupButtons">
+                        <span
+                            class="btn o_button"
+                            t-on-click.stop="() => this.closeCashflowEditor()"
+                            title="Close"
+                        >
+                            <span class="fa fa-close" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="popover-body p-2 table-responsive" style="max-width: 100vw;">
+                <table
+                    class="o_list_table table table-sm table-hover o_cashflow_table mb-2 table-striped"
+                >
+                    <thead>
+                        <tr class="border-bottom">
+                            <th>Category</th>
+                            <th
+                                t-if="percentageColumnEnabled"
+                                class="numeric_column_width"
+                            >Percentage</th>
+                            <th
+                                class="numeric_column_width"
+                                t-out="props.record.fields[props.amount_field].string"
+                            />
+                            <th class="deleteColumn w-20px" />
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            t-foreach="state.formattedData"
+                            t-as="line"
+                            t-key="line.id"
+                            t-att-id="line_index"
+                            t-att-name="'line_' + line_index"
+                        >
+                            <Record t-props="recordProps(line)" t-slot-scope="data">
+                                <td>
+                                    <Field
+                                        id="'category_id'"
+                                        name="'category_id'"
+                                        record="data.record"
+                                        canOpen="false"
+                                        canCreate="false"
+                                        canCreateEdit="false"
+                                        canQuickCreate="false"
+                                    />
+                                </td>
+                                <td
+                                    t-if="percentageColumnEnabled"
+                                    class="numeric_column_width"
+                                >
+                                    <Field
+                                        id="'percentage'"
+                                        name="'percentage'"
+                                        record="data.record"
+                                    />
+                                </td>
+                                <td class="numeric_column_width">
+                                    <Field
+                                        id="'amount'"
+                                        name="'amount'"
+                                        record="data.record"
+                                    />
+                                </td>
+                                <td class="w-20px">
+                                    <span
+                                        class="fa fa-trash-o cursor-pointer"
+                                        t-on-click.stop="() => this.deleteLine(line_index)"
+                                    />
+                                </td>
+                            </Record>
+                        </tr>
+                        <tr>
+                            <td
+                                t-on-click.stop.prevent="addLine"
+                                class="o_field_x2many_list_row_add"
+                                t-att-colspan="percentageColumnEnabled ? 4 : 3"
+                            >
+                                <a
+                                    href="#"
+                                    t-ref="addLineButton"
+                                    tabindex="0"
+                                >Add a line</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="border-top">
+                            <th
+                                t-att-colspan="percentageColumnEnabled ? 2 : 1"
+                            >Total</th>
+                            <th
+                                class="numeric_column_width"
+                                t-att-class="isBalanced ? 'text-success' : isOverAllocated ? 'text-danger' : 'text-warning'"
+                            >
+                                <t t-esc="formatAmount(distributionTotal)" />
+                                /
+                                <t t-esc="formatAmount(referenceAmount)" />
+                            </th>
+                            <th class="w-20px" />
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </t>
+
+</templates>

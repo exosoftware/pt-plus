@@ -34,6 +34,15 @@ Available soon.
 Changelog
 =========
 
+1.2.1 (2026-09-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Statements printed over more than one quadro can now be exported to Excel
+  with one sheet per quadro, like the pages of the PDF. The Balance Sheet and
+  the Profit & Loss, printed as a single quadro, keep a single sheet.
+
 1.2.0 (2026-07-26)
 ~~~~~~~~~~~~~~~~~~~
 

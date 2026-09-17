@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_cashflow_category_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.category.search</field>
+        <field name="model">l10n_pt.cashflow.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="ies_04b_code" />
+                <field name="ies_0701_code" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                <group>
+                    <filter
+                        string="Activities"
+                        name="group_flow_type"
+                        context="{'group_by': 'flow_type'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cashflow_category_view_list" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.category.list</field>
+        <field name="model">l10n_pt.cashflow.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="flow_type" />
+                <field name="direction" />
+                <field name="ies_04b_code" />
+                <field name="ies_0701_code" optional="show" />
+                <field name="color" widget="color_picker" optional="hide" />
+                <field name="excluded_from_statement" optional="hide" />
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cashflow_category_view_form" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.category.form</field>
+        <field name="model">l10n_pt.cashflow.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="text-bg-danger"
+                        invisible="active"
+                    />
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field name="name" />
+                            <field name="flow_type" />
+                            <field name="direction" />
+                        </group>
+                        <group>
+                            <field name="ies_04b_code" />
+                            <field name="ies_0701_code" />
+                            <field name="color" widget="color_picker" />
+                            <field name="excluded_from_statement" />
+                            <field name="sequence" groups="base.group_no_one" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cashflow_category_action" model="ir.actions.act_window">
+        <field name="name">Cash Flow Categories</field>
+        <field name="res_model">l10n_pt.cashflow.category</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="l10n_pt_cashflow_category_view_search" />
+    </record>
+
+    <menuitem
+        id="l10n_pt_cashflow_category_menu"
+        parent="account.account_account_menu"
+        action="l10n_pt_cashflow_category_action"
+        sequence="150"
+        groups="account.group_account_user"
+    />
+</odoo>

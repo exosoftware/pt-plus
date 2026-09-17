@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* ptplus_accounting_cashflow
+# 	* ptplus_accounting_cashflow
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Exo PT+\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-03 19:33+0000\n"
-"PO-Revision-Date: 2020-11-03 19:33+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2026-09-16 16:55+0000\n"
+"PO-Revision-Date: 2026-09-16 16:55+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +16,182 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_account_account
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cashflow_backfill_wizard.py:0
+msgid "%(done)s of %(total)s document line(s) classified."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"%s bank/cash journal items of the period are missing the cash flow "
+"classification or their distribution does not add up to the item amount. The"
+" statement is incomplete until they are fixed."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "%s movements classified."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid ""
+"A cash flow distribution can only be set on bank/cash journal items. "
+"Account: %s."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__manual
+msgid "A category chosen by hand, different from the one the models proposed"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/l10n_pt_cashflow_category.py:0
+msgid ""
+"A distribution over several categories cannot be applied to several "
+"movements at once; classify them one by one."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__ws_submission_ref
+msgid "AT Declaration Id"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__accept_alerts
+msgid "Accept Alerts"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "Accept Suggestions"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "Accept the suggestion"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__account_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "Account"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__account_prefix
+msgid "Account Prefix"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"Accounting control failed: the balances of the class 11 and 12 accounts "
+"(opening %(code_opening)s, closing %(code_closing)s) do not match the "
+"statement fields A00333 (%(a00333)s) and A00334 (%(a00334)s). Check the type"
+" of the class 11/12 accounts and of any other account typed as Bank and "
+"Cash."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__active
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__active
+msgid "Active"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_category_view_search
+msgid "Activities"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
+msgid "Add a line"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__amount
+msgid "Amount"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.js:0
+msgid "Amount field"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__direction__any
+msgid "Any"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__chart_template
+msgid ""
+"Apply only to companies on this chart of accounts (the account codes differ "
+"between the SNC Base and SNC Microentidades charts); leave empty to match "
+"any chart"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__product_id
+msgid ""
+"Apply only to document lines of this product; leave empty to match any "
+"product"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__account_prefix
+msgid ""
+"Apply only to document lines whose account code starts with one of these "
+"comma-separated prefixes; leave empty to match any account"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__company_id
+msgid ""
+"Apply only to documents of this company; leave empty to match any company"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__partner_id
+msgid ""
+"Apply only to documents of this partner; leave empty to match any partner"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__direction
+msgid ""
+"Apply only to receipts or only to payments; use two rules on the same "
+"accounts to map each direction to its own category (e.g. a loan account to "
+"the financing receipts category when money comes in and to the financing "
+"payments category when it goes out)"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_category_view_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_category_view_search
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_distribution_model_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__unavailable_cash_amount
+msgid ""
+"Balance of cash and cash equivalents held but not available for use, e.g. "
+"pledged deposits or legally restricted balances (field A00411 of quadro "
+"Q0701)"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
@@ -26,102 +200,673 @@ msgid "Bank Statement Line"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_account_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__cashflow_id
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__cashflow_id
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__cashflow_id
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_register_payments__cashflow_id
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.account_cashflow_view_form
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.account_cashflow_view_search
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__direction__both
+msgid "Both"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid "CASH FLOW STATEMENT"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
 msgid "Cash Flow"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__cashflow_required
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__l10n_pt_cashflow_amount_signed
+msgid "Cash Flow Amount"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_balance
+msgid "Cash Flow Balance"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.l10n_pt_cashflow_category_action
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_category_ids
+#: model:ir.ui.menu,name:ptplus_accounting_cashflow.l10n_pt_cashflow_category_menu
+msgid "Cash Flow Categories"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cashflow_category
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__category_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+msgid "Cash Flow Category"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:res.groups,name:ptplus_accounting_cashflow.group_l10n_pt_cashflow
+msgid "Cash Flow Classification"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_distribution
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_distribution
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__l10n_pt_cashflow_distribution
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__l10n_pt_cashflow_distribution
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_line_cashflow_edit_form
+msgid "Cash Flow Distribution"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cashflow_distribution_model
+msgid "Cash Flow Distribution Model"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.l10n_pt_cashflow_distribution_model_action
+#: model:ir.ui.menu,name:ptplus_accounting_cashflow.l10n_pt_cashflow_distribution_model_menu
+msgid "Cash Flow Distribution Models"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cashflow_backfill_wizard_document_line
+msgid "Cash Flow Document Line to Classify"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_document_ids
+msgid "Cash Flow Documents"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_required
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_required
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__l10n_pt_cashflow_required
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__l10n_pt_cashflow_required
 msgid "Cash Flow Required"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: sql_constraint:account.cashflow:0
-msgid "Cash Flow code must be unique"
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_action
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__dataport_log__type__cash_flow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cash_flow_statement_wizard__statement_type__cash_flow
+#: model:ir.ui.menu,name:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_menu
+msgid "Cash Flow Statement"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__default_credit_cashflow_id
-msgid "Cash Flow on Credit"
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cash_flow_statement_wizard
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__statement_id
+msgid "Cash Flow Statement Wizard"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_account__default_debit_cashflow_id
-msgid "Cash Flow on Debit"
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cash_flow_statement_wizard_line
+msgid "Cash Flow Statement Wizard Lines"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.account_cashflow_action_list
-#: model:ir.ui.menu,name:ptplus_accounting_cashflow.menu_action_account_cashflow_list
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_suggestion
+msgid "Cash Flow Suggestion"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_summary
+msgid "Cash Flow Summary"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_to_classify
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move__l10n_pt_cashflow_to_classify
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_to_classify
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__l10n_pt_cashflow_to_classify
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__l10n_pt_cashflow_to_classify
+msgid "Cash Flow To Classify"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_account_move_line_filter_pt_cashflow
+msgid "Cash Flow To Classify [pt]"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "Cash Flows"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__default_credit_cashflow_id
-msgid "Cash flow type that will be automatically attributed to move lines related to accounts requiring a cash flow specification when there's a credit on this account and no type was manually assigned"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__unavailable_cash_amount
+msgid "Cash Not Available For Use"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__default_debit_cashflow_id
-msgid "Cash flow type that will be automatically attributed to move lines related to accounts requiring a cash flow specification when there's a debit on this account and no type was manually assigned"
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Categories"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__code
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/l10n_pt_cashflow_category.py:0
+msgid ""
+"Categories used in cash flow distributions of journal items cannot be "
+"deleted, archive them instead: %s."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.js:0
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
+msgid "Category"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/l10n_pt_cashflow_category.py:0
+msgid ""
+"Category %s must have an IES Q04-B field unless it is excluded from the "
+"statement."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_id
+msgid ""
+"Category of this line on the movement, written right away when edited here"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_id
+msgid "Category the distribution models propose for this line"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_id
+msgid "Certified Accountant User"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__manual
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+msgid "Changed Manually"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__chart_template
+msgid "Chart Template"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__chart_template
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_distribution_model_view_search
+msgid "Chart of Accounts"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Classified"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.actions.act_window,name:ptplus_accounting_cashflow.action_l10n_pt_cashflow_move_lines
+#: model:ir.ui.menu,name:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_menu
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_line_tree_pt_cashflow
+msgid "Classify Cash Flows"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cashflow_backfill_wizard.py:0
+#: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cashflow_backfill_wizard
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
+msgid "Classify Cash Flows In Detail"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "Classify In Detail"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "Classify in detail"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:res.groups,comment:ptplus_accounting_cashflow.group_l10n_pt_cashflow
+msgid "Classify the bank/cash movements over the cash flow categories."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
+msgid "Close"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__code
 msgid "Code"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_res_company
-msgid "Companies"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_color
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_color
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__color
+msgid "Color"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_res_config_settings
-msgid "Config Settings"
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/fields/cashflow_category/cashflow_category_field.js:0
+msgid "Color field"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account_move.py:123
-#, python-format
-msgid "Couldn't automatically determine the cash flow type for at least one movement line whose account requires a cash flow type. You can either manually insert it or change the default cash flow types setup on the counterpart accounts. Move: %s. Default cash flow types:%s"
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_color
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_color
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__color
+msgid "Color of the category tags in the cash flow distribution widget"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__company_eac
+msgid "Company EAC"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_balance
+msgid ""
+"Company currency amount of the liquidity journal item, which the cash flow "
+"distribution must add up to"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"Consistency control failed: the change in cash (A00331) plus the exchange "
+"differences (A00332) plus the opening balance (A00333) differs from the "
+"measured closing balance (A00334) by %s."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_res_company__transfer_cashflow_id
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_res_config_settings__transfer_cashflow_id
-msgid "Default Transfer Cash Flow"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__currency_id
+msgid "Currency"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__display_name
+#: model:ir.model,name:ptplus_accounting_cashflow.model_dataport_log
+msgid "Dataport Log"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Date"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__direction
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__direction
+msgid "Direction"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_line_cashflow_edit_form
+msgid "Discard"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_partial_reconcile__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__id
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_bank_statement_line__l10n_pt_cashflow_distribution
+msgid ""
+"Distribution of the bank transaction over the cash flow categories, as exact"
+" signed amounts in company currency. Stored on the liquidity journal item of"
+" the transaction"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_distribution
+msgid ""
+"Distribution of the cash movement over the cash flow categories, as exact "
+"signed amounts in company currency. Receipts are positive, payments "
+"negative. The distribution may stay below the item amount (the item is then "
+"still to classify) but never exceed it"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_payment_register__l10n_pt_cashflow_distribution
+msgid ""
+"Distribution of the payment over the cash flow categories, as exact signed "
+"amounts in company currency, suggested from the cash flow distribution "
+"models of the invoice lines being paid. Only available when the payment "
+"moves a bank/cash account directly and a single payment is being created; "
+"when the wizard creates several payments, each one is classified "
+"individually"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_payment__l10n_pt_cashflow_distribution
+msgid ""
+"Distribution of the payment over the cash flow categories, as exact signed "
+"amounts in company currency. Only available when the payment moves a "
+"bank/cash account directly; otherwise the classification is done on the bank"
+" transaction"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_suggestion
+msgid ""
+"Distribution proposed by the distribution models for a movement still to "
+"classify, from the documents it settles and its direct counterparts; accept "
+"it or classify by hand"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__document_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+msgid "Document"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__move_line_id
+msgid "Document Line"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__document_line_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+msgid "Document Lines"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "Documents"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__domain
+msgid "Domain"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_form_pt_cashflow
+msgid "Edit Cash Flow Distribution"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__email_partner_ids
+msgid "Email Recipients"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_status
+msgid ""
+"Enable when the certified accountant has full declarative powers for the "
+"taxpayer; the taxpayer password is then not required."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__error
+msgid "Error"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__error_code
+msgid "Error Code"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__error_detail
+msgid "Error Detail"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__error_message
+msgid "Error Message"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__excluded_from_statement
+msgid "Excluded From Statement"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__export_pdf_button
+msgid "Export Pdf Button"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__export_txt_button
+msgid "Export Txt Button"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__export_xml_button
+msgid "Export Xml Button"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__get_proof
+msgid "Fetch Receipt"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__get_proof
+msgid "Fetch the submission receipt after a successful submission."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_04b_code
+msgid ""
+"Field of quadro Q04-B (Demonstração dos Fluxos de Caixa) of the IES Anexo A "
+"fed by this category, e.g. A00302"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_0701_code
+msgid ""
+"Field of quadro Q0701 (Informação adicional relativa a fluxos de caixa) of "
+"the IES Anexo A fed by this category, e.g. A00408"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__data
+msgid "File"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__filename
+msgid "Filename"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__flow_type__financing
+msgid "Financing Activities"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__flow_type
+msgid "Flow Type"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__format
+msgid "Format"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__formula
+msgid "Formula"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_status
+msgid "Full powers of Declaration"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.js:0
+msgid "Hide remainder"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_bank_statement_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_partial_reconcile__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_payment_register__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__id
 msgid "ID"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_code
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_code
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_code
+msgid "IES Code"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_04b_code
+msgid "IES Q04-B Field"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_0701_code
+msgid "IES Q0701 Field"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the category "
+"without removing it."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__include_draft
+msgid "Include Draft Entries"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__include_draft
+msgid "Include entries in draft state in the statement calculation"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__indentation
+msgid "Indentation"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__info
+msgid "Info"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file. "
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Internal Transfers"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__flow_type__investing
+msgid "Investing Activities"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__is_after_inventory_transfers
+msgid "Is After Inventory Transfers"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__is_after_pl_calculation
+msgid "Is After Pl Calculation"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Journal"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
 #: model:ir.model,name:ptplus_accounting_cashflow.model_account_move
-msgid "Journal Entries"
+msgid "Journal Entry"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
@@ -130,23 +875,141 @@ msgid "Journal Item"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow____last_update
-msgid "Last Modified on"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__journal_ids
+msgid "Journals"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__name
+msgid "Label"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/fields/cashflow_category/cashflow_category_field.js:0
+msgid "Label field"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_cashflow__name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__log_as_reported
+msgid "Log As Reported"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__log_on_close
+msgid "Log On Close"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Month"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__movement_line_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+msgid "Movement"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__excluded_from_statement
+msgid ""
+"Movements between cash and cash equivalents are not cash flows (NCRF 2) and "
+"are excluded from the statement"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__name
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
 msgid "Name"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__flow_type__operating
+msgid "Operating Activities"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move.py:0
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "Operation not supported"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__other_relevant_info
+msgid ""
+"Optional free text of quadro Q0701, complementing the cash flow information"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__flow_type__other
+msgid "Other"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__other_relevant_info
+msgid "Other Relevant Information"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__partner_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Partner"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__email_partner_ids
+msgid ""
+"Partners the Tax Authority document (submission receipt or payment "
+"reference) will be emailed to."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_payment_register
+msgid "Pay"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__direction__outbound
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__direction__outbound
+msgid "Payment"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__payment_reference_data
+msgid "Payment Reference"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__payment_reference_filename
+msgid "Payment Reference Filename"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
@@ -155,47 +1018,432 @@ msgid "Payments"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account_move.py:93
-#, python-format
-msgid "Please set the cash flow type on lines containing accounts that require it. Move: %s. "
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.js:0
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
+msgid "Percentage"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_account_register_payments
-msgid "Register Payments"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__period
+msgid "Period"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_account__cashflow_required
-msgid "Set as True if the account requires a cash flow type to be defined on every journal item. Should be True on class 11 or 12 accounts and False on the rest. Please note that changing this field in the middle of a fiscal year can compromise the cash flow statement. In that case, journal items must be manually edited"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__product_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__product_id
+msgid "Product"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account.py:43
-#, python-format
-msgid "The type of account '%s' is View and as such field Cash Flow Required cannot be True"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__proof_filename
+msgid "Proof Filename"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account_move.py:115
-#, python-format
-msgid "Undefined"
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
+msgid "Q04-B - Cash Flow Statement"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.res_config_settings_view_form
-msgid "Use this field to set the default cash flow type that will be applied on\n"
-"                            internal transfer operations on accounts requiring it"
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__q04b_line_ids
+msgid "Q04-B Lines"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account_move.py:39
-#, python-format
-msgid "You cannot post move lines containing cash flow types on accounts that don't require it Account: %s. Cash flow type: %s."
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
+msgid "Q0701 - Additional Information"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
-#: code:addons/ptplus_accounting_cashflow/models/account_move.py:141
-#, python-format
-msgid "You cannot set a cash flow type because no account involved in the movement requires it. Please clear the cash flow type on the associated payment or bank statement line and try again."
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__q0701_line_ids
+msgid "Q0701 Lines"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"Quadro Q04-B (cash flow statement) is only required for entities reporting "
+"under the NCRF general regime or the IAS/IFRS (referentials N and S); small "
+"and micro entities are exempt (art. 11.º of Decree-Law 158/2009). Quadro "
+"Q0701 applies to all entities."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__direction__inbound
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__direction__inbound
+msgid "Receipt"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__chart_template__pt_base
+msgid "SNC Base"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__chart_template__pt_micro
+msgid "SNC Microentidades"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_line_cashflow_edit_form
+msgid "Save"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__flow_type
+msgid "Section of the cash flow statement the category belongs to"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__sequence
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_distribution_model__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as "
+"Reported."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__amount
+msgid ""
+"Share of the movement settled by this document line, in company currency"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_compute
+msgid "Show Button Compute"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_csv
+msgid "Show Button Export Csv"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_pdf
+msgid "Show Button Export Pdf"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_txt
+msgid "Show Button Export Txt"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_webservice
+msgid "Show Button Export Webservice"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_xlsx
+msgid "Show Button Export Xlsx"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_export_xml
+msgid "Show Button Export Xml"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_mail
+msgid "Show Button Mail"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_print
+msgid "Show Button Print"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_select_all
+msgid "Show Button Select All"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_select_none
+msgid "Show Button Select None"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__show_button_ws_oa
+msgid "Show Button Ws Oa"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"Some journal items reference unknown cash flow categories (%s). Their "
+"amounts were ignored."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__state
+msgid "State"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__line_ids
+msgid "Statement Lines"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__statement_type
+msgid "Statement Type"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__proof_data
+msgid "Submission Proof"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__accept_alerts
+msgid ""
+"Submit the declaration even if the AT reports non-blocking alerts "
+"(aceitaAlertas)."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_id
+msgid "Suggested Category"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_password
+msgid "Taxpayer Password"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_code
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_code
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_code
+msgid ""
+"The IES field codes of the category, or its name when it feeds none "
+"(internal transfers)"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid ""
+"The cash flow distribution cannot exceed the journal item amount. Item: "
+"%(item)s. Balance: %(balance)s. Distributed: %(total)s."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "The cash flow distribution contains archived categories: %s."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "The cash flow distribution contains unknown categories."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_document_ids
+msgid ""
+"The documents behind the movement: the ones it is reconciled with, or its "
+"own entry when booked directly against an account"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"The internal transfers between cash and cash equivalents do not net to zero "
+"over the period (%s). Check that both legs of every transfer are classified "
+"as internal transfers, and that fees are classified separately."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__quantity
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.actions.act_window,help:ptplus_accounting_cashflow.action_l10n_pt_cashflow_move_lines
+msgid "There are no bank/cash movements here."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "This Week"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_move_form_pt_cashflow
+msgid "This entry has cash movements without cash flow classification."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid ""
+"This statement follows the IES Anexo A model of Portaria 35/2019 (quadros "
+"Q04-B and Q0701), which only takes effect for periods of 2026 and later. "
+"Periods up to 2025 are filed with the Portaria 271/2014 model (quadro 04-C),"
+" whose rubrics are equivalent but numbered differently."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "To Classify"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/views/cashflow_document_lines/cashflow_document_lines.xml:0
+msgid "To apply"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.js:0
+#: code:addons/ptplus_accounting_cashflow/static/src/views/cashflow_document_lines/cashflow_document_lines.js:0
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
+msgid "To classify"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
+msgid "Today"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/components/cashflow_distribution/cashflow_distribution.xml:0
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__price_total
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "Total"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
+msgid "Total (%s)"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_dataport_log__type
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__type
+msgid "Type"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__unclassified_count
+msgid "Unclassified Count"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__unclassified_domain
+msgid "Unclassified Domain"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-javascript
+#: code:addons/ptplus_accounting_cashflow/static/src/client_actions/classified_notification.js:0
+msgid "Undo"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "Unknown"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_id
+msgid ""
+"User holding the certified accountant (TOC) credentials used for webservice "
+"submission when the logged-in user is not the accountant."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__direction
+msgid ""
+"Usual direction of the flow. Informative only: refunds and corrections "
+"legitimately carry the opposite sign"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__validate
+msgid "Validate"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__values
+msgid "Values"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__vat_legal_representative
+msgid "Vat Legal Representative"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
+msgid "View"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
+msgid "View Movements To Classify"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_list
+msgid "View the reconciled documents"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__warnings
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_form
+msgid "Warnings"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) before being delivered to the user. As it's a very time consuming task, you may want to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__ws_operation
+msgid "Ws Operation"
 msgstr ""

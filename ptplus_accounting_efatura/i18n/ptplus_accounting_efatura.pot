@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-02 16:17+0000\n"
-"PO-Revision-Date: 2026-09-02 16:17+0000\n"
+"POT-Creation-Date: 2026-09-10 15:45+0000\n"
+"PO-Revision-Date: 2026-09-10 15:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,14 @@ msgstr ""
 msgid ""
 "\n"
 "%(count)s self-billing document(s) couldn't be matched with the document issued for them in the system. Link them by hand on the E-Fatura list."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#. odoo-python
+#: code:addons/ptplus_accounting_efatura/wizards/l10n_pt_dataport_import_efatura.py:0
+msgid ""
+"\n"
+"%(count)s self-billing document(s) were left out, as set on the E-Fatura settings."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -374,6 +382,11 @@ msgstr ""
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.dataport_import_form_efatura
 msgid "Close"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__res_company__l10n_pt_efatura_self_billing__keep
+msgid "Collect and link to the document issued"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -1155,6 +1168,16 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields.selection,name:ptplus_accounting_efatura.selection__res_company__l10n_pt_efatura_self_billing__exclude
+msgid "Leave out of the synchronization"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__linked_to_posted
+msgid "Linked To Posted"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__log_on_close
 msgid "Log On Close"
 msgstr ""
@@ -1903,8 +1926,20 @@ msgid "Select exactly two vendor bills to merge."
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__self_billing_skipped
+msgid "Self Billing Skipped"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__self_billing
 msgid "Self-Billing"
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_self_billing
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_self_billing
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+msgid "Self-Billing Documents"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
@@ -2470,6 +2505,17 @@ msgid "What happens to that"
 msgstr ""
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_company__l10n_pt_efatura_self_billing
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_res_config_settings__l10n_pt_efatura_self_billing
+msgid ""
+"What the E-Fatura synchronization does with the documents you issued on "
+"behalf of your vendors under a self-billing agreement, which the Tax "
+"Authority reports back to you. Collected, they are linked to the document "
+"issued for them, need no tax mapping and never create a vendor bill. Left "
+"out, they are not brought into the E-Fatura list at all."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_bank_statement_line__l10n_pt_qr_scan_state
 #: model:ir.model.fields,help:ptplus_accounting_efatura.field_account_move__l10n_pt_qr_scan_state
 msgid ""
@@ -2484,6 +2530,13 @@ msgid ""
 "What the Portuguese QR code scan made of the receipt uploaded: anything "
 "other than read means nothing was taken from it, and the user was asked "
 "whether to keep it or send a new photo."
+msgstr ""
+
+#. module: ptplus_accounting_efatura
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.res_config_settings_view_form_pt_efatura
+msgid ""
+"What to do with the documents you issue on behalf of your vendors under a "
+"self-billing agreement, which the Tax Authority reports back to you"
 msgstr ""
 
 #. module: ptplus_accounting_efatura

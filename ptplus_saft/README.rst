@@ -32,6 +32,16 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.4.3 (2026-09-14)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Accounting users without access to the Settings app can export the SAF-T
+  again. The export started by checking the installed modules with the current
+  user's rights, which only administrators have, so it failed with an access
+  error before producing anything.
+
 4.4.2 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~
 

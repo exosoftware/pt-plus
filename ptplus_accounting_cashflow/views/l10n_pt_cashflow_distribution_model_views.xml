@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_cashflow_distribution_model_view_list" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.distribution.model.list</field>
+        <field name="model">l10n_pt.cashflow.distribution.model</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="account_prefix" />
+                <field name="direction" />
+                <field name="category_id" />
+                <field name="chart_template" optional="show" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="show"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_pt_cashflow_distribution_model_view_search" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.distribution.model.search</field>
+        <field name="model">l10n_pt.cashflow.distribution.model</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="account_prefix" />
+                <field name="category_id" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                <group name="groupby">
+                    <filter
+                        string="Chart of Accounts"
+                        name="groupby_chart_template"
+                        context="{'group_by': 'chart_template'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_cashflow_distribution_model_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Cash Flow Distribution Models</field>
+        <field name="res_model">l10n_pt.cashflow.distribution.model</field>
+        <field name="view_mode">list</field>
+        <field
+            name="search_view_id"
+            ref="l10n_pt_cashflow_distribution_model_view_search"
+        />
+    </record>
+
+    <menuitem
+        id="l10n_pt_cashflow_distribution_model_menu"
+        parent="account.account_account_menu"
+        action="l10n_pt_cashflow_distribution_model_action"
+        sequence="151"
+        groups="account.group_account_user"
+    />
+</odoo>
