@@ -18,6 +18,13 @@ msgstr ""
 
 #. module: ptplus_accounting_cashflow
 #. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "%(count)s movements classified, %(remaining)s still to classify."
+msgstr ""
+"%(count)s movimentos classificados, faltam %(remaining)s por classificar."
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
 #: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cashflow_backfill_wizard.py:0
 msgid "%(done)s of %(total)s document line(s) classified."
 msgstr "%(done)s de %(total)s linha(s) de documento classificada(s)."
@@ -286,6 +293,11 @@ msgid "Cash Flow Suggestion"
 msgstr "Sugestão de Fluxos de Caixa"
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_state
+msgid "Cash Flow State"
+msgstr "Estado de Fluxos de Caixa"
+
+#. module: ptplus_accounting_cashflow
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_summary
 msgid "Cash Flow Summary"
 msgstr "Resumo de Fluxos de Caixa"
@@ -385,6 +397,15 @@ msgstr "Classificar Fluxos de Caixa"
 
 #. module: ptplus_accounting_cashflow
 #. odoo-python
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_state
+msgid ""
+"Classification state of a bank/cash movement; empty on the journal items "
+"that carry no cash flow"
+msgstr ""
+"Estado de classificação de um movimento de bancos/caixa; vazio nos itens de "
+"diário que não têm fluxo de caixa"
+
+#. module: ptplus_accounting_cashflow
 #: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cashflow_backfill_wizard.py:0
 #: model:ir.model,name:ptplus_accounting_cashflow.model_l10n_pt_cashflow_backfill_wizard
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_list
@@ -868,6 +889,16 @@ msgstr "Movimento"
 #: model:ir.model.fields,help:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__excluded_from_statement
 msgid "Movements between cash and cash equivalents are not cash flows (NCRF 2) and are excluded from the statement"
 msgstr "Os movimentos entre caixa e seus equivalentes não são fluxos de caixa (NCRF 2) e são excluídos da demonstração"
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid ""
+"No movement was classified: none of the %s left has a suggestion from the "
+"distribution models. Classify them in detail instead."
+msgstr ""
+"Nenhum movimento foi classificado: nenhum dos %s que faltam tem sugestão dos "
+"modelos de distribuição. Classifique-os em detalhe."
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard_line__name

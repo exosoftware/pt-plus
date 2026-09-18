@@ -6,14 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-16 16:55+0000\n"
-"PO-Revision-Date: 2026-09-16 16:55+0000\n"
+"POT-Creation-Date: 2026-09-18 15:42+0000\n"
+"PO-Revision-Date: 2026-09-18 15:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid "%(count)s movements classified, %(remaining)s still to classify."
+msgstr ""
 
 #. module: ptplus_accounting_cashflow
 #. odoo-python
@@ -287,6 +293,11 @@ msgid "Cash Flow Required"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_state
+msgid "Cash Flow State"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
 #. odoo-python
 #: code:addons/ptplus_accounting_cashflow/wizards/l10n_pt_cash_flow_statement_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_cashflow.l10n_pt_cash_flow_statement_wizard_action
@@ -404,6 +415,14 @@ msgid "Chart of Accounts"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,help:ptplus_accounting_cashflow.field_account_move_line__l10n_pt_cashflow_state
+msgid ""
+"Classification state of a bank/cash movement; empty on the journal items "
+"that carry no cash flow"
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__account_move_line__l10n_pt_cashflow_state__classified
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "Classified"
 msgstr ""
@@ -946,6 +965,14 @@ msgid "Name"
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
+#. odoo-python
+#: code:addons/ptplus_accounting_cashflow/models/account_move_line.py:0
+msgid ""
+"No movement was classified: none of the %s left has a suggestion from the "
+"distribution models. Classify them in detail instead."
+msgstr ""
+
+#. module: ptplus_accounting_cashflow
 #: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__flow_type__operating
 msgid "Operating Activities"
 msgstr ""
@@ -1309,6 +1336,7 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__account_move_line__l10n_pt_cashflow_state__to_classify
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "To Classify"
