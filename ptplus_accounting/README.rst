@@ -10,6 +10,8 @@ The base module for handling Portuguese full accounting in Odoo. Mods include:
 - new journal types: p/l calculation, fiscal year regularization and adjustment
 - a report for printing journal entries
 - vat adjustment norms to be applied on credit and debit notes
+- equity tags, that classify the movements of the class 5 accounts by the
+  nature of the change, for the IES statement of changes in equity
 
 **Table of contents**
 
@@ -49,6 +51,28 @@ Available soon.
 
 Changelog
 =========
+
+5.2.0 (2026-09-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Equity tags: every journal item of a class 5 account is now tagged with the
+  nature of the change (Subscrições de capital, Distribuições, Alterações de
+  políticas contabilísticas and the remaining ones of the official model),
+  which is what allows the Statement of Changes in Equity to report it on the
+  right line. Movements between accounts of the same nature are tagged as
+  having no impact on the statement.
+- The tag is required on every way in which a class 5 account can be used:
+  journal entries, customer invoices, vendor bills, expenses and sales
+  orders. Entries can no longer be posted without exactly one tag, whether
+  they are entered by hand, by import or by an integration. An amount split
+  over two natures is entered as two lines, one per tag.
+- The tags and the plan are records of the statement, not analytic accounting
+  of the company: they cannot be renamed, archived nor deleted, and the plan
+  is kept out of the analytic plans list. Without this, a tag put aside would
+  quietly take the line it feeds down to zero. The tags keep being offered on
+  the journal items of the class 5 accounts as before.
 
 5.1.2 (2026-08-20)
 ~~~~~~~~~~~~~~~~~~~

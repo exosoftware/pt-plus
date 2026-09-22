@@ -32,6 +32,16 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.4.4 (2026-09-22)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Accounting SAF-T reports each entry under the journal it was posted to
+  again. The file listed every journal but wrote all the entries of the period
+  inside the last one, leaving the remaining journals empty, so the whole year
+  looked as if it had been posted to a single journal.
+
 4.4.3 (2026-09-14)
 ~~~~~~~~~~~~~~~~~~
 

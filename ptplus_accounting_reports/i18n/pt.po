@@ -6,6 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-21 10:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -32,21 +33,23 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__ws_submission_ref
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__ws_submission_ref
 msgid "AT Declaration Id"
-msgstr ""
+msgstr "Id da Declaração na AT"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__accept_alerts
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__accept_alerts
 msgid "Accept Alerts"
-msgstr ""
+msgstr "Aceitar Alertas"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
@@ -57,9 +60,16 @@ msgid "Account"
 msgstr "Conta"
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
 msgid "Accounts"
 msgstr "Contas"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col9
+msgid "Ajustamentos / outras variações no capital próprio"
+msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__already_paid_tax_amount
@@ -73,6 +83,7 @@ msgstr "Contabilista Suplente?"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__amount
@@ -115,6 +126,11 @@ msgid "Aug"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col2
+msgid "Ações (quotas) próprias"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
 msgid "Balance"
 msgstr "Saldo"
@@ -147,18 +163,24 @@ msgid "Balance Sheet Wizard Lines"
 msgstr "Linhas do Assistente de Balanço"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col1
+msgid "Capital subscrito"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__certified_accountant_vat
 msgid "Certified Accountant"
 msgstr "Contabilista Certificado"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__representative_user_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_id
 msgid "Certified Accountant User"
-msgstr ""
+msgstr "Utilizador Contabilista Certificado"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_01
@@ -167,15 +189,17 @@ msgstr "NIF do Titular do Encargo"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__chart_template
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__chart_template
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__chart_template
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__chart_template
 msgid "Chart Template"
-msgstr ""
+msgstr "Modelo de Plano de Contas"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__code
@@ -186,6 +210,7 @@ msgstr "Código"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__company_id
@@ -195,6 +220,7 @@ msgstr "Empresa"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__company_eac
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__company_eac
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__company_eac
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__company_eac
@@ -204,6 +230,7 @@ msgstr "CAE da Empresa"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_statement_ies_mixin.py:0
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
@@ -223,6 +250,8 @@ msgstr "Região do país"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__create_uid
@@ -237,6 +266,8 @@ msgstr "Criado por"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__create_date
@@ -251,6 +282,8 @@ msgstr "Criado em"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__currency_id
@@ -269,6 +302,7 @@ msgstr "Registo de Dataport"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__date_from
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__date_from
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__date_from
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__date_from
@@ -278,6 +312,7 @@ msgstr "Data De"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__date_to
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__date_to
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__date_to
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__date_to
@@ -299,14 +334,17 @@ msgstr "Tipo de Declaração"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__display_name
@@ -321,6 +359,7 @@ msgstr "Nome a Exibir"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__domain
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__domain
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__domain
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__domain
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__domain
@@ -329,7 +368,18 @@ msgid "Domain"
 msgstr "Domínio"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__email_partner_ids
+msgid "Email Recipients"
+msgstr "Destinatários do E-mail"
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__representative_user_status
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_status
@@ -341,6 +391,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__error
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__error
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__error
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error
@@ -350,37 +401,46 @@ msgstr "Erro"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__error_code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_code
 msgid "Error Code"
-msgstr ""
+msgstr "Código do Erro"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__error_detail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_detail
 msgid "Error Detail"
-msgstr ""
+msgstr "Detalhe do Erro"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__error_message
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_message
 msgid "Error Message"
-msgstr ""
+msgstr "Mensagem do Erro"
 
 #. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_profit_loss_wizard_form
 msgid "Errors"
 msgstr "Erros"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col8
+msgid "Excedentes de revalorização"
+msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__exclude_pl_calc
@@ -425,6 +485,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__export_pdf_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__export_pdf_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_pdf_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_pdf_button
@@ -434,6 +495,7 @@ msgstr "Botão Exportar PDF"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__export_txt_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__export_txt_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_txt_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_txt_button
@@ -443,6 +505,7 @@ msgstr "Botão Exportar TXT"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__export_xml_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__export_xml_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_xml_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_xml_button
@@ -459,24 +522,27 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__get_proof
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__get_proof
 msgid "Fetch Receipt"
-msgstr ""
+msgstr "Obter Comprovativo"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__get_proof
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__get_proof
 msgid "Fetch the submission receipt after a successful submission."
-msgstr ""
+msgstr "Obter o comprovativo depois de uma submissão bem-sucedida."
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__data
@@ -486,6 +552,7 @@ msgstr "Ficheiro"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__filename
@@ -509,6 +576,7 @@ msgstr "Financeiros"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__format
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__format
@@ -518,26 +586,30 @@ msgstr "Formato"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__formula
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__formula
 msgid "Formula"
-msgstr ""
+msgstr "Fórmula"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__representative_user_status
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_status
 msgid "Full powers of Declaration"
-msgstr ""
+msgstr "Poderes Declarativos Plenos"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__id
@@ -552,6 +624,7 @@ msgstr "ID"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__include_draft
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__include_draft
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__include_draft
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__include_draft
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__include_draft
@@ -560,6 +633,7 @@ msgstr "Incluir Lançamentos em Rascunho"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__include_draft
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__include_draft
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__include_draft
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__include_draft
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__include_draft
@@ -568,15 +642,17 @@ msgstr "Incluir lançamentos em estado de rascunho no cálculo da declaração"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__indentation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__indentation
 msgid "Indentation"
-msgstr ""
+msgstr "Indentação"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__info
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__info
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__info
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__info
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__info
@@ -586,6 +662,7 @@ msgstr "Info"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_on_close
@@ -610,6 +687,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__is_after_inventory_transfers
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__is_after_inventory_transfers
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__is_after_inventory_transfers
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__is_after_inventory_transfers
 msgid "Is After Inventory Transfers"
@@ -617,6 +695,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__is_after_pl_calculation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__is_after_pl_calculation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__is_after_pl_calculation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__is_after_pl_calculation
 msgid "Is After Pl Calculation"
@@ -631,6 +710,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__journal_ids
@@ -660,6 +740,8 @@ msgstr "Motivo do Justo Impedim."
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__write_uid
@@ -674,6 +756,8 @@ msgstr "Última Atualização por"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__write_date
@@ -692,6 +776,7 @@ msgstr "Representante Legal"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__log_as_reported
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__log_as_reported
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_as_reported
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_as_reported
@@ -701,6 +786,7 @@ msgstr "Registar como Reportado"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__log_on_close
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__log_on_close
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_on_close
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_on_close
@@ -730,9 +816,8 @@ msgstr "Declaração Mensal de IS"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__statement_type__stamp_duty_monthly
-#, fuzzy
 msgid "Monthly Stamp Duty"
-msgstr "Declaração Mensal de Imposto de Selo"
+msgstr "Imposto do Selo Mensal"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
@@ -754,11 +839,13 @@ msgstr "Linhas do Assistente de Declaração Mensal de Imposto de Selo"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__name
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_profit_loss_wizard_form
 msgid "Name"
@@ -791,6 +878,16 @@ msgid "Oct"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col6
+msgid "Outras reservas"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col3
+msgid "Outros instrumentos de capital próprio"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
 msgid "P/L Calculation"
 msgstr ""
@@ -801,7 +898,40 @@ msgid "Partner"
 msgstr "Parceiro"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__email_partner_ids
+msgid ""
+"Partners the Tax Authority document (submission receipt or payment "
+"reference) will be emailed to."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__payment_reference_data
+msgid "Payment Reference"
+msgstr "Referência de Pagamento"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__payment_reference_filename
+msgid "Payment Reference Filename"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__period
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__period
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__period
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__period
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__period
@@ -832,11 +962,17 @@ msgstr "Linhas do Assistente de Demonstração de Resultados"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__proof_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__proof_filename
 msgid "Proof Filename"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col4
+msgid "Prémios de emissão"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -851,6 +987,12 @@ msgid "RENDIMENTOS E GASTOS"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason_end_date
 msgid "Reason Fact End"
 msgstr "Data de Cessação do Facto"
@@ -862,9 +1004,8 @@ msgstr "Data de Ocorrência do Facto"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_06_01
-#, fuzzy
 msgid "Representative"
-msgstr "Representante Legal"
+msgstr "Representante"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_06_02
@@ -872,7 +1013,24 @@ msgid "Represented Entity"
 msgstr "Entidade Representada"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col5
+msgid "Reservas legais"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col10
+msgid "Resultado líquido do período"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col7
+msgid "Resultados transitados"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_m
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_m
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_m
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_m
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_m
 msgid "SNC Base - M"
@@ -880,6 +1038,8 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_p
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_p
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_p
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_p
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_p
 msgid "SNC Base - P"
@@ -887,6 +1047,8 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_sn
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_sn
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_sn
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_sn
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_sn
 msgid "SNC Base - S ou N"
@@ -894,6 +1056,8 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_micro
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_micro
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_micro
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_micro
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_micro
 msgid "SNC Microentidades - M"
@@ -917,6 +1081,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__sequence
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__sequence
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__sequence
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__sequence
@@ -926,6 +1091,7 @@ msgstr "Sequência"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__log_as_reported
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__log_as_reported
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_as_reported
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_as_reported
@@ -940,6 +1106,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_compute
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_compute
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_compute
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_compute
@@ -949,6 +1116,7 @@ msgstr "Mostrar Botão Calcular"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_csv
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_csv
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_csv
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_csv
@@ -958,6 +1126,7 @@ msgstr "Mostrar Botão Exportar CSV"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_pdf
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_pdf
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_pdf
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_pdf
@@ -967,6 +1136,7 @@ msgstr "Mostrar Botão Exportar PDF"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_txt
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_txt
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_txt
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_txt
@@ -976,6 +1146,7 @@ msgstr "Mostrar Botão Exportar TXT"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_webservice
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_webservice
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_webservice
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_webservice
@@ -985,6 +1156,7 @@ msgstr "Mostrar Botão Exportar Webservice"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_xlsx
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_xlsx
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_xlsx
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_xlsx
@@ -994,6 +1166,7 @@ msgstr "Mostrar Botão Exportar XLSX"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_export_xml
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_export_xml
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_xml
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_xml
@@ -1003,6 +1176,7 @@ msgstr "Mostrar Botão Exportar XML"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_mail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_mail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_mail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_mail
@@ -1012,6 +1186,7 @@ msgstr "Mostrar Botão E-mail"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_print
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_print
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_print
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_print
@@ -1021,6 +1196,7 @@ msgstr "Mostrar Botão Imprimir"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_select_all
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_select_all
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_select_all
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_select_all
@@ -1030,6 +1206,7 @@ msgstr "Mostrar Botão Selecionar Todos"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_select_none
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_select_none
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_select_none
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_select_none
@@ -1039,6 +1216,7 @@ msgstr "Mostrar Botão Selecionar Nenhum"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__show_button_ws_oa
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__show_button_ws_oa
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__show_button_ws_oa
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_ws_oa
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_ws_oa
@@ -1053,6 +1231,7 @@ msgstr "Código do Imposto do Selo"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__state
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__state
@@ -1062,21 +1241,23 @@ msgstr "Estado"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_statement_ies_mixin
-#, fuzzy
 msgid "Statement IES Mixin"
-msgstr "Linhas da Declaração"
+msgstr "Mixin da Declaração IES"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__line_ids
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 msgid "Statement Lines"
 msgstr "Linhas da Declaração"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__statement_type
@@ -1085,16 +1266,38 @@ msgid "Statement Type"
 msgstr "Tipo de Declaração"
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_action
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__statement_id
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__statement_type__equity_changes
+#: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_menu
+msgid "Statement of Changes in Equity"
+msgstr "Demonstração das Alterações no Capital Próprio"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_equity_changes_wizard
+msgid "Statement of Changes in Equity Wizard"
+msgstr "Assistente da Demonstração das Alterações no Capital Próprio"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_equity_changes_wizard_line
+msgid "Statement of Changes in Equity Wizard Lines"
+msgstr "Linhas do Assistente da Demonstração das Alterações no Capital Próprio"
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__proof_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__proof_data
 msgid "Submission Proof"
-msgstr ""
+msgstr "Comprovativo da Submissão"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__accept_alerts
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__accept_alerts
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__accept_alerts
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__accept_alerts
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__accept_alerts
@@ -1108,6 +1311,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__subst_fact_date
 msgid "Subst. Fact Date"
 msgstr "Data do Facto Orig. Subst."
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
+msgid "Tagged but reported in no column of the statement"
+msgstr "Com etiqueta mas sem coluna correspondente na demonstração"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_08
@@ -1126,12 +1335,13 @@ msgstr "Cód. Serviço Finanças"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__representative_user_password
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_password
 msgid "Taxpayer Password"
-msgstr ""
+msgstr "Senha do Contribuinte"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_04
@@ -1163,6 +1373,11 @@ msgid "Total (%s)"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col11
+msgid "Total do capital próprio"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_action
@@ -1185,6 +1400,7 @@ msgstr "Linhas do Assistente de Balancete"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__error
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__error
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__error
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error
@@ -1195,6 +1411,7 @@ msgstr "Verdadeiro caso haja um erro ou aviso na operação do dataport"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__type
@@ -1209,6 +1426,7 @@ msgstr "Ao abrigo Art. 119º - 1ºd?"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__representative_user_id
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__representative_user_id
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__representative_user_id
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_id
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_id
@@ -1220,6 +1438,7 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__validate
@@ -1229,6 +1448,7 @@ msgstr "Validar"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__values
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__values
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__values
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__values
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__values
@@ -1238,6 +1458,7 @@ msgstr "Valores"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__vat_legal_representative
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__vat_legal_representative
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__vat_legal_representative
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__vat_legal_representative
@@ -1247,6 +1468,7 @@ msgstr "NIF do Representante Legal"
 
 #. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_monthly_stamp_duty_statement_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_profit_loss_wizard_form
@@ -1256,6 +1478,7 @@ msgstr "Ver"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__warnings
@@ -1266,6 +1489,7 @@ msgstr "Avisos"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__validate
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__validate
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__validate
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__validate
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__validate
@@ -1283,12 +1507,13 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__ws_operation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__ws_operation
 msgid "Ws Operation"
-msgstr ""
+msgstr "Operação WS"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
@@ -1329,3 +1554,38 @@ msgid ""
 msgstr ""
 "[Q6-C01,C02] Selecione se esta é a primeira declaração para o período "
 "indicado ou uma declaração de substituição."
+
+#~ msgid ""
+#~ "%s equity journal items of the period carry no tag of the equity plan, or "
+#~ "their distribution does not cover the whole item. The statement is "
+#~ "incomplete until they are tagged."
+#~ msgstr ""
+#~ "%s itens de diário de capital próprio do período não têm etiqueta do "
+#~ "plano de capital próprio, ou a sua distribuição não cobre o item todo. A "
+#~ "demonstração está incompleta até serem etiquetados."
+
+#~ msgid "Equity Items To Tag"
+#~ msgstr "Itens de Capital Próprio a Etiquetar"
+
+#~ msgid ""
+#~ "The accounts %s are tagged but reported in no column of the statement. "
+#~ "Their amounts were left out."
+#~ msgstr ""
+#~ "As contas %s têm etiqueta mas não são apresentadas em nenhuma coluna da "
+#~ "demonstração. Os seus valores ficaram de fora."
+
+#~ msgid ""
+#~ "The closing position of the statement differs from the balance of the "
+#~ "equity accounts by %s. Tag the movements listed above, and check that no "
+#~ "equity account is outside the statement mapping."
+#~ msgstr ""
+#~ "A posição no fim do período apurada na demonstração difere do saldo das "
+#~ "contas de capital próprio em %s. Etiquete os movimentos indicados acima e "
+#~ "confirme que nenhuma conta de capital próprio está fora do mapeamento da "
+#~ "demonstração."
+
+#~ msgid "Unclassified Count"
+#~ msgstr "Itens por Etiquetar"
+
+#~ msgid "View Items To Tag"
+#~ msgstr "Ver Itens a Etiquetar"

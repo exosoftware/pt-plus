@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Analytic plan behind the "Demonstração das Alterações no Capital Próprio"
+    (IES Anexo A, quadro Q04-A; model of anexo 4 of Portaria 220/2015). Each
+    tag is a movement line of the statement: the tag code is the contract
+    between the entry and the statement, so it must not be changed. Tag names
+    reproduce the official Portuguese designations, with the wording of
+    Declaração de Retificação n.º 41-B/2015 for A00212 and A00213.
+-->
+<odoo>
+    <data noupdate="1">
+        <record id="l10n_pt_equity_analytic_plan" model="account.analytic.plan">
+            <field name="name">Capital Próprio - DACP</field>
+            <field name="default_applicability">unavailable</field>
+        </record>
+
+        <!-- Alterações no período -->
+        <record id="l10n_pt_equity_tag_a1" model="account.analytic.account">
+            <field
+                name="name"
+            >Primeira adoção de novo referencial contabilístico</field>
+            <field name="code">A1</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a2" model="account.analytic.account">
+            <field name="name">Alterações de políticas contabilísticas</field>
+            <field name="code">A2</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a3" model="account.analytic.account">
+            <field
+                name="name"
+            >Diferenças de conversão de demonstrações financeiras</field>
+            <field name="code">A3</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a4" model="account.analytic.account">
+            <field name="name">Realização do excedente de revalorização</field>
+            <field name="code">A4</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a5" model="account.analytic.account">
+            <field name="name">Excedentes de revalorização</field>
+            <field name="code">A5</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a6" model="account.analytic.account">
+            <field name="name">Ajustamentos por impostos diferidos</field>
+            <field name="code">A6</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_a7" model="account.analytic.account">
+            <field name="name">Outras alterações reconhecidas no capital próprio</field>
+            <field name="code">A7</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+
+        <!-- Operações com detentores de capital no período -->
+        <record id="l10n_pt_equity_tag_d1" model="account.analytic.account">
+            <field name="name">Subscrições de capital</field>
+            <field name="code">D1</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_d2" model="account.analytic.account">
+            <field name="name">Subscrições de prémios de emissão</field>
+            <field name="code">D2</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_d3" model="account.analytic.account">
+            <field name="name">Distribuições</field>
+            <field name="code">D3</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_d4" model="account.analytic.account">
+            <field name="name">Entradas para cobertura de perdas</field>
+            <field name="code">D4</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+        <record id="l10n_pt_equity_tag_d5" model="account.analytic.account">
+            <field name="name">Outras operações</field>
+            <field name="code">D5</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+
+        <!-- Escape valve: internal moves between equity accounts still have to
+         meet the mandatory applicability, but feed no statement line -->
+        <record id="l10n_pt_equity_tag_x1" model="account.analytic.account">
+            <field name="name">Movimentos internos sem impacto na DACP</field>
+            <field name="code">X1</field>
+            <field name="plan_id" ref="l10n_pt_equity_analytic_plan" />
+            <field name="company_id" eval="False" />
+        </record>
+    </data>
+
+    <function
+        model="account.analytic.plan"
+        name="_l10n_pt_setup_equity_applicabilities"
+    />
+</odoo>

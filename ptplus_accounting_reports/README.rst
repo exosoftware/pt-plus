@@ -7,6 +7,7 @@ Add legally compliant Portuguese financial and tax statements, such as:
 * Trial Balance
 * Balance Sheet
 * Profit & Loss
+* Statement of Changes in Equity
 * VAT Periodic Statement
 * VAT Recapitulative Statement
 * VAT Annual Statement
@@ -33,6 +34,20 @@ Available soon.
 
 Changelog
 =========
+
+1.3.0 (2026-09-17)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New statement: Demonstração das Alterações no Capital Próprio, the quadro
+  04-A of the IES. It is printed on the official model, with the eleven
+  columns of equity and the position at the beginning and at the end of the
+  period, and can also be exported to Excel.
+- The changes of the period come from the equity tags put on the entries, so
+  each movement is reported on the line of its nature. Accounts that carry a
+  tag but are outside the statement mapping are listed on screen instead of
+  going unreported.
 
 1.2.1 (2026-09-17)
 ~~~~~~~~~~~~~~~~~~~

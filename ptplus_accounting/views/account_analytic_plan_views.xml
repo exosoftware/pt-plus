@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- The equity plan is not analytic accounting of the company: it is how
+         the statement of changes in equity reads its movement lines, so it is
+         kept out of the analytic plans the user configures. It stays offered
+         on the journal items of the class 5 accounts. -->
+    <record id="analytic.account_analytic_plan_action" model="ir.actions.act_window">
+        <field
+            name="domain"
+            eval="[
+                ('parent_id', '=', False),
+                ('id', '!=', ref('ptplus_accounting.l10n_pt_equity_analytic_plan')),
+            ]"
+        />
+    </record>
+</odoo>
