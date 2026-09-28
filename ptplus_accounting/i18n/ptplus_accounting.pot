@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 09:38+0000\n"
+"PO-Revision-Date: 2026-09-28 09:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -162,6 +164,16 @@ msgid "Adjustment"
 msgstr ""
 
 #. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a6
+msgid "Ajustamentos por impostos diferidos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a2
+msgid "Alterações de políticas contabilísticas"
+msgstr ""
+
+#. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
 msgid "Archived"
 msgstr ""
@@ -293,21 +305,6 @@ msgid "Confirm"
 msgstr ""
 
 #. module: ptplus_accounting
-#: model:ir.model,name:ptplus_accounting.model_res_country
-msgid "Country"
-msgstr ""
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__code_alpha3
-msgid "Country Code (3-letter)"
-msgstr ""
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__code_numeric
-msgid "Country Code (numeric)"
-msgstr ""
-
-#. module: ptplus_accounting
 #: model:ir.model,name:ptplus_accounting.model_account_automatic_entry_wizard
 msgid "Create Automatic Entries"
 msgstr ""
@@ -424,6 +421,11 @@ msgid "Devedor antes de transferência para inventários"
 msgstr ""
 
 #. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a3
+msgid "Diferenças de conversão de demonstrações financeiras"
+msgstr ""
+
+#. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_automatic_entry_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__display_name
@@ -442,8 +444,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_res_company__display_name
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__display_name
 msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d3
+msgid "Distribuições"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -459,6 +465,37 @@ msgstr ""
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__date_to
 msgid "End Date"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d4
+msgid "Entradas para cobertura de perdas"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+msgid ""
+"Entry %(move)s cannot be posted: the items on the accounts %(accounts)s need"
+" the nature of the change filled in, so that the Statement of Changes in "
+"Equity (IES quadro 04-A) reports them. Split the amount over one line per "
+"nature when more than one applies."
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_move_line_filter_pt
+msgid "Equity Change"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_required
+msgid "Equity Change Required"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a5
+msgid "Excedentes de revalorização"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -501,18 +538,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_res_company__id
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__id
 msgid "ID"
-msgstr ""
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,help:ptplus_accounting.field_res_country__code_alpha3
-msgid "ISO 3166-1 alpha-3 (three-letter) code for the country"
-msgstr ""
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,help:ptplus_accounting.field_res_country__code_numeric
-msgid "ISO 3166-1 numeric code for the country"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -672,10 +698,22 @@ msgid "Moves created by the operation"
 msgstr ""
 
 #. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__x1
+msgid "Movimentos internos sem impacto na DACP"
+msgstr ""
+
+#. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__name
 msgid "Name"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+msgid ""
+"Nature of the change, which tells the Statement of Changes in Equity (IES "
+"quadro 04-A) on which line to report the item"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -697,6 +735,16 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__reference__o
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
 msgid "Other References"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a7
+msgid "Outras alterações reconhecidas no capital próprio"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d5
+msgid "Outras operações"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -737,6 +785,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_reversal__l10n_pt_vat_adjustment_requests_policy
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__requests_policy
 msgid "Previous Requests Policy"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a1
+msgid "Primeira adoção de novo referencial contabilístico"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a4
+msgid "Realização do excedente de revalorização"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -823,6 +881,16 @@ msgstr ""
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__state
 msgid "Status"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d1
+msgid "Subscrições de capital"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d2
+msgid "Subscrições de prémios de emissão"
 msgstr ""
 
 #. module: ptplus_accounting

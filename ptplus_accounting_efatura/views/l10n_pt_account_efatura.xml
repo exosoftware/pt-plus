@@ -76,7 +76,7 @@
                         </group>
                         <group>
                             <field name="status" />
-                            <field name="self_billing" />
+                            <field name="self_billing" invisible="not self_billing" />
                             <field name="cash_vat_scheme" />
                             <field name="status_mismatch" invisible="1" />
                             <field name='vat_amount' />

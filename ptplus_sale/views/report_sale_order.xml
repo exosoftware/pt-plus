@@ -6,7 +6,9 @@
         id="report_saleorder_document"
         inherit_id="sale.report_saleorder_document"
     >
+        <!-- Fiscal features (QR code, ATCUD) and certification text -->
         <xpath expr="//t[@t-set='address']" position="after">
+            <t t-if="doc.source_billing" t-set="pt_report" t-value="True" />
             <t
                 t-if="doc.source_billing"
                 t-set="pt_certification_text"

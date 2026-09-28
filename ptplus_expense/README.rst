@@ -27,6 +27,29 @@ Available soon.
 Changelog
 =========
 
+1.5.0 (2026-09-10)
+~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Expense Reimbursement setting is now shown to every Portuguese company,
+  whether or not it issues its invoices with Portuguese Invoicing turned on.
+  Until now it only appeared with Portuguese Invoicing active.
+
+1.4.1 (2026-09-10)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Reconciling a payment is no longer slow on companies with a large accounting.
+  The expense state follows the settlement of the debt transfer entry, so every
+  reconciliation had the system look through all the journal entries of the
+  database to find the transfers concerned. On a company with millions of
+  entries that search took around ten seconds and ran several times per
+  reconciliation, which is what made assigning an outstanding payment or
+  undoing a bank statement reconciliation take up to a minute. The search is
+  now immediate, whether or not the company uses expense reimbursements.
+
 1.4.0 (2026-08-04)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_move_form_fsp" model="ir.ui.view">
+        <field name="name">account.move.form.fsp</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account_edi.view_move_form_inherit" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@id='edi_documents']//field[@name='state']"
+                position="after"
+            >
+                <field
+                    name="l10n_pt_fsp_resend_attempts"
+                    optional="hide"
+                    groups="ptplus_fsp.group_fsp_manager"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

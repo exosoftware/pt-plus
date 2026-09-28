@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_cashflow_backfill_wizard_document_line_list" model="ir.ui.view">
+        <field name="name">l10n_pt.cashflow.backfill.wizard.document.line.list</field>
+        <field name="model">l10n_pt.cashflow.backfill.wizard.document.line</field>
+        <field name="arch" type="xml">
+            <list
+                string="Classify Cash Flows In Detail"
+                js_class="l10n_pt_cashflow_document_lines"
+                editable="bottom"
+                multi_edit="1"
+                expand="1"
+                create="0"
+                delete="0"
+                decoration-warning="manual"
+            >
+                <header>
+                    <button
+                        name="action_accept_suggestions"
+                        string="Accept Suggestions"
+                        type="object"
+                        class="btn-primary"
+                        display="always"
+                    />
+                </header>
+                <field name="wizard_id" column_invisible="1" />
+                <field name="manual" column_invisible="1" />
+                <field name="movement_line_id" readonly="1" optional="hide" />
+                <field name="document_id" readonly="1" />
+                <field name="account_id" readonly="1" optional="show" />
+                <field name="product_id" readonly="1" optional="show" />
+                <field name="name" readonly="1" />
+                <field name="quantity" readonly="1" optional="hide" />
+                <field name="currency_id" column_invisible="1" />
+                <field name="price_total" readonly="1" optional="hide" />
+                <field name="company_currency_id" column_invisible="1" />
+                <field name="amount" readonly="1" sum="Total" />
+                <field
+                    name="suggested_category_id"
+                    widget="l10n_pt_cashflow_category"
+                    options="{'label_field': 'suggested_category_code', 'color_field': 'suggested_category_color'}"
+                    readonly="1"
+                    optional="show"
+                />
+                <button
+                    name="action_accept_suggestion"
+                    type="object"
+                    icon="fa-arrow-right"
+                    title="Accept the suggestion"
+                    invisible="not suggested_category_id or category_id == suggested_category_id"
+                />
+                <field
+                    name="category_id"
+                    widget="l10n_pt_cashflow_category"
+                    options="{'no_create': True, 'label_field': 'category_code', 'color_field': 'category_color'}"
+                    placeholder="To classify"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_cashflow_backfill_wizard_document_line_search"
+        model="ir.ui.view"
+    >
+        <field name="name">l10n_pt.cashflow.backfill.wizard.document.line.search</field>
+        <field name="model">l10n_pt.cashflow.backfill.wizard.document.line</field>
+        <field name="arch" type="xml">
+            <search string="Document Lines">
+                <field name="movement_line_id" />
+                <field name="document_id" />
+                <field name="account_id" />
+                <field name="name" />
+                <field name="category_id" />
+                <filter
+                    string="To Classify"
+                    name="to_classify"
+                    domain="[('category_id', '=', False)]"
+                />
+                <filter
+                    string="Changed Manually"
+                    name="manual"
+                    domain="[('manual', '=', True)]"
+                />
+                <group>
+                    <filter
+                        string="Movement"
+                        name="group_movement"
+                        context="{'group_by': 'movement_line_id'}"
+                    />
+                    <filter
+                        string="Document"
+                        name="group_document"
+                        context="{'group_by': 'document_id'}"
+                    />
+                    <filter
+                        string="Account"
+                        name="group_account"
+                        context="{'group_by': 'account_id'}"
+                    />
+                    <filter
+                        string="Cash Flow Category"
+                        name="group_category"
+                        context="{'group_by': 'category_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

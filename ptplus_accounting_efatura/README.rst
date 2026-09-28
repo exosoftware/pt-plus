@@ -79,6 +79,78 @@ Available soon.
 Changelog
 =========
 
+5.18.1 (2026-09-10)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The "Self-Billing Documents" option of the E-Fatura settings now shows its
+  name, and the choice set on it is no longer cut off halfway.
+- The Self-Billing box on an E-Fatura document is now only shown on the
+  documents that are self-billed. On every other document, which is nearly all
+  of them, it was an unticked box that said nothing.
+
+5.18.0 (2026-09-10)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- A new "Self-Billing Documents" option, in the E-Fatura section of the
+  Accounting settings, sets what the synchronization does with the documents
+  you issue on behalf of your vendors under a self-billing agreement, which the
+  Tax Authority reports back to you. By default they keep being collected and
+  linked to the document issued for them, as until now. Set to leave them out,
+  they are no longer collected at all, and the result of each run says how many
+  were left out: they were issued in Odoo, so there is nothing to check against
+  the Tax Authority.
+- The E-Fatura settings (journal, tax mappings, automatic synchronization, QR
+  code scan) are now shown to every Portuguese company, whether or not it
+  issues its invoices with Portuguese Invoicing turned on. Until now they only
+  appeared with Portuguese Invoicing active.
+
+5.17.1 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Dragging a row of the E-Fatura tax mapping table to reorder it is no longer
+  slow, however many mappings and documents the company has. Every change to
+  the table used to recheck the tax mapping of all the company's e-fatura
+  documents, and reordering does not change which of them are missing one, so
+  on a company with a few thousand documents the reorder took minutes and lost
+  the connection. Editing, adding or removing a mapping still rechecks them,
+  because there the answer can change.
+- That recheck is itself much faster now: the mapping table is read once for
+  the whole company instead of once per e-fatura line. Editing a mapping on a
+  company with thousands of documents took over ten seconds and is now
+  immediate, and the same gain applies to importing and synchronizing.
+
+5.17.0 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The summary shown at the end of an e-Fatura import or synchronization now
+  reports the documents that matched a vendor bill already posted. Those
+  documents counted as neither created nor updated, so an import that brought
+  in forty-six documents and created three bills read as "0 updated", with no
+  sign of what had become of the other forty-three.
+
+5.16.1 (2026-09-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Reading the QR code of an invoice of several pages no longer runs out of time
+  on a document it is perfectly able to read. The pages of an invoice repeat
+  the same letterhead or background image, and each repetition was being read
+  again from scratch: a six-page telecommunications invoice spent all the time
+  it was given on those repeats and came back as not read in time. The same
+  invoice is now read in three seconds.
+- The time a document is given before the search is cut off went from twelve to
+  forty-five seconds, so a genuinely heavy document is read instead of being
+  handed back to you.
+
 5.16.0 (2026-09-02)
 ~~~~~~~~~~~~~~~~~~~
 

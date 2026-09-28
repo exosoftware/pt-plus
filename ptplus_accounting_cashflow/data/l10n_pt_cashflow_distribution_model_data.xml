@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Default distribution rules mapping the SNC base chart accounts (l10n_pt
+    template plus the PT+ additions) to the cash flow categories, from the
+    account/rubric relationship model provided and validated by the
+    accounting department.
+    Rules are shared across companies and scoped per chart of accounts (SNC
+    Base or SNC Microentidades; rules whose mapping coincides in both charts
+    carry no chart and apply to any). The sequences order the sets (shared
+    100, SNC Base 110, SNC Microentidades 120) and sit above the default
+    sequence 10 so that user-created rules win.
+-->
+<odoo noupdate="1">
+    <!-- Rules shared by both charts -->
+    <record
+        id="cashflow_distribution_model_ppes"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">231,631,632,634</field>
+        <field name="category_id" ref="cashflow_category_ppes" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pirc"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">2411,2412,2413,2414,2417</field>
+        <field name="category_id" ref="cashflow_category_pirc" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rirc"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">2418</field>
+        <field name="category_id" ref="cashflow_category_rirc" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rdiv"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">792</field>
+        <field name="category_id" ref="cashflow_category_rdiv" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pjur"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">69</field>
+        <field name="category_id" ref="cashflow_category_pjur" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rcap_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">51,52,53,54,594,599</field>
+        <field name="category_id" ref="cashflow_category_rcap" />
+        <field name="direction">inbound</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pcap_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">51,52,53,54,594,599</field>
+        <field name="category_id" ref="cashflow_category_pcap" />
+        <field name="direction">outbound</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_dcam"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">6863,6887,7861,7887,793</field>
+        <field name="category_id" ref="cashflow_category_dcam" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <!-- The other leg of a movement between cash and bank accounts (also
+         the inter-banks transfer account, coded under 12 in the PT+ charts) -->
+    <record
+        id="cashflow_distribution_model_trin"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">100</field>
+        <field name="account_prefix">11,12</field>
+        <field name="category_id" ref="cashflow_category_trin" />
+        <field name="direction">any</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Base chart - operating activities -->
+    <record
+        id="cashflow_distribution_model_rcli"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >2111,2112,2113,2114,2115,2116,212,217,218,276,682,683,711,712,7131,714,716,717,718,721,722,725,726,728</field>
+        <field name="category_id" ref="cashflow_category_rcli" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pfor"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">221,222,225,228,31,391,392,393,61</field>
+        <field name="category_id" ref="cashflow_category_pfor" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rout"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >13,232,238,2431,2432,2437,2438,263,27811,27821,7132,781,782,783,784,7885,7888,798</field>
+        <field name="category_id" ref="cashflow_category_rout" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pout"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >237,242,2433,2434,2435,2436,2439,244,245,246,248,275,27812,27822,62,633,635,636,637,638,681,6882,6883,6884,6885,6888</field>
+        <field name="category_id" ref="cashflow_category_pout" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Base chart - investing activities -->
+    <record
+        id="cashflow_distribution_model_paft"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">271</field>
+        <field name="category_id" ref="cashflow_category_paft" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_paft_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >421,422,431,432,433,434,435,436,437,453,4553,4613</field>
+        <field name="category_id" ref="cashflow_category_paft" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_raft_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >421,422,431,432,433,434,435,436,437,453,4553,4613</field>
+        <field name="category_id" ref="cashflow_category_raft" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pati_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">441,442,443,444,446,454,4554,4614</field>
+        <field name="category_id" ref="cashflow_category_pati" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rati_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">441,442,443,444,446,454,4554,4614</field>
+        <field name="category_id" ref="cashflow_category_rati" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pifi"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">1411,1421,1431,685,6861,6862,6868,6886</field>
+        <field name="category_id" ref="cashflow_category_pifi" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pifi_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >4111,4112,4121,4122,4131,4132,4141,4143,415,451,4551,4611</field>
+        <field name="category_id" ref="cashflow_category_pifi" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rifi"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">1412,1422,1432,785,7862,7868,7884</field>
+        <field name="category_id" ref="cashflow_category_rifi" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rifi_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field
+            name="account_prefix"
+        >4111,4112,4121,4122,4131,4132,4141,4143,415,451,4551,4611</field>
+        <field name="category_id" ref="cashflow_category_rifi" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_poat"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">687</field>
+        <field name="category_id" ref="cashflow_category_poat" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_poat_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">426,452,4552,4612,4615,462</field>
+        <field name="category_id" ref="cashflow_category_poat" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_roat"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">787</field>
+        <field name="category_id" ref="cashflow_category_roat" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_roat_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">426,452,4552,4612,4615,462</field>
+        <field name="category_id" ref="cashflow_category_roat" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rjur"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">791</field>
+        <field name="category_id" ref="cashflow_category_rjur" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Base chart - financing activities -->
+    <record
+        id="cashflow_distribution_model_rfin_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">2511,2512,2513,2521</field>
+        <field name="category_id" ref="cashflow_category_rfin" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_pfin_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">2511,2512,2513,2521</field>
+        <field name="category_id" ref="cashflow_category_pfin" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_rcap"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">261</field>
+        <field name="category_id" ref="cashflow_category_rcap" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_roof"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">75</field>
+        <field name="category_id" ref="cashflow_category_roof" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_roof_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">253,254,258,266,268,4113,4123,4133,4142</field>
+        <field name="category_id" ref="cashflow_category_roof" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_poof_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">110</field>
+        <field name="account_prefix">253,254,258,266,268,4113,4123,4133,4142</field>
+        <field name="category_id" ref="cashflow_category_poof" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_base</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Microentidades chart - operating activities -->
+    <record
+        id="cashflow_distribution_model_micro_rcli"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field
+            name="account_prefix"
+        >211,212,213,217,218,276,682,711,716,721,722,725,726,728</field>
+        <field name="category_id" ref="cashflow_category_rcli" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_pfor"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field
+            name="account_prefix"
+        >221,222,225,228,311,312,3171,3172,3181,3182,391,392,611</field>
+        <field name="category_id" ref="cashflow_category_pfor" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_rout"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field
+            name="account_prefix"
+        >13,232,238,2431,2432,2437,2438,263,27811,27821,782,783,784,7885,7888,798</field>
+        <field name="category_id" ref="cashflow_category_rout" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_pout"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field
+            name="account_prefix"
+        >242,2433,2434,2435,2436,2439,244,245,246,248,2781,27822,621,62211,6222,6223,6224,6225,6226,6227,6228,623,624,625,62611,6262,6263,6264,6265,6266,6267,6268,635,636,637,638,681,6882,6883</field>
+        <field name="category_id" ref="cashflow_category_pout" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Microentidades chart - investing activities -->
+    <record
+        id="cashflow_distribution_model_micro_paft_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">271,431,432,433,434,435,436,437,453</field>
+        <field name="category_id" ref="cashflow_category_paft" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_raft_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">271,431,432,433,434,435,436,437,453</field>
+        <field name="category_id" ref="cashflow_category_raft" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_pati_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">441,442,443,444,446,454,4551,4553,4554</field>
+        <field name="category_id" ref="cashflow_category_pati" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_rati_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">441,442,443,444,446,454,4551,4553,4554</field>
+        <field name="category_id" ref="cashflow_category_rati" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_pifi_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">1411,1421,1431,4141,4143,451,6861,6862,6868</field>
+        <field name="category_id" ref="cashflow_category_pifi" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_rifi_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">1411,1421,1431,4141,4143,451,6861,6862,6868</field>
+        <field name="category_id" ref="cashflow_category_rifi" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_rifi"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">1412,1422,1432,7862,7868</field>
+        <field name="category_id" ref="cashflow_category_rifi" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_poat_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">6871,6872,6873,6878</field>
+        <field name="category_id" ref="cashflow_category_poat" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_roat_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">6871,6872,6873,6878</field>
+        <field name="category_id" ref="cashflow_category_roat" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_roat"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">7871,7872,7878</field>
+        <field name="category_id" ref="cashflow_category_roat" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_rjur"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">7911,7915,7918</field>
+        <field name="category_id" ref="cashflow_category_rjur" />
+        <field name="direction">any</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+    <!-- SNC Microentidades chart - financing activities -->
+    <record
+        id="cashflow_distribution_model_micro_rfin_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">2511,2512,2513</field>
+        <field name="category_id" ref="cashflow_category_rfin" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_pfin_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">2511,2512,2513</field>
+        <field name="category_id" ref="cashflow_category_pfin" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_roof_in"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">268,4142,75</field>
+        <field name="category_id" ref="cashflow_category_roof" />
+        <field name="direction">inbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+    <record
+        id="cashflow_distribution_model_micro_poof_out"
+        model="l10n_pt.cashflow.distribution.model"
+    >
+        <field name="sequence">120</field>
+        <field name="account_prefix">268,4142,75</field>
+        <field name="category_id" ref="cashflow_category_poof" />
+        <field name="direction">outbound</field>
+        <field name="chart_template">pt_micro</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

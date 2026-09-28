@@ -6,6 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-28 09:38+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_accounting/pt/>\n"
@@ -140,8 +141,8 @@ msgid ""
 "Account receiving the counterpart of the credits made to the source "
 "accounts, i.e. the destination of a net debit balance."
 msgstr ""
-"Conta que recebe a contrapartida dos créditos efetuados às contas de "
-"origem, ou seja, o destino de um saldo devedor."
+"Conta que recebe a contrapartida dos créditos efetuados às contas de origem, "
+"ou seja, o destino de um saldo devedor."
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer_template_line__debit_account_id
@@ -149,8 +150,8 @@ msgid ""
 "Account receiving the counterpart of the debits made to the source accounts, "
 "i.e. the destination of a net credit balance."
 msgstr ""
-"Conta que recebe a contrapartida dos débitos efetuados às contas de "
-"origem, ou seja, o destino de um saldo credor."
+"Conta que recebe a contrapartida dos débitos efetuados às contas de origem, "
+"ou seja, o destino de um saldo credor."
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__active
@@ -169,6 +170,16 @@ msgstr "Assistente de Adição de Notas de Débito"
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__j
 msgid "Adjustment"
 msgstr "Ajustes"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a6
+msgid "Ajustamentos por impostos diferidos"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a2
+msgid "Alterações de políticas contabilísticas"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
@@ -305,21 +316,6 @@ msgid "Confirm"
 msgstr "Confirmar"
 
 #. module: ptplus_accounting
-#: model:ir.model,name:ptplus_accounting.model_res_country
-msgid "Country"
-msgstr "País"
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__code_alpha3
-msgid "Country Code (3-letter)"
-msgstr "Código do País (3 letras)"
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__code_numeric
-msgid "Country Code (numeric)"
-msgstr "Código do País (numérico)"
-
-#. module: ptplus_accounting
 #: model:ir.model,name:ptplus_accounting.model_account_automatic_entry_wizard
 msgid "Create Automatic Entries"
 msgstr "Criar Movimentos Automáticos"
@@ -438,6 +434,11 @@ msgid "Devedor antes de transferência para inventários"
 msgstr "Devedor antes de transferência para inventários"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a3
+msgid "Diferenças de conversão de demonstrações financeiras"
+msgstr ""
+
+#. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_automatic_entry_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__display_name
@@ -456,9 +457,13 @@ msgstr "Devedor antes de transferência para inventários"
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_res_company__display_name
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__display_name
 msgid "Display Name"
 msgstr "Nome a Apresentar"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d3
+msgid "Distribuições"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__done
@@ -474,6 +479,41 @@ msgstr "Rascunho"
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__date_to
 msgid "End Date"
 msgstr "Data Final"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d4
+msgid "Entradas para cobertura de perdas"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_move.py:0
+msgid ""
+"Entry %(move)s cannot be posted: the items on the accounts %(accounts)s need "
+"the nature of the change filled in, so that the Statement of Changes in "
+"Equity (IES quadro 04-A) reports them. Split the amount over one line per "
+"nature when more than one applies."
+msgstr ""
+"O lançamento %(move)s não pode ser lançado: os itens das contas %(accounts)s "
+"precisam da natureza da alteração preenchida, para que a Demonstração das "
+"Alterações no Capital Próprio (quadro 04-A da IES) os apresente. Reparta o "
+"valor por uma linha para cada natureza quando se aplicar mais do que uma."
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_move_line_filter_pt
+msgid "Equity Change"
+msgstr "Alteração no Capital Próprio"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_required
+msgid "Equity Change Required"
+msgstr "Alteração no Capital Próprio Obrigatória"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a5
+msgid "Excedentes de revalorização"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
@@ -515,19 +555,8 @@ msgstr "Regularizações do Período"
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy_setup_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_res_company__id
-#: model:ir.model.fields,field_description:ptplus_accounting.field_res_country__id
 msgid "ID"
 msgstr "ID"
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,help:ptplus_accounting.field_res_country__code_alpha3
-msgid "ISO 3166-1 alpha-3 (three-letter) code for the country"
-msgstr "Código ISO 3166-1 alfa-3 (três letras) do país"
-
-#. module: ptplus_accounting
-#: model:ir.model.fields,help:ptplus_accounting.field_res_country__code_numeric
-msgid "ISO 3166-1 numeric code for the country"
-msgstr "Código numérico ISO 3166-1 do país"
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,help:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__vat_payable
@@ -700,11 +729,25 @@ msgid "Moves created by the operation"
 msgstr "Movimentos criados pela operação"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__x1
+msgid "Movimentos internos sem impacto na DACP"
+msgstr ""
+
+#. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_asset_legal_rate__name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_taxonomy__name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+msgid ""
+"Nature of the change, which tells the Statement of Changes in Equity (IES "
+"quadro 04-A) on which line to report the item"
+msgstr ""
+"Natureza da alteração, que indica à Demonstração das Alterações no Capital "
+"Próprio (quadro 04-A da IES) em que linha apresentar o item"
 
 #. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_move_line_filter_pt
@@ -726,6 +769,16 @@ msgstr "Opcional"
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.account_taxonomy_view_search
 msgid "Other References"
 msgstr "Outros Referenciais"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a7
+msgid "Outras alterações reconhecidas no capital próprio"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d5
+msgid "Outras operações"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__a
@@ -766,6 +819,16 @@ msgstr "Prefixo"
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__requests_policy
 msgid "Previous Requests Policy"
 msgstr "Política de Pedidos Prévios"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a1
+msgid "Primeira adoção de novo referencial contabilístico"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a4
+msgid "Realização do excedente de revalorização"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_journal__l10n_pt_transaction_type__n
@@ -856,6 +919,16 @@ msgstr "Estado"
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__state
 msgid "Status"
 msgstr "Estado"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d1
+msgid "Subscrições de capital"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d2
+msgid "Subscrições de prémios de emissão"
+msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__l10n_pt_taxonomy_id
@@ -1052,3 +1125,18 @@ msgstr "concluído"
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy_setup_wizard__state__select
 msgid "select"
 msgstr "selecionar"
+
+#~ msgid "Country"
+#~ msgstr "País"
+
+#~ msgid "Country Code (3-letter)"
+#~ msgstr "Código do País (3 letras)"
+
+#~ msgid "Country Code (numeric)"
+#~ msgstr "Código do País (numérico)"
+
+#~ msgid "ISO 3166-1 alpha-3 (three-letter) code for the country"
+#~ msgstr "Código ISO 3166-1 alfa-3 (três letras) do país"
+
+#~ msgid "ISO 3166-1 numeric code for the country"
+#~ msgstr "Código numérico ISO 3166-1 do país"

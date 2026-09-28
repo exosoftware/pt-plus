@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t
+        t-name="ptplus_accounting_cashflow.DocumentLinesGroupRow"
+        t-inherit="web.ListRenderer.GroupRow"
+        t-inherit-mode="primary"
+    >
+        <!-- Right after the "(count)" text, before the group buttons -->
+        <xpath expr="//div[contains(@class, 'o_group_buttons')]" position="before">
+            <t t-set="distribution" t-value="movementDistribution(group)" />
+            <span
+                t-if="distribution"
+                class="o_l10n_pt_cashflow_group_distribution d-inline-flex align-items-center ms-3 fw-normal"
+            >
+                <TagsList tags="distribution.current" />
+                <t t-if="distribution.pending">
+                    <i
+                        class="fa fa-arrow-right mx-2 text-muted"
+                        role="img"
+                        aria-label="To apply"
+                        title="To apply"
+                    />
+                    <TagsList tags="distribution.pending" />
+                </t>
+            </span>
+        </xpath>
+    </t>
+</templates>

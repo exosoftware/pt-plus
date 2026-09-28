@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_pos_restaurant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Exo PT+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-02 16:31+0000\n"
+"PO-Revision-Date: 2024-07-02 16:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,help:ptplus_pos_restaurant.field_pos_order__atcud
+msgid ""
+"A unique code that identifies a particular fiscal document in the Tax "
+"Authority database."
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,help:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_validation_code
+msgid ""
+"A unique code that is returned by the Tax Authority when the fiscal doc. "
+"series is communicated."
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__atcud
+msgid "ATCUD"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-javascript
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/components/order_receipt/order_receipt.xml:0
+#, python-format
+msgid "ATCUD:"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-python
+#: code:addons/ptplus_pos_restaurant/models/res_company.py:0
+#, python-format
+msgid "Bill"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_bill_atcud
+msgid "Bill ATCUD"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_bill_certification_text
+msgid "Bill Certi. Text"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_fiscal_doc_type_id
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_res_config_settings__pos_l10n_pt_bill_fiscal_doc_type_id
+msgid "Bill Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_bill_doc_name
+msgid "Bill Document Name"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_bill_unique_id
+msgid "Bill No."
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_padding
+msgid "Bill Padding"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_prefix
+msgid "Bill Prefix"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_bill_qr_code
+msgid "Bill QR Code"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-python
+#: code:addons/ptplus_pos_restaurant/models/pos_config.py:0
+#, python-format
+msgid "Can't change a fiscal document type while there's an open session"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model,name:ptplus_pos_restaurant.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model,name:ptplus_pos_restaurant.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__hash
+msgid "Digital signature"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__system_entry_date
+msgid "Document Validation Timestamp"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model,name:ptplus_pos_restaurant.model_dataport_export_saft
+msgid "Export SAF-T PT Dataport"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__fiscal_document_status
+msgid "Fiscal Doc. Status"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__fiscal_document_type_id
+msgid "Fiscal Doc. Type"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__integration_doc_serial
+msgid "Integrated Document Serial"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__l10n_pt_is_bill
+msgid "Is Bill"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_last_hash
+msgid "Last Bill Hash"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__last_state_update
+msgid "Last State Change"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__last_state_uid
+msgid "Last state changed by"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_next
+msgid "Next Bill Number"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-javascript
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#, python-format
+msgid "Order Deletion Unsuccessful"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-javascript
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/models/pos_store.js:0
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/screens/product_screen/product_screen.js:0
+#, python-format
+msgid "Order Modification Unsuccessful"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model,name:ptplus_pos_restaurant.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model,name:ptplus_pos_restaurant.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__hash_control
+msgid "Private key version"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,help:ptplus_pos_restaurant.field_pos_order__integration_doc_serial
+msgid ""
+"Serial Number of the document being integrated. Insert the incremental "
+"numerical part only (including left side zeros)"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_order__source_billing
+msgid "Source Method"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-javascript
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.js:0
+#, python-format
+msgid ""
+"The deletion operation could not be completed because the bill for this "
+"order has already been printed."
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,help:ptplus_pos_restaurant.field_pos_order__source_billing
+msgid ""
+"The method (or source) used to insert the document. If you \n"
+"don't understand the underlying concepts, you should keep \n"
+"the default value (Application). Possible values are:\n"
+"* Application: The document was created in this system.\n"
+"* Integration: The document was issued in another application \n"
+"and imported into this system.\n"
+"* Manual/Restore: The document was created in this system \n"
+"but was somehow lost and has been restored either from \n"
+"paper or digital sources.\n"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-javascript
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/models/pos_store.js:0
+#: code:addons/ptplus_pos_restaurant/static/src/overrides/screens/product_screen/product_screen.js:0
+#, python-format
+msgid ""
+"The modification operation could not be completed because the bill for this "
+"order has already been printed. Please create a new order to make changes."
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:ptplus_pos_restaurant.res_config_settings_view_form
+msgid "The portuguese fiscal document to apply on this POS bills"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,help:ptplus_pos_restaurant.field_pos_order__fiscal_document_type_id
+msgid ""
+"The type of fiscal document associated with a record. As a general "
+"principle, a fiscal document is a document that will be included in the "
+"company's SAF-T file"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#: model:ir.model.fields,field_description:ptplus_pos_restaurant.field_pos_config__l10n_pt_bill_validation_code
+msgid "Validation Code on Bill"
+msgstr ""
+
+#. module: ptplus_pos_restaurant
+#. odoo-python
+#: code:addons/ptplus_pos_restaurant/models/pos_config.py:0
+#, python-format
+msgid ""
+"When PT Invoicing is active and Is a Bar/Restaurant, you must define the "
+"document type for Bills."
+msgstr ""

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="cron_fsp_refresh_tokens" model="ir.cron">
+        <field name="name">FSP: Refresh Tokens</field>
+        <field name="model_id" ref="base.model_res_company" />
+        <field name="state">code</field>
+        <field name="code">model._cron_fsp_refresh_tokens()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="cron_fsp_poll_resend_queue" model="ir.cron">
+        <field name="name">FSP: Poll Resend Queue</field>
+        <field name="model_id" ref="base.model_res_company" />
+        <field name="state">code</field>
+        <field name="code">model._cron_fsp_poll_resend_queue()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="cron_fsp_sync_invoice_states" model="ir.cron">
+        <field name="name">FSP: Sync Invoice States</field>
+        <field name="model_id" ref="base.model_res_company" />
+        <field name="state">code</field>
+        <field name="code">model._cron_fsp_sync_invoice_states()</field>
+        <field name="interval_number">6</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="True" />
+    </record>
+</odoo>

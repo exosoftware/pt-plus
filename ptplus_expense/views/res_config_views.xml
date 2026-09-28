@@ -11,7 +11,7 @@
                     company_dependent="1"
                     string="Expense Reimbursement"
                     help="Liability account holding the debt to employees for expenses they paid out of pocket"
-                    invisible="not pt_invoicing"
+                    invisible="country_code != 'PT'"
                 >
                     <div class="row">
                         <label

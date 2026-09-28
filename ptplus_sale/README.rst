@@ -33,6 +33,15 @@ Available soon.
 Changelog
 =========
 
+5.1.9 (2026-09-09)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The QR code and the certification text now belong to the quotation/order
+  document itself, so any other report printed from a sales order no longer
+  carries them
+
 5.1.8 (2026-08-27)
 ~~~~~~~~~~~~~~~~~~~
 

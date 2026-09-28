@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_l10n_pt_cashflow" model="res.groups">
+        <field name="name">Cash Flow Classification</field>
+        <field
+            name="comment"
+        >Classify the bank/cash movements over the cash flow categories.</field>
+    </record>
+
+    <!-- The accounting "Basic" users (community: implied by Show Full
+         Accounting Features; enterprise: the "Invoicing &amp; Banks"
+         selector option) get the feature by default; every other user is
+         assigned manually -->
+    <record id="account.group_account_basic" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_l10n_pt_cashflow'))]" />
+    </record>
+</odoo>

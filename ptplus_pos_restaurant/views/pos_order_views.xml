@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- POS order form -->
+    <record id="view_pos_pos_form_pt" model="ir.ui.view">
+        <field name="name">pos.order.form.pt</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <field name="l10n_pt_unique_id" position="after">
+                <field
+                    name="l10n_pt_bill_unique_id"
+                    invisible="not l10n_pt_bill_unique_id"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_pos_order_tree_saft" model="ir.ui.view">
+        <field name="name">pos.order.list.saft</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="action_l10n_pt_toggle_saft_element_pos" model="ir.actions.server">
+        <field name="name">(Un)block SAF-T element</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_toggle_saft_element_block()</field>
+    </record>
+
+    <record id="action_l10n_pt_recompute_saft_element_pos" model="ir.actions.server">
+        <field name="name">Recompute SAF-T element</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_recompute_saft_element()</field>
+    </record>
+</odoo>

@@ -1,0 +1,769 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * ptplus_fsp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Exo Software <info@exosoftware.pt>\n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid ""
+"  Cert %(num)d: %(subject)s\n"
+"    Expires: %(expiry)s [%(status)s]"
+msgstr ""
+"  Cert %(num)d: %(subject)s\n"
+"    Validade: %(expiry)s [%(status)s]"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "(subject unavailable)"
+msgstr "(titular indisponível)"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "<span class=\"o_form_label text-success\">Certificate configured</span>"
+msgstr ""
+"<span class=\"o_form_label text-success\">Certificado configurado</span>"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "<span class=\"o_form_label text-success\">Private key configured</span>"
+msgstr ""
+"<span class=\"o_form_label text-success\">Chave privada configurada</span>"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid ""
+"ARTE production certificate and private key. Exo's certificate is installed "
+"by default and the pre-production key is reused. Remove one to upload your "
+"own (only if you have a dedicated ARTE protocol). Stored encrypted."
+msgstr ""
+"Certificado e chave privada de produção da ARTE. O certificado da Exo é "
+"instalado por omissão e a chave de pré-produção é reutilizada. Remova uma "
+"para carregar a sua própria (apenas se tiver um protocolo dedicado com a "
+"ARTE). Guardado encriptado."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid ""
+"ARTE test-portal certificate and private key. Exo's credentials are "
+"installed by default. Remove one to upload your own (only if you have a "
+"dedicated ARTE protocol). Stored encrypted."
+msgstr ""
+"Certificado e chave privada do portal de testes da ARTE. As credenciais da "
+"Exo são instaladas por omissão. Remova uma para carregar a sua própria "
+"(apenas se tiver um protocolo dedicado com a ARTE). Guardado encriptado."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Authenticate SW"
+msgstr "Autenticar SW"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Authenticate the SW before registering the seller."
+msgstr "Autentique o SW antes de registar o emitente."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields.selection,name:ptplus_fsp.selection__res_company__l10n_pt_fsp_registration_state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Certificate (.p7b)"
+msgstr "Certificado (.p7b)"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Certificate chain: %d certificate(s)"
+msgstr "Cadeia de certificados: %d certificado(s)"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Certificate decryption failed: %s"
+msgstr "Falha na desencriptação do certificado: %s"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Certificate parse error: %s"
+msgstr "Erro ao processar o certificado: %s"
+
+#. module: ptplus_fsp
+#: model:ir.model,name:ptplus_fsp.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_name
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_seller_name
+msgid "Company name sent to FSP. Defaults to the company name."
+msgstr ""
+"Nome da empresa enviado para a FSP. Por omissão, usa o nome da empresa."
+
+#. module: ptplus_fsp
+#: model:ir.model,name:ptplus_fsp.model_res_config_settings
+msgid "Config Settings"
+msgstr "Definições de Configuração"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "Could not generate invoice PDF: %s"
+msgstr "Não foi possível gerar o PDF da fatura: %s"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "Customer has no VAT/NIF."
+msgstr "O cliente não tem NIF configurado."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Defaults to company name"
+msgstr "Por omissão, usa o nome da empresa"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_edi_document__display_name
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_edi_format__display_name
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_fsp
+#: model:ir.model,name:ptplus_fsp.model_account_edi_format
+msgid "EDI format"
+msgstr "Formato EDI"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "EXPIRED"
+msgstr "EXPIRADO"
+
+#. module: ptplus_fsp
+#: model:ir.model,name:ptplus_fsp.model_account_edi_document
+msgid "Electronic Document for an account.move"
+msgstr "Documento Eletrónico para um account.move"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Environment: %s"
+msgstr "Ambiente: %s"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_company__l10n_pt_fsp_token_expiry
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_token_expiry
+msgid "Expiry of the current seller access token."
+msgstr "Validade do token de acesso atual do emitente."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_config_settings.py:0
+msgid "FSP Certificate Validation"
+msgstr "Validação do Certificado FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_instance_id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_instance_id
+msgid "FSP Instance Id"
+msgstr "Id da Instância FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_local_id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__l10n_pt_fsp_local_id
+msgid "FSP Local Id"
+msgstr "Id Local FSP"
+
+#. module: ptplus_fsp
+#: model:res.groups,name:ptplus_fsp.group_fsp_manager
+msgid "FSP Manager"
+msgstr "Gestor FSP"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "FSP Registration"
+msgstr "Registo FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_registration_state
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_registration_state
+msgid "FSP Registration State"
+msgstr "Estado de Registo FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_resend_attempts
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_edi_document__l10n_pt_fsp_resend_attempts
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__l10n_pt_fsp_resend_attempts
+msgid "FSP Resend Attempts"
+msgstr "Tentativas de Reenvio FSP"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "FSP SW Authentication"
+msgstr "Autenticação SW FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_access_token
+msgid "FSP Seller Access Token"
+msgstr "Token de Acesso do Emitente FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_email
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_seller_email
+msgid "FSP Seller Email"
+msgstr "Email do Emitente FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_company_vat
+msgid "FSP Seller NIPC"
+msgstr "NIPC do Comerciante FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_name
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_seller_name
+msgid "FSP Seller Name"
+msgstr "Nome do Emitente FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_refresh_token
+msgid "FSP Seller Refresh Token"
+msgstr "Token de Renovação do Emitente FSP"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "FSP Seller Registration"
+msgstr "Registo de Emitente FSP"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "FSP Seller Unregistered"
+msgstr "Emitente FSP Cancelado"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "FSP Seller Update"
+msgstr "Atualização de Emitente FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_invoice_id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__l10n_pt_fsp_invoice_id
+msgid "FSP Sent Reference"
+msgstr "Referência de Envio FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_sw_nipc
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_sw_nipc
+msgid "FSP Software Provider NIPC"
+msgstr "NIPC do Fornecedor de Software FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__l10n_pt_fsp_token_expiry
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_token_expiry
+msgid "FSP Token Expiry"
+msgstr "Validade do Token FSP"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "FSP only supports customer invoices and credit notes."
+msgstr "A FSP apenas suporta faturas e notas de crédito de cliente."
+
+#. module: ptplus_fsp
+#: model:ir.actions.server,name:ptplus_fsp.cron_fsp_poll_resend_queue_ir_actions_server
+msgid "FSP: Poll Resend Queue"
+msgstr "FSP: Consultar Fila de Reenvio"
+
+#. module: ptplus_fsp
+#: model:ir.actions.server,name:ptplus_fsp.cron_fsp_refresh_tokens_ir_actions_server
+msgid "FSP: Refresh Tokens"
+msgstr "FSP: Renovar Tokens"
+
+#. module: ptplus_fsp
+#: model:ir.actions.server,name:ptplus_fsp.cron_fsp_sync_invoice_states_ir_actions_server
+msgid "FSP: Sync Invoice States"
+msgstr "FSP: Sincronizar Estados das Faturas"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_edi_document__id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_edi_format__id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Instance Id"
+msgstr "Id da Instância"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "Invoice PDF is not available."
+msgstr "O PDF da fatura não está disponível."
+
+#. module: ptplus_fsp
+#: model:ir.model,name:ptplus_fsp.model_account_move
+msgid "Journal Entry"
+msgstr "Movimento de Diário"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_cert_filename
+msgid "L10N Pt Fsp Preprod Cert Filename"
+msgstr "Nome do ficheiro do certificado de pré-produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_key_filename
+msgid "L10N Pt Fsp Preprod Key Filename"
+msgstr "Nome do ficheiro da chave privada de pré-produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_cert_filename
+msgid "L10N Pt Fsp Prod Cert Filename"
+msgstr "Nome do ficheiro do certificado de produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_key_filename
+msgid "L10N Pt Fsp Prod Key Filename"
+msgstr "Nome do ficheiro da chave privada de produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_not_subscribed
+#: model:ir.model.fields,help:ptplus_fsp.field_account_move__l10n_pt_fsp_not_subscribed
+msgid "Legacy field. NIF not enrolled now returns an EDI error instead."
+msgstr ""
+"Campo legado. Um NIF não inscrito devolve agora um erro EDI.Campo legado. Um "
+"NIF não inscrito passa agora a devolver um erro de EDI."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_invoice_id
+#: model:ir.model.fields,help:ptplus_fsp.field_account_move__l10n_pt_fsp_invoice_id
+msgid ""
+"LocalId stored after successful FSP submission. Populated because the FSP "
+"API returns HTTP 200 with no body on success."
+msgstr ""
+"LocalId guardado após uma submissão FSP bem-sucedida. É preenchido porque a "
+"API da FSP devolve HTTP 200 sem corpo em caso de sucesso."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "NIF %s is foreign; Fatura Sem Papel submission cancelled."
+msgstr "O NIF %s é estrangeiro; submissão à Fatura Sem Papel cancelada."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "NIF %s is not enrolled in Fatura Sem Papel."
+msgstr "O NIF %s não está inscrito na Fatura Sem Papel."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_company__l10n_pt_fsp_sw_nipc
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_sw_nipc
+msgid ""
+"NIPC of the software provider registered with ARTE. Sent in the "
+"authentication token (CertToken). Not necessarily the company VAT."
+msgstr ""
+"NIPC do fornecedor de software registado na ARTE. Enviado no token de "
+"autenticação (CertToken). Não é necessariamente o NIF da empresa."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid ""
+"NIPC of the software provider registered with ARTE. Sent in the "
+"authentication token."
+msgstr ""
+"NIPC do fornecedor de software registado na ARTE. Enviado no token de "
+"autenticação."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "No %s certificate is configured."
+msgstr "Não está configurado nenhum certificado de %s."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "No %s private key is configured."
+msgstr "Não está configurada nenhuma chave privada de %s."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "No certificates found in PKCS7 data."
+msgstr "Não foram encontrados certificados nos dados PKCS7."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields.selection,name:ptplus_fsp.selection__res_company__l10n_pt_fsp_registration_state__draft
+msgid "Not Registered"
+msgstr "Não Registado"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_company__l10n_pt_fsp_seller_email
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_seller_email
+msgid "Notification email for the FSP seller account."
+msgstr "Email de notificação para a conta de emitente FSP."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_resend_attempts
+#: model:ir.model.fields,help:ptplus_fsp.field_account_edi_document__l10n_pt_fsp_resend_attempts
+#: model:ir.model.fields,help:ptplus_fsp.field_account_move__l10n_pt_fsp_resend_attempts
+msgid "Number of resend attempts as reported by FSP."
+msgstr "Número de tentativas de reenvio reportadas pela FSP."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Paperless Invoice (FSP)"
+msgstr "Fatura Sem Papel (FSP)"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_not_subscribed
+#: model:ir.model.fields,field_description:ptplus_fsp.field_account_move__l10n_pt_fsp_not_subscribed
+msgid "Partner Not Subscribed to FSP"
+msgstr "Parceiro Não Subscrito na FSP"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_cert
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Pre-production Certificate"
+msgstr "Certificado de Pré-produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_cert_set
+msgid "Pre-production Certificate Configured"
+msgstr "Certificado de Pré-produção Configurado"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_key
+msgid "Pre-production Private Key"
+msgstr "Chave Privada de Pré-produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_preprod_key_set
+msgid "Pre-production Private Key Configured"
+msgstr "Chave Privada de Pré-produção Configurada"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Private key (.key)"
+msgstr "Chave privada (.key)"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Private key decryption failed: %s"
+msgstr "Falha na desencriptação da chave privada: %s"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Private key parse error: %s"
+msgstr "Erro ao processar a chave privada: %s"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Private key: RSA %s-bit — OK"
+msgstr "Chave privada: RSA %s bits — OK"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_cert
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Production Certificate"
+msgstr "Certificado de Produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_cert_set
+msgid "Production Certificate Configured"
+msgstr "Certificado de Produção Configurado"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_key
+msgid "Production Private Key"
+msgstr "Chave Privada de Produção"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,field_description:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_prod_key_set
+msgid "Production Private Key Configured"
+msgstr "Chave Privada de Produção Configurada"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Register Seller"
+msgstr "Registar Emitente"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Registration Status"
+msgstr "Estado do Registo"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Remove"
+msgstr "Remover"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Remove the configured certificate?"
+msgstr "Remover o certificado configurado?"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Remove the configured private key?"
+msgstr "Remover a chave privada configurada?"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields.selection,name:ptplus_fsp.selection__res_company__l10n_pt_fsp_registration_state__sw_authenticated
+msgid "SW Authenticated"
+msgstr "SW Autenticado"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "SW authentication failed. Check the server log for details."
+msgstr ""
+"A autenticação do software falhou. Consulte o registo do servidor para mais "
+"detalhes.Falha na autenticação SW. Verifique o registo do servidor para mais "
+"detalhes."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "SW authentication successful."
+msgstr "Autenticação SW efetuada com sucesso."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_company__l10n_pt_fsp_instance_id
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_instance_id
+msgid ""
+"SW instance UUID registered with ARTE for this software provider. Sent in "
+"the authentication token (CertToken)."
+msgstr ""
+"UUID da instância do SW registado na ARTE para este fornecedor de software. "
+"Enviado no token de autenticação (CertToken)."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid ""
+"SW instance UUID registered with ARTE. Sent in the authentication token."
+msgstr ""
+"UUID da instância do SW registado na ARTE. Enviado no token de autenticação."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Seller Email"
+msgstr "Email do Emitente"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Seller Name"
+msgstr "Nome do Emitente"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields.selection,name:ptplus_fsp.selection__res_company__l10n_pt_fsp_registration_state__seller_registered
+msgid "Seller Registered"
+msgstr "Emitente Registado"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller account deleted from FSP."
+msgstr "Conta de emitente eliminada da FSP."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller deletion failed. Check the server log for details."
+msgstr ""
+"A eliminação do comerciante falhou. Consulte o registo do servidor para mais "
+"detalhes.Falha na eliminação do emitente. Verifique o registo do servidor "
+"para mais detalhes."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller profile updated."
+msgstr "Perfil do emitente atualizado."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller registered successfully."
+msgstr "Emitente registado com sucesso."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller registration failed. Check the server log for details."
+msgstr ""
+"O registo do comerciante falhou. Consulte o registo do servidor para mais "
+"detalhes.Falha no registo do emitente. Verifique o registo do servidor para "
+"mais detalhes."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "Seller update failed. Check the server log for details."
+msgstr ""
+"A atualização do comerciante falhou. Consulte o registo do servidor para "
+"mais detalhes.Falha na atualização do emitente. Verifique o registo do "
+"servidor para mais detalhes."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid ""
+"Send customer invoices via the Portuguese government's paperless invoice "
+"delivery service (ARTE/FSP)."
+msgstr ""
+"Envie faturas de cliente através do serviço de entrega de faturas sem papel "
+"do governo português (ARTE/FSP)."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Software Provider NIPC"
+msgstr "NIPC do Fornecedor de Software"
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_account_bank_statement_line__l10n_pt_fsp_local_id
+#: model:ir.model.fields,help:ptplus_fsp.field_account_move__l10n_pt_fsp_local_id
+msgid ""
+"Stable, unique identifier sent to FSP as localId. Combines the database id "
+"and the invoice name (id_name); computed once on the first send and stored "
+"so resends and status syncs always match the same value even if the invoice "
+"is renumbered."
+msgstr ""
+"Identificador estável e único enviado para a FSP como localId. Combina o id "
+"da base de dados e o nome da fatura (id_nome); calculado uma vez no primeiro "
+"envio e guardado para que os reenvios e as sincronizações de estado "
+"correspondam sempre ao mesmo valor mesmo que a fatura seja renumerada."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "The FSP %s certificate is not configured."
+msgstr "O certificado FSP de %s não está configurado."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "The FSP %s private key is not configured."
+msgstr "A chave privada FSP de %s não está configurada."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "The FSP Instance Id is not configured."
+msgstr "O Id da Instância FSP não está configurado."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "The FSP Software Provider NIPC is not configured."
+msgstr "O NIPC do Fornecedor de Software FSP não está configurado."
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_company_vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+"O Número de Identificação Fiscal. Os valores aqui serão validados com base "
+"no formato do país. Pode usar '/' para indicar que o parceiro não está "
+"sujeito a imposto."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid ""
+"The company has no VAT/NIPC configured. Set the company VAT before "
+"registering as an FSP seller."
+msgstr ""
+"A empresa não tem NIF/NIPC configurado. Defina o NIF da empresa antes de "
+"registar como comerciante FSP."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid ""
+"The company is not registered as an FSP seller. Complete the FSP setup in "
+"company settings."
+msgstr ""
+"A empresa não está registada como emitente FSP. Complete a configuração FSP "
+"nas definições da empresa."
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/account_edi_format.py:0
+msgid "The customer has no VAT/NIF configured."
+msgstr "O cliente não tem NIF/NIPC configurado."
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "This will permanently delete the FSP seller account. Are you sure?"
+msgstr ""
+"Isto irá eliminar permanentemente a conta de comerciante FSP. Tem a certeza?"
+"Isto irá eliminar permanentemente a conta de emitente FSP. Tem a certeza?"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Unregister"
+msgstr "Cancelar Registo"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Update Seller"
+msgstr "Atualizar Emitente"
+
+#. module: ptplus_fsp
+#: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
+msgid "Validate"
+msgstr "Validar"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "pre-production"
+msgstr "pré-produção"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "production"
+msgstr "produção"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "unknown"
+msgstr "desconhecido"
+
+#. module: ptplus_fsp
+#. odoo-python
+#: code:addons/ptplus_fsp/models/res_company.py:0
+msgid "valid"
+msgstr "válido"

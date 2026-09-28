@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_fsp" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.fsp</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="ptplus.res_config_settings_view_form_pt" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='account_settings_pt']" position="after">
+                <block
+                    title="Paperless Invoice (FSP)"
+                    id="account_settings_fsp"
+                    groups="ptplus_fsp.group_fsp_manager"
+                    invisible="not pt_invoicing"
+                >
+                    <setting
+                        id="fsp_registration_state"
+                        string="Registration Status"
+                        help="Send customer invoices via the Portuguese government's paperless invoice delivery service (ARTE/FSP)."
+                        company_dependent="1"
+                    >
+                        <field
+                            name="l10n_pt_fsp_registration_state"
+                            widget="badge"
+                            decoration-success="l10n_pt_fsp_registration_state == 'seller_registered'"
+                            decoration-warning="l10n_pt_fsp_registration_state == 'sw_authenticated'"
+                            decoration-danger="l10n_pt_fsp_registration_state == 'cancelled'"
+                            decoration-muted="l10n_pt_fsp_registration_state == 'draft'"
+                        />
+                    </setting>
+
+                    <field name="l10n_pt_cert_service_backend" invisible="1" />
+
+                    <!-- ===== Pre-production (Test backend) ===== -->
+                    <setting
+                        string="Pre-production Certificate"
+                        help="ARTE test-portal certificate and private key. Exo's credentials are installed by default. Remove one to upload your own (only if you have a dedicated ARTE protocol). Stored encrypted."
+                        company_dependent="1"
+                        invisible="l10n_pt_cert_service_backend not in (False, 'test')"
+                    >
+                        <field name="l10n_pt_fsp_preprod_cert_set" invisible="1" />
+                        <field name="l10n_pt_fsp_preprod_key_set" invisible="1" />
+                        <div
+                            class="d-flex align-items-center gap-2"
+                            invisible="not l10n_pt_fsp_preprod_cert_set"
+                        >
+                            <span
+                                class="o_form_label text-success"
+                            >Certificate configured</span>
+                            <button
+                                name="action_fsp_remove_preprod_cert"
+                                type="object"
+                                string="Remove"
+                                icon="fa-trash"
+                                class="btn btn-link text-danger p-0"
+                                confirm="Remove the configured certificate?"
+                            />
+                        </div>
+                        <div invisible="l10n_pt_fsp_preprod_cert_set">
+                            <label
+                                for="l10n_pt_fsp_preprod_cert"
+                                string="Certificate (.p7b)"
+                                class="fw-bold d-block"
+                            />
+                            <field
+                                name="l10n_pt_fsp_preprod_cert"
+                                filename="l10n_pt_fsp_preprod_cert_filename"
+                                widget="binary"
+                            />
+                        </div>
+                        <div
+                            class="d-flex align-items-center gap-2 mt-2"
+                            invisible="not l10n_pt_fsp_preprod_key_set"
+                        >
+                            <span
+                                class="o_form_label text-success"
+                            >Private key configured</span>
+                            <button
+                                name="action_fsp_remove_preprod_key"
+                                type="object"
+                                string="Remove"
+                                icon="fa-trash"
+                                class="btn btn-link text-danger p-0"
+                                confirm="Remove the configured private key?"
+                            />
+                        </div>
+                        <div class="mt-2" invisible="l10n_pt_fsp_preprod_key_set">
+                            <label
+                                for="l10n_pt_fsp_preprod_key"
+                                string="Private key (.key)"
+                                class="fw-bold d-block"
+                            />
+                            <field
+                                name="l10n_pt_fsp_preprod_key"
+                                filename="l10n_pt_fsp_preprod_key_filename"
+                                widget="binary"
+                            />
+                        </div>
+                        <div class="mt-2">
+                            <button
+                                name="action_fsp_validate_preprod_certificate"
+                                type="object"
+                                string="Validate"
+                                class="btn btn-secondary flex-shrink-0"
+                                context="{'save_changes': True}"
+                            />
+                        </div>
+                    </setting>
+
+                    <!-- ===== Production (real backend) ===== -->
+                    <setting
+                        string="Production Certificate"
+                        help="ARTE production certificate and private key. Exo's certificate is installed by default and the pre-production key is reused. Remove one to upload your own (only if you have a dedicated ARTE protocol). Stored encrypted."
+                        company_dependent="1"
+                        invisible="l10n_pt_cert_service_backend in (False, 'test')"
+                    >
+                        <field name="l10n_pt_fsp_prod_cert_set" invisible="1" />
+                        <field name="l10n_pt_fsp_prod_key_set" invisible="1" />
+                        <div
+                            class="d-flex align-items-center gap-2"
+                            invisible="not l10n_pt_fsp_prod_cert_set"
+                        >
+                            <span
+                                class="o_form_label text-success"
+                            >Certificate configured</span>
+                            <button
+                                name="action_fsp_remove_prod_cert"
+                                type="object"
+                                string="Remove"
+                                icon="fa-trash"
+                                class="btn btn-link text-danger p-0"
+                                confirm="Remove the configured certificate?"
+                            />
+                        </div>
+                        <div invisible="l10n_pt_fsp_prod_cert_set">
+                            <label
+                                for="l10n_pt_fsp_prod_cert"
+                                string="Certificate (.p7b)"
+                                class="fw-bold d-block"
+                            />
+                            <field
+                                name="l10n_pt_fsp_prod_cert"
+                                filename="l10n_pt_fsp_prod_cert_filename"
+                                widget="binary"
+                            />
+                        </div>
+                        <div
+                            class="d-flex align-items-center gap-2 mt-2"
+                            invisible="not l10n_pt_fsp_prod_key_set"
+                        >
+                            <span
+                                class="o_form_label text-success"
+                            >Private key configured</span>
+                            <button
+                                name="action_fsp_remove_prod_key"
+                                type="object"
+                                string="Remove"
+                                icon="fa-trash"
+                                class="btn btn-link text-danger p-0"
+                                confirm="Remove the configured private key?"
+                            />
+                        </div>
+                        <div class="mt-2" invisible="l10n_pt_fsp_prod_key_set">
+                            <label
+                                for="l10n_pt_fsp_prod_key"
+                                string="Private key (.key)"
+                                class="fw-bold d-block"
+                            />
+                            <field
+                                name="l10n_pt_fsp_prod_key"
+                                filename="l10n_pt_fsp_prod_key_filename"
+                                widget="binary"
+                            />
+                        </div>
+                        <div class="mt-2">
+                            <button
+                                name="action_fsp_validate_prod_certificate"
+                                type="object"
+                                string="Validate"
+                                class="btn btn-secondary flex-shrink-0"
+                                context="{'save_changes': True}"
+                            />
+                        </div>
+                    </setting>
+
+                    <!--<setting
+                        string="Seller NIPC"
+                        help="The merchant NIPC registered with FSP. It is the company VAT and is sent automatically as enterpriseNipc."
+                        company_dependent="1"
+                    >
+                        <field name="l10n_pt_fsp_company_vat" />
+                    </setting>-->
+
+                    <setting
+                        string="Instance Id"
+                        help="SW instance UUID registered with ARTE. Sent in the authentication token."
+                        company_dependent="1"
+                    >
+                        <field name="l10n_pt_fsp_instance_id" />
+                    </setting>
+
+                    <setting
+                        string="Software Provider NIPC"
+                        help="NIPC of the software provider registered with ARTE. Sent in the authentication token."
+                        company_dependent="1"
+                    >
+                        <field name="l10n_pt_fsp_sw_nipc" />
+                    </setting>
+
+                    <setting string="Seller Name" company_dependent="1">
+                        <field
+                            name="l10n_pt_fsp_seller_name"
+                            placeholder="Defaults to company name"
+                        />
+                    </setting>
+
+                    <setting string="Seller Email" company_dependent="1">
+                        <field name="l10n_pt_fsp_seller_email" />
+                    </setting>
+
+                    <setting string="FSP Registration" company_dependent="1">
+                        <div class="d-flex flex-wrap gap-2">
+                            <button
+                                name="action_fsp_authenticate_sw"
+                                type="object"
+                                string="Authenticate SW"
+                                class="btn btn-primary"
+                                invisible="l10n_pt_fsp_registration_state not in ('draft', 'cancelled')"
+                                context="{'save_changes': True}"
+                            />
+                            <button
+                                name="action_fsp_register_seller"
+                                type="object"
+                                string="Register Seller"
+                                class="btn btn-primary"
+                                invisible="l10n_pt_fsp_registration_state != 'sw_authenticated'"
+                                context="{'save_changes': True}"
+                            />
+                            <button
+                                name="action_fsp_update_seller"
+                                type="object"
+                                string="Update Seller"
+                                class="btn btn-secondary"
+                                invisible="l10n_pt_fsp_registration_state != 'seller_registered'"
+                                context="{'save_changes': True}"
+                            />
+                            <button
+                                name="action_fsp_unregister_seller"
+                                type="object"
+                                string="Unregister"
+                                class="btn btn-danger"
+                                invisible="l10n_pt_fsp_registration_state != 'seller_registered'"
+                                confirm="This will permanently delete the FSP seller account. Are you sure?"
+                            />
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

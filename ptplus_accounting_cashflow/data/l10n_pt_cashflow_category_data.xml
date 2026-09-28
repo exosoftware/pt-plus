@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Cash flow categories mapped to the IES Anexo A rubrics (Portaria 35/2019):
+    quadro Q04-B (Demonstração dos Fluxos de Caixa, NCRF 2 direct method,
+    model of anexo 5 of Portaria 220/2015) and quadro Q0701 (Informação
+    adicional relativa a fluxos de caixa). Category names reproduce the
+    official Portuguese rubric designations.
+-->
+<odoo noupdate="0">
+    <!-- Operating activities -->
+    <record id="cashflow_category_rcli" model="l10n_pt.cashflow.category">
+        <field name="name">Recebimentos de clientes</field>
+        <field name="sequence">10</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00301</field>
+    </record>
+    <record id="cashflow_category_pfor" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos a fornecedores</field>
+        <field name="sequence">20</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00302</field>
+    </record>
+    <record id="cashflow_category_ppes" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos ao pessoal</field>
+        <field name="sequence">30</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00303</field>
+    </record>
+    <record id="cashflow_category_ppos" model="l10n_pt.cashflow.category">
+        <field name="name">Contribuições para benefícios pós-emprego</field>
+        <field name="sequence">40</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00303</field>
+        <field name="ies_0701_code">A00406</field>
+    </record>
+    <record id="cashflow_category_ppbd" model="l10n_pt.cashflow.category">
+        <field
+            name="name"
+        >Contribuições para benefícios pós-emprego - planos de benefícios definidos</field>
+        <field name="sequence">50</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00303</field>
+        <field name="ies_0701_code">A00407</field>
+    </record>
+    <record id="cashflow_category_pirc" model="l10n_pt.cashflow.category">
+        <field name="name">Imposto sobre o rendimento - pagamento</field>
+        <field name="sequence">60</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00305</field>
+        <field name="ies_0701_code">A00408</field>
+    </record>
+    <record id="cashflow_category_rirc" model="l10n_pt.cashflow.category">
+        <field name="name">Imposto sobre o rendimento - recebimento</field>
+        <field name="sequence">70</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00305</field>
+        <field name="ies_0701_code">A00403</field>
+    </record>
+    <record id="cashflow_category_rout" model="l10n_pt.cashflow.category">
+        <field name="name">Outros recebimentos operacionais</field>
+        <field name="sequence">80</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00306</field>
+    </record>
+    <record id="cashflow_category_pout" model="l10n_pt.cashflow.category">
+        <field name="name">Outros pagamentos operacionais</field>
+        <field name="sequence">90</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00306</field>
+    </record>
+    <record id="cashflow_category_rseg" model="l10n_pt.cashflow.category">
+        <field name="name">Indemnizações de seguros não vida</field>
+        <field name="sequence">100</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00306</field>
+        <field name="ies_0701_code">A00401</field>
+    </record>
+    <record id="cashflow_category_rsex" model="l10n_pt.cashflow.category">
+        <field name="name">Subsídios à exploração</field>
+        <field name="sequence">110</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00306</field>
+        <field name="ies_0701_code">A00402</field>
+    </record>
+    <record id="cashflow_category_rmul" model="l10n_pt.cashflow.category">
+        <field name="name">Multas e outras penalidades contratuais - recebimento</field>
+        <field name="sequence">120</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00306</field>
+        <field name="ies_0701_code">A00404</field>
+    </record>
+    <record id="cashflow_category_pmul" model="l10n_pt.cashflow.category">
+        <field name="name">Multas e outras penalidades contratuais - pagamento</field>
+        <field name="sequence">130</field>
+        <field name="flow_type">operating</field>
+        <field name="color">10</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00306</field>
+        <field name="ies_0701_code">A00409</field>
+    </record>
+
+    <!-- Investing activities -->
+    <record id="cashflow_category_paft" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos respeitantes a Ativos fixos tangíveis</field>
+        <field name="sequence">140</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00308</field>
+    </record>
+    <record id="cashflow_category_pati" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos respeitantes a Ativos intangíveis</field>
+        <field name="sequence">150</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00309</field>
+    </record>
+    <record id="cashflow_category_pifi" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos respeitantes a Investimentos financeiros</field>
+        <field name="sequence">160</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00310</field>
+    </record>
+    <record id="cashflow_category_poat" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos respeitantes a Outros ativos</field>
+        <field name="sequence">170</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00311</field>
+    </record>
+    <record id="cashflow_category_raft" model="l10n_pt.cashflow.category">
+        <field name="name">Recebimentos provenientes de Ativos fixos tangíveis</field>
+        <field name="sequence">180</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00312</field>
+    </record>
+    <record id="cashflow_category_rati" model="l10n_pt.cashflow.category">
+        <field name="name">Recebimentos provenientes de Ativos intangíveis</field>
+        <field name="sequence">190</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00313</field>
+    </record>
+    <record id="cashflow_category_rifi" model="l10n_pt.cashflow.category">
+        <field
+            name="name"
+        >Recebimentos provenientes de Investimentos financeiros</field>
+        <field name="sequence">200</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00314</field>
+    </record>
+    <record id="cashflow_category_roat" model="l10n_pt.cashflow.category">
+        <field name="name">Recebimentos provenientes de Outros ativos</field>
+        <field name="sequence">210</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00315</field>
+    </record>
+    <record id="cashflow_category_rsui" model="l10n_pt.cashflow.category">
+        <field name="name">Subsídios ao investimento</field>
+        <field name="sequence">220</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00316</field>
+    </record>
+    <record id="cashflow_category_rjur" model="l10n_pt.cashflow.category">
+        <field name="name">Juros e rendimentos similares</field>
+        <field name="sequence">230</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00317</field>
+    </record>
+    <record id="cashflow_category_rdiv" model="l10n_pt.cashflow.category">
+        <field name="name">Dividendos recebidos</field>
+        <field name="sequence">240</field>
+        <field name="flow_type">investing</field>
+        <field name="color">7</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00318</field>
+        <field name="ies_0701_code">A00405</field>
+    </record>
+
+    <!-- Financing activities -->
+    <record id="cashflow_category_rfin" model="l10n_pt.cashflow.category">
+        <field name="name">Recebimentos provenientes de Financiamentos obtidos</field>
+        <field name="sequence">250</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00320</field>
+    </record>
+    <record id="cashflow_category_rcap" model="l10n_pt.cashflow.category">
+        <field
+            name="name"
+        >Realizações de capital e de outros instrumentos de capital próprio</field>
+        <field name="sequence">260</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00321</field>
+    </record>
+    <record id="cashflow_category_rcpr" model="l10n_pt.cashflow.category">
+        <field name="name">Cobertura de prejuízos</field>
+        <field name="sequence">270</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00322</field>
+    </record>
+    <record id="cashflow_category_rdoa" model="l10n_pt.cashflow.category">
+        <field name="name">Doações</field>
+        <field name="sequence">280</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00323</field>
+    </record>
+    <record id="cashflow_category_roof" model="l10n_pt.cashflow.category">
+        <field name="name">Outras operações de financiamento - recebimento</field>
+        <field name="sequence">290</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">inbound</field>
+        <field name="ies_04b_code">A00324</field>
+    </record>
+    <record id="cashflow_category_pfin" model="l10n_pt.cashflow.category">
+        <field name="name">Pagamentos respeitantes a Financiamentos obtidos</field>
+        <field name="sequence">300</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00325</field>
+    </record>
+    <record id="cashflow_category_pjur" model="l10n_pt.cashflow.category">
+        <field name="name">Juros e gastos similares</field>
+        <field name="sequence">310</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00326</field>
+    </record>
+    <record id="cashflow_category_pdiv" model="l10n_pt.cashflow.category">
+        <field name="name">Dividendos pagos</field>
+        <field name="sequence">320</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00327</field>
+        <field name="ies_0701_code">A00410</field>
+    </record>
+    <record id="cashflow_category_pcap" model="l10n_pt.cashflow.category">
+        <field
+            name="name"
+        >Reduções de capital e de outros instrumentos de capital próprio</field>
+        <field name="sequence">330</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00328</field>
+    </record>
+    <record id="cashflow_category_poof" model="l10n_pt.cashflow.category">
+        <field name="name">Outras operações de financiamento - pagamento</field>
+        <field name="sequence">340</field>
+        <field name="flow_type">financing</field>
+        <field name="color">2</field>
+        <field name="direction">outbound</field>
+        <field name="ies_04b_code">A00329</field>
+    </record>
+
+    <!-- Other -->
+    <record id="cashflow_category_dcam" model="l10n_pt.cashflow.category">
+        <field name="name">Efeito das diferenças de câmbio</field>
+        <field name="sequence">350</field>
+        <field name="flow_type">other</field>
+        <field name="direction">both</field>
+        <field name="ies_04b_code">A00332</field>
+    </record>
+    <record id="cashflow_category_trin" model="l10n_pt.cashflow.category">
+        <field name="name">Transferências internas de caixa e equivalentes</field>
+        <field name="sequence">360</field>
+        <field name="flow_type">other</field>
+        <field name="direction">both</field>
+        <field name="excluded_from_statement" eval="True" />
+    </record>
+</odoo>
