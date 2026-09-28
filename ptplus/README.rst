@@ -53,6 +53,17 @@ Available soon.
 Changelog
 =========
 
+5.1.19 (2026-09-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- Invoices, receipts, quotations and delivery slips issued by a company that
+  is still using the "Testes" certification backend now carry
+  the text "Documento emitido para fins de Formação" printed in large letters
+  along the diagonal of every page, so that they cannot be mistaken for valid
+  documents. The stamp cannot be removed or customised
+
 5.1.18 (2026-09-09)
 ~~~~~~~~~~~~~~~~~~~
 
