@@ -5875,3 +5875,138 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ptplus.selection__product_template__l10n_pt_eco_tax_type__oleos
 msgid "Óleos e óleos usados"
 msgstr ""
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "%(label)s expired on %(date)s"
+msgstr "%(label)s expirou em %(date)s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "%(label)s valid until %(date)s"
+msgstr "%(label)s com validade até %(date)s"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid ""
+"<span class=\"o_form_label text-success\" invisible=\"l10n_pt_at_certificates_expired or l10n_pt_at_certificates_unreadable\">Certificates configured</span>\n"
+"                            <span class=\"o_form_label text-danger\" invisible=\"not l10n_pt_at_certificates_expired\">Certificates expired</span>\n"
+"                            <span class=\"o_form_label text-danger\" invisible=\"not l10n_pt_at_certificates_unreadable\">Certificates file not readable</span>"
+msgstr ""
+"<span class=\"o_form_label text-success\" invisible=\"l10n_pt_at_certificates_expired or l10n_pt_at_certificates_unreadable\">Certificados configurados</span>\n"
+"                            <span class=\"o_form_label text-danger\" invisible=\"not l10n_pt_at_certificates_expired\">Certificados expirados</span>\n"
+"                            <span class=\"o_form_label text-danger\" invisible=\"not l10n_pt_at_certificates_unreadable\">Ficheiro de certificados ilegível</span>"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "AT Certificates"
+msgstr "Certificados AT"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_set
+msgid "AT Certificates Configured"
+msgstr "Certificados AT configurados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_expired
+msgid "AT Certificates Expired"
+msgstr "Certificados AT expirados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_unreadable
+msgid "AT Certificates Unreadable"
+msgstr "Certificados AT ilegíveis"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "AT public key"
+msgstr "Chave pública da AT"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Certificates configured."
+msgstr "Certificados configurados."
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Certificates file"
+msgstr "Ficheiro de certificados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_info
+msgid "Certificates in use"
+msgstr "Certificados em uso"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Certificates used to reach the Tax Authority webservices and to sign fiscal documents. Your software provider's ones are used by default. Upload a file to use your own instead (only if you have your own certificate registered with AT); removing it goes back to the ones shipped with the module. Uploaded certificates are always stored encrypted, once for the whole database: every company using the same certification services backend shares them."
+msgstr "Certificados usados para aceder aos serviços web da Autoridade Tributária e para assinar os documentos fiscais. Por omissão são usados os do seu fornecedor de software. Carregue um ficheiro para usar os seus (apenas se tiver certificado próprio registado na AT); ao removê-lo volta aos que vêm com o módulo. Os certificados carregados são sempre guardados encriptados, uma única vez para toda a base de dados: todas as empresas que usem o mesmo serviço de certificação partilham-nos."
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Client certificate"
+msgstr "Certificado de cliente"
+
+#. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_config_settings__l10n_pt_at_certificates
+msgid "Encrypted certificates file supplied by your software provider. It is stored, still encrypted, for the selected certification services backend, and shared by every company using that backend."
+msgstr "Ficheiro de certificados encriptado fornecido pelo seu fornecedor de software. É guardado, ainda encriptado, para o serviço de certificação selecionado, e partilhado por todas as empresas que o usem."
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_filename
+msgid "L10N Pt At Certificates Filename"
+msgstr ""
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Remove"
+msgstr "Remover"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Remove the uploaded certificates and go back to the ones shipped with the module?"
+msgstr "Remover os certificados carregados e voltar aos que vêm com o módulo?"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/backends.py:0
+msgid "The AT certificates configured for this system don't include the software publisher private key, so fiscal documents can't be signed."
+msgstr "Os certificados AT configurados neste sistema não incluem a chave privada do produtor de software, pelo que não é possível assinar os documentos fiscais."
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid "The certificates are missing the following entries: %s"
+msgstr "Faltam as seguintes entradas nos certificados: %s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "The certificates don't state a validity period"
+msgstr "Os certificados não indicam um período de validade"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid "The certificates file could not be read. Make sure you are using the file supplied by your software provider, unchanged."
+msgstr "Não foi possível ler o ficheiro de certificados. Certifique-se de que está a usar o ficheiro fornecido pelo seu fornecedor de software, sem alterações."
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid "The certificates file is missing the following entries: %s"
+msgstr "Faltam as seguintes entradas no ficheiro de certificados: %s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Using the certificates shipped with the module."
+msgstr "A usar os certificados que vêm com o módulo."

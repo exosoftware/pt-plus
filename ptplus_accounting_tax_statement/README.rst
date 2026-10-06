@@ -45,6 +45,27 @@ Available soon.
 Changelog
 =========
 
+5.1.10 (2026-10-01)
+~~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The VAT periodic statement and its Annex R are computed much faster: a
+  statement that took over a minute now takes a few seconds, with exactly the
+  same figures.
+
+5.1.9 (2026-09-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The recapitulative statement no longer counts a credit note twice. A credit
+  note is reported in the period of the invoice it corrects, as it always was,
+  but it was also being reported in the period it was issued in. Customers
+  credited in a month where they had no invoice came out with a negative
+  amount, and reprinting the statement of an earlier period returned a
+  different total from the one declared at the time.
+
 5.1.8 (2026-08-19)
 ~~~~~~~~~~~~~~~~~~~
 

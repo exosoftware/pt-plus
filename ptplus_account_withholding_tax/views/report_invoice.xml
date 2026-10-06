@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Show taxes withheld on payment after the total, with the net payable -->
+    <template
+        id="document_tax_totals_template"
+        inherit_id="account.document_tax_totals_template"
+    >
+        <xpath expr="//tr[hasclass('o_total')]" position="after">
+            <t t-set="wht_totals" t-value="tax_totals.get('l10n_pt_on_payment_wht')" />
+            <t t-if="wht_totals">
+                <tr t-foreach="wht_totals" t-as="wht" class="o_taxes">
+                    <td style="max-width: 200px;">
+                        <span t-out="wht['label']" />
+                    </td>
+                    <td class="text-end o_price_total">
+                        <span class="text-nowrap" t-out="wht['formatted_amount']" />
+                    </td>
+                </tr>
+                <tr class="o_total">
+                    <td>
+                        <strong>Total Payable</strong>
+                    </td>
+                    <td class="text-end">
+                        <strong
+                            t-out="tax_totals['l10n_pt_formatted_total_after_retention']"
+                        />
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+</odoo>

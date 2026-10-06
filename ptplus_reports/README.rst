@@ -27,6 +27,37 @@ Available soon.
 Changelog
 =========
 
+1.3.3 (2026-10-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When a statement is closed with the log option on, its Dataport Log entry
+  now records whether the statement was marked as reported and keeps the
+  figures that later statements read from it (for instance the excess to
+  carry forward to the next VAT period). Until now the entries written from
+  the new statement screen were saved without that information, so a
+  statement could not pick up the values of the previous one from the log.
+
+1.3.2 (2026-08-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The online submission screen of the statements is now shown in Portuguese:
+  the credentials of the taxpayer and of the certified accountant, the options,
+  the buttons to validate, submit, consult, get the receipt, the errors and the
+  payment reference, and the messages the Tax Authority sends back.
+
+1.3.1 (2026-08-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Sending and consulting statements online now gives up after 30 seconds when
+  the Tax Authority stops answering, instead of waiting indefinitely and
+  keeping the server occupied.
+
 1.3.0 (2026-08-13)
 ~~~~~~~~~~~~~~~~~~~
 

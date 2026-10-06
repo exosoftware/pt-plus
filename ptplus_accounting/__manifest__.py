@@ -11,7 +11,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "18.0.5.1.2",
+    "version": "18.0.5.3.0",
     "depends": [
         "account",
         "ptplus",

@@ -32,6 +32,36 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.4.4 (2026-10-06)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- An invoice line without a description no longer stops the SAF-T data of the
+  document from being computed. Validating such a document (for example a
+  down payment taken at the Point of Sale) failed with a technical error; the
+  SAF-T now reports the product name as the line description instead.
+
+4.4.3 (2026-09-22)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Accounting SAF-T reports each entry under the journal it was posted to
+  again. The file listed every journal but wrote all the entries of the period
+  inside the last one, leaving the remaining journals empty, so the whole year
+  looked as if it had been posted to a single journal.
+
+4.4.2 (2026-09-14)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Accounting users without access to the Settings app can export the SAF-T
+  again. The export started by checking the installed modules with the current
+  user's rights, which only administrators have, so it failed with an access
+  error before producing anything.
+
 4.4.1 (2026-08-17)
 ~~~~~~~~~~~~~~~~~~
 

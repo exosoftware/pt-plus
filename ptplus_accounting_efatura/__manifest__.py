@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "18.0.5.8.0",
+    "version": "18.0.5.12.1",
     "depends": ["ptplus", "ptplus_expense"],
     "external_dependencies": {
         "python": ["pymupdf"],
@@ -24,6 +24,7 @@
         # Before the e-fatura views: the document form links to this wizard's
         # action, which has to exist by then
         "wizards/l10n_pt_account_move_efatura.xml",
+        "wizards/l10n_pt_account_efatura_merge.xml",
         "views/l10n_pt_account_efatura.xml",
         "views/res_partner_views.xml",
         "views/account_move_views.xml",

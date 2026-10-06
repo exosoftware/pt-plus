@@ -53,6 +53,68 @@ Available soon.
 Changelog
 =========
 
+5.2.0 (2026-09-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The Tax Authority certificates can now be replaced from the Portuguese
+  Invoicing settings. A company with its own certificate registered with the
+  Tax Authority uploads the file its software provider supplies, and from then
+  on that one is used instead of the one that comes installed, until it is
+  removed. On upload, a notice reports until when the certificates are valid,
+  and stands out when they have expired or are about to. For companies that
+  keep the certificates that come installed, nothing changes.
+
+5.1.15 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The QR code, the ATCUD and the certification text are now printed only by
+  the reports that reproduce the fiscal document itself. Other printouts of
+  the same record, such as the journal entry of an invoice, no longer carry
+  them
+
+5.1.14 (2026-08-31)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports the Odoo version and edition the database
+  is running, so that support no longer has to keep them up to date by hand
+
+5.1.13 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Invoices posted automatically, such as the ones issued after an online
+  payment, are now signed and numbered under the company that issues them.
+  When that company was not the one the automatic process was running under,
+  posting stopped with the error "the document is not a fiscal document".
+5.1.12 (2026-08-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The subscription check now reports every app authored by Exo Software that is
+  installed in the database, and not only the PT+ family, so that support sees
+  the whole picture of what is running
+
+5.1.11 (2026-08-24)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Communications with the Tax Authority now give up after 30 seconds. Until
+  now, whenever the Tax Authority accepted the connection and then stopped
+  answering, the request stayed waiting indefinitely and kept the server
+  occupied: a few documents being validated at the same time were enough to
+  leave the whole installation without capacity to answer anything, until it
+  was restarted by hand. The communication now fails with the usual connection
+  timeout message and can be tried again.
+
 5.1.10 (2026-08-20)
 ~~~~~~~~~~~~~~~~~~~
 
