@@ -53,6 +53,31 @@ Available soon.
 Changelog
 =========
 
+5.2.2 (2026-10-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Credit notes now print the VAT exemption reasons at the bottom of the
+  document, as invoices do. The block sat in the payment communication area,
+  which the report only shows on invoices, so credit notes with exempt lines
+  came out without the mention.
+
+5.2.1 (2026-10-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The VAT and stamp duty exemption mentions printed on invoices, credit notes,
+  quotations and POS receipts, and exported to the SAF-T, are now always the
+  current text of the Tax Authority table. Databases that kept an outdated
+  wording for a code (for instance "M16 - Isento Artigo 14.º do RITI (ou
+  similar)") went on printing it after the table was updated.
+- Stamp duty exemption reasons whose own wording contains a hyphen, such as
+  "2 - Instituições de segurança social - CIS Artº 6º b)", were cut at that
+  hyphen when reported on POS and sales documents; the full wording is now
+  used.
+
 5.2.0 (2026-09-04)
 ~~~~~~~~~~~~~~~~~~~
 
