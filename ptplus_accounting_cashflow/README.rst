@@ -154,6 +154,16 @@ Known issues / Roadmap
 Changelog
 =========
 
+5.2.1 (2026-10-06)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- In the document lines of the Classify Cash Flows window, the code and colour
+  of the proposed category are now labelled "Suggested IES Code" and
+  "Suggested Color", so they can be told apart from the chosen category's own
+  code and colour when picking fields for a list or an export.
+
 5.2.0 (2026-09-18)
 ~~~~~~~~~~~~~~~~~~~
 

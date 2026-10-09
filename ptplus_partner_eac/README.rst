@@ -40,6 +40,15 @@ permission.
 Changelog
 =========
 
+5.0.6 (2026-10-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Typing a code or a description in the CAE field of a company or contact no
+  longer shows an error: the matching activities are suggested again, by code or
+  by name.
+
 5.0.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

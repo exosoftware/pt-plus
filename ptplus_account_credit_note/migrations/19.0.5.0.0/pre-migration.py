@@ -11,10 +11,11 @@ _module_rename = [
 
 @openupgrade.migrate()
 def migrate(env, version):
+    # the Odoo upgrade platform leaves unknown modules in "to upgrade"
     if env["ir.module.module"].search(
         [
             ("name", "=", "account_invoice_refund_link"),
-            ("state", "in", ["installed", "to remove"]),
+            ("state", "in", ["installed", "to remove", "to upgrade"]),
         ]
     ):
         openupgrade.update_module_names(env.cr, _module_rename, merge_modules=True)

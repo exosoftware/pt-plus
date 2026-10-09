@@ -35,6 +35,33 @@ Available soon.
 Changelog
 =========
 
+1.4.0 (2026-09-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New VAT Periodic Statement (Declaração Periódica do IVA) under Portugal
+  Statements > Taxes, on the same screen as the other statements: choose the
+  period, compute, review the fields of the rosto and of the annexes (fields
+  40 and 41, the refund annexes of customers and vendors, and the Anexo R)
+  on their own tabs, open the journal items behind any field, then export
+  the XML file for the Portal das Finanças or print the official form. The
+  Anexo R of the operations located in the other regions is computed
+  together with the statement, so it no longer has to be extracted region by
+  region first.
+- The excess to carry forward (field 61) and the recapitulative total
+  (field 7) are read from the Dataport Log of the previous VAT statement and
+  of the recapitulative statement of the same period, as before, and can be
+  changed before computing.
+- New VAT Recapitulative Statement (Declaração Recapitulativa) on the same
+  screen, exported to the XML file of the Portal das Finanças.
+- The former statements under "Tax Statements" remain available for now.
+  Both versions can be extracted for the same period to compare the figures
+  before the old ones are retired.
+- The Exploration Map and the Statement of Changes in Equity can now be
+  closed with the "log on close" option: the Dataport Log did not know
+  those statement types.
+
 1.3.1 (2026-09-28)
 ~~~~~~~~~~~~~~~~~~~
 

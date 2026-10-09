@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 08:48+0000\n"
-"PO-Revision-Date: 2026-09-28 08:48+0000\n"
+"POT-Creation-Date: 2026-09-29 11:45+0000\n"
+"PO-Revision-Date: 2026-09-29 11:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,78 @@ msgid "%(report_name)s: %(company_name)s (%(company_vat)s) %(period_text)s"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Operations in Portugal by EU residents"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Operations in Portugal by non-EU residents"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Operations of art. 3 no. 3 f) g) and art. 4 no. 2 a) b)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Operations of art. 42 a) b) c)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Reverse charge - Construction services"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Reverse charge - Gold"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Reverse charge - Greenhouse gas emissions"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Reverse charge - Real estate with exemption waiver"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Reverse charge - Scrap"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "06-A: Total"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
 msgid ""
 "<span class=\"text-muted\">\n"
 "                        Please indicate if the following operations have been completed:\n"
 "                    </span>"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_stmt_log_id
+msgid ""
+"A valid and reported statement found in the dataport logs. The system will "
+"try to fill this field with the most recent one."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -36,6 +103,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__ws_submission_ref
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__ws_submission_ref
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__ws_submission_ref
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__ws_submission_ref
 msgid "AT Declaration Id"
 msgstr ""
 
@@ -46,6 +115,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__accept_alerts
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__accept_alerts
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__accept_alerts
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__accept_alerts
 msgid "Accept Alerts"
 msgstr ""
 
@@ -65,6 +136,18 @@ msgid "Accounts"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Adjustments in favour of the State"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Adjustments in favour of the taxable person"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col9
 msgid "Ajustamentos / outras variações no capital próprio"
 msgstr ""
@@ -76,6 +159,8 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__is_alternate_accountant
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__is_alternate_accountant
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__is_alternate_accountant
 msgid "Altern. Accountant?"
 msgstr ""
 
@@ -86,7 +171,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__amount
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__amount
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__amount
 msgid "Amount"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__amount_rounded
+msgid "Amount (EUR)"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -97,10 +189,174 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__refund_amount
+msgid ""
+"Amount of the refund request (field 95). Leave it at zero to request the "
+"whole credit of field 94."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_asset
+msgid ""
+"Amount to add to field 20 regarding deductible taxes on asset operations."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_red
+msgid ""
+"Amount to add to field 21 regarding deductible reduced rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_std
+msgid ""
+"Amount to add to field 22 regarding deductible standard rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_interm
+msgid ""
+"Amount to add to field 23 regarding deductible intermediate rate taxes on "
+"inventory operations."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_ogs
+msgid ""
+"Amount to add to field 24 regarding deductible taxes on operations with "
+"other goods and services."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Annex %(annex)s - the annex rows add up to %(total)s while field %(annex)s "
+"holds %(field)s. Adjustments under norms outside the annex, or without a "
+"norm, explain the difference."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Annex %(annex)s - the following credit notes are missing the VAT Adjustment "
+"Norm: %(names)s"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Annex %(annex)s - this period has adjustments under norm '%(norm)s' (VAT "
+"%(tax)s). Their amount is included in field %(annex)s, but the AT XML schema"
+" doesn't provide their annex breakdown yet, so they must be manually filled "
+"in the 'Regularizações abrangidas pela verba 2.42 da lista I' field of the "
+"annex in the portal, without changing field %(annex)s."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_40_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__annex_40
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Annex 40"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_41_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__annex_41
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Annex 41"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Annex R"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Annex R #1"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Annex R #2"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_r1_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__annex_r1
+msgid "Annex R - Region #1"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_r2_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__annex_r2
+msgid "Annex R - Region #2"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_annex_r_azo
+msgid "Annex R Azores"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_annex_r_cnt
+msgid "Annex R Continent"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_annex_r_mad
+msgid "Annex R Madeira"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Annex R region #1 - Deductible tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Annex R region #1 - Settled tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Annex R region #2 - Deductible tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Annex R region #2 - Settled tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_r1_region
+msgid "Annex R1 Region"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__annex_r2_region
+msgid "Annex R2 Region"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m04
 msgid "Apr"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__article
+msgid "Article Code"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -119,6 +375,14 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m08
 msgid "Aug"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r1_region__pt-ac
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r2_region__pt-ac
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__hq_location__pt-ac
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__region__pt-ac
+msgid "Azores"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -159,12 +423,344 @@ msgid "Balance Sheet Wizard Lines"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C002"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C003"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C004"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C005"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C006"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C007"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C008"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C009"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C010"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C011"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C012"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C013"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C014"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C015"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C016"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C017"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C018"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C019"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C020"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C021"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C022"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C023"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C024"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C040"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C041"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C061"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C063"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C064"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C065"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C066"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C067"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C068"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C069"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C070"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C071"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C072"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C073"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C074"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C090"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C091"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C092"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C093"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C094"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C095"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C096"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C097"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C098"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C099"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C100"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C101"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C102"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C103"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C104"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C105"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "C106"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col1
 msgid "Capital subscrito"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__certified_accountant_vat
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__certified_accountant_vat
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__certified_accountant_vat
 msgid "Certified Accountant"
 msgstr ""
 
@@ -175,7 +771,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__representative_user_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__representative_user_id
 msgid "Certified Accountant User"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Change Options"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -206,6 +809,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__code
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
 msgid "Code"
 msgstr ""
@@ -217,6 +822,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__company_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__company_id
 msgid "Company"
 msgstr ""
 
@@ -227,6 +834,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__company_eac
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__company_eac
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__company_eac
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__company_eac
 msgid "Company EAC"
 msgstr ""
 
@@ -242,6 +851,37 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__comparison_mode
 msgid "Compare by Month"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__consignment_line_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__consignment_code
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__kind__consignment
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
+msgid "Consignment"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__consignment_code__1
+msgid "Consignment Invoices"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__consignment_code__2
+msgid "Consignment Returns"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r1_region__pt
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r2_region__pt
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__hq_location__pt
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__region__pt
+msgid "Continent"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__country_code
+msgid "Country"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -262,6 +902,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__create_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__create_uid
 msgid "Created by"
 msgstr ""
 
@@ -278,6 +922,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__create_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__create_date
 msgid "Created on"
 msgstr ""
 
@@ -294,7 +942,24 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__currency_id
 msgid "Currency"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__partner_id
+msgid "Customer"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Customers annex - document %(name)s has a line with the field 8 tag but no "
+"VAT tax; it was left out."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -309,6 +974,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__date_from
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__date_from
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__date_from
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__date_from
 msgid "Date From"
 msgstr ""
 
@@ -319,6 +986,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__date_to
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__date_to
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__date_to
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__date_to
 msgid "Date To"
 msgstr ""
 
@@ -331,7 +1000,64 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__declaration_type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__declaration_type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__declaration_type
 msgid "Declaration Type"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_asset
+msgid "Deductible Tax - Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_interm
+msgid "Deductible Tax - Interm. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_ogs
+msgid "Deductible Tax - OGS"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_red
+msgid "Deductible Tax - Red. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__deduct_tax_invent_std
+msgid "Deductible Tax - Std. Rate Inventory"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Deductible tax - Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Deductible tax - Inventory at the intermediate rate"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Deductible tax - Inventory at the reduced rate"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Deductible tax - Inventory at the standard rate"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Deductible tax - Other goods and services"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -342,6 +1068,7 @@ msgid "Description"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_account_move__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__display_name
@@ -356,7 +1083,25 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__display_name
 msgid "Display Name"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/models/account_move.py:0
+msgid ""
+"Document %(doc_name)s contains a tax (%(tax_name)s) with a Periodic "
+"Statement Feature, without a defined Export Number. Please define one and "
+"try again."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__document_number
+msgid "Document No."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -366,6 +1111,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__domain
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__domain
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__domain
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__domain
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__domain
 msgid "Domain"
 msgstr ""
 
@@ -376,6 +1123,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__email_partner_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__email_partner_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__email_partner_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__email_partner_ids
 msgid "Email Recipients"
 msgstr ""
 
@@ -386,6 +1135,8 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_status
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_status
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__representative_user_status
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__representative_user_status
 msgid ""
 "Enable when the certified accountant has full declarative powers for the "
 "taxpayer; the taxpayer password is then not required."
@@ -398,6 +1149,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__error
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__error
 msgid "Error"
 msgstr ""
 
@@ -408,6 +1161,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_code
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__error_code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__error_code
 msgid "Error Code"
 msgstr ""
 
@@ -418,6 +1173,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_detail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_detail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__error_detail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__error_detail
 msgid "Error Detail"
 msgstr ""
 
@@ -428,6 +1185,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error_message
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error_message
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__error_message
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__error_message
 msgid "Error Message"
 msgstr ""
 
@@ -445,8 +1204,32 @@ msgid "Excedentes de revalorização"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Excess to carry forward"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Excess to carry forward from the previous period"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__exclude_pl_calc
 msgid "Exclude P/L Journals"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Exempt operations with deduction right"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Exempt operations without deduction right"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -470,6 +1253,7 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_action
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__statement_id
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__exploration_map
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_exploration_map_wizard__statement_type__exploration_map
 #: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_menu
 msgid "Exploration Map"
@@ -492,6 +1276,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_pdf_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_pdf_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__export_pdf_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__export_pdf_button
 msgid "Export Pdf Button"
 msgstr ""
 
@@ -502,6 +1288,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_txt_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_txt_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__export_txt_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__export_txt_button
 msgid "Export Txt Button"
 msgstr ""
 
@@ -512,7 +1300,20 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__export_xml_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__export_xml_button
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__export_xml_button
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__export_xml_button
 msgid "Export Xml Button"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Export of goods"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Extra Deductible Taxes"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -529,6 +1330,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__get_proof
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__get_proof
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__get_proof
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__get_proof
 msgid "Fetch Receipt"
 msgstr ""
 
@@ -539,7 +1342,37 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__get_proof
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__get_proof
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__get_proof
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__get_proof
 msgid "Fetch the submission receipt after a successful submission."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__field_number
+msgid "Field"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Field %s"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Field 7 - the journal items of the period hold %(amount)s of intra-community"
+" operations, but no reported recapitulative statement was found for the "
+"period. Extract it first or fill in the recapitulative total."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Field 7 - the recapitulative total (%(total)s) differs from the intra-"
+"community operations found in the journal items of the period (%(control)s)."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -549,6 +1382,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__data
 msgid "File"
 msgstr ""
 
@@ -559,11 +1394,15 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__filename
 msgid "Filename"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__justifiable_reason
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__justifiable_reason
 msgid ""
 "Fill only if the statement is past due and the reason is justifiable "
 "according to art.º 12.º-A do DL n.º 452/99, 5-nov"
@@ -581,6 +1420,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__format
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__format
 msgid "Format"
 msgstr ""
 
@@ -591,6 +1432,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__formula
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__formula
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__formula
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__formula
 msgid "Formula"
 msgstr ""
 
@@ -601,10 +1444,43 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_status
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_status
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__representative_user_status
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__representative_user_status
 msgid "Full powers of Declaration"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__nature__1
+msgid "Goods"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__hq_location
+msgid "HQ Location"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_buyer_settled_operations
+msgid "Has Buyer Settled Operations"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_deductible_operations
+msgid "Has Deductible Operations"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_operations_with_tax
+msgid "Has Operations With Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__has_operations_without_tax
+msgid "Has Operations Without Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_account_move__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__id
@@ -619,7 +1495,33 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__id
 msgid "ID"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__paid_tax_import_amount
+msgid "Import. w/ paid tax - Amount"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__paid_tax_import_base
+msgid "Import. w/ paid tax - Base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Imports settled by the declarant - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Imports settled by the declarant - Tax base"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -647,6 +1549,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__indentation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__indentation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__indentation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__indentation
 msgid "Indentation"
 msgstr ""
 
@@ -657,6 +1561,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__info
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__info
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__info
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__info
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__info
 msgid "Info"
 msgstr ""
 
@@ -667,9 +1573,77 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__log_on_close
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__log_on_close
 msgid ""
 "Insert a record in the dataport log together with a copy of the imported or "
 "exported file. "
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intermediate rate operations - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intermediate rate operations - Tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions - Art. 15 CIVA or RITI"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions - Art. 22 no. 3, 4 and 5 RITI"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions - Total tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions - Total tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions settled by the declarant - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community acquisitions settled by the declarant - Tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community exempt operations (recapitulative statement)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community services settled by the declarant - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Intra-community services settled by the declarant - Tax base"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -681,6 +1655,19 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
 msgid "Inventory Transfers"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Invoice Lines"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__invoicing_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__kind__invoicing
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
+msgid "Invoicing"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -707,12 +1694,19 @@ msgid "Jan"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__journal_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__journal_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__journal_ids
 msgid "Journals"
 msgstr ""
 
@@ -732,7 +1726,14 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__justifiable_reason
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__justifiable_reason
 msgid "Justifiable Reason"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__kind
+msgid "Kind"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -748,6 +1749,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__write_uid
 msgid "Last Updated by"
 msgstr ""
 
@@ -764,12 +1769,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__legal_representative_vat
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__legal_representative_vat
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__legal_representative_vat
 msgid "Legal Representative"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Liquidation No."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -779,6 +1795,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_as_reported
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_as_reported
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__log_as_reported
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__log_as_reported
 msgid "Log As Reported"
 msgstr ""
 
@@ -789,7 +1807,22 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_on_close
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_on_close
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__log_on_close
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__log_on_close
 msgid "Log On Close"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r1_region__pt-ma
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__annex_r2_region__pt-ma
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__hq_location__pt-ma
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__region__pt-ma
+msgid "Madeira"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Manual Additions"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -804,6 +1837,11 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m05
 msgid "May"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__period_month
+msgid "Month"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -842,11 +1880,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__name
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_exploration_map_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_profit_loss_wizard_form
 msgid "Name"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__nature
+msgid "Nature"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -859,6 +1904,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_monthly_stamp_duty_statement_wizard.py:0
 msgid "None."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__norm_id
+msgid "Norm"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -876,6 +1926,24 @@ msgid "Oct"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Operations carried out abroad"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Operations with national customers"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Other exempt operations with deduction right"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col6
 msgid "Outras reservas"
 msgstr ""
@@ -886,12 +1954,23 @@ msgid "Outros instrumentos de capital próprio"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__overdue
+msgid "Overdue"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_form
 msgid "P/L Calculation"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Paid Tax Imports"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__partner_id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__partner_id
 msgid "Partner"
 msgstr ""
 
@@ -902,6 +1981,8 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__email_partner_ids
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__email_partner_ids
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__email_partner_ids
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__email_partner_ids
 msgid ""
 "Partners the Tax Authority document (submission receipt or payment "
 "reference) will be emailed to."
@@ -914,6 +1995,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__payment_reference_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__payment_reference_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__payment_reference_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__payment_reference_data
 msgid "Payment Reference"
 msgstr ""
 
@@ -924,6 +2007,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__payment_reference_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__payment_reference_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__payment_reference_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__payment_reference_filename
 msgid "Payment Reference Filename"
 msgstr ""
 
@@ -934,7 +2019,31 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__period
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__period
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__period
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__period
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__period
 msgid "Period"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
+msgid "Please insert a VAT No. on customer %s and try again."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__vat_prefix
+msgid "Prefix"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__previous_excess
+msgid "Previous Excess"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__previous_stmt_log_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Previous Statement"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -965,6 +2074,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__proof_filename
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__proof_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__proof_filename
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__proof_filename
 msgid "Proof Filename"
 msgstr ""
 
@@ -992,12 +2103,97 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason_end_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__justifiable_reason_end_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__justifiable_reason_end_date
 msgid "Reason Fact End"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__justifiable_reason_start_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__justifiable_reason_start_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__justifiable_reason_start_date
 msgid "Reason Fact Start"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_control
+msgid "Recap Control"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Recap. Statement"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__vat_recap
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard__statement_type__vat_recap
+msgid "Recapitulative Declaration"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_stmt_log_id
+msgid "Recapitulative Statement"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_total
+msgid "Recapitulative Statement Total"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Reduced rate operations - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Reduced rate operations - Tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__refund_customer_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__refund_customers
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Refund - Customers"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__refund_vendor_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__refund_vendors
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Refund - Vendors"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__refund_amount
+msgid "Refund Amount"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Refund Lines"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Refund requested"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__region
+msgid "Region"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__previous_stmt_log_id
+msgid ""
+"Reported VAT periodic statement of the previous period, found in the "
+"dataport logs. Its excess to carry forward fills field 61."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1008,6 +2204,16 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_06_02
 msgid "Represented Entity"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__request_number
+msgid "Request No."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__request_refund
+msgid "Request Refund"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1026,8 +2232,14 @@ msgid "Resultados transitados"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__rosto_line_ids
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard_line__section__rosto
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Rosto"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_m
-#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_m
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_m
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_m
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_m
@@ -1036,7 +2248,6 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_p
-#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_p
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_p
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_p
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_p
@@ -1045,7 +2256,6 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_base_sn
-#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_base_sn
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_base_sn
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_base_sn
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_base_sn
@@ -1054,7 +2264,6 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__chart_template__pt_micro
-#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_cash_flow_statement_wizard__chart_template__pt_micro
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__chart_template__pt_micro
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__chart_template__pt_micro
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_ies_mixin__chart_template__pt_micro
@@ -1062,10 +2271,26 @@ msgid "SNC Microentidades - M"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__section
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Section"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__declaration_type
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__declaration_type
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__declaration_type
 msgid ""
 "Select whether this is the first declaration for the given period or a "
 "replacement."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
+msgid ""
+"Select whether this is the first declaration for the period or a "
+"replacement. The replacement details are handled in the Tax Authorities "
+"website after importing the file."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1082,7 +2307,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__sequence
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__sequence
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__sequence
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__sequence
 msgid "Sequence"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard_line__nature__5
+msgid "Services"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1092,10 +2324,22 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__log_as_reported
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__log_as_reported
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__log_as_reported
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__log_as_reported
 msgid ""
 "Set True if the file has been successfully submitted to the intended "
 "destination. In that case the dataport log record will be marked as "
 "Reported."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__request_refund
+msgid "Set True if you wish to request a VAT refund (if any)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__overdue
+msgid "Set when the statement is filed past its due date"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1105,6 +2349,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_compute
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_compute
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_compute
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_compute
 msgid "Show Button Compute"
 msgstr ""
 
@@ -1115,6 +2361,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_csv
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_csv
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_csv
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_csv
 msgid "Show Button Export Csv"
 msgstr ""
 
@@ -1125,6 +2373,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_pdf
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_pdf
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_pdf
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_pdf
 msgid "Show Button Export Pdf"
 msgstr ""
 
@@ -1135,6 +2385,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_txt
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_txt
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_txt
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_txt
 msgid "Show Button Export Txt"
 msgstr ""
 
@@ -1145,6 +2397,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_webservice
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_webservice
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_webservice
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_webservice
 msgid "Show Button Export Webservice"
 msgstr ""
 
@@ -1155,6 +2409,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_xlsx
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_xlsx
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_xlsx
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_xlsx
 msgid "Show Button Export Xlsx"
 msgstr ""
 
@@ -1165,6 +2421,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_export_xml
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_export_xml
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_export_xml
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_export_xml
 msgid "Show Button Export Xml"
 msgstr ""
 
@@ -1175,6 +2433,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_mail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_mail
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_mail
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_mail
 msgid "Show Button Mail"
 msgstr ""
 
@@ -1185,6 +2445,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_print
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_print
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_print
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_print
 msgid "Show Button Print"
 msgstr ""
 
@@ -1195,6 +2457,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_select_all
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_select_all
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_select_all
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_select_all
 msgid "Show Button Select All"
 msgstr ""
 
@@ -1205,6 +2469,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_select_none
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_select_none
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_select_none
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_select_none
 msgid "Show Button Select None"
 msgstr ""
 
@@ -1215,6 +2481,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__show_button_ws_oa
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__show_button_ws_oa
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_button_ws_oa
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__show_button_ws_oa
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__show_button_ws_oa
 msgid "Show Button Ws Oa"
 msgstr ""
 
@@ -1224,13 +2492,32 @@ msgid "Stamp Duty Code"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Standard rate operations - Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Standard rate operations - Tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__state
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__state
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__state
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__state
 msgid "State"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Statement"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1245,6 +2532,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__line_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__line_ids
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__line_ids
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_form
 msgid "Statement Lines"
 msgstr ""
@@ -1256,6 +2545,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__statement_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__statement_type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__statement_type
 msgid "Statement Type"
 msgstr ""
 
@@ -1264,6 +2555,7 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_action
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__statement_id
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__equity_changes
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__statement_type__equity_changes
 #: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_menu
 msgid "Statement of Changes in Equity"
@@ -1286,6 +2578,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__proof_data
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__proof_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__proof_data
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__proof_data
 msgid "Submission Proof"
 msgstr ""
 
@@ -1296,6 +2590,8 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__accept_alerts
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__accept_alerts
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__accept_alerts
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__accept_alerts
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__accept_alerts
 msgid ""
 "Submit the declaration even if the AT reports non-blocking alerts "
 "(aceitaAlertas)."
@@ -1303,7 +2599,20 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__subst_fact_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__subst_fact_date
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__subst_fact_date
 msgid "Subst. Fact Date"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "Tax"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Tax %(tax)s has no periodic statement tag on any of its %(line_type)s."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1313,12 +2622,34 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__q04_07
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__tax_base
 msgid "Tax Base"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__tax_office_code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__tax_office_code
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__tax_office_code
 msgid "Tax Office Code"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_control
+msgid ""
+"Tax base of the intra-community operations found in the journal items of the"
+" period, to check against the recapitulative total."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Tax credit to recover"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Tax to pay"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1328,6 +2659,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_password
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_password
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__representative_user_password
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__representative_user_password
 msgid "Taxpayer Password"
 msgstr ""
 
@@ -1338,8 +2671,49 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
+msgid "The VAT No. is missing on customer %s. Please insert it and try again."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "The VAT periodic statement covers a whole month or quarter."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "The company has no VAT number."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
+msgid ""
+"The country field is missing on customer %s. Please insert it and try again."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_monthly_stamp_duty_statement_wizard.py:0
 msgid "The limit for the Monthly Stamp Duty is 99999 lines.\n"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
+msgid "The recapitulative statement covers a whole month or quarter."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"There are credit notes in the period related to invoices from a different "
+"period. They are left out of this statement: report them in the replacement "
+"statement of the period of each invoice, and in the replacement "
+"recapitulative statement when they change field 7."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1349,6 +2723,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__total
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_monthly_stamp_duty_statement_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
 msgid "Total"
 msgstr ""
 
@@ -1361,8 +2737,53 @@ msgid "Total (%s)"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__total_amount
+msgid "Total Amount"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__total_goods
+msgid "Total Goods"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__total_services
+msgid "Total Services"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col11
 msgid "Total do capital próprio"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_total
+msgid ""
+"Total of the tax base as declared in the recapitulative statement regarding "
+"the same period. The system will try to get this value from the log entry."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Total tax base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Total tax in favour of the State"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "Total tax in favour of the taxable person"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
+msgid "Totals"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1393,6 +2814,8 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__error
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__error
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__error
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__error
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__error
 msgid "True if there's an error or warning in the dataport operation"
 msgstr ""
 
@@ -1404,11 +2827,15 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__type
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__type
 msgid "Type"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__is_under_art_119_1d
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__is_under_art_119_1d
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__is_under_art_119_1d
 msgid "Under art. 119º nº1-d?"
 msgstr ""
 
@@ -1419,9 +2846,76 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__representative_user_id
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__representative_user_id
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__representative_user_id
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__representative_user_id
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__representative_user_id
 msgid ""
 "User holding the certified accountant (TOC) credentials used for webservice "
 "submission when the logged-in user is not the accountant."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__vat_number
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__vat_number
+msgid "VAT No."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__vat_periodic
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__statement_type__vat_periodic
+msgid "VAT Periodic Declaration"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__vat_periodic_r_azo
+msgid "VAT Periodic Declaration - Annex R Azores"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__vat_periodic_r_cnt
+msgid "VAT Periodic Declaration - Annex R Continent"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__vat_periodic_r_mad
+msgid "VAT Periodic Declaration - Annex R Madeira"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_menu
+msgid "VAT Periodic Statement"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_vat_periodic_statement_wizard
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__statement_id
+msgid "VAT Periodic Statement Wizard"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_vat_periodic_statement_wizard_line
+msgid "VAT Periodic Statement Wizard Lines"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_action
+#: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_menu
+msgid "VAT Recapitulative Statement"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_vat_recap_statement_wizard
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__statement_id
+msgid "VAT Recapitulative Statement Wizard"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_vat_recap_statement_wizard_line
+msgid "VAT Recapitulative Statement Wizard Lines"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1431,7 +2925,28 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__validate
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__validate
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__validate
 msgid "Validate"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__previous_excess
+msgid "Value of field 96 of the previous periodic VAT statement"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__paid_tax_import_base
+msgid ""
+"Value to add to field 18: total tax base regarding import operations of "
+"goods for which the VAT is already paid for."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__paid_tax_import_amount
+msgid ""
+"Value to add to field 19: total tax amount regarding import operations of "
+"goods for which the VAT is already paid for."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1441,6 +2956,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__values
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__values
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__values
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__values
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__values
 msgid "Values"
 msgstr ""
 
@@ -1451,7 +2968,27 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__vat_legal_representative
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__vat_legal_representative
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__vat_legal_representative
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__vat_legal_representative
 msgid "Vat Legal Representative"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Vendors annex - field %(field)s has rows identifying non-EU vendors, which "
+"the AT does not accept. These operations must be reported under the reverse "
+"charge (RC) or import (IM) classification, or by the import liquidation "
+"number - please review the following taxes: %(taxes)s."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid ""
+"Vendors annex - field %(field)s has rows without the vendor's VAT number or "
+"an import liquidation number. Please fill in the VAT number of: %(names)s."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1461,6 +2998,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_monthly_stamp_duty_statement_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_profit_loss_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
 msgid "View"
 msgstr ""
 
@@ -1472,6 +3011,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__warnings
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__warnings
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
 msgid "Warnings"
 msgstr ""
 
@@ -1482,6 +3025,8 @@ msgstr ""
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__validate
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__validate
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__validate
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__validate
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__validate
 msgid ""
 "When enabled the file will undergo a technical inspection (XSD schema) before being delivered to the user. As it's a very time consuming task, you may want to disable it when a large file is expected.\n"
 "Uncheck when you prefer to use an external validator."
@@ -1494,13 +3039,70 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__ws_operation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__ws_operation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__ws_operation
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__ws_operation
 msgid "Ws Operation"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__list_tag
+msgid "XML List"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__period_year
+msgid "Year"
 msgstr ""
 
 #. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_statement_ies_mixin.py:0
 msgid "Zero balance expected"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[18] Tax Base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[19] Tax Amount"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[20] Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[21] Red. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[22] Std. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[23] Intrm. Rate Invent."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[24] Other Goods/Serv."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[61] Excess"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
+msgid "[7] Total"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1533,4 +3135,22 @@ msgstr ""
 msgid ""
 "[Q6-C01,C02] Select whether this is the first declaration for the given "
 "period or a replacement."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "to"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "unknown"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
+msgid "unknown tax"
 msgstr ""

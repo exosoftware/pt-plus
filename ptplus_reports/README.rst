@@ -27,6 +27,18 @@ Available soon.
 Changelog
 =========
 
+1.4.3 (2026-09-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When a statement is closed with the log option on, its Dataport Log entry
+  now records whether the statement was marked as reported and keeps the
+  figures that later statements read from it (for instance the excess to
+  carry forward to the next VAT period). Until now the entries written from
+  the new statement screen were saved without that information, so a
+  statement could not pick up the values of the previous one from the log.
+
 1.4.2 (2026-08-24)
 ~~~~~~~~~~~~~~~~~~~
 

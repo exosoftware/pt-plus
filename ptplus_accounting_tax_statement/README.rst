@@ -45,6 +45,15 @@ Available soon.
 Changelog
 =========
 
+5.1.10 (2026-10-01)
+~~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The VAT periodic statement and its Annex R are computed much faster: a
+  statement that took over a minute now takes a few seconds, with exactly the
+  same figures.
+
 5.1.9 (2026-09-22)
 ~~~~~~~~~~~~~~~~~~~
 

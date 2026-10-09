@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-27 15:55+0000\n"
-"PO-Revision-Date: 2026-07-27 17:01+0100\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus/pt/>\n"
@@ -17,6 +15,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 3.9\n"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "%(label)s expired on %(date)s"
+msgstr "%(label)s expirou em %(date)s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "%(label)s valid until %(date)s"
+msgstr "%(label)s com validade até %(date)s"
 
 #. module: ptplus
 #. odoo-python
@@ -868,6 +878,29 @@ msgstr ""
 "title=\"Data\"/>"
 
 #. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid ""
+"<span class=\"o_form_label text-success\" "
+"invisible=\"l10n_pt_at_certificates_expired or "
+"l10n_pt_at_certificates_unreadable\">Certificates configured</span>\n"
+"                            <span class=\"o_form_label text-danger\" "
+"invisible=\"not l10n_pt_at_certificates_expired\">Certificates expired</"
+"span>\n"
+"                            <span class=\"o_form_label text-danger\" "
+"invisible=\"not l10n_pt_at_certificates_unreadable\">Certificates file not "
+"readable</span>"
+msgstr ""
+"<span class=\"o_form_label text-success\" "
+"invisible=\"l10n_pt_at_certificates_expired or "
+"l10n_pt_at_certificates_unreadable\">Certificados configurados</span>\n"
+"                            <span class=\"o_form_label text-danger\" "
+"invisible=\"not l10n_pt_at_certificates_expired\">Certificados expirados</"
+"span>\n"
+"                            <span class=\"o_form_label text-danger\" "
+"invisible=\"not l10n_pt_at_certificates_unreadable\">Ficheiro de "
+"certificados ilegível</span>"
+
+#. module: ptplus
 #: model_terms:ir.ui.view,arch_db:ptplus.fiscal_document_type_view_form
 msgid "<span class=\"o_stat_text\">Documents</span>"
 msgstr "<span class=\"o_stat_text\">Documentos</span>"
@@ -1039,6 +1072,35 @@ msgid "A5 - Rendimentos do trabalho dependente não sujeitos a retenção (...)"
 msgstr ""
 
 #. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "AT Certificates"
+msgstr "Certificados AT"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_set
+msgid "AT Certificates Configured"
+msgstr "Certificados AT configurados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_expired
+msgid "AT Certificates Expired"
+msgstr "Certificados AT expirados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_unreadable
+msgid "AT Certificates Unreadable"
+msgstr "Certificados AT ilegíveis"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "AT public key"
+msgstr "Chave pública da AT"
+
+#. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_account_bank_statement_line__atcud
 #: model:ir.model.fields,field_description:ptplus.field_account_move__atcud
 #: model:ir.model.fields,field_description:ptplus.field_account_payment__atcud
@@ -1127,6 +1189,8 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment_register__source_billing__p
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__source_billing__p
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__source_billing__p
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__source_billing__p
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__source_billing__p
 msgid "Application"
 msgstr "Aplicação"
 
@@ -1288,6 +1352,23 @@ msgstr "CSV"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__format__csv
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__format__csv
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__format__csv
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__format__csv
 msgid "CSV File"
 msgstr "Ficheiro CSV"
 
@@ -1323,6 +1404,8 @@ msgstr "Cancelar Série"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment__fiscal_document_status__a
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__fiscal_document_status__a
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__state__cancel
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__fiscal_document_status__a
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__fiscal_document_status__a
 msgid "Cancelled"
 msgstr "Cancelado"
 
@@ -1330,6 +1413,41 @@ msgstr "Cancelado"
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__type__rc
 msgid "Cash Basis Receipt"
 msgstr "Recibo em Reg. de IVA de Caixa"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Certificates configured."
+msgstr "Certificados configurados."
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Certificates file"
+msgstr "Ficheiro de certificados"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_info
+msgid "Certificates in use"
+msgstr "Certificados em uso"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid ""
+"Certificates used to reach the Tax Authority webservices and to sign fiscal "
+"documents. Your software provider's ones are used by default. Upload a file "
+"to use your own instead (only if you have your own certificate registered "
+"with AT); removing it goes back to the ones shipped with the module. "
+"Uploaded certificates are always stored encrypted, once for the whole "
+"database: every company using the same certification services backend shares "
+"them."
+msgstr ""
+"Certificados usados para aceder aos serviços web da Autoridade Tributária e "
+"para assinar os documentos fiscais. Por omissão são usados os do seu "
+"fornecedor de software. Carregue um ficheiro para usar os seus (apenas se "
+"tiver certificado próprio registado na AT); ao removê-lo volta aos que vêm "
+"com o módulo. Os certificados carregados são sempre guardados encriptados, "
+"uma única vez para toda a base de dados: todas as empresas que usem o mesmo "
+"serviço de certificação partilham-nos."
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_res_company__l10n_pt_cert_service_backend
@@ -1344,6 +1462,12 @@ msgid ""
 msgstr ""
 "Escolha onde quer que o código QR seja impresso nos relatórios de documentos "
 "fiscais"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Client certificate"
+msgstr "Certificado de cliente"
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__wizard_webservice_series_comm__service_name__finalizarserie
@@ -1499,10 +1623,30 @@ msgstr ""
 "{certificate_number}.{private_key_version}"
 
 #. module: ptplus
+#: model:ir.model,name:ptplus.model_res_country
+msgid "Country"
+msgstr "País"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_country__code_alpha3
+msgid "Country Code (3-letter)"
+msgstr "Código do país (3 letras)"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_country__code_numeric
+msgid "Country Code (numeric)"
+msgstr "Código do país (numérico)"
+
+#. module: ptplus
 #: model_terms:ir.ui.view,arch_db:ptplus.product_template_form_view_pt
 #: model_terms:ir.ui.view,arch_db:ptplus.view_tax_form_pt
 msgid "Country/Region"
 msgstr "País/Região"
+
+#. module: ptplus
+#: model:ir.model,website_form_label:ptplus.model_res_partner
+msgid "Create a Customer"
+msgstr "Criar um cliente"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_dataport_export__create_uid
@@ -1699,6 +1843,7 @@ msgstr "Direção"
 #: model:ir.model.fields,field_description:ptplus.field_publisher_warranty_contract__display_name
 #: model:ir.model.fields,field_description:ptplus.field_res_company__display_name
 #: model:ir.model.fields,field_description:ptplus.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus.field_res_country__display_name
 #: model:ir.model.fields,field_description:ptplus.field_res_partner__display_name
 #: model:ir.model.fields,field_description:ptplus.field_res_users__display_name
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_failure__display_name
@@ -1715,8 +1860,8 @@ msgstr "Tipo de Doc."
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
-"Document %(doc_name)s contains a VAT tax (%(tax_name)s) with an obsolete M08 or M03 "
-"VAT exemption reason. Please choose another and try again."
+"Document %(doc_name)s contains a VAT tax (%(tax_name)s) with an obsolete M08 "
+"or M03 VAT exemption reason. Please choose another and try again."
 msgstr ""
 "O documento %(doc_name)s contém um IVA (%(tax_name)s) com um motivo de "
 "isenção de IVA M08 ou M03 obsoleto. Escolha outro e tente novamente."
@@ -1736,11 +1881,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
-"Document %(doc_name)s contains a line with a negative tax amount (%"
-"(tax_name)s). Please choose another and try again."
+"Document %(doc_name)s contains a line with a negative tax amount "
+"(%(tax_name)s). Please choose another and try again."
 msgstr ""
-"O documento %(doc_name)s contém uma linha com um valor de imposto negativo (%"
-"(tax_name)s). Por favor, escolha outro e tente novamente."
+"O documento %(doc_name)s contém uma linha com um valor de imposto negativo "
+"(%(tax_name)s). Por favor, escolha outro e tente novamente."
 
 #. module: ptplus
 #. odoo-python
@@ -1818,8 +1963,8 @@ msgid ""
 "Document %(name)s and Fiscal Document Type (%(fdt)s) Source Billing's are "
 "not compatible"
 msgstr ""
-"O document %(name)s e o Método de Origem do Tipo de Documento Fiscal (%"
-"(fdt)s) não são compatíveis"
+"O document %(name)s e o Método de Origem do Tipo de Documento Fiscal "
+"(%(fdt)s) não são compatíveis"
 
 #. module: ptplus
 #. odoo-python
@@ -1839,8 +1984,8 @@ msgstr ""
 msgid ""
 "Document %(name)s has an invalid negative total amount of %(amount_untaxed)s."
 msgstr ""
-"O document %(name)s tem um valor total negativo inválido de %"
-"(amount_untaxed)s."
+"O document %(name)s tem um valor total negativo inválido de "
+"%(amount_untaxed)s."
 
 #. module: ptplus
 #. odoo-python
@@ -1967,6 +2112,17 @@ msgid "Encoding error: %s\n"
 msgstr "Erro de codificação: %s\n"
 
 #. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_config_settings__l10n_pt_at_certificates
+msgid ""
+"Encrypted certificates file supplied by your software provider. It is "
+"stored, still encrypted, for the selected certification services backend, "
+"and shared by every company using that backend."
+msgstr ""
+"Ficheiro de certificados encriptado fornecido pelo seu fornecedor de "
+"software. É guardado, ainda encriptado, para o serviço de certificação "
+"selecionado, e partilhado por todas as empresas que o usem."
+
+#. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__res_company__pt_qrcode_pos__bottom
 msgid "End of last page"
 msgstr "Fim da última página"
@@ -2025,6 +2181,23 @@ msgstr "Excel"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__format__xls
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__format__xls
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__format__xls
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__format__xls
 msgid "Excel File"
 msgstr "Ficheiro Excel"
 
@@ -2383,6 +2556,7 @@ msgstr "Ajuda"
 #: model:ir.model.fields,field_description:ptplus.field_publisher_warranty_contract__id
 #: model:ir.model.fields,field_description:ptplus.field_res_company__id
 #: model:ir.model.fields,field_description:ptplus.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus.field_res_country__id
 #: model:ir.model.fields,field_description:ptplus.field_res_partner__id
 #: model:ir.model.fields,field_description:ptplus.field_res_users__id
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_failure__id
@@ -2414,6 +2588,16 @@ msgstr ""
 #: model:account.account.tag,name:ptplus.tax_tag_is_dm_04_08
 msgid "IS DM [Q04-C08]"
 msgstr ""
+
+#. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_country__code_alpha3
+msgid "ISO 3166-1 alpha-3 (three-letter) code for the country"
+msgstr "Código ISO 3166-1 alpha-3 (três letras) do país"
+
+#. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_country__code_numeric
+msgid "ISO 3166-1 numeric code for the country"
+msgstr "Código ISO 3166-1 numérico do país"
 
 #. module: ptplus
 #: model:account.account.tag,name:ptplus.tax_tag_iva_al_q03_l01
@@ -3062,6 +3246,8 @@ msgstr "Nº do Doc. Integrado"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment_register__source_billing__i
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__source_billing__i
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__source_billing__i
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__source_billing__i
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__source_billing__i
 msgid "Integration"
 msgstr "Integração"
 
@@ -3161,6 +3347,8 @@ msgstr "Fatura-recibo"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_move__fiscal_document_status__f
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment__fiscal_document_status__f
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__fiscal_document_status__f
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__fiscal_document_status__f
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__fiscal_document_status__f
 msgid "Invoiced"
 msgstr "Faturado"
 
@@ -3219,6 +3407,11 @@ msgstr "Justificação"
 #: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
 msgid "Key"
 msgstr "Chave"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_config_settings__l10n_pt_at_certificates_filename
+msgid "L10N Pt At Certificates Filename"
+msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_res_partner__l10n_pt_country_region
@@ -3322,12 +3515,12 @@ msgstr "Informação de Registo"
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m01
-msgid "M01 - Artigo 16.º n.º 6 do CIVA (ou similar)"
+msgid "M01 - Artigo 16.º n.º 6 alíneas a) a d) do CIVA"
 msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m02
-msgid "M02 - Artigo 6.º do Decreto‐Lei n.º 198/90, de 19 de Junho"
+msgid "M02 - Artigo 6.º do Decreto‐Lei n.º 198/90, de 19 de junho"
 msgstr ""
 
 #. module: ptplus
@@ -3337,22 +3530,22 @@ msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m04
-msgid "M04 - Isento Artigo 13.º do CIVA (ou similar)"
+msgid "M04 - Isento Artigo 13.º do CIVA"
 msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m05
-msgid "M05 - Isento Artigo 14.º do CIVA (ou similar)"
+msgid "M05 - Isento Artigo 14.º do CIVA"
 msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m06
-msgid "M06 - Isento Artigo 15.º do CIVA (ou similar)"
+msgid "M06 - Isento Artigo 15.º do CIVA"
 msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m07
-msgid "M07 - Isento Artigo 9.º do CIVA (ou similar)"
+msgid "M07 - Isento Artigo 9.º do CIVA"
 msgstr ""
 
 #. module: ptplus
@@ -3397,7 +3590,7 @@ msgstr ""
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m16
-msgid "M16 - Isento Artigo 14.º do RITI (ou similar)"
+msgid "M16 - Isento Artigo 14.º do RITI"
 msgstr ""
 
 #. module: ptplus
@@ -3446,6 +3639,16 @@ msgid "M33 - IVA - Autoliquidação"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m34
+msgid "M34 - IVA - Autoliquidação"
+msgstr ""
+
+#. module: ptplus
+#: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m35
+msgid "M35 - IVA - Autoliquidação"
+msgstr ""
+
+#. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m40
 msgid "M40 - IVA - Autoliquidação"
 msgstr ""
@@ -3466,8 +3669,23 @@ msgid "M43 - IVA - Autoliquidação"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m44
+msgid "M44 - IVA – Regras específicas - artigo 6.º"
+msgstr ""
+
+#. module: ptplus
+#: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m45
+msgid "M45 - IVA – regime transfronteiriço de isenção"
+msgstr ""
+
+#. module: ptplus
+#: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m46
+msgid "M46 - IVA – e-TaxFree"
+msgstr ""
+
+#. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_exemption_reason__m99
-msgid "M99 - Não sujeito; não tributado (ou similar)"
+msgid "M99 - Não sujeito ou não tributado"
 msgstr ""
 
 #. module: ptplus
@@ -3483,6 +3701,8 @@ msgstr "Madeira"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment_register__source_billing__m
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__source_billing__m
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__source_billing__m
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__source_billing__m
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__source_billing__m
 msgid "Manual/Restore"
 msgstr "Manual/Reposição"
 
@@ -3512,6 +3732,8 @@ msgstr "Método"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__month_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__month_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__month_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__month_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__month_curr
 msgid "Month - Current"
 msgstr "Mês Corrente"
 
@@ -3519,6 +3741,8 @@ msgstr "Mês Corrente"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__month_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__month_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__month_last
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__month_last
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__month_last
 msgid "Month - Last"
 msgstr "Mês Passado"
 
@@ -3554,6 +3778,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus.field_l10n_pt_stamp_duty_code__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Próximo Evento do Calendário de Atividades"
 
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__activity_date_deadline
@@ -3592,6 +3821,8 @@ msgstr "Nenhum."
 #: model:ir.model.fields.selection,name:ptplus.selection__account_move__fiscal_document_status__n
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment__fiscal_document_status__n
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__fiscal_document_status__n
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__fiscal_document_status__n
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__fiscal_document_status__n
 #: model:ir.model.fields.selection,name:ptplus.selection__wizard_webservice_series_comm__sync_series_type__n
 msgid "Normal"
 msgstr "Normal"
@@ -3646,8 +3877,8 @@ msgid ""
 "part and the series number (without the document type) e.g. A/00001"
 msgstr ""
 "Nº do documento a ser integrado. Introduza apenas a parte numérica "
-"incremental e o número da série (excluindo o tipo de documento), p. ex. A/"
-"00001"
+"incremental e o número da série (excluindo o tipo de documento), p. ex. "
+"A/00001"
 
 #. module: ptplus
 #. odoo-python
@@ -3746,6 +3977,23 @@ msgstr "PDF"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__format__pdf
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__format__pdf
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__format__pdf
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__format__pdf
 msgid "PDF File"
 msgstr "Ficheiro PDF"
 
@@ -4161,6 +4409,8 @@ msgstr "Posição do Código QR"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__quarter_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__quarter_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__quarter_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__quarter_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__quarter_curr
 msgid "Quarter - Current"
 msgstr "Trimestre Corrente"
 
@@ -4168,6 +4418,8 @@ msgstr "Trimestre Corrente"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__quarter_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__quarter_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__quarter_last
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__quarter_last
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__quarter_last
 msgid "Quarter - Last"
 msgstr "Trimestre Passado"
 
@@ -4267,6 +4519,11 @@ msgid "RF M30 [Q08-C37]"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__rating_ids
+msgid "Ratings"
+msgstr "Avaliações"
+
+#. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/wizards/dataport_export.py:0
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_series_comm__cancel_reason
@@ -4335,6 +4592,19 @@ msgstr "Erro de Registo"
 #: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
 msgid "Reload"
 msgstr "Recarregar"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid "Remove"
+msgstr "Remover"
+
+#. module: ptplus
+#: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
+msgid ""
+"Remove the uploaded certificates and go back to the ones shipped with the "
+"module?"
+msgstr ""
+"Remover os certificados carregados e voltar aos que vêm com o módulo?"
 
 #. module: ptplus
 #: model:ir.model,name:ptplus.model_ir_actions_report
@@ -4445,6 +4715,8 @@ msgstr "Parceiro Auto-faturação"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_move__fiscal_document_status__s
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment__fiscal_document_status__s
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__fiscal_document_status__s
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__fiscal_document_status__s
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__fiscal_document_status__s
 msgid "Self-billing"
 msgstr "Auto-faturação"
 
@@ -4832,6 +5104,8 @@ msgstr "Sucesso"
 #: model:ir.model.fields.selection,name:ptplus.selection__account_move__fiscal_document_status__r
 #: model:ir.model.fields.selection,name:ptplus.selection__account_payment__fiscal_document_status__r
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document__fiscal_document_status__r
+#: model:ir.model.fields.selection,name:ptplus.selection__sale_order__fiscal_document_status__r
+#: model:ir.model.fields.selection,name:ptplus.selection__stock_picking__fiscal_document_status__r
 msgid "Summary"
 msgstr "Resumo"
 
@@ -4951,8 +5225,36 @@ msgstr "Texto"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__format__txt
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__format__txt
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__format__txt
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__format__txt
 msgid "Text File"
 msgstr "Ficheiro de Texto"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/backends.py:0
+msgid ""
+"The AT certificates configured for this system don't include the software "
+"publisher private key, so fiscal documents can't be signed."
+msgstr ""
+"Os certificados AT configurados neste sistema não incluem a chave privada "
+"do produtor de software, pelo que não é possível assinar os documentos "
+"fiscais."
 
 #. module: ptplus
 #. odoo-python
@@ -5000,6 +5302,45 @@ msgstr ""
 "O ficheiro SAF-T foi extraído com sucesso mas o seu conteúdo não pode ser "
 "validado. Por favor, contacte o seu fornecedor do serviço Odoo ou tente um "
 "processo alternativo de validação. Erro: %s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_users.py:0
+msgid ""
+"The Tax Authority password of user %(user)s is not correctly stored for "
+"company %(company)s. Please open the user, type the password again and save "
+"it."
+msgstr ""
+"A senha na AT do utilizador %(user)s não está guardada corretamente para a "
+"empresa %(company)s. Abra o utilizador, escreva novamente a senha e grave."
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid "The certificates are missing the following entries: %s"
+msgstr "Faltam as seguintes entradas nos certificados: %s"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "The certificates don't state a validity period"
+msgstr "Os certificados não indicam um período de validade"
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid ""
+"The certificates file could not be read. Make sure you are using the file "
+"supplied by your software provider, unchanged."
+msgstr ""
+"Não foi possível ler o ficheiro de certificados. Certifique-se de que está "
+"a usar o ficheiro fornecido pelo seu fornecedor de software, sem alterações."
+
+#. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/certificates.py:0
+msgid "The certificates file is missing the following entries: %s"
+msgstr "Faltam as seguintes entradas no ficheiro de certificados: %s"
 
 #. module: ptplus
 #: model:ir.model.fields,help:ptplus.field_account_tax__l10n_pt_wh_code
@@ -5217,18 +5558,6 @@ msgstr "As datas de início e fim são obrigatórias"
 #: code:addons/ptplus/wizards/dataport_import.py:0
 msgid "The start date must be before the end date"
 msgstr "A data de início deve ser antes da data final"
-
-#. module: ptplus
-#. odoo-python
-#: code:addons/ptplus/models/res_users.py:0
-#, python-format
-msgid ""
-"The Tax Authority password of user %(user)s is not correctly stored for "
-"company %(company)s. Please open the user, type the password again and save "
-"it."
-msgstr ""
-"A senha na AT do utilizador %(user)s não está guardada corretamente para a "
-"empresa %(company)s. Abra o utilizador, escreva novamente a senha e grave."
 
 #. module: ptplus
 #: model:ir.model.fields,help:ptplus.field_account_tax__l10n_pt_wh_taxation_regime
@@ -5484,6 +5813,12 @@ msgid "Username"
 msgstr "Nome de utilizador"
 
 #. module: ptplus
+#. odoo-python
+#: code:addons/ptplus/models/res_config_settings.py:0
+msgid "Using the certificates shipped with the module."
+msgstr "A usar os certificados que vêm com o módulo."
+
+#. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax_group__l10n_pt_genre__iva
 msgid "VAT"
 msgstr "IVA"
@@ -5712,6 +6047,23 @@ msgstr "XML"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__format__xml
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__format__xml
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__format__xml
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__format__xml
 msgid "XML File"
 msgstr "Ficheiro XML"
 
@@ -5719,6 +6071,8 @@ msgstr "Ficheiro XML"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__year_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__year_curr
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__year_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__year_curr
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__year_curr
 msgid "Year - Current"
 msgstr "Ano Corrente"
 
@@ -5726,6 +6080,8 @@ msgstr "Ano Corrente"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export__period__year_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__period__year_last
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__period__year_last
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__period__year_last
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__period__year_last
 msgid "Year - Last"
 msgstr "Ano Passado"
 
@@ -5864,12 +6220,12 @@ msgstr ""
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
 "You're trying to post a document which date (%(date)s) is prior to the last "
-"of the same kind (%(last_doc_name)s). Please change document date to %"
-"(last_doc_date)s or later."
+"of the same kind (%(last_doc_name)s). Please change document date to "
+"%(last_doc_date)s or later."
 msgstr ""
 "Está a tentar registar um documento cuja data (%(date)s) é anterior à da "
-"última do mesmo tipo (%(last_doc_name)s). Por favor, altere a data para %"
-"(last_doc_date)s ou posterior."
+"última do mesmo tipo (%(last_doc_name)s). Por favor, altere a data para "
+"%(last_doc_date)s ou posterior."
 
 #. module: ptplus
 #. odoo-python
@@ -5917,6 +6273,23 @@ msgstr "['2ª via']"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__state__done
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__state__done
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__state__done
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__state__done
 #: model:ir.model.fields.selection,name:ptplus.selection__wizard_webservice_series_comm__state__done
 msgid "done"
 msgstr "concluído"
@@ -5942,6 +6315,23 @@ msgstr "na data do documento"
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_export_saft__state__select
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_import__state__select
 #: model:ir.model.fields.selection,name:ptplus.selection__dataport_mixin__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_aggregate_salary_statement_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_annual_accumulated_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_balance_sheet_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_dmr_statement_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_exploration_map_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_holiday_sheets_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_monthly_stamp_duty_statement_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_multi_statement_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_payroll_income_stmt_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_profit_loss_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_single_report_statement_wizard_experimental__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_statement_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_trial_balance_wizard__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_recap_statement__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__l10n_pt_wizard_statement__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__payroll_statement_wizard_pt__state__select
+#: model:ir.model.fields.selection,name:ptplus.selection__wizard_inventory_statement__state__select
 #: model:ir.model.fields.selection,name:ptplus.selection__wizard_webservice_series_comm__state__select
 msgid "select"
 msgstr "selecione"
@@ -5963,419 +6353,3 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ptplus.selection__product_template__l10n_pt_eco_tax_type__oleos
 msgid "Óleos e óleos usados"
 msgstr ""
-
-#~ msgid "Country"
-#~ msgstr "País"
-
-#~ msgid ""
-#~ "Document %(doc_name)s contains a tax (%(tax_name)s) with an undefined "
-#~ "genre. Please review the tax configuration and try again"
-#~ msgstr ""
-#~ "O documento (%(doc_name)s) contém um imposto (%(tax_name)s) cujo género "
-#~ "está indefinido. Por favor, reveja a configuração do imposto e tente "
-#~ "novamente"
-
-#~ msgid "ISO 3166 numeric code for the country"
-#~ msgstr "Código numérico ISO 3166 para o país"
-
-#~ msgid "Next Activity Calendar Event"
-#~ msgstr "Próximo Evento do Calendário de Atividades"
-
-#~ msgid "21 - Reporte"
-#~ msgstr "21 - Reporte"
-
-#~ msgid "Group By"
-#~ msgstr "Agrupar Por"
-
-#~ msgid "Açores"
-#~ msgstr "Açores"
-
-#~ msgid "Continente"
-#~ msgstr "Continente"
-
-#~ msgid "Extracomunitário"
-#~ msgstr "Extracomunitário"
-
-#~ msgid "Intracomunitário B2B"
-#~ msgstr "Intracomunitário B2B"
-
-#~ msgid "Ratings"
-#~ msgstr "Avaliações"
-
-#~ msgid "VAT 23%"
-#~ msgstr "IVA 23%"
-
-#~ msgid "<span>Total in EUR: </span>"
-#~ msgstr "<span>Total em EUR: </span>"
-
-#~ msgid "Comunicação"
-#~ msgstr "Comunicação"
-
-#~ msgid "Corrente"
-#~ msgstr "Corrente"
-
-#~ msgid "IVA 16% AQ. (Exist.) VTA"
-#~ msgstr "I"
-
-#~ msgid "IVA 6% (Imob.)"
-#~ msgstr "IVA 6% (Imob.)"
-
-#~ msgid "IVA 6% (OBS)"
-#~ msgstr "IVA 6% (OBS)"
-
-#~ msgid "Impostos"
-#~ msgstr "Impostos"
-
-#~ msgid "VAT 0%"
-#~ msgstr "IVA 0%"
-
-#~ msgid "VAT 12%"
-#~ msgstr "IVA 12%"
-
-#~ msgid "VAT 13%"
-#~ msgstr "IVA 13%"
-
-#~ msgid "VAT 16%"
-#~ msgstr "IVA 16%"
-
-#~ msgid "VAT 22%"
-#~ msgstr "IVA 22%"
-
-#~ msgid "VAT 4%"
-#~ msgstr "IVA 4%"
-
-#~ msgid "VAT 5%"
-#~ msgstr "IVA 5%"
-
-#~ msgid "VAT 6%"
-#~ msgstr "IVA 6%"
-
-#~ msgid "VAT 9%"
-#~ msgstr "IVA 9%"
-
-#~ msgid "VAT N/A"
-#~ msgstr "IVA N/S"
-
-#~ msgid "WHT 10%"
-#~ msgstr "RF 10%"
-
-#~ msgid "WHT 11.5%"
-#~ msgstr "RF 11,5%"
-
-#~ msgid "WHT 12.5%"
-#~ msgstr "RF 12,5%"
-
-#~ msgid "WHT 16.5%"
-#~ msgstr "RF 16,5%"
-
-#~ msgid "WHT 2.875%"
-#~ msgstr "RF 2,875%"
-
-#~ msgid "WHT 20%"
-#~ msgstr "RF 20%"
-
-#~ msgid "WHT 21.5%"
-#~ msgstr "RF 21,5%"
-
-#~ msgid "WHT 25%"
-#~ msgstr "RF 25%"
-
-#~ msgid "WHT 28%"
-#~ msgstr "RF 28%"
-
-#~ msgid "WHT 35%"
-#~ msgstr "RF 35%"
-
-#~ msgid "WHT 4.125%"
-#~ msgstr "RF 4,125%"
-
-#~ msgid "WHT 5%"
-#~ msgstr "RF 5%"
-
-#~ msgid "WHT 5.75%"
-#~ msgstr "RF 5,75%"
-
-#~ msgid "WHT 6.25%"
-#~ msgstr "RF 6,25%"
-
-#~ msgid "WHT 8.25%"
-#~ msgstr "RF 8,25%"
-
-#~ msgid "WHT N/A"
-#~ msgstr "RF N/S"
-
-#~ msgid ""
-#~ "<strong>Date:</strong>\n"
-#~ "                <br/>"
-#~ msgstr "<strong>Data:</strong><br/>"
-
-#~ msgid "Commercial Entity"
-#~ msgstr "Entidade Comercial"
-
-#~ msgid "Default"
-#~ msgstr "Predefinição"
-
-#~ msgid ""
-#~ "Document %s has down payment line '%s' which are not accepted.\n"
-#~ "Please consult our documentation on how to handle it: \n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "O documento %s tem uma linha de adiantamento '%s' que não é aceite.\n"
-#~ "Por favor, consulte a nossa documentação sobre como lidar com isso: \n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "IVA DP [7]"
-#~ msgstr "IVA DP [7]"
-
-#~ msgid "IVA DP [8]"
-#~ msgstr "IVA DP [8]"
-
-#~ msgid "IVA DP [9]"
-#~ msgstr "IVA DP [9]"
-
-#~ msgid ""
-#~ "If True, it will allow you to apply the adjustment norm on transactions "
-#~ "generating payable VAT, i.e. your debit notes to your customers or your "
-#~ "supplier's refunds"
-#~ msgstr ""
-#~ "Se assinalado, permitir-lhe-à aplicar a norma de regularização em "
-#~ "transações que geram IVA a pagar, como, por exemplo, notas de débito que "
-#~ "emite aos seus clientes ou notas de crédito emitidas pelos seus "
-#~ "fornecedores"
-
-#~ msgid ""
-#~ "If True, it will allow you to apply the adjustment norm on transactions "
-#~ "generating receivable VAT, i.e. your refunds to your customers or your "
-#~ "supplier's debit notes"
-#~ msgstr ""
-#~ "Se assinalado, permitir-lhe-à aplicar a norma de regularização em "
-#~ "transações que geram IVA a receber, como, por exemplo, notas de crédito "
-#~ "que emite aos seus clientes ou notas de débito emitidas pelos seus "
-#~ "fornecedores"
-
-#~ msgid ""
-#~ "If the active field is set to False, it will allow you to hide the "
-#~ "adjustment norm without removing it."
-#~ msgstr ""
-#~ "Se o campo Ativo não estiver assinalado, poderá esconder a norma de "
-#~ "regularização sem a remover."
-
-#~ msgid ""
-#~ "If the bank account is Portuguese, the account number will be validated "
-#~ "and formatted accordingly."
-#~ msgstr ""
-#~ "Se a conta bancária é Portuguesa, o respetivo número será devidamente "
-#~ "validado e formatado."
-
-#~ msgid "In favor of the Company"
-#~ msgstr "A favor da Empresa"
-
-#~ msgid "In favor of the State"
-#~ msgstr "A favor do Estado"
-
-#~ msgid "Notify Default Channel Name"
-#~ msgstr "Nome Predefinido do Canal de Notificação"
-
-#~ msgid "Notify Success Channel Name"
-#~ msgstr "Nome do Canal de Notificação de Sucesso"
-
-#~ msgid "Origin Quotation"
-#~ msgstr "Orçamento Origem"
-
-#~ msgid "Related Order"
-#~ msgstr "Encomenda Relacionada"
-
-#~ msgid "Taxonomy"
-#~ msgstr "Taxonomia"
-
-#~ msgid "Taxonomy Ref."
-#~ msgstr "Ref. da Taxonomia."
-
-#~ msgid "Taxonomy Reference"
-#~ msgstr "Referência da Taxonomia"
-
-#~ msgid "The order created from this quotation"
-#~ msgstr "A encomenda criada a partir deste orçamento"
-
-#~ msgid "The reference of the quotation that originated the order"
-#~ msgstr "A referência do orçamento que originou a encomenda"
-
-#~ msgid ""
-#~ "Use 'optional' to allow a tax authorities request number to be inserted "
-#~ "in the refund form. Use 'mandatory' to make sure the document will only "
-#~ "validate if the number is inserted. Leave empty if the request number "
-#~ "doesn't apply to the specific norm"
-#~ msgstr ""
-#~ "Utilize 'opcional' para permitir que o nº de pedido prévio à AT seja "
-#~ "inserido no formulário de documentos retificativos. Use 'obrigatório' "
-#~ "assegurar que a validação do documento só poderá ocorrer após introdução "
-#~ "do nº do pedido. Deixe vazia se à norma específica não está associado "
-#~ "qualquer número de pedido prévio"
-
-#~ msgid ""
-#~ "Virtual accounts are accounts whose code doesn't start with an 1, 2, 3, "
-#~ "4, 5, 6, 7 or 8"
-#~ msgstr ""
-#~ "Contas virtuais são contas cujo código não começa com um 1, 2, 3, 4, 5, "
-#~ "6, 7 ou 8"
-
-#, python-format
-#~ msgid ""
-#~ "Document %s contains a product (%s) that has an Internal Reference "
-#~ "exceeding 30 characters. Please decrease it and try again."
-#~ msgstr ""
-#~ "O documento %s contém um produto (%s) que possui uma referência interna "
-#~ "superior a 30 caracteres. Reduza-a e tente novamente."
-
-#~ msgid "Electronic PDF Signatures"
-#~ msgstr "Assinatura Eletrónica de PDFs"
-
-#~ msgid "IVA 0%"
-#~ msgstr "IVA 0%"
-
-#~ msgid "IVA 23% AQ. (OS)"
-#~ msgstr "IVA 23% AQ. (OS)"
-
-#~ msgid "IVA 5%"
-#~ msgstr "IVA 5%"
-
-#, python-format
-#~ msgid "No data found in this period"
-#~ msgstr "Nenhum dado encontrado neste período"
-
-#~ msgid "Payment:"
-#~ msgstr "Pagamento:"
-
-#~ msgid "RF 0%"
-#~ msgstr "RF 0%"
-
-#~ msgid "RF 10%"
-#~ msgstr "RF 10%"
-
-#~ msgid "RF 11,5%"
-#~ msgstr "RF 11,5%"
-
-#~ msgid "RF 12,5%"
-#~ msgstr "RF 12,5%"
-
-#~ msgid "RF 16,5%"
-#~ msgstr "RF 16,5%"
-
-#~ msgid "RF 2,875%"
-#~ msgstr "RF 2,875%"
-
-#~ msgid "RF 20%"
-#~ msgstr "RF 20%"
-
-#~ msgid "RF 21,5%"
-#~ msgstr "RF 21,5%"
-
-#~ msgid "RF 25%"
-#~ msgstr "RF 25%"
-
-#~ msgid "RF 28%"
-#~ msgstr "RF 28%"
-
-#~ msgid "RF 35%"
-#~ msgstr "RF 35%"
-
-#~ msgid "RF 4,125%"
-#~ msgstr "RF 4,125%"
-
-#~ msgid "Receipt:"
-#~ msgstr "Recibo:"
-
-#~ msgid "Register Payment"
-#~ msgstr "Registar Pagamento"
-
-#~ msgid ""
-#~ "Sign your PDF reports using qualified digital certificates and "
-#~ "cryptography"
-#~ msgstr ""
-#~ "Assine os seus relatórios PDF através de certificados digitais "
-#~ "qualificados e criptografia"
-
-#~ msgid "&amp;nbsp;"
-#~ msgstr "&amp;nbsp;"
-
-#~ msgid ""
-#~ "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are "
-#~ "company-specific.\" aria-label=\"Values set here are company-specific.\" "
-#~ "groups=\"base.group_multi_company\" role=\"img\"/>"
-#~ msgstr ""
-#~ "<span class=\"fa fa-lg fa-building-o\" title=\"Os valores atribuídos aqui "
-#~ "são específicos para a empresa.\" aria-label=\"Os valores atribuídos aqui "
-#~ "são específicos para a empresa.\" groups=\"base.group_multi_company\" "
-#~ "role=\"img\"/>"
-
-#~ msgid ""
-#~ "<span class=\"o_form_label\">Invoice Details</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" "
-#~ "title=\"Values set here are company-specific.\" aria-label=\"Values set "
-#~ "here are company-specific.\" groups=\"base.group_multi_company\" "
-#~ "role=\"img\"/>"
-#~ msgstr ""
-#~ "<span class=\"o_form_label\">Detalhes da Fatura</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" "
-#~ "title=\"Valores atribuídos aqui são específicos para a empresa.\" aria-"
-#~ "label=\"Valores atribuídos aqui são específicos para a empresa.\" "
-#~ "groups=\"base.group_multi_company\" role=\"img\"/>"
-
-#~ msgid ""
-#~ "<span class=\"o_form_label\">Multi-way Reports</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" "
-#~ "title=\"Values set here are company-specific.\" aria-label=\"Values set "
-#~ "here are company-specific.\" groups=\"base.group_multi_company\" "
-#~ "role=\"img\"/>"
-#~ msgstr ""
-#~ "<span class=\"o_form_label\">Documentos Multi-via</span>\n"
-#~ "                            <span class=\"fa fa-lg fa-building-o\" "
-#~ "title=\"Valores atribuídos aqui são específicos para a empresa.\" aria-"
-#~ "label=\"Valores atribuídos aqui são específicos para a empresa.\" "
-#~ "groups=\"base.group_multi_company\" role=\"img\"/>"
-
-#~ msgid "AT"
-#~ msgstr "TA"
-
-#~ msgid "Display on Invoices"
-#~ msgstr "Exibir nas Faturas"
-
-#, python-format
-#~ msgid ""
-#~ "Document %s has a line '%s' that contains an invalid line total. It must "
-#~ "be either positive or 0."
-#~ msgstr ""
-#~ "O documento %s tem uma linha '%s' que cujo valor total é inválido. Tem "
-#~ "que ser positivo ou 0."
-
-#~ msgid "Install Language"
-#~ msgstr "Instalar Idioma"
-
-#~ msgid "Label on Invoices"
-#~ msgstr "Rótulo nas Faturas"
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última Modificação em"
-
-#~ msgid "Main Attachment"
-#~ msgstr "Anexo Principal"
-
-#~ msgid "SD"
-#~ msgstr "IS"
-
-#~ msgid "Templates for Taxes"
-#~ msgstr "Modelo de Impostos"
-
-#~ msgid "VAT 18%"
-#~ msgstr "IVA 18%"
-
-#~ msgid "VAT ND"
-#~ msgstr "IVA N/A"
-
-#~ msgid "WHT 0%"
-#~ msgstr "RF 0%"
-
-#~ msgid "_Close"
-#~ msgstr "Fechar"

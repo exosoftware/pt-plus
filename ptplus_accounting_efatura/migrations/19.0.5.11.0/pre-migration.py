@@ -23,6 +23,16 @@ def _migrate_rate(env):
     written the way a user would type them."""
     if not openupgrade.column_exists(env.cr, TABLE, "tax_percentage"):
         return
+    env.cr.execute(
+        """
+        SELECT data_type FROM information_schema.columns
+        WHERE table_name = %s AND column_name = 'tax_percentage'
+        """,
+        (TABLE,),
+    )
+    # 17.0.5.11+ sources already store the rate as text
+    if env.cr.fetchone()[0] == "character varying":
+        return
     openupgrade.rename_columns(env.cr, {TABLE: [("tax_percentage", None)]})
     env.cr.execute(f"ALTER TABLE {TABLE} ADD COLUMN tax_percentage varchar")
     # to_char pins the two decimals before the zeros are trimmed: casting

@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Partner EAC",
-    "version": "19.0.5.0.5",
+    "version": "19.0.5.0.6",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
