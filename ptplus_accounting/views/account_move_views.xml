@@ -42,6 +42,12 @@
                 position="after"
             >
                 <field name="l10n_pt_note" optional="hide" />
+                <field name="l10n_pt_equity_required" column_invisible="True" />
+                <field
+                    name="l10n_pt_equity_change"
+                    invisible="not l10n_pt_equity_required"
+                    required="l10n_pt_equity_required"
+                />
             </xpath>
         </field>
     </record>

@@ -24,7 +24,11 @@
             <group name="main_left" position="inside">
                 <field name="chart_template" readonly="state != 'select'" />
                 <!--                <field name="exclude_pl_calc" readonly="state != 'select'" />-->
-                <field name="include_draft" readonly="state != 'select'" />
+                <field
+                    name="include_draft"
+                    widget="boolean_toggle"
+                    readonly="state != 'select'"
+                />
             </group>
             <notebook name="main_block" position="inside">
                 <page name="Statement Lines">

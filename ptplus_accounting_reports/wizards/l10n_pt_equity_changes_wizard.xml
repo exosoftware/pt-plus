@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_equity_changes_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.equity.changes.wizard.form</field>
+        <field name="model">l10n_pt.equity.changes.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main" position="after">
+                <group
+                    name="error_analyze"
+                    string="Errors"
+                    invisible="state != 'analyze' or not warnings"
+                >
+                    <field
+                        name="warnings"
+                        readonly="1"
+                        widget="html"
+                        nolabel="1"
+                        colspan="2"
+                    />
+                </group>
+            </group>
+            <group name="main_left" position="inside">
+                <field name="include_draft" widget="boolean_toggle" />
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="statement_lines" string="Statement Lines">
+                    <field name="line_ids" nolabel="1" colspan="2">
+                        <list editable="bottom" create="0" delete="0">
+                            <field name="code" readonly="1" />
+                            <field name="display_name" string="Name" readonly="1" />
+                            <field name="col1" />
+                            <field name="col2" />
+                            <field name="col3" />
+                            <field name="col4" />
+                            <field name="col5" />
+                            <field name="col6" />
+                            <field name="col7" />
+                            <field name="col8" />
+                            <field name="col9" />
+                            <field name="col10" />
+                            <field name="col11" readonly="1" />
+                            <field name="domain" column_invisible="True" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                                invisible="not domain"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="l10n_pt_equity_changes_wizard_action" model="ir.actions.act_window">
+        <field name="name">Statement of Changes in Equity</field>
+        <field name="res_model">l10n_pt.equity.changes.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_equity_changes_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_equity_changes_wizard_menu"
+        parent="ptplus_accounting_reports.l10n_pt_financial_statement_menu"
+        sequence="35"
+        action="l10n_pt_equity_changes_wizard_action"
+    />
+</odoo>

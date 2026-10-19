@@ -38,16 +38,6 @@
         <field name="statement">tax</field>
     </record>
 
-    <record
-        id="accounting_stmt_asset_value_adjustment"
-        model="l10n_pt.account.statement"
-    >
-        <field name="name">Mapa de Depreciações e Amortizações</field>
-        <field name="type">asset.value.adjustment</field>
-        <field name="custom">False</field>
-        <field name="statement">accounting</field>
-    </record>
-
     <record id="accounting_stmt_cash_flow" model="l10n_pt.account.statement">
         <field name="name">Fluxo de Caixa</field>
         <field name="type">cash.flow</field>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_vat_periodic_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.vat.periodic.statement.wizard.form</field>
+        <field name="model">l10n_pt.vat.periodic.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field name="hq_location" readonly="state != 'select'" />
+                <field name="overdue" readonly="state != 'select'" />
+                <field name="request_refund" readonly="state != 'select'" />
+                <field
+                    name="refund_amount"
+                    invisible="not request_refund"
+                    readonly="state != 'select'"
+                />
+            </group>
+            <group name="main_left" position="after">
+                <group name="main_right">
+                    <field
+                        name="previous_stmt_log_id"
+                        string="Previous Statement"
+                        options="{'no_create': True}"
+                        readonly="state != 'select'"
+                    />
+                    <field
+                        name="previous_excess"
+                        string="[61] Excess"
+                        readonly="state != 'select'"
+                    />
+                    <field
+                        name="recap_stmt_log_id"
+                        string="Recap. Statement"
+                        options="{'no_create': True}"
+                        readonly="state != 'select'"
+                    />
+                    <field
+                        name="recap_total"
+                        string="[7] Total"
+                        readonly="state != 'select'"
+                    />
+                    <field
+                        name="certified_accountant_vat"
+                        readonly="state != 'select'"
+                    />
+                </group>
+            </group>
+            <group name="main" position="after">
+                <group
+                    name="manual_additions"
+                    string="Manual Additions"
+                    invisible="state != 'select'"
+                >
+                    <group string="Paid Tax Imports">
+                        <field name="paid_tax_import_base" string="[18] Tax Base" />
+                        <field name="paid_tax_import_amount" string="[19] Tax Amount" />
+                    </group>
+                    <group string="Extra Deductible Taxes">
+                        <field name="deduct_tax_asset" string="[20] Assets" />
+                        <field
+                            name="deduct_tax_invent_red"
+                            string="[21] Red. Rate Invent."
+                        />
+                        <field
+                            name="deduct_tax_invent_std"
+                            string="[22] Std. Rate Invent."
+                        />
+                        <field
+                            name="deduct_tax_invent_interm"
+                            string="[23] Intrm. Rate Invent."
+                        />
+                        <field name="deduct_tax_ogs" string="[24] Other Goods/Serv." />
+                    </group>
+                </group>
+                <div
+                    name="error_analyze"
+                    class="alert alert-warning mb-3"
+                    role="alert"
+                    invisible="state != 'analyze' or not warnings"
+                >
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" />
+                </div>
+                <group name="outcome" invisible="state != 'analyze'">
+                    <group string="Statement">
+                        <field name="recap_control" />
+                        <field name="has_operations_with_tax" />
+                        <field name="has_deductible_operations" />
+                        <field name="has_buyer_settled_operations" />
+                        <field name="has_operations_without_tax" />
+                    </group>
+                    <group
+                        string="Annex R"
+                        invisible="not has_annex_r_cnt and not has_annex_r_azo and not has_annex_r_mad"
+                    >
+                        <field
+                            name="annex_r1_region"
+                            invisible="not annex_r1_line_ids"
+                        />
+                        <field
+                            name="annex_r2_region"
+                            invisible="not annex_r2_line_ids"
+                        />
+                        <field name="has_annex_r_cnt" invisible="not has_annex_r_cnt" />
+                        <field name="has_annex_r_azo" invisible="not has_annex_r_azo" />
+                        <field name="has_annex_r_mad" invisible="not has_annex_r_mad" />
+                    </group>
+                </group>
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="rosto" string="Rosto">
+                    <field name="rosto_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="amount" sum="Total" />
+                            <field name="domain" column_invisible="True" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                                invisible="not domain"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page
+                    name="annex_r1"
+                    string="Annex R #1"
+                    invisible="not annex_r1_line_ids"
+                >
+                    <field name="annex_r1_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="region" />
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="amount" />
+                            <field name="domain" column_invisible="True" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                                invisible="not domain"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page
+                    name="annex_r2"
+                    string="Annex R #2"
+                    invisible="not annex_r2_line_ids"
+                >
+                    <field name="annex_r2_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="region" />
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="amount" />
+                            <field name="domain" column_invisible="True" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                                invisible="not domain"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page name="annex_40" string="Annex 40">
+                    <field name="annex_40_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="code" string="Section" />
+                            <field name="article" />
+                            <field name="norm_id" />
+                            <field name="vat_prefix" />
+                            <field name="vat_number" />
+                            <field name="period_year" />
+                            <field name="period_month" />
+                            <field name="request_number" />
+                            <field name="tax_base" sum="Total" />
+                            <field name="amount" string="Tax" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page name="annex_41" string="Annex 41">
+                    <field name="annex_41_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="code" string="Section" />
+                            <field name="article" />
+                            <field name="norm_id" />
+                            <field name="vat_prefix" />
+                            <field name="vat_number" />
+                            <field name="request_number" />
+                            <field name="tax_base" sum="Total" />
+                            <field name="amount" string="Tax" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page
+                    name="refund_customers"
+                    string="Refund - Customers"
+                    invisible="not request_refund"
+                >
+                    <field name="refund_customer_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="name" />
+                            <field name="partner_id" />
+                            <field name="vat_number" />
+                            <field name="document_number" />
+                            <field name="amount" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page
+                    name="refund_vendors"
+                    string="Refund - Vendors"
+                    invisible="not request_refund"
+                >
+                    <field name="refund_vendor_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="field_number" />
+                            <field name="vat_prefix" />
+                            <field name="vat_number" />
+                            <field name="document_number" string="Liquidation No." />
+                            <field name="period_year" />
+                            <field name="period_month" />
+                            <field name="tax_base" sum="Total" />
+                            <field name="amount" string="Tax" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+            <xpath expr="//footer/button[@special='cancel']" position="before">
+                <button
+                    name="action_edit_options"
+                    type="object"
+                    string="Change Options"
+                    class="btn-secondary"
+                    invisible="state != 'analyze'"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_vat_periodic_statement_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">VAT Periodic Statement</field>
+        <field name="res_model">l10n_pt.vat.periodic.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_vat_periodic_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_vat_periodic_statement_wizard_menu"
+        parent="ptplus_reports.l10n_pt_tax_statement_menu"
+        sequence="10"
+        groups="account.group_account_user"
+        action="l10n_pt_vat_periodic_statement_wizard_action"
+    />
+</odoo>
