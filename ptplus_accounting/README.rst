@@ -10,6 +10,8 @@ The base module for handling Portuguese full accounting in Odoo. Mods include:
 - new journal types: p/l calculation, fiscal year regularization and adjustment
 - a report for printing journal entries
 - vat adjustment norms to be applied on credit and debit notes
+- equity tags, that classify the movements of the class 5 accounts by the
+  nature of the change, for the IES statement of changes in equity
 
 **Table of contents**
 
@@ -49,6 +51,77 @@ Available soon.
 
 Changelog
 =========
+
+5.3.3 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New VAT adjustment norm "Verba 2.42 da Lista I", for the VAT adjustments of
+  artigo 11.º do Decreto-Lei n.º 97/2026, de 20 de maio, which the periodic VAT
+  return reports in the field 40 and field 41 annexes since 2026-07-01
+  (Portaria n.º 298/2026/1, de 16 de julho). It can be chosen on credit and
+  debit notes, in favor of the company or of the State.
+
+5.3.2 (2026-10-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When creating a credit note from an invoice, the "VAT Adjustment Norm" field
+  now only offers the norms that fit that credit note, as the credit note form
+  already did.
+
+5.3.1 (2026-10-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The balance transfers (such as the VAT settlement or the closing of the
+  income and expense accounts) now clear the balances of the whole company,
+  branches included, also when they are run from a branch. Until now, run
+  from a branch, they found no balances to transfer.
+
+5.3.0 (2026-09-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The nature of the change on the journal items of the class 5 accounts is now
+  chosen in a field of its own, "Equity Change", instead of the analytic
+  distribution: equity is not analytic accounting of the company, and the
+  analytic plan and its tags were being used for something they are not. The
+  options are the same as before, one per line of the Statement of Changes in
+  Equity, and everything else keeps working as it did: the field is required
+  to post a class 5 item, it can be shown as a column on the journal items
+  list and used to group them, and an amount split over two natures is still
+  entered as two lines.
+- Items classified through the old analytic tags are no longer read by the
+  statement: they have to be classified again in the new field. The analytic
+  plan "Capital Próprio - DACP" and its tags are no longer created, and the
+  ones already in the database are left untouched.
+
+5.2.0 (2026-09-21)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Equity tags: every journal item of a class 5 account is now tagged with the
+  nature of the change (Subscrições de capital, Distribuições, Alterações de
+  políticas contabilísticas and the remaining ones of the official model),
+  which is what allows the Statement of Changes in Equity to report it on the
+  right line. Movements between accounts of the same nature are tagged as
+  having no impact on the statement.
+- The tag is required on every way in which a class 5 account can be used:
+  journal entries, customer invoices, vendor bills and expenses. Entries can
+  no longer be posted without exactly one tag, whether
+  they are entered by hand, by import or by an integration. An amount split
+  over two natures is entered as two lines, one per tag.
+- The tags and the plan are records of the statement, not analytic accounting
+  of the company: they cannot be renamed, archived nor deleted, and the plan
+  is kept out of the analytic plans list. Without this, a tag put aside would
+  quietly take the line it feeds down to zero. The tags keep being offered on
+  the journal items of the class 5 accounts as before.
 
 5.1.2 (2026-08-20)
 ~~~~~~~~~~~~~~~~~~~

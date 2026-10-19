@@ -8,6 +8,7 @@
             <xpath expr="//field[@name='name']" position="after">
                 <field name="l10n_pt_note" optional="hide" />
                 <field name="pt_invoicing" column_invisible="1" />
+                <field name="l10n_pt_equity_change" optional="hide" />
             </xpath>
 
             <xpath expr="//field[@name='name']" position="attributes">
@@ -29,6 +30,12 @@
                     name="group_by_l10n_pt_note"
                     domain="[]"
                     context="{'group_by': 'l10n_pt_note'}"
+                />
+                <filter
+                    string="Equity Change"
+                    name="group_by_l10n_pt_equity_change"
+                    domain="[]"
+                    context="{'group_by': 'l10n_pt_equity_change'}"
                 />
             </xpath>
         </field>

@@ -1,539 +1,1149 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* tko_cope_pt
+# 	* ptplus_accounting_cope
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0+e\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 16:25+0000\n"
-"PO-Revision-Date: 2025-05-07 16:25+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2026-07-29 16:16+0000\n"
+"PO-Revision-Date: 2026-07-29 16:16+0000\n"
+"Last-Translator: Diogo Pereira\n"
+"Language-Team: Exo Software\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-msgid ""
-"<br/>\n"
-"                        <strong>Month:</strong>"
-msgstr ""
-"<br/>\n"
-"                \t <strong>Mês:</strong>"
-
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-msgid ""
-"<br/>\n"
-"                        <strong>Year:</strong>"
-msgstr ""
-"<br/>\n"
-"               \t <strong>Ano:</strong>"
-
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 msgid "<span>P</span>"
-msgstr ""
+msgstr "<span>P</span>"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-msgid "<strong>NIPC:</strong>"
-msgstr "<strong>NIF:</strong>"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__ws_submission_ref
+msgid "AT Declaration Id"
+msgstr "Id Declaração AT"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__active
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__accept_alerts
+msgid "Accept Alerts"
+msgstr "Aceitar Alertas"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_account_account
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__account_id
+msgid "Account"
+msgstr "Conta"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__active
 msgid "Active"
 msgstr "Ativo"
 
-#. module: tko_cope_pt
-#: model_terms:ir.actions.act_window,help:tko_cope_pt.action_cope_code_list
+#. module: ptplus_accounting_cope
+#: model_terms:ir.actions.act_window,help:ptplus_accounting_cope.l10n_pt_cope_code_action_list
 msgid "Add COPE codes"
 msgstr "Adicionar códigos COPE"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__amount
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Amount (amount)"
-msgstr "Montante (montante)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Amount"
+msgstr "Montante"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_code_search
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__natureza__a
+msgid "Anulação"
+msgstr "Anulação"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.l10n_pt_cope_code_search
 msgid "Archived"
 msgstr "Arquivado"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,help:tko_cope_pt.field_account_journal__bank_id
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_journal__l10n_pt_bank_id
 msgid "Associate a Bank to help extracting COPEresume Map."
+msgstr "Associe um Banco para ajudar na extração do Mapa Resumo do COPE."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__contraparte
+msgid ""
+"Até 50 posições, identificação da entidade emitente do ativo financeiro "
+"subjacente à operação/posição (ver orientações mais detalhadas no Manual de "
+"Procedimentos)."
 msgstr ""
+"Até 50 posições, identificação da entidade emitente do ativo financeiro "
+"subjacente à operação/posição (ver orientações mais detalhadas no Manual de "
+"Procedimentos)."
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_res_bank
-msgid "Bank"
-msgstr "Banco"
-
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_account_journal__bank_id
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_journal__l10n_pt_bank_id
 msgid "Bank Associated"
 msgstr "Banco Associado"
 
-#. module: tko_cope_pt
-#: model:ir.ui.menu,name:tko_cope_pt.menu_finance_reports_cope
-msgid "COPE"
-msgstr ""
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "Bank Code"
+msgstr "Código do Banco"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment__cope_code_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment_register__cope_code_id
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.view_account_form_cope
+msgid "COPE"
+msgstr "COPE"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_active_country_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_active_country_id
+msgid "COPE Active Country"
+msgstr "País Ativo COPE"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_account__l10n_pt_cope_code_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_move_line__l10n_pt_cope_code_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_code_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_code_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 msgid "COPE Code"
 msgstr "Código COPE"
 
-#. module: tko_cope_pt
-#: model:ir.actions.act_window,name:tko_cope_pt.action_cope_code_list
-#: model:ir.ui.menu,name:tko_cope_pt.menu_cope_code_list
+#. module: ptplus_accounting_cope
+#: model:ir.actions.act_window,name:ptplus_accounting_cope.l10n_pt_cope_code_action_list
+#: model:ir.model,name:ptplus_accounting_cope.model_l10n_pt_cope_code
+#: model:ir.ui.menu,name:ptplus_accounting_cope.menu_action_l10n_pt_cope_code_list
 msgid "COPE Codes"
 msgstr "Códigos COPE"
 
-#. module: tko_cope_pt
-#: model:ir.actions.act_window,name:tko_cope_pt.action_cope_export
-#: model:ir.ui.menu,name:tko_cope_pt.menu_cope_export
-msgid "COPE Export"
-msgstr "Exportar COPE"
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.l10n_pt_cope_statement_wizard_line_form
+msgid "COPE Line"
+msgstr "Linha COPE"
 
-#. module: tko_cope_pt
-#: model:ir.actions.report,name:tko_cope_pt.action_report_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.actions.act_window,name:ptplus_accounting_cope.l10n_pt_cope_statement_wizard_action
+#: model:ir.actions.report,name:ptplus_accounting_cope.action_report_cope_pt
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__dataport_log__type__cope_report
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard__statement_type__cope_report
+#: model:ir.ui.menu,name:ptplus_accounting_cope.l10n_pt_cope_menu
 msgid "COPE Report"
 msgstr "COPE"
 
-#. module: tko_cope_pt
-#: model:ir.model.constraint,message:tko_cope_pt.constraint_cope_code_code_uniq
+#. module: ptplus_accounting_cope
+#: model:ir.model.constraint,message:ptplus_accounting_cope.constraint_l10n_pt_cope_code_code_uniq
 msgid "COPE code is unique, please check if it's archived."
 msgstr "Código COPE é unico, confirme se está arquivada."
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
-msgid "Cancel"
-msgstr "Cancelar"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_move_line__l10n_pt_cope_code_id
+msgid ""
+"COPE code reported for this line: the code set on the related payment, or "
+"else the partner's or company's receivable/payable COPE code depending on the "
+"line's account type."
+msgstr ""
+"Código COPE reportado para esta linha: o código definido no pagamento "
+"relacionado, ou então o código COPE a receber/a pagar do parceiro ou da "
+"empresa, dependendo do tipo de conta da linha."
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__observacoes
+msgid "Campo livre para comunicação de informação adicional."
+msgstr "Campo livre para comunicação de informação adicional."
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 msgid "Category"
 msgstr "Categoria"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__code
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_id
+msgid "Certified Accountant User"
+msgstr "Utilizador Contabilista Certificado"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__cmd_bypass_unique
+# TODO: verificar se deve ser traduzido
+msgid "Cmd Bypass Unique"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__code
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__code
 msgid "Code"
 msgstr "Código"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_country__code_alpha3
-msgid "Code Alpha3"
-msgstr ""
-
-#. module: tko_cope_pt
-#: model:ir.model.fields,help:tko_cope_pt.field_res_bank__id_bank
-msgid ""
-"Code from financial institution to identifythe account of movement.Help for "
-"extracting COPE resume Map."
-msgstr ""
-"Código financeiro pda instituição para identificar o movimento da conta. "
-"Ajuda na extração do resumo COPE"
-
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_res_company
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_res_company
 msgid "Companies"
 msgstr "Empresas"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_res_partner
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__company_eac
+msgid "Company EAC"
+msgstr "EAC da Empresa"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_conta__c
+msgid "Compensação"
+msgstr "Compensação"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_res_config_settings
+msgid "Config Settings"
+msgstr "Definir Parâmetros"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__contraparte
+msgid "Contraparte"
+msgstr "Contraparte"
+
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Counterpart (counterpart)"
-msgstr "Contraparte (contraparte)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Cope Statement"
+msgstr "Declaração COPE"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_l10n_pt_cope_statement_wizard
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__statement_id
+msgid "Cope Statement Wizard"
+msgstr "Assistente de Declaração COPE"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_l10n_pt_cope_statement_wizard_line
+msgid "Cope Statement Wizard Lines"
+msgstr "Linhas do Assistente de Declaração COPE"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Counterpart country (country_counterp)"
-msgstr "País Contraparte (pais_contraparte)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Counterpart"
+msgstr "Contraparte"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_res_country
-msgid "Country"
-msgstr "País"
-
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Country account (country_account)"
-msgstr "País Conta (pais_conta)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Counterpart country"
+msgstr "País Contraparte"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__create_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__create_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__create_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__create_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__create_uid
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Country account"
+msgstr "País Conta"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_active_country_id
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_active_country_id
+msgid ""
+"Country reported as 'pais_ativo' in the COPE statement for this payment: the "
+"issuer's country for securities, the location for real estate, the debtor's "
+"country for factoring/securitization, the destination country for travel, "
+"tourism and construction services, or the airline's parent company country "
+"for air transport, depending on the operation's COPE statistical code."
+msgstr ""
+"País reportado como 'pais_ativo' na declaração COPE para este pagamento: o "
+"país do emitente para títulos, a localização para imóveis, o país do devedor "
+"para factoring/titularização, o país de destino para serviços de viagens, "
+"turismo e construção, ou o país da empresa-mãe da companhia aérea para "
+"transporte aéreo, consoante o código estatístico COPE da operação."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__create_uid
 msgid "Created by"
 msgstr "Criado por"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__create_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__create_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__create_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__create_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__create_date
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__create_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__create_date
 msgid "Created on"
 msgstr "Criada em"
 
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Currency (currency)"
-msgstr "Moeda (divisa)"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__natureza__c
+msgid "Criação"
+msgstr "Criação"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__currency_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__currency_id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Date due (date_due)"
-msgstr "Data Vencimento (data_vencimento)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Currency"
+msgstr "Moeda"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__name
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__cod_estat
+msgid "Código"
+msgstr "Código"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__cod_estat
+msgid ""
+"Código alfanumérico com 5 posições, que poderá ser introduzido diretamente ou "
+"selecionado na lista apresentada.\n"
+"Através da introdução da parte inicial do código é possível limitar os "
+"valores apresentados."
+msgstr ""
+"Código alfanumérico com 5 posições, que poderá ser introduzido diretamente ou "
+"selecionado na lista apresentada.\n"
+"Através da introdução da parte inicial do código é possível limitar os "
+"valores apresentados."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__id_banco
+msgid ""
+"Código da Instituição financeira residente em que está constituída a conta "
+"movimentada na operação."
+msgstr ""
+"Código da Instituição financeira residente em que está constituída a conta "
+"movimentada na operação."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__divisa
+msgid ""
+"Código da divisa da operação ou da posição, segunda a norma ISO 4217:2001 "
+"alpha-3."
+msgstr ""
+"Código da divisa da operação ou da posição, segunda a norma ISO 4217:2001 "
+"alpha-3."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_conta
+msgid ""
+"Código do território no qual a conta se encontra domiciliada, segundo a norma "
+"ISO 3166-1 alpha-3."
+msgstr ""
+"Código do território no qual a conta se encontra domiciliada, segundo a norma "
+"ISO 3166-1 alpha-3."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__id_reg
+msgid ""
+"Código único de identificação de cada operação.\n"
+"Pode assumir texto, dígitos ou uma combinação de ambos."
+msgstr ""
+"Código único de identificação de cada operação.\n"
+"Pode assumir texto, dígitos ou uma combinação de ambos."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__data_ref
+msgid "Data Ref"
+msgstr "Data de Referência"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__data_vencim
+msgid "Data Vencim"
+msgstr "Data de Vencimento"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__data_ref
+msgid ""
+"Data de referência da operação/posição a reportar.\n"
+"A data deve pertencer ao período escolhido, sendo que no caso das posições "
+"deve corresponder ao último dia do mês de referência.\n"
+"Resulta da combinação do Ano/Mês/Dia."
+msgstr ""
+"Data de referência da operação/posição a reportar.\n"
+"A data deve pertencer ao período escolhido, sendo que no caso das posições "
+"deve corresponder ao último dia do mês de referência.\n"
+"Resulta da combinação do Ano/Mês/Dia."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__data_vencim
+msgid "Data de vencimento da posição reportada."
+msgstr "Data de vencimento da posição reportada."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_dataport_log
+msgid "Dataport Log"
+msgstr "Registo Dataport"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__date_from
+msgid "Date From"
+msgstr "Data Inicial"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__date_to
+msgid "Date To"
+msgstr "Data Final"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Date due"
+msgstr "Data Vencimento"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.res_config_settings_view_form
+msgid "Default COPE Codes"
+msgstr "Códigos COPE padrão"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__name
 msgid "Description"
 msgstr "Descrição"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__display_name
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__display_name
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__display_name
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__display_name
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__display_name
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_account__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_journal__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_dataport_log__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nome a Exibir"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.res_config_settings_view_form
-msgid "Distinct discount accounts in invoices"
-msgstr "Contas de descontos distintas nas faturas"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__divisa
+msgid "Divisa"
+msgstr "Divisa"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-msgid "Document: Resume COPE (to XML)"
-msgstr "Documento: Resumo para extração XML do COPE"
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "Document: Resume COPE"
+msgstr "Documento: Resumo COPE"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
-msgid "Done"
-msgstr "Concluído"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__domain
+msgid "Domain"
+msgstr "Domínio"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
-msgid "Download File"
-msgstr "Download do Ficheiro"
-
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_download_file_wizard
-msgid "Download File Wizard"
-msgstr "Wizard de Download do Ficheiro"
-
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__excel_available_flag
-msgid "Excel Available Flag"
-msgstr "Excel disponível"
-
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
-msgid "Export"
-msgstr "Exportar"
-
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_cope_export_wizard_form
-msgid "Export COPE Codes"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__tipo_valor
+msgid ""
+"E – Entrada;\n"
+"S – Saída;\n"
+"P – Posições em fim de período."
 msgstr ""
+"E – Entrada;\n"
+"S – Saída;\n"
+"P – Posições em fim de período."
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__report_type_xls
-msgid "Extract as Excel File"
-msgstr "Extrair em Excel"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_status
+msgid ""
+"Enable when the certified accountant has full declarative powers for the "
+"taxpayer; the taxpayer password is then not required."
+msgstr ""
+"Ativar quando o contabilista certificado tem plenos poderes declarativos para "
+"o contribuinte; a palavra-passe do contribuinte deixa de ser necessária."
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__file
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__file
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_valor__e
+msgid "Entrada"
+msgstr "Entrada"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__error_code
+msgid "Error Code"
+msgstr "Código de Erro"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__error_detail
+msgid "Error Detail"
+msgstr "Detalhe do Erro"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__error_message
+msgid "Error Message"
+msgstr "Mensagem de Erro"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__export_pdf_button
+msgid "Export Pdf Button"
+msgstr "Botão Exportar PDF"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__export_txt_button
+msgid "Export Txt Button"
+msgstr "Botão Exportar TXT"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__export_xml_button
+msgid "Export Xml Button"
+msgstr "Botão Exportar XML"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_conta__e
+msgid "Externa"
+msgstr "Externa"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__get_proof
+msgid "Fetch Receipt"
+msgstr "Obter Comprovativo"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__get_proof
+msgid "Fetch the submission receipt after a successful submission."
+msgstr "Obter o comprovativo de submissão após uma submissão bem sucedida."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__data
 msgid "File"
 msgstr "Ficheiro"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__filename
-msgid "File Name"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__filename
+msgid "Filename"
 msgstr "Nome do Ficheiro"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Financial country (country_ative)"
-msgstr "País ativo financeiro (pais_ativo)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Financial country"
+msgstr "País Ativo Financeiro"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__fiscalyear_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__fiscalyear_id
-msgid "Fiscal Year"
-msgstr "Ano fiscal"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__l10n_pt_force_cope_country_id
+msgid "Force COPE Country Counterpart"
+msgstr "Forçar País Contraparte COPE"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_account_payment__force_cope_country_id
-msgid "Force in COPE Country"
-msgstr "Forçar País no COPE"
-
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/report/cope.py:0
-#, python-format
-msgid "Form content is missing, this report cannot be printed."
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment__l10n_pt_force_cope_country_id
+msgid ""
+"Forces which counterparty country to use in the COPE report for this specific "
+"payment"
 msgstr ""
-"Conteúdo do formulário em falta, este relatório não pode ser imprimido"
+"Força qual o país de contraparte a utilizar no relatório COPE para este "
+"pagamento específico"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__group_lines
-msgid "Group lines"
-msgstr "Agrupar linhas"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__format
+msgid "Format"
+msgstr "Formato"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__id
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__formula
+msgid "Formula"
+msgstr "Fórmula"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_status
+msgid "Full powers of Declaration"
+msgstr "Plenos Poderes de Declaração"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__group_lines
+msgid "Group Lines"
+msgstr "Agrupar Linhas"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__group_lines
+msgid "Group by Currency, Stat. Classification and Counterpart Country"
+msgstr "Agrupar por Moeda, Classificação Estatística e País Contraparte"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_account__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_journal__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_move_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_dataport_log__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_partner__id
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 msgid "ID"
 msgstr "Id."
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "ID Bank (id_bank)"
-msgstr "Instituição financeira (id_banco)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "ID Bank"
+msgstr "Instituição financeira"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_bank__id_bank
-msgid "ID bank"
-msgstr "ID banco"
-
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "ID record (id_reg)"
-msgstr "ID Registo (id_reg)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "ID record"
+msgstr "ID Registo"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
-msgid "Import"
-msgstr "Importar"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__id_banco
+msgid "Id Banco"
+msgstr "ID Banco"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_country_import_wizard
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.view_country_import_form
-msgid "Import Country Data"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__id_reg
+msgid "Id Reg"
+msgstr "ID Registo"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_account__l10n_pt_cope_code_id
+msgid ""
+"If set, this account is reported in the COPE statement as a 'P' (balance) "
+"line whenever its current balance is different from zero."
 msgstr ""
+"Se definido, esta conta é reportada na declaração COPE como uma linha 'P' "
+"(saldo) sempre que o seu saldo atual for diferente de zero."
 
-#. module: tko_cope_pt
-#: model:ir.actions.act_window,name:tko_cope_pt.action_country_import
-#: model:ir.ui.menu,name:tko_cope_pt.menu_country_data_import
-msgid "Import Country ISO Alpha-3"
-msgstr " Importar País ISO Alpha-3"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__indentation
+msgid "Indentation"
+msgstr "Indentação"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_res_config_settings
-msgid "Invoice Certification Service Configuration"
-msgstr "Configuração Serviço de Certificação de Faturas (ICS)"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__info
+msgid "Info"
+msgstr "Informação"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_account_journal
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__log_on_close
+msgid ""
+"Insert a record in the dataport log together with a copy of the imported or "
+"exported file."
+msgstr ""
+"Insere um registo no registo dataport juntamente com uma cópia do ficheiro "
+"importado ou exportado."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_conta__i
+msgid "Interna"
+msgstr "Interna"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_account_journal
 msgid "Journal"
 msgstr "Diário"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__write_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__write_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__write_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__write_uid
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__write_uid
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_account_move_line
+msgid "Journal Item"
+msgstr "Item de Diário"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__journal_ids
+msgid "Journals"
+msgstr "Diários"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_show_active_country
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_show_active_country
+# TODO: verificar se deve ser traduzido
+msgid "L10N Pt Cope Show Active Country"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__write_uid
 msgid "Last Updated by"
 msgstr "Última Atualização por"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_code__write_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__write_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__write_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_country_import_wizard__write_date
-#: model:ir.model.fields,field_description:tko_cope_pt.field_download_file_wizard__write_date
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_code__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__write_date
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__write_date
 msgid "Last Updated on"
 msgstr "Última Atualização em"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-msgid "NPC 2º intervener (npc2)"
-msgstr "NPC 2º interveniente (npc2)"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__log_as_reported
+msgid "Log As Reported"
+msgstr "Registar como Reportado"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__log_on_close
+msgid "Log On Close"
+msgstr "Registar ao Fechar"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__natureza
+msgid ""
+"M - Modificação\n"
+"C - Criação\n"
+"A - Anulação"
+msgstr ""
+"M - Modificação\n"
+"C - Criação\n"
+"A - Anulação"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__natureza__m
+msgid "Modificação"
+msgstr "Modificação"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__montante
+msgid "Montante"
+msgstr "Montante"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__montante_signed
+msgid "Montante Signed"
+msgstr "Montante com Sinal"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__montante
+msgid ""
+"Montante da operação ou da posição reportado na divisa da mesma, sem "
+"separador dos milhares, podendo conter 2 casas decimais."
+msgstr ""
+"Montante da operação ou da posição reportado na divisa da mesma, sem "
+"separador dos milhares, podendo conter 2 casas decimais."
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "Month:"
+msgstr "Mês:"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__move_id
+msgid "Move"
+msgstr "Movimento"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "NIPC:"
+msgstr "NIPC:"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "NPC 2"
+msgstr "NPC 2"
+
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#, python-format
-msgid "NPC 2º intervener (npc2) "
-msgstr "NPC 2º interveniente (npc2) "
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "NPC 2º intervener "
+msgstr "NPC 2º interveniente "
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Nature (nature)"
-msgstr "Natureza (natureza)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Nature"
+msgstr "Natureza"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__natureza
+msgid "Natureza"
+msgstr "Natureza"
+
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Observations (observations)"
-msgstr "Observações (observacoes)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "None."
+msgstr "Nenhum."
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__npc2
+msgid "Npc2"
+msgstr "NPC 2"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__npc2
+msgid ""
+"Número de pessoa coletiva, devendo ser preenchido com a identificação da "
+"entidade residente detentora da disponibilidade/responsabilidade subjacente à "
+"operação comunicada pela entidade reportante, (normalmente as duas entidades "
+"pertencem ao mesmo grupo económico)."
+msgstr ""
+"Número de pessoa coletiva, devendo ser preenchido com a identificação da "
+"entidade residente detentora da disponibilidade/responsabilidade subjacente à "
+"operação comunicada pela entidade reportante, (normalmente as duas entidades "
+"pertencem ao mesmo grupo económico)."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__observacoes
+msgid "Observacoes"
+msgstr "Observações"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Operation date (data_ref)"
-msgstr "Data Operação (data_ref)"
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Observations"
+msgstr "Observações"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_company__cope_code_payable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_config_settings__cope_code_payable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_partner__property_cope_code_payable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_users__property_cope_code_payable_id
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Operation date"
+msgstr "Data Operação"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_conta__o
+msgid "Outra conta externa"
+msgstr "Outra conta externa"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_ativo
+msgid "Pais Ativo"
+msgstr "País Ativo"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_conta
+msgid "Pais Conta"
+msgstr "País Conta"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_contraparte
+msgid "Pais Contraparte"
+msgstr "País Contraparte"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__partner_id
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_account_payment_register
+msgid "Pay"
+msgstr "Pagar"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_company__l10n_pt_cope_code_payable_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_config_settings__l10n_pt_cope_code_payable_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_partner__l10n_pt_cope_code_payable_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_users__l10n_pt_cope_code_payable_id
 msgid "Payable COPE Code"
 msgstr "Código COPE Pagamentos"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_account_payment
+#. module: ptplus_accounting_cope
+#: model:ir.model,name:ptplus_accounting_cope.model_account_payment
 msgid "Payments"
 msgstr "Pagamentos"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_export_wizard__period_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_cope_wizard__period_id
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__period
 msgid "Period"
 msgstr "Período"
 
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#, python-format
-msgid "Please select a period!"
-msgstr ""
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_valor__p
+msgid "Posição"
+msgstr "Posição"
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
-msgid "Print"
-msgstr "Imprimir"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__proof_filename
+msgid "Proof Filename"
+msgstr "Nome do Ficheiro de Comprovativo"
 
-#. module: tko_cope_pt
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_company__cope_code_receivable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_config_settings__cope_code_receivable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_partner__property_cope_code_receivable_id
-#: model:ir.model.fields,field_description:tko_cope_pt.field_res_users__property_cope_code_receivable_id
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_partner__l10n_pt_cope_code_receivable_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_users__l10n_pt_cope_code_receivable_id
+msgid "Receivable COPE Code"
+msgstr "Código COPE Recebimentos"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_company__l10n_pt_cope_code_receivable_id
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_res_config_settings__l10n_pt_cope_code_receivable_id
 msgid "Recievable COPE Code"
 msgstr "Código COPE Recebimentos"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_account_payment_register
-msgid "Register Payment"
-msgstr "Registar Pagamento"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_valor__s
+msgid "Saída"
+msgstr "Saída"
 
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Stat. Classification (cod_estat)"
-msgstr "Cód. Estatística (cod_estat)"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields.selection,name:ptplus_accounting_cope.selection__l10n_pt_cope_statement_wizard_line__tipo_conta__x
+msgid "Sem movimentação de conta"
+msgstr "Sem movimentação de conta"
 
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Type account (type_account)"
-msgstr "Tipo Conta (tipo_conta)"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__sequence
+msgid "Sequence"
+msgstr "Sequência"
 
-#. module: tko_cope_pt
-#. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.report_cope_document
-#, python-format
-msgid "Type value (type_value)"
-msgstr "Tipo Valor (tipo_valor)"
-
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_cope_export_wizard
-msgid "Wizard to Export COPE Codes"
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__log_as_reported
+msgid ""
+"Set True if the file has been successfully submitted to the intended "
+"destination. In that case the dataport log record will be marked as Reported."
 msgstr ""
+"Definir como Verdadeiro se o ficheiro tiver sido submetido com sucesso ao "
+"destino pretendido. Nesse caso, o registo do dataport será marcado como "
+"Reportado."
 
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.download_file_wizard_form
-msgid "Your file is ready! Click on the link below to download the file..."
-msgstr ""
-"O seu ficheiro está pronto! Clique na hiperligação em baixo para fazer o "
-"download do ficheiro..."
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_compute
+msgid "Show Button Compute"
+msgstr "Mostrar Botão Calcular"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_cope_code
-msgid "cope.code"
-msgstr ""
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_csv
+msgid "Show Button Export Csv"
+msgstr "Mostrar Botão Exportar CSV"
 
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_cope_wizard
-msgid "cope.wizard"
-msgstr ""
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_pdf
+msgid "Show Button Export Pdf"
+msgstr "Mostrar Botão Exportar PDF"
 
-#. module: tko_cope_pt
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_txt
+msgid "Show Button Export Txt"
+msgstr "Mostrar Botão Exportar TXT"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_webservice
+msgid "Show Button Export Webservice"
+msgstr "Mostrar Botão Exportar Webservice"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_xlsx
+msgid "Show Button Export Xlsx"
+msgstr "Mostrar Botão Exportar XLSX"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_export_xml
+msgid "Show Button Export Xml"
+msgstr "Mostrar Botão Exportar XML"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_mail
+msgid "Show Button Mail"
+msgstr "Mostrar Botão Email"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_print
+msgid "Show Button Print"
+msgstr "Mostrar Botão Imprimir"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_select_all
+msgid "Show Button Select All"
+msgstr "Mostrar Botão Selecionar Tudo"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_select_none
+msgid "Show Button Select None"
+msgstr "Mostrar Botão Desselecionar Tudo"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__show_button_ws_oa
+msgid "Show Button Ws Oa"
+msgstr "Mostrar Botão Ws Oa"
+
+#. module: ptplus_accounting_cope
 #. odoo-python
-#: code:addons/tko_cope_pt/wizard/cope.py:0
-#, python-format
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Stat. Classification"
+msgstr "Cód. Estatística"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__state
+msgid "State"
+msgstr "Estado"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__line_ids
+msgid "Statement Lines"
+msgstr "Linhas da Declaração"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__statement_type
+msgid "Statement Type"
+msgstr "Tipo de Declaração"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__proof_data
+msgid "Submission Proof"
+msgstr "Comprovativo de Submissão"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__accept_alerts
+msgid ""
+"Submit the declaration even if the AT reports non-blocking alerts "
+"(aceitaAlertas)."
+msgstr ""
+"Submeter a declaração mesmo que a AT reporte alertas não bloqueantes "
+"(aceitaAlertas)."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_password
+msgid "Taxpayer Password"
+msgstr "Palavra-passe do Contribuinte"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_show_active_country
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_show_active_country
+msgid ""
+"Technical field: whether the COPE code in effect for this payment (its own, "
+"or else the partner's receivable/payable COPE code) requires 'pais_ativo' to "
+"be filled."
+msgstr ""
+"Campo técnico: se o código COPE em vigor para este pagamento (o seu próprio, "
+"ou o código COPE a receber/a pagar do parceiro) requer o preenchimento de "
+"'pais_ativo'."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_contraparte
+msgid ""
+"Território de residência da entidade de contraparte da operação ou da "
+"posição, segundo a norma ISO 3166-1 alpha-3."
+msgstr ""
+"Território de residência da entidade de contraparte da operação ou da "
+"posição, segundo a norma ISO 3166-1 alpha-3."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__pais_ativo
+msgid ""
+"Território de residência da entidade do ativo financeiro objeto de transação, "
+"segundo a norma ISO 3166-1 alpha-3."
+msgstr ""
+"Território de residência da entidade do ativo financeiro objeto de transação, "
+"segundo a norma ISO 3166-1 alpha-3."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__tipo_conta
+msgid "Tipo Conta"
+msgstr "Tipo de Conta"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__tipo_valor
+msgid "Tipo Valor"
+msgstr "Tipo de Valor"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__tipo_conta
+msgid ""
+"Tipo de conta envolvida na operação/posição:\n"
+"      I – Conta interna;\n"
+"      E – Conta bancária externa;\n"
+"      O – Outra conta externa;\n"
+"      C – Conta de compensação;\n"
+"      X – Sem movimentação de conta."
+msgstr ""
+"Tipo de conta envolvida na operação/posição:\n"
+"      I – Conta interna;\n"
+"      E – Conta bancária externa;\n"
+"      O – Outra conta externa;\n"
+"      C – Conta de compensação;\n"
+"      X – Sem movimentação de conta."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__error
+msgid "True if there's an error or warning in the dataport operation"
+msgstr "Verdadeiro se existir um erro ou aviso na operação de dataport"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_dataport_log__type
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Type account"
+msgstr "Tipo Conta"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
+msgid "Type value"
+msgstr "Tipo Valor"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_id
+msgid ""
+"User holding the certified accountant (TOC) credentials used for webservice "
+"submission when the logged-in user is not the accountant."
+msgstr ""
+"Utilizador que detém as credenciais do contabilista certificado (TOC) usadas "
+"para a submissão via webservice quando o utilizador com sessão iniciada não é "
+"o contabilista."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__values
+msgid "Values"
+msgstr "Valores"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__vat_legal_representative
+msgid "Vat Legal Representative"
+msgstr "NIF do Representante Legal"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.l10n_pt_cope_statement_wizard_form
+msgid "View"
+msgstr "Ver"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__warnings
+msgid "Warnings"
+msgstr "Avisos"
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__validate
+msgid ""
+"When enabled the file will undergo a technical inspection (XSD schema) before "
+"being delivered to the user. As it's a very time consuming task, you may want "
+"to disable it when a large file is expected.\n"
+"Uncheck when you prefer to use an external validator."
+msgstr ""
+"Quando ativado, o ficheiro será submetido a uma inspeção técnica (esquema "
+"XSD) antes de ser entregue ao utilizador. Por ser uma tarefa muito morosa, "
+"pode querer desativá-la quando é esperado um ficheiro de grande dimensão.\n"
+"Desmarque quando preferir utilizar um validador externo."
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__ws_operation
+msgid "Ws Operation"
+msgstr "Operação Webservice"
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "Year:"
+msgstr "Ano:"
+
+#. module: ptplus_accounting_cope
+#. odoo-python
+#: code:addons/ptplus_accounting_cope/wizards/l10n_pt_cope_statement_wizard.py:0
 msgid "cope_resume_"
-msgstr ""
-
-#. module: tko_cope_pt
-#: model_terms:ir.ui.view,arch_db:tko_cope_pt.cope_wizard_form
-msgid "ou"
-msgstr ""
-
-#. module: tko_cope_pt
-#: model:ir.model,name:tko_cope_pt.model_report_tko_cope_pt_report_cope
-msgid "report.tko_cope_pt.report_cope"
 msgstr ""

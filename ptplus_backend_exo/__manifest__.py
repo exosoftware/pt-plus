@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "17.0.4.1.0",
+    "version": "17.0.4.2.0",
     "depends": ["ptplus"],
     "external_dependencies": {
         "python": ["cryptography"],

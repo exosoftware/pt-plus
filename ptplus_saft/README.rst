@@ -32,6 +32,26 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.1.13 (2026-10-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Receipts collected from another software (series with Source Method
+  "Integration") are now exported with the document type of the series in
+  front of the number entered in "Integrated Document Number", exactly like
+  the invoices, so the SAF-T passes the Tax Authority validation.
+
+4.1.12 (2026-10-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- An invoice line without a description no longer stops the SAF-T data of the
+  document from being computed. Validating such a document (for example a
+  down payment taken at the Point of Sale) failed with a technical error; the
+  SAF-T now reports the product name as the line description instead.
+
 4.1.11 (2026-09-14)
 ~~~~~~~~~~~~~~~~~~~
 

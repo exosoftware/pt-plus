@@ -53,6 +53,59 @@ Available soon.
 Changelog
 =========
 
+5.2.3 (2026-10-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Documents collected from another software (series with Source Method
+  "Integration") are now reported to the SAF-T, the QR code and the printed
+  copy with the document type of the series in front of the number entered
+  in "Integrated Document Number", as the Tax Authority requires (for
+  instance "A/0000339" is reported as "FT A/0000339"). Numbers that were
+  already entered with the type keep working unchanged. The number is now
+  checked when the document is validated: it must be the series and the
+  sequential number of the original document separated by a single "/",
+  without spaces, e.g. "A/00001".
+
+5.2.2 (2026-10-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Credit notes now print the VAT exemption reasons at the bottom of the
+  document, as invoices do, and credit notes in a foreign currency now show
+  the total in EUR as well. Both sat in the payment communication area, which
+  the report only shows on invoices, so credit notes came out without them.
+
+5.2.1 (2026-10-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The VAT and stamp duty exemption mentions printed on invoices, credit notes,
+  quotations and POS receipts, and exported to the SAF-T, are now always the
+  current text of the Tax Authority table. Databases that kept an outdated
+  wording for a code (for instance "M16 - Isento Artigo 14.º do RITI (ou
+  similar)") went on printing it after the table was updated.
+- Stamp duty exemption reasons whose own wording contains a hyphen, such as
+  "2 - Instituições de segurança social - CIS Artº 6º b)", were cut at that
+  hyphen when reported on POS and sales documents; the full wording is now
+  used.
+
+5.2.0 (2026-09-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The Tax Authority certificates can now be replaced from the Portuguese
+  Invoicing settings. A company with its own certificate registered with the
+  Tax Authority uploads the file its software provider supplies, and from then
+  on that one is used instead of the one that comes installed, until it is
+  removed. On upload, a notice reports until when the certificates are valid,
+  and stands out when they have expired or are about to. For companies that
+  keep the certificates that come installed, nothing changes.
+
 5.1.15 (2026-09-09)
 ~~~~~~~~~~~~~~~~~~~
 

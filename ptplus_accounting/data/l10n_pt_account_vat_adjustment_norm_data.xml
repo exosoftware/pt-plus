@@ -234,6 +234,23 @@
         <field name="vat_payable">True</field>
         <field name="requests_policy">optional</field>
     </record>
+    <!-- Regularizações da verba 2.42 da Lista I anexa ao CIVA, previstas no
+         artigo 11.º do Decreto-Lei n.º 97/2026, de 20 de maio (Pacote
+         Habitação). Declaradas nos anexos do campo 40 (quadro 03) e do campo
+         41 (quadro 02) desde 1 de julho de 2026 (Portaria n.º 298/2026/1,
+         de 16 de julho). -->
+    <record
+        id="vat_adjustment_norm_verba242"
+        model="l10n_pt.account.vat.adjustment_norm"
+    >
+        <field name="name">Verba 2.42 da Lista I</field>
+        <field
+            name="note"
+        >Regularizações de IVA previstas no artigo 11.º do Decreto-Lei n.º 97/2026, de 20 de maio, decorrentes da aplicação da verba 2.42 da Lista I anexa ao Código do IVA: «As empreitadas de construção ou reabilitação de: 2.42.1 - Imóveis que se destinem à venda para habitação própria e permanente do adquirente ou imóveis que se destinem exclusivamente ao arrendamento habitacional, cujo preço de venda ou valor de renda mensal não exceda os limites a que se referem os n.ºs 2 e 3 do artigo 2.º do Decreto-Lei n.º 97/2026, de 20 de maio. Os termos e as condições para a aplicação desta verba são estabelecidos em legislação especial. 2.42.2 - Prédios urbanos ou frações autónomas de prédios urbanos para arrendamento habitacional ou arrendamento para subarrendamento habitacional abrangidos pelo regime de contratos de investimento para arrendamento aprovado em anexo ao Decreto-Lei n.º 97/2026, de 20 de maio.»</field>
+        <field name="vat_receivable">True</field>
+        <field name="vat_payable">True</field>
+        <field name="requests_policy" />
+    </record>
     <record id="vat_adjustment_norm_other" model="l10n_pt.account.vat.adjustment_norm">
         <field name="name">Outras regularizações</field>
         <field name="note">Outras regularizações</field>

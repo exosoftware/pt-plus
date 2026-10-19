@@ -33,6 +33,60 @@
                     </setting>
 
                     <setting
+                        id="enable_l10n_pt_at_certificates"
+                        string="AT Certificates"
+                        help="Certificates used to reach the Tax Authority webservices and to sign fiscal documents. Your software provider's ones are used by default. Upload a file to use your own instead (only if you have your own certificate registered with AT); removing it goes back to the ones shipped with the module. Uploaded certificates are always stored encrypted, once for the whole database: every company using the same certification services backend shares them."
+                        invisible="not pt_invoicing"
+                    >
+                        <field name="l10n_pt_at_certificates_set" invisible="1" />
+                        <field name="l10n_pt_at_certificates_expired" invisible="1" />
+                        <field
+                            name="l10n_pt_at_certificates_unreadable"
+                            invisible="1"
+                        />
+                        <div
+                            class="d-flex align-items-center gap-2"
+                            invisible="not l10n_pt_at_certificates_set"
+                        >
+                            <span
+                                class="o_form_label text-success"
+                                invisible="l10n_pt_at_certificates_expired or l10n_pt_at_certificates_unreadable"
+                            >Certificates configured</span>
+                            <span
+                                class="o_form_label text-danger"
+                                invisible="not l10n_pt_at_certificates_expired"
+                            >Certificates expired</span>
+                            <span
+                                class="o_form_label text-danger"
+                                invisible="not l10n_pt_at_certificates_unreadable"
+                            >Certificates file not readable</span>
+                            <button
+                                name="action_l10n_pt_remove_at_certificates"
+                                type="object"
+                                string="Remove"
+                                icon="fa-trash"
+                                class="btn btn-link text-danger p-0"
+                                confirm="Remove the uploaded certificates and go back to the ones shipped with the module?"
+                            />
+                        </div>
+                        <div class="text-muted">
+                            <field name="l10n_pt_at_certificates_info" nolabel="1" />
+                        </div>
+                        <div class="mt-2" invisible="l10n_pt_at_certificates_set">
+                            <label
+                                for="l10n_pt_at_certificates"
+                                string="Certificates file"
+                                class="fw-bold d-block"
+                            />
+                            <field
+                                name="l10n_pt_at_certificates"
+                                filename="l10n_pt_at_certificates_filename"
+                                widget="binary"
+                            />
+                        </div>
+                    </setting>
+
+                    <setting
                         id="enable_l10n_multiway_tag"
                         company_dependent="1"
                         help="Tags to differentiate document copies"
