@@ -52,6 +52,36 @@ Available soon.
 Changelog
 =========
 
+5.3.3 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New VAT adjustment norm "Verba 2.42 da Lista I", for the VAT adjustments of
+  artigo 11.º do Decreto-Lei n.º 97/2026, de 20 de maio, which the periodic VAT
+  return reports in the field 40 and field 41 annexes since 2026-07-01
+  (Portaria n.º 298/2026/1, de 16 de julho). It can be chosen on credit and
+  debit notes, in favor of the company or of the State.
+
+5.3.2 (2026-10-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When creating a credit note from an invoice, the "VAT Adjustment Norm" field
+  now only offers the norms that fit that credit note, as the credit note form
+  already did.
+
+5.3.1 (2026-10-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The balance transfers (such as the VAT settlement or the closing of the
+  income and expense accounts) now also clear the balances of the company's
+  branches. Until now only the entries of the main company were transferred,
+  so the branches' balances were left in the source accounts.
+
 5.3.0 (2026-09-28)
 ~~~~~~~~~~~~~~~~~~~
 

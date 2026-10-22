@@ -35,6 +35,53 @@ Available soon.
 Changelog
 =========
 
+1.7.0 (2026-10-21)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Trial Balance now groups the accounts by the account groups of the chart
+  of accounts (class, then each level below it), as the native trial balance
+  does. Each group has a subtotal line with the initial balance, the debit, the
+  credit and the final balance of its accounts, on screen and in the XLSX
+  export, and the movements behind each subtotal can be opened from it.
+
+1.6.0 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The Depreciation and Amortization Map (Modelo 32) now has its own entry in the
+  Portuguese statements menu, next to the other accounting statements. Until now
+  it was one of the statement types of the Tax Statements wizard. It is computed
+  and exported as before.
+
+1.5.0 (2026-10-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The Trial Balance now shows, for each account, the initial balance, the debit
+  and credit of the period and the final balance, with a total line at the end,
+  on screen and in the XLSX export. The start date of the period can be chosen
+  again.
+- New Trial Balance options: compute it before the P/L calculation (apuramento
+  de resultados), leaving out the P/L calculation entries of the period, and
+  detail the receivable and payable accounts by partner and the accounts with
+  products by product.
+
+1.4.1 (2026-10-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Balance Sheet, the Profit & Loss, the Statement of Changes in Equity
+  and the Exploration Map now include the journal entries of the company's
+  branches, as the VAT statements already did. Until now they only reported
+  the entries of the main company.
+- The Trial Balance now also includes the branches that are not enabled in
+  the company selector.
+
 1.4.0 (2026-09-29)
 ~~~~~~~~~~~~~~~~~~~
 

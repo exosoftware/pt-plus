@@ -45,6 +45,15 @@ Available soon.
 Changelog
 =========
 
+5.1.11 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The Depreciation and Amortization Map (Modelo 32) is no longer one of the
+  statement types of this wizard: it now has its own entry in the Portuguese
+  statements menu.
+
 5.1.10 (2026-10-01)
 ~~~~~~~~~~~~~~~~~~~~
 

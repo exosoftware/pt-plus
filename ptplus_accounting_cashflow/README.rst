@@ -154,6 +154,14 @@ Known issues / Roadmap
 Changelog
 =========
 
+5.2.2 (2026-10-13)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Cash Flow Statement now includes the company's branches even when they
+  are not enabled in the company selector.
+
 5.2.1 (2026-10-06)
 ~~~~~~~~~~~~~~~~~~
 

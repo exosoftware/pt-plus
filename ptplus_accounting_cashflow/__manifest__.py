@@ -6,7 +6,7 @@
 # pylint: disable=license-allowed, manifest-required-author
 {
     "name": "Portugal - Cash Flow",
-    "version": "19.0.5.2.1",
+    "version": "19.0.5.2.2",
     "license": "OPL-1",
     "depends": ["ptplus_accounting_reports"],
     "author": "Exo Software",

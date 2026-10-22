@@ -78,14 +78,15 @@
                     name="invisible"
                 >state not in ('sent', 'sale') or fiscal_document_type_code == 'PF'</attribute>
             </xpath>
-            <!-- Add a issue button for quotations -->
+            <!-- Add a issue button for quotations. A Pró-forma is issued by
+                its confirmation instead, so it goes straight to the sale state -->
             <xpath expr="//button[@id='action_confirm']" position="after">
                 <button
                     name="action_quotation_sent"
                     id="action_quotation_sent"
                     string="Issue Doc."
                     type="object"
-                    invisible="state != 'draft' or not fiscal_document_type_id"
+                    invisible="state != 'draft' or not fiscal_document_type_id or fiscal_document_type_code == 'PF'"
                     help="Lock and issue the document so that it can be printed or sent to the partner. "
                 />
                 <button
@@ -118,7 +119,7 @@
             <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC', 'PF']</attribute>
+                >state != 'sent' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>
@@ -126,7 +127,7 @@
             <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
                 <attribute
                     name="invisible"
-                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC', 'PF']</attribute>
+                >state != 'draft' or l10n_pt_order_id or fiscal_document_type_code in ['FC', 'CC']</attribute>
                 <attribute
                     name="context"
                 >{'validate_analytic': True, 'bypass_field_protection': True}</attribute>

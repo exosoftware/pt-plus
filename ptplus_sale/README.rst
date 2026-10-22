@@ -33,6 +33,22 @@ Available soon.
 Changelog
 =========
 
+5.1.10 (2026-10-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Proforma Invoices can now be confirmed, and then delivered and invoiced.
+  Before, a Proforma Invoice stayed in the sent state with no way to confirm
+  it. A new Proforma Invoice no longer shows the Issue button: the Confirm
+  button issues it and confirms it in one step. Proforma Invoices that were
+  already issued can also be confirmed. A Proforma Invoice created from an
+  order that is already confirmed creates no delivery, because that order
+  already delivers the goods.
+- On the SAF-T file, invoices now reference the sales document they were
+  created from: the order, or the Proforma Invoice when the invoice was
+  created from it.
+
 5.1.9 (2026-09-09)
 ~~~~~~~~~~~~~~~~~~
 

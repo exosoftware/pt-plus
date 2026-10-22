@@ -9,7 +9,16 @@
                 expr="//group[@name='group1']/field[@name='partner_bank_id']"
                 position="after"
             >
-                <field name="l10n_pt_cope_code_id" />
+                <field name="l10n_pt_cope_partner_country_code" invisible="1" />
+                <field
+                    name="l10n_pt_cope_code_id"
+                    invisible="l10n_pt_cope_partner_country_code == 'PT'"
+                />
+                <field name="l10n_pt_cope_show_active_country" invisible="1" />
+                <field
+                    name="l10n_pt_cope_active_country_id"
+                    invisible="not l10n_pt_cope_show_active_country"
+                />
             </xpath>
         </field>
     </record>

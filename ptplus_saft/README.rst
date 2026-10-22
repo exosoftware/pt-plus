@@ -32,6 +32,16 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.5.2 (2026-10-09)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Receipts collected from another software (series with Source Method
+  "Integration") are now exported with the document type of the series in
+  front of the number entered in "Integrated Document Number", exactly like
+  the invoices, so the SAF-T passes the Tax Authority validation.
+
 4.5.1 (2026-10-06)
 ~~~~~~~~~~~~~~~~~~
 
