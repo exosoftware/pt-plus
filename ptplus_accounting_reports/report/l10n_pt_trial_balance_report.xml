@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_trial_balance">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <h4 class="text-center">Trial Balance</h4>
+                        <p class="text-center">
+                            <span t-out="o.company_id.name" /> - <span
+                            t-out="o.company_id.vat"
+                        />
+                            <br />
+                            <span t-out="o.get_period_text()" />
+                        </p>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th
+                                        t-foreach="o._get_xlsx_headers()"
+                                        t-as="header"
+                                        t-att-class="'text-end' if header_index > 1 else None"
+                                        t-out="header"
+                                    />
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    t-foreach="o.line_ids"
+                                    t-as="line"
+                                    t-att-class="None if line.account_id else 'fw-bold' if line.account_group_id else 'fw-bold table-active'"
+                                >
+                                    <td>
+                                        <span t-out="line.code" />
+                                    </td>
+                                    <td>
+                                        <span t-out="line.display_name" />
+                                    </td>
+                                    <td
+                                        t-foreach="(line.initial_balance, line.debit, line.credit, line.amount)"
+                                        t-as="amount"
+                                        class="text-end text-nowrap"
+                                        t-out="amount"
+                                        t-options="{'widget': 'float', 'precision': 2}"
+                                    />
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_trial_balance" model="ir.actions.report">
+        <field name="name">Trial Balance</field>
+        <field name="model">l10n_pt.trial.balance.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ptplus_accounting_reports.report_trial_balance</field>
+        <field name="report_file">ptplus_accounting_reports.report_trial_balance</field>
+    </record>
+</odoo>

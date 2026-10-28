@@ -79,6 +79,14 @@ Available soon.
 Changelog
 =========
 
+5.18.2 (2026-09-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The upgrade to Odoo 19 no longer fails on the E-Fatura tax mapping when the
+  database comes from a version where the rates were already written as text.
+
 5.18.1 (2026-09-10)
 ~~~~~~~~~~~~~~~~~~~
 

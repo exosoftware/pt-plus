@@ -440,7 +440,6 @@ msgstr "Código"
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_color
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_color
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__color
 msgid "Color"
 msgstr "Cor"
@@ -748,7 +747,6 @@ msgstr ""
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__category_code
-#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_code
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_category__ies_code
 msgid "IES Code"
 msgstr "Código IES"
@@ -1172,6 +1170,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_id
 msgid "Suggested Category"
 msgstr "Categoria Sugerida"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_color
+msgid "Suggested Color"
+msgstr "Cor Sugerida"
+
+#. module: ptplus_accounting_cashflow
+#: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cashflow_backfill_wizard_document_line__suggested_category_code
+msgid "Suggested IES Code"
+msgstr "Código IES Sugerido"
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__representative_user_password

@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.1.9",
+    "version": "19.0.5.1.10",
     "depends": ["sale_management", "ptplus_saft"],
     "data": [
         "data/ir_sequence.xml",

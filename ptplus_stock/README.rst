@@ -32,6 +32,26 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.13 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fixed the Loading/Unloading addresses printed on the delivery slip and
+  reported to the Tax Authority for consignment stock movements (tracked as
+  a sub-location of our own warehouse): sending consignment stock now
+  correctly shows the customer as Unloading instead of repeating our own
+  address, and returning it now correctly shows the customer as Loading
+
+5.1.12 (2026-09-30)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Creating several stock operations at once no longer fails with an "Expected
+  singleton" error. This happened, for example, when confirming a sales order
+  whose components are grouped into waves
+
 5.1.11 (2026-09-09)
 ~~~~~~~~~~~~~~~~~~~
 

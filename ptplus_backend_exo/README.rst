@@ -27,6 +27,15 @@ Available soon.
 Changelog
 =========
 
+4.2.0 (2026-09-04)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Certificates uploaded in the Portuguese Invoicing settings are now used to
+  reach the Tax Authority and to sign documents, in place of the ones that come
+  installed.
+
 4.0.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

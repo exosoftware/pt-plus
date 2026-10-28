@@ -39,7 +39,7 @@
                 class="col-7"
                 name="loading"
                 style="font-size: small;"
-                t-if="o.source_billing and shipfrom_partner and (shipfrom_partner != partner)"
+                t-if="o.source_billing and shipfrom_partner"
             >
                 <div>
                     <span>

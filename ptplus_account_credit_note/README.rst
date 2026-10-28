@@ -26,6 +26,25 @@ Available soon.
 Changelog
 =========
 
+5.0.4 (2026-09-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The migration now absorbs ``account_invoice_refund_link`` also on databases
+  migrated through the Odoo upgrade platform, which leaves the module in the
+  "to upgrade" state instead of "installed".
+
+5.0.3 (2026-09-23)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Credit notes registered as integration documents (issued by another
+  software, for instance imported from a SAF-T file) no longer require each
+  line to point at a line of the corrected invoice, which may not exist in
+  Odoo. The check still applies to the credit notes issued here.
+
 5.0.2 (2026-08-18)
 ~~~~~~~~~~~~~~~~~~~
 

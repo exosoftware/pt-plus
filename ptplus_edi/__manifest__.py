@@ -8,7 +8,7 @@
     "name": "Portugal - E-invoicing CIUS-PT",
     "category": "Accounting/Localizations/EDI",
     "summary": "Portuguese e-invoicing (CIUS-PT)",
-    "version": "19.0.1.2.0",
+    "version": "19.0.1.2.1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "depends": [

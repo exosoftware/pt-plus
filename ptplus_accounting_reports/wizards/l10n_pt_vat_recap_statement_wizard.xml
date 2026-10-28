@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_pt_vat_recap_statement_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.vat.recap.statement.wizard.form</field>
+        <field name="model">l10n_pt.vat.recap.statement.wizard</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field
+                    name="declaration_type"
+                    help="Select whether this is the first declaration for the period or a replacement. The replacement details are handled in the Tax Authorities website after importing the file."
+                    readonly="state != 'select'"
+                />
+                <field name="certified_accountant_vat" readonly="state != 'select'" />
+            </group>
+            <group name="main" position="after">
+                <div
+                    name="error_analyze"
+                    class="alert alert-warning mb-3"
+                    role="alert"
+                    invisible="state != 'analyze' or not warnings"
+                >
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" />
+                </div>
+                <group name="totals" string="Totals" invisible="state != 'analyze'">
+                    <field name="total_goods" />
+                    <field name="total_services" />
+                    <field name="total_amount" />
+                </group>
+            </group>
+            <notebook name="main_block" position="inside">
+                <page name="invoicing" string="Invoicing">
+                    <field name="invoicing_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="country_code" />
+                            <field name="partner_id" />
+                            <field name="vat_number" />
+                            <field name="nature" />
+                            <field name="amount" sum="Total" />
+                            <field name="amount_rounded" sum="Total" />
+                            <button
+                                name="action_view_details"
+                                type="object"
+                                string="View"
+                                icon="fa-search"
+                            />
+                        </list>
+                    </field>
+                </page>
+                <page
+                    name="consignment"
+                    string="Consignment"
+                    invisible="not consignment_line_ids"
+                >
+                    <field name="consignment_line_ids" nolabel="1" colspan="2">
+                        <list create="0" delete="0" edit="0">
+                            <field name="country_code" />
+                            <field name="partner_id" />
+                            <field name="vat_number" />
+                            <field name="consignment_code" />
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_vat_recap_statement_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">VAT Recapitulative Statement</field>
+        <field name="res_model">l10n_pt.vat.recap.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_vat_recap_statement_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_vat_recap_statement_wizard_menu"
+        parent="ptplus_reports.l10n_pt_tax_statement_menu"
+        sequence="20"
+        groups="account.group_account_user"
+        action="l10n_pt_vat_recap_statement_wizard_action"
+    />
+</odoo>

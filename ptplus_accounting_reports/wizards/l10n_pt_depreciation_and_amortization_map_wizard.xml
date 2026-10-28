@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- View for Accounting Statement -->
+    <record id="l10n_pt_depreciation_and_amortization_wizard_form" model="ir.ui.view">
+        <field name="name">l10n_pt.depreciation.and.amortization.wizard.form</field>
+        <field name="model">l10n_pt.depreciation.and.amortization.wizard</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
+        <field name="arch" type="xml">
+            <group name="main_left" position="inside">
+                <field name="validate" readonly="state != 'select'" />
+                <field name="tolerance_threshold_15" readonly="state != 'select'" />
+            </group>
+
+            <group name="options_left" position="inside">
+                <field name="nature_asset" />
+            </group>
+
+            <group name="options_right" position="inside">
+                <field name="method_used" />
+            </group>
+
+            <notebook name="main_block" position="inside">
+                <page name="Depreciation and Amortization Lines">
+                    <group>
+                        <field name="line_ids" nolabel="1" colspan="2">
+                            <list editable="bottom">
+                                <field name="code" />
+                                <field name="desc" />
+                                <field name="month" />
+                                <field name="year" />
+                                <field name="book_value" sum="Total" />
+                                <field name="tax_basis_cost" sum="Total" />
+                                <field name="useful_life_years" sum="Total" />
+                                <field name="deprec_amort_imploss_period" sum="Total" />
+                                <field name="prev_accepted_deprec_amort" sum="Total" />
+                                <field name="tax" sum="Total" />
+                                <field name="adjusted_rate" sum="Total" />
+                                <field name="period_tax_limit" sum="Total" />
+                                <field
+                                    name="period_accepted_impairment_loss"
+                                    sum="Total"
+                                />
+                                <field name="accrued_lost_fees" sum="Total" />
+                                <field
+                                    name="non_deductible_deprec_amort_imploss"
+                                    sum="Total"
+                                />
+                                <field
+                                    name="recovered_deprec_amort_imploss_period"
+                                    sum="Total"
+                                />
+                                <button
+                                    name="action_view_details"
+                                    type="object"
+                                    string="View"
+                                    icon="fa-search"
+                                />
+                            </list>
+                        </field>
+                    </group>
+                    <group />
+                </page>
+            </notebook>
+
+            <!--            <xpath expr="//group[@id='main_export_group']" position="after">-->
+            <!--                <group invisible="state != 'select'">-->
+            <!--                    <group>-->
+            <!--                        <field-->
+            <!--                            name="tolerance_threshold_15"-->
+            <!--                            invisible="statement_type not in ('asset.value.adjustment')"-->
+            <!--                        />-->
+            <!--                    </group>-->
+            <!--                </group>-->
+            <!--                <notebook invisible="state != 'select'">-->
+            <!--                    <page-->
+            <!--                        string="Other"-->
+            <!--                        name="other"-->
+            <!--                        invisible="statement_type not in ['non.resident.income', 'resident.income']"-->
+            <!--                    >-->
+            <!--                        <group-->
+            <!--                            invisible="statement_type not in ['non.resident.income', 'resident.income']"-->
+            <!--                        >-->
+            <!--                            <group-->
+            <!--                                invisible="statement_type not in ['non.resident.income', 'resident.income']"-->
+            <!--                                string="Details"-->
+            <!--                            >-->
+            <!--                                <field name="vat_legal_representative" />-->
+            <!--                                <field name="company_eac" />-->
+            <!--                                <field name="declaration_type" widget="radio" />-->
+            <!--                                <field-->
+            <!--                                    name="reason_justified_impediment"-->
+            <!--                                    invisible="declaration_type != 'second'"-->
+            <!--                                    required="declaration_type == 'second'"-->
+            <!--                                />-->
+            <!--                                <field-->
+            <!--                                    name="date_of_occurrence"-->
+            <!--                                    invisible="declaration_type != 'second'"-->
+            <!--                                    required="declaration_type == 'second'"-->
+            <!--                                />-->
+            <!--                            </group>-->
+            <!--                            <group-->
+            <!--                                invisible="statement_type not in ['non.resident.income']"-->
+            <!--                                string="Statement of Payment Slips"-->
+            <!--                            >-->
+            <!--                                <field name="payment_slip_ids" nolabel="1" colspan="2">-->
+            <!--                                    <list editable="bottom">-->
+            <!--                                        <field name="name" />-->
+            <!--                                        <field name="amount" />-->
+            <!--                                    </list>-->
+            <!--                                </field>-->
+            <!--                            </group>-->
+            <!--                        </group>-->
+            <!--                    </page>-->
+            <!--                </notebook>-->
+            <!--            </xpath>-->
+        </field>
+    </record>
+
+    <record
+        id="l10n_pt_depreciation_and_amortization_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Depreciation and Amortization Map</field>
+        <field name="res_model">l10n_pt.depreciation.and.amortization.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_pt_depreciation_and_amortization_wizard_form" />
+        <field name="target">new</field>
+        <field name="context">{'default_statement': 'accounting'}</field>
+    </record>
+
+    <menuitem
+        id="l10n_pt_depreciation_and_amortization_wizard_menu"
+        parent="l10n_pt.account_reports_pt_statements_menu"
+        sequence="130"
+        groups="account.group_account_user,account.group_account_user"
+        action="l10n_pt_depreciation_and_amortization_wizard_action"
+    />
+</odoo>

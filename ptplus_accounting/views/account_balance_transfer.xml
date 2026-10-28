@@ -166,6 +166,11 @@
                     <group string="Moves created by the operation">
                         <group>
                             <field name="move_id" />
+                            <field
+                                name="branch_move_ids"
+                                widget="many2many_tags"
+                                invisible="not branch_move_ids"
+                            />
                         </group>
                         <group>
                             <field name="manual_move_id" />

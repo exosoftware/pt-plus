@@ -14,7 +14,9 @@
         "security/ir.model.access.csv",
         "data/l10n_pt_cope_code.xml",
         "report/report_cope.xml",
+        "views/account_account_views.xml",
         "views/account_journal_views.xml",
+        "views/account_move_line_views.xml",
         "views/account_payment_register_views.xml",
         "views/account_payment_views.xml",
         "views/l10n_pt_cope_code.xml",
@@ -26,6 +28,6 @@
     "license": "OPL-1",
     "name": "Portugal - COPE Report",
     "test": [],
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "website": "https://exosoftware.pt",
 }

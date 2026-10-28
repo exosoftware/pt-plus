@@ -32,6 +32,65 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.5.4 (2026-10-26)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A journal entry reset to draft and posted again (for example a vendor bill
+  moved to another date, journal or account) is now reported in the
+  Accounting SAF-T as it was last posted. Before, the SAF-T kept the number,
+  date, journal and accounts of the first posting, and could report two
+  entries with the same identifier or an account that is no longer used, which
+  the Tax Authority validation rejects. Entries posted from now on are also
+  always reported with their final number, never with "/".
+
+4.5.3 (2026-10-26)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A journal item label or a journal entry reference written on more than one
+  line no longer makes the Accounting SAF-T fail the Tax Authority validation.
+  The line breaks added spaces to the description, which could then exceed the
+  maximum length; the SAF-T now reports such text on a single line.
+
+4.5.2 (2026-10-09)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Receipts collected from another software (series with Source Method
+  "Integration") are now exported with the document type of the series in
+  front of the number entered in "Integrated Document Number", exactly like
+  the invoices, so the SAF-T passes the Tax Authority validation.
+
+4.5.1 (2026-10-06)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- An invoice line without a description no longer stops the SAF-T data of the
+  document from being computed. Validating such a document (for example a
+  down payment taken at the Point of Sale) failed with a technical error; the
+  SAF-T now reports the product name as the line description instead.
+
+4.5.0 (2026-09-23)
+~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The SAF-T import moved to its own app, *Import SAF-T*, which reads the
+  accounting, invoicing and integrated files and shows what it will create
+  before creating it. The old import screen of this module is gone.
+
+**Improvement**
+
+- The exported SAF-T now reports the documents brought in from another
+  software with the number they were issued with, receipts included, keeps the
+  references of their credit notes even when the corrected document is not in
+  this database, and reports lines without a product under the CONTA product.
+
 4.4.4 (2026-09-22)
 ~~~~~~~~~~~~~~~~~~
 

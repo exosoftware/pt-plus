@@ -79,6 +79,10 @@ account_tax_template_iva_0_extrac_obs,True,,VAT 0%,IVA 0%,12020,IVA 0% EXTRAC. (
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
+account_tax_template_iva_0_extrac_obs_m40,True,,VAT 0%,IVA 0%,12025,IVA 0% EXTRAC. (OBS) (M40),sale,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M40,ISE,ogs,,,,,,,fp_extra,"account_tax_template_iva_23_obs,account_tax_template_iva_13_obs,account_tax_template_iva_6_obs",base,invoice,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,tax,refund,,,100
 account_tax_template_iva_0_extrac_exist,True,,VAT 0%,IVA 0%,12030,IVA 0% EXTRAC. (Exist.) (M05),sale,0,,,percent,tax_group_iva_0,on_invoice,EXTRA,M05,ISE,stock,,,,,,,fp_extra,"account_tax_template_iva_23_exist,account_tax_template_iva_13_exist,account_tax_template_iva_6_exist",base,invoice,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,tax,invoice,,,100
 ,,,,,,,,,,,,,,,,,,,,,,,,,,base,refund,IVA DP [Q06-C8]||IVA AL [Q05-L44],,100

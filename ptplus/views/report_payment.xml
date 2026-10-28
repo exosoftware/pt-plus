@@ -31,7 +31,7 @@
                     <h3>
                         <span t-out="o.pt_get_fullname()" />
                         <span
-                            t-if="o.state == 'cancel'"
+                            t-if="o.state == 'canceled'"
                             t-field="o.state"
                             class="pt_cancelled"
                         />
@@ -75,7 +75,6 @@
             <div class="row" t-if="o.source_billing and writeoff">
                 <div class="col-6" t-if="o.date">
                     Write-off: <span
-                    t-field="o.date"
                     t-out="writeoff"
                     t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
                 />

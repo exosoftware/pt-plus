@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_form_cope" model="ir.ui.view">
+        <field name="name">account.account.form.cope</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form" />
+        <field name="arch" type="xml">
+            <page name="accounting" position="after">
+                <page name="cope" string="COPE">
+                    <group>
+                        <field
+                            name="l10n_pt_cope_code_id"
+                            options="{'no_create': True}"
+                        />
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

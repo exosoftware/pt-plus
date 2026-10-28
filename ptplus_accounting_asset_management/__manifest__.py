@@ -13,7 +13,7 @@
     "version": "19.0.5.1.0",
     "depends": [
         "account_asset_management",
-        "ptplus_accounting_tax_statement",
+        "ptplus_accounting_reports",
     ],
     "data": [
         "views/account_asset_views.xml",

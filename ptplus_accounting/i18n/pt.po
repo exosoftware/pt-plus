@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 17:21+0000\n"
+"POT-Creation-Date: 2026-09-28 09:38+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
 "portugal-plus-18-0/ptplus_accounting/pt/>\n"
@@ -172,24 +172,14 @@ msgid "Adjustment"
 msgstr "Ajustes"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a6
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a6
 msgid "Ajustamentos por impostos diferidos"
 msgstr ""
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a2
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a2
 msgid "Alterações de políticas contabilísticas"
 msgstr ""
-
-#. module: ptplus_accounting
-#: model:ir.model,name:ptplus_accounting.model_account_analytic_account
-msgid "Analytic Account"
-msgstr "Conta Analítica"
-
-#. module: ptplus_accounting
-#: model:ir.model,name:ptplus_accounting.model_account_analytic_plan
-msgid "Analytic Plans"
-msgstr "Planos analíticos"
 
 #. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.vat_adjustment_norm_view_form
@@ -261,6 +251,11 @@ msgid "Balanço - Passivo Não Corrente"
 msgstr "Balanço - Passivo Não Corrente"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Branch Transfer Moves"
+msgstr "Movimentos de Transferência das Filiais"
+
+#. module: ptplus_accounting
 #. odoo-python
 #: code:addons/ptplus_accounting/models/account_move.py:0
 msgid ""
@@ -281,11 +276,6 @@ msgstr "Cancelar"
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_balance_transfer__state__cancelled
 msgid "Cancelled"
 msgstr "Cancelado"
-
-#. module: ptplus_accounting
-#: model:account.analytic.plan,name:ptplus_accounting.l10n_pt_equity_analytic_plan
-msgid "Capital Próprio - DACP"
-msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__chained
@@ -449,14 +439,12 @@ msgid "Devedor antes de transferência para inventários"
 msgstr "Devedor antes de transferência para inventários"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a3
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a3
 msgid "Diferenças de conversão de demonstrações financeiras"
 msgstr ""
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__display_name
-#: model:ir.model.fields,field_description:ptplus_accounting.field_account_analytic_account__display_name
-#: model:ir.model.fields,field_description:ptplus_accounting.field_account_analytic_plan__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_automatic_entry_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__display_name
@@ -478,7 +466,7 @@ msgid "Display Name"
 msgstr "Nome a Apresentar"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_d3
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d3
 msgid "Distribuições"
 msgstr ""
 
@@ -498,7 +486,7 @@ msgid "End Date"
 msgstr "Data Final"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_d4
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d4
 msgid "Entradas para cobertura de perdas"
 msgstr ""
 
@@ -506,19 +494,29 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting/models/account_move.py:0
 msgid ""
-"Entry %(move)s cannot be posted: the accounts %(accounts)s need exactly one "
-"tag of the analytic plan '%(plan)s', at 100%%, so that the Statement of "
-"Changes in Equity (IES quadro 04-A) reports them. Split the amount over one "
-"line per tag when more than one applies."
+"Entry %(move)s cannot be posted: the items on the accounts %(accounts)s need "
+"the nature of the change filled in, so that the Statement of Changes in "
+"Equity (IES quadro 04-A) reports them. Split the amount over one line per "
+"nature when more than one applies."
 msgstr ""
-"O lançamento %(move)s não pode ser lançado: as contas %(accounts)s precisam "
-"de exatamente uma etiqueta do plano analítico '%(plan)s', a 100%%, para que "
-"a Demonstração das Alterações no Capital Próprio (quadro 04-A da IES) as "
-"apresente. Reparta o valor por uma linha para cada etiqueta quando se "
-"aplicar mais do que uma."
+"O lançamento %(move)s não pode ser lançado: os itens das contas %(accounts)s "
+"precisam da natureza da alteração preenchida, para que a Demonstração das "
+"Alterações no Capital Próprio (quadro 04-A da IES) os apresente. Reparta o "
+"valor por uma linha para cada natureza quando se aplicar mais do que uma."
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a5
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_move_line_filter_pt
+msgid "Equity Change"
+msgstr "Alteração no Capital Próprio"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_move_line__l10n_pt_equity_required
+msgid "Equity Change Required"
+msgstr "Alteração no Capital Próprio Obrigatória"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a5
 msgid "Excedentes de revalorização"
 msgstr ""
 
@@ -545,8 +543,6 @@ msgstr "Regularizações do Período"
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_account__id
-#: model:ir.model.fields,field_description:ptplus_accounting.field_account_analytic_account__id
-#: model:ir.model.fields,field_description:ptplus_accounting.field_account_analytic_plan__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_automatic_entry_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__id
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template__id
@@ -733,12 +729,17 @@ msgid "Move Date"
 msgstr "Data do Movimento"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Moves clearing the balances of the company's branches, one per branch."
+msgstr "Movimentos que anulam os saldos das filiais da empresa, um por filial."
+
+#. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
 msgid "Moves created by the operation"
 msgstr "Movimentos criados pela operação"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_x1
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__x1
 msgid "Movimentos internos sem impacto na DACP"
 msgstr ""
 
@@ -748,6 +749,15 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting.field_l10n_pt_account_vat_adjustment_norm__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_move_line__l10n_pt_equity_change
+msgid ""
+"Nature of the change, which tells the Statement of Changes in Equity (IES "
+"quadro 04-A) on which line to report the item"
+msgstr ""
+"Natureza da alteração, que indica à Demonstração das Alterações no Capital "
+"Próprio (quadro 04-A da IES) em que linha apresentar o item"
 
 #. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_move_line_filter_pt
@@ -771,12 +781,12 @@ msgid "Other References"
 msgstr "Outros Referenciais"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a7
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a7
 msgid "Outras alterações reconhecidas no capital próprio"
 msgstr ""
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_d5
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d5
 msgid "Outras operações"
 msgstr ""
 
@@ -821,12 +831,12 @@ msgid "Previous Requests Policy"
 msgstr "Política de Pedidos Prévios"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a1
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a1
 msgid "Primeira adoção de novo referencial contabilístico"
 msgstr ""
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_a4
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__a4
 msgid "Realização do excedente de revalorização"
 msgstr ""
 
@@ -876,6 +886,15 @@ msgstr ""
 "NUM campo"
 
 #. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+msgid ""
+"Select the company %s and all its branches to process this balance transfer."
+msgstr ""
+"Selecione a empresa %s e todas as suas filiais para processar esta "
+"transferência de saldos."
+
+#. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__sequence
 msgid "Sequence"
 msgstr "Sequência"
@@ -921,12 +940,12 @@ msgid "Status"
 msgstr "Estado"
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_d1
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d1
 msgid "Subscrições de capital"
 msgstr ""
 
 #. module: ptplus_accounting
-#: model:account.analytic.account,name:ptplus_accounting.l10n_pt_equity_tag_d2
+#: model:ir.model.fields.selection,name:ptplus_accounting.selection__account_move_line__l10n_pt_equity_change__d2
 msgid "Subscrições de prémios de emissão"
 msgstr ""
 
@@ -963,16 +982,6 @@ msgstr "Modelo"
 
 #. module: ptplus_accounting
 #. odoo-python
-#: code:addons/ptplus_accounting/models/account_analytic_plan.py:0
-msgid ""
-"The analytic plan '%s' holds the movement lines of the Statement of Changes "
-"in Equity (IES quadro 04-A) and cannot be deleted."
-msgstr ""
-"O plano analítico '%s' contém as linhas de movimento da Demonstração das "
-"Alterações no Capital Próprio (quadro 04-A da IES) e não pode ser eliminado."
-
-#. module: ptplus_accounting
-#. odoo-python
 #: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
 msgid "The balance transfer move is required"
 msgstr "O movimento de transferência de saldos é obrigatório"
@@ -985,28 +994,6 @@ msgid ""
 msgstr ""
 "O plano de contas de referência usado como modelo nesta empresa. Por favor, "
 "consulte o campo 2.1.1 das especificações do SAF-T PT para mais informações."
-
-#. module: ptplus_accounting
-#. odoo-python
-#: code:addons/ptplus_accounting/models/account_analytic_account.py:0
-msgid ""
-"The code of the equity tags %s cannot be changed: the Statement of Changes "
-"in Equity (IES quadro 04-A) reads its lines by code."
-msgstr ""
-"O código das etiquetas de capital próprio %s não pode ser alterado: a "
-"Demonstração das Alterações no Capital Próprio (quadro 04-A da IES) lê as "
-"suas linhas pelo código."
-
-#. module: ptplus_accounting
-#. odoo-python
-#: code:addons/ptplus_accounting/models/account_analytic_account.py:0
-msgid ""
-"The equity tags %s are used on journal items and cannot be deleted: the "
-"Statement of Changes in Equity (IES quadro 04-A) would stop reporting them."
-msgstr ""
-"As etiquetas de capital próprio %s estão a ser usadas em itens de diário e "
-"não podem ser eliminadas: a Demonstração das Alterações no Capital Próprio "
-"(quadro 04-A da IES) deixaria de as apresentar."
 
 #. module: ptplus_accounting
 #: model:ir.model.constraint,message:ptplus_accounting.constraint_account_group_code_prefix_company_uniq
