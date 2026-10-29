@@ -32,6 +32,16 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.14 (2026-10-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The SAF-T now reports, for each line of a transport document, the
+  description written on that line of the document, instead of the
+  description of the sales order line or the product name. The product name
+  is only used when the line has no description
+
 5.1.13 (2026-10-15)
 ~~~~~~~~~~~~~~~~~~~
 

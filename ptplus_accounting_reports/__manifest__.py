@@ -6,7 +6,7 @@
 # pylint: disable=license-allowed, manifest-required-author
 {
     "name": "Portugal - Accounting Reports & Statements",
-    "version": "19.0.1.7.0",
+    "version": "19.0.1.9.0",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
@@ -14,6 +14,7 @@
     "depends": ["ptplus_reports", "ptplus_accounting"],
     "data": [
         "security/ir.model.access.csv",
+        "report/l10n_pt_trial_balance_report.xml",
         "wizards/l10n_pt_trial_balance_wizard.xml",
         "wizards/l10n_pt_balance_sheet_wizard.xml",
         "wizards/l10n_pt_profit_loss_wizard.xml",

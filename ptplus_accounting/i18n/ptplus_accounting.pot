@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 09:38+0000\n"
-"PO-Revision-Date: 2026-09-28 09:38+0000\n"
+"POT-Creation-Date: 2026-10-28 11:13+0000\n"
+"PO-Revision-Date: 2026-10-28 11:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -240,6 +240,11 @@ msgstr ""
 #. module: ptplus_accounting
 #: model:ir.model.fields.selection,name:ptplus_accounting.selection__l10n_pt_account_taxonomy__svat_class__pnc
 msgid "Balanço - Passivo Não Corrente"
+msgstr ""
+
+#. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Branch Transfer Moves"
 msgstr ""
 
 #. module: ptplus_accounting
@@ -693,6 +698,11 @@ msgid "Move Date"
 msgstr ""
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Moves clearing the balances of the company's branches, one per branch."
+msgstr ""
+
+#. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
 msgid "Moves created by the operation"
 msgstr ""
@@ -836,6 +846,13 @@ msgstr ""
 msgid ""
 "Saldo Devedor ou Credor, antes de apuramento de resultados, a representar "
 "NUM campo"
+msgstr ""
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+msgid ""
+"Select the company %s and all its branches to process this balance transfer."
 msgstr ""
 
 #. module: ptplus_accounting

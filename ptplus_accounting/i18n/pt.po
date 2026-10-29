@@ -251,6 +251,11 @@ msgid "Balanço - Passivo Não Corrente"
 msgstr "Balanço - Passivo Não Corrente"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Branch Transfer Moves"
+msgstr "Movimentos de Transferência das Filiais"
+
+#. module: ptplus_accounting
 #. odoo-python
 #: code:addons/ptplus_accounting/models/account_move.py:0
 msgid ""
@@ -724,6 +729,11 @@ msgid "Move Date"
 msgstr "Data do Movimento"
 
 #. module: ptplus_accounting
+#: model:ir.model.fields,help:ptplus_accounting.field_account_balance_transfer__branch_move_ids
+msgid "Moves clearing the balances of the company's branches, one per branch."
+msgstr "Movimentos que anulam os saldos das filiais da empresa, um por filial."
+
+#. module: ptplus_accounting
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting.view_abt_form
 msgid "Moves created by the operation"
 msgstr "Movimentos criados pela operação"
@@ -874,6 +884,15 @@ msgid ""
 msgstr ""
 "Saldo Devedor ou Credor, antes de apuramento de resultados, a representar "
 "NUM campo"
+
+#. module: ptplus_accounting
+#. odoo-python
+#: code:addons/ptplus_accounting/models/account_balance_transfer.py:0
+msgid ""
+"Select the company %s and all its branches to process this balance transfer."
+msgstr ""
+"Selecione a empresa %s e todas as suas filiais para processar esta "
+"transferência de saldos."
 
 #. module: ptplus_accounting
 #: model:ir.model.fields,field_description:ptplus_accounting.field_account_balance_transfer_template_line__sequence

@@ -1823,6 +1823,12 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Issued on: %s"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m01
 msgid "Jan"
@@ -3106,9 +3112,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_action
+#: model:ir.actions.report,name:ptplus_accounting_reports.action_report_trial_balance
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__trial_balance
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_trial_balance_wizard__statement_type__trial_balance
 #: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_menu
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.report_trial_balance
 msgid "Trial Balance"
 msgstr ""
 

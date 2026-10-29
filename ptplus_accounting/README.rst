@@ -52,6 +52,57 @@ Available soon.
 Changelog
 =========
 
+5.4.0 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Two new VAT adjustment norms in favor of the State are available on vendor
+  credit notes: "Artigo 6.º do Decreto-Lei n.º 198/90" (sales to national
+  exporters) and "Decreto-Lei n.º 19/2017" (e-Taxfree). They match the new
+  fields of the annex of field 41 of the VAT periodic statement.
+
+5.3.6 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The balance transfers of a company with branches now clear each branch's
+  balances in an entry of the branch itself. Until now the whole transfer was
+  recorded in the main company, so the branch kept its balances and the main
+  company got the opposite ones. After the closing of the income and expense
+  accounts, this showed as two "Result Brought Forward" lines in the next
+  year's trial balance, one per company. The destination account still
+  follows the balance of the company and its branches together, so, for
+  instance, VAT recoverable on a branch reduces the VAT payable.
+- A balance transfer run on a branch, such as the VAT return of a foreign VAT
+  branch, now only takes that branch's balances. It no longer includes those
+  of the main company and the other branches.
+- Running, confirming or cancelling a balance transfer now requires the
+  company and all its branches to be selected in the company selector, as
+  the branches' entries are not reachable otherwise.
+
+5.3.5 (2026-10-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The taxonomy setup on the selected accounts no longer fails with an error
+  when the selection includes an account without a code. Such accounts are
+  now left unchanged, and the other accounts get their taxonomy as usual.
+
+5.3.4 (2026-10-23)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The SNC Base and SNC Microentities charts of accounts now set the SAF-T
+  taxonomy on their accounts when they are loaded, including the bank,
+  outstanding receipts and payments, bank suspense and liquidity transfer
+  accounts. Companies that already have one of these charts, when the full
+  accounting is installed or updated, get the taxonomy on the accounts that
+  don't have one yet; the taxonomies already set are kept.
+
 5.3.3 (2026-10-15)
 ~~~~~~~~~~~~~~~~~~~
 

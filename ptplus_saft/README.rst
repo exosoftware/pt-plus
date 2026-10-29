@@ -32,6 +32,29 @@ Known issues / Roadmap
 Changelog
 =========
 
+4.5.4 (2026-10-26)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A journal entry reset to draft and posted again (for example a vendor bill
+  moved to another date, journal or account) is now reported in the
+  Accounting SAF-T as it was last posted. Before, the SAF-T kept the number,
+  date, journal and accounts of the first posting, and could report two
+  entries with the same identifier or an account that is no longer used, which
+  the Tax Authority validation rejects. Entries posted from now on are also
+  always reported with their final number, never with "/".
+
+4.5.3 (2026-10-26)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- A journal item label or a journal entry reference written on more than one
+  line no longer makes the Accounting SAF-T fail the Tax Authority validation.
+  The line breaks added spaces to the description, which could then exceed the
+  maximum length; the SAF-T now reports such text on a single line.
+
 4.5.2 (2026-10-09)
 ~~~~~~~~~~~~~~~~~~
 

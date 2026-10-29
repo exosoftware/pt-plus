@@ -53,6 +53,14 @@ Available soon.
 Changelog
 =========
 
+5.2.4 (2026-10-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The printout of a cancelled receipt shows again the "Canceled" mark next
+  to the document name, as cancelled invoices already do.
+
 5.2.3 (2026-10-21)
 ~~~~~~~~~~~~~~~~~~~
 

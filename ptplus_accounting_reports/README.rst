@@ -35,6 +35,40 @@ Available soon.
 Changelog
 =========
 
+1.9.0 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The VAT periodic statement now fills in the "Regularizações abrangidas pela
+  verba 2.42 da lista I" table of the annexes of fields 40 and 41, by year and
+  tax period of the corrected document, and includes it in the XML file. Before,
+  a warning asked to fill in this table by hand on the Portal das Finanças.
+- The annex of field 41 now fills in the new fields for the adjustments under
+  "Artigo 6.º do Decreto-Lei n.º 198/90" (fields 3C/4C) and "Decreto-Lei n.º
+  19/2017" (fields 3D/4D), and includes them in the XML file.
+
+1.8.0 (2026-10-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The Trial Balance can now be exported to PDF, with the same columns and lines
+  as on screen. Each page shows the date and time the report was issued, and
+  the XLSX export shows them too.
+- The Trial Balance now only reports the accounts of classes 1 to 8 of the SNC
+  chart of accounts. Accounts created outside these classes are left out of the
+  report and of its total.
+
+1.7.1 (2026-10-23)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Trial Balance could not be computed when there were invoices with
+  section or note lines in the period: an error was shown instead of the
+  report. These lines carry no amounts and are now left out.
+
 1.7.0 (2026-10-21)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -19,6 +19,11 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #. module: ptplus_stock
+#: model:ir.actions.server,name:ptplus_stock.action_l10n_pt_toggle_saft_element_picking
+msgid "(Un)block SAF-T element"
+msgstr "(Des)bloquear elemento SAF-T"
+
+#. module: ptplus_stock
 #: model:mail.template,body_html:ptplus_stock.email_template_stock_deliveryslip
 msgid ""
 "<div style=\"margin: 0px; padding: 0px;\">\n"
@@ -619,6 +624,11 @@ msgstr "Matérias-primas, subsidiárias e de consumo"
 #: code:addons/ptplus_stock/models/stock_picking.py:0
 msgid "Reception"
 msgstr "Receção"
+
+#. module: ptplus_stock
+#: model:ir.actions.server,name:ptplus_stock.action_l10n_pt_recompute_saft_element_picking
+msgid "Recompute SAF-T element"
+msgstr "Recalcular elemento SAF-T"
 
 #. module: ptplus_stock
 #. odoo-python
