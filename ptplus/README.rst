@@ -53,6 +53,39 @@ Available soon.
 Changelog
 =========
 
+5.2.5 (2026-10-22)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The printout of a cancelled receipt shows again the "Canceled" mark next
+  to the document name, as cancelled invoices already do.
+
+5.2.4 (2026-10-21)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- New sales tax "IVA 0% EXTRAC. (OBS) (M40)" in the Portuguese chart of
+  accounts, for extra-community sales of other goods and services under
+  reverse charge (exemption reason M40). It reports to field 8 of the
+  Periodic VAT Return and line 44 of Annex L of the IES.
+
+5.2.3 (2026-10-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Documents collected from another software (series with Source Method
+  "Integration") are now reported to the SAF-T, the QR code and the printed
+  copy with the document type of the series in front of the number entered
+  in "Integrated Document Number", as the Tax Authority requires (for
+  instance "A/0000339" is reported as "FT A/0000339"). Numbers that were
+  already entered with the type keep working unchanged. The number is now
+  checked when the document is validated: it must be the series and the
+  sequential number of the original document separated by a single "/",
+  without spaces, e.g. "A/00001".
+
 5.2.2 (2026-10-06)
 ~~~~~~~~~~~~~~~~~~~
 

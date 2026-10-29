@@ -6,13 +6,6 @@
         <field name="inherit_id" ref="ptplus_reports.l10n_pt_statement_wizard_form" />
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <!-- Only the closing date drives the reported balances -->
-            <field name="date_from" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </field>
-            <field name="date_to" position="attributes">
-                <attribute name="string">As of</attribute>
-            </field>
             <group name="main_left" position="inside">
                 <field
                     name="include_draft"
@@ -20,18 +13,40 @@
                     readonly="state != 'select'"
                 />
             </group>
+            <group name="main" position="after">
+                <group
+                    name="trial_balance_options"
+                    string="Options"
+                    invisible="state != 'select'"
+                >
+                    <div class="o_row" colspan="2">
+                        <label for="before_pl_calculation" />
+                        <field name="before_pl_calculation" widget="boolean_toggle" />
+                        <label class="ps-5" for="show_partner_breakdown" />
+                        <field name="show_partner_breakdown" widget="boolean_toggle" />
+                        <label class="ps-5" for="show_product_breakdown" />
+                        <field name="show_product_breakdown" widget="boolean_toggle" />
+                    </div>
+                </group>
+            </group>
             <notebook name="main_block" position="inside">
                 <page name="Statement Lines" string="Accounts">
                     <field name="line_ids" nolabel="1" colspan="2">
-                        <list create="0" delete="0">
+                        <list create="0" delete="0" decoration-bf="not account_id">
+                            <field name="account_id" column_invisible="1" />
+                            <field name="domain" column_invisible="1" />
                             <field name="code" string="Code" />
-                            <field name="name" string="Account" />
-                            <field name="amount" string="Balance" sum="Total" />
+                            <field name="display_name" string="Account" readonly="1" />
+                            <field name="initial_balance" />
+                            <field name="debit" />
+                            <field name="credit" />
+                            <field name="amount" string="Final Balance" />
                             <button
                                 name="action_view_details"
                                 type="object"
                                 string="View"
                                 icon="fa-search"
+                                invisible="not domain"
                             />
                         </list>
                     </field>

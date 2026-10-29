@@ -73,19 +73,14 @@
                         <field name="deduct_tax_ogs" string="[24] Other Goods/Serv." />
                     </group>
                 </group>
-                <group
+                <div
                     name="error_analyze"
-                    string="Warnings"
+                    class="alert alert-warning mb-3"
+                    role="alert"
                     invisible="state != 'analyze' or not warnings"
                 >
-                    <field
-                        name="warnings"
-                        readonly="1"
-                        widget="html"
-                        nolabel="1"
-                        colspan="2"
-                    />
-                </group>
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" />
+                </div>
                 <group name="outcome" invisible="state != 'analyze'">
                     <group string="Statement">
                         <field name="recap_control" />
@@ -94,12 +89,21 @@
                         <field name="has_buyer_settled_operations" />
                         <field name="has_operations_without_tax" />
                     </group>
-                    <group string="Annex R">
-                        <field name="annex_r1_region" />
-                        <field name="annex_r2_region" />
-                        <field name="has_annex_r_cnt" />
-                        <field name="has_annex_r_azo" />
-                        <field name="has_annex_r_mad" />
+                    <group
+                        string="Annex R"
+                        invisible="not has_annex_r_cnt and not has_annex_r_azo and not has_annex_r_mad"
+                    >
+                        <field
+                            name="annex_r1_region"
+                            invisible="not annex_r1_line_ids"
+                        />
+                        <field
+                            name="annex_r2_region"
+                            invisible="not annex_r2_line_ids"
+                        />
+                        <field name="has_annex_r_cnt" invisible="not has_annex_r_cnt" />
+                        <field name="has_annex_r_azo" invisible="not has_annex_r_azo" />
+                        <field name="has_annex_r_mad" invisible="not has_annex_r_mad" />
                     </group>
                 </group>
             </group>
@@ -195,6 +199,8 @@
                             <field name="norm_id" />
                             <field name="vat_prefix" />
                             <field name="vat_number" />
+                            <field name="period_year" />
+                            <field name="period_month" />
                             <field name="request_number" />
                             <field name="tax_base" sum="Total" />
                             <field name="amount" string="Tax" sum="Total" />

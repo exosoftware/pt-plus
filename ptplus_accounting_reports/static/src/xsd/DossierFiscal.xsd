@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema version="1.02.00" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.dgci.gov.pt/2012/DOSSIER-FISCAL" xmlns="http://www.dgci.gov.pt/2012/DOSSIER-FISCAL" xmlns:ns="http://www.dgci.gov.pt/2012/DOSSIER-FISCAL" elementFormDefault="qualified" attributeFormDefault="qualified">
+
+    <xs:element name="DossierFiscal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CabecalhoGeral" type="CabecalhoGeralType"/>
+        <xs:element name="Modelo30" type="AnexoModelo30Type" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="Modelo31" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnexoModelo31" type="AnexoModelo31Type" minOccurs="1" maxOccurs="5"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Modelo32" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnexoModelo32" type="AnexoModelo32Type" minOccurs="1" maxOccurs="12"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="NaturezaIDConstraint31">
+      <xs:selector xpath="ns:Modelo31/ns:AnexoModelo31/ns:Q01-Modelo31-Cabecalho" />
+      <xs:field xpath="ns:Q01-Natureza" />
+    </xs:unique>
+
+    <xs:unique name="NaturezaIDConstraint32">
+      <xs:selector xpath="ns:Modelo32/ns:AnexoModelo32/ns:Q01-Modelo32-Cabecalho" />
+      <xs:field xpath="ns:Q01-Natureza" />
+      <xs:field xpath="ns:Q01-Metodo" />
+    </xs:unique>
+
+
+
+  </xs:element>
+
+  <!-- Estrutura do Cabecalho Geral do Dossier Fiscal-->
+  <xs:complexType name="CabecalhoGeralType">
+    <xs:sequence>
+        <xs:element name="NIF" type="NIFType"/>
+        <xs:element name="Exercicio" type="xs:gYear"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Estrutura do Modelo 30-->
+  <xs:complexType name="AnexoModelo30Type">
+    <xs:sequence>
+
+      <!-- Quadro 02.1 - Perdas por imparidade em créditos e ajustamentos em inventários -->
+      <xs:element name="Q02-Modelo30-Detalhe_I" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q02-Modelo30-Linhas_I">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Modelo30-Linha_I" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q02-01_1">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Descrição tipificada da discriminação das provisões, perdas por imparidade
+                              em créditos e ajustamentos em inventários
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="CRÉDITOS EM CONTENCIOSO"/>
+                              <xs:enumeration value="CRÉDITOS EM MORA"/>
+                              <xs:enumeration value="AJUSTAMENTOS EM INVENTÁRIOS"/>
+                              <xs:enumeration value="OUTROS"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Q02-01_2" type="xs:string" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Descrição da discriminação das provisões, perdas por imparidade
+                              em créditos e ajustamentos em inventários (Apenas preenchido quando (Q02-01_1) = "OUTROS"</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>TOTAL do Saldo do período anterior</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor contido na coluna (Q02-02) que foi tributado</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-04" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor considerado para efeitos fiscais (Q02-04) = (Q02-02)-(Q02-03) </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-05" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-06" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-07" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-08" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-09" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Constituição ou reforço</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-10" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Saldo para o período seguinte (Q02-10)=(Q02-02)-(Q02-05)-(Q02-06)-(Q02-07)-(Q02-08)+(Q02-09)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q02-Modelo30-Somas_I">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Coluna02" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna03" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna04" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna05" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna06" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna07" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna08" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna09" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna10" type="Montante16Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+           </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Quadro 02.2 - Provisões fiscalmente não dedutíveis / Perdas por imparidade fiscalmente não dedutíveis -->
+      <xs:element name="Q02-Modelo30-Detalhe_II" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q02-Modelo30-Linhas_II">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Modelo30-Linha_II" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q02-01" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Descrição da discriminação das provisões, perdas por imparidade
+                              em créditos e ajustamentos em inventários
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>TOTAL do Saldo do período anterior</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor contido na coluna (Q02-02) que foi tributado</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-04" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor considerado para efeitos fiscais (Q02-04) = (Q02-02)-(Q02-03) </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-05" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-06" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-07" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-08" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-09" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Constituição ou reforço</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-10" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Saldo para o período seguinte (Q02-10)=(Q02-02)-(Q02-05)-(Q02-06)-(Q02-07)-(Q02-08)+(Q02-09)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q02-Modelo30-Somas_II">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Coluna02" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna03" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna04" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna05" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna06" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna07" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna08" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna09" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna10" type="Montante16Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Quadro 02.2 - Provisões fiscalmente dedutíveis -->
+      <xs:element name="Q02-Modelo30-Detalhe_III" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q02-Modelo30-Linhas_III">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Modelo30-Linha_III" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q02-01" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Descrição da discriminação das provisões, perdas por imparidade
+                              em créditos e ajustamentos em inventários
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>TOTAL do Saldo do período anterior</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor contido na coluna (Q02-02) que foi tributado</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-04" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor considerado para efeitos fiscais (Q02-04) = (Q02-02)-(Q02-03) </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-05" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-06" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / UTILIZAÇÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-07" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-03)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-08" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Movimento do Periodo / REPOSIÇÃO-REVERSÃO / De valor considerado na coluna (Q02-04)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-09" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Constituição ou reforço</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-10" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Saldo para o período seguinte (Q02-10)=(Q02-02)-(Q02-05)-(Q02-06)-(Q02-07)-(Q02-08)+(Q02-09)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q02-Somas_III">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Coluna02" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna03" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna04" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna05" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna06" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna07" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna08" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna09" type="Montante16Type"/>
+                  <xs:element name="Q02-Coluna10" type="Montante16Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Quadro 03 - Determinação do limite da perda por imparidade -->
+      <xs:element name="Q03-Modelo30" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q03-Modelo30-Linhas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q03-Modelo30-Linha" maxOccurs="7" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q03-01">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Descrição tipificada da linha do Quadro 3 referente a Determinação do limite da perda por imparidade
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="Créditos em Contencioso - Relativos a processos de insolvência e recuperação de empresas"/>
+                              <xs:enumeration value="Créditos em Contencioso - Relativos a processos de execução"/>
+                              <xs:enumeration value="Créditos em Contencioso - Reclamados judicialmente"/>
+                              <xs:enumeration value="Créditos em Mora - Mais de 6 e até 12 meses"/>
+                              <xs:enumeration value="Créditos em Mora - Mais de 12 e até 18 meses"/>
+                              <xs:enumeration value="Créditos em Mora - Mais de 18 e até 24 meses"/>
+                              <xs:enumeration value="Créditos em Mora - Mais de 24 meses"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Q03-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q03-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Limite legal (Q03-03)=(Q03-02)*)*(Percentagem(2))</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q03-04" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Valor a acrescer</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q03-Modelo30-Somas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q03-Coluna03" type="Montante16Type"/>
+                  <xs:element name="Q03-Coluna04" type="Montante16Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!-- Quadro 04 - Determinação do limite dos ajustamentos em inventários -->
+      <xs:element name="Q04-Modelo30" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q04-Modelo30-Linhas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q04-Modelo30-Linha" maxOccurs="5" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q04-01">
+                          <xs:annotation>
+                            <xs:documentation>
+                              Descrição tipificada da linha do Quadro 4 referente a Determinação do limite dos ajustamentos em inventários
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="Mercadorias"/>
+                              <xs:enumeration value="Matérias primas, subsidiárias e de consumo"/>
+                              <xs:enumeration value="Produtos acabados e intermédios"/>
+                              <xs:enumeration value="Subprodutos, desperdícios, resíduos e refugos"/>
+                              <xs:enumeration value="Produtos e trabalhos em curso"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Q04-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Custo de aquisição ou de produção</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q04-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor realizável líquido</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q04-04" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Limite legal</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q04-05" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Valor a acrescer</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q04-Modelo30-Somas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q04-Coluna03" type="Montante16Type"/>
+                  <xs:element name="Q04-Coluna04" type="Montante16Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Estrutura do Modelo 31-->
+  <xs:complexType name="AnexoModelo31Type">
+    <xs:sequence>
+      <!-- Quadro 01 -->
+      <xs:element name="Q01-Modelo31-Cabecalho">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q01-Natureza">
+              <xs:simpleType>
+                <xs:restriction base="xs:byte">
+                  <xs:enumeration value="1">
+                    <xs:annotation>
+                      <xs:documentation>Activos Fixos Tangíveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="2">
+                    <xs:annotation>
+                      <xs:documentation>Activos Intangíveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="3">
+                    <xs:annotation>
+                      <xs:documentation>Propriedades de Investimento</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="4">
+                    <xs:annotation>
+                      <xs:documentation>Activos Biológicos Não Consumiveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="5">
+                    <xs:annotation>
+                      <xs:documentation>Partes de Capital</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- Quadro 02 -->
+      <xs:element name="Q02-Modelo31-Detalhe">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q02-Modelo31-Linhas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Modelo31-Linha" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q02-01" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Descrição dos elementos do activo</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-02" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor de realização</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-03" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor de aquisição para efeitos fiscais</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-04" type="xs:gYear">
+                          <xs:annotation>
+                            <xs:documentation>Ano de aquisição</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-05" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor de aquisição para efeitos contabilísticos</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-06" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações/amortizações e perdas por imparidade registadas</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-07" type="MaisOuMenos">
+                          <xs:annotation>
+                            <xs:documentation>Sinal Mais ou menos-valia contabílistica</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-08" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor Mais ou menos-valia contabílistica (Q02-08)=(Q02-02)-[(Q02-05)-(Q02-06)]  </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-09" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Mais-valias não tributadas</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-10" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações/amortizações e perdas por imparidade aceites fiscalmente</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-11" type="Coef6Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Coeficiente desvalorização da moeda</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-12" type="MaisOuMenos">
+                          <xs:annotation>
+                            <xs:documentation>Sinal Mais ou Menos valia fiscal</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-13" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor Mais ou menos-valia fiscal</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q02-Modelo31-Somas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Coluna02" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma Valor de realização</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna08" type="SignedMontante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma Mais ou menos-valia contabilistica</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna13" type="SignedMontante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma Mais ou menos-valia fiscal</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Estrutura do Modelo 32-->
+  <xs:complexType name="AnexoModelo32Type">
+    <xs:sequence>
+      <!-- Quadro 01 -->
+      <xs:element name="Q01-Modelo32-Cabecalho">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q01-Natureza">
+              <xs:simpleType>
+                <xs:restriction base="xs:byte">
+                  <xs:enumeration value="1">
+                    <xs:annotation>
+                      <xs:documentation>Ativos Fixos Tangíveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="2">
+                    <xs:annotation>
+                      <xs:documentation>Ativos Intangíveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="3">
+                    <xs:annotation>
+                      <xs:documentation>Propriedades de Investimento</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+		   <xs:enumeration value="4">
+                    <xs:annotation>
+                      <xs:documentation>Ativos Biológicos Não Consumíveis</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="Q01-Metodo">
+              <xs:simpleType>
+                <xs:restriction base="xs:byte">
+                  <xs:enumeration value="1">
+                    <xs:annotation>
+                      <xs:documentation>Quotas constantes</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="2">
+                    <xs:annotation>
+                      <xs:documentation>Quotas decrescentes</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="3">
+                    <xs:annotation>
+                      <xs:documentation>Outro</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- Quadro 02 -->
+      <xs:element name="Q02-Modelo32-Detalhe">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Q02-Modelo32-Linhas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Modelo32-Linha" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Q02-01" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Código de acordo com a tabela anexa ao DR nº 25/2009</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-02" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Descrição dos elementos do activo</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-03" type="MesType" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Mês Início de Utilização</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-04" type="xs:gYear">
+                          <xs:annotation>
+                            <xs:documentation>Ano de Início de Utilização</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-05" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor contabilístico registado</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-06" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Valor de aquisição ou produção para efeitos fiscais</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-07" type="Inteiro4Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Número de anos de utilidade esperada</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-08" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações / amortizações e perdas por imparidade contabilizadas no período</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-09" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações e amortizações aceites em períodos anteriores</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:choice>
+                          <xs:element name="Q02-10" type="Coef6Type">
+                            <xs:annotation>
+                              <xs:documentation>Taxa de depreciações e amortizações</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Q02-11" type="Coef6Type">
+                            <xs:annotation>
+                              <xs:documentation>Taxa corrigida de depreciações e amortizações</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:choice>
+                        <xs:element name="Q02-12" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Limite fiscal do período de deperciações e amortizações (Q02-12)=[(Q02-10)*(Q02-06)] ou [(Q02-06)*(Q02-09)] * (Q02-11) </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-13" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Perdas por imparidade aceites no período (art. 38º CIRC) </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-14" type="Coef6Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Taxas perdidas acumuladas</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-15" type="Montante16Type">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações / amortizações e perdas por imparidade não aceites como gastos (Q02-15) = (Q02-08)-[(Q02-12)+(Q02-13)] </xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Q02-16" type="Montante16Type" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation>Depreciações / amortizações e perdas por imparidade recuperadas no período</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Q02-Modelo32-Somas">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Q02-Coluna05" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma  do valor contabilístico registado</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna06" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma do valor de aquisição ou produção para efeitos fiscais</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna08" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de deperciações / amortizações e perdas por imparidade contabilizadas no período</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna09" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de Deperciações e amortizações aceites em períodos anteriores</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna12" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de limite fiscal do período de deperciações e amortizações (Q02-12)=[(Q02-10)*(Q02-06)] ou [(Q02-06)*(Q02-09)] * (Q02-11) </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna13" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de Perdas por imparidade aceites no período (art. 38º CIRC)  </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna15" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de Deperciações / amortizações e perdas por imparidade não aceites como gastos (Q02-15) = (Q02-08)-[(Q02-12)+(Q02-13)]   </xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Q02-Coluna16" type="Montante16Type">
+                    <xs:annotation>
+                      <xs:documentation>Soma de Deperciações / amortizações e perdas por imparidade recuperadas no período</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+    <xs:simpleType name="NIFType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:whiteSpace value="collapse"/>
+            <xs:minInclusive value="100000000"/>
+            <xs:maxInclusive value="999999999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NIBType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{21}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SFType">
+        <xs:restriction base="xs:short">
+            <xs:totalDigits value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:simpleType name="Notas2Type">
+        <xs:restriction base="xs:short">
+            <xs:totalDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante11Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="11"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante12Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="12"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SignedMontante12Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante13Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="13"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SignedMontante13Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="13"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FixedDecimalMontante13Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="13"/>
+            <xs:pattern value="[0-9]{1,13}.00"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante14Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="14"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SignedMontante14Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="14"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FixedDecimalMontante14Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="14"/>
+            <xs:pattern value="[0-9]{1,14}.00"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante15Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="15"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SignedMontante15Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:simpleType name="Montante16Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="16"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SignedMontante16Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="16"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Montante18Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="18"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Euro11Type">
+        <xs:restriction base="xs:long">
+            <xs:maxInclusive value="99999999999"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Euro12Type">
+        <xs:restriction base="xs:long">
+            <xs:maxInclusive value="999999999999"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Euro13Type">
+        <xs:restriction base="xs:long">
+            <xs:maxInclusive value="9999999999999"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Euro14Type">
+        <xs:restriction base="xs:long">
+            <xs:maxInclusive value="99999999999999"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Percent3Type">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Percent4Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="1"/>
+            <xs:totalDigits value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Percent5Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coef6Type">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CotacaoType">
+        <xs:restriction base="xs:string">
+        	<xs:pattern value="[0-9]{0,5},[0-9]{0,7}"/>
+        </xs:restriction>
+    </xs:simpleType>
+  <xs:simpleType name="MesType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="Inteiro15Type">
+			<xs:restriction base="xs:long">
+			<xs:totalDigits value="15"/>
+		   </xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Inteiro14Type">
+			<xs:restriction base="xs:long">
+			<xs:totalDigits value="14"/>
+		   </xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Inteiro13Type">
+			<xs:restriction base="xs:long">
+			<xs:totalDigits value="13"/>
+		   </xs:restriction>
+	</xs:simpleType>
+  <xs:simpleType name="Inteiro4Type">
+    <xs:restriction base="xs:integer">
+      <xs:totalDigits value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name ="MaisOuMenos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="+"/>
+      <xs:enumeration value="-"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

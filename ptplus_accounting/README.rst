@@ -52,6 +52,87 @@ Available soon.
 Changelog
 =========
 
+5.4.0 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Two new VAT adjustment norms in favor of the State are available on vendor
+  credit notes: "Artigo 6.º do Decreto-Lei n.º 198/90" (sales to national
+  exporters) and "Decreto-Lei n.º 19/2017" (e-Taxfree). They match the new
+  fields of the annex of field 41 of the VAT periodic statement.
+
+5.3.6 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The balance transfers of a company with branches now clear each branch's
+  balances in an entry of the branch itself. Until now the whole transfer was
+  recorded in the main company, so the branch kept its balances and the main
+  company got the opposite ones. After the closing of the income and expense
+  accounts, this showed as two "Result Brought Forward" lines in the next
+  year's trial balance, one per company. The destination account still
+  follows the balance of the company and its branches together, so, for
+  instance, VAT recoverable on a branch reduces the VAT payable.
+- A balance transfer run on a branch, such as the VAT return of a foreign VAT
+  branch, now only takes that branch's balances. It no longer includes those
+  of the main company and the other branches.
+- Running, confirming or cancelling a balance transfer now requires the
+  company and all its branches to be selected in the company selector, as
+  the branches' entries are not reachable otherwise.
+
+5.3.5 (2026-10-27)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The taxonomy setup on the selected accounts no longer fails with an error
+  when the selection includes an account without a code. Such accounts are
+  now left unchanged, and the other accounts get their taxonomy as usual.
+
+5.3.4 (2026-10-23)
+~~~~~~~~~~~~~~~~~~~
+
+**Improvement**
+
+- The SNC Base and SNC Microentities charts of accounts now set the SAF-T
+  taxonomy on their accounts when they are loaded, including the bank,
+  outstanding receipts and payments, bank suspense and liquidity transfer
+  accounts. Companies that already have one of these charts, when the full
+  accounting is installed or updated, get the taxonomy on the accounts that
+  don't have one yet; the taxonomies already set are kept.
+
+5.3.3 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New VAT adjustment norm "Verba 2.42 da Lista I", for the VAT adjustments of
+  artigo 11.º do Decreto-Lei n.º 97/2026, de 20 de maio, which the periodic VAT
+  return reports in the field 40 and field 41 annexes since 2026-07-01
+  (Portaria n.º 298/2026/1, de 16 de julho). It can be chosen on credit and
+  debit notes, in favor of the company or of the State.
+
+5.3.2 (2026-10-14)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- When creating a credit note from an invoice, the "VAT Adjustment Norm" field
+  now only offers the norms that fit that credit note, as the credit note form
+  already did.
+
+5.3.1 (2026-10-13)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The balance transfers (such as the VAT settlement or the closing of the
+  income and expense accounts) now also clear the balances of the company's
+  branches. Until now only the entries of the main company were transferred,
+  so the branches' balances were left in the source accounts.
+
 5.3.0 (2026-09-28)
 ~~~~~~~~~~~~~~~~~~~
 

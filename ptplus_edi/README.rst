@@ -56,6 +56,16 @@ Importing CIUS-PT invoices is still WIP.
 Changelog
 =========
 
+1.2.1 (2026-10-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Invoices with lines from several sales orders no longer fail the CIUS-PT
+  validation (error DT-CIUS-PT-013): when the sales order reference (BT-14) or
+  the purchase order reference (BT-13) is longer than 20 characters, it is cut
+  to its first 17 characters followed by an ellipsis (``...``).
+
 1.1.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 

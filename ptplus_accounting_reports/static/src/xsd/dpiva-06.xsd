@@ -1484,8 +1484,78 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <!-- Added by Exo Software: the AT has not published the schema of
+                 the verba 2.42 lists yet (due on 2027-01-01). Taken from a
+                 dpiva XML exported by the Portal das Finanças. -->
+            <xs:element name="listaVerba242ListaI" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaVerba242ListaIItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="listaVerba242ListaIItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
 
         </xs:sequence>
+    </xs:complexType>
+    <!-- Added by Exo Software, see listaVerba242ListaI -->
+    <xs:complexType name="listaVerba242ListaIItemType">
+        <xs:sequence>
+            <xs:element name="ano" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Ano
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="btRegularizacoes" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Base de incidência da regularização
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ivaRegularizado" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            IVA regularizado
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="12"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="periodo" type="xs:token" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        <![CDATA[
+
+                            Período
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="row" type="xs:long"/>
     </xs:complexType>
     <xs:complexType name="anexoCampo40RRegularizacoesCertificacoesRocItemType">
         <xs:sequence>
@@ -2114,6 +2184,16 @@
                     <xs:sequence>
                         <xs:element name="listaNum8DItem" minOccurs="0" maxOccurs="unbounded"
                                     type="anexoCampo41RRegularizacoesListaNum8DItemType">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!-- Added by Exo Software, see the annex of field 40 -->
+            <xs:element name="listaVerba242ListaI" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaVerba242ListaIItem" minOccurs="0" maxOccurs="unbounded"
+                                    type="listaVerba242ListaIItemType">
                         </xs:element>
                     </xs:sequence>
                 </xs:complexType>

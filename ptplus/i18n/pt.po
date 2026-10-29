@@ -3035,14 +3035,13 @@ msgstr "As séries documentais de integração não podem ser registradas"
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
-"Integration number %s is not compliant with tax authority rules. A valid "
-"number must have a single occurrence of the '/' character on the last "
-"position. Also there should be a single space between the number and the '/'"
-" character."
+"Integration number %s is not compliant with tax authority rules. Insert the "
+"series and the sequential number of the original document, separated by a "
+"single '/' character and without spaces, e.g. A/00001."
 msgstr ""
-"O numero de integração %s não é conforme as regras da AT. Um número válido "
-"deve ter uma única ocorrência do caractere '/' na última posição. "
-"Adicionalmente, deve haver um único espaço entre o número e o caractere '/'."
+"O número de integração %s não é conforme as regras da AT. Indique a série e "
+"o número sequencial do documento original, separados por um único carácter "
+"'/' e sem espaços, ex. A/00001."
 
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_tax_type__int

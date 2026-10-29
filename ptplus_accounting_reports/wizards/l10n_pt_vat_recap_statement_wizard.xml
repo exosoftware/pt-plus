@@ -15,19 +15,14 @@
                 <field name="certified_accountant_vat" readonly="state != 'select'" />
             </group>
             <group name="main" position="after">
-                <group
+                <div
                     name="error_analyze"
-                    string="Warnings"
+                    class="alert alert-warning mb-3"
+                    role="alert"
                     invisible="state != 'analyze' or not warnings"
                 >
-                    <field
-                        name="warnings"
-                        readonly="1"
-                        widget="html"
-                        nolabel="1"
-                        colspan="2"
-                    />
-                </group>
+                    <field name="warnings" readonly="1" widget="html" nolabel="1" />
+                </div>
                 <group name="totals" string="Totals" invisible="state != 'analyze'">
                     <field name="total_goods" />
                     <field name="total_services" />

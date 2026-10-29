@@ -6,14 +6,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 14:36+0000\n"
-"PO-Revision-Date: 2026-10-02 14:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_statement_ies_mixin.py:0
+msgid " to "
+msgstr ""
 
 #. module: ptplus_accounting_reports
 #. odoo-python
@@ -129,10 +133,35 @@ msgid "Account"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_account_asset_mixin
+msgid "Account Asset Mixin PT"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__account_group_id
+msgid "Account Group"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
 msgid "Accounts"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__accrued_lost_fees
+msgid "Accrued Lost Fees"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_acquisition_production_value
+msgid "Acquisition value for tax purposes"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__adjusted_rate
+msgid "Adjusted Rate"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -348,14 +377,23 @@ msgid "Article Code"
 msgstr ""
 
 #. module: ptplus_accounting_reports
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
-msgid "As of"
-msgstr ""
-
-#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_balance_sheet_wizard.py:0
 msgid "Asset"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_asset_type
+msgid "Asset Classification"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_low_value_asset
+msgid ""
+"Assets costing < €1,000 can be fully depreciated in one tax period unless "
+"they are part of a set requiring depreciation as a whole. Such assets must "
+"be listed in depreciation schedules under 'Elements with a unit cost below "
+"€1,000' with a one-year maximum useful life for tax purposes."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -379,17 +417,6 @@ msgid "Ações (quotas) próprias"
 msgstr ""
 
 #. module: ptplus_accounting_reports
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
-msgid "Balance"
-msgstr ""
-
-#. module: ptplus_accounting_reports
-#. odoo-python
-#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
-msgid "Balance (%s)"
-msgstr ""
-
-#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_balance_sheet_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_balance_sheet_wizard_action
@@ -408,6 +435,16 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_balance_sheet_wizard_line
 msgid "Balance Sheet Wizard Lines"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__before_pl_calculation
+msgid "Before P/L Calculation"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__book_value
+msgid "Book Value"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -583,6 +620,17 @@ msgid "Created on"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__credit
+msgid "Credit"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Credit (%s)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__currency_id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__currency_id
@@ -645,6 +693,17 @@ msgid "Date To"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__debit
+msgid "Debit"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Debit (%s)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m12
@@ -656,6 +715,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__declaration_type
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__declaration_type
 msgid "Declaration Type"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__method_used__decreasing_installments
+msgid "Decreasing Installments"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -714,10 +778,48 @@ msgid "Deductible tax - Other goods and services"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__tolerance_threshold_15
+msgid ""
+"Defines a threshold for ignoring minor discrepancies between columns 8 and "
+"12 that can show up on column 15.eg. if the threshold value is 2 cents "
+"values between -0.02 and 0.02 will be converted to 0."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__deprec_amort_imploss_period
+msgid "Deprec Amort Imploss Period"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_depreciation_and_amortization_map_wizard.py:0
+#: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_depreciation_and_amortization_wizard_action
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__statement_id
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__statement_type__asset_value_adjustment
+#: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_depreciation_and_amortization_wizard_menu
+msgid "Depreciation and Amortization Map"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__desc
+msgid "Desc"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_exploration_map_wizard.py:0
 msgid "Description"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_product_breakdown
+msgid "Detail by product the accounts with product entries"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_partner_breakdown
+msgid "Detail the receivable and payable accounts by partner"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -767,6 +869,11 @@ msgid "Domain"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_low_value_asset
+msgid "Element of Reduced Value"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__email_partner_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__email_partner_ids
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__email_partner_ids
@@ -790,6 +897,11 @@ msgstr ""
 msgid ""
 "Enable when the certified accountant has full declarative powers for the "
 "taxpayer; the taxpayer password is then not required."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__method_used__equal_installments
+msgid "Equal Installments"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1054,6 +1166,17 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
+msgid "Final Balance"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Final Balance (%s)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_financial_statement_menu
 msgid "Financial"
 msgstr ""
@@ -1209,6 +1332,17 @@ msgid "Info"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__initial_balance
+msgid "Initial Balance"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Initial Balance (%s)"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__log_on_close
 #: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__log_on_close
@@ -1220,6 +1354,13 @@ msgstr ""
 msgid ""
 "Insert a record in the dataport log together with a copy of the imported or "
 "exported file. "
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__intangible_assets
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__intangible_assets
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__intangible_assets
+msgid "Intangible Assets"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1300,6 +1441,13 @@ msgid "Inventory Transfers"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__investment_properties
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__investment_properties
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__investment_properties
+msgid "Investment Properties"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
 msgid "Invoice Lines"
@@ -1326,6 +1474,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__is_after_pl_calculation
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__is_after_pl_calculation
 msgid "Is After Pl Calculation"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "Issued on: %s"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1379,6 +1533,16 @@ msgid "Kind"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_duration_warning
+msgid "L10N Pt Duration Warning"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_expected_method_number
+msgid "L10N Pt Expected Method Number"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__write_uid
@@ -1416,6 +1580,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__write_date
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__before_pl_calculation
+msgid "Leave out the P/L calculation entries of the period"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_legal_rate_id
+msgid "Legal Rate"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1482,6 +1656,11 @@ msgid "May"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__method_used
+msgid "Method Used"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__period_month
 msgid "Month"
 msgstr ""
@@ -1532,9 +1711,48 @@ msgid "Nature"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__nature_asset
+msgid "Nature Asset"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "No Partner"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
+msgid "No Product"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__non_deductible_deprec_amort_imploss
+msgid "Non Deductible Deprec Amort Imploss"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__non-consumable_biological_assets
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__non-consumable_biological_assets
+msgid "Non-Consumable Biological Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_statement_ies_mixin.py:0
 msgid "Non-compliant Accounts"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__non-consumable_biological_assets
+msgid "Non-consumable Biological Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_depreciation_and_amortization_map_wizard.py:0
+msgid "None."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1566,6 +1784,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
 msgid "Operations with national customers"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
+msgid "Options"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1655,6 +1878,16 @@ msgid "Period"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__period_accepted_impairment_loss
+msgid "Period Accepted Impairment Loss"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__period_tax_limit
+msgid "Period Tax Limit"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
 msgid "Please insert a VAT No. on customer %s and try again."
@@ -1663,6 +1896,11 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__vat_prefix
 msgid "Prefix"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__prev_accepted_deprec_amort
+msgid "Prev Accepted Deprec Amort"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -1764,6 +2002,11 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__recap_total
 msgid "Recapitulative Statement Total"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__recovered_deprec_amort_imploss_period
+msgid "Recovered Deprec Amort Imploss Period"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -2107,6 +2350,16 @@ msgid "Show Button Ws Oa"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_partner_breakdown
+msgid "Show Partner Breakdown"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__show_product_breakdown
+msgid "Show Product Breakdown"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
 msgid "Standard rate operations - Tax"
@@ -2166,6 +2419,16 @@ msgid "Statement Type"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_depreciation_and_amortization_wizard
+msgid "Statement Wizard"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_depreciation_and_amortization_wizard_line
+msgid "Statement Wizard Line"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_equity_changes_wizard_action
@@ -2220,6 +2483,13 @@ msgid "Subst. Fact Date"
 msgstr ""
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__tangible_fixed_assets
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__tangible_fixed_assets
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__tangible_fixed_assets
+msgid "Tangible Fixed Assets"
+msgstr ""
+
+#. module: ptplus_accounting_reports
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
 msgid "Tax"
 msgstr ""
@@ -2233,6 +2503,11 @@ msgstr ""
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard_line__tax_base
 msgid "Tax Base"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__tax_basis_cost
+msgid "Tax Basis Cost"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -2275,6 +2550,14 @@ msgstr ""
 
 #. module: ptplus_accounting_reports
 #. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_depreciation_and_amortization_map_wizard.py:0
+msgid ""
+"The Modelo 32 header is incomplete. Define the asset nature and depreciation"
+" method before exporting the XML."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_recap_statement_wizard.py:0
 msgid "The VAT No. is missing on customer %s. Please insert it and try again."
 msgstr ""
@@ -2283,6 +2566,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
 msgid "The VAT periodic statement covers a whole month or quarter."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_depreciation_and_amortization_map_wizard.py:0
+msgid ""
+"The company VAT must be a valid 9-digit Portuguese NIF to export Modelo 32 "
+"XML."
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -2309,8 +2600,21 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_vat_periodic_statement_wizard.py:0
 msgid ""
 "There are credit notes in the period related to invoices from a different "
-"period. Please ensure that you submit the replacement statement for the "
-"corresponding periods."
+"period. They are left out of this statement: report them in the replacement "
+"statement of the period of each invoice, and in the replacement "
+"recapitulative statement when they change field 7."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,help:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_acquisition_production_value
+msgid ""
+"This field corresponds to column 6 (Acquisition or production value for tax "
+"purposes) of the Depreciation and amortization chart (Model-32)."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__tolerance_threshold_15
+msgid "Tolerance Threshold"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -2319,7 +2623,6 @@ msgstr ""
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__total
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_monthly_stamp_duty_statement_wizard_form
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
 msgid "Total"
@@ -2387,9 +2690,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_trial_balance_wizard.py:0
 #: model:ir.actions.act_window,name:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_action
+#: model:ir.actions.report,name:ptplus_accounting_reports.action_report_trial_balance
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__trial_balance
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_trial_balance_wizard__statement_type__trial_balance
 #: model:ir.ui.menu,name:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_menu
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.report_trial_balance
 msgid "Trial Balance"
 msgstr ""
 
@@ -2434,6 +2739,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__is_under_art_119_1d
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__is_under_art_119_1d
 msgid "Under art. 119º nº1-d?"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_depreciation_and_amortization_map_wizard.py:0
+msgid "Unit cost less than 1000€"
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__useful_life_years
+msgid "Useful Life Years"
 msgstr ""
 
 #. module: ptplus_accounting_reports
@@ -2610,8 +2926,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__warnings
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__warnings
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
-#: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_recap_statement_wizard_form
 msgid "Warnings"
 msgstr ""
 
@@ -2737,6 +3051,12 @@ msgstr ""
 msgid ""
 "[Q6-C01,C02] Select whether this is the first declaration for the given "
 "period or a replacement."
+msgstr ""
+
+#. module: ptplus_accounting_reports
+#. odoo-python
+#: code:addons/ptplus_accounting_reports/wizards/l10n_pt_statement_ies_mixin.py:0
+msgid "from "
 msgstr ""
 
 #. module: ptplus_accounting_reports

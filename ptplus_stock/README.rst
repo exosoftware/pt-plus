@@ -32,6 +32,26 @@ The end-of-year stock reporting is not yet valued.
 Changelog
 =========
 
+5.1.12 (2026-10-29)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The SAF-T now reports, for each line of a transport document, the
+  description written on that line of the document, instead of the product
+  name. The product name is only used when the line has no description
+
+5.1.11 (2026-10-15)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Fixed the Loading/Unloading addresses printed on the delivery slip and
+  reported to the Tax Authority for consignment stock movements (tracked as
+  a sub-location of our own warehouse): sending consignment stock now
+  correctly shows the customer as Unloading instead of repeating our own
+  address, and returning it now correctly shows the customer as Loading
+
 5.1.10 (2026-09-30)
 ~~~~~~~~~~~~~~~~~~~
 

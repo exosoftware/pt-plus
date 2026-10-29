@@ -29,6 +29,15 @@ Available soon.
 Changelog
 =========
 
+5.1.1 (2026-10-13)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The Depreciation and Amortization Map (Modelo 32) now lists the assets of
+  the company and of all its branches, and only those. Until now it listed
+  the assets of the companies enabled in the company selector.
+
 5.1.0 (2023-11-16)
 ~~~~~~~~~~~~~~~~~~~
 
