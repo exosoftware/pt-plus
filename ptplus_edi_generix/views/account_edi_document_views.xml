@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_tree_account_edi_document_pt" model="ir.ui.view">
+        <field name="name">Account.edi.document.tree.pt</field>
+        <field name="model">account.edi.document</field>
+        <field name="inherit_id" ref="account_edi.view_tree_account_edi_document" />
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="l10n_pt_edi_cius_generix_request_status" optional="hide" />
+                <field name="l10n_pt_edi_cius_generix_request_id" optional="hide" />
+                <field
+                    name="l10n_pt_edi_cius_generix_document_status"
+                    optional="hide"
+                />
+                <field name="l10n_pt_edi_cius_generix_document_id" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

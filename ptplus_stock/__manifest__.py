@@ -10,14 +10,14 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.1.14",
+    "version": "20.0.5.1.14",
     "depends": [
         "ptplus_saft",
         "stock_picking_invoice_link",
         "sale_stock",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/stock_picking_mail.xml",
         "report/deliveryslip_report.xml",
         "views/res_config_settings_views.xml",

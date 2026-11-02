@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 20.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-25 11:53+0000\n"
 "PO-Revision-Date: 2026-05-25 12:55+0100\n"
@@ -51,16 +51,9 @@ msgid "A number that is supplied by your B2G customer"
 msgstr "Um número fornecido pelo seu cliente B2G"
 
 #. module: ptplus_edi
-#: model:ir.model,name:ptplus_edi.model_account_move_send
-msgid "Account Move Send"
-msgstr ""
-
-#. module: ptplus_edi
 #: model:ir.model,name:ptplus_edi.model_account_edi_xml_cius_pt
-#, fuzzy
-#| msgid "CIUS-PT 2.1.1"
 msgid "CIUS-PT"
-msgstr "CIUS-PT 2.1.1"
+msgstr "CIUS-PT"
 
 #. module: ptplus_edi
 #: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_commitment_number
@@ -70,8 +63,8 @@ msgstr "Nº do Compromisso"
 
 #. module: ptplus_edi
 #: model:ir.model,name:ptplus_edi.model_res_company
-msgid "Companies"
-msgstr "Empresas"
+msgid "Company"
+msgstr "Empresa"
 
 #. module: ptplus_edi
 #: model:ir.model,name:ptplus_edi.model_res_config_settings
@@ -140,6 +133,11 @@ msgstr "Lançamento de Diário"
 #: model:ir.model.fields.selection,name:ptplus_edi.selection__res_partner__invoice_edi_format__cius-pt
 msgid "Portugal (CIUS-PT)"
 msgstr "Portugal (CIUS-PT)"
+
+#. module: ptplus_edi
+#: model:ir.model,name:ptplus_edi.model_account_move_send
+msgid "Shared Send Invoice Wizard Functions"
+msgstr "Funções Partilhadas do Assistente de Envio de Faturas"
 
 #. module: ptplus_edi
 #. odoo-python

@@ -1,0 +1,15 @@
+id,name,model_id,group_id/id,operation,domain
+access_account_balance_transfer_manager,account_balance_transfer manager,account.balance.transfer,account.group_account_user,crud,
+abt_comp_rule,Account Balance Transfer multi-company,account.balance.transfer,,crud,"['|',('company_id','=',False),('company_id','in',company_ids)]"
+access_account_balance_transfer_template_manager,account_balance_transfer_template manager,account.balance.transfer.template,account.group_account_user,crud,
+abt_template_comp_rule,Account Balance Transfer Template multi-company,account.balance.transfer.template,,crud,"['|',('company_id','=',False),('company_id','in',company_ids)]"
+access_account_balance_transfer_template_line_manager,account_balance_transfer_template_line manager,account.balance.transfer.template.line,account.group_account_user,crud,
+abt_template_line_comp_rule,Account Balance Transfer Template Line multi-company,account.balance.transfer.template.line,,crud,"['|',('template_id.company_id','=',False),('template_id.company_id','in',company_ids)]"
+access_l10n_pt_account_taxonomy,l10n_pt_account_taxonomy user,l10n_pt.account.taxonomy,account.group_account_invoice,r,
+access_l10n_pt_account_taxonomy_manager,l10n_pt_account_taxonomy manager,l10n_pt.account.taxonomy,account.group_account_user,crud,
+access_l10n_pt_account_vat_adjustment_norm,l10n_pt_account_vat_adjustment_norm user,l10n_pt.account.vat.adjustment_norm,account.group_account_invoice,r,
+access_l10n_pt_account_vat_adjustment_norm_manager,l10n_pt_account_vat_adjustment_norm manager,l10n_pt.account.vat.adjustment_norm,account.group_account_user,crud,
+access_l10n_pt_account_taxonomy_setup_wizard,l10n_pt_account_taxonomy_setup_wizard manager,l10n_pt.account.taxonomy.setup.wizard,account.group_account_user,cru,
+access_l10n_pt_account_asset_legal_rate,l10n_pt_account_asset_legal_rate user,l10n_pt.account.asset.legal_rate,account.group_account_invoice,r,
+access_l10n_pt_account_asset_legal_rate_manager,l10n_pt_account_asset_legal_rate manager,l10n_pt.account.asset.legal_rate,account.group_account_user,crud,
+access_l10n_pt_account_taxonomy_prefix,access_l10n_pt_account_taxonomy_prefix,l10n_pt.account.taxonomy.prefix,account.group_account_user,r,

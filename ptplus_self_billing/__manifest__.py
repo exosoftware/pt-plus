@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Self-billing",
-    "version": "19.0.5.0.0",
+    "version": "20.0.5.0.0",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
@@ -19,7 +19,7 @@
         "account_edi_ubl_cii",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/fiscal_document.xml",
         "views/report_templates.xml",
         "views/report_invoice.xml",

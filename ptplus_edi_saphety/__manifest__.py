@@ -8,7 +8,7 @@
     "name": "Portugal - Saphety EDI",
     "category": "Accounting/Localizations/EDI",
     "summary": "Transmit your e-invoices to the Saphety EDI platform",
-    "version": "19.0.5.0.0",
+    "version": "20.0.5.0.0",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "depends": ["ptplus_edi", "account_edi"],

@@ -16,26 +16,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: ptplus_self_billing
-#. odoo-python
-#: code:addons/ptplus_self_billing/wizards/partner_saft_mail.py:0
-#, python-format
-msgid "%s out of %s Self-Billing SAF-T processed and sent sucessfully"
-msgstr ""
-
-#. module: ptplus_self_billing
-#: model:mail.template,body_html:ptplus_self_billing.email_template_partner_saft
-msgid ""
-"<div>\n"
-"                    <p>Olá Caro(a) <t t-out=\"object.name\"></t>,</p>\n"
-"                    <p>Por favor, encontre em anexo o seu SAF-T relativo às faturas da empresa <t t-out=\"object.company_id.name\"></t>.</p>\n"
-"\n"
-"                    <p>Obrigado(a).</p>\n"
-"                    <p><t t-out=\"object.company_id.name\"></t></p>\n"
-"                </div>\n"
-"           "
-msgstr ""
-
-#. module: ptplus_self_billing
 #: model_terms:ir.ui.view,arch_db:ptplus_self_billing.external_layout_pt_self_billing
 msgid "<span style=\"font-size: 14pt;\">SELF-BILLING</span>"
 msgstr ""
@@ -43,7 +23,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/account_move.py:0
-#, python-format
 msgid ""
 "A Self-billing invoice requires a Self-billing partner (a supplier with the "
 "Self-billing value checked."
@@ -51,8 +30,13 @@ msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+msgid "A document type is required"
+msgstr ""
+
+#. module: ptplus_self_billing
+#. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid ""
 "A series identifier is required. Please define a sequence and/or a related "
 "prefix"
@@ -66,7 +50,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/account_move.py:0
-#, python-format
 msgid "An invoice date is required"
 msgstr ""
 
@@ -105,7 +88,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "Cancel Series Self-Billing"
 msgstr ""
 
@@ -117,7 +99,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "Check Agreements"
 msgstr ""
 
@@ -137,7 +118,7 @@ msgstr ""
 
 #. module: ptplus_self_billing
 #: model_terms:ir.ui.view,arch_db:ptplus_self_billing.partner_saft_mail
-msgid "Clear partner list."
+msgid "Clear"
 msgstr ""
 
 #. module: ptplus_self_billing
@@ -153,13 +134,13 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid "Communication failure"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_res_company
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__company_id
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__company_id
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__company_id
 msgid "Company"
 msgstr ""
 
@@ -171,48 +152,45 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid "Couldn't find series"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid "Couldn't synchronize series"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__create_uid
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__create_uid
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__create_date
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__create_date
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/res_partner.py:0
-#, python-format
 msgid "Credit Note"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__dataport_log_ids
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__dataport_log_ids
 msgid "Dataport Log"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__date_from
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__date_from
 msgid "Date From"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__date_to
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__date_to
 msgid "Date To"
 msgstr ""
 
@@ -223,8 +201,14 @@ msgid "Disable"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__display_name
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__display_name
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_wizard_webservice_series_comm__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -246,7 +230,7 @@ msgid "Entity Type"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__exclude_success
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__exclude_success
 msgid "Exclude Successful Exports"
 msgstr ""
 
@@ -263,7 +247,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "Finalize Series Self-Billing"
 msgstr ""
 
@@ -298,15 +281,28 @@ msgid "Foreign Supplier"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__id
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__id
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_res_partner__id
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_wizard_webservice_series_comm__id
 msgid "ID"
+msgstr ""
+
+#. module: ptplus_self_billing
+#. odoo-python
+#: code:addons/ptplus_self_billing/models/account_move.py:0
+msgid ""
+"Inconsistent move data. Either fields Move Type and Fiscal Document Type "
+"both relate to credit notes or none of them do."
 msgstr ""
 
 #. module: ptplus_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__l10n_pt_is_partner_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_account_move__l10n_pt_is_partner_self_billing
-#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__l10n_pt_is_partner_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_res_partner__l10n_pt_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_res_users__l10n_pt_self_billing
 msgid "Indicate if the partner is under any kind of self-billing agreement"
@@ -329,21 +325,19 @@ msgid "Indicate whether self billing deal is enabled or disabled."
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__information
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__information
 msgid "Information"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "Integration document types cannot be registered"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/res_partner.py:0
-#, python-format
 msgid "Invoice"
 msgstr ""
 
@@ -365,7 +359,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__l10n_pt_self_billing
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__l10n_pt_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__l10n_pt_self_billing
 msgid "L10N Pt Self Billing"
 msgstr ""
 
@@ -375,20 +368,14 @@ msgid "Last Doc. No."
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals____last_update
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__write_uid
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__write_uid
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__write_date
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_self_billing_deals__write_date
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -413,14 +400,13 @@ msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__partner_ids
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__partner_ids
 msgid "Partner"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid "Please change the search criteria and try again"
 msgstr ""
 
@@ -452,7 +438,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "Register Series Self-Billing"
 msgstr ""
 
@@ -474,7 +459,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #: model:ir.model,name:ptplus_self_billing.model_l10n_pt_self_billing_deals
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_wizard_webservice_series_comm__self_billing_deals
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_wizard_webservice_series_comm__self_billing_deals_ids
 msgid "Self Billing Deals"
 msgstr ""
 
@@ -485,8 +469,8 @@ msgid "Self-Billing"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:mail.template,name:ptplus_self_billing.email_template_partner_saft
-msgid "Self-Billing - Send Partner SAF-T mail"
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_wizard_webservice_series_comm__self_billing_deals_ids
+msgid "Self-Billing Agreement IDs"
 msgstr ""
 
 #. module: ptplus_self_billing
@@ -499,7 +483,6 @@ msgstr ""
 #: code:addons/ptplus_self_billing/models/account_move.py:0
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__l10n_pt_self_billing
 #: model:ir.model.fields.selection,name:ptplus_self_billing.selection__dataport_export_saft__type__s
-#, python-format
 msgid "Self-billing"
 msgstr ""
 
@@ -511,14 +494,13 @@ msgstr ""
 #. module: ptplus_self_billing
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_account_bank_statement_line__l10n_pt_is_partner_self_billing
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_account_move__l10n_pt_is_partner_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_account_payment__l10n_pt_is_partner_self_billing
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_dataport_export_saft__l10n_pt_self_billing_partner_id
 #: model:ir.model.fields,field_description:ptplus_self_billing.field_fiscal_document_type__l10n_pt_self_billing_partner_id
 msgid "Self-billing Partner"
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:ir.model.fields,field_description:ptplus_self_billing.field_partner_saft_mail__send_invoices
+#: model:ir.model.fields,field_description:ptplus_self_billing.field_l10n_pt_partner_saft_mail__send_invoices
 msgid "Send Invoices"
 msgstr ""
 
@@ -534,9 +516,13 @@ msgid "Send Self-Billing SAF-T"
 msgstr ""
 
 #. module: ptplus_self_billing
+#: model:ir.model,name:ptplus_self_billing.model_l10n_pt_partner_saft_mail
+msgid "Send Self-Billing SAF-T Mail Wizards"
+msgstr ""
+
+#. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid ""
 "Sequence '{seq1}' is a duplicate of sequence '{seq2}'. Please change the "
 "prefix (or code) and try again."
@@ -560,7 +546,6 @@ msgstr ""
 #. module: ptplus_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_account_bank_statement_line__l10n_pt_self_billing
 #: model:ir.model.fields,help:ptplus_self_billing.field_account_move__l10n_pt_self_billing
-#: model:ir.model.fields,help:ptplus_self_billing.field_account_payment__l10n_pt_self_billing
 msgid "Set True if this is a self-billing invoice"
 msgstr ""
 
@@ -627,7 +612,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
 #: model:ir.model.fields.selection,name:ptplus_self_billing.selection__wizard_webservice_series_comm__service_name__consultarseriesautofaturacao
-#, python-format
 msgid "Synchronize Self-billing"
 msgstr ""
 
@@ -643,8 +627,15 @@ msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
+#: code:addons/ptplus_self_billing/wizards/dataport_export_saft.py:0
+msgid ""
+"The selected type can only be used when the Accounting module is installed. "
+"Choose Invoicing instead."
+msgstr ""
+
+#. module: ptplus_self_billing
+#. odoo-python
 #: code:addons/ptplus_self_billing/models/res_partner.py:0
-#, python-format
 msgid ""
 "The self-billing value on partner {partner} can only be True if the partner "
 "has no parent"
@@ -653,21 +644,18 @@ msgstr ""
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid "The series has been validated and is ready to be used."
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/models/fiscal_document.py:0
-#, python-format
 msgid "The series identifier contains invalid characters"
 msgstr ""
 
 #. module: ptplus_self_billing
 #. odoo-python
 #: code:addons/ptplus_self_billing/wizards/webservice_series_comm.py:0
-#, python-format
 msgid ""
 "The series last number indicates that no fiscal documents used it. Please "
 "cancel it instead"
@@ -746,11 +734,9 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_self_billing
-#: model:mail.template,subject:ptplus_self_billing.email_template_partner_saft
-msgid "Your SAF-T document"
-msgstr ""
-
-#. module: ptplus_self_billing
-#: model:ir.model,name:ptplus_self_billing.model_partner_saft_mail
-msgid "partner.saft.mail"
+#. odoo-python
+#: code:addons/ptplus_self_billing/wizards/l10n_pt_partner_saft_mail.py:0
+msgid ""
+"{processed} out of {total} Self-Billing SAF-T processed and sent "
+"successfully"
 msgstr ""

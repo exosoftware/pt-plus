@@ -10,17 +10,17 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.0.1",
+    "version": "20.0.5.0.1",
     "depends": ["point_of_sale", "ptplus_account_credit_note", "ptplus_sale"],
     "data": [
         "views/fiscal_document_views.xml",
         "views/pos_order_views.xml",
         "views/res_config_settings_views.xml",
+        "receipt/pos_order_receipt.xml",
     ],
     "assets": {
         "point_of_sale._assets_pos": [
             "ptplus_pos/static/src/**/*",
-            "ptplus_pos/static/lib/*",
         ],
     },
     "demo": [],

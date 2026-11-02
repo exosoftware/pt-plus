@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0\n"
+"Project-Id-Version: Odoo Server 20.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-10 15:45+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
@@ -124,11 +124,11 @@ msgstr "%s foi emitido a outra empresa, pelo que não foi lido nada dele."
 #. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.dataport_import_form_efatura
 msgid ""
-"<i class=\"fa fa-circle-o-notch fa-spin me-2\"/>\n"
+"<i class=\"oi oi-spin me-2\" data-icon=\"autorenew\"/>\n"
 "                    <span class=\"me-1\">Synchronizing with the Tax "
 "Authority:</span>"
 msgstr ""
-"<i class=\"fa fa-circle-o-notch fa-spin me-2\"/>\n"
+"<i class=\"oi oi-spin me-2\" data-icon=\"autorenew\"/>\n"
 "                    <span class=\"me-1\">A sincronizar com a Autoridade "
 "Tributária:</span>"
 
@@ -222,6 +222,11 @@ msgstr "Atividades"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr "Marcador de Exceções de Atividade"
+
+#. module: ptplus_accounting_efatura
+#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_plans_ids
+msgid "Activity Plans"
+msgstr "Planos de Atividades"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_state
@@ -483,10 +488,6 @@ msgstr "Cor"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model,name:ptplus_accounting_efatura.model_res_company
-msgid "Companies"
-msgstr "Empresas"
-
-#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_line__company_id
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_tax_mapping__company_id
@@ -1095,11 +1096,6 @@ msgid "Followers (Partners)"
 msgstr "Seguidores (Parceiros)"
 
 #. module: ptplus_accounting_efatura
-#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_type_icon
-msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Ícone font awesome, por exemplo fa-tasks"
-
-#. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__format
 msgid "Format"
 msgstr "Formato"
@@ -1546,6 +1542,11 @@ msgid "Map an E-Fatura tax"
 msgstr "Mapear um imposto E-Fatura"
 
 #. module: ptplus_accounting_efatura
+#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr "Ícone Material Symbols, por exemplo checklist"
+
+#. module: ptplus_accounting_efatura
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_efatura.account_efatura_merge_view
 msgid "Merge"
 msgstr "Fundir"
@@ -1624,11 +1625,6 @@ msgstr ""
 #: code:addons/ptplus_accounting_efatura/models/l10n_pt_account_efatura.py:0
 msgid "New E-Fatura Tax Mapping"
 msgstr "Novo Mapeamento de Impostos E-Fatura"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr "Evento do Calendário da Próxima Atividade"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__activity_date_deadline
@@ -1978,11 +1974,6 @@ msgid ""
 msgstr ""
 "Tipo de taxa reportado na linha do e-fatura (taxa). Deixe vazio para "
 "corresponder a qualquer tipo de taxa."
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__rating_ids
-msgid "Ratings"
-msgstr "Classificações"
 
 #. module: ptplus_accounting_efatura
 #. odoo-javascript
@@ -2734,16 +2725,6 @@ msgstr "Ver"
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_dataport_import_efatura__warnings
 msgid "Warnings"
 msgstr "Avisos"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura__website_message_ids
-msgid "Website Messages"
-msgstr "Mensagens do Website"
-
-#. module: ptplus_accounting_efatura
-#: model:ir.model.fields,help:ptplus_accounting_efatura.field_l10n_pt_account_efatura__website_message_ids
-msgid "Website communication history"
-msgstr "Histórico de comunicação do Website"
 
 #. module: ptplus_accounting_efatura
 #: model:ir.model.fields,field_description:ptplus_accounting_efatura.field_l10n_pt_account_efatura_merge__keep_note

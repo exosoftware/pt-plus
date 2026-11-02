@@ -101,7 +101,7 @@
                                     string="Create Bill"
                                     help="Create the vendor bill of this document, with the product and the tax of the E-Fatura tax mapping"
                                     class="btn-link mb-1 px-0"
-                                    icon="fa-plus"
+                                    icon="add"
                                     invisible="invoice_id or self_billing"
                                 />
                             </div>
@@ -127,7 +127,7 @@
                                         <button
                                             name="l10n_pt_action_create_mapping"
                                             type="object"
-                                            icon="fa-plus"
+                                            icon="add"
                                             title="Create the tax mapping for this line"
                                         />
                                         <field

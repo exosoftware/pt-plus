@@ -1,3 +1,4 @@
+import {t, useProps} from "@odoo/owl";
 import {_t} from "@web/core/l10n/translation";
 import {registry} from "@web/core/registry";
 import {
@@ -5,6 +6,7 @@ import {
     buildM2OFieldDescription,
     extractM2OFieldProps,
     m2oSupportedOptions,
+    many2OneFieldProps,
 } from "@web/views/fields/many2one/many2one_field";
 
 /**
@@ -13,11 +15,11 @@ import {
  */
 export class CashflowCategoryField extends Many2OneField {
     static template = "ptplus_accounting_cashflow.CashflowCategoryField";
-    static props = {
-        ...Many2OneField.props,
-        labelField: {type: String, optional: true},
-        colorField: {type: String, optional: true},
-    };
+    props = useProps({
+        ...many2OneFieldProps,
+        labelField: t.string().optional(),
+        colorField: t.string().optional(),
+    });
 
     get tag() {
         const data = this.props.record.data;

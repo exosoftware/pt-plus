@@ -74,11 +74,12 @@ Changelog
 
 **Improvement**
 
-- The Trial Balance now groups the accounts by the account groups of the chart
-  of accounts (class, then each level below it), as the native trial balance
-  does. Each group has a subtotal line with the initial balance, the debit, the
-  credit and the final balance of its accounts, on screen and in the XLSX
-  export, and the movements behind each subtotal can be opened from it.
+- The Trial Balance now groups the accounts under their parent accounts in the
+  chart of accounts (class, then each level below it), as the native trial
+  balance does. Each parent account has a subtotal line with the initial
+  balance, the debit, the credit and the final balance of its accounts, on
+  screen and in the XLSX export, and the movements behind each subtotal can be
+  opened from it.
 
 1.6.0 (2026-10-15)
 ~~~~~~~~~~~~~~~~~~~

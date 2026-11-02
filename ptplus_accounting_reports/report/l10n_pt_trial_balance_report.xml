@@ -28,7 +28,7 @@
                                 <tr
                                     t-foreach="o.line_ids"
                                     t-as="line"
-                                    t-att-class="None if line.account_id else 'fw-bold' if line.account_group_id else 'fw-bold table-active'"
+                                    t-att-class="None if line.account_id else 'fw-bold' if line.parent_account_id else 'fw-bold table-active'"
                                 >
                                     <td>
                                         <span t-out="line.code" />
@@ -57,6 +57,5 @@
         <field name="model">l10n_pt.trial.balance.wizard</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">ptplus_accounting_reports.report_trial_balance</field>
-        <field name="report_file">ptplus_accounting_reports.report_trial_balance</field>
     </record>
 </odoo>

@@ -2,9 +2,10 @@
 <templates>
     <t t-name="ptplus_accounting_efatura.MappingMissingField">
         <span
-            t-if="props.record.data[props.name]"
-            class="fa fa-exclamation-triangle text-warning"
-            t-att-title="tooltip"
+            t-if="this.props.record.data[this.props.name]"
+            class="oi text-warning"
+            data-icon="warning"
+            t-att-title="this.tooltip"
         />
     </t>
 </templates>

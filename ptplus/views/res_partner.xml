@@ -5,6 +5,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
+            <div name="identifiers" position="after">
+                <field name="is_company" />
+            </div>
             <group name="fiscal_information" position="inside">
                 <field
                     name="l10n_pt_vat_pt"

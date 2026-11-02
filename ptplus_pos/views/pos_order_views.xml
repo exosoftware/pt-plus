@@ -8,6 +8,10 @@
         <field name="arch" type="xml">
             <field name="pos_reference" position="before">
                 <field name="l10n_pt_unique_id" />
+                <field
+                    name="l10n_pt_bill_unique_id"
+                    invisible="not l10n_pt_bill_unique_id"
+                />
                 <field name="l10n_pt_atcud" />
             </field>
         </field>
@@ -22,7 +26,37 @@
             <field name="pos_reference" position="before">
                 <field name="l10n_pt_unique_id" />
             </field>
+            <field name="state" position="before">
+                <field
+                    name="l10n_pt_saft_element_status"
+                    widget="badge"
+                    optional="hide"
+                    decoration-success="l10n_pt_saft_element_status == 'done'"
+                    decoration-warning="l10n_pt_saft_element_status == 'needed'"
+                    decoration-danger="l10n_pt_saft_element_status == 'error'"
+                    decoration-info="l10n_pt_saft_element_status == 'manual'"
+                    decoration-primary="l10n_pt_saft_element_status == 'blocked'"
+                />
+            </field>
         </field>
+    </record>
+
+    <record id="action_l10n_pt_toggle_saft_element_pos" model="ir.actions.server">
+        <field name="name">(Un)block SAF-T element</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_toggle_saft_element_block()</field>
+    </record>
+
+    <record id="action_l10n_pt_recompute_saft_element_pos" model="ir.actions.server">
+        <field name="name">Recompute SAF-T element</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_l10n_pt_recompute_saft_element()</field>
     </record>
     <!-- POS order search -->
     <record id="view_pos_order_filter_pt" model="ir.ui.view">
@@ -36,12 +70,12 @@
                 <filter
                     string="Invoices"
                     name="invoices"
-                    domain="[('fiscal_document_type_id.reversion', '=', False)]"
+                    domain="[('account_move.move_type', '=', 'out_invoice')]"
                 />
                 <filter
                     string="Credit Notes"
                     name="credit_notes"
-                    domain="[('fiscal_document_type_id.reversion', '=', True)]"
+                    domain="[('account_move.move_type', '=', 'out_refund')]"
                 />
             </field>
         </field>

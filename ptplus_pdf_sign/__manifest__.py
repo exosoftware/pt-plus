@@ -2,7 +2,7 @@
     "name": "Portugal - Digital Signatures on PDF Reports",
     "summary": "Sign your PDF reports using qualified digital certificates "
     "and cryptography.",
-    "version": "19.0.2.0.0",
+    "version": "20.0.2.0.0",
     "category": "Tools",
     "license": "OPL-1",
     "author": "Exo Software",
@@ -16,7 +16,7 @@
         "python": ["pyotp", "pyhanko", "asn1crypto", "cryptography"],
     },
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/l10n_pt_report_signature_data.xml",
         "views/l10n_pt_report_signature.xml",
         "views/res_config_settings_view.xml",

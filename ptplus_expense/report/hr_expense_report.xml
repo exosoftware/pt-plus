@@ -52,10 +52,10 @@
                                     <tr>
                                         <td colspan="8" style="font-weight:bold;">
                                             <t t-if="client_expense[0]">
-                                                <t t-esc="client_expense[0].name" />
+                                                <t t-out="client_expense[0].name" />
                                                 <t t-if="client_expense[0].city">
                                                     <t
-                                                        t-esc="' (' + str(client_expense[0].city) + ')'"
+                                                        t-out="' (' + str(client_expense[0].city) + ')'"
                                                     />
                                                 </t>
                                             </t>
@@ -68,28 +68,28 @@
                                     <t t-foreach="client_expense[1]" t-as="expense">
                                         <tr>
                                             <td>
-                                                <span t-esc="expense.date" />
+                                                <span t-out="expense.date" />
                                             </td>
                                             <td>
-                                                <span t-esc="expense.name" />
+                                                <span t-out="expense.name" />
                                             </td>
                                             <td>
                                                 <span
-                                                    t-esc="expense.l10n_pt_license_plate"
+                                                    t-out="expense.l10n_pt_license_plate"
                                                 />
                                             </td>
                                             <td class="text-end">
                                                 <span
-                                                    t-esc="expense.price_unit"
+                                                    t-out="expense.price_unit"
                                                     t-options='{"widget": "monetary", "display_currency": expense.company_currency_id}'
                                                 />
                                             </td>
                                             <td class="text-end">
-                                                <span t-esc="expense.quantity" />
+                                                <span t-out="expense.quantity" />
                                             </td>
                                             <td class="text-end">
                                                 <span
-                                                    t-esc="expense.total_amount_currency"
+                                                    t-out="expense.total_amount_currency"
                                                     t-options='{"widget": "monetary", "display_currency": expense.currency_id}'
                                                 />
                                             </td>
@@ -98,7 +98,7 @@
                                                 class="text-end"
                                             >
                                                 <span
-                                                    t-esc="expense.total_amount"
+                                                    t-out="expense.total_amount"
                                                     t-options='{"widget": "monetary", "display_currency": expense.company_currency_id}'
                                                 />
                                             </td>
@@ -118,7 +118,7 @@
                                         <td class="text-end">
                                             <span
                                                 t-if="o.product_id.product_tmpl_id == env.ref('ptplus_expense.trav_expenses_own_vehicle')"
-                                                t-esc="o.total_amount"
+                                                t-out="o.total_amount"
                                                 t-options='{"widget": "monetary", "display_currency": o.currency_id}'
                                             />
                                         </td>
@@ -145,7 +145,6 @@
         <field name="model">hr.expense</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">ptplus_expense.report_vehicle_expense</field>
-        <field name="report_file">ptplus_expense.report_vehicle_expense</field>
         <field name="binding_model_id" ref="model_hr_expense" />
         <field name="binding_type">report</field>
     </record>

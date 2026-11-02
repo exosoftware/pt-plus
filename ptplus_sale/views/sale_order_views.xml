@@ -27,7 +27,7 @@
                     id="action_view_l10n_pt_proformas"
                     type="object"
                     class="oe_stat_button"
-                    icon="fa-file-text-o"
+                    icon="article"
                     invisible="l10n_pt_proforma_count == 0"
                 >
                     <field
@@ -41,7 +41,7 @@
                     id="action_view_l10n_pt_proforma_origin"
                     type="object"
                     class="oe_stat_button"
-                    icon="fa-arrow-left"
+                    icon="arrow_back"
                     invisible="not l10n_pt_proforma_origin_id"
                 >
                     <div class="o_stat_info">
@@ -162,7 +162,8 @@
                     domain="[('source_billing', '=', source_billing),
                             ('company_id', '=', company_id),
                             ('section', '=', 'work'),
-                            ('type', '!=', 'NE')
+                            ('type', '!=', 'NE'),
+                            ('point_of_sale', '=', False)
                             ]"
                     readonly="state != 'draft'"
                     groups="sale.group_proforma_sales"
@@ -174,7 +175,8 @@
                     domain="[('source_billing', '=', source_billing),
                             ('company_id', '=', company_id),
                             ('section', '=', 'work'),
-                            ('type', 'not in', ['NE', 'PF'])
+                            ('type', 'not in', ['NE', 'PF']),
+                            ('point_of_sale', '=', False)
                             ]"
                     readonly="state != 'draft'"
                     groups="!sale.group_proforma_sales"

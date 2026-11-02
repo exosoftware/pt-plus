@@ -135,7 +135,7 @@
             <record id="intrastat_line" model="account.report.line">
                 <field name="name">Intrastat</field>
                 <field name="groupby">intrastat_grouping, id</field>
-                <field name="foldable" eval="False" />
+                <field name="foldability">always_unfolded</field>
                 <field name="expression_ids">
                     <record
                         id="intrastat_report_line_flux"
@@ -143,7 +143,7 @@
                     >
                         <field name="label">flux</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">flux</field>
                     </record>
                     <record
@@ -152,7 +152,7 @@
                     >
                         <field name="label">period</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">period</field>
                     </record>
                     <record
@@ -161,7 +161,7 @@
                     >
                         <field name="label">partner_vat</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">partner_vat</field>
                     </record>
                     <record
@@ -170,7 +170,7 @@
                     >
                         <field name="label">reference</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">reference</field>
                     </record>
                     <record
@@ -179,7 +179,7 @@
                     >
                         <field name="label">commodity_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">commodity_code</field>
                     </record>
                     <record
@@ -188,7 +188,7 @@
                     >
                         <field name="label">country_name</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">country_name</field>
                     </record>
                     <record
@@ -199,7 +199,7 @@
                             name="label"
                         >intrastat_product_origin_country_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field
                             name="subformula"
                         >intrastat_product_origin_country_code</field>
@@ -210,7 +210,7 @@
                     >
                         <field name="label">region_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">region_code</field>
                     </record>
                     <record
@@ -219,7 +219,7 @@
                     >
                         <field name="label">incoterm_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">incoterm_code</field>
                     </record>
                     <record
@@ -228,7 +228,7 @@
                     >
                         <field name="label">transaction_nature</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">transaction_nature</field>
                     </record>
                     <record
@@ -237,7 +237,7 @@
                     >
                         <field name="label">transport_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">transport_code</field>
                     </record>
                     <record
@@ -246,7 +246,7 @@
                     >
                         <field name="label">port_airport_code</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">port_airport_code</field>
                     </record>
                     <record
@@ -255,7 +255,7 @@
                     >
                         <field name="label">weight</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">weight</field>
                     </record>
                     <record
@@ -264,7 +264,7 @@
                     >
                         <field name="label">supplementary_units</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">supplementary_units</field>
                     </record>
                     <record
@@ -273,7 +273,7 @@
                     >
                         <field name="label">value</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">value</field>
                     </record>
                     <record
@@ -282,7 +282,7 @@
                     >
                         <field name="label">value_currency</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">value_currency</field>
                     </record>
                     <record
@@ -291,7 +291,7 @@
                     >
                         <field name="label">adqnif</field>
                         <field name="engine">custom</field>
-                        <field name="formula">_report_custom_engine_intrastat</field>
+                        <field name="formula">_report_engine_intrastat</field>
                         <field name="subformula">adqnif</field>
                     </record>
                 </field>

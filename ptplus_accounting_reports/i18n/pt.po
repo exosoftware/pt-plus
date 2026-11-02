@@ -140,11 +140,6 @@ msgid "Account Asset Mixin PT"
 msgstr ""
 
 #. module: ptplus_accounting_reports
-#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__account_group_id
-msgid "Account Group"
-msgstr "Grupo Contabilístico"
-
-#. module: ptplus_accounting_reports
 #. odoo-python
 #: code:addons/ptplus_accounting_reports/wizards/l10n_pt_equity_changes_wizard.py:0
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_trial_balance_wizard_form
@@ -490,6 +485,7 @@ msgstr "Antes do Apuramento de Resultados"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__book_value
 #, fuzzy
+#| msgid "Values"
 msgid "Book Value"
 msgstr "Valores"
 
@@ -1191,6 +1187,7 @@ msgstr "Detalha por parceiro as contas a receber e a pagar"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__display_name
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__display_name
@@ -1334,6 +1331,26 @@ msgstr "Erros"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard_line__col8
 msgid "Excedentes de revalorização"
 msgstr ""
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__method__xlsx
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_balance_sheet_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_equity_changes_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_exploration_map_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_monthly_stamp_duty_statement_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_multi_statement_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_profit_loss_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_statement_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_trial_balance_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_periodic_statement_wizard__format__xlsx
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_vat_recap_statement_wizard__format__xlsx
+msgid "Excel File (.xlsx)"
+msgstr "Ficheiro Excel (.xlsx)"
 
 #. module: ptplus_accounting_reports
 #. odoo-python
@@ -1577,7 +1594,9 @@ msgstr "Financeiros"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_equity_changes_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard__format
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_multi_statement_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__format
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__format
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard__format
@@ -1657,6 +1676,7 @@ msgstr "Tem Operações sem Liquidação de Imposto"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_profit_loss_wizard_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_ies_mixin__id
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_statement_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__id
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__id
@@ -1665,6 +1685,11 @@ msgstr "Tem Operações sem Liquidação de Imposto"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_recap_statement_wizard_line__id
 msgid "ID"
 msgstr "ID"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__dataport_log__type__ies_annexl
+msgid "IES - Annex L"
+msgstr "IES - Anexo L"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_vat_periodic_statement_wizard__paid_tax_import_amount
@@ -1761,6 +1786,7 @@ msgstr ""
 "ficheiro importado ou exportado. "
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__intangible_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__intangible_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__intangible_assets
 msgid "Intangible Assets"
@@ -1847,6 +1873,7 @@ msgid "Inventory Transfers"
 msgstr "Transferências de Inventário"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__investment_properties
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__investment_properties
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__investment_properties
 msgid "Investment Properties"
@@ -1949,6 +1976,11 @@ msgid "L10N Pt Expected Method Number"
 msgstr "L10N PT Número do método esperado"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_statement_wizard
+msgid "L10nPt Statement Wizard"
+msgstr "Assistente de Declarações L10nPt"
+
+#. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_balance_sheet_wizard_line__write_uid
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__write_uid
@@ -2000,6 +2032,7 @@ msgstr "Exclui os lançamentos de apuramento de resultados do período"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_account_asset_mixin__l10n_pt_legal_rate_id
 #, fuzzy
+#| msgid "Legal Representative"
 msgid "Legal Rate"
 msgstr "Representante Legal"
 
@@ -2067,6 +2100,11 @@ msgstr "Mar"
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_exploration_map_wizard_line__m05
 msgid "May"
 msgstr "Mai"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_dataport_log__method
+msgid "Method"
+msgstr "Método"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard__method_used
@@ -2154,6 +2192,7 @@ msgstr ""
 "Depreciações / Amortizações e perdas por imparidade não aceites como gastos"
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__non-consumable_biological_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__non-consumable_biological_assets
 msgid "Non-Consumable Biological Assets"
 msgstr "Ativos Biológicos Não Consumíveis"
@@ -2243,6 +2282,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_reports.l10n_pt_vat_periodic_statement_wizard_form
 msgid "Paid Tax Imports"
 msgstr "Importações com Imposto Pago"
+
+#. module: ptplus_accounting_reports
+#: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_trial_balance_wizard_line__parent_account_id
+msgid "Parent Account"
+msgstr "Conta-Mãe"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_monthly_stamp_duty_statement_wizard_line__partner_id
@@ -2897,12 +2941,14 @@ msgstr "Tipo de Declaração"
 #. module: ptplus_accounting_reports
 #: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_depreciation_and_amortization_wizard
 #, fuzzy
+#| msgid "Statement Lines"
 msgid "Statement Wizard"
 msgstr "Linhas da Declaração"
 
 #. module: ptplus_accounting_reports
 #: model:ir.model,name:ptplus_accounting_reports.model_l10n_pt_depreciation_and_amortization_wizard_line
 #, fuzzy
+#| msgid "Statement Lines"
 msgid "Statement Wizard Line"
 msgstr "Linhas da Declaração"
 
@@ -2965,6 +3011,7 @@ msgid "Subst. Fact Date"
 msgstr "Data do Facto Orig. Subst."
 
 #. module: ptplus_accounting_reports
+#: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__account_asset__l10n_pt_asset_type__tangible_fixed_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_account_asset_mixin__l10n_pt_asset_type__tangible_fixed_assets
 #: model:ir.model.fields.selection,name:ptplus_accounting_reports.selection__l10n_pt_depreciation_and_amortization_wizard__nature_asset__tangible_fixed_assets
 msgid "Tangible Fixed Assets"
@@ -2998,6 +3045,7 @@ msgstr "Base Tributária"
 #. module: ptplus_accounting_reports
 #: model:ir.model.fields,field_description:ptplus_accounting_reports.field_l10n_pt_depreciation_and_amortization_wizard_line__tax_basis_cost
 #, fuzzy
+#| msgid "Tax Base"
 msgid "Tax Basis Cost"
 msgstr "Base Tributária"
 

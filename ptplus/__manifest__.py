@@ -7,9 +7,9 @@
 
 {
     "name": "Portugal - Invoicing",
-    "version": "19.0.5.2.6",
+    "version": "20.0.5.2.6",
     "license": "OPL-1",
-    "depends": ["base_vat", "account", "l10n_pt", "bus"],
+    "depends": ["account", "l10n_pt", "bus", "base_report_wkhtmltox"],
     "countries": ["pt"],
     "excludes": [],
     "author": "Exo Software",
@@ -17,7 +17,7 @@
     "category": "Accounting/Localizations/Account Charts",
     "summary": "Portuguese Invoices & Payments",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/security.xml",
         "data/account_account_data.xml",
         "data/account_account_tag_data.xml",
@@ -49,7 +49,7 @@
         "wizards/webservice_series_comm.xml",
     ],
     "external_dependencies": {
-        "python": ["xmlschema", "unicodecsv", "zeep", "pycountry"],
+        "python": ["xmlschema", "zeep", "pycountry"],
     },
     "assets": {
         "web.report_assets_common": [
@@ -57,7 +57,6 @@
         ],
         "web.assets_backend": [
             "ptplus/static/src/scss/backend.scss",
-            "ptplus/static/src/js/services/*.js",
         ],
     },
     "post_init_hook": "post_init_hook",

@@ -6,13 +6,7 @@
         <field name="model">hr.expense</field>
         <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
         <field name="arch" type="xml">
-            <field name="vendor_id" position="attributes">
-                <attribute
-                    name="invisible"
-                >payment_mode != 'company_account' and l10n_pt_country_code != 'PT'</attribute>
-            </field>
             <xpath expr="//field[@name='product_id']/.." position="after">
-                <field name="l10n_pt_country_code" invisible="1" />
                 <field name="l10n_pt_is_travel_expense" invisible="1" />
                 <field
                     name="l10n_pt_partner_id"

@@ -48,7 +48,8 @@
                 <div t-else="">Our Warehouse</div>
                 <p t-if="o.l10n_pt_loading_time">
                     <i
-                        class="fa fa-clock-o mr-1"
+                        class="oi mr-1"
+                        data-icon="schedule"
                         role="img"
                         aria-label="Date"
                         title="Date"
@@ -70,7 +71,8 @@
                 <!--<p t-if="not shipto_partner or (shipto_partner == partner)">You Warehouse</p>-->
                 <p t-if="o.l10n_pt_unloading_time">
                     <i
-                        class="fa fa-clock-o mr-1"
+                        class="oi mr-1"
+                        data-icon="schedule"
                         role="img"
                         aria-label="Date"
                         title="Date"
@@ -109,76 +111,33 @@
         </div>
     </template>
 
-    <!-- Layout Striped -->
-    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
-        <xpath expr="//div[@name='company_address']" position="after">
-            <div class="ms-5">
-                <t t-call="ptplus.pt_features_top" />
-            </div>
-        </xpath>
-    </template>
-
-    <!-- Layout Boxed -->
-    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
+    <!-- Certification text on the footer shared by every layout -->
+    <template
+        id="external_layout_footer_content"
+        inherit_id="web.external_layout_footer_content"
+    >
         <xpath
-            expr="//div[contains(@t-attf-class,'header')]/div/div"
-            position="attributes"
+            expr="//div[contains(@t-attf-class, 'o_footer_content')]"
+            position="before"
         >
-            <attribute name="class">col-5</attribute>
-        </xpath>
-        <xpath
-            expr="//div[contains(@t-attf-class,'header')]/div/div[2]"
-            position="attributes"
-        >
-            <attribute name="class">col-6 text-end mb4</attribute>
-        </xpath>
-        <xpath expr="//div[contains(@t-attf-class,'header')]/div/div" position="after">
-            <div class="col-1">
-                <t t-call="ptplus.pt_features_top" />
-            </div>
-        </xpath>
-    </template>
-
-    <!-- Layout Bold -->
-    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
             <t t-call="ptplus.certification_text" />
-        </xpath>
-
-        <xpath expr="//div[hasclass('row')]//div[2]" position="before">
-            <div
-                t-att-class="'col-1 p-0' if report_type == 'pdf' else 'position-absolute'"
-            >
-                <t t-call="ptplus.pt_features_top" />
-            </div>
         </xpath>
     </template>
 
     <!-- Layout Standard -->
     <template id="external_layout_standard" inherit_id="web.external_layout_standard">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
-        <xpath expr="//div[@t-if='company.report_header']" position="before">
-            <t t-call="ptplus.pt_features_top" />
+        <xpath
+            expr="//div[contains(@t-attf-class,'header')]//tr[1]/td[last()]"
+            position="after"
+        >
+            <td t-if="pt_report" class="align-top ps-3">
+                <t t-call="ptplus.pt_features_top" />
+            </td>
         </xpath>
     </template>
 
     <!-- Layout Folder -->
     <template id="external_layout_folder" inherit_id="web.external_layout_folder">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
         <xpath
             expr="//div[@name='company_address']/preceding-sibling::div[1]"
             position="attributes"
@@ -193,10 +152,6 @@
 
     <!-- Layout Wave -->
     <template id="external_layout_wave" inherit_id="web.external_layout_wave">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
         <xpath
             expr="//div[@name='company_address']/preceding-sibling::div[1]"
             position="attributes"
@@ -211,12 +166,56 @@
 
     <!-- Layout Bubble -->
     <template id="external_layout_bubble" inherit_id="web.external_layout_bubble">
-        <xpath expr="//div[contains(@t-attf-class,'footer')]/div" position="before">
-            <t t-call="ptplus.certification_text" />
-        </xpath>
-
         <xpath expr="//div[@name='company_address']" position="before">
             <t t-call="ptplus.pt_features_top" />
+        </xpath>
+    </template>
+
+    <!-- Layout Center -->
+    <template id="external_layout_center" inherit_id="web.external_layout_center">
+        <xpath
+            expr="//div[contains(@t-attf-class,'header')]//tr[1]/td[last()]"
+            position="after"
+        >
+            <td t-if="pt_report" class="align-top ps-3">
+                <t t-call="ptplus.pt_features_top" />
+            </td>
+        </xpath>
+    </template>
+
+    <!-- Layout Dual -->
+    <template id="external_layout_dual" inherit_id="web.external_layout_dual">
+        <xpath
+            expr="//div[contains(@t-attf-class,'header')]//tr[1]/td[last()]"
+            position="after"
+        >
+            <td t-if="pt_report" class="align-top ps-3">
+                <t t-call="ptplus.pt_features_top" />
+            </td>
+        </xpath>
+    </template>
+
+    <!-- Layout Lines -->
+    <template id="external_layout_lines" inherit_id="web.external_layout_lines">
+        <xpath
+            expr="//div[contains(@t-attf-class,'header')]//tr[1]/td[last()]"
+            position="after"
+        >
+            <td t-if="pt_report" class="align-top ps-3">
+                <t t-call="ptplus.pt_features_top" />
+            </td>
+        </xpath>
+    </template>
+
+    <!-- Layout Compact -->
+    <template id="external_layout_compact" inherit_id="web.external_layout_compact">
+        <xpath
+            expr="//div[contains(@t-attf-class,'header')]//tr[1]/td[last()]"
+            position="after"
+        >
+            <td t-if="pt_report" class="align-top ps-3">
+                <t t-call="ptplus.pt_features_top" />
+            </td>
         </xpath>
     </template>
 </odoo>

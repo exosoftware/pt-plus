@@ -60,7 +60,7 @@
         <xpath expr="//t[@t-set='layout_document_title']" position="attributes">
             <attribute name="t-if">not doc.source_billing</attribute>
         </xpath>
-        <xpath expr="//t[@t-set='layout_document_title']" position="after">
+        <xpath expr="//div[@id='informations']" position="before">
             <div t-if="doc.source_billing" class="row pt_doc_name">
                 <div class="col-10">
                     <h2>
@@ -130,7 +130,7 @@
                                 t-if="discount_line.price_subtotal &lt; 0 and not discount_line.is_downpayment"
                             >
                                 <td>
-                                    <span t-esc="discount_line.name" />
+                                    <span t-out="discount_line.label" />
                                     <t
                                         t-if="doc.fiscal_document_type_id and doc.fiscal_document_type_id.type == 'PF'"
                                     >

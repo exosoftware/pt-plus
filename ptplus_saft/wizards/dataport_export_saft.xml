@@ -13,18 +13,15 @@
                 <field name="is_installed_accounting" invisible="1" />
                 <field name="company_id" invisible="1" />
                 <field name="type" invisible="not is_installed_accounting" />
-                <field name="l10n_pt_saft_computing_method" invisible="1" />
             </xpath>
 
             <field name="validate" position="attributes">
-                <attribute
-                    name="invisible"
-                >l10n_pt_saft_computing_method != 'extraction'</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
             <field name="validate" position="after">
                 <field
                     name="recompute_elements"
-                    invisible="l10n_pt_saft_computing_method == 'extraction' or state != 'select'"
+                    invisible="state != 'select'"
                     help="Check this option if you want Odoo to ignore all the pre-computed SAF-T PT elements
                     (eg. invoices, taxes and products) and create/save new ones. Use it only if you believe
                     that the current software version will increase compliance. Otherwise the additional
@@ -96,7 +93,6 @@
                     type="object"
                     class="oe_highlight"
                     string="Export"
-                    invisible="l10n_pt_saft_computing_method == 'extraction'"
                 />
             </xpath>
         </field>

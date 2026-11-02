@@ -64,7 +64,7 @@
                                 name="action_l10n_pt_remove_at_certificates"
                                 type="object"
                                 string="Remove"
-                                icon="fa-trash"
+                                icon="delete"
                                 class="btn btn-link text-danger p-0"
                                 confirm="Remove the uploaded certificates and go back to the ones shipped with the module?"
                             />
@@ -174,7 +174,7 @@
                         string="Subscription Code"
                     >
                         <div class="row mt16">
-                            <button title="Key" icon="fa-key" class="col-lg-1" />
+                            <button title="Key" icon="key" class="col-lg-1" />
                             <field
                                 name="l10n_pt_ptplus_subscription_code"
                                 required="pt_invoicing"
@@ -183,7 +183,7 @@
                                 name="reload_ptplus_subscription"
                                 title="Reload"
                                 type="object"
-                                icon="fa-repeat"
+                                icon="refresh"
                                 class="col-lg-1"
                             />
                             <div class="row text-muted mt16">

@@ -7,14 +7,14 @@
 
 {
     "name": "Portugal - SAF-T PT Statement",
-    "version": "19.0.4.5.4",
+    "version": "20.0.4.5.4",
     "license": "OPL-1",
     "depends": ["ptplus", "ptplus_partner"],
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/ir_cron.xml",
         "data/mail_templates.xml",
         "data/saft_element_actions.xml",
@@ -23,11 +23,6 @@
         "views/account_move_views.xml",
         "views/account_payment_views.xml",
     ],
-    "external_dependencies": {
-        "python": [
-            "unicodecsv",
-        ],
-    },
     "installable": True,
     "auto_install": True,
     "application": False,

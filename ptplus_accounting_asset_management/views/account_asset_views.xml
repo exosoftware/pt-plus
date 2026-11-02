@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
-
     <record id="account_asset_profile_view_form" model="ir.ui.view">
         <field name="name">account.asset.profile.form.pt</field>
         <field name="model">account.asset.profile</field>
@@ -10,7 +8,6 @@
             ref="account_asset_management.account_asset_profile_view_form"
         />
         <field name="arch" type="xml">
-
             <xpath expr="//sheet" position="before">
                 <div
                     class="alert alert-danger"
@@ -43,10 +40,8 @@
                     invisible="country_code != 'PT'"
                 />
             </field>
-
         </field>
     </record>
-
 
     <record id="account_asset_view_form" model="ir.ui.view">
         <field name="name">account.asset.form.pt</field>
@@ -56,7 +51,6 @@
             ref="account_asset_management.account_asset_view_form"
         />
         <field name="arch" type="xml">
-
             <field name="method" position="before">
                 <field name="country_code" invisible="1" />
                 <field
@@ -77,8 +71,6 @@
                     required="country_code == 'PT'"
                 />
             </field>
-
         </field>
     </record>
-
 </odoo>

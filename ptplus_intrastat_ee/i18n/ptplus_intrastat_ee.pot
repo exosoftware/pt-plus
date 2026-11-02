@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-21 19:24+0000\n"
 "PO-Revision-Date: 2025-11-21 19:24+0000\n"
@@ -84,7 +84,10 @@ msgid "Dispatch"
 msgstr ""
 
 #. module: ptplus_intrastat_ee
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_account_intrastat_pt_report_handler__display_name
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_account_move__display_name
 #: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_intrastat_port_airport__display_name
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -99,7 +102,10 @@ msgid "Flux"
 msgstr ""
 
 #. module: ptplus_intrastat_ee
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_account_intrastat_pt_report_handler__id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_account_move__id
 #: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_intrastat_port_airport__id
+#: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -115,6 +121,8 @@ msgstr ""
 
 #. module: ptplus_intrastat_ee
 #: model:account.report.line,name:ptplus_intrastat_ee.intrastat_line
+#: model:ir.actions.client,name:ptplus_intrastat_ee.action_account_report_intrastat_ee
+#: model:ir.ui.menu,name:ptplus_intrastat_ee.menu_pt_intrastat_ee
 #: model_terms:ir.ui.view,arch_db:ptplus_intrastat_ee.view_partner_form_intrastat
 msgid "Intrastat"
 msgstr ""
@@ -127,6 +135,11 @@ msgstr ""
 #. module: ptplus_intrastat_ee
 #: model:ir.model,name:ptplus_intrastat_ee.model_account_intrastat_pt_report_handler
 msgid "Intrastat PT Report Custom Handler"
+msgstr ""
+
+#. module: ptplus_intrastat_ee
+#: model:ir.model,name:ptplus_intrastat_ee.model_intrastat_port_airport
+msgid "Intrastat Port or Airport"
 msgstr ""
 
 #. module: ptplus_intrastat_ee
@@ -170,12 +183,6 @@ msgstr ""
 #. module: ptplus_intrastat_ee
 #: model:ir.model.fields,field_description:ptplus_intrastat_ee.field_intrastat_port_airport__name
 msgid "Name"
-msgstr ""
-
-#. module: ptplus_intrastat_ee
-#. odoo-python
-#: code:addons/ptplus_intrastat_ee/models/account_intrastat_report.py:0
-msgid "Name Error"
 msgstr ""
 
 #. module: ptplus_intrastat_ee
@@ -255,9 +262,4 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus_intrastat_ee/models/account_intrastat_report.py:0
 msgid "company %s"
-msgstr ""
-
-#. module: ptplus_intrastat_ee
-#: model:ir.model,name:ptplus_intrastat_ee.model_intrastat_port_airport
-msgid "intrastat.port_airport"
 msgstr ""

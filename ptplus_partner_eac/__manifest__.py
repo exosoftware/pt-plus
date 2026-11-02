@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Partner EAC",
-    "version": "19.0.5.0.6",
+    "version": "20.0.5.0.6",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
@@ -18,6 +18,7 @@
     ],
     "data": [
         "security/company_eac.xml",
+        "security/ir.access.csv",
         "data/economic_activities.xml",
         "views/l10n_pt_company_eac.xml",
         "views/res_company_views.xml",

@@ -10,16 +10,15 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.18.2",
+    "version": "20.0.5.18.2",
     "depends": ["ptplus", "ptplus_expense"],
     "external_dependencies": {
         "python": ["pymupdf"],
     },
     "post_init_hook": "post_init_hook",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/ir_cron.xml",
-        "security/efatura_security.xml",
         "views/l10n_pt_account_efatura_tax_mapping.xml",
         # Before the e-fatura views: the document form links to this wizard's
         # action, which has to exist by then

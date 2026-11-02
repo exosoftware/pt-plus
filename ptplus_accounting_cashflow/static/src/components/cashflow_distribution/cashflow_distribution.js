@@ -2,24 +2,28 @@ import {registry} from "@web/core/registry";
 import {useService} from "@web/core/utils/hooks";
 import {getNextTabableElement, getPreviousTabableElement} from "@web/core/utils/ui";
 import {usePosition} from "@web/core/position/position_hook";
-import {getActiveHotkey} from "@web/core/hotkeys/hotkey_service";
+import {getActiveHotkey} from "@web/core/hotkeys/hotkey_utils";
 import {isMobileOS} from "@web/core/browser/feature_detection";
 import {_t} from "@web/core/l10n/translation";
 import {useRecordObserver} from "@web/model/relational_model/utils";
 
 import {standardFieldProps} from "@web/views/fields/standard_field_props";
-import {TagsList} from "@web/core/tags_list/tags_list";
+import {BadgeTag} from "@web/core/tags_list/badge_tag";
 import {formatMonetary} from "@web/views/fields/formatters";
 
 import {Record} from "@web/model/record";
 import {Field} from "@web/views/fields/field";
 import {
     Component,
-    useState,
-    useRef,
-    useExternalListener,
-    onWillStart,
+    onMounted,
     onPatched,
+    onWillStart,
+    onWillUnmount,
+    proxy,
+    signal,
+    t,
+    useListener,
+    useProps,
 } from "@odoo/owl";
 
 /**
@@ -30,32 +34,33 @@ import {
 export class CashflowDistribution extends Component {
     static template = "ptplus_accounting_cashflow.CashflowDistribution";
     static components = {
-        TagsList,
+        BadgeTag,
         Record,
         Field,
     };
 
-    static props = {
+    widgetRef = signal.ref();
+    dropdownRef = signal.ref();
+    mainRef = signal.ref();
+    addLineButton = signal.ref();
+
+    props = useProps({
         ...standardFieldProps,
-        amount_field: {type: String},
-        hide_remainder: {type: Boolean, optional: true},
-        placeholder: {type: String, optional: true},
-    };
+        amount_field: t.string(),
+        hide_remainder: t.boolean().optional(),
+        placeholder: t.string().optional(),
+    });
 
     setup() {
         this.orm = useService("orm");
         this.batchedOrm = useService("batchedOrm");
 
-        this.state = useState({
+        this.state = proxy({
             showDropdown: false,
             formattedData: [],
         });
 
-        this.widgetRef = useRef("cashflowDistribution");
-        this.dropdownRef = useRef("cashflowDropdown");
-        this.mainRef = useRef("mainElement");
-        this.addLineButton = useRef("addLineButton");
-        usePosition("cashflowDropdown", () => this.widgetRef.el);
+        usePosition(this.dropdownRef, () => this.widgetRef());
 
         this.nextId = 1;
         this.focusSelector = false;
@@ -65,8 +70,14 @@ export class CashflowDistribution extends Component {
         useRecordObserver(this.willUpdateRecord.bind(this));
         onPatched(this.patched);
 
-        useExternalListener(window, "click", this.onWindowClick, true);
-        useExternalListener(window, "resize", this.onWindowResized);
+        const onWindowClick = this.onWindowClick.bind(this);
+        onMounted(() =>
+            window.addEventListener("click", onWindowClick, {capture: true})
+        );
+        onWillUnmount(() =>
+            window.removeEventListener("click", onWindowClick, {capture: true})
+        );
+        useListener(window, "resize", this.onWindowResized.bind(this));
     }
 
     // Lifecycle
@@ -275,7 +286,7 @@ export class CashflowDistribution extends Component {
     }
 
     get isDropdownOpen() {
-        return this.state.showDropdown && !!this.dropdownRef.el;
+        return this.state.showDropdown && !!this.dropdownRef();
     }
 
     get referenceAmount() {
@@ -336,9 +347,9 @@ export class CashflowDistribution extends Component {
             return tags;
         }
         if (tags.length && this.isRequired && !this.isBalanced) {
-            // Remainder tag on partial distributions. Its id must be truthy
-            // and distinct from the line ids: the TagsList t-foreach keys on
-            // "tag.id or tag_index" (falsy id = duplicate key OwlError)
+            // Remainder tag on partial distributions. Its id must be distinct
+            // from the line ids: the tags t-foreach keys on "tag.id"
+            // (duplicate id = duplicate key OwlError)
             const remainder = this.roundAmount(
                 this.referenceAmount - this.distributionTotal
             );
@@ -398,7 +409,7 @@ export class CashflowDistribution extends Component {
         // focus to the main Element but the dropdown should not open
         this.preventOpen = true;
         this.closeCashflowEditor();
-        this.mainRef.el.focus();
+        this.mainRef()?.focus();
         this.preventOpen = false;
     }
 
@@ -440,7 +451,7 @@ export class CashflowDistribution extends Component {
             this.focus(
                 this.adjacentElementToFocus(
                     "next",
-                    this.dropdownRef.el.querySelector(this.focusSelector)
+                    this.dropdownRef().querySelector(this.focusSelector)
                 )
             );
         }
@@ -456,7 +467,7 @@ export class CashflowDistribution extends Component {
             return null;
         }
         if (!el) {
-            el = this.dropdownRef.el;
+            el = this.dropdownRef();
         }
         return direction === "next"
             ? getNextTabableElement(el)
@@ -500,7 +511,7 @@ export class CashflowDistribution extends Component {
                     const row = closestCell.parentElement;
                     const line = this.state.formattedData[parseInt(row.id)];
                     if (
-                        this.adjacentElementToFocus("next") === this.addLineButton.el &&
+                        this.adjacentElementToFocus("next") === this.addLineButton() &&
                         line &&
                         line.categoryId &&
                         !this.isBalanced
@@ -549,11 +560,11 @@ export class CashflowDistribution extends Component {
         ];
         if (
             this.isDropdownOpen &&
-            !this.widgetRef.el.contains(ev.target) &&
+            !this.widgetRef().contains(ev.target) &&
             (!ev.target.closest(selectors.join(",")) ||
                 document
                     .querySelector(".modal:not(.o_inactive_modal)")
-                    .contains(this.widgetRef.el)) &&
+                    .contains(this.widgetRef())) &&
             !ev.target.isSameNode(document.documentElement)
         ) {
             this.forceCloseEditor();

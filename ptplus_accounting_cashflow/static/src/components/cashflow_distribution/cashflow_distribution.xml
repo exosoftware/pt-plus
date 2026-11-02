@@ -4,21 +4,31 @@
     <t t-name="ptplus_accounting_cashflow.CashflowDistribution">
         <div
             class="o_field_tags d-inline-flex flex-wrap mw-100"
-            t-att-class="{'o_tags_input o_input': editingRecord}"
-            t-ref="cashflowDistribution"
-            t-on-keydown="onWidgetKeydown"
+            t-att-class="{'o_tags_input o_input': this.editingRecord}"
+            t-ref="this.widgetRef"
+            t-on-keydown="this.onWidgetKeydown"
         >
-            <TagsList tags="summaryTags()" />
+            <t t-foreach="this.summaryTags()" t-as="tag" t-key="tag.id">
+                <BadgeTag
+                    color="tag.colorIndex"
+                    text="tag.text"
+                    tooltip="tag.title"
+                    onClick="tag.onClick"
+                />
+            </t>
             <div
-                t-if="editingRecord"
+                t-if="this.editingRecord"
                 class="o_input_dropdown d-inline-flex w-100"
                 tabindex="0"
-                t-ref="mainElement"
-                t-on-focus="onMainElementFocus"
-                t-on-click="onMainElementFocus"
+                t-ref="this.mainRef"
+                t-on-focus="this.onMainElementFocus"
+                t-on-click="this.onMainElementFocus"
             >
                 <span class="cashflow_distribution_placeholder">
-                    <t t-if="!state.formattedData.length" t-esc="props.placeholder" />
+                    <t
+                        t-if="!this.state.formattedData.length"
+                        t-out="this.props.placeholder"
+                    />
                 </span>
                 <span class="o_dropdown_button" />
                 <t t-call="ptplus_accounting_cashflow.CashflowDistributionPopup" />
@@ -29,8 +39,8 @@
     <t t-name="ptplus_accounting_cashflow.CashflowDistributionPopup">
         <div
             class="popover cashflow_distribution_popup dropdown-menu o-dropdown--menu show rounded py-0 overflow-x-hidden"
-            t-if="state.showDropdown"
-            t-ref="cashflowDropdown"
+            t-if="this.state.showDropdown"
+            t-ref="this.dropdownRef"
         >
             <div class="popover-header sticky-top">
                 <div class="d-flex">
@@ -41,7 +51,7 @@
                             t-on-click.stop="() => this.closeCashflowEditor()"
                             title="Close"
                         >
-                            <span class="fa fa-close" />
+                            <span class="oi" data-icon="close" />
                         </span>
                     </div>
                 </div>
@@ -54,25 +64,28 @@
                         <tr class="border-bottom">
                             <th>Category</th>
                             <th
-                                t-if="percentageColumnEnabled"
+                                t-if="this.percentageColumnEnabled"
                                 class="numeric_column_width"
                             >Percentage</th>
                             <th
                                 class="numeric_column_width"
-                                t-out="props.record.fields[props.amount_field].string"
+                                t-out="this.props.record.fields[this.props.amount_field].string"
                             />
                             <th class="deleteColumn w-20px" />
                         </tr>
                     </thead>
                     <tbody>
                         <tr
-                            t-foreach="state.formattedData"
+                            t-foreach="this.state.formattedData"
                             t-as="line"
                             t-key="line.id"
                             t-att-id="line_index"
                             t-att-name="'line_' + line_index"
                         >
-                            <Record t-props="recordProps(line)" t-slot-scope="data">
+                            <Record
+                                t-props="this.recordProps(line)"
+                                t-slot-scope="data"
+                            >
                                 <td>
                                     <Field
                                         id="'category_id'"
@@ -85,7 +98,7 @@
                                     />
                                 </td>
                                 <td
-                                    t-if="percentageColumnEnabled"
+                                    t-if="this.percentageColumnEnabled"
                                     class="numeric_column_width"
                                 >
                                     <Field
@@ -103,7 +116,8 @@
                                 </td>
                                 <td class="w-20px">
                                     <span
-                                        class="fa fa-trash-o cursor-pointer"
+                                        class="oi cursor-pointer"
+                                        data-icon="delete"
                                         t-on-click.stop="() => this.deleteLine(line_index)"
                                     />
                                 </td>
@@ -111,13 +125,13 @@
                         </tr>
                         <tr>
                             <td
-                                t-on-click.stop.prevent="addLine"
+                                t-on-click.stop.prevent="this.addLine"
                                 class="o_field_x2many_list_row_add"
-                                t-att-colspan="percentageColumnEnabled ? 4 : 3"
+                                t-att-colspan="this.percentageColumnEnabled ? 4 : 3"
                             >
                                 <a
                                     href="#"
-                                    t-ref="addLineButton"
+                                    t-ref="this.addLineButton"
                                     tabindex="0"
                                 >Add a line</a>
                             </td>
@@ -126,15 +140,15 @@
                     <tfoot>
                         <tr class="border-top">
                             <th
-                                t-att-colspan="percentageColumnEnabled ? 2 : 1"
+                                t-att-colspan="this.percentageColumnEnabled ? 2 : 1"
                             >Total</th>
                             <th
                                 class="numeric_column_width"
-                                t-att-class="isBalanced ? 'text-success' : isOverAllocated ? 'text-danger' : 'text-warning'"
+                                t-att-class="this.isBalanced ? 'text-success' : this.isOverAllocated ? 'text-danger' : 'text-warning'"
                             >
-                                <t t-esc="formatAmount(distributionTotal)" />
+                                <t t-out="this.formatAmount(this.distributionTotal)" />
                                 /
-                                <t t-esc="formatAmount(referenceAmount)" />
+                                <t t-out="this.formatAmount(this.referenceAmount)" />
                             </th>
                             <th class="w-20px" />
                         </tr>

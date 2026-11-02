@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Partner",
-    "version": "19.0.4.1.1",
+    "version": "20.0.4.1.1",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
@@ -17,10 +17,9 @@
         "ptplus",
     ],
     "data": [
-        "data/res_bank.xml",
         "data/res_partner.xml",
         "data/hr.tax.office.pt.csv",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/res_partner_views.xml",
         "views/res_config_settings_views.xml",
         "views/hr_tax_office_pt_views.xml",

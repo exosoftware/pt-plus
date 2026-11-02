@@ -11,7 +11,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.4.0",
+    "version": "20.0.5.4.0",
     "depends": [
         "account",
         "ptplus",
@@ -23,8 +23,7 @@
         "data/l10n_pt.account.taxonomy.csv",
         "data/l10n_pt.account.taxonomy.prefix.csv",
         "data/l10n_pt.account.asset.legal_rate.csv",
-        "security/ir.model.access.csv",
-        "security/accounting_security.xml",
+        "security/ir.access.csv",
         "views/account_balance_transfer.xml",
         "views/l10n_pt_account_taxonomy.xml",
         "views/account_account_views.xml",

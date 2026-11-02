@@ -54,7 +54,8 @@
                 </div>
                 <p t-if="o.l10n_pt_delivery_start">
                     <i
-                        class="fa fa-clock-o mr-1"
+                        class="oi mr-1"
+                        data-icon="schedule"
                         role="img"
                         aria-label="Date"
                         title="Date"
@@ -84,7 +85,8 @@
                 </div>
                 <p t-if="o.l10n_pt_delivery_end">
                     <i
-                        class="fa fa-clock-o mr-1"
+                        class="oi mr-1"
+                        data-icon="schedule"
                         role="img"
                         aria-label="Date"
                         title="Date"

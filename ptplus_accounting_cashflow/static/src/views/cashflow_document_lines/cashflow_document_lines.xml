@@ -7,20 +7,33 @@
     >
         <!-- Right after the "(count)" text, before the group buttons -->
         <xpath expr="//div[contains(@class, 'o_group_buttons')]" position="before">
-            <t t-set="distribution" t-value="movementDistribution(group)" />
+            <t t-set="distribution" t-value="this.movementDistribution(group)" />
             <span
                 t-if="distribution"
                 class="o_l10n_pt_cashflow_group_distribution d-inline-flex align-items-center ms-3 fw-normal"
             >
-                <TagsList tags="distribution.current" />
+                <t t-foreach="distribution.current" t-as="tag" t-key="tag.id">
+                    <BadgeTag
+                        color="tag.colorIndex"
+                        text="tag.text"
+                        tooltip="tag.title"
+                    />
+                </t>
                 <t t-if="distribution.pending">
                     <i
-                        class="fa fa-arrow-right mx-2 text-muted"
+                        class="oi mx-2 text-muted"
+                        data-icon="arrow_forward"
                         role="img"
                         aria-label="To apply"
                         title="To apply"
                     />
-                    <TagsList tags="distribution.pending" />
+                    <t t-foreach="distribution.pending" t-as="tag" t-key="tag.id">
+                        <BadgeTag
+                            color="tag.colorIndex"
+                            text="tag.text"
+                            tooltip="tag.title"
+                        />
+                    </t>
                 </t>
             </span>
         </xpath>

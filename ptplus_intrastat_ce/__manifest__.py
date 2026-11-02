@@ -1,7 +1,7 @@
 {
     "name": "Portugal - Intrastat Community",
     "author": "Exo Software",
-    "version": "19.0.5.0.0",
+    "version": "20.0.5.0.0",
     "category": "Localization",
     "license": "OPL-1",
     "countries": ["pt"],
@@ -20,6 +20,6 @@
         "data/intrastat_hs_code.xml",
     ],
     "website": "https://exosoftware.pt",
-    "installable": True,
+    "installable": False,
     "auto_install": False,
 }

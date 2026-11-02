@@ -65,65 +65,65 @@
                                         t-att-style="'background-color: #f2f2f2;' if moveline_index % 2 else ''"
                                     >
                                         <td class="text-left">
-                                            <span t-esc="moveline['id_reg']" />
+                                            <span t-out="moveline['id_reg']" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['data_ref']" />
+                                            <span t-out="moveline['data_ref']" />
                                         </td>
                                         <td class="text-left">
                                             <span
-                                                t-esc="wizard._get_selection_label('natureza', moveline['natureza'])"
+                                                t-out="wizard._get_selection_label('natureza', moveline['natureza'])"
                                             />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['npc2']" />
+                                            <span t-out="moveline['npc2']" />
                                         </td>
                                         <td style="text-align: right;">
                                             <span
-                                                t-esc="_formatLang(moveline['montante'],digits=2 )"
+                                                t-out="_formatLang(moveline['montante'],digits=2 )"
                                             />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline.divisa.name" />
+                                            <span t-out="moveline.divisa.name" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['cod_estat']" />
+                                            <span t-out="moveline['cod_estat']" />
                                         </td>
                                         <td class="text-left">
                                             <span
-                                                t-esc="wizard._get_selection_label('tipo_valor', moveline['tipo_valor'])"
+                                                t-out="wizard._get_selection_label('tipo_valor', moveline['tipo_valor'])"
                                             />
                                         </td>
                                         <td class="text-left">
                                             <span
-                                                t-esc="wizard._get_selection_label('tipo_conta', moveline['tipo_conta'])"
+                                                t-out="wizard._get_selection_label('tipo_conta', moveline['tipo_conta'])"
                                             />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['id_banco']" />
+                                            <span t-out="moveline['id_banco']" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['pais_conta']" />
+                                            <span t-out="moveline['pais_conta']" />
                                         </td>
                                         <td class="text-left">
                                             <span
-                                                t-esc="moveline['pais_contraparte']"
+                                                t-out="moveline['pais_contraparte']"
                                             />
                                         </td>
                                         <td class="text-right">
-                                            <span t-esc="moveline['pais_ativo']" />
+                                            <span t-out="moveline['pais_ativo']" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['data_vencim']" />
+                                            <span t-out="moveline['data_vencim']" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['contraparte']" />
+                                            <span t-out="moveline['contraparte']" />
                                         </td>
                                         <td class="text-left">
-                                            <span t-esc="moveline['observacoes']" />
+                                            <span t-out="moveline['observacoes']" />
                                         </td>
                                         <!-- <td class="text-left">
-                                                <span t-esc="moveline['ref_invoice']"/>
+                                                <span t-out="moveline['ref_invoice']"/>
                                             </td> -->
                                     </tr>
                                 </t>
@@ -134,7 +134,7 @@
                                             <strong>
                                                 <span
                                                     style="white-space: nowrap;"
-                                                >Category <span t-esc="i" /></span>
+                                                >Category <span t-out="i" /></span>
                                             </strong>
                                         </td>
                                         <td />
@@ -144,7 +144,7 @@
                                         <!-- amount -->
                                         <td class="text-right">
                                             <span
-                                                t-esc="_formatLang(catline[1],digits=2 )"
+                                                t-out="_formatLang(catline[1],digits=2 )"
                                             />
                                         </td>
 
@@ -152,7 +152,7 @@
                                         <td class="text-left">
                                             <span
                                                 t-if="catline[0].split(',')[0]"
-                                                t-esc="catline[0].split(',')[0]"
+                                                t-out="catline[0].split(',')[0]"
                                             />
                                         </td>
 
@@ -160,7 +160,7 @@
                                         <td class="text-left">
                                             <span
                                                 t-if="catline[0].split(',')[1]"
-                                                t-esc="catline[0].split(',')[1]"
+                                                t-out="catline[0].split(',')[1]"
                                             />
                                         </td>
 
@@ -178,7 +178,7 @@
                                         <td class="text-left">
                                             <span
                                                 t-if="catline[0].split(',')[2]"
-                                                t-esc="catline[0].split(',')[2]"
+                                                t-out="catline[0].split(',')[2]"
                                             />
                                         </td>
 
@@ -199,63 +199,63 @@
                                 t-att-style="'background-color: #f2f2f2;' if moveline_index % 2 else ''"
                             >
                                 <td class="text-left">
-                                    <span t-esc="moveline['id_reg']" />
+                                    <span t-out="moveline['id_reg']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['data_ref']" />
+                                    <span t-out="moveline['data_ref']" />
                                 </td>
                                 <td class="text-left">
                                     <span
-                                        t-esc="wizard._get_selection_label('natureza', moveline['natureza'])"
+                                        t-out="wizard._get_selection_label('natureza', moveline['natureza'])"
                                     />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['npc2']" />
+                                    <span t-out="moveline['npc2']" />
                                 </td>
                                 <td style="text-align: right;">
                                     <span
-                                        t-esc="wizard._formatLang(moveline['montante'],digits=2 )"
+                                        t-out="wizard._formatLang(moveline['montante'],digits=2 )"
                                     />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline.divisa.name" />
+                                    <span t-out="moveline.divisa.name" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['cod_estat']" />
+                                    <span t-out="moveline['cod_estat']" />
                                 </td>
                                 <td class="text-left">
                                     <span
-                                        t-esc="wizard._get_selection_label('tipo_valor', moveline['tipo_valor'])"
+                                        t-out="wizard._get_selection_label('tipo_valor', moveline['tipo_valor'])"
                                     />
                                 </td>
                                 <td class="text-left">
                                     <span
-                                        t-esc="wizard._get_selection_label('tipo_conta', moveline['tipo_conta'])"
+                                        t-out="wizard._get_selection_label('tipo_conta', moveline['tipo_conta'])"
                                     />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['id_banco']" />
+                                    <span t-out="moveline['id_banco']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['pais_conta']" />
+                                    <span t-out="moveline['pais_conta']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['pais_contraparte']" />
+                                    <span t-out="moveline['pais_contraparte']" />
                                 </td>
                                 <td class="text-right">
-                                    <span t-esc="moveline['pais_ativo']" />
+                                    <span t-out="moveline['pais_ativo']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['data_vencim']" />
+                                    <span t-out="moveline['data_vencim']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['contraparte']" />
+                                    <span t-out="moveline['contraparte']" />
                                 </td>
                                 <td class="text-left">
-                                    <span t-esc="moveline['observacoes']" />
+                                    <span t-out="moveline['observacoes']" />
                                 </td>
                                 <!-- <td class="text-left">
-                                        <span t-esc="moveline['ref_invoice']"/>
+                                        <span t-out="moveline['ref_invoice']"/>
                                     </td> -->
                             </tr>
                         </t>
@@ -291,7 +291,6 @@
         <field name="name">COPE Report</field>
         <field name="model">l10n_pt.cope.statement.wizard</field>
         <field name="report_name">ptplus_accounting_cope.report_cope</field>
-        <field name="report_file">ptplus_accounting_cope.report_cope</field>
         <field name="paperformat_id" ref="paperformat_landscape_COPE_pt" />
     </record>
 </odoo>

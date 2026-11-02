@@ -81,7 +81,7 @@
                 </p>
                 <p t-field="company.name" />
                 <p
-                    t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                    t-out="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
                 />
                 <!-- <span t-field="company.vat"/> -->
             </div>
@@ -106,7 +106,7 @@
                 <span t-field="company.name" />
                 <span> | </span>
                 <span
-                    t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                    t-out="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
                 />
                 <!-- <span t-field="company.vat"/> -->
             </div>

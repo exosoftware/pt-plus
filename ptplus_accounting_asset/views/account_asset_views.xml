@@ -18,10 +18,6 @@
                 </div>
             </xpath>
 
-            <field name="method" position="before">
-                <field name="l10n_pt_legal_rate_id" />
-            </field>
-
             <field name="original_value" position="after">
                 <field
                     name="l10n_pt_low_value_asset"
@@ -50,6 +46,20 @@
                     readonly="state != 'draft'"
                     required="country_code == 'PT'"
                 />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_depreciation_model_form_pt" model="ir.ui.view">
+        <field name="name">account.depreciation.model.form.pt</field>
+        <field name="model">account.depreciation.model</field>
+        <field
+            name="inherit_id"
+            ref="account_asset.view_account_depreciation_model_form"
+        />
+        <field name="arch" type="xml">
+            <field name="prorata_computation_type" position="after">
+                <field name="l10n_pt_legal_rate_id" />
             </field>
         </field>
     </record>

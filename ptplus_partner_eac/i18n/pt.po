@@ -9,8 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2023-03-06 14:09+0000\n"
 "PO-Revision-Date: 2025-04-15 17:02+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
-"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
-"portugal-plus-18-0/ptplus_partner_eac/pt/>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/portugal-plus-18-0/ptplus_partner_eac/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,53 +28,9 @@ msgid "<span class=\"o_stat_text\"> Partners</span>"
 msgstr "<span class=\"o_stat_text\"> Parceiros</span>"
 
 #. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__n
-msgid "Actividades administrativas e dos serviços de apoio"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__r
-msgid "Actividades artísticas, de espectáculos, desportivas e recreativas"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__t
-msgid ""
-"Actividades das famílias empregadoras de pessoal doméstico e actividades de "
-"produção das famílias para uso próprio"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__m
-msgid "Actividades de consultoria, científicas, técnicas e similares"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__j
-msgid "Actividades de informação e de comunicação "
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__q
-msgid "Actividades de saúde humana e apoio social"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__u
-msgid ""
-"Actividades dos organismos internacionais e outras instituições extra-"
-"territoriais"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__k
-msgid "Actividades financeiras e de seguros"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__l
-msgid "Actividades imobiliárias"
-msgstr ""
+#: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_company_eac__active
+msgid "Active"
+msgstr "Ativo"
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_res_partner_eac__activity_percent
@@ -83,18 +38,67 @@ msgid "Activity %"
 msgstr "% Atividade"
 
 #. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__o
-msgid "Administração Pública e Defesa; Segurança Social Obrigatória"
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__p
+msgid "Administração Pública e defesa; segurança social obrigatória"
 msgstr ""
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__a
-msgid "Agricultura, produção animal, caça, floresta e pesca"
+msgid "Agricultura, floresta e pesca"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__o
+msgid "Atividades administrativas e dos serviços de apoio"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__s
+msgid "Atividades artísticas, desportivas e recreativas"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__u
+msgid ""
+"Atividades das famílias empregadoras de pessoal doméstico e atividades de "
+"produção de bens e serviços pelas famílias para uso próprio"
 msgstr ""
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__i
-msgid "Alojamento, restauração e similares"
+msgid "Atividades de alojamento e restauração"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__n
+msgid "Atividades de consultoria, científicas, técnicas e similares"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__j
+msgid "Atividades de edição, difusão e produção e distribuição de conteúdos"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__r
+msgid "Atividades de saúde humana e ação social"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__v
+msgid ""
+"Atividades dos organismos internacionais e outras instituições "
+"extraterritoriais"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__l
+msgid "Atividades financeiras e de seguros"
+msgstr ""
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__m
+msgid "Atividades imobiliárias"
 msgstr ""
 
 #. module: ptplus_partner_eac
@@ -127,14 +131,13 @@ msgstr "Código"
 
 #. module: ptplus_partner_eac
 #: model:ir.model,name:ptplus_partner_eac.model_res_company
-msgid "Companies"
-msgstr "Empresas"
+msgid "Company"
+msgstr "Empresa"
 
 #. module: ptplus_partner_eac
 #: model:ir.actions.act_window,name:ptplus_partner_eac.company_eac_action
 #: model:ir.model,name:ptplus_partner_eac.model_l10n_pt_company_eac
 #: model:ir.ui.menu,name:ptplus_partner_eac.company_eac_menu
-#: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.company_eac_list_view
 #: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.company_eac_search_view
 msgid "Company EAC"
 msgstr "CAE da Empresa"
@@ -146,9 +149,7 @@ msgstr "Nome Completo"
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__g
-msgid ""
-"Comércio por grosso e a retalho; reparação de veículos automóveis e "
-"motociclos"
+msgid "Comércio por grosso e a retalho"
 msgstr ""
 
 #. module: ptplus_partner_eac
@@ -184,7 +185,6 @@ msgstr "Nome a Apresentar"
 #. module: ptplus_partner_eac
 #: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.company_eac_list_view
 #: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.view_company_form_eac
-#: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.view_partner_form_eac
 msgid "EAC"
 msgstr "CAE"
 
@@ -210,13 +210,8 @@ msgid "EAC that relate to this partner. The first one is the primary EAC"
 msgstr "CAE relacionados com este parceiro. A primeira é o CAE principal"
 
 #. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__p
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__q
 msgid "Educação"
-msgstr ""
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__d
-msgid "Electricidade, gás, vapor, água quente e fria e ar frio"
 msgstr ""
 
 #. module: ptplus_partner_eac
@@ -229,7 +224,7 @@ msgstr "ID"
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__b
-msgid "Indústrias extractivas"
+msgid "Indústrias extrativas"
 msgstr ""
 
 #. module: ptplus_partner_eac
@@ -241,14 +236,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_company_eac__internal_code
 msgid "Internal Code"
 msgstr "Código Interno"
-
-#. module: ptplus_partner_eac
-#: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_company_eac____last_update
-#: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_res_partner_eac____last_update
-#: model:ir.model.fields,field_description:ptplus_partner_eac.field_res_company____last_update
-#: model:ir.model.fields,field_description:ptplus_partner_eac.field_res_partner____last_update
-msgid "Last Modified on"
-msgstr "Última Modificação em"
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields,field_description:ptplus_partner_eac.field_l10n_pt_company_eac__write_uid
@@ -273,8 +260,8 @@ msgid "Order Sequence"
 msgstr "Sequência de Ordenação"
 
 #. module: ptplus_partner_eac
-#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__s
-msgid "Outras actividades de serviços"
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__t
+msgid "Outras atividades de serviços"
 msgstr ""
 
 #. module: ptplus_partner_eac
@@ -301,9 +288,21 @@ msgid "Partner EAC"
 msgstr "CAE do Parceiro"
 
 #. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__d
+msgid "Produção e distribuição de eletricidade, gás, vapor e ar condicionado"
+msgstr ""
+
+#. module: ptplus_partner_eac
 #: model:res.groups,name:ptplus_partner_eac.group_eac_every_partner
 msgid "Show EAC info on every partner"
 msgstr "Mostrar CAE em todos os parceiros"
+
+#. module: ptplus_partner_eac
+#: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__k
+msgid ""
+"Telecomunicações, programação informática, consultoria, infraestruturas de "
+"computação e outras atividades dos serviços de informação"
+msgstr ""
 
 #. module: ptplus_partner_eac
 #: model:ir.model.constraint,message:ptplus_partner_eac.constraint_l10n_pt_company_eac_internal_code_uniq
@@ -330,8 +329,8 @@ msgid ""
 "The order sequence field is used to define the order in which the EAC are "
 "applied. The first EAC will be the Primary EAC"
 msgstr ""
-"O campo sequência de ordenação é usado para definir a ordem pela qual os CAE "
-"são aplicados. O primeiro será o CAE principal"
+"O campo sequência de ordenação é usado para definir a ordem pela qual os CAE"
+" são aplicados. O primeiro será o CAE principal"
 
 #. module: ptplus_partner_eac
 #: model:ir.model.fields.selection,name:ptplus_partner_eac.selection__l10n_pt_company_eac__type__h
@@ -349,8 +348,8 @@ msgid "Usable EAC"
 msgstr "CAE utilizável"
 
 #. module: ptplus_partner_eac
+#. odoo-python
 #: code:addons/ptplus_partner_eac/models/l10n_pt_company_eac.py:0
-#, python-format
 msgid "You cannot create recursive EAC."
 msgstr "Não se pode criar CAE recursivos."
 
@@ -363,12 +362,3 @@ msgstr "código"
 #: model_terms:ir.ui.view,arch_db:ptplus_partner_eac.company_eac_form_view
 msgid "name"
 msgstr "nome"
-
-#~ msgid "Partner EACs"
-#~ msgstr "CAEs de Parceiros"
-
-#~ msgid "Primary CAE"
-#~ msgstr "CAE Primária"
-
-#~ msgid "Secondary CAEs"
-#~ msgstr "CAEs Secundárias"

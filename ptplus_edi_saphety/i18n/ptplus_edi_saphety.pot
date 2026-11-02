@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 16:39+0000\n"
 "PO-Revision-Date: 2026-05-29 16:39+0000\n"
@@ -18,18 +18,8 @@ msgstr ""
 #. module: ptplus_edi_saphety
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
 msgid ""
-"<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != 'Connected'\">Has Saphety</span>\n"
-"                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety != 'NotConnected'\">No Saphety</span>"
-msgstr ""
-
-#. module: ptplus_edi_saphety
-#: model:ir.model,name:ptplus_edi_saphety.model_account_move_send
-msgid "Account Move Send"
-msgstr ""
-
-#. module: ptplus_edi_saphety
-#: model:ir.model,name:ptplus_edi_saphety.model_account_move_send_wizard
-msgid "Account Move Send Wizard"
+"<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != 'Connected'\">Works with Sovos/Saphety</span>\n"
+"                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety != 'NotConnected'\">Doesn't work with Sovos/Saphety</span>"
 msgstr ""
 
 #. module: ptplus_edi_saphety
@@ -48,8 +38,13 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Check Sovos/Saphety"
+msgstr ""
+
+#. module: ptplus_edi_saphety
 #: model:ir.model,name:ptplus_edi_saphety.model_res_company
-msgid "Companies"
+msgid "Company"
 msgstr ""
 
 #. module: ptplus_edi_saphety
@@ -159,6 +154,11 @@ msgid "Queued"
 msgstr ""
 
 #. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Reload"
+msgstr ""
+
+#. module: ptplus_edi_saphety
 #: model:ir.model.fields.selection,name:ptplus_edi_saphety.selection__account_edi_document__l10n_pt_edi_cius_saphety_request_status__running
 msgid "Running"
 msgstr ""
@@ -211,6 +211,16 @@ msgid "Saphety Username"
 msgstr ""
 
 #. module: ptplus_edi_saphety
+#: model:ir.model,name:ptplus_edi_saphety.model_account_move_send_wizard
+msgid "Send Invoice Wizard"
+msgstr ""
+
+#. module: ptplus_edi_saphety
+#: model:ir.model,name:ptplus_edi_saphety.model_account_move_send
+msgid "Shared Send Invoice Wizard Functions"
+msgstr ""
+
+#. module: ptplus_edi_saphety
 #: model:ir.model.fields,help:ptplus_edi_saphety.field_account_edi_document__l10n_pt_edi_cius_saphety_request_id
 msgid ""
 "The Id of the async request received upon document submission on the Saphety"
@@ -253,11 +263,6 @@ msgstr ""
 #. module: ptplus_edi_saphety
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.res_config_settings_view_form_edi_pt_saphety
 msgid "Username"
-msgstr ""
-
-#. module: ptplus_edi_saphety
-#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.res_config_settings_view_form_edi_pt_saphety
-msgid "Values set here are company-specific."
 msgstr ""
 
 #. module: ptplus_edi_saphety

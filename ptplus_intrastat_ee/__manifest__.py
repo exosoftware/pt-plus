@@ -1,14 +1,14 @@
 {
     "name": "Portugal - Intrastat Enterprise",
     "author": "Exo Software",
-    "version": "19.0.5.0.0",
+    "version": "20.0.5.0.0",
     "category": "Localization",
     "license": "OPL-1",
     "countries": ["pt"],
     "depends": ["ptplus", "account_intrastat"],
     "summary": "Intrastat enterprise module for the portuguese localization",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/intrastat_regions.xml",
         "data/intrastat_pt_report_data.xml",
         "data/intrastat_port_aeroport.xml",

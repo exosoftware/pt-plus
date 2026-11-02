@@ -1,5 +1,6 @@
 import {_t} from "@web/core/l10n/translation";
 import {registry} from "@web/core/registry";
+import {useService} from "@web/core/utils/hooks";
 
 /**
  * Notification of a cash flow classification just written, with an Undo
@@ -7,26 +8,25 @@ import {registry} from "@web/core/registry";
  * put things back), followed by ``params.next``.
  */
 function classifiedNotification(env, action) {
+    const actionService = useService("action");
+    const notification = useService("notification");
+    const orm = useService("orm");
     const params = action.params || {};
     const buttons = [];
     let close = () => {};
     if (params.undo) {
         buttons.push({
             name: _t("Undo"),
-            icon: "fa-undo",
+            icon: "undo",
             primary: true,
             onClick: async () => {
                 close();
-                await env.services.orm.call(
-                    params.undo.model,
-                    params.undo.method,
-                    params.undo.args
-                );
-                await env.services.action.doAction("soft_reload");
+                await orm.call(params.undo.model, params.undo.method, params.undo.args);
+                await actionService.doAction("soft_reload");
             },
         });
     }
-    close = env.services.notification.add(params.message, {
+    close = notification.add(params.message, {
         type: params.type || "success",
         buttons,
     });

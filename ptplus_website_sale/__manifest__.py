@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.5.0.0",
+    "version": "20.0.5.0.0",
     "depends": ["website_sale", "ptplus_sale"],
     "data": [],
     "demo": [],

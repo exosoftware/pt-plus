@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: André Leite <andre.leite@exo.pt>\n"
 "Language-Team: \n"
@@ -77,6 +77,12 @@ msgid "Account"
 msgstr "Conta"
 
 #. module: ptplus_expense
+#. odoo-python
+#: code:addons/ptplus_expense/models/hr_expense.py:0
+msgid "Bill %s is already reimbursed to an employee."
+msgstr "A fatura %s já é reembolsada a um funcionário."
+
+#. module: ptplus_expense
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid "Certified honest and conform,<br/>(Date and signature).<br/><br/>"
 msgstr ""
@@ -85,8 +91,8 @@ msgstr ""
 
 #. module: ptplus_expense
 #: model:ir.model,name:ptplus_expense.model_res_company
-msgid "Companies"
-msgstr "Empresas"
+msgid "Company"
+msgstr "Empresa"
 
 #. module: ptplus_expense
 #: model:ir.model,name:ptplus_expense.model_res_config_settings
@@ -131,7 +137,6 @@ msgstr "Destino/Data"
 #: model:ir.model.fields,field_description:ptplus_expense.field_account_move__display_name
 #: model:ir.model.fields,field_description:ptplus_expense.field_hr_employee__display_name
 #: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__display_name
-#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense_post_wizard__display_name
 #: model:ir.model.fields,field_description:ptplus_expense.field_product_template__display_name
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_company__display_name
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_config_settings__display_name
@@ -175,11 +180,6 @@ msgid "Expense"
 msgstr "Despesa"
 
 #. module: ptplus_expense
-#: model:ir.model,name:ptplus_expense.model_hr_expense_post_wizard
-msgid "Expense Posting Wizard"
-msgstr "Assistente de Lançamento de Despesas"
-
-#. module: ptplus_expense
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.res_config_settings_view_form_pt_expense
 msgid "Expense Reimbursement"
 msgstr "Reembolso de Despesas"
@@ -194,7 +194,6 @@ msgstr "Tipo de Despesa"
 #: model:ir.model.fields,field_description:ptplus_expense.field_account_move__id
 #: model:ir.model.fields,field_description:ptplus_expense.field_hr_employee__id
 #: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense__id
-#: model:ir.model.fields,field_description:ptplus_expense.field_hr_expense_post_wizard__id
 #: model:ir.model.fields,field_description:ptplus_expense.field_product_template__id
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_company__id
 #: model:ir.model.fields,field_description:ptplus_expense.field_res_config_settings__id
@@ -254,12 +253,6 @@ msgstr "Matrícula"
 #: model_terms:ir.ui.view,arch_db:ptplus_expense.report_vehicle_expense
 msgid "N/A"
 msgstr "N/A"
-
-#. module: ptplus_expense
-#. odoo-python
-#: code:addons/ptplus_expense/wizards/hr_expense_post_wizard.py:0
-msgid "New expense entries"
-msgstr "Novos lançamentos de despesas"
 
 #. module: ptplus_expense
 #. odoo-python
@@ -409,9 +402,3 @@ msgid "You can't delete the '%s' product. It's required for expense logging."
 msgstr ""
 "Não é possível eliminar o produto '%s'. É necessário para o registo de "
 "despesas."
-
-#. module: ptplus_expense
-#. odoo-python
-#: code:addons/ptplus_expense/wizards/hr_expense_post_wizard.py:0
-msgid "You don't have the rights to create accounting entries."
-msgstr "Não tem permissões para criar lançamentos contabilísticos."

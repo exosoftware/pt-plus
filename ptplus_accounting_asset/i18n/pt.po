@@ -9,8 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2024-11-29 17:25+0000\n"
 "PO-Revision-Date: 2025-04-14 16:18+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
-"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
-"portugal-plus-18-0/ptplus_accounting_asset/pt/>\n"
+"Language-Team: Portuguese <https://translation.exosoftware.pt/projects/portugal-plus-18-0/ptplus_accounting_asset/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,15 +20,18 @@ msgstr ""
 #. module: ptplus_accounting_asset
 #: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__l10n_pt_acquisition_production_value
 msgid "Acquisition value for tax purposes"
-msgstr ""
+msgstr "Valor de aquisição para fins fiscais"
 
 #. module: ptplus_accounting_asset
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_asset.view_account_asset_form_pt
 msgid ""
-"As you have selected an asset lifespan that is shorter than the time implied "
-"by the legal rate, or longer than twice the legal rate, Model 32 will have "
+"As you have selected an asset lifespan that is shorter than the time implied"
+" by the legal rate, or longer than twice the legal rate, Model 32 will have "
 "to be produced manually"
 msgstr ""
+"Como selecionou uma vida útil do ativo inferior ao período implícito na taxa"
+" legal, ou superior ao dobro da taxa legal, o Modelo 32 terá de ser "
+"preenchido manualmente"
 
 #. module: ptplus_accounting_asset
 #: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__l10n_pt_asset_type
@@ -47,16 +49,6 @@ msgid "Asset/Revenue Recognition"
 msgstr "Reconhecimento de Ativos/Receitas"
 
 #. module: ptplus_accounting_asset
-#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__country_code
-msgid "Country Code"
-msgstr "Código do País"
-
-#. module: ptplus_accounting_asset
-#: model:ir.model,name:ptplus_accounting_asset.model_account_move
-msgid "Journal Entry"
-msgstr ""
-
-#. module: ptplus_accounting_asset
 #: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__l10n_pt_duration_warning
 msgid "L10N Pt Duration Warning"
 msgstr "L10N Pt Aviso de Duração"
@@ -68,24 +60,14 @@ msgstr "L10N Pt Número do Método Esperado"
 
 #. module: ptplus_accounting_asset
 #: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__l10n_pt_legal_rate_id
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_depreciation_model__l10n_pt_legal_rate_id
 msgid "Legal Rate"
 msgstr "Taxa Legal"
 
 #. module: ptplus_accounting_asset
-#: model:ir.model,name:ptplus_accounting_asset.model_l10n_pt_wizard_statement
-#, fuzzy
-#| msgid "Tax Statement Wizard"
+#: model:ir.model,name:ptplus_accounting_asset.model_l10n_pt_depreciation_and_amortization_wizard
 msgid "Statement Wizard"
 msgstr "Assistente de Declaração de Impostos"
-
-#. module: ptplus_accounting_asset
-#: model:ir.model.fields,help:ptplus_accounting_asset.field_account_asset__country_code
-msgid ""
-"The ISO country code in two chars. \n"
-"You can use this field for quick search."
-msgstr ""
-"O código do país na norma ISO em duas letras.\n"
-"Pode ser usado para pesquisa rápida."
 
 #. module: ptplus_accounting_asset
 #: model:ir.model.fields,help:ptplus_accounting_asset.field_account_asset__l10n_pt_acquisition_production_value
@@ -98,8 +80,7 @@ msgstr ""
 
 #. module: ptplus_accounting_asset
 #. odoo-python
-#: code:addons/ptplus_accounting_asset/models/account_asset.py:0
-#, python-format
+#: code:addons/ptplus_accounting_asset/models/account_asset_variant.py:0
 msgid ""
 "When the method period is set to 'Month', the duration must be divisible by "
 "12 to represent whole years."
@@ -107,14 +88,170 @@ msgstr ""
 "Quando o período do método é definido como 'Meses', a duração deve ser "
 "divisível por 12 para representar anos inteiros."
 
-#~ msgid "Asset Type"
-#~ msgstr "Tipo de Ativo"
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset_variant__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_depreciation_model__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_l10n_pt_depreciation_and_amortization_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_l10n_pt_depreciation_and_amortization_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
 
-#~ msgid "Display Name"
-#~ msgstr "Nome a Apresentar"
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__id
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset_variant__id
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_depreciation_model__id
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_l10n_pt_depreciation_and_amortization_wizard__id
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_l10n_pt_depreciation_and_amortization_wizard_line__id
+msgid "ID"
+msgstr "ID"
 
-#~ msgid "ID"
-#~ msgstr "ID"
+#. module: ptplus_accounting_asset
+#: model:ir.module.module,description:base.module_ptplus_accounting_asset
+msgid ""
+"===================\n"
+"Portugal - Asset EE\n"
+"===================\n"
+"\n"
+"This module implements legal and operational requirements for handling\n"
+"assets in Portugal using Odoo Enterprise Edition.\n"
+"\n"
+"**Table of contents**\n"
+"\n"
+".. contents::\n"
+"   :local:\n"
+"\n"
+"Installation\n"
+"============\n"
+"\n"
+"Add the module to an addons folder, restart Odoo, update the addons list and activate\n"
+"it.\n"
+"\n"
+"Usage\n"
+"=====\n"
+"\n"
+"Available soon.\n"
+"\n"
+"Known issues / Roadmap\n"
+"======================\n"
+"\n"
+"Available soon.\n"
+"\n"
+"Changelog\n"
+"=========\n"
+"\n"
+"5.1.1 (2026-10-13)\n"
+"~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"**Bugfixes**\n"
+"\n"
+"- The Depreciation and Amortization Map (Modelo 32) now lists the assets of\n"
+"  the company and of all its branches, and only those. Until now it listed\n"
+"  the assets of the companies enabled in the company selector.\n"
+"\n"
+"5.1.0 (2023-11-16)\n"
+"~~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"**Features**\n"
+"\n"
+"- Initial support for asset reporting: Modelo 32 (Pdf only)\n"
+"\n"
+"5.0.0 (2023-11-15)\n"
+"~~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"**Features**\n"
+"\n"
+"- Initial changelog\n"
+"\n"
+"Credits\n"
+"=======\n"
+"\n"
+"Authors\n"
+"~~~~~~~\n"
+"\n"
+"* Exo Software, Lda.\n"
+"\n"
+"Contributors\n"
+"~~~~~~~~~~~~\n"
+"\n"
+"* `Exo Software <https://exosoftware.pt>`_:\n"
+"\n"
+"  * Pedro Castro Silva\n"
+"  * André Leite\n"
+"  * João Costa\n"
+"\n"
+"* `Growfactor <https://www.growfactor.pt>`_:\n"
+"\n"
+"  * Álvaro Ribeiro\n"
+"  * Luís Homem\n"
+"\n"
+"Maintainers\n"
+"~~~~~~~~~~~\n"
+"\n"
+"This module is maintained by Exo Software, Lda.\n"
+"\n"
+".. image:: https://exosoftware.pt/logo.png\n"
+"   :alt: Exo Software\n"
+"   :target: https://exosoftware.pt\n"
+"   :width: 100px\n"
+msgstr ""
 
-#~ msgid "Last Modified on"
-#~ msgstr "Última Modificação em"
+#. module: ptplus_accounting_asset
+#. odoo-python
+#: code:addons/ptplus_accounting_asset/wizards/l10n_pt_account_tax_statement.py:0
+msgid "Account Assets"
+msgstr "Ativos"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model,name:ptplus_accounting_asset.model_account_asset_variant
+msgid "Asset Variant"
+msgstr "Variante do Ativo"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,help:ptplus_accounting_asset.field_account_asset__l10n_pt_low_value_asset
+msgid ""
+"Assets costing < €1,000 can be fully depreciated in one tax period unless "
+"they are part of a set requiring depreciation as a whole. Such assets must "
+"be listed in depreciation schedules under 'Elements with a unit cost below "
+"€1,000' with a one-year maximum useful life for tax purposes."
+msgstr ""
+"Os ativos com custo inferior a € 1.000 podem ser totalmente depreciados num "
+"único período fiscal, a menos que façam parte de um conjunto que exija "
+"depreciação como um todo. Estes ativos devem ser listados nos mapas de "
+"depreciações em 'Elementos de custo unitário inferior a € 1.000', com uma "
+"vida útil máxima de um ano para fins fiscais."
+
+#. module: ptplus_accounting_asset
+#: model:ir.model,name:ptplus_accounting_asset.model_account_depreciation_model
+msgid "Depreciation Models for Assets"
+msgstr "Modelos de Depreciação de Ativos"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__method_number
+msgid "Duration"
+msgstr "Duração"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__l10n_pt_low_value_asset
+msgid "Element of Reduced Value"
+msgstr "Elemento de Valor Reduzido"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,field_description:ptplus_accounting_asset.field_account_asset__method_period
+msgid "Number of Months in a Period"
+msgstr "Número de Meses num Período"
+
+#. module: ptplus_accounting_asset
+#: model:ir.module.module,shortdesc:base.module_ptplus_accounting_asset
+msgid "Portugal - Asset EE"
+msgstr "Portugal - Ativos EE"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model,name:ptplus_accounting_asset.model_l10n_pt_depreciation_and_amortization_wizard_line
+msgid "Statement Wizard Line"
+msgstr "Linhas da Declaração"
+
+#. module: ptplus_accounting_asset
+#: model:ir.model.fields,help:ptplus_accounting_asset.field_account_asset__method_period
+msgid "The amount of time between two depreciations"
+msgstr "O intervalo de tempo entre duas depreciações"

@@ -1,4 +1,3 @@
-/** @odoo-module */
 import {patch} from "@web/core/utils/patch";
 import {PosOrder} from "@point_of_sale/app/models/pos_order";
 import {PosOrderline} from "@point_of_sale/app/models/pos_order_line";
@@ -10,8 +9,8 @@ patch(PosOrder.prototype, {
         this._sdrBuildInProgress = false;
     },
 
-    removeOrderline(line) {
-        const removed = super.removeOrderline(line);
+    removeOrderline(line, deep = true) {
+        const removed = super.removeOrderline(...arguments);
         this._l10nPtSdrBuildLine();
         return removed;
     },

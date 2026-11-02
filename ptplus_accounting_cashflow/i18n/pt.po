@@ -176,8 +176,8 @@ msgstr "Saldo de caixa e seus equivalentes detidos mas não disponíveis para us
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model,name:ptplus_accounting_cashflow.model_account_bank_statement_line
-msgid "Bank Statement Line"
-msgstr "Linha de Extrato Bancário"
+msgid "Bank Transaction"
+msgstr "Transação bancária"
 
 #. module: ptplus_accounting_cashflow
 #: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__direction__both
@@ -384,6 +384,7 @@ msgid "Chart of Accounts"
 msgstr "Plano de Contas"
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__account_move_line__l10n_pt_cashflow_state__classified
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "Classified"
 msgstr "Classificados"
@@ -954,6 +955,7 @@ msgid "Pay"
 msgstr "Pagar"
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model,name:ptplus_accounting_cashflow.model_account_payment
 #: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_category__direction__outbound
 #: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__l10n_pt_cashflow_distribution_model__direction__outbound
 msgid "Payment"
@@ -968,11 +970,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus_accounting_cashflow.field_l10n_pt_cash_flow_statement_wizard__payment_reference_filename
 msgid "Payment Reference Filename"
 msgstr ""
-
-#. module: ptplus_accounting_cashflow
-#: model:ir.model,name:ptplus_accounting_cashflow.model_account_payment
-msgid "Payments"
-msgstr "Pagamentos"
 
 #. module: ptplus_accounting_cashflow
 #. odoo-javascript
@@ -1249,6 +1246,7 @@ msgid "This statement follows the IES Anexo A model of Portaria 35/2019 (quadros
 msgstr "Esta demonstração segue o modelo do Anexo A do IES da Portaria 35/2019 (quadros Q04-B e Q0701), que só produz efeitos para os períodos de 2026 e seguintes. Os períodos até 2025 são entregues com o modelo da Portaria 271/2014 (quadro 04-C), cujas rubricas são equivalentes mas têm numeração diferente."
 
 #. module: ptplus_accounting_cashflow
+#: model:ir.model.fields.selection,name:ptplus_accounting_cashflow.selection__account_move_line__l10n_pt_cashflow_state__to_classify
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.l10n_pt_cashflow_backfill_wizard_document_line_search
 #: model_terms:ir.ui.view,arch_db:ptplus_accounting_cashflow.view_l10n_pt_cashflow_move_line_search
 msgid "To Classify"

@@ -33,14 +33,14 @@
                     <button
                         name="action_open_mapping_missing"
                         type="object"
-                        icon="fa-arrow-right"
+                        icon="arrow_forward"
                         string="Documents Missing a Tax Mapping"
                         class="btn-link"
                     />
                     <button
                         name="action_open_tax_mapping"
                         type="object"
-                        icon="fa-arrow-right"
+                        icon="arrow_forward"
                         string="Configure Mappings"
                         class="btn-link"
                     />
@@ -53,7 +53,7 @@
                     role="alert"
                     invisible="state != 'running'"
                 >
-                    <i class="fa fa-circle-o-notch fa-spin me-2" />
+                    <i class="oi oi-spin me-2" data-icon="autorenew" />
                     <span class="me-1">Synchronizing with the Tax Authority:</span>
                     <!-- The widget on this field subscribes to the run's bus
                          channel and reloads the dialog when the cron is done.

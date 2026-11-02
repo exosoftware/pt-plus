@@ -24,7 +24,7 @@
                 <button
                     name="action_l10n_pt_cashflow_backfill"
                     type="object"
-                    icon="fa-tags"
+                    icon="sell"
                     title="Classify Cash Flows"
                     invisible="not l10n_pt_cashflow_to_classify or not l10n_pt_cashflow_document_ids"
                     groups="ptplus_accounting_cashflow.group_l10n_pt_cashflow"
@@ -97,7 +97,7 @@
                 <button
                     name="action_l10n_pt_cashflow_view_documents"
                     type="object"
-                    icon="fa-external-link"
+                    icon="open_in_new"
                     title="View the reconciled documents"
                     invisible="not l10n_pt_cashflow_document_ids"
                 />
@@ -112,7 +112,7 @@
                 <button
                     name="action_l10n_pt_cashflow_accept_suggestions"
                     type="object"
-                    icon="fa-arrow-right"
+                    icon="arrow_forward"
                     title="Accept the suggestion"
                     invisible="not l10n_pt_cashflow_suggestion"
                 />
@@ -126,7 +126,7 @@
                 <button
                     name="action_l10n_pt_cashflow_backfill"
                     type="object"
-                    icon="fa-tags"
+                    icon="sell"
                     title="Classify in detail"
                     invisible="not l10n_pt_cashflow_document_ids"
                 />

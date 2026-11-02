@@ -95,7 +95,7 @@ function askQrScanDecision(services, document, index, total) {
                 buttons: [
                     {
                         name: _t("Accept"),
-                        icon: "fa-check",
+                        icon: "check",
                         primary: true,
                         onClick: () => {
                             resolve("accept");
@@ -104,7 +104,7 @@ function askQrScanDecision(services, document, index, total) {
                     },
                     {
                         name: _t("Reject"),
-                        icon: "fa-times",
+                        icon: "close",
                         onClick: () => {
                             resolve("reject");
                             close();
@@ -118,7 +118,7 @@ function askQrScanDecision(services, document, index, total) {
                         : [
                               {
                                   name: _t("Try Again"),
-                                  icon: "fa-refresh",
+                                  icon: "refresh",
                                   onClick: () => {
                                       resolve("retry");
                                       close();

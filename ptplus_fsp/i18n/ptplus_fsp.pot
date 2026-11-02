@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -94,7 +94,7 @@ msgstr ""
 
 #. module: ptplus_fsp
 #: model:ir.model,name:ptplus_fsp.model_res_company
-msgid "Companies"
+msgid "Company"
 msgstr ""
 
 #. module: ptplus_fsp
@@ -645,14 +645,6 @@ msgid "The FSP Software Provider NIPC is not configured."
 msgstr ""
 
 #. module: ptplus_fsp
-#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_company_vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-
-#. module: ptplus_fsp
 #. odoo-python
 #: code:addons/ptplus_fsp/models/res_company.py:0
 msgid ""
@@ -692,6 +684,11 @@ msgstr ""
 #. module: ptplus_fsp
 #: model_terms:ir.ui.view,arch_db:ptplus_fsp.res_config_settings_view_form_fsp
 msgid "Validate"
+msgstr ""
+
+#. module: ptplus_fsp
+#: model:ir.model.fields,help:ptplus_fsp.field_res_config_settings__l10n_pt_fsp_company_vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
 msgstr ""
 
 #. module: ptplus_fsp

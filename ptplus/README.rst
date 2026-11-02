@@ -36,7 +36,7 @@ Installation
 
 Install the module with required dependencies:
 
-* pip install xmlschema unicodecsv zeep
+* pip install xmlschema zeep
 * add the module to an addons folder, restart Odoo, update the addons list and activate
   it.
 

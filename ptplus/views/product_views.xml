@@ -20,7 +20,7 @@
                     groups="account.group_account_invoice"
                 />
             </field>
-            <group name="properties" position="after">
+            <xpath expr="//group[@name='accounting']/group[1]" position="after">
                 <group
                     string="Tax Classification"
                     groups="account.group_account_invoice"
@@ -64,7 +64,7 @@
                         required="l10n_pt_genre == 'IEC'"
                     />
                 </group>
-            </group>
+            </xpath>
         </field>
     </record>
 

@@ -1,0 +1,14 @@
+id,name,model_id,group_id/id,operation,domain
+access_l10n_pt_account_efatura_user,l10n_pt.account.efatura user,l10n_pt.account.efatura,account.group_account_invoice,r,
+access_l10n_pt_account_efatura_manager,l10n_pt.account.efatura manager,l10n_pt.account.efatura,account.group_account_user,crud,
+efatura_comp_rule,E-fatura multi-company,l10n_pt.account.efatura,,crud,"['|',('company_id','=',False),('company_id','in',company_ids)]"
+access_l10n_pt_account_efatura_line_user,l10n_pt.account.efatura.line user,l10n_pt.account.efatura.line,account.group_account_invoice,r,
+access_l10n_pt_account_efatura_line_manager,l10n_pt.account.efatura.line manager,l10n_pt.account.efatura.line,account.group_account_user,crud,
+efatura_line_comp_rule,E-fatura line multi-company,l10n_pt.account.efatura.line,,crud,"['|',('company_id','=',False),('company_id','in',company_ids)]"
+access_l10n_pt_dataport_import_efatura,l10n_pt_dataport_import_efatura manager,l10n_pt.dataport.import.efatura,account.group_account_user,crud,
+access_l10n_pt_account_move_efatura,l10n_pt_account_move_efatura manager,l10n_pt.account.move.efatura,account.group_account_user,crud,
+access_l10n_pt_account_efatura_tag,l10n_pt_account_efatura_tag,l10n_pt.account.efatura.tag,account.group_account_invoice,crud,
+access_l10n_pt_account_efatura_tax_mapping_user,l10n_pt.account.efatura.tax.mapping user,l10n_pt.account.efatura.tax.mapping,account.group_account_invoice,r,
+access_l10n_pt_account_efatura_tax_mapping_manager,l10n_pt.account.efatura.tax.mapping manager,l10n_pt.account.efatura.tax.mapping,account.group_account_manager,crud,
+efatura_tax_mapping_comp_rule,E-fatura tax mapping multi-company,l10n_pt.account.efatura.tax.mapping,,crud,"[('company_id','in',company_ids)]"
+access_l10n_pt_account_efatura_merge,l10n_pt_account_efatura_merge manager,l10n_pt.account.efatura.merge,account.group_account_user,crud,

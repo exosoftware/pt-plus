@@ -1,0 +1,12 @@
+id,name,model_id,group_id/id,operation,domain
+access_fiscal_document_type,fiscal.document.type,fiscal.document.type,base.group_user,r,
+access_fiscal_document_type_manager,fiscal.document.type,fiscal.document.type,account.group_account_manager,crud,
+fiscal_doc_comp_rule,Fiscal Document Type multi-company,fiscal.document.type,,crud,"['|',('company_id','=',False),('company_id','in',company_ids)]"
+dataport_log_accounting_rule,Dataport Log Accounting Reports,dataport.log,account.group_account_invoice,r,"[('type', 'not ilike', 'payroll%')]"
+access_dataport_log_manager,dataport.log manager,dataport.log,account.group_account_manager,cud,
+access_dataport_export,dataport.export user,dataport.export,account.group_account_invoice,r,
+access_dataport_import,dataport.import user,dataport.import,account.group_account_invoice,r,
+access_wizard_webservice_failure,wizard.webservice.failure user,wizard.webservice.failure,base.group_user,crud,
+access_wizard_webservice_series_comm,wizard.webservice.series.comm user,wizard.webservice.series.comm,base.group_user,crud,
+access_l10n_pt_stamp_duty_code,l10n_pt.stamp.duty.code,l10n_pt.stamp.duty.code,account.group_account_invoice,r,
+access_l10n_pt_stamp_duty_code_manager,l10n_pt.stamp.duty.code,l10n_pt.stamp.duty.code,account.group_account_manager,crud,

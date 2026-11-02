@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-29 16:47+0000\n"
 "PO-Revision-Date: 2026-07-29 16:47+0000\n"
@@ -65,21 +65,11 @@ msgid "Archived"
 msgstr ""
 
 #. module: ptplus_accounting_cope
-#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_journal__l10n_pt_bank_id
-msgid "Associate a Bank to help extracting COPEresume Map."
-msgstr ""
-
-#. module: ptplus_accounting_cope
 #: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard_line__contraparte
 msgid ""
 "Até 50 posições, identificação da entidade emitente do ativo financeiro "
 "subjacente à operação/posição (ver orientações mais detalhadas no Manual de "
 "Procedimentos)."
-msgstr ""
-
-#. module: ptplus_accounting_cope
-#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_journal__l10n_pt_bank_id
-msgid "Bank Associated"
 msgstr ""
 
 #. module: ptplus_accounting_cope
@@ -169,10 +159,6 @@ msgstr ""
 
 #. module: ptplus_accounting_cope
 #: model:ir.model,name:ptplus_accounting_cope.model_res_company
-msgid "Companies"
-msgstr ""
-
-#. module: ptplus_accounting_cope
 #: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__company_id
 msgid "Company"
 msgstr ""
@@ -414,6 +400,11 @@ msgid ""
 msgstr ""
 
 #. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__email_partner_ids
+msgid "Email Recipients"
+msgstr ""
+
+#. module: ptplus_accounting_cope
 #: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_status
 msgid ""
 "Enable when the certified accountant has full declarative powers for the "
@@ -598,11 +589,6 @@ msgid "Interna"
 msgstr ""
 
 #. module: ptplus_accounting_cope
-#: model:ir.model,name:ptplus_accounting_cope.model_account_journal
-msgid "Journal"
-msgstr ""
-
-#. module: ptplus_accounting_cope
 #: model:ir.model,name:ptplus_accounting_cope.model_account_move_line
 msgid "Journal Item"
 msgstr ""
@@ -780,6 +766,19 @@ msgid "Partner"
 msgstr ""
 
 #. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_partner_country_code
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_partner_country_code
+msgid "Partner Country Code"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__email_partner_ids
+msgid ""
+"Partners the Tax Authority document (submission receipt or payment "
+"reference) will be emailed to."
+msgstr ""
+
+#. module: ptplus_accounting_cope
 #: model:ir.model,name:ptplus_accounting_cope.model_account_payment_register
 msgid "Pay"
 msgstr ""
@@ -794,12 +793,27 @@ msgstr ""
 
 #. module: ptplus_accounting_cope
 #: model:ir.model,name:ptplus_accounting_cope.model_account_payment
-msgid "Payments"
+msgid "Payment"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__payment_reference_data
+msgid "Payment Reference"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__payment_reference_filename
+msgid "Payment Reference Filename"
 msgstr ""
 
 #. module: ptplus_accounting_cope
 #: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__period
 msgid "Period"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model_terms:ir.ui.view,arch_db:ptplus_accounting_cope.report_cope_document
+msgid "Period:"
 msgstr ""
 
 #. module: ptplus_accounting_cope
@@ -943,6 +957,14 @@ msgstr ""
 #. module: ptplus_accounting_cope
 #: model:ir.model.fields,field_description:ptplus_accounting_cope.field_l10n_pt_cope_statement_wizard__representative_user_password
 msgid "Taxpayer Password"
+msgstr ""
+
+#. module: ptplus_accounting_cope
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment__l10n_pt_cope_partner_country_code
+#: model:ir.model.fields,help:ptplus_accounting_cope.field_account_payment_register__l10n_pt_cope_partner_country_code
+msgid ""
+"Technical field: used to only show the COPE code when the partner is "
+"established outside Portugal."
 msgstr ""
 
 #. module: ptplus_accounting_cope

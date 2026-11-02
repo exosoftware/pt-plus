@@ -7,7 +7,7 @@
     "name": "Portugal - SDR / Volta on Sales",
     "category": "Accounting/Localizations",
     "summary": "Auto-build the SDR / Volta deposit line on sales orders",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "license": "OPL-1",

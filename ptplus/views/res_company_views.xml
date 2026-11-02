@@ -7,17 +7,14 @@
         <field name="inherit_id" ref="base.view_company_form" />
         <field name="priority">100</field>
         <field name="arch" type="xml">
-            <field name="company_registry" position="attributes">
-                <attribute name="placeholder">Lisboa 12345</attribute>
-            </field>
-            <field name="company_registry" position="after">
+            <xpath expr="//div[@name='identifiers']" position="after">
                 <field
                     name="share_capital"
                     widget="monetary"
                     options="{'currency_field': 'currency_id'}"
                 />
                 <field name="account_officer_vat" />
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>

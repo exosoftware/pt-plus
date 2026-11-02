@@ -1,7 +1,7 @@
 import {onWillStart, onWillUpdateProps} from "@odoo/owl";
 import {_t} from "@web/core/l10n/translation";
 import {registry} from "@web/core/registry";
-import {TagsList} from "@web/core/tags_list/tags_list";
+import {BadgeTag} from "@web/core/tags_list/badge_tag";
 import {useService} from "@web/core/utils/hooks";
 import {formatMonetary} from "@web/views/fields/formatters";
 import {ListRenderer} from "@web/views/list/list_renderer";
@@ -14,7 +14,7 @@ import {listView} from "@web/views/list/list_view";
  */
 export class CashflowDocumentLinesRenderer extends ListRenderer {
     static groupRowTemplate = "ptplus_accounting_cashflow.DocumentLinesGroupRow";
-    static components = {...ListRenderer.components, TagsList};
+    static components = {...ListRenderer.components, BadgeTag};
 
     setup() {
         super.setup();

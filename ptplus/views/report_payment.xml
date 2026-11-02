@@ -47,14 +47,17 @@
             </div>
         </xpath>
 
-        <!-- No row containing customer/vendor name and payment method -->
-        <xpath expr="//div[@t-if='o.partner_type']/.." position="attributes">
+        <!-- No customer/vendor name and payment method -->
+        <xpath expr="//div[@t-if='o.partner_type']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//div[@name='payment_method']" position="attributes">
             <attribute name="t-if">False</attribute>
         </xpath>
 
         <!-- Vat No. -->
         <xpath expr="//div[@t-if='o.date']" position="after">
-            <div class="col-6">
+            <div>
                 TIN:
                 <t t-if="o.partner_id.vat">
                 <span t-field="o.partner_id.vat" />

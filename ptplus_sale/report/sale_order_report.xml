@@ -16,7 +16,6 @@
         <field name="model">sale.order</field>
         <field name="report_type">qweb-html</field>
         <field name="report_name">ptplus_sale.report_saleorder_preview</field>
-        <field name="report_file">ptplus_sale.report_saleorder_preview</field>
         <field name="binding_model_id" ref="model_sale_order" />
         <field name="binding_type">report</field>
         <field name="attachment_use">False</field>
@@ -39,7 +38,6 @@
         <field name="model">sale.order</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">ptplus_sale.report_saleorder_multiway</field>
-        <field name="report_file">ptplus_sale.report_saleorder_multiway</field>
         <field name="binding_model_id" ref="model_sale_order" />
         <field name="binding_type">report</field>
         <field name="domain">[("source_billing", "!=", False)]</field>

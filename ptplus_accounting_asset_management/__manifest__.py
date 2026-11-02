@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Accounting & Finance",
-    "version": "19.0.5.1.0",
+    "version": "20.0.5.1.0",
     "depends": [
         "account_asset_management",
         "ptplus_accounting_reports",
@@ -20,6 +20,6 @@
         "views/account_asset_legal_rate_views.xml",
     ],
     "demo": [],
-    "installable": False,
+    "installable": True,
     # 'auto_install': True,
 }

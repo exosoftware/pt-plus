@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- CIVA, art. 36.º, n.º 5, al. a): name of the supplier -->
+    <template id="company_info_receipt" inherit_id="point_of_sale.company_info_receipt">
+        <xpath expr="//tbody[@name='company_info']/tr[1]" position="before">
+            <tr t-if="config.get('l10n_pt_invoicing')" name="l10n_pt_company_name">
+                <td colspan="2" class="text-start" t-out="company['name']" />
+            </tr>
+        </xpath>
+    </template>
+
+    <template
+        id="pos_order_receipt_header"
+        inherit_id="point_of_sale.pos_order_receipt_header"
+    >
+        <div name="cashier_name" position="before">
+            <div
+                t-if="order.get('l10n_pt_doc_name')"
+                class="w-100 text-center text-bold mb-2"
+                name="l10n_pt_doc_name"
+                t-out="order['l10n_pt_doc_name']"
+            />
+        </div>
+        <!-- A bill is a working document (CM/OR), not a pro forma invoice (PF) -->
+        <div name="pro_forma_receipt" position="attributes">
+            <attribute
+                name="t-if"
+                separator=" and "
+                add="not order.get('l10n_pt_doc_name')"
+            />
+        </div>
+    </template>
+
+    <template id="pos_order_receipt" inherit_id="point_of_sale.pos_order_receipt">
+        <div name="before-footer" position="inside">
+            <!-- CIVA, art. 36.º, n.º 5, al. e): reason for not charging VAT -->
+            <div
+                t-if="extra_data.get('l10n_pt_vat_exemption_reasons')"
+                class="w-100 text-small mb-2"
+                name="l10n_pt_vat_exemption_reasons"
+            >
+                <div
+                    t-foreach="extra_data['l10n_pt_vat_exemption_reasons']"
+                    t-as="reason"
+                    t-out="reason"
+                />
+            </div>
+            <div
+                t-if="order.get('l10n_pt_atcud')"
+                class="w-100 text-center"
+                name="l10n_pt_atcud"
+            >
+                ATCUD: <t t-out="order['l10n_pt_atcud']" />
+            </div>
+            <div
+                t-if="image.get('l10n_pt_qr_code')"
+                class="w-100 text-center mt-2"
+                name="l10n_pt_qr_code"
+            >
+                <img t-att-src="image['l10n_pt_qr_code']" class="w-75" />
+            </div>
+            <div
+                t-if="order.get('l10n_pt_certification_text')"
+                class="w-100 text-center text-small mt-2"
+                name="l10n_pt_certification_text"
+                t-out="order['l10n_pt_certification_text']"
+            />
+        </div>
+    </template>
+</odoo>

@@ -3,10 +3,10 @@
     <t t-name="button_efatura.ListView.Buttons" t-inherit="web.ListView.Buttons">
         <xpath expr="." position="inside">
             <button
-                t-if="!hasSelectedRecords"
+                t-if="!this.hasSelectedRecords"
                 type="button"
                 class="btn btn-primary"
-                t-on-click="importEfatura"
+                t-on-click="this.importEfatura"
             >
            Import
         </button>

@@ -16,7 +16,6 @@
         <field name="model">account.payment</field>
         <field name="report_type">qweb-html</field>
         <field name="report_name">ptplus.report_payment_receipt_preview</field>
-        <field name="report_file">ptplus.report_payment_receipt_preview</field>
         <field name="binding_model_id" ref="model_account_payment" />
         <field name="binding_type">report</field>
         <field name="attachment_use">False</field>
@@ -37,7 +36,6 @@
         <field name="model">account.payment</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">ptplus.report_payment_receipt_multiway</field>
-        <field name="report_file">ptplus.report_payment_receipt_multiway</field>
         <field name="binding_model_id" ref="model_account_payment" />
         <field name="binding_type">report</field>
         <field name="domain">[("source_billing", "!=", False)]</field>

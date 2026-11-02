@@ -7,7 +7,7 @@
 
 {
     "name": "Portugal - Fatura Sem Papel",
-    "version": "19.0.0.0.1",
+    "version": "20.0.0.0.1",
     "license": "OPL-1",
     "author": "Exo Software",
     "website": "https://exosoftware.pt",

@@ -1,8 +1,6 @@
-/** @odoo-module **/
-
-import {onWillUnmount} from "@odoo/owl";
+import {onWillUnmount, usePlugin} from "@odoo/owl";
+import {BusPlugin} from "@bus/services/bus_plugin";
 import {registry} from "@web/core/registry";
-import {useService} from "@web/core/utils/hooks";
 import {
     SelectionField,
     selectionField,
@@ -19,9 +17,10 @@ import {
  * its widget would never run.
  */
 export class EfaturaSyncStageField extends SelectionField {
+    busService = usePlugin(BusPlugin);
+
     setup() {
         super.setup();
-        this.busService = useService("bus_service");
         const resId = this.props.record.resId;
         if (!resId) {
             return;

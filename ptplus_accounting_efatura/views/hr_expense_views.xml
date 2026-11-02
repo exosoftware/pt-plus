@@ -17,7 +17,7 @@
                     string="Scan QR"
                     type="object"
                     class="btn-primary"
-                    icon="fa-qrcode"
+                    icon="qr_code"
                     help="Look for an e-fatura QR code on the expense receipt and fill the expense fields from its data"
                     invisible="l10n_pt_country_code != 'PT' or not l10n_pt_efatura_scan or state != 'draft' or nb_attachment &lt; 1 or total_amount_currency != 0"
                 />
@@ -26,7 +26,7 @@
                     string="Scan QR"
                     type="object"
                     class="btn-secondary"
-                    icon="fa-qrcode"
+                    icon="qr_code"
                     help="Look for an e-fatura QR code on the expense receipt and fill the expense fields from its data"
                     invisible="l10n_pt_country_code != 'PT' or not l10n_pt_efatura_scan or state != 'draft' or nb_attachment &lt; 1 or total_amount_currency == 0"
                 />
@@ -43,14 +43,6 @@
                 <attribute
                     name="invisible"
                 >l10n_pt_country_code == 'PT' and l10n_pt_efatura_id</attribute>
-            </xpath>
-            <xpath
-                expr="//field[@name='total_amount_currency']/../span"
-                position="attributes"
-            >
-                <attribute
-                    name="invisible"
-                >tax_amount == 0 or (l10n_pt_country_code == 'PT' and l10n_pt_efatura_id)</attribute>
             </xpath>
         </field>
     </record>

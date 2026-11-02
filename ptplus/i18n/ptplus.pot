@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e\n"
+"Project-Id-Version: Odoo Server 20.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -870,13 +870,15 @@ msgid ""
 msgstr ""
 
 #. module: ptplus
-#: model_terms:ir.ui.view,arch_db:ptplus.dataport_log_view_form
-msgid "<i class=\"fa fa-arrow-right\"/> Download"
+#: model_terms:ir.ui.view,arch_db:ptplus.pt_invoice_delivery_info
+msgid ""
+"<i class=\"oi mr-1\" data-icon=\"schedule\" role=\"img\" aria-label=\"Date\""
+" title=\"Date\"/>"
 msgstr ""
 
 #. module: ptplus
-#: model_terms:ir.ui.view,arch_db:ptplus.pt_invoice_delivery_info
-msgid "<i class=\"fa fa-clock-o mr-1\" role=\"img\" aria-label=\"Date\" title=\"Date\"/>"
+#: model_terms:ir.ui.view,arch_db:ptplus.dataport_log_view_form
+msgid "<i class=\"oi\" data-icon=\"arrow_forward\"/> Download"
 msgstr ""
 
 #. module: ptplus
@@ -1087,6 +1089,11 @@ msgid "ATCUD"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model,name:ptplus.model_account_account
+msgid "Account"
+msgstr ""
+
+#. module: ptplus
 #: model:ir.model,name:ptplus.model_account_chart_template
 msgid "Account Chart Template"
 msgstr ""
@@ -1127,6 +1134,11 @@ msgstr ""
 #. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__activity_exception_decoration
 msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__activity_plans_ids
+msgid "Activity Plans"
 msgstr ""
 
 #. module: ptplus
@@ -1424,6 +1436,18 @@ msgid "Certification Service Backend"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_res_partner__is_company
+#: model:ir.model.fields,help:ptplus.field_res_users__is_company
+msgid ""
+"Check if the contact is a company, otherwise it is a person.\n"
+"The value is filled in from the Tax ID:\n"
+"- Portuguese NIF (PT prefix or country Portugal): 1, 2, 3, 45 and 999999990 (final consumer) are persons; 5, 9, 70, 71, 72, 74, 75, 77 and 79 are companies.\n"
+"- Other NIF prefixes and foreign Tax IDs: a contact with a Tax ID and no parent company is a company.\n"
+"- A contact of a company is a person.\n"
+"You can change the value. A new Tax ID, country or parent company fills it in again."
+msgstr ""
+
+#. module: ptplus
 #: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
 msgid ""
 "Choose where do you want the QR code to be printed on fiscal document "
@@ -1476,10 +1500,6 @@ msgstr ""
 
 #. module: ptplus
 #: model:ir.model,name:ptplus.model_res_company
-msgid "Companies"
-msgstr ""
-
-#. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_dataport_export__company_id
 #: model:ir.model.fields,field_description:ptplus.field_dataport_import__company_id
 #: model:ir.model.fields,field_description:ptplus.field_dataport_log__company_id
@@ -1642,7 +1662,7 @@ msgstr ""
 
 #. module: ptplus
 #. odoo-python
-#: code:addons/ptplus/models/res_users.py:0
+#: code:addons/ptplus/models/publisher_warranty_contract.py:0
 msgid "Danger"
 msgstr ""
 
@@ -1773,6 +1793,7 @@ msgid "Direction"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_account_account__display_name
 #: model:ir.model.fields,field_description:ptplus.field_account_chart_template__display_name
 #: model:ir.model.fields,field_description:ptplus.field_account_move__display_name
 #: model:ir.model.fields,field_description:ptplus.field_account_move_line__display_name
@@ -2352,11 +2373,6 @@ msgid "Followers (Partners)"
 msgstr ""
 
 #. module: ptplus
-#: model:ir.model.fields,help:ptplus.field_fiscal_document_type__activity_type_icon
-msgid "Font awesome icon e.g. fa-tasks"
-msgstr ""
-
-#. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_dataport_export__format
 #: model:ir.model.fields,field_description:ptplus.field_dataport_import__format
 #: model:ir.model.fields,field_description:ptplus.field_dataport_mixin__format
@@ -2456,6 +2472,7 @@ msgid "Help"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_account_account__id
 #: model:ir.model.fields,field_description:ptplus.field_account_chart_template__id
 #: model:ir.model.fields,field_description:ptplus.field_account_move__id
 #: model:ir.model.fields,field_description:ptplus.field_account_move_line__id
@@ -3124,7 +3141,7 @@ msgstr ""
 
 #. module: ptplus
 #. odoo-python
-#: code:addons/ptplus/models/res_users.py:0
+#: code:addons/ptplus/models/publisher_warranty_contract.py:0
 msgid "Information"
 msgstr ""
 
@@ -3284,6 +3301,12 @@ msgid "Is Group"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,field_description:ptplus.field_res_partner__is_company
+#: model:ir.model.fields,field_description:ptplus.field_res_users__is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: ptplus
 #: model_terms:ir.ui.view,arch_db:ptplus.res_config_settings_view_form_pt
 msgid "Issue legally accepted Portuguese invoices"
 msgstr ""
@@ -3377,11 +3400,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ptplus.field_account_payment__last_state_uid
 #: model:ir.model.fields,field_description:ptplus.field_fiscal_document__last_state_uid
 msgid "Last state changed by"
-msgstr ""
-
-#. module: ptplus
-#: model_terms:ir.ui.view,arch_db:ptplus.view_company_form_pt
-msgid "Lisboa 12345"
 msgstr ""
 
 #. module: ptplus
@@ -3613,6 +3631,11 @@ msgid "Manual/Restore"
 msgstr ""
 
 #. module: ptplus
+#: model:ir.model.fields,help:ptplus.field_fiscal_document_type__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr ""
+
+#. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_wizard_webservice_failure__error_msg
 #: model_terms:ir.ui.view,arch_db:ptplus.wizard_webservice_series_comm_form
 msgid "Message"
@@ -3739,21 +3762,6 @@ msgid "Not Reported"
 msgstr ""
 
 #. module: ptplus
-#: model:ir.model.fields,field_description:ptplus.field_res_users__notify_danger_channel_name
-msgid "Notify Danger Channel Name"
-msgstr ""
-
-#. module: ptplus
-#: model:ir.model.fields,field_description:ptplus.field_res_users__notify_info_channel_name
-msgid "Notify Info Channel Name"
-msgstr ""
-
-#. module: ptplus
-#: model:ir.model.fields,field_description:ptplus.field_res_users__notify_warning_channel_name
-msgid "Notify Warning Channel Name"
-msgstr ""
-
-#. module: ptplus
 #: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
@@ -3806,12 +3814,6 @@ msgstr ""
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__wizard_webservice_series_comm__sync_method__online
 msgid "Online"
-msgstr ""
-
-#. module: ptplus
-#. odoo-javascript
-#: code:addons/ptplus/static/src/js/services/notification_services.esm.js:0
-msgid "Open"
 msgstr ""
 
 #. module: ptplus
@@ -4149,6 +4151,7 @@ msgstr ""
 #. module: ptplus
 #. odoo-python
 #: code:addons/ptplus/models/account_payment.py:0
+#: model:ir.model,name:ptplus.model_account_payment
 msgid "Payment"
 msgstr ""
 
@@ -4168,7 +4171,6 @@ msgid "Payment Receipt (preview)"
 msgstr ""
 
 #. module: ptplus
-#: model:ir.model,name:ptplus.model_account_payment
 #: model:ir.model.fields.selection,name:ptplus.selection__fiscal_document_type__section__pay
 msgid "Payments"
 msgstr ""
@@ -4622,12 +4624,6 @@ msgstr ""
 #. module: ptplus
 #: model:ir.model.fields.selection,name:ptplus.selection__account_tax__pt_vat_special_regime__sdd
 msgid "Sem direito a dedução"
-msgstr ""
-
-#. module: ptplus
-#. odoo-python
-#: code:addons/ptplus/models/res_users.py:0
-msgid "Sending a notification to another user is forbidden."
 msgstr ""
 
 #. module: ptplus
@@ -5141,7 +5137,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
-"The Point of Sale field only supports Invoice-receipts and Credit Notes."
+"The Point of Sale field only supports Invoice-receipts, Credit Notes and the "
+"bills printed before payment."
 msgstr ""
 
 #. module: ptplus
@@ -5705,7 +5702,7 @@ msgstr ""
 
 #. module: ptplus
 #. odoo-python
-#: code:addons/ptplus/models/res_users.py:0
+#: code:addons/ptplus/models/publisher_warranty_contract.py:0
 msgid "Warning"
 msgstr ""
 
@@ -5743,16 +5740,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/ptplus/webservice.py:0
 msgid "Webservice security error: invalid public key certificate."
-msgstr ""
-
-#. module: ptplus
-#: model:ir.model.fields,field_description:ptplus.field_fiscal_document_type__website_message_ids
-msgid "Website Messages"
-msgstr ""
-
-#. module: ptplus
-#: model:ir.model.fields,help:ptplus.field_fiscal_document_type__website_message_ids
-msgid "Website communication history"
 msgstr ""
 
 #. module: ptplus

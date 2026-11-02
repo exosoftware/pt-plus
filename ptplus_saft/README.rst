@@ -15,7 +15,6 @@ Installation
 
 Install the module with required dependencies:
 
-* pip install unicodecsv
 * add the module to an addons folder, restart Odoo, update the addons list and activate
   it.
 
