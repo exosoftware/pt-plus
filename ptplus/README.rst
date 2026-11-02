@@ -53,6 +53,17 @@ Available soon.
 Changelog
 =========
 
+5.2.5 (2026-10-30)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- An invoice with a combo product on one of its lines can no longer be
+  confirmed. Before, confirming it gave a technical error. The law requires the
+  invoice to name the goods and services sold, so a combo must be invoiced
+  through its products: from a sales order or the point of sale, which already
+  list each product of the combo, or with one line per product.
+
 5.2.4 (2026-10-22)
 ~~~~~~~~~~~~~~~~~~~
 
