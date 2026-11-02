@@ -53,6 +53,40 @@ Available soon.
 Changelog
 =========
 
+5.2.8 (2026-11-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- In a database with several companies, Portuguese invoicing now follows the
+  company the document belongs to, not the active company. Before, a credit
+  note or invoice of a company without Portuguese invoicing, created while a
+  Portuguese company was the active one, was marked as a Portuguese fiscal
+  document, and that mark blocked its confirmation with the error "A document
+  type is required". The opposite case is also fixed: a document of the
+  Portuguese company created while another company is the active one is now
+  always marked as a Portuguese fiscal document.
+
+5.2.7 (2026-11-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The printed invoice shows again the line that deducts a down payment already
+  invoiced to the customer. Before, the line was missing from the printout,
+  although the invoice totals included it.
+
+5.2.6 (2026-10-30)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- An invoice with a combo product on one of its lines can no longer be
+  confirmed. Before, confirming it gave a technical error. The law requires the
+  invoice to name the goods and services sold, so a combo must be invoiced
+  through its products: from a sales order or the point of sale, which already
+  list each product of the combo, or with one line per product.
+
 5.2.5 (2026-10-22)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -1702,6 +1702,16 @@ msgstr ""
 
 #. module: ptplus
 #. odoo-python
+#: code:addons/ptplus/models/account_move.py:0
+msgid ""
+"Document %(doc_name)s has a line '%(line_name)s' with the combo product "
+"%(product)s. A combo product can't be invoiced directly: invoice it from a "
+"sales order or the point of sale, or add a line for each product of the "
+"combo."
+msgstr ""
+
+#. module: ptplus
+#. odoo-python
 #: code:addons/ptplus/models/fiscal_document.py:0
 msgid ""
 "Document %(doc_name)s has a line of product %(line_name)s that contains both"
