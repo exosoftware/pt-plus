@@ -53,6 +53,15 @@ Available soon.
 Changelog
 =========
 
+5.2.6 (2026-11-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The printed invoice shows again the line that deducts a down payment already
+  invoiced to the customer. Before, the line was missing from the printout,
+  although the invoice totals included it.
+
 5.2.5 (2026-10-30)
 ~~~~~~~~~~~~~~~~~~~
 
