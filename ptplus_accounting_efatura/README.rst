@@ -79,6 +79,16 @@ Available soon.
 Changelog
 =========
 
+5.18.3 (2026-11-03)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Reading the QR code of a PDF no longer says "QR Code Not Detected" when the
+  QR code is there and readable. It happened with PDFs whose images carry a
+  colour profile the PDF reader complains about, such as some invoices
+  prepared for print.
+
 5.18.2 (2026-09-29)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -35,6 +35,19 @@ Available soon.
 Changelog
 =========
 
+1.9.0 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- The VAT periodic statement now fills in the "Regularizações abrangidas pela
+  verba 2.42 da lista I" table of the annexes of fields 40 and 41, by year and
+  tax period of the corrected document, and includes it in the XML file. Before,
+  a warning asked to fill in this table by hand on the Portal das Finanças.
+- The annex of field 41 now fills in the new fields for the adjustments under
+  "Artigo 6.º do Decreto-Lei n.º 198/90" (fields 3C/4C) and "Decreto-Lei n.º
+  19/2017" (fields 3D/4D), and includes them in the XML file.
+
 1.8.0 (2026-10-27)
 ~~~~~~~~~~~~~~~~~~~
 

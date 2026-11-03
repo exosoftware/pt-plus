@@ -17,10 +17,10 @@
             <t t-set="o" t-value="o or doc" />
             <t
                 t-set="pt_qr_text"
-                t-value="company.pt_qrcode_pos == 'top' and o.pt_get_qr_code() or ''"
+                t-value="o.company_id.pt_qrcode_pos == 'top' and o.pt_get_qr_code() or ''"
             />
             <div
-                t-if="pt_qr_text and company.pt_qrcode_pos == 'top'"
+                t-if="pt_qr_text and o.company_id.pt_qrcode_pos == 'top'"
                 class="pt_qr_code"
             >
                 <div class="pt_atcud" t-if="o.atcud">

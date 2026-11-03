@@ -52,6 +52,16 @@ Available soon.
 Changelog
 =========
 
+5.4.0 (2026-10-28)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- Two new VAT adjustment norms in favor of the State are available on vendor
+  credit notes: "Artigo 6.º do Decreto-Lei n.º 198/90" (sales to national
+  exporters) and "Decreto-Lei n.º 19/2017" (e-Taxfree). They match the new
+  fields of the annex of field 41 of the VAT periodic statement.
+
 5.3.6 (2026-10-28)
 ~~~~~~~~~~~~~~~~~~~
 
