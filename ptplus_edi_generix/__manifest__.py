@@ -1,0 +1,26 @@
+##############################################################################
+#
+#    Copyright (C) 2016 Exo Software, Lda. (<https://exosoftware.pt>)
+#
+##############################################################################
+# pylint: disable=license-allowed, manifest-required-author
+{
+    "name": "Portugal - Generix EDI",
+    "category": "Accounting/Localizations/EDI",
+    "summary": "Transmit your e-invoices to the Generix EDI platform",
+    "version": "19.0.5.1.0",
+    "author": "Exo Software",
+    "website": "https://exosoftware.pt",
+    "depends": ["ptplus_edi", "account_edi"],
+    "data": [
+        "data/account_edi_data.xml",
+        "data/ir_cron.xml",
+        "views/account_edi_document_views.xml",
+        "views/account_move_views.xml",
+        "views/res_config_settings_views.xml",
+        "views/res_partner_views.xml",
+    ],
+    "installable": True,
+    "application": False,
+    "license": "OPL-1",
+}

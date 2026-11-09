@@ -20,4 +20,20 @@
             </xpath>
         </field>
     </record>
+
+    <!-- Invoice search -->
+    <record id="view_account_invoice_filter_edi_pt" model="ir.ui.view">
+        <field name="name">account.move.search.pt.edi</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='not_sent']" position="after">
+                <filter
+                    name="l10n_pt_edi_scheduled_sending"
+                    string="E-invoice Scheduled"
+                    domain="[('l10n_pt_edi_scheduled_sending_method', '!=', False)]"
+                />
+            </xpath>
+        </field>
+    </record>
 </odoo>

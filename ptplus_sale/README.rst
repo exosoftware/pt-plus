@@ -33,6 +33,14 @@ Available soon.
 Changelog
 =========
 
+5.1.11 (2026-11-09)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- Quotations and orders with a withholding tax can now be confirmed. Before,
+  the confirmation stopped with an error.
+
 5.1.10 (2026-10-22)
 ~~~~~~~~~~~~~~~~~~~
 

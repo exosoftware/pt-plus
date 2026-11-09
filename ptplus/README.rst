@@ -53,6 +53,20 @@ Available soon.
 Changelog
 =========
 
+5.2.7 (2026-11-02)
+~~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- In a database with several companies, Portuguese invoicing now follows the
+  company the document belongs to, not the active company. Before, a credit
+  note or invoice of a company without Portuguese invoicing, created while a
+  Portuguese company was the active one, was marked as a Portuguese fiscal
+  document, and that mark blocked its confirmation with the error "A document
+  type is required". The opposite case is also fixed: a document of the
+  Portuguese company created while another company is the active one is now
+  always marked as a Portuguese fiscal document.
+
 5.2.6 (2026-11-02)
 ~~~~~~~~~~~~~~~~~~~
 

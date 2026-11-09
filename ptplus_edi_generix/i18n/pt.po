@@ -1,0 +1,308 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ptplus_edi_generix
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 17:30+0000\n"
+"PO-Revision-Date: 2026-11-02 12:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese <pt@li.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.view_partner_form_generix_inherit
+msgid ""
+"<span class=\"text-success\" invisible=\"l10n_pt_has_generix != "
+"'Connected'\">Works with Generix</span>\n"
+"                <span class=\"text-danger\" invisible=\"l10n_pt_has_generix !"
+"= 'NotConnected'\">Doesn't work with Generix</span>"
+msgstr ""
+"<span class=\"text-success\" invisible=\"l10n_pt_has_generix != "
+"'Connected'\">Trabalha com a Generix</span>\n"
+"                <span class=\"text-danger\" invisible=\"l10n_pt_has_generix !"
+"= 'NotConnected'\">Não trabalha com a Generix</span>"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_account_move_send
+msgid "Account Move Send"
+msgstr "Envio de Movimento Contabilístico"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_account_move_send_wizard
+msgid "Account Move Send Wizard"
+msgstr "Assistente de Envio de Movimento Contabilístico"
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/models/account_move_send.py:0
+msgid "CIUS-PT already scheduled to be sent, you can't send it twice."
+msgstr ""
+"O CIUS-PT já está agendado para envio e não pode ser enviado novamente."
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/models/account_move_send.py:0
+msgid "CIUS-PT already sent to Generix, you can't send it twice."
+msgstr "O CIUS-PT já foi enviado para a Generix, não o pode enviar duas vezes."
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/webservice.py:0
+msgid ""
+"CODE: %(code)s\n"
+"FIELD: %(field)s\n"
+"VALUES: %(values)s"
+msgstr ""
+"CÓDIGO: %(code)s\n"
+"CAMPO: %(field)s\n"
+"VALORES: %(values)s"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.view_partner_form_generix_inherit
+msgid "Check Generix"
+msgstr "Verificar Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_res_config_settings
+msgid "Config Settings"
+msgstr "Definições"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__res_partner__l10n_pt_has_generix__connected
+msgid "Connected"
+msgstr "Conectado"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move_send__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move_send_wizard__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_company__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,help:ptplus_edi_generix.field_res_partner__l10n_pt_has_generix
+#: model:ir.model.fields,help:ptplus_edi_generix.field_res_users__l10n_pt_has_generix
+msgid "Does this partner work with Generix?"
+msgstr "Este parceiro trabalha com a Generix?"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_account_edi_document
+msgid "Electronic Document for an account.move"
+msgstr "Documento Eletrónico para uma account.move"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__account_edi_document__l10n_pt_edi_cius_generix_request_status__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__account_edi_document__l10n_pt_edi_cius_generix_request_status__finished
+msgid "Finished"
+msgstr "Concluído"
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/webservice.py:0
+msgid ""
+"Generix API Error on service %(path)s:\n"
+"\n"
+"%(msg)s"
+msgstr ""
+"Erro da API Generix no serviço %(path)s:\n"
+"\n"
+"%(msg)s"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_document_id
+msgid "Generix Document ID"
+msgstr "ID do Documento Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_document_status
+msgid "Generix Document Status"
+msgstr "Estado do Documento Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_config_settings__module_ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.res_config_settings_view_form_edi_pt_generix
+msgid "Generix EDI broker"
+msgstr "Broker EDI Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_company__l10n_pt_edi_cius_generix_password
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_config_settings__l10n_pt_edi_cius_generix_password
+msgid "Generix Password"
+msgstr "Palavra-passe Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_request_id
+msgid "Generix Request ID"
+msgstr "ID da Submissão Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_request_status
+msgid "Generix Request Status"
+msgstr "Estado da Submissão Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_company__l10n_pt_edi_cius_generix_username
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_config_settings__l10n_pt_edi_cius_generix_username
+msgid "Generix Username"
+msgstr "Nome de Utilizador Generix"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.res_config_settings_view_form_edi_pt_generix
+msgid "Have your CIUS-PT invoices delivered to your customers by Generix."
+msgstr "Envie as suas faturas CIUS-PT aos seus clientes através da Generix."
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_edi_document__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move_send__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_account_move_send_wizard__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_company__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/models/account_move_send.py:0
+msgid "Invalid type of Fiscal Document Type "
+msgstr "Tipo de Documento Fiscal inválido "
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_partner__invoice_sending_method
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_users__invoice_sending_method
+msgid "Invoice sending"
+msgstr "Envio de faturas"
+
+#. module: ptplus_edi_generix
+#: model:ir.model,name:ptplus_edi_generix.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_partner__l10n_pt_has_generix
+#: model:ir.model.fields,field_description:ptplus_edi_generix.field_res_users__l10n_pt_has_generix
+msgid "L10N Pt Has Generix"
+msgstr "Trabalha com Generix"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__res_partner__l10n_pt_has_generix__no_test
+msgid "Not Tested"
+msgstr "Não Testado"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__res_partner__l10n_pt_has_generix__notconnected
+msgid "NotConnected"
+msgstr "Não Conectado"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.res_config_settings_view_form_edi_pt_generix
+msgid "Password"
+msgstr "Palavra-passe"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__account_edi_document__l10n_pt_edi_cius_generix_request_status__queued
+msgid "Queued"
+msgstr "Em Espera"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.view_partner_form_generix_inherit
+msgid "Reload"
+msgstr "Recarregar"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__account_edi_document__l10n_pt_edi_cius_generix_request_status__running
+msgid "Running"
+msgstr "Em Curso"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,help:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_request_id
+msgid ""
+"The Id of the async request received upon document submission on the Generix "
+"platform."
+msgstr ""
+"O ID do pedido assíncrono recebido após a submissão do documento na "
+"plataforma Generix."
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,help:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_document_id
+#: model:ir.model.fields,help:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_document_status
+msgid ""
+"The Id of the document on the Generix platform. It's only filled when the "
+"request status is Finished."
+msgstr ""
+"O ID do documento na plataforma Generix. Só é preenchido quando o estado do "
+"pedido é Concluído."
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/models/account_edi_document.py:0
+msgid "The error is the following: %s"
+msgstr "O erro é o seguinte: %s"
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields,help:ptplus_edi_generix.field_account_edi_document__l10n_pt_edi_cius_generix_request_status
+msgid ""
+"The status of the Generix platform document submission async request. "
+"Possible values are Queued, Running, Error or Finished."
+msgstr ""
+"O estado do pedido assíncrono de submissão do documento na plataforma "
+"Generix. Os valores possíveis são Em Espera, Em Curso, Erro ou Concluído."
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/webservice.py:0
+msgid "Timeout"
+msgstr "Tempo esgotado"
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/webservice.py:0
+msgid "Too many redirects"
+msgstr "Demasiados redirecionamentos"
+
+#. module: ptplus_edi_generix
+#. odoo-python
+#: code:addons/ptplus_edi_generix/webservice.py:0
+msgid "Unexpected answer from the Generix webservice on %(path)s: %(answer)r"
+msgstr "Resposta inesperada do webservice Generix em %(path)s: %(answer)r"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.res_config_settings_view_form_edi_pt_generix
+msgid "Username"
+msgstr "Nome de Utilizador"
+
+#. module: ptplus_edi_generix
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_generix.res_config_settings_view_form_edi_pt_generix
+msgid "Values set here are company-specific."
+msgstr "Os valores aqui definidos são específicos da empresa."
+
+#. module: ptplus_edi_generix
+#: model:ir.model.fields.selection,name:ptplus_edi_generix.selection__res_partner__invoice_sending_method__generix
+msgid "by Generix"
+msgstr "pela Generix"

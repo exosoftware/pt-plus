@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:53+0000\n"
+"POT-Creation-Date: 2026-11-06 17:30+0000\n"
 "PO-Revision-Date: 2026-05-25 12:55+0100\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese <https://translation.exosoftware.pt/projects/"
@@ -116,6 +116,30 @@ msgid "Display Name"
 msgstr "Nome a Apresentar"
 
 #. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.view_account_invoice_filter_edi_pt
+msgid "E-invoice Scheduled"
+msgstr "Fatura eletrónica agendada"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.res_config_settings_view_form_edi_pt
+msgid ""
+"E-invoices sent to an EDI broker wait for the scheduled action, which sends "
+"them all at once."
+msgstr ""
+"As faturas eletrónicas enviadas para um broker EDI aguardam pela ação "
+"agendada, que as envia todas de uma vez."
+
+#. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,help:ptplus_edi.field_account_move__l10n_pt_edi_scheduled_sending_method
+msgid ""
+"EDI broker the e-invoice will be sent to on the next run of the scheduled "
+"action 'PT EDI: Send scheduled e-invoices'."
+msgstr ""
+"Broker EDI para o qual a fatura eletrónica será enviada na próxima execução "
+"da ação agendada 'PT EDI: Enviar faturas eletrónicas agendadas'."
+
+#. module: ptplus_edi
 #: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_fitting_number
 #: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_fitting_number
 msgid "Fitting No."
@@ -137,9 +161,38 @@ msgid "Journal Entry"
 msgstr "Lançamento de Diário"
 
 #. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_res_company__l10n_pt_edi_scheduled_sending
+#: model:ir.model.fields,help:ptplus_edi.field_res_config_settings__l10n_pt_edi_scheduled_sending
+msgid ""
+"Keep the e-invoices sent to an EDI broker until the scheduled action 'PT "
+"EDI: Send scheduled e-invoices' runs, instead of sending them right away."
+msgstr ""
+"Reter as faturas eletrónicas enviadas para um broker EDI até à execução da "
+"ação agendada 'PT EDI: Enviar faturas eletrónicas agendadas', em vez de as "
+"enviar de imediato."
+
+#. module: ptplus_edi
+#: model:ir.actions.server,name:ptplus_edi.ir_cron_l10n_pt_edi_send_scheduled_ir_actions_server
+msgid "PT EDI: Send scheduled e-invoices"
+msgstr "PT EDI: Enviar faturas eletrónicas agendadas"
+
+#. module: ptplus_edi
 #: model:ir.model.fields.selection,name:ptplus_edi.selection__res_partner__invoice_edi_format__cius-pt
 msgid "Portugal (CIUS-PT)"
 msgstr "Portugal (CIUS-PT)"
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company__l10n_pt_edi_scheduled_sending
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings__l10n_pt_edi_scheduled_sending
+msgid "Scheduled E-invoice Sending"
+msgstr "Envio Agendado de Faturas Eletrónicas"
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.res_config_settings_view_form_edi_pt
+msgid "Set the sending time"
+msgstr "Definir a hora de envio"
 
 #. module: ptplus_edi
 #. odoo-python
@@ -187,12 +240,31 @@ msgstr ""
 
 #. module: ptplus_edi
 #. odoo-python
+#: code:addons/ptplus_edi/models/account_move.py:0
+msgid ""
+"The scheduled e-invoice sending failed and will be retried on the next run: "
+"%s"
+msgstr ""
+"O envio agendado da fatura eletrónica falhou e será tentado novamente na "
+"próxima execução: %s"
+
+#. module: ptplus_edi
+#. odoo-python
 #: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
 msgid ""
 "The {vat_number} VAT number must be preceded by the {country_code} country "
 "code"
 msgstr ""
 "O NIF {vat_number} deve ser precedido pelo código do país {country_code}"
+
+#. module: ptplus_edi
+#. odoo-python
+#: code:addons/ptplus_edi/models/account_move.py:0
+msgid ""
+"This e-invoice will be sent %s on the next run of the scheduled sending."
+msgstr ""
+"Esta fatura eletrónica será enviada %s na próxima execução do envio "
+"agendado."
 
 #. module: ptplus_edi
 #. odoo-python

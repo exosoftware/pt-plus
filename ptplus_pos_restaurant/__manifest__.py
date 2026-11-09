@@ -10,7 +10,7 @@
     "author": "Exo Software",
     "website": "https://exosoftware.pt",
     "category": "Localization",
-    "version": "19.0.1.1.0",
+    "version": "19.0.1.1.1",
     "depends": ["ptplus_pos", "pos_restaurant"],
     "data": [
         "views/pos_order_views.xml",

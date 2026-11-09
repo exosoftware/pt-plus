@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 16:39+0000\n"
-"PO-Revision-Date: 2026-05-29 16:39+0000\n"
+"POT-Creation-Date: 2026-11-06 17:30+0000\n"
+"PO-Revision-Date: 2026-11-06 17:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 #. module: ptplus_edi_saphety
 #: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
 msgid ""
-"<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != 'Connected'\">Has Saphety</span>\n"
-"                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety != 'NotConnected'\">No Saphety</span>"
+"<span class=\"text-success\" invisible=\"l10n_pt_has_saphety != 'Connected'\">Works with Sovos/Saphety</span>\n"
+"                <span class=\"text-danger\" invisible=\"l10n_pt_has_saphety != 'NotConnected'\">Doesn't work with Sovos/Saphety</span>"
 msgstr ""
 
 #. module: ptplus_edi_saphety
@@ -35,6 +35,12 @@ msgstr ""
 #. module: ptplus_edi_saphety
 #. odoo-python
 #: code:addons/ptplus_edi_saphety/models/account_move_send.py:0
+msgid "CIUS-PT already scheduled to be sent, you can't send it twice."
+msgstr ""
+
+#. module: ptplus_edi_saphety
+#. odoo-python
+#: code:addons/ptplus_edi_saphety/models/account_move_send.py:0
 msgid "CIUS-PT already sent to Saphety, you can't send it twice."
 msgstr ""
 
@@ -45,6 +51,11 @@ msgid ""
 "CODE: %(code)s\n"
 "FIELD: %(field)s\n"
 "VALUES: %(values)s"
+msgstr ""
+
+#. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Check Sovos/Saphety"
 msgstr ""
 
 #. module: ptplus_edi_saphety
@@ -156,6 +167,11 @@ msgstr ""
 #. module: ptplus_edi_saphety
 #: model:ir.model.fields.selection,name:ptplus_edi_saphety.selection__account_edi_document__l10n_pt_edi_cius_saphety_request_status__queued
 msgid "Queued"
+msgstr ""
+
+#. module: ptplus_edi_saphety
+#: model_terms:ir.ui.view,arch_db:ptplus_edi_saphety.view_partner_form_saphety_inherit
+msgid "Reload"
 msgstr ""
 
 #. module: ptplus_edi_saphety

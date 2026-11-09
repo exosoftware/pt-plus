@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- The Saphety submission status checks run on this cron, archived by default -->
+    <record id="account_edi.ir_cron_edi_network" model="ir.cron">
+        <field name="active" eval="True" />
+    </record>
+</odoo>

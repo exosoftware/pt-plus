@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_generix_inherit" model="ir.ui.view">
+        <field name="name">partner.form.generix.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="l10n_pt_has_generix" invisible="True" />
+                <button
+                    name="action_recompute_l10n_pt_has_generix"
+                    string="Check Generix"
+                    type="object"
+                    class="btn-primary"
+                    invisible="l10n_pt_has_generix"
+                />
+                <button
+                    name="action_recompute_l10n_pt_has_generix"
+                    title="Reload"
+                    type="object"
+                    icon="fa-repeat"
+                    class="col-lg-1"
+                    invisible="not l10n_pt_has_generix"
+                />
+                <span
+                    class="text-success"
+                    invisible="l10n_pt_has_generix != 'Connected'"
+                >Works with Generix</span>
+                <span
+                    class="text-danger"
+                    invisible="l10n_pt_has_generix != 'NotConnected'"
+                >Doesn't work with Generix</span>
+            </field>
+        </field>
+    </record>
+</odoo>

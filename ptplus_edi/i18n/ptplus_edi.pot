@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-25 11:53+0000\n"
-"PO-Revision-Date: 2026-05-25 11:53+0000\n"
+"POT-Creation-Date: 2026-11-06 17:30+0000\n"
+"PO-Revision-Date: 2026-11-06 17:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -107,6 +107,26 @@ msgid "Display Name"
 msgstr ""
 
 #. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.view_account_invoice_filter_edi_pt
+msgid "E-invoice Scheduled"
+msgstr ""
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.res_config_settings_view_form_edi_pt
+msgid ""
+"E-invoices sent to an EDI broker wait for the scheduled action, which sends "
+"them all at once."
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,help:ptplus_edi.field_account_move__l10n_pt_edi_scheduled_sending_method
+msgid ""
+"EDI broker the e-invoice will be sent to on the next run of the scheduled "
+"action 'PT EDI: Send scheduled e-invoices'."
+msgstr ""
+
+#. module: ptplus_edi
 #: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_fitting_number
 #: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_fitting_number
 msgid "Fitting No."
@@ -128,8 +148,34 @@ msgid "Journal Entry"
 msgstr ""
 
 #. module: ptplus_edi
+#: model:ir.model.fields,help:ptplus_edi.field_res_company__l10n_pt_edi_scheduled_sending
+#: model:ir.model.fields,help:ptplus_edi.field_res_config_settings__l10n_pt_edi_scheduled_sending
+msgid ""
+"Keep the e-invoices sent to an EDI broker until the scheduled action 'PT "
+"EDI: Send scheduled e-invoices' runs, instead of sending them right away."
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.actions.server,name:ptplus_edi.ir_cron_l10n_pt_edi_send_scheduled_ir_actions_server
+msgid "PT EDI: Send scheduled e-invoices"
+msgstr ""
+
+#. module: ptplus_edi
 #: model:ir.model.fields.selection,name:ptplus_edi.selection__res_partner__invoice_edi_format__cius-pt
 msgid "Portugal (CIUS-PT)"
+msgstr ""
+
+#. module: ptplus_edi
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_bank_statement_line__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,field_description:ptplus_edi.field_account_move__l10n_pt_edi_scheduled_sending_method
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_company__l10n_pt_edi_scheduled_sending
+#: model:ir.model.fields,field_description:ptplus_edi.field_res_config_settings__l10n_pt_edi_scheduled_sending
+msgid "Scheduled E-invoice Sending"
+msgstr ""
+
+#. module: ptplus_edi
+#: model_terms:ir.ui.view,arch_db:ptplus_edi.res_config_settings_view_form_edi_pt
+msgid "Set the sending time"
 msgstr ""
 
 #. module: ptplus_edi
@@ -159,10 +205,25 @@ msgstr ""
 
 #. module: ptplus_edi
 #. odoo-python
+#: code:addons/ptplus_edi/models/account_move.py:0
+msgid ""
+"The scheduled e-invoice sending failed and will be retried on the next run: "
+"%s"
+msgstr ""
+
+#. module: ptplus_edi
+#. odoo-python
 #: code:addons/ptplus_edi/models/account_edi_xml_cius_pt.py:0
 msgid ""
 "The {vat_number} VAT number must be preceded by the {country_code} country "
 "code"
+msgstr ""
+
+#. module: ptplus_edi
+#. odoo-python
+#: code:addons/ptplus_edi/models/account_move.py:0
+msgid ""
+"This e-invoice will be sent %s on the next run of the scheduled sending."
 msgstr ""
 
 #. module: ptplus_edi

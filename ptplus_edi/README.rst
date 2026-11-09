@@ -43,6 +43,11 @@ Portuguese Invoicing settings section.
 This module just creates and attaches the XML file. To electronically transmit
 it you'll need to install additional modules for specific brokers.
 
+By default, an e-invoice is sent to its broker as soon as you send the invoice.
+To send them all at once at a fixed time instead, tick Scheduled E-invoice
+Sending on the same settings section and set the time on the scheduled action
+it links to (PT EDI: Send scheduled e-invoices).
+
 Usage
 =====
 
@@ -55,6 +60,19 @@ Importing CIUS-PT invoices is still WIP.
 
 Changelog
 =========
+
+1.3.0 (2026-11-06)
+~~~~~~~~~~~~~~~~~~~
+
+**Features**
+
+- New Scheduled E-invoice Sending option in the electronic invoicing settings.
+  When it is ticked, sending an invoice to an EDI broker no longer transmits
+  its e-invoice right away: the invoice shows it is scheduled and the
+  e-invoices are sent all at once at the time set on the scheduled action
+  "PT EDI: Send scheduled e-invoices". The "E-invoice Scheduled" filter lists
+  the invoices still waiting. When the broker can't be reached, the invoice
+  keeps waiting for the next run and the reason is noted on its chatter.
 
 1.2.1 (2026-10-09)
 ~~~~~~~~~~~~~~~~~~~

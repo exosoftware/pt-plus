@@ -66,6 +66,22 @@ Invoicing tab of the partner form. After that, the default journal for the
 partner invoices will be based on that choice.
 
 
+Changelog
+=========
+
+5.1.0 (2026-11-06)
+------------------
+
+**Features**
+
+- Invoices sent to Saphety follow the Scheduled E-invoice Sending option of the
+  electronic invoicing settings: when it is ticked, their e-invoice is kept
+  and transmitted to Saphety only at the time of the scheduled sending.
+- Installing the module activates the scheduled action that follows up on the
+  e-invoices sent to Saphety ("EDI: Perform web services operations"). Odoo
+  ships it archived, so until now it had to be activated by hand, or the
+  status of the e-invoices was never updated.
+
 Credits
 ========
 

@@ -36,6 +36,14 @@ The POS needs an internet connection in order to issue invoices.
 Changelog
 =========
 
+1.1.1 (2026-11-09)
+~~~~~~~~~~~~~~~~~~
+
+**Bugfixes**
+
+- The bill of an order with a withholding tax can now be printed. Before, the
+  printing stopped with an error.
+
 1.1.0 (2026-06-16)
 ~~~~~~~~~~~~~~~~~~~
 

@@ -17,6 +17,23 @@
                         <label for="l10n_pt_edi_cius_disable_validation" />
                     </div>
                 </div>
+                <div class="mt16" invisible="not module_ptplus_edi">
+                    <div>
+                        <field name="l10n_pt_edi_scheduled_sending" />
+                        <label for="l10n_pt_edi_scheduled_sending" />
+                    </div>
+                    <div class="text-muted">
+                        E-invoices sent to an EDI broker wait for the scheduled action, which sends them all at once.
+                    </div>
+                    <button
+                        name="action_open_l10n_pt_edi_send_scheduled_cron"
+                        type="object"
+                        string="Set the sending time"
+                        icon="oi-arrow-right"
+                        class="btn-link"
+                        invisible="not l10n_pt_edi_scheduled_sending"
+                    />
+                </div>
             </xpath>
         </field>
     </record>
